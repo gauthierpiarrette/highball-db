@@ -1,0 +1,10 @@
+{
+  "id": "call-of-duty-mw-warzone",
+  "title": "Call of Duty (MW/Warzone)",
+  "steam_appid": 1938090,
+  "status": "blocked-anticheat",
+  "renderer": null,
+  "provenance": "kernel anti-cheat, structurally impossible under Wine",
+  "notes": "Ricochet kernel driver",
+  "lastVerified": null
+}

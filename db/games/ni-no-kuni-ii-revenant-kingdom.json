@@ -1,0 +1,10 @@
+{
+  "id": "ni-no-kuni-ii-revenant-kingdom",
+  "title": "Ni no Kuni II: Revenant Kingdom",
+  "steam_appid": 589370,
+  "status": "reported-upstream",
+  "renderer": "dxmt",
+  "provenance": "DXMT changelog v0.80 (github.com/3Shain/dxmt/releases)",
+  "notes": "crash on launch fixed; cloud rendering issues may remain",
+  "lastVerified": null
+}

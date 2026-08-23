@@ -1,0 +1,10 @@
+{
+  "id": "street-fighter-v",
+  "title": "Street Fighter V",
+  "steam_appid": 310950,
+  "status": "reported-upstream",
+  "renderer": "dxmt",
+  "provenance": "DXMT changelog v0.73 (github.com/3Shain/dxmt/releases)",
+  "notes": "tone-mapping fixed",
+  "lastVerified": null
+}

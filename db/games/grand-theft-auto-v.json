@@ -1,0 +1,10 @@
+{
+  "id": "grand-theft-auto-v",
+  "title": "Grand Theft Auto V",
+  "steam_appid": 271590,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
+  "notes": "story mode fine; GTA Online uses BattlEye \u2014 expect blocked",
+  "lastVerified": null
+}

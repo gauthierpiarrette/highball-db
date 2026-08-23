@@ -1,0 +1,16 @@
+{
+  "id": "rockstar",
+  "kind": "launcher",
+  "title": "Rockstar Games Launcher",
+  "renderer": "dxmt",
+  "steps": [
+    { "type": "sync", "sync": "none" },
+    { "type": "installer", "url": "https://gamedownloads.rockstargames.com/public/installer/Rockstar-Games-Launcher.exe", "sha256": null, "arguments": [], "label": "Rockstar-Launcher-Setup" },
+    { "type": "pin", "pin": { "id": "6B1F0D2A-0000-4000-8000-000000000006", "name": "Rockstar Launcher", "path": "Program Files/Rockstar Games/Launcher/Launcher.exe", "arguments": [], "environment": {} } },
+    { "type": "note", "text": "Second-most-reported broken launcher on Whisky's tracker (freezes on logo). The launcher needs the Social Club redistributable which its installer bundles. If it freezes on the logo, try renderer d3dmetal and winetricks vcrun2019." }
+  ],
+  "knownIssues": [
+    { "symptom": "Freezes on Rockstar logo", "cause": "historic Whisky issue #2 (47 comments)", "fix": "try d3dmetal renderer + winetricks vcrun2019; report results" }
+  ],
+  "lastVerified": null
+}

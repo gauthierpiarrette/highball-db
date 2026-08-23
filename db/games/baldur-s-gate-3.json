@@ -1,0 +1,10 @@
+{
+  "id": "baldur-s-gate-3",
+  "title": "Baldur's Gate 3",
+  "steam_appid": 1086940,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
+  "notes": "native mac build exists \u2014 prefer it; Wine works too",
+  "lastVerified": null
+}

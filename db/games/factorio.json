@@ -1,0 +1,10 @@
+{
+  "id": "factorio",
+  "title": "Factorio",
+  "steam_appid": 427520,
+  "status": "community",
+  "renderer": "dxmt",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
+  "notes": "native mac build exists \u2014 prefer it",
+  "lastVerified": null
+}

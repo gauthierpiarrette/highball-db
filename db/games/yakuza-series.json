@@ -1,0 +1,10 @@
+{
+  "id": "yakuza-series",
+  "title": "Yakuza series",
+  "steam_appid": null,
+  "status": "reported-upstream",
+  "renderer": "dxmt",
+  "provenance": "DXMT changelog v0.80 (github.com/3Shain/dxmt/releases)",
+  "notes": "resolution-change crash fixed",
+  "lastVerified": null
+}

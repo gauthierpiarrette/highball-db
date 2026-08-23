@@ -1,0 +1,10 @@
+{
+  "id": "warframe",
+  "title": "Warframe",
+  "steam_appid": 230410,
+  "status": "reported-upstream",
+  "renderer": "dxmt",
+  "provenance": "DXMT changelog v0.73 (github.com/3Shain/dxmt/releases)",
+  "notes": "DLSS detection + terrain fixed",
+  "lastVerified": null
+}

@@ -1,0 +1,10 @@
+{
+  "id": "ys-viii-lacrimosa-of-dana",
+  "title": "Ys VIII: Lacrimosa of Dana",
+  "steam_appid": 579180,
+  "status": "reported-upstream",
+  "renderer": "dxmt",
+  "provenance": "DXMT changelog v0.80 (github.com/3Shain/dxmt/releases)",
+  "notes": "crash on launch fixed",
+  "lastVerified": null
+}

@@ -1,0 +1,10 @@
+{
+  "id": "apex-legends",
+  "title": "Apex Legends",
+  "steam_appid": 1172470,
+  "status": "blocked-anticheat",
+  "renderer": null,
+  "provenance": "kernel anti-cheat, structurally impossible under Wine",
+  "notes": "EAC; Linux/Mac support explicitly dropped by Respawn in 2024",
+  "lastVerified": null
+}

@@ -1,0 +1,10 @@
+{
+  "id": "deep-rock-galactic",
+  "title": "Deep Rock Galactic",
+  "steam_appid": 548430,
+  "status": "community",
+  "renderer": "dxmt",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
+  "notes": "EAC userspace; reported working",
+  "lastVerified": null
+}

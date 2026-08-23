@@ -1,0 +1,10 @@
+{
+  "id": "fallout-4",
+  "title": "Fallout 4",
+  "steam_appid": 377160,
+  "status": "community",
+  "renderer": "dxmt",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
+  "notes": "works; script extender untested",
+  "lastVerified": null
+}

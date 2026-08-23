@@ -1,0 +1,10 @@
+{
+  "id": "umamusume-pretty-derby",
+  "title": "Umamusume: Pretty Derby",
+  "steam_appid": 3224770,
+  "status": "reported-upstream",
+  "renderer": "dxmt",
+  "provenance": "DXMT changelog v0.73 (github.com/3Shain/dxmt/releases)",
+  "notes": "login background video fixed",
+  "lastVerified": null
+}

@@ -1,0 +1,10 @@
+{
+  "id": "red-dead-redemption-2",
+  "title": "Red Dead Redemption 2",
+  "steam_appid": 1174180,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
+  "notes": "Vulkan mode via MoltenVK or DX12 via d3dmetal; heavy",
+  "lastVerified": null
+}

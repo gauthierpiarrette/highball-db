@@ -1,0 +1,10 @@
+{
+  "id": "stellaris",
+  "title": "Stellaris",
+  "steam_appid": 281990,
+  "status": "reported-upstream",
+  "renderer": "dxmt",
+  "provenance": "DXMT changelog v0.73 (github.com/3Shain/dxmt/releases)",
+  "notes": "missing artworks fixed",
+  "lastVerified": null
+}

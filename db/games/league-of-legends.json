@@ -1,0 +1,10 @@
+{
+  "id": "league-of-legends",
+  "title": "League of Legends",
+  "steam_appid": null,
+  "status": "blocked-anticheat",
+  "renderer": null,
+  "provenance": "kernel anti-cheat, structurally impossible under Wine",
+  "notes": "Riot Vanguard since 2024",
+  "lastVerified": null
+}

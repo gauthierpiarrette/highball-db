@@ -1,0 +1,10 @@
+{
+  "id": "rust",
+  "title": "Rust",
+  "steam_appid": 252490,
+  "status": "blocked-anticheat",
+  "renderer": null,
+  "provenance": "kernel anti-cheat, structurally impossible under Wine",
+  "notes": "EAC kernel on Windows build",
+  "lastVerified": null
+}

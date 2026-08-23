@@ -1,0 +1,13 @@
+{
+  "id": "ubisoft-connect",
+  "kind": "launcher",
+  "title": "Ubisoft Connect",
+  "renderer": "dxmt",
+  "steps": [
+    { "type": "sync", "sync": "none" },
+    { "type": "installer", "url": "https://static3.cdn.ubi.com/orbit/launcher_installer/UbisoftConnectInstaller.exe", "sha256": null, "arguments": ["/S"], "label": "UbisoftConnectInstaller" },
+    { "type": "pin", "pin": { "id": "6B1F0D2A-0000-4000-8000-000000000005", "name": "Ubisoft Connect", "path": "Program Files (x86)/Ubisoft/Ubisoft Game Launcher/UbisoftConnect.exe", "arguments": [], "environment": {} } },
+    { "type": "note", "text": "NSIS installer accepts /S for silent install. Disable the in-game overlay in Connect settings — it injects into games and breaks under Wine." }
+  ],
+  "lastVerified": null
+}

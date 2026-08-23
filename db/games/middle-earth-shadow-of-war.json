@@ -1,0 +1,10 @@
+{
+  "id": "middle-earth-shadow-of-war",
+  "title": "Middle-earth: Shadow of War",
+  "steam_appid": 356190,
+  "status": "reported-upstream",
+  "renderer": "dxmt",
+  "provenance": "DXMT changelog v0.80 (github.com/3Shain/dxmt/releases)",
+  "notes": "infinite hang on launch fixed",
+  "lastVerified": null
+}

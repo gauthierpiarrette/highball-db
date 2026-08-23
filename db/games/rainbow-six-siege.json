@@ -1,0 +1,10 @@
+{
+  "id": "rainbow-six-siege",
+  "title": "Rainbow Six Siege",
+  "steam_appid": 359550,
+  "status": "blocked-anticheat",
+  "renderer": null,
+  "provenance": "kernel anti-cheat, structurally impossible under Wine",
+  "notes": "BattlEye kernel",
+  "lastVerified": null
+}

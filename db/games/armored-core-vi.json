@@ -1,0 +1,10 @@
+{
+  "id": "armored-core-vi",
+  "title": "Armored Core VI",
+  "steam_appid": 1888160,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
+  "notes": "reported working via GPTK-class stacks",
+  "lastVerified": null
+}

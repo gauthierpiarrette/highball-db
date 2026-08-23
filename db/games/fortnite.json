@@ -1,0 +1,10 @@
+{
+  "id": "fortnite",
+  "title": "Fortnite",
+  "steam_appid": null,
+  "status": "blocked-anticheat",
+  "renderer": null,
+  "provenance": "kernel anti-cheat, structurally impossible under Wine",
+  "notes": "Easy Anti-Cheat kernel mode; Epic explicitly does not support Wine",
+  "lastVerified": null
+}

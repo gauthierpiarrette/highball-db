@@ -1,0 +1,21 @@
+{
+  "id": "aperture-desk-job",
+  "kind": "game",
+  "title": "Aperture Desk Job",
+  "requires": ["steam"],
+  "renderer": "dxvk",
+  "steps": [
+    { "type": "note", "text": "Free Valve title, Source 2, D3D11, steam appid 1902490. Needs a game controller for actual play (menu works with keyboard)." }
+  ],
+  "knownIssues": [
+    { "symptom": "Black screen with DXMT 0.80 (frames present at ~48 fps but nothing rendered; -sw windowed does not help)", "cause": "DXMT + Source 2 presentation issue on this engine", "fix": "use dxvk (correct) or d3dmetal (fast but corrupted)" },
+    { "symptom": "Severe block-pattern texture corruption with D3DMetal 3.0 (menu and world visible, ~38-44 fps)", "cause": "unknown; D3DMetal + Source 2 on Wine 10 Sikarugir engine", "fix": "use dxvk" }
+  ],
+  "lastVerified": {
+    "date": "2026-08-23",
+    "engine": "x64-sikarugir10.0_6-r0",
+    "macos": "14.6",
+    "chip": "Apple M1 Pro",
+    "result": "dxvk: correct rendering, ~31 fps at 1728x1117 (GPU 13 ms, CPU 32 ms). d3dmetal: 38-44 fps, heavy texture corruption. dxmt 0.80: black screen. wined3d: untested."
+  }
+}

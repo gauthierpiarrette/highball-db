@@ -1,0 +1,10 @@
+{
+  "id": "world-of-tanks",
+  "title": "World of Tanks",
+  "steam_appid": null,
+  "status": "reported-upstream",
+  "renderer": "dxmt",
+  "provenance": "DXMT changelog v0.73 (github.com/3Shain/dxmt/releases)",
+  "notes": "z-fighting fixed",
+  "lastVerified": null
+}

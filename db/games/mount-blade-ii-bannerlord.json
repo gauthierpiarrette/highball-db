@@ -1,0 +1,10 @@
+{
+  "id": "mount-blade-ii-bannerlord",
+  "title": "Mount & Blade II: Bannerlord",
+  "steam_appid": 261550,
+  "status": "reported-upstream",
+  "renderer": "dxmt",
+  "provenance": "DXMT changelog v0.72 (github.com/3Shain/dxmt/releases)",
+  "notes": "cloth simulation fixed",
+  "lastVerified": null
+}

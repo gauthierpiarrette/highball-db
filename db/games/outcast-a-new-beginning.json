@@ -1,0 +1,10 @@
+{
+  "id": "outcast-a-new-beginning",
+  "title": "Outcast: A New Beginning",
+  "steam_appid": 690040,
+  "status": "reported-upstream",
+  "renderer": "dxmt",
+  "provenance": "DXMT changelog v0.80 (github.com/3Shain/dxmt/releases)",
+  "notes": "highlight outline glitch fixed",
+  "lastVerified": null
+}

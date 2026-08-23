@@ -1,0 +1,10 @@
+{
+  "id": "vampire-survivors",
+  "title": "Vampire Survivors",
+  "steam_appid": 1794680,
+  "status": "community",
+  "renderer": "dxmt",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
+  "notes": "trivial load; works",
+  "lastVerified": null
+}

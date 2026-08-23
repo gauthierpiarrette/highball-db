@@ -1,0 +1,10 @@
+{
+  "id": "sekiro-shadows-die-twice",
+  "title": "Sekiro: Shadows Die Twice",
+  "steam_appid": 814380,
+  "status": "reported-upstream",
+  "renderer": "dxmt",
+  "provenance": "DXMT changelog community (github.com/3Shain/dxmt/releases)",
+  "notes": "widely reported working via DXMT/D3DMetal",
+  "lastVerified": null
+}

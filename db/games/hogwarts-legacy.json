@@ -1,0 +1,10 @@
+{
+  "id": "hogwarts-legacy",
+  "title": "Hogwarts Legacy",
+  "steam_appid": 990080,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
+  "notes": "heavy; D3D12 \u2014 d3dmetal",
+  "lastVerified": null
+}

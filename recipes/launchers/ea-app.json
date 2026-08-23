@@ -1,0 +1,13 @@
+{
+  "id": "ea-app",
+  "kind": "launcher",
+  "title": "EA app",
+  "renderer": "d3dmetal",
+  "steps": [
+    { "type": "sync", "sync": "none" },
+    { "type": "installer", "url": "https://origin-a.akamaihd.net/EA-Desktop-Client-Download/installer-releases/EAappInstaller.exe", "sha256": null, "arguments": [], "label": "EAappInstaller" },
+    { "type": "pin", "pin": { "id": "6B1F0D2A-0000-4000-8000-000000000004", "name": "EA app", "path": "Program Files/Electronic Arts/EA Desktop/EA Desktop/EADesktop.exe", "arguments": [], "environment": {} } },
+    { "type": "note", "text": "The EA app is a Qt/CEF hybrid and one of the flakiest launchers under Wine. The Sikarugir community runs it under D3DMetal (see LIVE4MINT/Sikarugir-EA-App-Mac). Expect background-service errors that can be dismissed." }
+  ],
+  "lastVerified": null
+}

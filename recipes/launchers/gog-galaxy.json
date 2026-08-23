@@ -1,0 +1,13 @@
+{
+  "id": "gog-galaxy",
+  "kind": "launcher",
+  "title": "GOG Galaxy",
+  "renderer": "dxmt",
+  "steps": [
+    { "type": "sync", "sync": "none" },
+    { "type": "installer", "url": "https://webinstallers.gog-statics.com/download/GOG_Galaxy_2.0.exe", "sha256": null, "arguments": ["/VERYSILENT", "/NORESTART"], "label": "GOG-Galaxy-Setup" },
+    { "type": "pin", "pin": { "id": "6B1F0D2A-0000-4000-8000-000000000003", "name": "GOG Galaxy", "path": "Program Files (x86)/GOG Galaxy/GalaxyClient.exe", "arguments": [], "environment": {} } },
+    { "type": "note", "text": "GOG games are DRM-free: if Galaxy itself misbehaves, download the offline installers from gog.com in a browser and run them directly in the bottle — often the more reliable path under Wine." }
+  ],
+  "lastVerified": null
+}

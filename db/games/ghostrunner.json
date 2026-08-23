@@ -1,0 +1,10 @@
+{
+  "id": "ghostrunner",
+  "title": "Ghostrunner",
+  "steam_appid": 1139900,
+  "status": "reported-upstream",
+  "renderer": "dxmt",
+  "provenance": "DXMT changelog v0.7x (github.com/3Shain/dxmt/releases)",
+  "notes": "listed in DXMT compatibility reports",
+  "lastVerified": null
+}

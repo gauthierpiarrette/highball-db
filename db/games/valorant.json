@@ -1,0 +1,10 @@
+{
+  "id": "valorant",
+  "title": "Valorant",
+  "steam_appid": null,
+  "status": "blocked-anticheat",
+  "renderer": null,
+  "provenance": "kernel anti-cheat, structurally impossible under Wine",
+  "notes": "Riot Vanguard (kernel driver)",
+  "lastVerified": null
+}

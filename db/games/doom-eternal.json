@@ -1,0 +1,10 @@
+{
+  "id": "doom-eternal",
+  "title": "DOOM Eternal",
+  "steam_appid": 782330,
+  "status": "community",
+  "renderer": "dxvk",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
+  "notes": "Vulkan-only: DXVK/MoltenVK path; mixed reports",
+  "lastVerified": null
+}

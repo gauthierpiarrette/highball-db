@@ -1,0 +1,10 @@
+{
+  "id": "monster-hunter-world",
+  "title": "Monster Hunter: World",
+  "steam_appid": 582010,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
+  "notes": "works; iceborne heavy",
+  "lastVerified": null
+}

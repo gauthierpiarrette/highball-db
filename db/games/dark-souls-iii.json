@@ -1,0 +1,10 @@
+{
+  "id": "dark-souls-iii",
+  "title": "Dark Souls III",
+  "steam_appid": 374320,
+  "status": "community",
+  "renderer": "dxmt",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
+  "notes": "works offline; anti-cheat softban risk online",
+  "lastVerified": null
+}

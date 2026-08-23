@@ -1,0 +1,50 @@
+{
+  "id": "epic-games",
+  "kind": "launcher",
+  "title": "Epic Games Launcher",
+  "renderer": "dxmt",
+  "steps": [
+    {
+      "type": "sync",
+      "sync": "none"
+    },
+    {
+      "type": "installer",
+      "url": "https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi",
+      "sha256": null,
+      "arguments": [],
+      "label": "EpicInstaller",
+      "msi": true
+    },
+    {
+      "type": "pin",
+      "pin": {
+        "id": "6B1F0D2A-0000-4000-8000-000000000002",
+        "name": "Epic Games",
+        "path": "Program Files/Epic Games/Launcher/Portal/Binaries/Win64/EpicGamesLauncher.exe",
+        "arguments": [
+          "-SkipBuildPatchPrereq"
+        ],
+        "environment": {}
+      }
+    },
+    {
+      "type": "note",
+      "text": "MSI installs silently via msiexec /i ... /qn. The launcher UI is heavy CEF; first start takes minutes. -SkipBuildPatchPrereq avoids a prerequisite loop under Wine."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "Crash on launch from Epic ('Epic Online Services')",
+      "cause": "EOS overlay under Wine",
+      "fix": "DXMT v0.73+ fixed EOS-launched crashes; keep DXMT current"
+    }
+  ],
+  "lastVerified": {
+    "date": "2026-08-23",
+    "engine": "x64-sikarugir10.0_6-r0",
+    "macos": "14.6",
+    "chip": "Apple M1 Pro",
+    "result": "silent MSI install OK in 90 s; launcher installed to Program Files/Epic Games (Win64); login not yet tested"
+  }
+}

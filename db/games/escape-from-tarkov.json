@@ -1,0 +1,10 @@
+{
+  "id": "escape-from-tarkov",
+  "title": "Escape from Tarkov",
+  "steam_appid": null,
+  "status": "blocked-anticheat",
+  "renderer": null,
+  "provenance": "kernel anti-cheat, structurally impossible under Wine",
+  "notes": "BattlEye kernel",
+  "lastVerified": null
+}

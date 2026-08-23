@@ -1,0 +1,10 @@
+{
+  "id": "overwatch-2",
+  "title": "Overwatch 2",
+  "steam_appid": null,
+  "status": "reported-upstream",
+  "renderer": "dxmt",
+  "provenance": "DXMT changelog v0.80 (github.com/3Shain/dxmt/releases)",
+  "notes": "missing hero ability effects fixed; Battle.net required",
+  "lastVerified": null
+}

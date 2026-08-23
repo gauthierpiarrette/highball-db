@@ -1,0 +1,10 @@
+{
+  "id": "elden-ring",
+  "title": "Elden Ring",
+  "steam_appid": 1245620,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
+  "notes": "EAC is userspace under Wine \u2014 runs; use d3dmetal (D3D12)",
+  "lastVerified": null
+}

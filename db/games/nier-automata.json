@@ -1,0 +1,10 @@
+{
+  "id": "nier-automata",
+  "title": "NieR: Automata",
+  "steam_appid": 524220,
+  "status": "reported-upstream",
+  "renderer": "dxmt",
+  "provenance": "DXMT changelog v0.41+ (github.com/3Shain/dxmt/releases)",
+  "notes": "first DXMT milestone title; runs decently",
+  "lastVerified": null
+}

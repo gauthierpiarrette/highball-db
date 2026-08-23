@@ -1,0 +1,10 @@
+{
+  "id": "battlefield-2042",
+  "title": "Battlefield 2042",
+  "steam_appid": 1517290,
+  "status": "blocked-anticheat",
+  "renderer": null,
+  "provenance": "kernel anti-cheat, structurally impossible under Wine",
+  "notes": "EA AntiCheat kernel",
+  "lastVerified": null
+}

@@ -1,0 +1,10 @@
+{
+  "id": "death-stranding",
+  "title": "Death Stranding",
+  "steam_appid": 1190460,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
+  "notes": "D3D12 \u2014 d3dmetal",
+  "lastVerified": null
+}

@@ -1,0 +1,46 @@
+{
+  "id": "steam",
+  "kind": "launcher",
+  "title": "Steam",
+  "renderer": "dxmt",
+  "steps": [
+    {
+      "type": "note",
+      "text": "Steam's webhelper (CEF) hangs with msync and esync on Wine 10 (Sikarugir): the renderer never answers and Steam kills it after 90 s. Use plain wineserver sync for the Steam bottle. Verified 2026-08-23 on M1 Pro / macOS 14.6."
+    },
+    { "type": "sync", "sync": "none" },
+    {
+      "type": "installer",
+      "url": "https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe",
+      "sha256": null,
+      "arguments": ["/S"],
+      "label": "SteamSetup"
+    },
+    {
+      "type": "pin",
+      "pin": {
+        "id": "0B5B2C6E-7B1E-4B9E-9C6E-5A1F3D2E1C01",
+        "name": "Steam",
+        "path": "Program Files (x86)/Steam/steam.exe",
+        "arguments": [],
+        "environment": {}
+      }
+    },
+    {
+      "type": "note",
+      "text": "First launch downloads the 64-bit client (~235 MB) and extracts it. Under WoW64 + Rosetta the 32-bit bootstrapper takes 15–25 minutes and may look frozen; let it finish. If it crashes with 'nested exception on signal stack', relaunch — it resumes."
+    },
+    {
+      "type": "note",
+      "text": "In Steam: Settings → Interface → disable 'GPU accelerated rendering in web views'; Settings → In-Game → disable the Steam Overlay. Both are unstable under Wine."
+    }
+  ],
+  "knownIssues": [
+    { "symptom": "Login window never appears; webhelper.txt says 'killing unresponsive browser'", "cause": "msync/esync enabled", "fix": "set bottle sync to none" },
+    { "symptom": "err:virtual:virtual_setup_exception nested exception on signal stack during first update", "cause": "32-bit bootstrapper under experimental WoW64 (seen with msync+DXMT)", "fix": "relaunch; the update resumes from package/" },
+    { "symptom": "Download stalls at ~215/235 MB", "cause": "bootstrapper download thread hang", "fix": "kill and relaunch; resumes" },
+    { "symptom": "'Steam Client Service' failed to start (GLE 126)", "cause": "steamservice.exe not supported under Wine", "fix": "harmless for most games; needed only for some anti-cheat/driver installs" },
+    { "symptom": "NO CONNECTION right after login", "cause": "native macOS Steam holds the session", "fix": "quit native Steam" }
+  ],
+  "lastVerified": { "date": "2026-08-23", "engine": "x64-sikarugir10.0_6-r0", "macos": "14.6", "chip": "Apple M1 Pro", "result": "login and library UI working; renderer=dxmt, sync=none" }
+}

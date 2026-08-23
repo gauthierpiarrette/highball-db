@@ -1,0 +1,10 @@
+{
+  "id": "beamng-drive",
+  "title": "BeamNG.drive",
+  "steam_appid": 284160,
+  "status": "reported-upstream",
+  "renderer": "dxmt",
+  "provenance": "DXMT changelog v0.72 (github.com/3Shain/dxmt/releases)",
+  "notes": "dynamic reflections fixed",
+  "lastVerified": null
+}

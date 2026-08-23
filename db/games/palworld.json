@@ -1,0 +1,10 @@
+{
+  "id": "palworld",
+  "title": "Palworld",
+  "steam_appid": 1623730,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
+  "notes": "works, heavy",
+  "lastVerified": null
+}

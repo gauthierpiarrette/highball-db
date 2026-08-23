@@ -1,0 +1,10 @@
+{
+  "id": "shadow-of-the-tomb-raider",
+  "title": "Shadow of the Tomb Raider",
+  "steam_appid": 750920,
+  "status": "reported-upstream",
+  "renderer": "dxmt",
+  "provenance": "DXMT changelog v0.80 (github.com/3Shain/dxmt/releases)",
+  "notes": "z-fighting on clothes fixed",
+  "lastVerified": null
+}

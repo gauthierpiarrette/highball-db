@@ -1,0 +1,10 @@
+{
+  "id": "pubg-battlegrounds",
+  "title": "PUBG: Battlegrounds",
+  "steam_appid": 578080,
+  "status": "blocked-anticheat",
+  "renderer": null,
+  "provenance": "kernel anti-cheat, structurally impossible under Wine",
+  "notes": "BattlEye kernel",
+  "lastVerified": null
+}

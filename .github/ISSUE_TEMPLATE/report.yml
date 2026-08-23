@@ -1,0 +1,38 @@
+name: Compatibility report
+description: How did a game or launcher run through Highball?
+labels: [report]
+body:
+  - type: input
+    id: title
+    attributes: { label: Game or launcher, placeholder: "Elden Ring" }
+    validations: { required: true }
+  - type: input
+    id: steam_appid
+    attributes: { label: Steam AppID (if a Steam game), placeholder: "1245620" }
+  - type: dropdown
+    id: rating
+    attributes:
+      label: Rating
+      options: ["5 — perfect", "4 — playable, minor issues", "3 — playable with workarounds", "2 — launches, not playable", "1 — does not launch"]
+    validations: { required: true }
+  - type: dropdown
+    id: renderer
+    attributes:
+      label: Renderer
+      options: [dxmt, d3dmetal, dxvk, wined3d]
+    validations: { required: true }
+  - type: input
+    id: chip
+    attributes: { label: Chip, placeholder: "Apple M1 Pro" }
+    validations: { required: true }
+  - type: input
+    id: macos
+    attributes: { label: macOS version, placeholder: "14.6" }
+    validations: { required: true }
+  - type: input
+    id: engine
+    attributes: { label: Engine id, placeholder: "x64-sikarugir10.0_6-r0" }
+    validations: { required: true }
+  - type: textarea
+    id: notes
+    attributes: { label: Notes, description: Settings that mattered, glitches, fps, workarounds. }

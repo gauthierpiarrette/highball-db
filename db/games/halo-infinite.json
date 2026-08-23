@@ -1,0 +1,10 @@
+{
+  "id": "halo-infinite",
+  "title": "Halo Infinite",
+  "steam_appid": 1240440,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
+  "notes": "campaign reported; multiplayer anticheat risk",
+  "lastVerified": null
+}

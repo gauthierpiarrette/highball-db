@@ -1,0 +1,10 @@
+{
+  "id": "counter-strike-2",
+  "title": "Counter-Strike 2",
+  "steam_appid": 730,
+  "status": "reported-upstream",
+  "renderer": "dxmt",
+  "provenance": "DXMT changelog v0.73 (github.com/3Shain/dxmt/releases)",
+  "notes": "blank screen with exclusive fullscreen + MSAA fixed; VAC is userspace \u2014 playable but use at own judgement",
+  "lastVerified": null
+}

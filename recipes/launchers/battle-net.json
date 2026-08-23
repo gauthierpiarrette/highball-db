@@ -1,0 +1,16 @@
+{
+  "id": "battle-net",
+  "kind": "launcher",
+  "title": "Battle.net",
+  "renderer": "dxmt",
+  "steps": [
+    { "type": "sync", "sync": "none" },
+    { "type": "installer", "url": "https://downloader.battle.net/download/getInstaller?os=win&installer=Battle.net-Setup.exe", "sha256": null, "arguments": ["--lang=enUS", "--installpath=C:\\Program Files (x86)\\Battle.net"], "label": "Battle.net-Setup" },
+    { "type": "pin", "pin": { "id": "6B1F0D2A-0000-4000-8000-000000000001", "name": "Battle.net", "path": "Program Files (x86)/Battle.net/Battle.net Launcher.exe", "arguments": [], "environment": {} } },
+    { "type": "note", "text": "The installer is a GUI (no silent mode): pick the install path and let it download the client. Battle.net's login is CEF-based like Steam's — keep sync: none. Historically the top-1 Whisky issue (54 comments); expect login flakiness." }
+  ],
+  "knownIssues": [
+    { "symptom": "Login window crash on submit", "cause": "CEF under Wine; historically broken on CrossOver-derived engines too", "fix": "retry; keep sync none; disable hardware acceleration in Battle.net settings once in" }
+  ],
+  "lastVerified": null
+}
