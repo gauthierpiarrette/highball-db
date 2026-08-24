@@ -44,7 +44,16 @@ try:
 except Exception:
     pass
 
-page = f"""<title>Highball Compatibility Database</title>
+page = f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Highball Compatibility Database</title>
+<meta property="og:title" content="Highball Compatibility Database">
+<meta property="og:description" content="Windows games on Apple Silicon, as data with provenance: verified runs, upstream reports, {derived_count:,} predictions, anti-cheat blocklist.">
+<meta property="og:url" content="https://gauthierpiarrette.github.io/highball-db/">
+<link rel="icon" href="https://gauthierpiarrette.github.io/highball/logo-128.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 :root {{ --ground:#F8F5EF; --surface:#EFEAE0; --line:#D8D0C0; --ink:#211D15; --ink2:#4A4436; --muted:#8A8171;
@@ -81,7 +90,10 @@ input[type=search] {{ background:var(--surface); border:1px solid var(--line); c
 input[type=search]:focus {{ outline:2px solid var(--accent); }}
 </style>
 <div class="page">
-<div class="eyebrow">Highball · open compatibility database · CC0</div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+  <div class="eyebrow">Highball · open compatibility database · CC0</div>
+  <a href="https://gauthierpiarrette.github.io/highball/" style="font-size:.85rem;border:1px solid var(--accent);padding:.35rem .9rem;border-radius:6px;text-decoration:none;white-space:nowrap">Get Highball ↗</a>
+</div>
 <h1>What runs on Apple Silicon</h1>
 <p class="sub">Windows games through Wine + DXMT / D3DMetal / DXVK, as data: what was actually verified, what upstream projects report, what the community says, and what kernel anti-cheat makes impossible. Every row carries its provenance.</p>
 
@@ -118,7 +130,7 @@ input[type=search]:focus {{ outline:2px solid var(--accent); }}
 <tbody>{chr(10).join(lrow(r) for r in launchers)}</tbody>
 </table></div>
 
-<footer>generated {datetime.date.today().isoformat()} from db/ and recipes/ · contribute via `highball report` or a recipe PR</footer>
+<footer>generated {datetime.date.today().isoformat()} from db/ and recipes/ · contribute via `highball report` or a recipe PR · anti-cheat data © AWACY (MIT) · predictions derive from ProtonDB exports (ODbL)</footer>
 </div>
 <script>
 const rows=[...document.querySelectorAll('#games tbody tr')];
@@ -143,7 +155,7 @@ document.getElementById('dq').addEventListener('input',async e=>{{
 </script>
 """
 os.makedirs("site", exist_ok=True)
-open("site/index.html", "w").write(page)
+open("site/index.html", "w").write(page + "\n</html>")
 try:
     import shutil; shutil.copy("db/derived/derived.json", "site/derived.json")
 except Exception: pass
