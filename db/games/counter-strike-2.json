@@ -5,7 +5,7 @@
   "status": "reported-upstream",
   "renderer": "dxmt",
   "provenance": "DXMT changelog v0.73 (github.com/3Shain/dxmt/releases)",
-  "notes": "blank screen with exclusive fullscreen + MSAA fixed; VAC is userspace — playable but use at own judgement",
+  "notes": "Use DXMT (the recommended renderer): it identifies as an AMD card, so the game skips NVAPI. Under DXVK/wined3d the GPU can be reported as a fake NVIDIA, and CS2 then fails with 'Failed to initialize NVAPI (0xFFFFFFFE)' — same as Proton. If stuck on DXVK, set bottle env DXVK_CONFIG=\"dxgi.customVendorId = 1002\". Blank screen with exclusive fullscreen + MSAA fixed in DXMT 0.73. VAC is userspace — playable but use at own judgement.",
   "lastVerified": null,
   "anticheat": {
     "names": [
