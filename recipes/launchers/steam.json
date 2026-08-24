@@ -6,14 +6,19 @@
   "steps": [
     {
       "type": "note",
-      "text": "Steam's webhelper (CEF) hangs with msync and esync on Wine 10 (Sikarugir): the renderer never answers and Steam kills it after 90 s. Use plain wineserver sync for the Steam bottle. Verified 2026-08-23 on M1 Pro / macOS 14.6."
+      "text": "Steam's own CEF interface hangs under msync/esync, but GAMES gain ~40% frame rate from msync. Wine's sync mode is fixed when the prefix's wineserver starts, so: the bottle runs msync (games, silent -applaunch sessions), and the Steam UI pin carries WINEMSYNC=0/WINEESYNC=0 for its own cold starts. Highball's app restarts the wineserver when you open the Steam window. Verified 2026-08-24 on M1 Pro / macOS 14.6."
     },
-    { "type": "sync", "sync": "none" },
+    {
+      "type": "sync",
+      "sync": "msync"
+    },
     {
       "type": "installer",
       "url": "https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe",
       "sha256": null,
-      "arguments": ["/S"],
+      "arguments": [
+        "/S"
+      ],
       "label": "SteamSetup"
     },
     {
@@ -23,7 +28,10 @@
         "name": "Steam",
         "path": "Program Files (x86)/Steam/steam.exe",
         "arguments": [],
-        "environment": {}
+        "environment": {
+          "WINEMSYNC": "0",
+          "WINEESYNC": "0"
+        }
       }
     },
     {
@@ -36,11 +44,42 @@
     }
   ],
   "knownIssues": [
-    { "symptom": "Login window never appears; webhelper.txt says 'killing unresponsive browser'", "cause": "msync/esync enabled", "fix": "set bottle sync to none" },
-    { "symptom": "err:virtual:virtual_setup_exception nested exception on signal stack during first update", "cause": "32-bit bootstrapper under experimental WoW64 (seen with msync+DXMT)", "fix": "relaunch; the update resumes from package/" },
-    { "symptom": "Download stalls at ~215/235 MB", "cause": "bootstrapper download thread hang", "fix": "kill and relaunch; resumes" },
-    { "symptom": "'Steam Client Service' failed to start (GLE 126)", "cause": "steamservice.exe not supported under Wine", "fix": "harmless for most games; needed only for some anti-cheat/driver installs" },
-    { "symptom": "NO CONNECTION right after login", "cause": "native macOS Steam holds the session", "fix": "quit native Steam" }
+    {
+      "symptom": "Steam window opened after playing a game shows no UI",
+      "cause": "wineserver still running in msync from the game session",
+      "fix": "stop the bottle's processes first (the Highball app does this automatically)"
+    },
+    {
+      "symptom": "Login window never appears; webhelper.txt says 'killing unresponsive browser'",
+      "cause": "msync/esync enabled",
+      "fix": "set bottle sync to none"
+    },
+    {
+      "symptom": "err:virtual:virtual_setup_exception nested exception on signal stack during first update",
+      "cause": "32-bit bootstrapper under experimental WoW64 (seen with msync+DXMT)",
+      "fix": "relaunch; the update resumes from package/"
+    },
+    {
+      "symptom": "Download stalls at ~215/235 MB",
+      "cause": "bootstrapper download thread hang",
+      "fix": "kill and relaunch; resumes"
+    },
+    {
+      "symptom": "'Steam Client Service' failed to start (GLE 126)",
+      "cause": "steamservice.exe not supported under Wine",
+      "fix": "harmless for most games; needed only for some anti-cheat/driver installs"
+    },
+    {
+      "symptom": "NO CONNECTION right after login",
+      "cause": "native macOS Steam holds the session",
+      "fix": "quit native Steam"
+    }
   ],
-  "lastVerified": { "date": "2026-08-23", "engine": "x64-sikarugir10.0_6-r0", "macos": "14.6", "chip": "Apple M1 Pro", "result": "login and library UI working; renderer=dxmt, sync=none" }
+  "lastVerified": {
+    "date": "2026-08-24",
+    "engine": "x64-sikarugir10.0_6-r0",
+    "macos": "14.6",
+    "chip": "Apple M1 Pro",
+    "result": "login/store under sync=none; games via silent -applaunch under msync (Steamworks IPC works with a headless msync client)"
+  }
 }
