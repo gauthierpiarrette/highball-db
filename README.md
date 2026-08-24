@@ -1,4 +1,5 @@
-# highball-db
+<p align="center"><img src=".github/assets/logo.png" width="110" alt="Highball logo"></p>
+<h1 align="center">highball-db</h1>
 
 The open, CC0 compatibility database behind [Highball](https://github.com/gauthierpiarrette/highball):
 Windows games and launchers on Apple Silicon through Wine + DXMT / D3DMetal / DXVK,
