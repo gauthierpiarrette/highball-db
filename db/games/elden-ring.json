@@ -5,6 +5,13 @@
   "status": "community",
   "renderer": "d3dmetal",
   "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
-  "notes": "EAC is userspace under Wine \u2014 runs; use d3dmetal (D3D12)",
-  "lastVerified": null
+  "notes": "EAC is userspace under Wine — runs; use d3dmetal (D3D12)",
+  "lastVerified": null,
+  "anticheat": {
+    "names": [
+      "Easy Anti-Cheat"
+    ],
+    "macVerdict": "warning",
+    "note": "anti-cheat present; Linux/Proton support does not extend to macOS — userspace path works for some titles"
+  }
 }

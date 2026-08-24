@@ -6,5 +6,12 @@
   "renderer": null,
   "provenance": "kernel anti-cheat, structurally impossible under Wine",
   "notes": "Riot Vanguard (kernel driver)",
-  "lastVerified": null
+  "lastVerified": null,
+  "anticheat": {
+    "names": [
+      "Vanguard"
+    ],
+    "macVerdict": "blocked",
+    "note": "kernel anti-cheat; cannot work under Wine on macOS"
+  }
 }

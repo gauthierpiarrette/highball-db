@@ -38,6 +38,12 @@ def lrow(r):
     state = f'<span class="pill good">Verified</span> <span class="prov">{html.escape(v["result"])}</span>' if v else '<span class="pill warn">Untested</span> <span class="prov">recipe written, needs a verification run</span>'
     return f'<tr><td>{html.escape(r["title"])}</td><td class="mono">{r.get("renderer") or "—"}</td><td>{state}</td></tr>'
 
+derived_count = 0
+try:
+    derived_count = len(json.load(open("db/derived/derived.json"))["games"])
+except Exception:
+    pass
+
 page = f"""<title>Highball Compatibility Database</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
@@ -101,6 +107,11 @@ input[type=search]:focus {{ outline:2px solid var(--accent); }}
 <li><span class="pill bad">Blocked</span> — {STATUS['blocked-anticheat'][2]}</li>
 </ul>
 
+<h2>Predictions for everything else</h2>
+<p class="sub" style="font-size:.9rem">{derived_count:,} more Steam games carry a <b>machine-derived prediction</b> — recent <a href="https://www.protondb.com">ProtonDB</a> verdicts (ODbL) crossed with <a href="https://areweanticheatyet.com">anti-cheat</a> knowledge. Proton describes Linux; treat these as odds, not verdicts.</p>
+<input type="search" id="dq" placeholder="Search {derived_count:,} predictions…" aria-label="Search predictions">
+<div id="dresults" style="margin:.75rem 0 1.5rem"></div>
+
 <h2>Launchers</h2>
 <div class="scroll"><table>
 <thead><tr><th>Launcher</th><th>Renderer</th><th>Recipe status</th></tr></thead>
@@ -117,8 +128,23 @@ function apply() {{ rows.forEach(r=>{{ const okF = f==='all'||r.dataset.status==
 document.getElementById('filters').addEventListener('click',e=>{{ const b=e.target.closest('.chip'); if(!b)return;
   document.querySelectorAll('.chip').forEach(c=>c.classList.remove('on')); b.classList.add('on'); f=b.dataset.f; apply(); }});
 document.getElementById('q').addEventListener('input',e=>{{ q=e.target.value.toLowerCase(); apply(); }});
+let derived=null;
+const PRED={{likely:['Likely works','good'],maybe:['Maybe','warn'],unlikely:['Unlikely','bad']}};
+document.getElementById('dq').addEventListener('input',async e=>{{
+  const term=e.target.value.toLowerCase(); const box=document.getElementById('dresults');
+  if(term.length<2){{box.innerHTML='';return;}}
+  if(!derived){{box.textContent='Loading predictions…'; derived=(await (await fetch('derived.json')).json()).games;}}
+  const hits=Object.entries(derived).filter(([id,g])=>g.title.toLowerCase().includes(term)).slice(0,30);
+  box.innerHTML=hits.length? '<table><thead><tr><th>Title</th><th>Prediction</th><th>Proton (recent)</th><th>Anti-cheat</th></tr></thead><tbody>'+hits.map(([id,g])=>{{
+    const [label,cls]=PRED[g.macPrediction]||['?','']; 
+    return `<tr><td><a href="https://store.steampowered.com/app/${{id}}/">${{g.title}}</a></td><td><span class="pill ${{cls}}">${{label}}</span></td><td class="mono">${{g.protonTier}} · ${{g.recentReports}} reports</td><td>${{g.anticheat?g.anticheat.join(', '):'—'}}</td></tr>`;
+  }}).join('')+'</tbody></table>' : 'No match.';
+}});
 </script>
 """
 os.makedirs("site", exist_ok=True)
 open("site/index.html", "w").write(page)
+try:
+    import shutil; shutil.copy("db/derived/derived.json", "site/derived.json")
+except Exception: pass
 print(f"site/index.html: {len(page)//1024} KB, {len(games)} games, {len(launchers)} launchers")

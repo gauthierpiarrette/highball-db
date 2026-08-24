@@ -6,5 +6,12 @@
   "renderer": null,
   "provenance": "kernel anti-cheat, structurally impossible under Wine",
   "notes": "EA AntiCheat kernel",
-  "lastVerified": null
+  "lastVerified": null,
+  "anticheat": {
+    "names": [
+      "EA anticheat"
+    ],
+    "macVerdict": "blocked",
+    "note": "kernel anti-cheat; cannot work under Wine on macOS"
+  }
 }

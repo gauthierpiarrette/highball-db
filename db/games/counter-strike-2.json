@@ -5,6 +5,13 @@
   "status": "reported-upstream",
   "renderer": "dxmt",
   "provenance": "DXMT changelog v0.73 (github.com/3Shain/dxmt/releases)",
-  "notes": "blank screen with exclusive fullscreen + MSAA fixed; VAC is userspace \u2014 playable but use at own judgement",
-  "lastVerified": null
+  "notes": "blank screen with exclusive fullscreen + MSAA fixed; VAC is userspace — playable but use at own judgement",
+  "lastVerified": null,
+  "anticheat": {
+    "names": [
+      "VAC"
+    ],
+    "macVerdict": "warning",
+    "note": "anti-cheat present; Linux/Proton support does not extend to macOS — userspace path works for some titles"
+  }
 }

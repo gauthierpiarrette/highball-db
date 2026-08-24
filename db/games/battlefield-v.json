@@ -1,0 +1,18 @@
+{
+  "id": "battlefield-v",
+  "title": "Battlefield V",
+  "steam_appid": 1238810,
+  "status": "blocked-anticheat",
+  "renderer": null,
+  "provenance": "Are We Anti-Cheat Yet? (MIT) — kernel anti-cheat vendor; structurally impossible under Wine on macOS",
+  "notes": "Anti-cheat: FairFight, EA anticheat. Linux/Proton status 'Denied' does not apply to macOS.",
+  "anticheat": {
+    "names": [
+      "FairFight",
+      "EA anticheat"
+    ],
+    "macVerdict": "blocked",
+    "note": "kernel anti-cheat; cannot work under Wine on macOS"
+  },
+  "lastVerified": null
+}

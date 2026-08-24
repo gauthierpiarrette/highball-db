@@ -1,0 +1,17 @@
+{
+  "id": "ea-sports-wrc",
+  "title": "EA SPORTS™ WRC 24",
+  "steam_appid": 1849250,
+  "status": "blocked-anticheat",
+  "renderer": null,
+  "provenance": "Are We Anti-Cheat Yet? (MIT) — kernel anti-cheat vendor; structurally impossible under Wine on macOS",
+  "notes": "Anti-cheat: EA anticheat. Linux/Proton status 'Denied' does not apply to macOS.",
+  "anticheat": {
+    "names": [
+      "EA anticheat"
+    ],
+    "macVerdict": "blocked",
+    "note": "kernel anti-cheat; cannot work under Wine on macOS"
+  },
+  "lastVerified": null
+}

@@ -6,5 +6,12 @@
   "renderer": "dxmt",
   "provenance": "DXMT changelog v0.80 (github.com/3Shain/dxmt/releases)",
   "notes": "missing hero ability effects fixed; Battle.net required",
-  "lastVerified": null
+  "lastVerified": null,
+  "anticheat": {
+    "names": [
+      "Warden"
+    ],
+    "macVerdict": "warning",
+    "note": "anti-cheat present; Linux/Proton support does not extend to macOS — userspace path works for some titles"
+  }
 }

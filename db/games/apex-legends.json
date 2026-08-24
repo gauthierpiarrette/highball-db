@@ -6,5 +6,13 @@
   "renderer": null,
   "provenance": "kernel anti-cheat, structurally impossible under Wine",
   "notes": "EAC; Linux/Mac support explicitly dropped by Respawn in 2024",
-  "lastVerified": null
+  "lastVerified": null,
+  "anticheat": {
+    "names": [
+      "Easy Anti-Cheat",
+      "Hyperion"
+    ],
+    "macVerdict": "warning",
+    "note": "anti-cheat present; Linux/Proton support does not extend to macOS — userspace path works for some titles"
+  }
 }

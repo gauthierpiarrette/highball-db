@@ -5,6 +5,13 @@
   "status": "community",
   "renderer": "d3dmetal",
   "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
-  "notes": "story mode fine; GTA Online uses BattlEye \u2014 expect blocked",
-  "lastVerified": null
+  "notes": "story mode fine; GTA Online uses BattlEye — expect blocked",
+  "lastVerified": null,
+  "anticheat": {
+    "names": [
+      "BattlEye"
+    ],
+    "macVerdict": "warning",
+    "note": "anti-cheat present; Linux/Proton support does not extend to macOS — userspace path works for some titles"
+  }
 }

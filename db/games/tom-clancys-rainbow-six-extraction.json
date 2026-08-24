@@ -1,0 +1,17 @@
+{
+  "id": "tom-clancys-rainbow-six-extraction",
+  "title": "Tom Clancy’s Rainbow Six® Extraction",
+  "steam_appid": 2379390,
+  "status": "blocked-anticheat",
+  "renderer": null,
+  "provenance": "Are We Anti-Cheat Yet? (MIT) — kernel anti-cheat vendor; structurally impossible under Wine on macOS",
+  "notes": "Anti-cheat: Denuvo Anti-Cheat. Linux/Proton status 'Running' does not apply to macOS.",
+  "anticheat": {
+    "names": [
+      "Denuvo Anti-Cheat"
+    ],
+    "macVerdict": "blocked",
+    "note": "kernel anti-cheat; cannot work under Wine on macOS"
+  },
+  "lastVerified": null
+}

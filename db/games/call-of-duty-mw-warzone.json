@@ -6,5 +6,12 @@
   "renderer": null,
   "provenance": "kernel anti-cheat, structurally impossible under Wine",
   "notes": "Ricochet kernel driver",
-  "lastVerified": null
+  "lastVerified": null,
+  "anticheat": {
+    "names": [
+      "RICOCHET"
+    ],
+    "macVerdict": "warning",
+    "note": "anti-cheat present; Linux/Proton support does not extend to macOS — userspace path works for some titles"
+  }
 }

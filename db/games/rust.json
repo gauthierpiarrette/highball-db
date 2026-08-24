@@ -6,5 +6,13 @@
   "renderer": null,
   "provenance": "kernel anti-cheat, structurally impossible under Wine",
   "notes": "EAC kernel on Windows build",
-  "lastVerified": null
+  "lastVerified": null,
+  "anticheat": {
+    "names": [
+      "Easy Anti-Cheat",
+      "VAC"
+    ],
+    "macVerdict": "warning",
+    "note": "anti-cheat present; Linux/Proton support does not extend to macOS — userspace path works for some titles"
+  }
 }
