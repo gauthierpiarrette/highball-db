@@ -171,6 +171,7 @@ document.getElementById('filters').addEventListener('click',e=>{{ const b=e.targ
   document.querySelectorAll('.tile').forEach(c=>c.classList.remove('on')); b.classList.add('on'); f=b.dataset.f; apply(); }});
 document.getElementById('q').addEventListener('input',e=>{{ q=e.target.value.toLowerCase(); apply(); }});
 let derived=null;
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}}[c]));
 const PRED={{likely:['Likely works','good'],maybe:['Maybe','warn'],unlikely:['Unlikely','bad']}};
 document.getElementById('dq').addEventListener('input',async e=>{{
   const term=e.target.value.toLowerCase(); const box=document.getElementById('dresults');
@@ -179,7 +180,8 @@ document.getElementById('dq').addEventListener('input',async e=>{{
   const hits=Object.entries(derived).filter(([id,g])=>g.title.toLowerCase().includes(term)).slice(0,30);
   box.innerHTML=hits.length? '<div class="tablecard"><div class="scroll"><table><thead><tr><th>Title</th><th>Prediction</th><th>Proton (recent)</th><th>Anti-cheat</th></tr></thead><tbody>'+hits.map(([id,g])=>{{
     const [label,cls]=PRED[g.macPrediction]||['?',''];
-    return `<tr><td class="t"><a href="https://store.steampowered.com/app/${{id}}/">${{g.title}}</a></td><td><span class="pill ${{cls}}">${{label}}</span></td><td class="mono">${{g.protonTier}} · ${{g.recentReports}} reports</td><td class="mono">${{g.anticheat?g.anticheat.join(', '):'—'}}</td></tr>`;
+    const appid=String(id).replace(/[^0-9]/g,'');
+    return `<tr><td class="t"><a href="https://store.steampowered.com/app/${{appid}}/">${{esc(g.title)}}</a></td><td><span class="pill ${{cls}}">${{label}}</span></td><td class="mono">${{esc(g.protonTier)}} · ${{Number(g.recentReports)||0}} reports</td><td class="mono">${{g.anticheat?esc(g.anticheat.join(', ')):'—'}}</td></tr>`;
   }}).join('')+'</tbody></table></div></div>' : 'No match.';
 }});
 </script>
