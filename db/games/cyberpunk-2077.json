@@ -4,7 +4,7 @@
   "steam_appid": 1091500,
   "status": "community",
   "renderer": "d3dmetal",
-  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
-  "notes": "D3D12 \u2192 d3dmetal required; Apple demoed it on GPTK",
+  "provenance": "user report on Highball (highball-db#2, OdynOOb) — Apple M5, macOS 15.7.3, wine-10.0 Sikarugir r6; previously community consensus (AppleGamingWiki / r-macgaming)",
+  "notes": "Playable, low framerate: ~17 fps avg at 1920x1200 (Steam Deck preset + FSR 2.1 Balanced) on a base M5. Mandatory: Advertise AVX ON (engine crashes at launch otherwise); Steam launch option --launcher-skip (REDlauncher fails on OpenGL context / libEGL.dll); Steam Overlay OFF (black screen). Keep Ray Tracing OFF (software-translated slideshow). First runs stutter while shaders compile, then settle. See recipe cyberpunk-2077.",
   "lastVerified": null
 }

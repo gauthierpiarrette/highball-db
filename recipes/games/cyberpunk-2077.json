@@ -1,0 +1,57 @@
+{
+  "id": "cyberpunk-2077",
+  "kind": "game",
+  "title": "Cyberpunk 2077",
+  "requires": [
+    "steam"
+  ],
+  "renderer": "d3dmetal",
+  "steps": [
+    {
+      "type": "environment",
+      "name": "ROSETTA_ADVERTISE_AVX",
+      "value": "1"
+    },
+    {
+      "type": "note",
+      "text": "One manual step: in Steam, right-click Cyberpunk 2077 → Properties → Launch Options, add --launcher-skip. REDlauncher cannot create its OpenGL context under Wine; skipping it costs nothing."
+    },
+    {
+      "type": "note",
+      "text": "In the same Properties window, turn the Steam Overlay OFF for this game — it black-screens the launch."
+    },
+    {
+      "type": "note",
+      "text": "In-game: keep Ray Tracing OFF (software-translated, ~10 fps). Steam Deck preset + FSR 2.1 is the reported baseline (~17 fps avg on a base M5). First runs stutter while shaders compile; it settles."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "Engine crash immediately at launch",
+      "cause": "AVX not advertised through Rosetta",
+      "fix": "this recipe sets ROSETTA_ADVERTISE_AVX=1 on the bottle (same as the Advertise AVX toggle)"
+    },
+    {
+      "symptom": "REDlauncher error mentioning QSurfaceFormat / libEGL.dll",
+      "cause": "launcher needs an OpenGL context Wine cannot provide",
+      "fix": "add --launcher-skip to the game's Steam launch options"
+    },
+    {
+      "symptom": "Black screen at launch",
+      "cause": "Steam Overlay hooks",
+      "fix": "disable the Steam Overlay for this game"
+    },
+    {
+      "symptom": "Slideshow (~10 fps)",
+      "cause": "Ray Tracing enabled",
+      "fix": "turn Ray Tracing off"
+    }
+  ],
+  "lastVerified": {
+    "date": "2026-08-24",
+    "engine": "x64-sikarugir10.0_6-r0",
+    "macos": "15.7.3",
+    "chip": "Apple M5",
+    "result": "community report (highball-db#2): playable at ~17 fps avg, 1920x1200, Steam Deck preset + FSR 2.1 Balanced, d3dmetal + AVX + --launcher-skip + overlay off"
+  }
+}
