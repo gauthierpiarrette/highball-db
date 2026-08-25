@@ -25,7 +25,8 @@
         "arguments": [
           "-SkipBuildPatchPrereq"
         ],
-        "environment": {}
+        "environment": {},
+        "renderer": "dxvk"
       }
     },
     {
@@ -35,16 +36,26 @@
   ],
   "knownIssues": [
     {
-      "symptom": "Crash on launch from Epic ('Epic Online Services')",
-      "cause": "EOS overlay under Wine",
-      "fix": "DXMT v0.73+ fixed EOS-launched crashes; keep DXMT current"
+      "symptom": "Launcher window is solid black",
+      "cause": "Epic's embedded Chromium webview renders black under DXMT",
+      "fix": "the launcher pin now runs under DXVK (games in the bottle still use the bottle's renderer)"
+    },
+    {
+      "symptom": "Launcher downloads its own update, then closes and nothing happens",
+      "cause": "Epic's self-update restart doesn't survive Wine",
+      "fix": "open Epic again from the bottle; it resumes where it left off"
+    },
+    {
+      "symptom": "Installing any game fails with 'You do not have permission to install to...' (DP-07), regardless of folder",
+      "cause": "under investigation (github.com/gauthierpiarrette/highball issue 14)",
+      "fix": "none yet; the issue tracks progress"
     }
   ],
   "lastVerified": {
-    "date": "2026-08-23",
+    "date": "2026-08-25",
     "engine": "x64-sikarugir10.0_6-r0",
     "macos": "14.6",
     "chip": "Apple M1 Pro",
-    "result": "silent MSI install OK in 90 s; launcher installed to Program Files/Epic Games (Win64); login not yet tested"
+    "result": "launcher UI renders correctly with the DXVK pin (black under DXMT); self-update downloads and applies but needs a manual relaunch; game-install DP-07 not yet reproduced locally"
   }
 }
