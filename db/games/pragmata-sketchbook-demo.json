@@ -4,7 +4,7 @@
   "steam_appid": 4003800,
   "status": "community",
   "renderer": null,
-  "provenance": "user report on Highball (highball-db#1, OdynOOb) — Apple M5, macOS 15.7.3, wine-10.0 Sikarugir r6",
+  "provenance": "user report on Highball (highball-db#1, OdynOOb) — Apple M4, macOS 15.7.3, wine-10.0 Sikarugir r6",
   "notes": "Unplayable on the current engine. DX12-only (RE Engine): dxmt is correctly rejected (0x80004002 — it translates D3D11); d3dmetal crashes at thread init even with CrashReport.exe bypassed. Retest when the engine moves (Wine 11 bump / D3DMetal 4).",
   "lastVerified": null
 }

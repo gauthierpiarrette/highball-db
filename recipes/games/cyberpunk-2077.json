@@ -51,7 +51,7 @@
     "date": "2026-08-24",
     "engine": "x64-sikarugir10.0_6-r0",
     "macos": "15.7.3",
-    "chip": "Apple M5",
-    "result": "community report (highball-db#2): playable at ~17 fps avg, 1920x1200, Steam Deck preset + FSR 2.1 Balanced, d3dmetal + AVX + --launcher-skip + overlay off"
+    "chip": "Apple M4",
+    "result": "community reports: M4 ~17 fps avg (Steam Deck preset); M5 60-82 fps gameplay (Metal HUD), fullscreen 1920x1200, FSR 2.1 Balanced, RT local shadows ON; d3dmetal + AVX + --launcher-skip + overlay off"
   }
 }
