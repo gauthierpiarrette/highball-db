@@ -1,0 +1,126 @@
+{
+  "id": "vcrun2022",
+  "kind": "tweak",
+  "title": "Visual C++ runtimes (2015-2022)",
+  "requires": [],
+  "renderer": null,
+  "steps": [
+    {
+      "type": "installer",
+      "url": "https://aka.ms/vs/17/release/vc_redist.x64.exe",
+      "sha256": null,
+      "arguments": [
+        "/install",
+        "/quiet",
+        "/norestart"
+      ],
+      "label": "VC++ 2015-2022 x64"
+    },
+    {
+      "type": "installer",
+      "url": "https://aka.ms/vs/17/release/vc_redist.x86.exe",
+      "sha256": null,
+      "arguments": [
+        "/install",
+        "/quiet",
+        "/norestart"
+      ],
+      "label": "VC++ 2015-2022 x86"
+    },
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\DllOverrides",
+      "name": "concrt140",
+      "valueType": "REG_SZ",
+      "data": "native,builtin"
+    },
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\DllOverrides",
+      "name": "msvcp140",
+      "valueType": "REG_SZ",
+      "data": "native,builtin"
+    },
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\DllOverrides",
+      "name": "msvcp140_1",
+      "valueType": "REG_SZ",
+      "data": "native,builtin"
+    },
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\DllOverrides",
+      "name": "msvcp140_2",
+      "valueType": "REG_SZ",
+      "data": "native,builtin"
+    },
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\DllOverrides",
+      "name": "msvcp140_atomic_wait",
+      "valueType": "REG_SZ",
+      "data": "native,builtin"
+    },
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\DllOverrides",
+      "name": "msvcp140_codecvt_ids",
+      "valueType": "REG_SZ",
+      "data": "native,builtin"
+    },
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\DllOverrides",
+      "name": "vcamp140",
+      "valueType": "REG_SZ",
+      "data": "native,builtin"
+    },
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\DllOverrides",
+      "name": "vccorlib140",
+      "valueType": "REG_SZ",
+      "data": "native,builtin"
+    },
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\DllOverrides",
+      "name": "vcomp140",
+      "valueType": "REG_SZ",
+      "data": "native,builtin"
+    },
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\DllOverrides",
+      "name": "vcruntime140",
+      "valueType": "REG_SZ",
+      "data": "native,builtin"
+    },
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\DllOverrides",
+      "name": "vcruntime140_1",
+      "valueType": "REG_SZ",
+      "data": "native,builtin"
+    },
+    {
+      "type": "note",
+      "text": "Visual C++ 2015-2022 runtimes installed (both architectures) with native DLL overrides. Fixes 'Microsoft Visual C++ runtime' errors many games show at launch."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "A game still reports a VC++ runtime error after installing",
+      "cause": "the game may need an older runtime (2010/2013) or the error text is a generic crash message",
+      "fix": "open a GitHub issue with the exact error text and the newest log"
+    }
+  ],
+  "lastVerified": {
+    "date": "2026-08-25",
+    "engine": "x64-sikarugir10.0_6-r0",
+    "macos": "14.6",
+    "chip": "Apple M1 Pro",
+    "result": "14/14 steps on a fresh bottle: both redists install (8 x64 + 7 x86 runtime dlls on disk), native overrides land in user.reg"
+  }
+}
