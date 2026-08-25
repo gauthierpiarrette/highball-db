@@ -1,0 +1,33 @@
+{
+  "id": "dotnet48",
+  "kind": "tweak",
+  "title": ".NET Framework 4.8",
+  "requires": [],
+  "renderer": null,
+  "steps": [
+    {
+      "type": "winetricks",
+      "verbs": [
+        "dotnet48"
+      ]
+    },
+    {
+      "type": "note",
+      "text": ".NET Framework 4.8 installed. The install takes 20 to 40 minutes and looks idle for long stretches while Microsoft's compiler services run, that's normal. 32-bit .NET apps (like Assetto Corsa's launcher) work; 64-bit .NET apps may still crash, a known Wine limitation."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "64-bit .NET programs crash with CLR error 80131506",
+      "cause": "known Wine issue with the 64-bit CLR under new WoW64 (WineHQ bug 57792)",
+      "fix": "use the 32-bit version of the program where offered (Content Manager has a setting for it)"
+    }
+  ],
+  "lastVerified": {
+    "date": "2026-08-25",
+    "engine": "x64-sikarugir10.0_6-r0",
+    "macos": "14.6",
+    "chip": "Apple M1 Pro",
+    "result": "winetricks dotnet48 completes (exit 0, no aborts) with WINE_BIN/WINESERVER_BIN/WINE_BINDIR set and bash invocation; NDP v4 Full Release=528049 (.NET 4.8) confirmed in registry"
+  }
+}
