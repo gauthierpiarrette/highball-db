@@ -4,10 +4,51 @@
   "title": "GOG Galaxy",
   "renderer": "dxmt",
   "steps": [
-    { "type": "sync", "sync": "none" },
-    { "type": "installer", "url": "https://webinstallers.gog-statics.com/download/GOG_Galaxy_2.0.exe", "sha256": null, "arguments": ["/VERYSILENT", "/NORESTART"], "label": "GOG-Galaxy-Setup" },
-    { "type": "pin", "pin": { "id": "6B1F0D2A-0000-4000-8000-000000000003", "name": "GOG Galaxy", "path": "Program Files (x86)/GOG Galaxy/GalaxyClient.exe", "arguments": [], "environment": {} } },
-    { "type": "note", "text": "GOG games are DRM-free: if Galaxy itself misbehaves, download the offline installers from gog.com in a browser and run them directly in the bottle — often the more reliable path under Wine." }
+    {
+      "type": "sync",
+      "sync": "none"
+    },
+    {
+      "type": "installer",
+      "url": "https://content-system.gog.com/open_link/download?path=/open/galaxy/client/setup_galaxy_2.1.6.29.exe",
+      "sha256": "c2888e0a1425823e47ed04c26e2d3c81cb14564a8e92d9c9628c3ed77a9d87bc",
+      "arguments": [
+        "/VERYSILENT",
+        "/NORESTART",
+        "/SUPPRESSMSGBOXES"
+      ],
+      "label": "GOG-Galaxy-Offline-Setup"
+    },
+    {
+      "type": "winetricks",
+      "verbs": [
+        "mfc140"
+      ]
+    },
+    {
+      "type": "pin",
+      "pin": {
+        "id": "6B1F0D2A-0000-4000-8000-000000000003",
+        "name": "GOG Galaxy",
+        "path": "Program Files/GOG Galaxy/GalaxyClient.exe",
+        "arguments": [
+          "/runWithoutUpdating",
+          "/deelevated"
+        ],
+        "environment": {}
+      }
+    },
+    {
+      "type": "note",
+      "text": "Uses GOG's full offline installer, not the tiny web installer from gog.com's download button. The web installer checks the Windows service pack fields, which Wine's win10 profile leaves empty, and wrongly claims 'requires Windows 7 SP1 or newer'. The offline Inno Setup package passes on win10. Verified installing 2.1.6.29 on engine sikarugir-10.0_6, 2026-08-25."
+    }
   ],
-  "lastVerified": null
+  "lastVerified": null,
+  "knownIssues": [
+    {
+      "symptom": "Installs and runs (services, logs, background client) but the login window is black; login is impossible.",
+      "cause": "same engine limitation as Ubisoft Connect: the client's embedded Chromium UI fails GPU (ANGLE) init under this Wine build on every renderer. --disable-gpu switches and the Lutris libglesv2 override were tested 2026-08-25 and do not help (the override makes page load fail outright).",
+      "fix": "waiting on the engine fix tracked at Sikarugir-App/Sikarugir#257. Meanwhile GOG games are DRM-free: download offline game installers from gog.com in a browser and run them directly in a bottle."
+    }
+  ]
 }
