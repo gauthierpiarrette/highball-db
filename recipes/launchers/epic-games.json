@@ -47,8 +47,8 @@
     },
     {
       "symptom": "Installing any game fails with 'You do not have permission to install to...' (DP-07), regardless of folder",
-      "cause": "under investigation (github.com/gauthierpiarrette/highball issue 14)",
-      "fix": "none yet; the issue tracks progress"
+      "cause": "Epic audits Windows file permissions after its helper grants them and Wine cannot satisfy the audit (log shows 'Authorize success without gaining access'); no install folder avoids it",
+      "fix": "none inside the launcher; a direct install path for Epic games (Legendary-style) is planned, tracked in highball issue 14"
     }
   ],
   "lastVerified": {
