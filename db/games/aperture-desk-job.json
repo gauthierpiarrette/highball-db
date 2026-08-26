@@ -5,12 +5,7 @@
   "status": "verified-local",
   "renderer": "dxvk",
   "provenance": "verified by Highball on Apple M1 Pro / macOS 14.6 / engine x64-sikarugir10.0_6-r0 (2026-08-23)",
-  "notes": "dxvk correct: 30.8 fps (sync=none) -> 43.9 fps (msync), same scene, +42%; d3dmetal 38-44 fps with texture corruption; dxmt 0.80 black screen. ReShade 6.8.0 verified working under DXVK (dll as dxgi next to the exe, per-app native,builtin override): hooks install, swapchain runtime created, log clean.",
+  "notes": "DXVK is the verified renderer: office scene renders clean, ~40 fps, ReShade 6.8.0 works on top (re-verified 2026-08-25). On our macOS 14 test machine the other renderers misbehave with current builds: DXMT 0.80 black screen (it targets macOS 15+), D3DMetal severe texture corruption (GPU identity keys and ReShade ruled out by A/B). On macOS 15+ your results may differ.",
   "recipe": "recipes/games/aperture-desk-job.json",
-  "lastVerified": {
-    "date": "2026-08-24",
-    "engine": "x64-sikarugir10.0_6-r0",
-    "macos": "14.6",
-    "chip": "Apple M1 Pro"
-  }
+  "lastVerified": "2026-08-25"
 }
