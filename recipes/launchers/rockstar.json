@@ -9,6 +9,20 @@
       "sync": "none"
     },
     {
+      "type": "registry",
+      "key": "HKLM\\System\\CurrentControlSet\\Control",
+      "name": "ServicesPipeTimeout",
+      "valueType": "REG_SZ",
+      "data": "60000"
+    },
+    {
+      "type": "registry",
+      "key": "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\Rockstar-Games-Launcher.exe",
+      "name": "GlobalFlag",
+      "valueType": "REG_DWORD",
+      "data": "16"
+    },
+    {
       "type": "installer",
       "url": "https://gamedownloads.rockstargames.com/public/installer/Rockstar-Games-Launcher.exe",
       "sha256": null,
@@ -40,7 +54,7 @@
   ],
   "lastVerified": null,
   "blocked": {
-    "reason": "The current Rockstar installer deadlocks waiting on its Windows service under this engine, and even a hand-completed install fails with 'failed to initialize'. Needs engine-level fixes that only CrossOver 25+ has today.",
+    "reason": "One CrossOver-only Wine patch still missing: the loader-level CEF fix the launcher's UI needs on macOS. The service-timeout and heap parts are already handled by Highball. Details and the exact patch are in the tracking issue.",
     "tracking": "https://github.com/Sikarugir-App/Sikarugir/issues/258"
   }
 }
