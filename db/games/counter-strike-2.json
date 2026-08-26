@@ -2,16 +2,16 @@
   "id": "counter-strike-2",
   "title": "Counter-Strike 2",
   "steam_appid": 730,
-  "status": "reported-upstream",
-  "renderer": "dxmt",
-  "provenance": "DXMT changelog v0.73 (github.com/3Shain/dxmt/releases)",
-  "notes": "Use DXMT (the recommended renderer): it identifies as an AMD card, so the game skips NVAPI. Under DXVK/wined3d the GPU can be reported as a fake NVIDIA, and CS2 then fails with 'Failed to initialize NVAPI (0xFFFFFFFE)' — same as Proton. If stuck on DXVK, set bottle env DXVK_CONFIG=\"dxgi.customVendorId = 1002\". Blank screen with exclusive fullscreen + MSAA fixed in DXMT 0.73. VAC is userspace — playable but use at own judgement.",
-  "lastVerified": null,
+  "status": "verified-local",
+  "renderer": "dxvk",
+  "provenance": "verified locally on Apple Silicon (M-series), engine sikarugir-10.0_6, Highball 0.7.3",
+  "notes": "Use DXVK: main menu, login and store all render (verified 2026-08-25; menu-level check, no match played). DXMT 0.80 gives a black screen on this title (game runs, never paints) so avoid it here. No NVAPI error on Highball 0.7.3+, bottles identify as an AMD card. If you see 'Failed to initialize NVAPI (0xFFFFFFFE)' you are launching the legacy CS:GO branch: update Highball, then right click the bottle and Repair. VAC is userspace, playable but use your own judgement.",
+  "lastVerified": "2026-08-25",
   "anticheat": {
     "names": [
       "VAC"
     ],
     "macVerdict": "warning",
-    "note": "anti-cheat present; Linux/Proton support does not extend to macOS — userspace path works for some titles"
+    "note": "anti-cheat present; Linux/Proton support does not extend to macOS \u2014 userspace path works for some titles"
   }
 }
