@@ -40,5 +40,11 @@
       "fix": "retry; keep sync none; disable hardware acceleration in Battle.net settings once in"
     }
   ],
-  "lastVerified": "2026-08-25"
+  "lastVerified": {
+    "date": "2026-08-25",
+    "engine": "x64-sikarugir10.0_6-r0",
+    "macos": "14.6",
+    "chip": "Apple M1 Pro",
+    "result": "installer runs unattended via recipe args; client login window renders fully (form + SSO). Log in and game installs not yet exercised."
+  }
 }
