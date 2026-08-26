@@ -33,15 +33,14 @@
   ],
   "knownIssues": [
     {
-      "symptom": "Freezes on Rockstar logo",
-      "cause": "historic Whisky issue #2 (47 comments)",
-      "fix": "try d3dmetal renderer + winetricks vcrun2019; report results"
-    },
-    {
-      "symptom": "Launcher shows a blank or stuck window, sign-in never appears",
-      "cause": "embedded browser under DXMT/D3DMetal, same class as the Epic and Ubisoft launchers",
-      "fix": "the pin now runs under DXVK (pattern verified on Epic; Rockstar confirmation pending)"
+      "symptom": "Installer sticks forever at 'Preparing to Install...'; if bypassed, the launcher shows 'The Rockstar Games Launcher failed to initialize!'",
+      "cause": "verified 2026-08-26: the installer misses its service handshake and waits forever (files, VC++ and the service actually land), then Launcher.exe fails init after localisation on every renderer. CodeWeavers ships Rockstar fixes inside their Wine; this engine does not have them yet.",
+      "fix": "none at the app level. Tracked upstream at Sikarugir-App/Sikarugir#258. Highball ships a fixed engine as soon as one exists."
     }
   ],
-  "lastVerified": null
+  "lastVerified": null,
+  "blocked": {
+    "reason": "The current Rockstar installer deadlocks waiting on its Windows service under this engine, and even a hand-completed install fails with 'failed to initialize'. Needs engine-level fixes that only CrossOver 25+ has today.",
+    "tracking": "https://github.com/Sikarugir-App/Sikarugir/issues/258"
+  }
 }
