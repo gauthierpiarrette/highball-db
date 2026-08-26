@@ -5,7 +5,7 @@
   "status": "verified-local",
   "renderer": "dxvk",
   "provenance": "verified locally on Apple Silicon (M-series), engine sikarugir-10.0_6, Highball 0.7.3",
-  "notes": "Use DXVK: main menu, login and store all render (verified 2026-08-25; menu-level check, no match played). DXMT 0.80 gives a black screen on this title (game runs, never paints) so avoid it here. No NVAPI error on Highball 0.7.3+, bottles identify as an AMD card. If you see 'Failed to initialize NVAPI (0xFFFFFFFE)' you are launching the legacy CS:GO branch: update Highball, then right click the bottle and Repair. VAC is userspace, playable but use your own judgement.",
+  "notes": "Use DXVK: main menu, login and store all render (verified 2026-08-25; menu-level check, no match played). DXMT 0.80 gave a black screen on our macOS 14 test machine (game runs, never paints); DXMT generally wants macOS 15 or newer, so on 14 use DXVK. No NVAPI error on Highball 0.7.3+, bottles identify as an AMD card. If you see 'Failed to initialize NVAPI (0xFFFFFFFE)' you are launching the legacy CS:GO branch: update Highball, then right click the bottle and Repair. VAC is userspace, playable but use your own judgement.",
   "lastVerified": "2026-08-25",
   "anticheat": {
     "names": [
