@@ -1,6 +1,7 @@
 {
   "id": "ubisoft-connect",
   "kind": "launcher",
+  "blocked": { "reason": "The client's embedded Chromium (CEF) window never paints on this Wine build, so you can't sign in." },
   "title": "Ubisoft Connect",
   "renderer": "dxmt",
   "steps": [

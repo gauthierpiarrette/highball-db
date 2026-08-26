@@ -1,6 +1,7 @@
 {
   "id": "gog-galaxy",
   "kind": "launcher",
+  "blocked": { "reason": "GOG Galaxy installs but its login window renders black, so you can't sign in. Its DRM-free offline installers run directly in a bottle instead." },
   "title": "GOG Galaxy",
   "renderer": "dxmt",
   "steps": [

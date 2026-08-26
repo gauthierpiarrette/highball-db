@@ -1,6 +1,7 @@
 {
   "id": "battle-net",
   "kind": "launcher",
+  "flaky": { "reason": "Login can crash on submit (CEF under Wine). Retry, keep sync none, and disable hardware acceleration in Battle.net's settings." },
   "title": "Battle.net",
   "renderer": "dxmt",
   "steps": [

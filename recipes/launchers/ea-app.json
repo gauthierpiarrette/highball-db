@@ -1,6 +1,7 @@
 {
   "id": "ea-app",
   "kind": "launcher",
+  "flaky": { "reason": "Works inconsistently on this Wine build; best-effort." },
   "title": "EA app",
   "renderer": "d3dmetal",
   "steps": [
