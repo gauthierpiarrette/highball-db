@@ -1,0 +1,36 @@
+{
+  "id": "counter-strike-2",
+  "kind": "game",
+  "title": "Counter-Strike 2",
+  "requires": ["steam"],
+  "renderer": "dxvk",
+  "steps": [
+    {
+      "type": "dxvkconfig",
+      "exe": "csgo.exe",
+      "options": {
+        "dxvk.enableAsync": "False",
+        "d3d9.maxAvailableMemory": "2048",
+        "d3d9.customDeviceId": "73BF"
+      }
+    },
+    {
+      "type": "note",
+      "text": "CS2 itself runs under DXVK with no special setup. This recipe's settings are for the legacy CS:GO branch (32-bit, D3D9): async shader compile off (map-load freeze, issue #21), a 2 GB texture-memory report for the 32-bit process, and a real Radeon device id so Source picks the ATI shadow path. Highball also applies these as a built-in default for now; applying the recipe makes them part of your bottle's data."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "Legacy CS:GO freezes at 'Initializing game data' during map load",
+      "cause": "DXVK async shader compilation wedging the first big compile burst (issue #21)",
+      "fix": "the dxvkconfig settings in this recipe (async off for csgo.exe)"
+    }
+  ],
+  "lastVerified": {
+    "date": "2026-08-25",
+    "engine": "x64-sikarugir10.0_6-r0",
+    "macos": "14.6",
+    "chip": "Apple M1 Pro",
+    "result": "CS2 menu/login/store render under DXVK. Legacy csgo.exe verified reaching in-game with these DXVK settings (2026-08-28 session, delivered then as the built-in default)."
+  }
+}
