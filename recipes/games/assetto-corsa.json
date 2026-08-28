@@ -1,0 +1,40 @@
+{
+  "id": "assetto-corsa",
+  "kind": "game",
+  "title": "Assetto Corsa",
+  "requires": ["steam", "dotnet48"],
+  "renderer": "d3dmetal",
+  "steps": [
+    {
+      "type": "note",
+      "text": "Before first launch, install .NET Framework 4.8 from the bottle's Dependencies section (20 to 40 minutes; looks frozen for long stretches, let it finish). AC's launcher is a 32-bit .NET/WPF app and dies silently without it — this was the historical 'AC won't launch' failure."
+    },
+    {
+      "type": "note",
+      "text": "Use D3DMetal. Under DXMT the session loads and the engine runs (physics ticks, log fills) but nothing ever paints — black screen after clicking start. Verified on this engine 2026-08-28."
+    },
+    {
+      "type": "note",
+      "text": "The launcher's news panels can spin forever (embedded Chromium fetching old feeds). Cosmetic — Drive, Career and settings all work."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "Black screen when starting a session, menu/launcher fine",
+      "cause": "DXMT: AC's D3D11 path runs but never presents on this engine (log shows the run loop ticking with heavy 'WAS LATE' spam)",
+      "fix": "set the bottle renderer to d3dmetal and restart the bottle (Stop all processes first — a running Steam session keeps the old renderer)"
+    },
+    {
+      "symptom": "Launcher never appears / game won't start at all",
+      "cause": "missing .NET Framework: the stock launcher is 32-bit .NET 4 WPF and Wine-Mono has no WPF",
+      "fix": "install the dotnet48 dependency, then launch normally through Steam"
+    }
+  ],
+  "lastVerified": {
+    "date": "2026-08-28",
+    "engine": "x64-sikarugir10.0_6-r0",
+    "macos": "14.6",
+    "chip": "Apple M1 Pro",
+    "result": "Full chain verified: dotnet48 + steam recipes, stock launcher renders fully (real .NET WPF), practice session runs under d3dmetal at 1728x1117 fullscreen, clean exit. dxmt: black screen (engine runs, never paints). fps not measured."
+  }
+}
