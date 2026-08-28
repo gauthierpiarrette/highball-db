@@ -1,0 +1,32 @@
+{
+  "id": "portal-1",
+  "kind": "game",
+  "title": "Portal",
+  "requires": ["steam"],
+  "renderer": "dxvk",
+  "steps": [
+    {
+      "type": "file",
+      "path": "Program Files (x86)/Steam/steamapps/common/Portal/portal/cfg/autoexec.cfg",
+      "contents": "mat_hdr_level 0\n"
+    },
+    {
+      "type": "note",
+      "text": "Portal needs HDR off on this engine, same as Portal 2: Source's HDR path triggers a MoltenVK bug that kills map loads. This recipe writes mat_hdr_level 0 into the game's config; with it the opening vault runs at ~96 fps under DXVK. Keep the bottle on DXVK. Visual cost is Source's HDR bloom only."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "Freeze or crash at the end of map loads with HDR enabled",
+      "cause": "Source's HDR path emits a zero-attachment render pass that aborts the Apple GPU inside MoltenVK (same root cause as Portal 2)",
+      "fix": "mat_hdr_level 0 via this recipe's autoexec.cfg — verified device-clean"
+    }
+  ],
+  "lastVerified": {
+    "date": "2026-08-28",
+    "engine": "x64-sikarugir10.0_6-r0",
+    "macos": "14.6",
+    "chip": "Apple M1 Pro",
+    "result": "First chamber renders at ~96 fps, 1728x1117, DXVK + async, HDR off via autoexec only (cfg persistence verified, no launch options). Zero device loss."
+  }
+}

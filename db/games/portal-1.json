@@ -1,0 +1,10 @@
+{
+  "id": "portal-1",
+  "title": "Portal",
+  "steam_appid": 400,
+  "status": "verified-local",
+  "renderer": "dxvk",
+  "provenance": "verified locally on Apple Silicon (M1 Pro), engine sikarugir-10.0_6, Highball 0.7.13, 2026-08-28",
+  "notes": "Works at ~96 fps under DXVK with HDR off — and the Portal recipe turns it off for you (one button on the game's page in Highball). Same MoltenVK HDR bug and same fix as Portal 2: without mat_hdr_level 0 map loads die on this engine; with it the opening vault renders flawlessly with a clean device log. Apply the Portal fix after installing, keep the bottle on DXVK.",
+  "lastVerified": "2026-08-28"
+}
