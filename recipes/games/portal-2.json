@@ -1,0 +1,37 @@
+{
+  "id": "portal-2",
+  "kind": "game",
+  "title": "Portal 2",
+  "requires": ["steam"],
+  "renderer": "dxvk",
+  "steps": [
+    {
+      "type": "file",
+      "path": "Program Files (x86)/Steam/steamapps/common/Portal 2/portal2/cfg/video.txt",
+      "contents": "\"VideoConfig\"\n{\n\t\"setting.mat_hdr_level\"\t\t\"0\"\n}\n"
+    },
+    {
+      "type": "file",
+      "path": "Program Files (x86)/Steam/steamapps/common/Portal 2/portal2/cfg/autoexec.cfg",
+      "contents": "mat_hdr_level 0\n"
+    },
+    {
+      "type": "note",
+      "text": "Portal 2 needs HDR off on this engine: Source's HDR path triggers a MoltenVK bug (a giant zero-attachment render pass aborts the GPU) that froze or crashed every map load. With mat_hdr_level 0 — which this recipe writes into the game's config — it runs at 200+ fps under DXVK. Keep the bottle on DXVK. The visual cost is Source's HDR bloom, minor in Portal 2. If you later change video settings in-game and loads start freezing again, set Shader Detail/HDR to none or re-apply this recipe."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "Freeze or crash at the end of every map load (white or stuck screen), menus fine",
+      "cause": "Source's HDR rendering path emits a 16384x16384 zero-attachment render pass that hard-aborts the Apple GPU inside MoltenVK 1.4.x (VK_ERROR_DEVICE_LOST). Engine-level; affects other Source titles too.",
+      "fix": "mat_hdr_level 0 (this recipe writes it into portal2/cfg). Verified: with it, zero device loss across sustained sessions; without it, every load died."
+    }
+  ],
+  "lastVerified": {
+    "date": "2026-08-28",
+    "engine": "x64-sikarugir10.0_6-r0",
+    "macos": "14.6",
+    "chip": "Apple M1 Pro",
+    "result": "Intro map runs at 210-216 fps, 1728x1117, DXVK + async, HDR off via cfg files only (no launch options). Without HDR off: VK_ERROR_DEVICE_LOST on every map load."
+  }
+}

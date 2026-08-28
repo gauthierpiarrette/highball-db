@@ -2,9 +2,9 @@
   "id": "portal-2",
   "title": "Portal 2",
   "steam_appid": 620,
-  "status": "reported-upstream",
+  "status": "verified-local",
   "renderer": "dxvk",
-  "provenance": "tested locally on Apple Silicon (M1 Pro), engine sikarugir-10.0_6, Highball 0.7.10, 2026-08-28",
-  "notes": "Not reliable yet on this engine, and we say so: launcher and menus render fine (DXVK), but loading a map hits a racy VK_ERROR_DEVICE_LOST in the old D3D9-to-Vulkan layer — usually a white or frozen screen at the end of the load. One full session did reach real gameplay at 46-54 fps (M1 Pro, 1728x1117) with Steam launch options '+mat_antialias 0 +mat_queue_mode 0', so if you want to try, set those in Portal 2 > Properties > Launch Options and keep DXVK async off in the bottle settings; expect freezes anyway. Valve's own -vulkan mode fails to create a device on this engine. The real fix is engine-level (newer DXVK d3d9), tracked at github.com/gauthierpiarrette/highball/issues — until that lands, treat Portal 2 as not yet playable.",
+  "provenance": "verified locally on Apple Silicon (M1 Pro), engine sikarugir-10.0_6, Highball 0.7.13, 2026-08-28",
+  "notes": "Works at 200+ fps under DXVK once HDR is off — and the Portal 2 recipe turns it off for you. The story: Source's HDR path triggers a MoltenVK driver bug (a giant zero-attachment render pass aborts the GPU), which made every map load freeze or crash while menus looked fine. With mat_hdr_level 0 (written into portal2/cfg by the recipe, or set Shader Detail to not use HDR in video settings) the intro runs at 210-216 fps at 1728x1117 with a completely clean device log. Apply the Portal 2 recipe after installing the game, keep the bottle on DXVK. The same root cause likely affects other Source titles (Portal 1, HL2, TF2, L4D2) — the same fix should transfer. Visual cost: Source's HDR bloom, minor in this game.",
   "lastVerified": "2026-08-28"
 }
