@@ -13,6 +13,10 @@
       "slow": "Installing .NET Framework 4.8 usually takes 20 to 40 minutes and looks idle for long stretches while Microsoft's compiler services run. That's normal — let it finish."
     },
     {
+      "type": "winver",
+      "winver": "win10"
+    },
+    {
       "type": "note",
       "text": ".NET Framework 4.8 installed. The install takes 20 to 40 minutes and looks idle for long stretches while Microsoft's compiler services run, that's normal. 32-bit .NET apps (like Assetto Corsa's launcher) work; 64-bit .NET apps may still crash, a known Wine limitation."
     }
