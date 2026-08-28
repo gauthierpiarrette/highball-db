@@ -19,7 +19,8 @@
       "arguments": [
         "/S"
       ],
-      "label": "SteamSetup"
+      "label": "SteamSetup",
+      "slow": "Steam's installer is quick, but its first launch afterwards downloads and unpacks the full client — 15 to 25 minutes that can look frozen. Let it finish; it resumes if it crashes."
     },
     {
       "type": "pin",

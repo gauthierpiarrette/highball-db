@@ -9,7 +9,8 @@
       "type": "winetricks",
       "verbs": [
         "dotnet48"
-      ]
+      ],
+      "slow": "Installing .NET Framework 4.8 usually takes 20 to 40 minutes and looks idle for long stretches while Microsoft's compiler services run. That's normal — let it finish."
     },
     {
       "type": "note",
