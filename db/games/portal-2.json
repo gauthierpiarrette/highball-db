@@ -1,0 +1,10 @@
+{
+  "id": "portal-2",
+  "title": "Portal 2",
+  "steam_appid": 620,
+  "status": "reported-upstream",
+  "renderer": "dxvk",
+  "provenance": "tested locally on Apple Silicon (M1 Pro), engine sikarugir-10.0_6, Highball 0.7.10, 2026-08-28",
+  "notes": "Not reliable yet on this engine, and we say so: launcher and menus render fine (DXVK), but loading a map hits a racy VK_ERROR_DEVICE_LOST in the old D3D9-to-Vulkan layer — usually a white or frozen screen at the end of the load. One full session did reach real gameplay at 46-54 fps (M1 Pro, 1728x1117) with Steam launch options '+mat_antialias 0 +mat_queue_mode 0', so if you want to try, set those in Portal 2 > Properties > Launch Options and keep DXVK async off in the bottle settings; expect freezes anyway. Valve's own -vulkan mode fails to create a device on this engine. The real fix is engine-level (newer DXVK d3d9), tracked at github.com/gauthierpiarrette/highball/issues — until that lands, treat Portal 2 as not yet playable.",
+  "lastVerified": "2026-08-28"
+}
