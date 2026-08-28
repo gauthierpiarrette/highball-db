@@ -35,6 +35,6 @@
     "engine": "x64-sikarugir10.0_6-r0",
     "macos": "14.6",
     "chip": "Apple M1 Pro",
-    "result": "Full chain verified: dotnet48 + steam recipes, stock launcher renders fully (real .NET WPF), practice session runs under d3dmetal at 1728x1117 fullscreen, clean exit. dxmt: black screen (engine runs, never paints). fps not measured."
+    "result": "Full chain verified: dotnet48 + steam recipes, stock launcher renders fully (real .NET WPF), practice session runs under d3dmetal at 1728x1117 fullscreen, 150-170 fps (Metal HUD), clean exit. dxmt: black screen (engine runs, never paints)."
   }
 }
