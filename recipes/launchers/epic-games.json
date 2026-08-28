@@ -57,5 +57,9 @@
     "macos": "14.6",
     "chip": "Apple M1 Pro",
     "result": "launcher UI renders correctly with the DXVK pin (black under DXMT); self-update downloads and applies but needs a manual relaunch; game-install DP-07 not yet reproduced locally"
+  },
+  "blocked": {
+    "reason": "The Epic launcher's installer audits Windows ACLs that Wine doesn't persist, so its install flow can't complete. Use 'Connect Epic account' in Highball instead: installs go through the open source Legendary client and skip the launcher entirely.",
+    "tracking": "https://github.com/gauthierpiarrette/highball/issues/14"
   }
 }
