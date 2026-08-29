@@ -7,8 +7,8 @@
   "steps": [
     {
       "type": "installer",
-      "url": "https://aka.ms/vs/17/release/vc_redist.x64.exe",
-      "sha256": null,
+      "url": "https://aka.ms/vs/17/release/14.44.35211/VC_redist.x64.exe",
+      "sha256": "cc0ff0eb1dc3f5188ae6300faef32bf5beeba4bdd6e8e445a9184072096b713b",
       "arguments": [
         "/install",
         "/quiet",
@@ -18,8 +18,8 @@
     },
     {
       "type": "installer",
-      "url": "https://aka.ms/vs/17/release/vc_redist.x86.exe",
-      "sha256": null,
+      "url": "https://aka.ms/vs/17/release/14.44.35211/VC_redist.x86.exe",
+      "sha256": "0c09f2611660441084ce0df425c51c11e147e6447963c3690f97e0b25c55ed64",
       "arguments": [
         "/install",
         "/quiet",
@@ -114,6 +114,11 @@
       "symptom": "A game still reports a VC++ runtime error after installing",
       "cause": "the game may need an older runtime (2010/2013) or the error text is a generic crash message",
       "fix": "open a GitHub issue with the exact error text and the newest log"
+    },
+    {
+      "symptom": "Install reported as failed with a number like 102, on a bottle where a game or another installer already added VC++",
+      "cause": "Microsoft's bundle exits 1638 ('a newer version is already installed'), which POSIX truncates to 102. aka.ms/vs/17 is now the older 14.44 line; the current line (14.51) is served from aka.ms/vc14, so any newer runtime present makes this a no-op.",
+      "fix": "Fixed in Highball 0.7.15: benign installer exit codes are treated as success and the log records the real Windows code. Nothing to do — the runtimes are already there."
     }
   ],
   "lastVerified": {

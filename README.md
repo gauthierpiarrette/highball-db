@@ -1,7 +1,7 @@
 <p align="center"><img src=".github/assets/logo.png" width="110" alt="Highball logo"></p>
 <h1 align="center">highball-db</h1>
 
-The open, CC0 compatibility database behind [Highball](https://github.com/gauthierpiarrette/highball):
+The open compatibility database behind [Highball](https://github.com/gauthierpiarrette/highball):
 Windows games and launchers on Apple Silicon through Wine + DXMT / D3DMetal / DXVK,
 **as data with provenance** — verified runs, upstream reports, community consensus, and the
 kernel-anti-cheat blocklist.
@@ -14,5 +14,10 @@ kernel-anti-cheat blocklist.
 - `Scripts/` — validator, report ingester, importers (AWACY, ProtonDB dumps), static-site generator (GitHub Pages)
 
 **Contribute:** run something through Highball, then `highball report` — it opens a pre-filled
-issue here. Or PR a recipe with the CLI output attached. Everything here is CC0: use it in your
+issue here. Or PR a recipe with the CLI output attached. Almost everything here is CC0: use it in your
 own launcher, wiki, or even with CrossOver.
+
+**Licensing, precisely:** curated game data, recipes and reports are **CC0-1.0**.
+`db/derived/` (the ProtonDB-derived predictions) is **ODbL-1.0** and must keep its attribution —
+see `db/derived/LICENSE`. `db/anticheat.json` derives from AreWeAntiCheatYet and keeps its **MIT**
+notice in `db/anticheat.LICENSE`.
