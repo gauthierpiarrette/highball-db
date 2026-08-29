@@ -1,11 +1,11 @@
 {
   "id": "grand-theft-auto-v",
-  "title": "Grand Theft Auto V",
+  "title": "Grand Theft Auto V (Legacy)",
   "steam_appid": 271590,
   "status": "community",
   "renderer": "d3dmetal",
   "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
-  "notes": "story mode fine; GTA Online uses BattlEye — expect blocked",
+  "notes": "Community reports say story mode runs and GTA Online is blocked by BattlEye. Highball has not been able to confirm either, because Rockstar's launcher is required to sign in and its UI does not render on this engine. Treat the renderer below as the community's claim, not a route that currently works.",
   "lastVerified": null,
   "anticheat": {
     "names": [
@@ -13,5 +13,12 @@
     ],
     "macVerdict": "warning",
     "note": "anti-cheat present; Linux/Proton support does not extend to macOS — userspace path works for some titles"
+  },
+  "requiresLauncher": {
+    "id": "rockstar",
+    "name": "Rockstar Games Launcher",
+    "impact": "blocks",
+    "note": "Rockstar's launcher handles sign-in and its embedded-browser UI does not render on this Wine build, so the game cannot be reached even though the game itself is reported to run. Tracked upstream at Sikarugir issue #258.",
+    "tracking": "https://github.com/Sikarugir-App/Sikarugir/issues/258"
   }
 }
