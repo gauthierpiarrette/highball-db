@@ -188,6 +188,27 @@ document.getElementById('dq').addEventListener('input',async e=>{{
 </html>"""
 os.makedirs("site", exist_ok=True)
 open("site/index.html", "w").write(page)
+# The public database moved to gethighball.com/database/ (built by the highball-website repo).
+# This site now redirects so the old URL keeps working and search consolidates on one host.
+REDIRECT = """<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Highball database has moved</title>
+<link rel="canonical" href="https://gethighball.com/database/">
+<meta http-equiv="refresh" content="0; url=https://gethighball.com/database/">
+<meta name="robots" content="noindex, follow">
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;text-align:center;background:#16110A;
+color:#EFE7D6;font:17px/1.6 -apple-system,BlinkMacSystemFont,sans-serif;padding:2rem}a{color:#D79A45}</style>
+</head><body><div>
+<h1>The compatibility database has moved</h1>
+<p>It now lives at <a href="https://gethighball.com/database/">gethighball.com/database</a>,
+with a page for every game.</p>
+<p>The data itself is still here:
+<a href="https://github.com/gauthierpiarrette/highball-db">github.com/gauthierpiarrette/highball-db</a>.</p>
+</div><script>location.replace("https://gethighball.com/database/");</script></body></html>
+"""
+open("site/index.html", "w").write(REDIRECT)
+
 try:
     shutil.copy("db/derived/derived.json", "site/derived.json")
 except Exception:
