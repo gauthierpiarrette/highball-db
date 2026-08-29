@@ -13,5 +13,11 @@
     ],
     "macVerdict": "blocked",
     "note": "kernel anti-cheat; cannot work under Wine on macOS"
+  },
+  "nativeMac": {
+    "available": true,
+    "where": "Riot client",
+    "url": "https://www.leagueoflegends.com/",
+    "note": "Riot ships an official macOS client, and embedded Vanguard came to macOS in 2025. Install that instead of trying to run the Windows build."
   }
 }

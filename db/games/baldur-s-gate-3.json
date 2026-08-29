@@ -5,6 +5,11 @@
   "status": "community",
   "renderer": "d3dmetal",
   "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
-  "notes": "native mac build exists \u2014 prefer it; Wine works too",
-  "lastVerified": null
+  "notes": "native mac build exists — prefer it; Wine works too",
+  "lastVerified": null,
+  "nativeMac": {
+    "available": true,
+    "where": "Steam",
+    "note": "Native Apple Silicon build, macOS 14.7.1 and M1 or later."
+  }
 }

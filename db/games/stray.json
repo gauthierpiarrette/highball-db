@@ -6,5 +6,10 @@
   "renderer": "dxmt",
   "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
   "notes": "works",
-  "lastVerified": null
+  "lastVerified": null,
+  "nativeMac": {
+    "available": true,
+    "where": "Steam",
+    "note": "Native Apple Silicon build, macOS 13 or later."
+  }
 }

@@ -13,5 +13,11 @@
     "macVerdict": "blocked",
     "note": "kernel anti-cheat; cannot work under Wine on macOS"
   },
-  "lastVerified": null
+  "lastVerified": null,
+  "nativeMac": {
+    "available": true,
+    "where": "Riot client",
+    "url": "https://teamfighttactics.leagueoflegends.com/",
+    "note": "Riot ships an official macOS client. Install that instead of trying to run the Windows build."
+  }
 }

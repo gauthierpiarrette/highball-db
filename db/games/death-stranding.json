@@ -5,6 +5,11 @@
   "status": "community",
   "renderer": "d3dmetal",
   "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
-  "notes": "D3D12 \u2014 d3dmetal",
-  "lastVerified": null
+  "notes": "D3D12 — d3dmetal",
+  "lastVerified": null,
+  "nativeMac": {
+    "available": true,
+    "where": "Mac App Store only",
+    "note": "A native Director's Cut exists on the Mac App Store (macOS 13.3, M1 or later), but it is a separate purchase: a Steam copy will not launch it."
+  }
 }
