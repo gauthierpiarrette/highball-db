@@ -2,9 +2,9 @@
   "id": "beamng-drive",
   "title": "BeamNG.drive",
   "steam_appid": 284160,
-  "status": "reported-upstream",
-  "renderer": "dxmt",
-  "provenance": "DXMT changelog v0.72 (github.com/3Shain/dxmt/releases)",
-  "notes": "dynamic reflections fixed",
+  "status": "community",
+  "renderer": "d3dmetal",
+  "provenance": "community report with logs and a screenshot (highball-db#5, Michael-Liendo), unverified by Highball",
+  "notes": "Reported playable at 40-60 fps on an Apple M4 with the bottle set to D3DMetal, installed through Steam inside the bottle and launched from Highball. No workarounds, launch options or DLL overrides were needed. BeamNG probes for Direct3D 12, finds no usable device and falls back to Direct3D 11 on its own, so it does not depend on the D3D12-only path. Reported on Highball 0.7.14 with game Alpha v0.39.4, windowed at 1470x934, 6 GB reported to the game as video memory. DXMT is untested on this hardware: the earlier DXMT note came from the DXMT changelog rather than a run.",
   "lastVerified": null
 }
