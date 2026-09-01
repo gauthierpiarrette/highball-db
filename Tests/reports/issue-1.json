@@ -1,0 +1,7 @@
+{
+  "number": 1,
+  "title": "Pragmata (sketchbook demo)",
+  "body": "### Game Compatibility Report\n\n* **Game Title:** PRAGMATA SKETCHBOOK (Demo)\n* **Steam ID:** 4003800\n* **Status:** Unplayable\n* **Renderer:** D3DMetal (with Advertise AVX enabled)\n\n### Test Notes\n1. **DXMT Mode:** Failed with RE Engine error `0x80004002 (Unsupported graphics card)` because the game strictly requires DirectX 12.\n2. **D3DMetal Mode:** `CrashReport.exe` triggers an error box immediately.\n3. **With CrashReport disabled:** Renaming the crash utility bypasses the first window, but the main executable `PRAGMATA_SKETCHBOOK.exe` encounters a fatal exception and crashes immediately on thread initialization.\n\nwine-10.0-Sikarugir-r6:\nBien que Sikarugir apporte une excellente compatibilité générale et intègre nativement les traducteurs comme DXMT ou D3DMetal, cette révision spécifique basée sur Wine 10.0 reste bloquée face aux toutes dernières exigences de gestion mémoire et d'appels asynchrones du RE Engine.Les développeurs du projet travaillent d'ailleurs activement sur l'intégration des fonctionnalités et l'intégration complète de Wine [1](https://github.com/Sikarugir-App/Sikarugir)1, ce qui devrait grandement étendre la compatibilité avec les titres DirectX 1[2](https://github.com/Sikarugir-App/Sikarugir/issues/180) ultra-récents comme ce Pragmata Sketchbook.",
+  "user": "OdynOOb",
+  "created": "2026-08-24T18:01:37Z"
+}

@@ -2,21 +2,78 @@ name: Ingest reports
 on:
   issues:
     types: [labeled]
+
+# Two issues labelled at once would otherwise race each other's push.
+concurrency:
+  group: ingest-reports
+  cancel-in-progress: false
+
 jobs:
   ingest:
     if: github.event.label.name == 'report-accepted'
     runs-on: ubuntu-latest
-    permissions: { contents: write, issues: write }
+    permissions:
+      contents: write
+      issues: write
+      actions: write
     steps:
       - uses: actions/checkout@v4
-      - name: Append report
+
+      - name: Parse the report
+        id: parse
         env:
           BODY: ${{ github.event.issue.body }}
           NUM: ${{ github.event.issue.number }}
+          TITLE: ${{ github.event.issue.title }}
           USER: ${{ github.event.issue.user.login }}
           CREATED: ${{ github.event.issue.created_at }}
-        run: python3 Scripts/ingest-report.py
-      - name: Commit
         run: |
-          git config user.name highball-bot && git config user.email bot@users.noreply.github.com
-          git add db/reports && git commit -m "db: report #${{ github.event.issue.number }}" && git push
+          set +e
+          python3 Scripts/ingest-report.py
+          code=$?
+          outcome="$(cat "$RUNNER_TEMP/outcome" 2>/dev/null || true)"
+          echo "outcome=$outcome" >> "$GITHUB_OUTPUT"
+          # No outcome file means the script itself broke, which is a red run.
+          # NEEDS_GAME_ID / NEEDS_DECISION are questions, not breakage: the comment
+          # step below asks them and the run stays green.
+          if [ -z "$outcome" ]; then
+            echo "ingest-report.py exited $code without an outcome"
+            exit "$code"
+          fi
+
+      - name: Validate, then commit only if something changed
+        if: steps.parse.outputs.outcome == 'WROTE'
+        run: |
+          set -euo pipefail
+          python3 Scripts/validate-db.py
+          # build-site.py is the only thing that reads db/reports end to end, so running
+          # it here catches a record that parses but breaks the site. site/ is ignored.
+          python3 Scripts/build-site.py >/dev/null
+          git config user.name highball-bot
+          git config user.email bot@users.noreply.github.com
+          git add db/reports
+          if git diff --cached --quiet; then
+            echo "nothing staged; not committing"
+            exit 0
+          fi
+          git commit -m "db: report #${{ github.event.issue.number }}"
+          git pull --rebase --autostash origin main
+          git push
+
+      - name: Say what happened, on the issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          [ -f "$RUNNER_TEMP/comment.md" ] || exit 0
+          gh issue comment "${{ github.event.issue.number }}" \
+            --repo "${{ github.repository }}" --body-file "$RUNNER_TEMP/comment.md"
+
+      - name: Ask the site to rebuild
+        if: steps.parse.outputs.outcome == 'WROTE'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # A push made with GITHUB_TOKEN raises no push event, so pages.yml would not
+          # run on its own and the record would be right in git but stale on the site.
+          gh workflow run pages.yml --ref main

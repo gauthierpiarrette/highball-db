@@ -13,3 +13,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 Scripts/validate-db.py
+      - run: python3 Scripts/test-ingest.py

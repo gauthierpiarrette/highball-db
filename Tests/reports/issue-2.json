@@ -1,0 +1,7 @@
+{
+  "number": 2,
+  "title": "Cyberpunk 2077",
+  "body": "### Game Compatibility Report\n\n* **Game Title:** Cyberpunk 2077\n* **Steam ID:** 1091500\n* **Status:** Playable (Low Framerate)\n* **Renderer:** D3DMetal (with Advertise AVX enabled)\n* **Wine Version:** wine-10.0 (Sikarugir) revision 6\n\n### Configuration Requirements\nTo boot and run the game successfully, the following tweaks are strictly mandatory:\n1. **Rosetta 2 & AVX:** `Advertise AVX to games (Rosetta)` must be enabled in Highball settings, or the game engine will crash on launch.\n2. **REDlauncher Bypass:** The Steam launch option `--launcher-skip` must be added. Otherwise, REDlauncher fails with an OpenGL context creation error (`QSurfaceFormat` / `libEGL.dll` missing).\n3. **Steam Overlay:** The Steam Overlay must be toggled **OFF** in the game properties to prevent immediate black screens and hooks conflicts.\n\n### Test Notes & Performance\n* **Ray Tracing:** Must be turned **OFF**. When enabled, the game drops to a slideshow (~10 FPS) due to unoptimized software ray-tracing translation.\n* **Steam Deck Preset + FSR 2.1 (Balanced):** Yields around **17.10 FPS average** (1920x1200, Fullscreen) on initial runs. Heavy shader compilation stuttering is observed during the benchmark. Performance is expected to scale on higher-tier Apple Silicon chips.\n",
+  "user": "OdynOOb",
+  "created": "2026-08-24T20:04:59Z"
+}
