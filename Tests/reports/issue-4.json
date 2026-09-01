@@ -1,0 +1,7 @@
+{
+  "number": 4,
+  "title": "custom launch arguments (required for mod)",
+  "body": "Hi again !\n\nThanks for this awesome app, it runs great on my M5 base chip.\n\nWould it be possible to add a way to customize DLL Overrides (like version=n,b which is mandatory to run Cyber Engine Tweaks)?\nEither by letting us add custom launch arguments to our games, or by allowing the \"Run a Windows program\" tool to execute .bat scripts.\n\nAdding WINEDLLOVERRIDES=\"version=n,b\" %command%\nin Steam Launch Options brings Filenotfound error\n\nThanks a lot for your amazing work!\n\n",
+  "user": "OdynOOb",
+  "created": "2026-08-25T17:20:06Z"
+}

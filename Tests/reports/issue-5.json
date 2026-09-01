@@ -1,0 +1,7 @@
+{
+  "number": 5,
+  "title": "BeamNG.drive",
+  "body": "Verified on a real machine — the current entry is marked reported-upstream\nwith renderer \"dxmt\" and lastVerified null. This run used d3dmetal instead.\n\nGame version: Alpha v0.39.4 (Steam)\nHighball 0.7.14, bottle set to d3dmetal, msync, Windows 10 mode.\nMacBook Mac16,12 — Apple M4, 16 GB unified memory.\n\nResult: playable, 40–60 fps. No workarounds, no launch options, no DLL\noverrides. Installed through Steam inside the bottle and launched from\nHighball.\n\nGraphics API note (the useful part): BeamNG probes for D3D12 at startup,\nfinds no usable device, and falls back to DirectX 11 on its own. From\nbeamng.log:\n\n    gfx.defaultApi|     DirectX 12: not supported\n    gfx.defaultApi| Graphics API: DirectX 11 fallback (no GPU usable by\n                    DirectX 12 was found)\n    gfx| - name:Apple M4 (D3D11), outputName:\\\\.\\DISPLAY1, gfx:D3D11,\n           gpu:Apple M4\n\nDedicated VRAM reported to the game: 6062 MB. Ran windowed at 1470x934.\nZero skipped draw calls across the session, and no visual glitches I\ncould spot in normal play.\n\n<img width=\"1470\" height=\"956\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/56b12bb3-9bf8-49ff-afeb-45b58f7980c9\" />\n\nNothing needed tuning — it worked on the default bottle settings.",
+  "user": "Michael-Liendo",
+  "created": "2026-08-30T14:55:17Z"
+}
