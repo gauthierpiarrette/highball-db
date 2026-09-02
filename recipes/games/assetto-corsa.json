@@ -21,7 +21,7 @@
   "knownIssues": [
     {
       "symptom": "Black screen when starting a session, menu/launcher fine",
-      "cause": "DXMT: AC's D3D11 path runs but never presents on this engine (log shows the run loop ticking with heavy 'WAS LATE' spam)",
+      "cause": "DXMT on macOS 14.6: AC's D3D11 path ran but never presented on this engine (log shows the run loop ticking with heavy 'WAS LATE' spam). Not reproduced on macOS 26.6.2, where DXMT renders the session.",
       "fix": "set the bottle renderer to d3dmetal and restart the bottle (Stop all processes first — a running Steam session keeps the old renderer)"
     },
     {
@@ -31,10 +31,10 @@
     }
   ],
   "lastVerified": {
-    "date": "2026-08-28",
+    "date": "2026-09-02",
     "engine": "x64-sikarugir10.0_6-r0",
-    "macos": "14.6",
+    "macos": "26.6.2 (25G83)",
     "chip": "Apple M1 Pro",
-    "result": "Full chain verified: dotnet48 + steam recipes, stock launcher renders fully (real .NET WPF), practice session runs under d3dmetal at 1728x1117 fullscreen, 150-170 fps (Metal HUD), clean exit. dxmt: black screen (engine runs, never paints)."
+    "result": "dotnet48 + steam recipes; stock launcher renders (intro movie, main menu). d3dmetal: practice session (Ferrari 458, Laguna Seca) loads and runs at 1728x1117, 127-128 fps (Metal HUD), 25 min with the maintainer at the wheel, clean exit (exit 0, CLEAN EXIT in log), no full lap logged. dxmt: on this OS the same session renders and was driven, one lap logged (2:19.5), 69-136 fps, clean exit; it black-screened on macOS 14.6. Without the real .NET the launcher dies on a Mono TypeLoadException (CEF3) even though the registry shows a 4.8 Release key from Wine Mono. On macOS 14.6 (2026-08-28): 150-170 fps fullscreen under d3dmetal, clean exit."
   }
 }

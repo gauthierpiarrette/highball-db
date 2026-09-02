@@ -24,14 +24,14 @@
     {
       "symptom": "Freeze or crash at the end of every map load (white or stuck screen), menus fine",
       "cause": "Source's HDR rendering path emits a 16384x16384 zero-attachment render pass that hard-aborts the Apple GPU inside MoltenVK 1.4.x (VK_ERROR_DEVICE_LOST). Engine-level; affects other Source titles too.",
-      "fix": "mat_hdr_level 0 (this recipe writes it into portal2/cfg). Verified: with it, zero device loss across sustained sessions; without it, every load died."
+      "fix": "mat_hdr_level 0 (this recipe writes it into portal2/cfg). Verified on macOS 14.6 and again on 26.6.2: with it, no freeze across the observed runs; without it, every load died (crash on 14.6, frozen or white screen on 26.6.2)."
     }
   ],
   "lastVerified": {
-    "date": "2026-08-28",
+    "date": "2026-09-02",
     "engine": "x64-sikarugir10.0_6-r0",
-    "macos": "14.6",
+    "macos": "26.6.2 (25G83)",
     "chip": "Apple M1 Pro",
-    "result": "Intro map runs at 210-216 fps, 1728x1117, DXVK + async, HDR off via cfg files only (no launch options). Without HDR off: VK_ERROR_DEVICE_LOST on every map load."
+    "result": "Intro map (sp_a1_intro1) loads and runs at 138-147 fps, 1728x1117, DXVK with async off, HDR off via the cfg files only (no launch options); two runs, each live for 130 s. Without the cfg files (mat_hdr_level 2) the map load froze on both of two runs: once a stuck frame, once a white screen, process still alive, no device-lost line in the logs. On macOS 14.6 (2026-08-28, async on) the same map ran at 210-216 fps."
   }
 }

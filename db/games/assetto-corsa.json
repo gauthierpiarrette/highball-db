@@ -4,13 +4,13 @@
   "steam_appid": 244210,
   "status": "verified-local",
   "renderer": "d3dmetal",
-  "provenance": "verified locally on Apple Silicon (M1 Pro), engine sikarugir-10.0_6, Highball 0.7.10",
-  "notes": "Works end to end with two things in place: install the .NET Framework 4.8 dependency first (bottle settings → Dependencies; takes 20-40 min and looks frozen — let it finish), and use the D3DMetal renderer. The stock launcher is a 32-bit .NET/WPF app: without .NET it dies silently, which was the long-standing 'AC won't launch' failure. With .NET it renders fully and practice sessions run at 150-170 fps (verified 2026-08-28, M1 Pro, fullscreen 1728x1117, clean exit). DXMT black-screens the session (engine runs, never paints) — if you get a black screen on session start, switch the bottle to D3DMetal, stop all bottle processes, and relaunch. Launcher news panels may spin forever; cosmetic.",
-  "lastVerified": "2026-08-28",
+  "provenance": "verified locally on Apple Silicon (M1 Pro), engine sikarugir-10.0_6, Highball 0.7.18, macOS 26.6.2 (25G83), 2026-09-02; first verified on macOS 14.6 with Highball 0.7.10, 2026-08-28",
+  "notes": "Works end to end with two things in place: install the .NET Framework 4.8 dependency first (bottle settings → Dependencies; took 6 minutes here on 2026-09-02, can take 20-40 and looks frozen — let it finish), and use the D3DMetal renderer. The stock launcher is a 32-bit .NET/WPF app: without .NET it dies silently, which was the long-standing 'AC won't launch' failure (re-confirmed 2026-09-02: on a bottle whose registry claimed 4.8 but only had Wine Mono, the launcher died with a Mono TypeLoadException on CEF3; after the real dotnet48 install it rendered fully). Re-verified on macOS 26.6.2, 2026-09-02, D3DMetal: launcher intro movie and main menu render, a practice session (Ferrari 458 at Laguna Seca) loads and runs at 127-128 fps at 1728x1117 (Metal HUD). On macOS 14.6 (2026-08-28) sessions ran at 150-170 fps fullscreen with a clean exit. DXMT: on macOS 14.6 it black-screened the session (engine runs, never paints); on macOS 26.6.2 (2026-09-02) the same session rendered and drove under DXMT 0.80 at 69-136 fps, so the black screen looks tied to the older OS. If you get a black screen on session start, switch the bottle to D3DMetal, stop all bottle processes, and relaunch. Launcher news panels may spin forever; cosmetic.",
+  "lastVerified": "2026-09-02",
   "rendererResults": {
     "dxmt": {
-      "verdict": "fails",
-      "detail": "black screen on session start (engine runs, never paints)"
+      "verdict": "works",
+      "detail": "macOS 26.6.2 (2026-09-02): session renders and was driven, one lap logged, 69-136 fps at 1728x1117, clean exit. macOS 14.6 (2026-08-28): black screen on session start (engine runs, never paints)."
     }
   }
 }
