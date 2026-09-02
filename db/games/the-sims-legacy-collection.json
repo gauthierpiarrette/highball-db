@@ -1,0 +1,10 @@
+{
+  "id": "the-sims-legacy-collection",
+  "title": "The Sims Legacy Collection",
+  "steam_appid": 3314060,
+  "status": "verified-local",
+  "renderer": "dxvk",
+  "provenance": "verified locally on Apple Silicon (M1 Pro), macOS 26.6.2 (25G83), engine sikarugir-10.0_6 with Highball's patched MoltenVK, 2026-09-02",
+  "notes": "EA's 2025 re-release draws with Vulkan rather than Direct3D, so the renderer setting has no effect on it; the bottle's renderer is irrelevant (dxvk here). It needs engine x64-sikarugir10.0_6-r1 or newer plus the Sims recipe, which sets MVK_SHADOW_IMPORT=1. On older engines the window opens black with the game running behind it: the game is 32-bit, Wine imports its own host memory into MoltenVK, and Metal loses the device on the first frame (kIOGPUCommandBufferCallbackErrorOutOfMemory, six times, then nothing). With the patched engine it plays: neighbourhood and lot load, Sims take orders, 65 fps at 1728x1117. Reported black-screen elsewhere on M4 and M5 machines (highball-db issue #7, KhronosGroup/MoltenVK#2766); the fix is not chip-specific.",
+  "lastVerified": "2026-09-02"
+}
