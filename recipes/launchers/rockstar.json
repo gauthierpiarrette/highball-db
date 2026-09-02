@@ -48,7 +48,7 @@
   "knownIssues": [
     {
       "symptom": "Installer sticks forever at 'Preparing to Install...'; if bypassed, the launcher shows 'The Rockstar Games Launcher failed to initialize!'",
-      "cause": "verified 2026-08-26: the installer misses its service handshake and waits forever (files, VC++ and the service actually land), then Launcher.exe fails init after localisation on every renderer. CodeWeavers ships Rockstar fixes inside their Wine; this engine does not have them yet.",
+      "cause": "verified 2026-08-26: the installer misses its service handshake and waits forever (files, VC++ and the service actually land), then Launcher.exe fails init after localisation on every renderer. CodeWeavers ships Rockstar fixes inside their Wine; this engine does not have them yet. Re-checked 2026-09-02 on macOS 26.6.2 (25G83), M1 Pro, fresh bottle with ServicesPipeTimeout=60000 present before the session started: identical. The installer's own log (ProgramData\\Rockstar Games\\Launcher\\installer_log.txt) shows both VC++ redists exit 0, 'RockstarService.exe install' exit 0, the uninstall registry keys written, then nothing; it never starts the service (sc query: STOPPED, exit 1077 never started). A manual 'sc start \"Rockstar Service\"' reaches RUNNING with the service logging its handshake subsystem up, and the installer stays parked at 'Preparing to Install...' regardless (12 minutes, twice).",
       "fix": "none at the app level. Tracked upstream at Sikarugir-App/Sikarugir#258. Highball ships a fixed engine as soon as one exists."
     }
   ],
