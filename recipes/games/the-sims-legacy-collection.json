@@ -25,9 +25,9 @@
   ],
   "lastVerified": {
     "date": "2026-09-02",
-    "engine": "x64-sikarugir10.0_6-r1 (MoltenVK 1.4.2 build of the same patch)",
+    "engine": "x64-sikarugir10.0_6-r1",
     "macos": "26.6.2 (25G83)",
     "chip": "Apple M1 Pro",
-    "result": "Plays: neighbourhood and lot load, a Sim takes move orders, 65 fps at 1728x1117 (Metal HUD), clean exit. Launched from Steam in the bottle. Without the patch the same build black-screens with 6 lost devices."
+    "result": "Through the shipped path (engine r1's patched MoltenVK 1.4.1, this recipe's MVK_SHADOW_IMPORT=1, cold Steam start, launched from Steam): neighbourhood view renders at 117 fps, 1728x1117 (Metal HUD), frames live for 90 s. Earlier the same day with the experimental 1.4.2 build: lot loads, a Sim takes orders, 65 fps, clean exit. Same build with the flag off: six lost devices and a black screen."
   }
 }
