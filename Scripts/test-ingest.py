@@ -54,7 +54,7 @@ EXPECT = {
     4: ("NEEDS_GAME_ID", None),   # a feature request, not a report: a human decides
     5: ("WROTE", "beamng-drive"),
     6: ("WROTE", "microsoft-flight-simulator-2024"),
-    7: ("NEEDS_GAME_ID", None),
+    7: ("WROTE", "the-sims-legacy-collection"),   # entry added 2026-09-02; was NEEDS_GAME_ID before it existed
 }
 for n in sorted(EXPECT):
     want_outcome, want_id = EXPECT[n]
