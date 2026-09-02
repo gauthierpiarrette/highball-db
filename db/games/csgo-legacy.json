@@ -4,13 +4,13 @@
   "steam_appid": 4465480,
   "status": "verified-local",
   "renderer": "dxvk",
-  "provenance": "verified locally on Apple Silicon (M1 Pro), macOS 14.6, engine sikarugir-10.0_6, Highball 0.7.18-dev (2026-09-01): fresh install from Steam, launches to main menu (114 fps by Metal HUD on the equivalent 730 csgo_legacy build); a bot map (de_dust2) reached INGAME on the 730 csgo_legacy branch 2026-08-28. macOS 26 freeze is community-reported (issue #21), not reproduced on 14.6.",
-  "notes": "Valve now ships legacy CS:GO as its own free app (4465480), so it launches from Highball's library directly; the old route via CS2's launch chooser (appid 730 + csgo_legacy beta) still exists. Works on DXVK's Direct3D 9 on macOS 14/15. On macOS 26 (Tahoe), map loads freeze at 'Initializing game data': reported in issue #21 on an M1 (both this game and Counter-Strike: Source, identically), and matching a Sikarugir report of Source D3D9 games hanging under d9vk on macOS 26 (Sikarugir-App/Sikarugir#168). Evidence points at the fullscreen display-mode transition: both frozen logs end immediately after the display mode is set and restored. Async shader compilation was ruled out (freeze occurs with it provably off), and so was the Wine sync mode (freeze occurs under msync and with sync off). Candidate workaround, unconfirmed: launch windowed (-windowed -noborder in Steam launch options); shipped as macOS-26-gated launchArgs pending confirmation in issue #21.",
-  "launchArgs": ["-windowed", "-noborder"],
-  "launchArgsMinMacOS": "26.0",
-  "lastVerified": "2026-09-01",
+  "provenance": "verified locally on Apple Silicon (M1 Pro), macOS 14.6, engine sikarugir-10.0_6, Highball 0.7.18-dev (2026-09-01): fresh install from Steam, launches to main menu (114 fps by Metal HUD on the equivalent 730 csgo_legacy build); a bot map (de_dust2) reached INGAME on the 730 csgo_legacy branch 2026-08-28. macOS 26 freeze is community-reported (issue #21), not reproduced on 14.6. macOS 26.6.2 (M1 Pro, 2026-09-02): the freeze reproduced and was traced; not fixed.",
+  "notes": "Valve now ships legacy CS:GO as its own free app (4465480), so it launches from Highball's library directly; the old route via CS2's launch chooser (appid 730 + csgo_legacy beta) still exists. Works on DXVK's Direct3D 9 on macOS 14/15. On macOS 26 the map load freezes at 'Initializing game data' (reporter's M1, issue #21; reproduced on an M1 Pro on 26.6.2, 2026-09-02, about five launches in six). Root cause, from a wineserver trace: a lost wake-up in the game's own thread-pool hand-off. An auto-reset event is set twice before any waiter runs, the second set is lost, the wrong worker consumes the one signal and skips the semaphore release that would wake the thread whose job it is to set the event again; the main thread and two workers then wait forever. Windows hides this ordering race with its wait-completion priority boost. Not a GPU or renderer problem (every DXVK thread is idle, no MoltenVK errors) and not the Wine sync primitive (identical under msync, esync and sync none). Ruled out as workarounds, each with cold starts: -windowed -noborder, mat_queue_mode 0, -nosound, -threads 1, threadpool_affinity 0, host_thread_mode 0, snd_mix_async 0, and launching under the macOS application scheduling policy. No launch-time fix yet; the candidates are a scheduler-boost emulation in Wine or the 730 csgo_legacy branch if it does not carry the race.",
+  "lastVerified": "2026-09-02",
   "anticheat": {
-    "names": ["VAC"],
+    "names": [
+      "VAC"
+    ],
     "macVerdict": "warning",
     "note": "anti-cheat present; the legacy app is delisted from matchmaking, offline/community play only"
   },
@@ -19,5 +19,12 @@
       "verdict": "fails",
       "detail": "unfixable gate pair, verified 2026-09-01: with an AMD GPU identity the game blocks on missing shadow-depth formats ('graphics hardware does not support all features (CSM)', PCF 0); with any non-AMD identity (Intel 8086:3e9b or Wine's NVIDIA default) it blocks on 'Failed to initialize NVAPI (0xFFFFFFFE)'. -dxlevel 90 does not bypass the CSM check."
     }
-  }
+  },
+  "knownIssues": [
+    {
+      "symptom": "macOS 26: loading screen reaches 'Initializing game data' and freezes; the process idles, the console log keeps writing",
+      "cause": "Lost wake-up in Source's job hand-off (auto-reset event set twice before any waiter ran), a scheduling-order race that macOS 26 under Rosetta resolves the wrong way on most launches. Verified 2026-09-02 with a wineserver trace on M1 Pro / 26.6.2.",
+      "fix": "None yet. Retrying the launch escapes it roughly one time in six. Nothing at the launch-option or bottle level changed the odds in a 16-launch measurement."
+    }
+  ]
 }
