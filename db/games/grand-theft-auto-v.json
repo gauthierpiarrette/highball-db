@@ -18,7 +18,7 @@
     "id": "rockstar",
     "name": "Rockstar Games Launcher",
     "impact": "blocks",
-    "note": "Rockstar's launcher handles sign-in and its embedded-browser UI does not render on this Wine build, so the game cannot be reached even though the game itself is reported to run. Tracked upstream at Sikarugir issue #258.",
+    "note": "Rockstar's launcher installer deadlocks waiting on its Windows service, so the install never finishes. Even with the launcher files forced into place, Launcher.exe fails to initialize because its embedded-browser UI does not render on this Wine build, so the game cannot be reached even though the game itself is reported to run. Tracked upstream at Sikarugir issue #258.",
     "tracking": "https://github.com/Sikarugir-App/Sikarugir/issues/258"
   }
 }
