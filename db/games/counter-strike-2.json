@@ -25,5 +25,11 @@
     }
   },
   "rendererMinMacOS": "15.0",
-  "rendererBelow": "dxvk"
+  "rendererBelow": "dxvk",
+  "verified": {
+    "chip": "Apple M1 Pro",
+    "macos": "26.6.2",
+    "engine": "x64-sikarugir10.0_6-r1",
+    "fps": "about 70"
+  }
 }

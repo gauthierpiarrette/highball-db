@@ -23,5 +23,11 @@
       "verdict": "works",
       "detail": "reaches the same mission but GPU-bound at about 16 fps, 51 ms GPU per frame, same settings"
     }
+  },
+  "verified": {
+    "chip": "Apple M1 Pro",
+    "macos": "26.6.2",
+    "engine": "x64-sikarugir10.0_6-r1",
+    "fps": "35 in the tutorial, above 100 later"
   }
 }
