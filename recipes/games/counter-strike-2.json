@@ -2,8 +2,9 @@
   "id": "counter-strike-2",
   "kind": "game",
   "title": "Counter-Strike 2",
-  "requires": ["steam"],
-  "renderer": "dxvk",
+  "requires": [
+    "steam"
+  ],
   "steps": [
     {
       "type": "dxvkconfig",
@@ -16,7 +17,7 @@
     },
     {
       "type": "note",
-      "text": "CS2 itself runs under DXVK with no special setup. This recipe's settings are for the legacy CS:GO branch (32-bit, D3D9): async shader compile off (map-load freeze, issue #21), a 2 GB texture-memory report for the 32-bit process, and a real Radeon device id so Source picks the ATI shadow path. Highball also applies these as a built-in default for now; applying the recipe makes them part of your bottle's data."
+      "text": "CS2 itself needs no setup: Highball picks the graphics mode from the game's row (DXMT on macOS 15 and newer, DXVK below). This recipe's settings are for the legacy CS:GO branch (32-bit, D3D9, csgo.exe): async shader compile off (map-load freeze, issue #21), a 2 GB texture-memory report for the 32-bit process, and a real Radeon device id so Source picks the ATI shadow path."
     }
   ],
   "knownIssues": [
