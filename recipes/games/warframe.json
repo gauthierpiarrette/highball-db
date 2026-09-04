@@ -16,7 +16,7 @@
     },
     {
       "type": "note",
-      "text": "Warframe's Steam entry starts Tools\\Launcher.exe, an updater with an embedded browser, and that browser paints nothing under this engine's DirectWrite (a black window with no buttons). The override above disables DirectWrite for Launcher.exe alone, so the launcher draws with GDI text, shows its EULA and Play button, and updates the game. The game keeps DirectWrite. Use DXMT for the game; DXVK runs it too but at about half the frame rate."
+      "text": "Warframe's Steam entry starts Tools\\Launcher.exe, an updater with an embedded browser, and that browser paints nothing under this engine's DirectWrite (a black window with no buttons). The override above disables DirectWrite for Launcher.exe alone, so the launcher draws with GDI text, shows its EULA and Play button, and updates the game. The game keeps DirectWrite. Use DXMT for the game; DXVK runs it too but at about half the frame rate. The same per-executable override was described by leontov-eng on Sikarugir issue #255 on 2026-08-24; Highball ships it as data so nobody has to find winecfg."
     }
   ],
   "knownIssues": [
