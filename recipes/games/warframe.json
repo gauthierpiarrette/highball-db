@@ -36,6 +36,6 @@
     "engine": "x64-sikarugir10.0_6-r1",
     "macos": "26.6.2",
     "chip": "Apple M1 Pro",
-    "result": "Launcher updated the game with the override, Steam login and account creation worked, the first tutorial mission ran under DXMT at about 35 fps and under DXVK at about 16 fps. Clean exit not checked."
+    "result": "Launcher updated the game with the override, Steam login and account creation worked, the first tutorial mission ran under DXMT at about 35 fps and under DXVK at about 16 fps. Exit is clean."
   }
 }
