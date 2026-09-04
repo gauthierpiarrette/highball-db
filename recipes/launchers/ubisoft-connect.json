@@ -1,7 +1,9 @@
 {
   "id": "ubisoft-connect",
   "kind": "launcher",
-  "blocked": { "reason": "The client's embedded Chromium (CEF) window never paints on this Wine build, so you can't sign in." },
+  "blocked": {
+    "reason": "The client's embedded Chromium (CEF) window never paints on this Wine build, so you can't sign in."
+  },
   "title": "Ubisoft Connect",
   "renderer": "dxmt",
   "steps": [
@@ -33,14 +35,14 @@
     },
     {
       "type": "note",
-      "text": "NSIS installer accepts /S for silent install. Disable the in-game overlay in Connect settings \u2014 it injects into games and breaks under Wine."
+      "text": "NSIS installer accepts /S for silent install. Disable the in-game overlay in Connect settings — it injects into games and breaks under Wine."
     }
   ],
   "lastVerified": null,
   "knownIssues": [
     {
       "symptom": "Launcher runs (tray icon, logs, game downloads via uplay links) but the window never paints. White under D3DMetal, DXMT and wined3d, black under DXVK.",
-      "cause": "the 2025+ client's embedded Chromium UI fails GPU (ANGLE) init under this Wine build on every renderer, and its software fallback crashes under Wine on Apple Silicon. Verified 2026-08-25 across all four renderers, including with WINE_SIMULATE_WRITECOPY=1 (the CrossOver hack for this exact process, which stabilizes the browser processes but does not paint).",
+      "cause": "the 2025+ client's embedded Chromium UI fails GPU (ANGLE) init under this Wine build on every renderer, and its software fallback crashes under Wine on Apple Silicon. Verified 2026-08-25 across all four renderers, including with WINE_SIMULATE_WRITECOPY=1 (the CrossOver hack for this exact process, which stabilizes the browser processes but does not paint). Disabling DirectWrite for the client, which fixes Warframe's launcher, is not an option here: libcef.dll imports DWrite.dll as a hard dependency, so with dwrite disabled upc.exe fails to load at all (status c0000135, verified 2026-09-04 in a fresh bottle).",
       "fix": "none at the app level today. Works only in CrossOver 25.1+. Engine fix requested upstream at Sikarugir-App/Sikarugir#257; Highball will pick up a fixed engine as soon as one exists. Tracked in highball#15."
     }
   ]
