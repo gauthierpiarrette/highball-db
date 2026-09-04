@@ -1,0 +1,17 @@
+{
+  "id": "rocket-league",
+  "title": "Rocket League",
+  "steam_appid": 252950,
+  "status": "blocked-anticheat",
+  "renderer": null,
+  "provenance": "Psyonix's Season 22 announcement (Easy Anti-Cheat mandatory for online play from 2026-04-28, as reported by GamingOnLinux and Dot Esports); community reports on r/macgaming; not tested here",
+  "notes": "Since 2026-04-28 (Season 22) Rocket League on PC needs Easy Anti-Cheat enabled to queue for online matches, private matches and tournaments, on both the Epic Games Store and Steam (for accounts that still own the delisted Steam version). Psyonix supports Linux and Steam Deck through Proton's EAC runtime; there is no such runtime for Wine on macOS, so online play cannot work here. Offline content can be started with EAC disabled, and that is all a bottle can offer. r/macgaming threads since April report the same. Not tested on this engine.",
+  "anticheat": {
+    "names": [
+      "Easy Anti-Cheat"
+    ],
+    "macVerdict": "warning",
+    "note": "Easy Anti-Cheat mandatory for every online mode since 2026-04-28; the Proton path Psyonix supports has no macOS equivalent"
+  },
+  "lastVerified": null
+}
