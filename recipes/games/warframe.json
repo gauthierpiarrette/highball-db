@@ -1,0 +1,41 @@
+{
+  "id": "warframe",
+  "kind": "game",
+  "title": "Warframe",
+  "requires": [
+    "steam"
+  ],
+  "renderer": "dxmt",
+  "steps": [
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\AppDefaults\\Launcher.exe\\DllOverrides",
+      "name": "dwrite",
+      "valueType": "REG_SZ",
+      "data": ""
+    },
+    {
+      "type": "note",
+      "text": "Warframe's Steam entry starts Tools\\Launcher.exe, an updater with an embedded browser, and that browser paints nothing under this engine's DirectWrite (a black window with no buttons). The override above disables DirectWrite for Launcher.exe alone, so the launcher draws with GDI text, shows its EULA and Play button, and updates the game. The game keeps DirectWrite. Use DXMT for the game; DXVK runs it too but at about half the frame rate."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "The Warframe launcher window is black; the game never updates or starts",
+      "cause": "the launcher's embedded browser renders through DirectWrite, which paints nothing in this Wine (Sikarugir #255 has the same symptom for other CEF launchers)",
+      "fix": "the registry step in this recipe, verified 2026-09-04: the launcher showed its EULA, updated the game and started it"
+    },
+    {
+      "symptom": "'Login with Steam' fails and a bind-or-create dialog appears",
+      "cause": "the Steam account has no Warframe account linked yet; this is the game's own flow, not an engine problem",
+      "fix": "choose Create New or Bind Existing in that dialog"
+    }
+  ],
+  "lastVerified": {
+    "date": "2026-09-04",
+    "engine": "x64-sikarugir10.0_6-r1",
+    "macos": "26.6.2",
+    "chip": "Apple M1 Pro",
+    "result": "Launcher updated the game with the override, Steam login and account creation worked, the first tutorial mission ran under DXMT at about 35 fps and under DXVK at about 16 fps. Clean exit not checked."
+  }
+}
