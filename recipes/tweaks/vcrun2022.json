@@ -127,5 +127,17 @@
     "macos": "14.6",
     "chip": "Apple M1 Pro",
     "result": "14/14 steps on a fresh bottle: both redists install (8 x64 + 7 x86 runtime dlls on disk), native overrides land in user.reg"
-  }
+  },
+  "installedMarkers": [
+    {
+      "registry": "Software\\\\Microsoft\\\\VisualStudio\\\\14.0\\\\VC\\\\Runtimes\\\\x64",
+      "value": "Installed",
+      "equals": "dword:00000001"
+    },
+    {
+      "registry": "Software\\\\Wow6432Node\\\\Microsoft\\\\VisualStudio\\\\14.0\\\\VC\\\\Runtimes\\\\x64",
+      "value": "Installed",
+      "equals": "dword:00000001"
+    }
+  ]
 }

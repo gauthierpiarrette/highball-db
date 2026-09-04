@@ -34,5 +34,12 @@
     "macos": "14.6",
     "chip": "Apple M1 Pro",
     "result": "winetricks dotnet48 completes (exit 0, no aborts) with WINE_BIN/WINESERVER_BIN/WINE_BINDIR set and bash invocation; NDP v4 Full Release=528049 (.NET 4.8) confirmed in registry"
-  }
+  },
+  "installedMarkers": [
+    {
+      "registry": "Software\\\\Microsoft\\\\NET Framework Setup\\\\NDP\\\\v4\\\\Full",
+      "value": "Release",
+      "min": 528040
+    }
+  ]
 }
