@@ -59,8 +59,8 @@
     },
     {
       "symptom": "'Create a new account' inside the launcher ends with 'Sorry, we are unable to handle your request at this time' (#1.500.7 and a request id).",
-      "cause": "Rockstar gates account creation on a reCAPTCHA Enterprise risk score, and a browser running under Wine scores too low (2026-09-05: the form is fully interactive and the request reaches Rockstar; the rejection is their bot protection).",
-      "fix": "Create the account at socialclub.rockstargames.com in Safari, then use Sign In in the launcher. Signing in with an existing account is accepted."
+      "cause": "Rockstar's account-creation service refuses the request (2026-09-05: the same #1.500.7 came back from Rockstar's own website in Safari, so it is not the launcher or Wine). Bot protection or a service-side block on their end.",
+      "fix": "Use an existing Rockstar account (Back, then Sign In). If you need a new one, create it at socialclub.rockstargames.com and retry later if it refuses; the launcher can't do anything about a refusal from Rockstar's service."
     }
   ],
   "lastVerified": {
