@@ -25,6 +25,11 @@
       "symptom": "macOS 26: loading screen reaches 'Initializing game data' and freezes; the process idles, the console log keeps writing",
       "cause": "Lost wake-up in Source's job hand-off (auto-reset event set twice before any waiter ran), a scheduling-order race that macOS 26 under Rosetta resolves the wrong way on most launches. Verified 2026-09-02 with a wineserver trace on M1 Pro / 26.6.2.",
       "fix": "None yet. Retrying the launch escapes it roughly one time in six. Nothing at the launch-option or bottle level changed the odds in a 16-launch measurement."
+    },
+    {
+      "symptom": "On macOS 26 the game reaches the map load and then freezes (music keeps playing, the process stays alive); roughly five launches in six. Windowed or fullscreen makes no difference.",
+      "cause": "Reproduced 2026-09-05 on an M1 Pro / macOS 26.6.2 with engine r1. It is a lost wake-up on an auto-reset event during map load under Wine's msync (a threading race macOS 26 exposes), not a renderer or shader issue: the same freeze happens with async shader compilation off and with sync set to none. Counter-Strike: Source shows the same class of hang.",
+      "fix": "No user-side fix. The engine fix (yield after signalling an auto-reset event) is built into Highball's Wine 11 engine (patch 0005) but cannot be applied to the bundled Wine 10 engine, which is a third-party prebuilt. On the Wine 11 engine the game currently stops earlier with 'graphics hardware does not support all features (CSM)' because that Wine build reports no hardware shadow-map depth format to the game; that gap has to close before the freeze fix can be tested there. If a launch gets past the map load, the match plays normally."
     }
   ]
 }
