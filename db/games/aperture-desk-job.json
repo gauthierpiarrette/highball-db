@@ -7,7 +7,7 @@
   "provenance": "verified by Highball on Apple M1 Pro / macOS 14.6 / engine x64-sikarugir10.0_6-r0 (2026-08-23)",
   "notes": "DXVK is the verified renderer: office scene renders clean, ~40 fps, ReShade 6.8.0 works on top (re-verified 2026-08-25). On our macOS 14 test machine the other renderers misbehave with current builds: DXMT 0.80 black screen (it targets macOS 15+), D3DMetal severe texture corruption (GPU identity keys and ReShade ruled out by A/B). On macOS 15+ your results may differ.",
   "recipe": "recipes/games/aperture-desk-job.json",
-  "lastVerified": "2026-08-25",
+  "lastVerified": "2026-09-04",
   "rendererResults": {
     "dxmt": {
       "verdict": "fails",
@@ -17,5 +17,11 @@
       "verdict": "partial",
       "detail": "fast but heavy texture corruption on macOS 14"
     }
+  },
+  "verified": {
+    "chip": "M1 Pro",
+    "macos": "26.6.2",
+    "engine": "x64-sikarugir10.0_6-r1",
+    "fps": "106 in the office scene (DXMT fork 7421db2; DXVK is the shipped default)"
   }
 }

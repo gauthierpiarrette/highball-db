@@ -6,5 +6,11 @@
   "renderer": "dxvk",
   "provenance": "verified locally on Apple Silicon (M1 Pro), engine sikarugir-10.0_6, Highball 0.7.18, macOS 26.6.2 (25G83), 2026-09-02; first verified on macOS 14.6 with Highball 0.7.13, 2026-08-28",
   "notes": "Works under DXVK once HDR is off, and the Portal 2 recipe turns it off for you. The story: Source's HDR path triggers a MoltenVK driver bug (a giant zero-attachment render pass aborts the GPU), which made every map load freeze or crash while menus looked fine. With mat_hdr_level 0 (written into portal2/cfg by the recipe, or set Shader Detail to not use HDR in video settings) the intro map runs at 138-147 fps at 1728x1117 on macOS 26.6.2 (DXVK, async off; 210-216 fps was measured on macOS 14.6 with async on). Re-checked on macOS 26.6.2, 2026-09-02: without the recipe (HDR level 2) the intro map load still freezes every time, once as a stuck frame and once as a white screen, with the process left alive; with the recipe two runs stayed live for the full observation. Apply the Portal 2 recipe after installing the game, keep the bottle on DXVK. The same root cause likely affects other Source titles (Portal 1, HL2, TF2, L4D2) and the same fix should transfer. Visual cost: Source's HDR bloom, minor in this game.",
-  "lastVerified": "2026-09-02"
+  "lastVerified": "2026-09-04",
+  "verified": {
+    "chip": "M1 Pro",
+    "macos": "26.6.2",
+    "engine": "x64-sikarugir10.0_6-r1",
+    "fps": "134 in the main menu, DXVK, HDR-off recipe"
+  }
 }
