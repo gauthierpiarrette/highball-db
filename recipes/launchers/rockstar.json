@@ -23,6 +23,12 @@
       "data": "16"
     },
     {
+      "type": "environment",
+      "name": "DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN",
+      "value": "1",
+      "note": "The launcher's sign-in is a Chromium browser whose GPU process draws into the browser process's window. DXMT refuses such cross-process swapchains unless told the driver supports them; Highball's Wine 11 engine (build 15+) does."
+    },
+    {
       "type": "installer",
       "url": "https://gamedownloads.rockstargames.com/public/installer/Rockstar-Games-Launcher.exe",
       "sha256": null,
@@ -50,11 +56,15 @@
       "symptom": "Installer sticks forever at 'Preparing to Install...'; if bypassed, the launcher shows 'The Rockstar Games Launcher failed to initialize!'",
       "cause": "verified 2026-08-26: the installer misses its service handshake and waits forever (files, VC++ and the service actually land), then Launcher.exe fails init after localisation on every renderer. CodeWeavers ships Rockstar fixes inside their Wine; this engine does not have them yet. Re-checked 2026-09-02 on macOS 26.6.2 (25G83), M1 Pro, fresh bottle with ServicesPipeTimeout=60000 present before the session started: identical. The installer's own log (ProgramData\\Rockstar Games\\Launcher\\installer_log.txt) shows both VC++ redists exit 0, 'RockstarService.exe install' exit 0, the uninstall registry keys written, then nothing; it never starts the service (sc query: STOPPED, exit 1077 never started). A manual 'sc start \"Rockstar Service\"' reaches RUNNING with the service logging its handshake subsystem up, and the installer stays parked at 'Preparing to Install...' regardless (12 minutes, twice). Re-tested 2026-09-02 on macOS 26.6.2: same install-time deadlock (the installer never requests the service start). On CrossOver 26.3's Wine the install completes and the service runs; the launcher then fails on its Direct3D 10.1 + Direct2D device, not on CEF: wined3d has no feature level, DXVK builds for macOS cannot serve it, D3DMetal ships no d3d10core, and DXMT 0.80 aborts in SwapDeviceContextState. With that method stubbed the launcher window appears, so the graphics half is a DXMT fix.",
       "fix": "none at the app level. Tracked upstream at Sikarugir-App/Sikarugir#258. Highball ships a fixed engine as soon as one exists."
+    },
+    {
+      "symptom": "'Create a new account' inside the launcher ends with 'Sorry, we are unable to handle your request at this time' (#1.500.7 and a request id).",
+      "cause": "Rockstar gates account creation on a reCAPTCHA Enterprise risk score, and a browser running under Wine scores too low (2026-09-05: the form is fully interactive and the request reaches Rockstar; the rejection is their bot protection).",
+      "fix": "Create the account at socialclub.rockstargames.com in Safari, then use Sign In in the launcher. Signing in with an existing account is accepted."
     }
   ],
   "lastVerified": null,
   "blocked": {
-    "reason": "Two pieces are still missing on this engine. The installer's service start deadlocks in this Wine tree (on CrossOver 26.3's LGPL Wine the same installer completes and the service runs, and that prefix also runs its service on this engine). And the launcher's own UI needs a Direct3D 10.1 device with Direct2D on top, which calls SwapDeviceContextState; the only provider that fits, DXMT 0.80, has that method unimplemented and aborts. Details in the tracking issue.",
-    "tracking": "https://github.com/Sikarugir-App/Sikarugir/issues/258"
+    "reason": "Not on the bundled Wine 10 engine: the launcher's embedded browser (the Sign In window) dies there on a missing user32 export (IsWindowArranged), so it never shows the sign-in. It works on Highball's Wine 11 engine (CrossOver 26.3 base, build 15 or newer) with the cross-process browser fix (Wine bug 60263) and graphics mode DXMT: verified 2026-09-05 on an M1 Pro / macOS 26.6.2, the Sign In renders and is interactive. Available once that engine is installable from Highball."
   }
 }
