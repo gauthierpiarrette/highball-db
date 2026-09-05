@@ -2,7 +2,7 @@
   "id": "ubisoft-connect",
   "kind": "launcher",
   "blocked": {
-    "reason": "The client's embedded Chromium (CEF) window never paints on this Wine build, so you can't sign in."
+    "reason": "Not on the bundled Wine 10 engine: the client's embedded Chromium window never paints there. It works on Highball's Wine 11 engine (CrossOver 26.3 base, build 15 or newer) with the cross-process browser fix (Wine bug 60263) and graphics mode DXMT: verified 2026-09-05 on an M1 Pro / macOS 26.6.2, the 'Log in to Ubisoft' window renders fully. Available once that engine is installable from Highball."
   },
   "title": "Ubisoft Connect",
   "renderer": "dxmt",
@@ -10,6 +10,12 @@
     {
       "type": "sync",
       "sync": "none"
+    },
+    {
+      "type": "environment",
+      "name": "DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN",
+      "value": "1",
+      "note": "Connect's window is a Chromium browser whose GPU process draws into the main process's window. DXMT refuses such cross-process swapchains unless told the driver supports them; Highball's Wine 11 engine (build 15+) does."
     },
     {
       "type": "installer",
@@ -38,7 +44,13 @@
       "text": "NSIS installer accepts /S for silent install. Disable the in-game overlay in Connect settings — it injects into games and breaks under Wine."
     }
   ],
-  "lastVerified": null,
+  "lastVerified": {
+    "date": "2026-09-05",
+    "engine": "x64-crossover26.3-r4",
+    "macos": "26.6.2",
+    "chip": "Apple M1 Pro",
+    "result": ""
+  },
   "knownIssues": [
     {
       "symptom": "Launcher runs (tray icon, logs, game downloads via uplay links) but the window never paints. White under D3DMetal, DXMT and wined3d, black under DXVK.",
