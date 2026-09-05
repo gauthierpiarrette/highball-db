@@ -49,7 +49,7 @@
     "engine": "x64-crossover26.3-r4",
     "macos": "26.6.2",
     "chip": "Apple M1 Pro",
-    "result": ""
+    "result": "dxmt + DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1 on the Wine 11 engine with the cross-process browser fix: 'Log in to Ubisoft' window renders fully and is interactive (not signed in; the account is the user's). Bundled Wine 10 engine: window still blank."
   },
   "knownIssues": [
     {

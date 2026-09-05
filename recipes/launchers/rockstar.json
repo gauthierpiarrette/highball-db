@@ -63,7 +63,13 @@
       "fix": "Create the account at socialclub.rockstargames.com in Safari, then use Sign In in the launcher. Signing in with an existing account is accepted."
     }
   ],
-  "lastVerified": null,
+  "lastVerified": {
+    "date": "2026-09-05",
+    "engine": "x64-crossover26.3-r4",
+    "macos": "26.6.2",
+    "chip": "Apple M1 Pro",
+    "result": "dxmt + DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1 on the Wine 11 engine with the cross-process browser fix: installer, service and launcher run; the 'Rockstar Games - Sign In' window renders fully and is interactive. In-launcher 'Create account' is refused by Rockstar's bot protection (#1.500.7); create on the website, then sign in. Bundled Wine 10 engine: the browser dies on a missing user32 export, no sign-in."
+  },
   "blocked": {
     "reason": "Not on the bundled Wine 10 engine: the launcher's embedded browser (the Sign In window) dies there on a missing user32 export (IsWindowArranged), so it never shows the sign-in. It works on Highball's Wine 11 engine (CrossOver 26.3 base, build 15 or newer) with the cross-process browser fix (Wine bug 60263) and graphics mode DXMT: verified 2026-09-05 on an M1 Pro / macOS 26.6.2, the Sign In renders and is interactive. Available once that engine is installable from Highball."
   }
