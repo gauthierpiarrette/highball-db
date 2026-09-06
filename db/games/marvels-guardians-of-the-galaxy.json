@@ -1,0 +1,23 @@
+{
+  "id": "marvels-guardians-of-the-galaxy",
+  "title": "Marvel's Guardians of the Galaxy",
+  "steam_appid": 1088850,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "provenance": "reported by HappySmurfday (highball#63), Epic copy, unverified by Highball",
+  "notes": "DirectX 12 only: on DXMT it stops at \"No suitable D3D12 adapter found\" before the splash, so D3DMetal is the only mode that can run it and this row exists to make Highball ask for Apple's licence at the first launch instead. With D3DMetal the splash renders and the game crashes after Play Game on an M4 Max on a macOS 27 beta (Wine's program error dialog); the log for that run is pending. Not tried here.",
+  "lastVerified": null,
+  "requiresLauncher": {
+    "id": "epic",
+    "name": "Epic Games Launcher",
+    "impact": "requires",
+    "note": "Reported with the Epic copy; the Steam copy has not been tried."
+  },
+  "knownIssues": [
+    {
+      "symptom": "Crashes after \"Play Game\" on the splash screen, with Wine's \"has encountered a serious problem\" dialog, on D3DMetal.",
+      "cause": "Unknown until the D3DMetal run's log is read (highball#63). Candidates: an AVX instruction the game requires (Rosetta hides AVX unless the environment advertises it), or D3DMetal on a macOS 27 beta.",
+      "fix": "Try the environment's \"Advertise AVX to games (Rosetta)\" toggle under Compatibility. If the crash stays, attach the log of the D3DMetal launch to highball#63."
+    }
+  ]
+}
