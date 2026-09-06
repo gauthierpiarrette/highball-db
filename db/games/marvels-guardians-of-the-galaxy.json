@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": "d3dmetal",
   "provenance": "reported by HappySmurfday (highball#63), Epic copy, unverified by Highball",
-  "notes": "DirectX 12 only: on DXMT it stops at \"No suitable D3D12 adapter found\" before the splash, so D3DMetal is the only mode that can run it and this row exists to make Highball ask for Apple's licence at the first launch instead. With D3DMetal the splash renders and the game crashes after Play Game on an M4 Max on a macOS 27 beta (Wine's program error dialog); the log for that run is pending. Not tried here.",
+  "notes": "DirectX 12 only: on DXMT it stops at \"No suitable D3D12 adapter found\" before the splash, so D3DMetal is the only mode that can run it and this row exists to make Highball ask for Apple's licence at the first launch. With D3DMetal 3.0 the splash renders, then the game crashes after Play Game with Wine's program error dialog: its log shows D3DMetal refusing the two DirectX 12 timestamp-query calls (EndQuery and ResolveQueryData, type 2) and, right after, a read through a null pointer. Apple's D3DMetal does not support timestamp queries and Apple has said so without a timeline. Not fixable at Highball's level today. Reported on an M4 Max on a macOS 27 beta, Epic copy. Not tried here.",
   "lastVerified": null,
   "requiresLauncher": {
     "id": "epic",
@@ -15,9 +15,9 @@
   },
   "knownIssues": [
     {
-      "symptom": "Crashes after \"Play Game\" on the splash screen, with Wine's \"has encountered a serious problem\" dialog, on D3DMetal.",
-      "cause": "Unknown until the D3DMetal run's log is read (highball#63). Candidates: an AVX instruction the game requires (Rosetta hides AVX unless the environment advertises it), or D3DMetal on a macOS 27 beta.",
-      "fix": "Try the environment's \"Advertise AVX to games (Rosetta)\" toggle under Compatibility. If the crash stays, attach the log of the D3DMetal launch to highball#63."
+      "symptom": "Crashes after \"Play Game\" on the splash screen, with Wine's \"has encountered a serious problem\" dialog, on D3DMetal. The AVX toggle makes no difference.",
+      "cause": "D3DMetal 3.0 does not implement DirectX 12 timestamp queries. The log (highball#63) shows it refusing ID3D12GraphicsCommandList::EndQuery and ResolveQueryData for query type 2 (timestamp), followed by an unhandled page fault reading address 0x907, a null result the game then dereferences. Apple's engineers have acknowledged the missing support on their forums with no timeline (developer.apple.com/forums/thread/757107).",
+      "fix": "None on the current engines. Neither DXMT nor DXVK can run a DirectX 12 only game, and D3DMetal is already at its newest version. The alternative is a DirectX 12 through Vulkan path (vkd3d-proton over MoltenVK), which is engine work tracked with highball-db#6."
     }
   ]
 }
