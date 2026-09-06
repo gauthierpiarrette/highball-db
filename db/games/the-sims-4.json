@@ -5,18 +5,18 @@
   "status": "verified-local",
   "renderer": "dxmt",
   "provenance": "verified by Highball through the EA app (free-to-play edition), 2026-09-06",
-  "notes": "Installed and played through the EA app on the Wine 11 (CrossOver 26.3) engine: 26 GB download, signed-in main menu, Create-A-Sim, and the Willow Creek world map at 130 fps (7.7 ms frame, GPU 4.8 ms) at 1728x1117 on DXMT, D3D11 feature level 11_0. Needs the EA app recipe (cross-process swapchain flag, junction handling) and that engine; the EA app does not install on the bundled Wine 10 engine. First launch shows a black full-screen window for about two minutes before the intro. Starting the executable directly hands off to the EA app, which relaunches the game, so its graphics settings and the Metal HUD come from the EA app's process. The Steam-sold copy and the other renderers were not tried.",
+  "notes": "Installed and played through the EA app on the Wine 11 (CrossOver 26.3) engine: 26 GB download, signed-in main menu, Create-A-Sim, the Willow Creek world map, and live mode on a lot (moved in, career panel, clock running) at 128-130 fps (7.8 ms frame, GPU 5.5 ms) at 1728x1117 on DXMT, D3D11 feature level 11_0. Needs the EA app recipe (cross-process swapchain flag, junction handling) and that engine; the EA app does not install on the bundled Wine 10 engine. First launch shows a black full-screen window for about two minutes before the intro. Starting the executable directly hands off to the EA app, which relaunches the game, so its graphics settings and the Metal HUD come from the EA app's process. The Steam-sold copy and the other renderers were not tried.",
   "lastVerified": "2026-09-06",
   "verified": {
     "chip": "M1 Pro",
     "macos": "26.6.2",
     "engine": "x64-crossover26.3-r4",
-    "fps": "130 on the world map (DXMT fork 7421db2, Metal HUD)"
+    "fps": "128 in live mode on a lot, 130 on the world map (DXMT fork 7421db2, Metal HUD)"
   },
   "rendererResults": {
     "dxmt": {
       "verdict": "works",
-      "detail": "macOS 26.6.2 (2026-09-06): main menu, Create-A-Sim and the world map render and respond, 130 fps at 1728x1117, clean exit. Loading a lot and live mode not yet exercised."
+      "detail": "macOS 26.6.2 (2026-09-06): main menu, Create-A-Sim, the world map and live mode on a lot all render and respond, 128-130 fps at 1728x1117, app 2.8 GB, clean exit."
     }
   },
   "requiresLauncher": {
