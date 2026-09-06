@@ -1,14 +1,44 @@
 {
   "id": "ea-app",
   "kind": "launcher",
-  "flaky": { "reason": "Works inconsistently on this Wine build; best-effort." },
+  "flaky": {
+    "reason": "Works inconsistently on this Wine build; best-effort."
+  },
   "title": "EA app",
   "renderer": "d3dmetal",
   "steps": [
-    { "type": "sync", "sync": "none" },
-    { "type": "installer", "url": "https://origin-a.akamaihd.net/EA-Desktop-Client-Download/installer-releases/EAappInstaller.exe", "sha256": null, "arguments": [], "label": "EAappInstaller" },
-    { "type": "pin", "pin": { "id": "6B1F0D2A-0000-4000-8000-000000000004", "name": "EA app", "path": "Program Files/Electronic Arts/EA Desktop/EA Desktop/EADesktop.exe", "arguments": [], "environment": {} } },
-    { "type": "note", "text": "The EA app is a Qt/CEF hybrid and one of the flakiest launchers under Wine. The Sikarugir community runs it under D3DMetal (see LIVE4MINT/Sikarugir-EA-App-Mac). Expect background-service errors that can be dismissed." }
+    {
+      "type": "sync",
+      "sync": "none"
+    },
+    {
+      "type": "installer",
+      "url": "https://origin-a.akamaihd.net/EA-Desktop-Client-Download/installer-releases/EAappInstaller.exe",
+      "sha256": null,
+      "arguments": [],
+      "label": "EAappInstaller"
+    },
+    {
+      "type": "pin",
+      "pin": {
+        "id": "6B1F0D2A-0000-4000-8000-000000000004",
+        "name": "EA app",
+        "path": "Program Files/Electronic Arts/EA Desktop/EA Desktop/EADesktop.exe",
+        "arguments": [],
+        "environment": {}
+      }
+    },
+    {
+      "type": "note",
+      "text": "The EA app is a Qt/CEF hybrid and one of the flakiest launchers under Wine. The Sikarugir community runs it under D3DMetal (see LIVE4MINT/Sikarugir-EA-App-Mac). Expect background-service errors that can be dismissed."
+    }
   ],
-  "lastVerified": null
+  "lastVerified": null,
+  "knownIssues": [
+    {
+      "symptom": "The EA app installer runs, then exits after ~2 minutes with nothing installed (MSI returns 1627, or 1603 once the service step is worked around).",
+      "cause": "Reproduced 2026-09-06 on the shipped engine (Wine 10, M1 Pro): EA's MSI installs a vital background service (EABackgroundService) that Wine's service manager can't start (error 2), and its 'Juno' setup steps are managed .NET (WiX DTF) custom actions that fail under Wine's bundled Mono ('SFXCA: Failed to unload app domain, 0x80004001'). Either failure aborts the install and it rolls back. Not chip- or renderer-specific (seen on wined3d and dxmt, M4/M5/M1).",
+      "fix": "No reliable automated install yet. Under investigation: giving the bottle real .NET Framework 4.8 so the managed custom actions run, and getting the service start past Wine. Until then the EA app does not install cleanly on the shipped engine; the community runs it from a prebuilt bottle under D3DMetal."
+    }
+  ]
 }
