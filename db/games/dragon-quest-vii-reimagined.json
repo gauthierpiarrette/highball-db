@@ -1,0 +1,10 @@
+{
+  "id": "dragon-quest-vii-reimagined",
+  "title": "DRAGON QUEST VII Reimagined",
+  "steam_appid": 2499860,
+  "status": "community",
+  "renderer": "dxmt",
+  "provenance": "community test report by alemolamg (highball-db#9), unverified by Highball",
+  "notes": "Runs and plays well. Reported on an Apple M5 Pro, macOS 26.6.2, Highball 0.8.3, engine wine-10.0 (Sikarugir) r1, Steam, automatic graphics mode (DXMT). Stutter during the first combats eases after a few minutes (shader warm-up); sustained high GPU load, the Mac runs warm and loud; no crash or instability. The executable carries D3D12 references, so D3DMetal is worth trying if a future build regresses under DXMT.",
+  "lastVerified": null
+}
