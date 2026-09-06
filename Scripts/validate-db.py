@@ -3,7 +3,7 @@
 import json, sys, glob
 
 STATUSES = {"verified-local", "reported-upstream", "community", "blocked-anticheat"}
-RENDERERS = {"wined3d", "dxmt", "d3dmetal", "dxvk", None}
+RENDERERS = {"wined3d", "dxmt", "d3dmetal", "dxvk", "vkd3d", None}
 errors = []
 
 for f in glob.glob("db/games/*.json"):

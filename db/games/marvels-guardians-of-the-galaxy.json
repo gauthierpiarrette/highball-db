@@ -17,7 +17,7 @@
     {
       "symptom": "Crashes after \"Play Game\" on the splash screen, with Wine's \"has encountered a serious problem\" dialog, on D3DMetal. The AVX toggle makes no difference.",
       "cause": "D3DMetal 3.0 does not implement DirectX 12 timestamp queries. The log (highball#63) shows it refusing ID3D12GraphicsCommandList::EndQuery and ResolveQueryData for query type 2 (timestamp), followed by an unhandled page fault reading address 0x907, a null result the game then dereferences. Apple's engineers have acknowledged the missing support on their forums with no timeline (developer.apple.com/forums/thread/757107).",
-      "fix": "None on the current engines. Neither DXMT nor DXVK can run a DirectX 12 only game, and D3DMetal is already at its newest version. The alternative is a DirectX 12 through Vulkan path (vkd3d-proton over MoltenVK), which is engine work tracked with highball-db#6."
+      "fix": "In development: a DirectX 12 through Vulkan mode (vkd3d-proton with DXVK's DXGI over MoltenVK) built and patched for Apple GPUs. On 2026-09-06 it creates a DirectX 12 device on both engines, declares feature level 12_0 and Shader Model 6.6, returns real timestamp queries and presents frames, which is everything this game asked for and D3DMetal could not give. The game itself has not been run through it yet (78 GB of disk). Tracked with highball-db#6."
     }
   ]
 }
