@@ -41,7 +41,7 @@
     "engine": "x64-crossover26.3-r4",
     "macos": "26.6.2",
     "chip": "Apple M1 Pro",
-    "result": "dxmt + DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1 on the Wine 11 engine with the cross-process browser fix: the installer completes (service starts, setup steps run), and the client's sign-in page renders and takes input. Sign-in itself not exercised. The installer's EA Desktop\\EA Desktop junction is turned into a host symlink by Highball (0.8.4+); without that the pinned path is 'not there'."
+    "result": "dxmt + DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1 on the Wine 11 engine with the cross-process browser fix: the installer completes (service starts, setup steps run), the client signs in, and Home, the store and the library render and respond. No game installed or launched yet. The installer's EA Desktop\\EA Desktop junction is turned into a host symlink by Highball (0.8.4+); without that the pinned path is 'not there'."
   },
   "knownIssues": [
     {
