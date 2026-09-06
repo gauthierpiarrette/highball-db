@@ -5,7 +5,7 @@
     "reason": "Works inconsistently on this Wine build; best-effort."
   },
   "title": "EA app",
-  "renderer": "d3dmetal",
+  "renderer": "dxmt",
   "steps": [
     {
       "type": "sync",
@@ -25,7 +25,10 @@
         "name": "EA app",
         "path": "Program Files/Electronic Arts/EA Desktop/EA Desktop/EADesktop.exe",
         "arguments": [],
-        "environment": {}
+        "environment": {
+          "DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN": "1"
+        },
+        "renderer": "dxmt"
       }
     },
     {
@@ -33,12 +36,23 @@
       "text": "The EA app is a Qt/CEF hybrid and one of the flakiest launchers under Wine. The Sikarugir community runs it under D3DMetal (see LIVE4MINT/Sikarugir-EA-App-Mac). Expect background-service errors that can be dismissed."
     }
   ],
-  "lastVerified": null,
+  "lastVerified": {
+    "date": "2026-09-06",
+    "engine": "x64-crossover26.3-r4",
+    "macos": "26.6.2",
+    "chip": "Apple M1 Pro",
+    "result": "dxmt + DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1 on the Wine 11 engine with the cross-process browser fix: the installer completes (service starts, setup steps run), and the client's sign-in page renders and takes input. Sign-in itself not exercised. The installer's EA Desktop\\EA Desktop junction is turned into a host symlink by Highball (0.8.4+); without that the pinned path is 'not there'."
+  },
   "knownIssues": [
     {
-      "symptom": "The EA app installer runs, then exits after ~2 minutes with nothing installed (MSI returns 1627, or 1603 once the service step is worked around).",
-      "cause": "Reproduced 2026-09-06 on the shipped engine (Wine 10, M1 Pro): EA's MSI installs a vital background service (EABackgroundService) that Wine's service manager can't start (error 2), and its 'Juno' setup steps are managed .NET (WiX DTF) custom actions that fail under Wine's bundled Mono ('SFXCA: Failed to unload app domain, 0x80004001'). Either failure aborts the install and it rolls back. Not chip- or renderer-specific (seen on wined3d and dxmt, M4/M5/M1).",
-      "fix": "No reliable automated install yet. Under investigation: giving the bottle real .NET Framework 4.8 so the managed custom actions run, and getting the service start past Wine. Until then the EA app does not install cleanly on the shipped engine; the community runs it from a prebuilt bottle under D3DMetal."
+      "symptom": "On the bundled Wine 10 engine the installer runs, then exits after ~2 minutes with nothing installed (MSI 1627, or 1603 once the service step is worked around).",
+      "cause": "Reproduced 2026-09-06 (M1 Pro, also reported on M4/M5): EA's MSI installs a vital background service that Wine 10's service manager can't start (error 2), and its setup steps are managed .NET (WiX DTF) custom actions that fail under Wine's bundled Mono (SFXCA 0x80004001). Either failure aborts and rolls back the install. Not chip- or renderer-specific.",
+      "fix": "Both work on the Wine 11 (CrossOver 26.3) engine, where the same installer completes and the service runs. Until that engine ships, the EA app does not install cleanly on the bundled engine."
+    },
+    {
+      "symptom": "The client window is a blank dark frame, or the app is 'not there' after a successful install.",
+      "cause": "The EA app draws its UI in an embedded Chromium whose GPU process presents into the browser's window, which needs the cross-process swapchain (DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1, set by this recipe on the pin). The installer also links EA Desktop\\EA Desktop to a versioned folder with an NTFS junction that Wine stores as an empty 'EA Desktop?' stub nothing resolves.",
+      "fix": "Highball 0.8.4+ turns the stub into a host symlink after the install and when launching the pin; the recipe sets the swapchain flag. Older Highball: make the link by hand (ln -s '13.783.0.6296/EA Desktop' 'EA Desktop' inside Program Files/Electronic Arts/EA Desktop)."
     }
   ]
 }
