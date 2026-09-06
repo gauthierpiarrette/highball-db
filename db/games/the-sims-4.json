@@ -1,0 +1,28 @@
+{
+  "id": "the-sims-4",
+  "title": "The Sims 4",
+  "steam_appid": 1222670,
+  "status": "verified-local",
+  "renderer": "dxmt",
+  "provenance": "verified by Highball through the EA app (free-to-play edition), 2026-09-06",
+  "notes": "Installed and played through the EA app on the Wine 11 (CrossOver 26.3) engine: 26 GB download, signed-in main menu, Create-A-Sim, and the Willow Creek world map at 130 fps (7.7 ms frame, GPU 4.8 ms) at 1728x1117 on DXMT, D3D11 feature level 11_0. Needs the EA app recipe (cross-process swapchain flag, junction handling) and that engine; the EA app does not install on the bundled Wine 10 engine. First launch shows a black full-screen window for about two minutes before the intro. Starting the executable directly hands off to the EA app, which relaunches the game, so its graphics settings and the Metal HUD come from the EA app's process. The Steam-sold copy and the other renderers were not tried.",
+  "lastVerified": "2026-09-06",
+  "verified": {
+    "chip": "M1 Pro",
+    "macos": "26.6.2",
+    "engine": "x64-crossover26.3-r4",
+    "fps": "130 on the world map (DXMT fork 7421db2, Metal HUD)"
+  },
+  "rendererResults": {
+    "dxmt": {
+      "verdict": "works",
+      "detail": "macOS 26.6.2 (2026-09-06): main menu, Create-A-Sim and the world map render and respond, 130 fps at 1728x1117, clean exit. Loading a lot and live mode not yet exercised."
+    }
+  },
+  "requiresLauncher": {
+    "id": "ea-app",
+    "name": "EA app",
+    "impact": "requires",
+    "note": "Owned, downloaded and launched through the EA app; the game hands itself back to the EA app when started directly. Works on the Wine 11 engine with the EA app recipe; the EA app itself does not install on the bundled Wine 10 engine."
+  }
+}
