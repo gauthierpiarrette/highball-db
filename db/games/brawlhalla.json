@@ -4,14 +4,14 @@
   "steam_appid": 291550,
   "status": "community",
   "renderer": "dxmt",
-  "provenance": "reported by xlCyanz (highball-db#10), Apple M4, unverified by Highball",
-  "notes": "Runs smoothly with excellent performance on an M4 (reported). The renderer (DXMT is the default mode), the engine and whether online matches were played were not stated. Not tried here.",
+  "provenance": "reported by xlCyanz (highball-db#10), Apple M4, nine sessions on DXMT, unverified by Highball",
+  "notes": "Plays online. Reported on an M4 over nine sessions on DXMT (the automatic mode, nothing overridden): account login, matchmaking queues, custom rooms with friends, and local matches against bots all worked, with no anti-cheat block, kick or failed handshake, no crashes, no visual corruption, no audio or input problems. DXVK and D3DMetal were not tried. Not tried here.",
   "lastVerified": null,
   "anticheat": {
     "names": [
       "Easy Anti-Cheat"
     ],
     "macVerdict": "warning",
-    "note": "Easy Anti-Cheat; the report says the game runs, so its userspace path applies here as for other titles that support Linux"
+    "note": "Easy Anti-Cheat in its userspace form: online matchmaking and custom rooms were played through it under Wine on an M4 with no block or kick (highball-db#10)"
   }
 }
