@@ -2,10 +2,11 @@
   "id": "ea-app",
   "kind": "launcher",
   "flaky": {
-    "reason": "Works inconsistently on this Wine build; best-effort."
+    "reason": "Needs the Wine 11 engine: Highball offers it when you install the EA app (0.8.8 and later)."
   },
   "title": "EA app",
   "renderer": "dxmt",
+  "engine": "x64-crossover26.3-r4",
   "steps": [
     {
       "type": "sync",
@@ -47,7 +48,7 @@
     {
       "symptom": "On the bundled Wine 10 engine the installer runs, then exits after ~2 minutes with nothing installed (MSI 1627, or 1603 once the service step is worked around).",
       "cause": "Reproduced 2026-09-06 (M1 Pro, also reported on M4/M5): EA's MSI installs a vital background service that Wine 10's service manager can't start (error 2), and its setup steps are managed .NET (WiX DTF) custom actions that fail under Wine's bundled Mono (SFXCA 0x80004001). Either failure aborts and rolls back the install. Not chip- or renderer-specific.",
-      "fix": "Both work on the Wine 11 (CrossOver 26.3) engine, where the same installer completes and the service runs. Until that engine ships, the EA app does not install cleanly on the bundled engine."
+      "fix": "Both work on the Wine 11 (CrossOver 26.3) engine, where the same installer completes and the service runs. From Highball 0.8.8, installing the EA app on an environment that runs Wine 10 offers that engine: a new environment on it (other programs untouched) or moving the current one."
     },
     {
       "symptom": "The client window is a blank dark frame, or the app is 'not there' after a successful install.",
