@@ -1,0 +1,23 @@
+{
+  "id": "five-nights-at-freddys",
+  "title": "Five Nights at Freddy's",
+  "steam_appid": 319510,
+  "status": "verified-local",
+  "renderer": "dxvk",
+  "provenance": "played here start to finish (highball#67)",
+  "notes": "Plays. The menu and a night of gameplay run at a steady 60 fps on DXVK, GPU about 0.5 ms, on an Apple M1 Pro (macOS 26.6.2, engine x64-sikarugir10.0_6-r2). It is a Clickteam Fusion Direct3D 9 game, so DXVK (the automatic and DXVK modes both route Direct3D 9 through it) is the right mode; Wine's own Direct3D also runs but is the slow path. A save is written under the environment, so Continue works on the next launch.",
+  "lastVerified": {
+    "date": "2026-09-07",
+    "engine": "x64-sikarugir10.0_6-r2",
+    "macos": "26.6.2",
+    "chip": "Apple M1 Pro",
+    "result": "DXVK: menu and a full night at 60 fps, clean. Steam launch (-applaunch 319510), window fills the screen. Not blocked by anti-cheat (single-player)."
+  },
+  "knownIssues": [
+    {
+      "symptom": "The game window can sit off centre or unscaled on a display whose logical resolution is not 1280x800.",
+      "cause": "The game asks Wine for a 1280x800 fullscreen mode; Wine's Mac driver reports success but leaves the Mac display at its current size (measured 2026-09-07: ChangeDisplaySettingsEx returns 0, the display stays put), so a Clickteam game that positions itself for 1280x800 can land off centre. On a display Highball renders at 1728x1117 it scaled to fill.",
+      "fix": "Set the Mac display to a 16:10 scaled resolution, or play windowed. Not a game or renderer fault."
+    }
+  ]
+}
