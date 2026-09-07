@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": "d3dmetal",
   "provenance": "reported by HappySmurfday (highball#63), Epic copy, unverified by Highball",
-  "notes": "DirectX 12 only: on DXMT it stops at \"No suitable D3D12 adapter found\" before the splash, so D3DMetal is the only mode that can run it and this row exists to make Highball ask for Apple's licence at the first launch. With D3DMetal 3.0 the splash renders, then the game crashes after Play Game with Wine's program error dialog: its log shows D3DMetal refusing the two DirectX 12 timestamp-query calls (EndQuery and ResolveQueryData, type 2) and, right after, a read through a null pointer. Apple's D3DMetal does not support timestamp queries and Apple has said so without a timeline. Not fixable at Highball's level today. Reported on an M4 Max on a macOS 27 beta, Epic copy. Not tried here.",
+  "notes": "DirectX 12 only: on DXMT it stops at \"No suitable D3D12 adapter found\" before the splash, so D3DMetal is the only mode that can run it and this row exists to make Highball ask for Apple's licence at the first launch. With D3DMetal 3.0 alone the splash renders, then the game crashes after Play Game with Wine's program error dialog: D3DMetal reports a timestamp frequency of 60 and resolves every DirectX 12 timestamp query to zero, and the game reads through a null pointer right after. From Highball 0.8.7 (engine r2) a shim in front of D3DMetal serves those queries from the CPU clock, which is the exact call the crash followed. The game itself has not been run through it here (78 GB, no disk). Reported on an M4 Max on a macOS 27 beta, Epic copy.",
   "lastVerified": null,
   "requiresLauncher": {
     "id": "epic",
@@ -16,8 +16,8 @@
   "knownIssues": [
     {
       "symptom": "Crashes after \"Play Game\" on the splash screen, with Wine's \"has encountered a serious problem\" dialog, on D3DMetal. The AVX toggle makes no difference.",
-      "cause": "D3DMetal 3.0 does not implement DirectX 12 timestamp queries. The log (highball#63) shows it refusing ID3D12GraphicsCommandList::EndQuery and ResolveQueryData for query type 2 (timestamp), followed by an unhandled page fault reading address 0x907, a null result the game then dereferences. Apple's engineers have acknowledged the missing support on their forums with no timeline (developer.apple.com/forums/thread/757107).",
-      "fix": "In development: a DirectX 12 through Vulkan mode (vkd3d-proton with DXVK's DXGI over MoltenVK) built and patched for Apple GPUs. On 2026-09-06 it creates a DirectX 12 device on both engines, declares feature level 12_0 and Shader Model 6.6, returns real timestamp queries and presents frames, which is everything this game asked for and D3DMetal could not give. The game itself has not been run through it yet (78 GB of disk). Tracked with highball-db#6."
+      "cause": "D3DMetal 3.0 has no real DirectX 12 timestamp queries: its command queue reports a timestamp frequency of 60 and EndQuery and ResolveQueryData for query type 2 (timestamp) resolve to zero (measured with a probe, 2026-09-07). The log (highball#63) shows the two refused calls followed by an unhandled page fault reading address 0x907, a null result the game then dereferences. Apple's engineers have acknowledged the missing support on their forums with no timeline (developer.apple.com/forums/thread/757107).",
+      "fix": "Highball 0.8.7 (engine r2, 2026-09-07): a small d3d12.dll goes in front of D3DMetal's and serves timestamp query heaps itself, with the CPU clock at 10 MHz copied into the game's buffer. Everything else still goes to D3DMetal. Verified with probes on engine r2 (real timestamps, frames still presented), not yet with the game: if you have it, play it and report in highball#63. HB_D3D12_TSSHIM=0 in the program's environment turns the shim off."
     }
   ]
 }
