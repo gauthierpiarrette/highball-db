@@ -1,0 +1,17 @@
+{
+  "id": "brawlhalla",
+  "title": "Brawlhalla",
+  "steam_appid": 291550,
+  "status": "community",
+  "renderer": "dxmt",
+  "provenance": "reported by xlCyanz (highball-db#10), Apple M4, unverified by Highball",
+  "notes": "Runs smoothly with excellent performance on an M4 (reported). The renderer (DXMT is the default mode), the engine and whether online matches were played were not stated. Not tried here.",
+  "lastVerified": null,
+  "anticheat": {
+    "names": [
+      "Easy Anti-Cheat"
+    ],
+    "macVerdict": "warning",
+    "note": "Easy Anti-Cheat; the report says the game runs, so its userspace path applies here as for other titles that support Linux"
+  }
+}

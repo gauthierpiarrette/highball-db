@@ -1,0 +1,24 @@
+{
+  "id": "team-fortress-2",
+  "title": "Team Fortress 2",
+  "steam_appid": 440,
+  "status": "community",
+  "renderer": "dxmt",
+  "provenance": "reported by hayden9002 (highball-db#11), Apple M5 Pro, unverified by Highball",
+  "notes": "Plays. Reported on an M5 Pro with DXMT and msync: mouse movement feels unsynced and snappy, with noticeable stutter while moving the mouse, at a steady 59.95 fps with no spikes. The Vulkan path (MoltenVK) stutters more; D3DMetal stutters less than that, about the same as DXMT. Not tried here.",
+  "lastVerified": null,
+  "anticheat": {
+    "names": [
+      "VAC"
+    ],
+    "macVerdict": "warning",
+    "note": "VAC is userspace and runs under Wine; Counter-Strike 2 plays online under it here"
+  },
+  "knownIssues": [
+    {
+      "symptom": "Mouse movement feels unsynced and snappy, with stutter while moving the mouse (M5 Pro, DXMT, msync).",
+      "cause": "Not investigated yet.",
+      "fix": "None recorded yet. A report saying whether raw input is on in the game's mouse settings, and which renderer, would help."
+    }
+  ]
+}
