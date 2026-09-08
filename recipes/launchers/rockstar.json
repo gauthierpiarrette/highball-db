@@ -58,17 +58,17 @@
       "fix": "none at the app level. Tracked upstream at Sikarugir-App/Sikarugir#258. Highball ships a fixed engine as soon as one exists."
     },
     {
-      "symptom": "Sign in or create account fails with 'Sorry, we are unable to handle your request at this time' and a code (#1.500.7 or #1.000.7) plus a request id.",
-      "cause": "Rockstar's account service refuses the request. Confirmed 2026-09-05/06 across a home ISP address, a VPN and a phone hotspot, in the launcher AND on Rockstar's own website in Safari, for both sign-in and sign-up (fresh request id each time). Not the launcher, Wine or the IP alone; Rockstar-side (rate-limiting/bot-scoring or a service issue).",
-      "fix": "Use an existing Rockstar account (Back, then Sign In). If you need a new one, create it at socialclub.rockstargames.com and retry later if it refuses; the launcher can't do anything about a refusal from Rockstar's service."
+      "symptom": "Sign in or create account fails with 'Sorry, we are unable to handle your request at this time' and a code (#1.000.7 signing in, #1.500.7 creating an account)",
+      "cause": "The Mac's clock. Rockstar's sign-in refuses a request whose clock is off, and the launcher reports it as a service error. Found 2026-09-08 on an M1 Pro whose date was right but whose time zone was not: sign-in and sign-up were refused for four days from the launcher, from Safari on the same Mac, and over a VPN and a phone hotspot, while the same account signed in from a phone on the same connection. Setting the Mac to take its time zone from its location fixed it, and the launcher signed in on the next attempt with no other change (auth status 200).",
+      "fix": "Set the Mac's clock: System Settings > General > Date & Time, with 'Set time zone automatically using your current location' on. Then sign in again. If it still refuses, the account itself is fine on another device, so create or reset it at socialclub.rockstargames.com and retry."
     }
   ],
   "lastVerified": {
-    "date": "2026-09-05",
+    "date": "2026-09-08",
     "engine": "x64-crossover26.3-r4",
     "macos": "26.6.2",
     "chip": "Apple M1 Pro",
-    "result": "dxmt + DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1 on the Wine 11 engine with the cross-process browser fix: installer, service and launcher run; the 'Rockstar Games - Sign In' window renders fully and is interactive. In-launcher 'Create account' is refused by Rockstar's bot protection (#1.500.7); create on the website, then sign in. Bundled Wine 10 engine: the browser dies on a missing user32 export, no sign-in."
+    "result": "dxmt + DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1 on the Wine 11 engine: installer, service and launcher run, the 'Rockstar Games - Sign In' window renders, and signing in succeeds once the Mac's clock is right. Verified end to end 2026-09-08: signed in, the launcher reached Grand Theft Auto V Enhanced and started it. Bundled Wine 10 engine: the browser dies on a missing user32 export, no sign-in."
   },
   "blocked": {
     "reason": "Not on the bundled Wine 10 engine: the launcher's embedded browser (the Sign In window) dies there on a missing user32 export (IsWindowArranged), so it never shows the sign-in. It works on Highball's Wine 11 engine (CrossOver 26.3 base, build 15 or newer) with the cross-process browser fix (Wine bug 60263) and graphics mode DXMT: verified 2026-09-05 on an M1 Pro / macOS 26.6.2, the Sign In renders and is interactive. Available once that engine is installable from Highball."
