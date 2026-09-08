@@ -16,9 +16,9 @@ for f in glob.glob("db/games/*.json"):
         errors.append(f"{f}: verified-local requires lastVerified")
     # The app decodes these with fixed types; a wrong shape drops the row silently (2026-09-08:
     # a lastVerified block instead of a date string hid Five Nights at Freddy's from the app).
-    if "lastVerified" in d and not isinstance(d["lastVerified"], str):
-        errors.append(f"{f}: lastVerified must be a date string (YYYY-MM-DD); details go under \"verified\"")
-    if "verified" in d and not (isinstance(d["verified"], dict) and all(isinstance(v, str) for v in d["verified"].values())):
+    if d.get("lastVerified") is not None and not isinstance(d["lastVerified"], str):
+        errors.append(f"{f}: lastVerified must be a date string (YYYY-MM-DD) or null; details go under \"verified\"")
+    if d.get("verified") is not None and not (isinstance(d["verified"], dict) and all(isinstance(v, str) for v in d["verified"].values())):
         errors.append(f"{f}: verified must be an object of strings (chip, macos, engine, fps)")
     if "nativeVulkan" in d and not isinstance(d["nativeVulkan"], bool):
         errors.append(f"{f}: nativeVulkan must be true or false")
