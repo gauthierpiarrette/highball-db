@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": "dxmt",
   "provenance": "reported by hayden9002 (highball-db#11), Apple M5 Pro, several sessions, unverified by Highball",
-  "notes": "Plays. Reported on an M5 Pro: on the built-in ProMotion display with Highball's frame rate limit at 120 and no limit in the game, DXMT, it plays perfectly with raw input on. On an external 60 Hz monitor the frame rate locks to 59.95 on every renderer and the view stutters while the mouse moves (people and items move smoothly when standing still); Kayf-Life shows the same, Portal 2 on the same monitor does not lock and honours fps_max. Not tried here.",
+  "notes": "Plays. Reported on an M5 Pro over several sessions: on the built-in ProMotion display with Highball's frame rate limit at 120, DXMT, raw input on, it plays perfectly. On an external 60 Hz monitor the game's own \"Wait for vertical sync\" held the frame rate at 59.95; turning it off frees the frame rate, but the view still stutters while the mouse moves (smooth when walking, jitter only from camera movement), on DXMT uncapped and on DXVK alike; DXVK with Highball's limit at 60 and the game's at 120 is mainly playable with noticeable camera jitter. Kayf-Life shows the same; Portal 2 on the same monitor does not. Not tried here.",
   "lastVerified": null,
   "anticheat": {
     "names": [
@@ -16,9 +16,9 @@
   },
   "knownIssues": [
     {
-      "symptom": "On an external 60 Hz monitor the frame rate locks to 59.95 on every renderer and the view stutters while the mouse moves; raw input on makes it feel better. On the built-in ProMotion display with a 120 fps limit it plays perfectly (M5 Pro, DXMT).",
-      "cause": "Not investigated here. Portal 2 on the same monitor exceeds 60 and honours fps_max, so the lock is specific to the game rather than to Wine or the renderer; a vertical sync setting in the game's own video options is the first thing to check.",
-      "fix": "Reported to work: play on the built-in display with Highball's frame rate limit at 120, raw input on in the game's mouse settings. On a 60 Hz monitor, check the game's video options for vertical sync."
+      "symptom": "On an external 60 Hz monitor the view jitters while the mouse moves (walking is smooth, only camera movement stutters), with raw input on, on DXMT and DXVK alike; the built-in ProMotion display with a 120 fps limit plays perfectly (M5 Pro).",
+      "cause": "Not investigated here yet. The game's own vertical sync was one part (it capped the frame rate at 59.95; off, the cap is gone) and is ruled out as the cause of the mouse jitter. Portal 2 on the same monitor is fine, so the remaining part is specific to this game's mouse handling under Wine on a 60 Hz display.",
+      "fix": "Reported to work: the built-in display with Highball's frame rate limit at 120, raw input on. On a 60 Hz monitor: turn off \"Wait for vertical sync\" in the game's advanced video options (frees the frame rate), then DXVK with Highball's limit at 60 and the game's at 120 is mainly playable. The remaining camera jitter is open."
     }
   ]
 }
