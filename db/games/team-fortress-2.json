@@ -6,7 +6,7 @@
   "renderer": "dxmt",
   "provenance": "reported by hayden9002 (highball-db#11), Apple M5 Pro, several sessions, unverified by Highball",
   "notes": "Plays. Reported on an M5 Pro over several sessions: on the built-in ProMotion display with Highball's frame rate limit at 120, DXMT, raw input on, it plays perfectly. On an external 60 Hz monitor the game's own \"Wait for vertical sync\" held the frame rate at 59.95; turning it off frees the frame rate, but the view still stutters while the mouse moves (smooth when walking, jitter only from camera movement), on DXMT uncapped and on DXVK alike; DXVK with Highball's limit at 60 and the game's at 120 is mainly playable with noticeable camera jitter. Kayf-Life shows the same; Portal 2 on the same monitor does not. Not tried here.",
-  "lastVerified": null,
+  "lastVerified": "2026-09-08",
   "anticheat": {
     "names": [
       "VAC"
@@ -17,8 +17,14 @@
   "knownIssues": [
     {
       "symptom": "On an external 60 Hz monitor the view jitters while the mouse moves (walking is smooth, only camera movement stutters), with raw input on, on DXMT and DXVK alike; the built-in ProMotion display with a 120 fps limit plays perfectly (M5 Pro).",
-      "cause": "Not investigated here yet. The game's own vertical sync was one part (it capped the frame rate at 59.95; off, the cap is gone) and is ruled out as the cause of the mouse jitter. Portal 2 on the same monitor is fine, so the remaining part is specific to this game's mouse handling under Wine on a 60 Hz display.",
-      "fix": "Reported to work: the built-in display with Highball's frame rate limit at 120, raw input on. On a 60 Hz monitor: turn off \"Wait for vertical sync\" in the game's advanced video options (frees the frame rate), then DXVK with Highball's limit at 60 and the game's at 120 is mainly playable. The remaining camera jitter is open."
+      "cause": "Reproduced on an Apple M1 Pro (2026-09-08, engine x64-sikarugir10.0_6-r2, DXMT). On the built-in display at 60 Hz the Metal HUD's frame interval sits steady near 9 ms while standing and spikes to about 21 ms with a jagged graph the moment the view turns; at 120 Hz on the same machine, same map, same mouse sweep, it stays flat near 6.7 ms with no spikes. So it is tied to the 60 Hz refresh rate and the frame presentation path at that rate, not the renderer (seen on DXMT) or the mouse input alone. The game's own vertical sync is a separate thing (it only capped the rate). Portal 2 on the same 60 Hz display is smooth, so it is specific to this game's rendering under Wine at 60 Hz.",
+      "fix": "Reported and reproduced to be smooth at 120 Hz: play on a 120 Hz or ProMotion display, raw input on. On a 60 Hz display the camera jitter is open; capping the rate did not remove it."
     }
-  ]
+  ],
+  "verified": {
+    "chip": "M1 Pro",
+    "macos": "26.6.2",
+    "engine": "x64-sikarugir10.0_6-r2",
+    "fps": "about 110-150 in the Dustbowl setup phase on DXMT; smooth at 120 Hz, camera-turn frame-interval spikes to ~21 ms at 60 Hz"
+  }
 }
