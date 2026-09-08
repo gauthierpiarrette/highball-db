@@ -14,6 +14,16 @@ for f in glob.glob("db/games/*.json"):
     if d.get("renderer") not in RENDERERS: errors.append(f"{f}: bad renderer {d.get('renderer')}")
     if d.get("status") == "verified-local" and not d.get("lastVerified"):
         errors.append(f"{f}: verified-local requires lastVerified")
+    # The app decodes these with fixed types; a wrong shape drops the row silently (2026-09-08:
+    # a lastVerified block instead of a date string hid Five Nights at Freddy's from the app).
+    if "lastVerified" in d and not isinstance(d["lastVerified"], str):
+        errors.append(f"{f}: lastVerified must be a date string (YYYY-MM-DD); details go under \"verified\"")
+    if "verified" in d and not (isinstance(d["verified"], dict) and all(isinstance(v, str) for v in d["verified"].values())):
+        errors.append(f"{f}: verified must be an object of strings (chip, macos, engine, fps)")
+    if "nativeVulkan" in d and not isinstance(d["nativeVulkan"], bool):
+        errors.append(f"{f}: nativeVulkan must be true or false")
+    if "epic_app_name" in d and not isinstance(d["epic_app_name"], str):
+        errors.append(f"{f}: epic_app_name must be a string")
     if d.get("status") == "blocked-anticheat" and d.get("renderer") is not None:
         errors.append(f"{f}: blocked entries must not recommend a renderer")
 
