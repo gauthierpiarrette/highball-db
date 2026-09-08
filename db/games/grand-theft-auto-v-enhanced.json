@@ -3,15 +3,15 @@
   "title": "Grand Theft Auto V Enhanced",
   "steam_appid": 3240220,
   "status": "community",
-  "renderer": null,
-  "provenance": "launch path tested locally on Apple Silicon (M1 Pro, macOS 14.6, engine x64-sikarugir10.0_6-r0); the game itself was never reached",
-  "notes": "Does not currently start. PlayGTAV.exe hands off to the Rockstar Games Launcher for sign-in, the launcher's embedded-browser UI never paints on this Wine build, and PlayGTAV then reports \"Unable to launch game.\" The Rockstar service handshake and heap issues are already worked around by Highball; what remains is a loader-level fix that currently exists only in CrossOver's Wine. This is the 2025 re-release and a different Steam product from GTA V (Legacy). Online is BattlEye protected regardless.",
+  "renderer": "vkd3d",
+  "provenance": "tested locally on Apple Silicon (M1 Pro, macOS 26.6.2, engine x64-crossover26.3-r4) on 2026-09-08: it launches and loads under vkd3d and the GPU device is then lost, twice, at default and at minimum settings",
+  "notes": "Starts but does not stay up. Needs Highball's Wine 11 engine (CrossOver 26.3 base) and two graphics modes in one process tree: the Rockstar Games Launcher signs in under DXMT, the game is DirectX 12 only and needs vkd3d. Under D3DMetal the game quits at once with ERR_GFX_D3D_NOD3D12, because it opts into Microsoft's DirectX 12 Agility SDK (GTA5_Enhanced.exe exports D3D12SDKPath and D3D12SDKVersion and ships D3D12-REDIST/D3D12Core.dll) and D3DMetal exports no D3D12GetInterface, even though it offers feature level 12_1 and shader model 6.6. Under vkd3d it reaches the story-mode loading screen and holds 53-62 fps there, then loses the GPU device and exits (code 5). Turn BattlEye off in the launcher first (Settings > My installed games), its driver cannot load under Wine and the default launch goes through GTA5_Enhanced_BE.exe. GTA Online is out of reach regardless. If sign-in is refused with #1.000.7, set the Mac's clock (see the rockstar recipe).",
   "lastVerified": null,
   "requiresLauncher": {
     "id": "rockstar",
     "name": "Rockstar Games Launcher",
-    "impact": "blocks",
-    "note": "Required for sign-in. Its embedded-browser UI does not render on this Wine build.",
+    "impact": "setup",
+    "note": "Required for sign-in. Works on the Wine 11 engine under DXMT with the cross-process browser fix; sign-in verified 2026-09-08 once the Mac's clock was right. The game must then run under vkd3d while the launcher stays on DXMT.",
     "tracking": "https://github.com/Sikarugir-App/Sikarugir/issues/258"
   },
   "anticheat": {
@@ -20,5 +20,12 @@
     ],
     "macVerdict": "warning",
     "note": "GTA Online only; BattlEye's Linux/Proton support does not extend to macOS."
-  }
+  },
+  "knownIssues": [
+    {
+      "symptom": "Loads to a black screen with only the progress bar, then the game exits on its own near the end of the load",
+      "cause": "MoltenVK cannot translate some of the game's shaders to Metal, so vkd3d gets no pipeline for them: 27 compute and 42 graphics pipelines refused on 2026-09-08 ('reinterpret_cast casts away qualifiers', 'indirection requires pointer operand', 'automatic variable qualified with an address space'). The loading screen art is among them, which is why the background stays black while the bar still moves. The run then ends in VK_ERROR_DEVICE_LOST: Metal fails a command buffer with 'Invalid Resource (code 9)' and vkd3d reports exit 5. Reproduced twice, at the game's default settings and with every setting at minimum (same failure, same stage), so it is not a quality setting or a memory ceiling.",
+      "fix": "none at the app level; it needs MoltenVK or vkd3d to translate those shaders. Highball ships a fixed engine as soon as one exists."
+    }
+  ]
 }
