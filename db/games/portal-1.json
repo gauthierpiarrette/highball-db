@@ -11,13 +11,6 @@
     "chip": "M1 Pro",
     "macos": "26.6.2",
     "engine": "x64-sikarugir10.0_6-r1",
-    "fps": "96 under DXVK with HDR off"
-  },
-  "knownIssues": [
-    {
-      "symptom": "Much slower than recorded on some setups: about 17 fps in the first chamber.",
-      "cause": "not established; the same shape as Portal 2's entry, measured 2026-09-10 on engine r2 with the GPU idle at 4 ms inside a 57 ms frame. Measured identically on r1, so the engine is not the variable.",
-      "fix": "none known. Try DXVK async off, which is what the Portal 2 recipe's verified run used."
-    }
-  ]
+    "fps": "menu renders, DXVK, HDR-off recipe"
+  }
 }
