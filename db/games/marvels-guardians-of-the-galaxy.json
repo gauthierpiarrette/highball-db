@@ -3,22 +3,39 @@
   "title": "Marvel's Guardians of the Galaxy",
   "steam_appid": 1088850,
   "epic_app_name": "63a665088eb1480298f1e57943b225d8",
-  "status": "community",
+  "status": "verified-local",
   "renderer": "d3dmetal",
-  "provenance": "reported by HappySmurfday (highball#63) on an Epic copy; reproduced here on the Steam copy, M1 Pro, macOS 26.6.2, engine x64-crossover26.3-r4, 2026-09-09",
-  "notes": "DirectX 12 only: on DXMT it stops at \"No suitable D3D12 adapter found\" before the splash, confirmed here 2026-09-09, so D3DMetal is the only mode that can reach the game and this row exists to make Highball ask for Apple's licence at the first launch. Under D3DMetal the splash and its menu render correctly, then the game crashes on Play Game. The crash is NOT the DirectX 12 timestamp problem this entry used to claim: reproduced here with Highball's timestamp shim loaded and active (both the shim's d3d12 and Apple's library behind it appear in the crash dump's module list) and the crash is byte for byte identical. It is an unhandled page fault reading 0x907, and disassembling the engine's kernelbase places the faulting instruction 0x44 bytes inside SwitchToFiber, reading offset 8 of the fiber pointer it was given. The register dump shows that pointer as 0x8ff, a small integer rather than an address, so the game hands Wine an invalid fiber and Wine dereferences it. The game imports CreateFiber, DeleteFiber, FlsAlloc and IsThreadAFiber for its job system. Where the bad value comes from is not established.",
-  "lastVerified": null,
+  "provenance": "reported by HappySmurfday (highball#63) on an Epic copy; played here on the Steam copy, M1 Pro, macOS 26.6.2, engine x64-crossover26.3-r5, 2026-09-09",
+  "notes": "Playable on the r5 engine, which carries the fix. DirectX 12 only: on DXMT it stops at \"No suitable D3D12 adapter found\" before the splash, so D3DMetal is the only mode that reaches the game, and Highball asks for Apple's licence at the first launch. Reached gameplay twice from a clean start on 2026-09-09: 27.5 fps at 1280x720 in the opening scene, 17-32 fps in play, and about 10 fps for the first minute while shaders compile. The Metal HUD reports GPU time of 12.9 ms against a 36.4 ms frame interval, so it is CPU-bound rather than GPU-bound, which is what Rosetta plus 3080 draws and 3049 ExecuteIndirect calls per frame costs. A dialog saying \"Your graphics card driver is older than supported\" appears before the game starts; answer Yes. CodeWeavers' own testers report the same prompt, so it is expected here and not a sign of a broken install.\n\nOn engines before r5 the game renders its splash and menu and then crashes on Play Game. That crash was an unhandled page fault reading 0x907 inside SwitchToFiber, which was handed 0x8ff instead of a fiber pointer. The cause was in Wine, not the game: on macOS the %gs base is the host thread block rather than the TEB, and Wine mirrors only some TEB fields into it. Tib.FiberData was not mirrored, so GetCurrentFiber(), a compiler intrinsic that reads that slot directly and cannot be intercepted, returned the host value 0x8ff, which the game's job system passed straight back to SwitchToFiber. Highball's engine patch 0008 keeps the mirror in step at the three places kernelbase changes the field. An earlier version of this entry blamed D3DMetal's missing DirectX 12 timestamp queries and named Highball's timestamp shim as the fix; that was wrong and is retracted. The shim was loaded and active during a reproduction of the crash and changed nothing.",
+  "lastVerified": "2026-09-09",
   "requiresLauncher": {
-    "id": "epic",
-    "name": "Epic Games Launcher",
+    "id": "steam",
+    "name": "Steam",
     "impact": "requires",
-    "note": "Reported with the Epic copy; the Steam copy has not been tried."
+    "note": "Played here through Steam. Also sold on Epic, where issue #63 was reported; the Epic copy has not been retested since the fix."
   },
   "knownIssues": [
     {
-      "symptom": "Crashes on \"Play Game\" from the splash screen, with Wine's \"has encountered a serious problem\" dialog, on D3DMetal. The AVX toggle makes no difference.",
-      "cause": "an invalid fiber pointer, not a graphics fault. Reproduced 2026-09-09 on an M1 Pro, macOS 26.6.2, engine x64-crossover26.3-r4, Steam copy: unhandled page fault on read of 0x907, faulting instruction 0x44 bytes into SwitchToFiber (confirmed by disassembling the engine's kernelbase, not by guessing the nearest symbol), reading offset 8 of the fiber pointer in rcx, which the register dump shows as 0x8ff. The backtrace is three frames of game code straight into kernelbase with no graphics library between. The previous entry blamed D3DMetal's missing DirectX 12 timestamp queries and named Highball's shim as the fix; that is retracted. The shim was loaded and active during this reproduction and changed nothing, because timestamps were never the cause.",
-      "fix": "none known. Highball's timestamp shim does NOT fix this game, contrary to what this entry said between 0.8.7 and 2026-09-09. The shim remains correct for what it was built for, D3DMetal reporting a timestamp frequency of 60 and resolving timestamp queries to zero, which is still true and still measurable with a probe. It is simply not what stops Guardians."
+      "symptom": "Crashes on \"Play Game\" from the splash screen, with Wine's \"has encountered a serious problem\" dialog, on D3DMetal.",
+      "cause": "Wine did not mirror TEB->Tib.FiberData into the macOS %gs block, so GetCurrentFiber() returned a host value (0x8ff, which is the thread's pthread QoS class) and SwitchToFiber dereferenced it, faulting at 0x907. Measured on engine x64-crossover26.3-r4 and reproduced without the game by a 20-line test program that crashes at the same address, with the same register, on the same instruction.",
+      "fix": "Use engine x64-crossover26.3-r5 or later, which carries patch 0008. On r4 and earlier there is no workaround.",
+      "fixedIn": "x64-crossover26.3-r5"
+    },
+    {
+      "symptom": "About 10 fps for roughly the first minute of play, improving afterwards.",
+      "cause": "shader compilation on first run.",
+      "fix": "none needed, it settles on its own. Later runs start faster."
+    },
+    {
+      "symptom": "A dialog before launch says the graphics card driver is older than supported.",
+      "cause": "the game's driver version check does not recognise D3DMetal. CodeWeavers' testers report the same prompt.",
+      "fix": "answer Yes. The game runs normally."
     }
-  ]
+  ],
+  "verified": {
+    "chip": "M1 Pro",
+    "macos": "26.6.2",
+    "engine": "x64-crossover26.3-r5",
+    "fps": "27.5 in the opening scene at 1280x720, 17-32 in play, about 10 for the first minute while shaders compile (D3DMetal / GPTK 3.0, Metal HUD)"
+  }
 }
