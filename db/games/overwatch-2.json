@@ -5,7 +5,7 @@
   "status": "reported-upstream",
   "renderer": "dxmt",
   "provenance": "DXMT changelog v0.80 (github.com/3Shain/dxmt/releases)",
-  "notes": "missing hero ability effects fixed; Battle.net required",
+  "notes": "DO NOT RUN THIS YET. Tested here on 2026-09-09 and it makes the Mac unresponsive: the cursor spins and the machine stops answering until the game is killed from outside. The load average went above 240 and dropped to 2 the moment the process was ended, three times over.\n\nWhat happens, measured on an M1 Pro, macOS 26.6.2, engine x64-crossover26.3-r5, DXMT, Steam copy: the game starts, reaches Blizzard's servers over HTTPS, and creates a Direct3D 11 device, so networking and the renderer are both fine. It then never opens a window. Memory stays flat around 190-240 MB, where a loaded Overwatch is gigabytes, it writes no game logs of its own, and the Wine log fills with a repeating 'assertion failure exception' from a single thread. Under Rosetta each of those exceptions is expensive enough that the loop buries the machine.\n\nThe earlier DXMT changelog note below still stands as an upstream claim, and CrossOver's testers report this game working from 26.1 onward. We cannot reproduce that here and have not established why. One untested possibility: the Steam copy needs a linked Battle.net account before it will start, and the account on this machine may not be linked, in which case the assertion loop may be the game's reaction to that rather than a Wine problem.\n\nEarlier note kept for provenance: missing hero ability effects fixed; Battle.net required.",
   "lastVerified": null,
   "anticheat": {
     "names": [
@@ -13,5 +13,12 @@
     ],
     "macVerdict": "warning",
     "note": "anti-cheat present; Linux/Proton support does not extend to macOS — userspace path works for some titles"
-  }
+  },
+  "knownIssues": [
+    {
+      "symptom": "The Mac becomes unresponsive shortly after launch: spinning cursor, no game window, nothing else usable.",
+      "cause": "a repeating assertion failure inside the game, dispatched as a Windows exception by Wine on every iteration. Measured 2026-09-09 on engine x64-crossover26.3-r5 with DXMT: load average above 240, recovering to 2 immediately on killing the process. The renderer is not implicated: the game creates a Direct3D 11 device first and MoltenVK starts normally.",
+      "fix": "none known. If it happens, kill the environment from Highball or the game from Activity Monitor; the machine recovers at once. Recommend not launching it on this engine until the cause is understood."
+    }
+  ]
 }
