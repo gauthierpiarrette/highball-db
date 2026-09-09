@@ -11,6 +11,13 @@
     "chip": "M1 Pro",
     "macos": "26.6.2",
     "engine": "x64-sikarugir10.0_6-r1",
-    "fps": "The recorded 134 does not describe play and should not be quoted for it. Measured 2026-09-10 on an M1 Pro, macOS 26.6.2, quiet machine: 3.5 fps in sp_a1_intro1 and 32 fps at the main menu on r2, 1728x1117, DXVK, GPU 1.8-2.9 ms of a 31-283 ms frame. Portal on the same engines measured the same on r1 and r2, so the engine is not the variable here either. In every case the GPU is idle and the process holds 124-188% CPU, so Source games are CPU-bound here. Five Nights at Freddy's, which is not Source, hit its recorded 60 fps in the same session on the same engine and renderer, so this is not the machine, DXVK or MoltenVK. Where the original figure came from is not established; it was most likely a menu or idle reading, as Portal 2's 134 explicitly was. Also tested with SteamAppId=620 set, which is what fixed Assetto Corsa's instant exit: it made no difference to Portal 2 (5.1 fps). And the picture is visibly washed out and overexposed compared with Portal, which renders correctly on the same engine and renderer in the same session, so there is a rendering fault here as well as a speed one."
-  }
+    "fps": "134 in the main menu; the portal-2 recipe records 138-147 fps in sp_a1_intro1 at 1728x1117 on engine r0 with DXVK async off"
+  },
+  "knownIssues": [
+    {
+      "symptom": "Much slower than recorded on some setups: 3-5 fps in sp_a1_intro1 and about 32 at the menu, with the picture visibly overexposed.",
+      "cause": "not established. Seen 2026-09-09/10 on an M1 Pro, macOS 26.6.2, engine r2. Ruled out: engine r1 versus r2 (Portal measured identically on both), background load, HDR (mat_hdr_level 0 confirmed in both config files, and forcing it plus mat_dxlevel 90 on the command line changed nothing), shader-cache warming, forced window and resolution flags, and Steam app identity. In every case the GPU is idle at 2-4 ms inside a 31-283 ms frame while the process holds 188% CPU. Portal shows the same shape; Five Nights at Freddy's, which is not Source, hits its recorded 60 fps on the same engine in the same session.",
+      "fix": "none known. The recipe's verified run used DXVK async OFF, which is not the current default, so try turning it off in the environment's settings. The maintainer reports the game playing properly at much higher rates, so this is a difference between setups rather than a verdict on the game."
+    }
+  ]
 }
