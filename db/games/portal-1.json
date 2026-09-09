@@ -11,6 +11,6 @@
     "chip": "M1 Pro",
     "macos": "26.6.2",
     "engine": "x64-sikarugir10.0_6-r1",
-    "fps": "DISPUTED, do not quote. 96 was recorded on engine x64-sikarugir10.0_6-r1. Re-measured 2026-09-10 on r2, the shipping default, DXVK, 1728x1117, in the first chamber: 17.4 fps, with GPU time of 4.0 ms inside a 57 ms frame and the process at 124% CPU, so the GPU is idle and the cost is on the CPU. Portal 2 shows the same shape on the same engine while Five Nights at Freddy's, which is not a Source game, hits its recorded 60 fps in the same session. That points at something specific to Source rather than the machine, DXVK or MoltenVK. Confirming it needs engine r1 side by side, which is not installed here."
+    "fps": "The recorded 96 does not describe play and should not be quoted for it. Measured 2026-09-10 on an M1 Pro, macOS 26.6.2, quiet machine: 17.4 fps on r2 and 17.7 fps on r1 in the first chamber, 1728x1117, DXVK, GPU 4.0 ms of a 57 ms frame. The two engines are within measurement noise of each other, so the engine is NOT the variable and there is no regression between r1 and r2. In every case the GPU is idle and the process holds 124-188% CPU, so Source games are CPU-bound here. Five Nights at Freddy's, which is not Source, hit its recorded 60 fps in the same session on the same engine and renderer, so this is not the machine, DXVK or MoltenVK. Where the original figure came from is not established; it was most likely a menu or idle reading, as Portal 2's 96 explicitly was."
   }
 }
