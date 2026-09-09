@@ -2,11 +2,24 @@
   "id": "marvels-guardians-of-the-galaxy",
   "kind": "game",
   "title": "Marvel's Guardians of the Galaxy",
-  "requires": ["steam"],
+  "requires": [
+    "steam"
+  ],
   "renderer": "d3dmetal",
+  "engine": "x64-crossover26.3-r5",
   "steps": [
-    { "type": "dlloverride", "value": "amd_ags_x64=" },
-    { "type": "note", "text": "DirectX 12 only, so it needs Apple's DirectX 12 support. DXMT stops at \"No suitable D3D12 adapter found\" before the splash. Needs engine x64-crossover26.3-r5 or later: earlier engines crash on Play Game." }
+    {
+      "type": "note",
+      "text": "Needs engine x64-crossover26.3-r5 or later: earlier engines render the menu and then crash on Play Game, because Wine did not tell the game which task it was running on."
+    },
+    {
+      "type": "dlloverride",
+      "value": "amd_ags_x64="
+    },
+    {
+      "type": "note",
+      "text": "DirectX 12 only, so it needs Apple's DirectX 12 support. DXMT stops at \"No suitable D3D12 adapter found\" before the splash. Needs engine x64-crossover26.3-r5 or later: earlier engines crash on Play Game."
+    }
   ],
   "knownIssues": [
     {
