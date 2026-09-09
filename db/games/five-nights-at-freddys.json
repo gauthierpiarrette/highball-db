@@ -11,13 +11,13 @@
     "chip": "M1 Pro",
     "macos": "26.6.2",
     "engine": "x64-sikarugir10.0_6-r2",
-    "fps": "60 at the menu and through a night on DXVK (Metal HUD), GPU about 0.5 ms"
+    "fps": "60 at the menu and through a night on DXVK (Metal HUD). Re-read 2026-09-09 on engine x64-sikarugir10.0_6-r2: 59.9 at the menu, GPU 0.5 ms, at both 1728x1117 and 1280x800. A first reading of 51.5 was a startup transient and does not stand."
   },
   "knownIssues": [
     {
-      "symptom": "The game window can sit off centre or unscaled on a display whose logical resolution is not 1280x800.",
+      "symptom": "On a display whose logical resolution is not 16:10, the picture sits down and to the right with black bars along the top and left, and is clipped at the right and bottom edges. The menu is still readable and the game still plays.",
       "cause": "The game asks Wine for a 1280x800 fullscreen mode; Wine's Mac driver reports success but leaves the Mac display at its current size (measured 2026-09-07: ChangeDisplaySettingsEx returns 0, the display stays put), so a Clickteam game that positions itself for 1280x800 can land off centre. On a display Highball renders at 1728x1117 it scaled to fill.",
-      "fix": "Set the Mac display to a 16:10 scaled resolution, or play windowed. Not a game or renderer fault."
+      "fix": "Set the Mac display to a 16:10 scaled resolution, or play windowed. VERIFIED 2026-09-09: at 1728x1117 the picture is offset and clipped; at 1280x800 it fills the window edge to edge with the version string and copyright line visible in both bottom corners, at 59.9 fps. Not a game or renderer fault, and nothing is lost by leaving it: it is presentation only."
     }
   ]
 }
