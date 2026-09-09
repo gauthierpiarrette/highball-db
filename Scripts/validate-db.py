@@ -27,11 +27,30 @@ for f in glob.glob("db/games/*.json"):
     if d.get("status") == "blocked-anticheat" and d.get("renderer") is not None:
         errors.append(f"{f}: blocked entries must not recommend a renderer")
 
+recipe_engines = {}
 for f in glob.glob("recipes/*/*.json"):
     if f.endswith("LICENSE"): continue
     d = json.load(open(f))
     if d.get("kind") not in ("launcher", "game", "tweak"): errors.append(f"{f}: bad kind")
     if not isinstance(d.get("steps"), list) or not d["steps"]: errors.append(f"{f}: steps missing")
+    recipe_engines[d.get("id")] = d.get("engine")
+
+# A fix that lives in an engine only reaches people if a recipe names that engine: Highball offers
+# a required engine at Play time, and otherwise the owner has to find "Update engine" in Settings.
+# The reporter on highball#63 could not find it, so a published fix never reached them
+# (2026-09-09). If a row says an issue is fixedIn some engine, the recipe must ask for that engine.
+for f in glob.glob("db/games/*.json"):
+    d = json.load(open(f))
+    for issue in d.get("knownIssues") or []:
+        want = issue.get("fixedIn")
+        if not want: continue
+        have = recipe_engines.get(d["id"], "MISSING")
+        if have == "MISSING":
+            errors.append(f'{f}: an issue is fixedIn "{want}" but there is no recipe for this game, '
+                          f'so Play cannot offer that engine and the fix will not reach anyone')
+        elif have != want:
+            errors.append(f'{f}: an issue is fixedIn "{want}" but recipes/games/{d["id"]}.json asks for '
+                          f'"{have}", so Play offers the wrong engine')
 
 if errors:
     print("\n".join(errors)); sys.exit(1)

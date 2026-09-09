@@ -1,0 +1,27 @@
+{
+  "id": "grand-theft-auto-v",
+  "kind": "game",
+  "title": "Grand Theft Auto V (Legacy)",
+  "requires": ["steam", "rockstar"],
+  "renderer": "dxmt",
+  "engine": "x64-crossover26.3-r5",
+  "steps": [
+    { "type": "note", "text": "Needs engine x64-crossover26.3-r5 or later. Earlier engines cannot render the Rockstar launcher's sign-in window, which is a browser view drawn by a separate process, so the game can never start." },
+    { "type": "note", "text": "Story mode only. GTA Online uses BattlEye, a kernel-level anti-cheat, which cannot run under Wine on any tool." },
+    { "type": "note", "text": "If sign-in fails with 'we are unable to handle your request at this time', check the Mac's clock: System Settings, General, Date & Time, with the time zone set automatically. A wrong clock is refused by Rockstar and looks like an account or network problem." }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "The Rockstar launcher shows a blank sign-in window and the game never starts.",
+      "cause": "the sign-in is a browser surface drawn by a separate GPU process into the launcher's window, which Wine returned nothing for until engine patch 0007.",
+      "fix": "use engine x64-crossover26.3-r5 or later with the DXMT renderer. The rockstar recipe sets DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1, which is also required."
+    }
+  ],
+  "lastVerified": {
+    "date": "2026-09-09",
+    "engine": "x64-crossover26.3-r5",
+    "macos": "26.6.2",
+    "chip": "Apple M1 Pro",
+    "result": "dxmt: story mode reached and played, 60-120 fps at 1280x800 windowed with VSync off. The Rockstar launcher renders and signs in. Online untested and impossible (BattlEye)."
+  }
+}
