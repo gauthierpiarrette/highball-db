@@ -1,0 +1,30 @@
+{
+  "id": "marvels-guardians-of-the-galaxy",
+  "kind": "game",
+  "title": "Marvel's Guardians of the Galaxy",
+  "requires": ["steam"],
+  "renderer": "d3dmetal",
+  "steps": [
+    { "type": "dlloverride", "value": "amd_ags_x64=" },
+    { "type": "note", "text": "DirectX 12 only, so it needs Apple's DirectX 12 support. DXMT stops at \"No suitable D3D12 adapter found\" before the splash. Needs engine x64-crossover26.3-r5 or later: earlier engines crash on Play Game." }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "A dialog before launch says the graphics card driver is older than supported.",
+      "cause": "the game calls agsCheckDriverVersion from AMD's AGS library. D3DMetal presents the Apple GPU as an AMD card, so the game takes AMD's vendor path and looks for a Radeon driver that is not there.",
+      "fix": "the recipe disables amd_ags_x64.dll, which is the library's own absence rather than a trick: there is no AMD GPU here, so its extensions cannot work anyway. Verified 2026-09-09: with the override the prompt does not appear and the game runs. Without it, answering Yes also works."
+    },
+    {
+      "symptom": "About 10 fps for the first minute, then 17-32 fps.",
+      "cause": "shader compilation first, then a CPU limit. The Metal HUD shows GPU time of 12.9 ms inside a 36.4 ms frame, with 3080 draws and 3049 ExecuteIndirect calls per frame.",
+      "fix": "settings that cut draw calls (shadows, level of detail, object density) are what gain frames. Resolution is nearly free here, so lowering it does not help and raising it costs little."
+    }
+  ],
+  "lastVerified": {
+    "date": "2026-09-09",
+    "engine": "x64-crossover26.3-r5",
+    "macos": "26.6.2",
+    "chip": "Apple M1 Pro",
+    "result": "d3dmetal: reaches gameplay, 27.5 fps at 1280x720 in the opening scene, 17-32 in play. dxmt: no D3D12 adapter, cannot run a DirectX 12 only game. dxvk: same. Engines before r5 crash on Play Game."
+  }
+}
