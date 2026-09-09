@@ -22,6 +22,6 @@
     "chip": "M1 Pro",
     "macos": "26.6.2",
     "engine": "x64-sikarugir10.0_6-r1",
-    "fps": "106 in the office scene (DXMT fork 7421db2; DXVK is the shipped default)"
+    "fps": "106 in the office scene on DXMT (fork 7421db2, M1 Pro, macOS 26.6.2, engine r1). On DXVK, which is what this row recommends and what Highball picks automatically, the same scene ran about 40 fps on the macOS 14 machine (2026-08-25), and 30.8 rising to 43.9 with msync. Quote the renderer with the number: they are not interchangeable."
   }
 }
