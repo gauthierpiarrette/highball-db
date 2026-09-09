@@ -2,11 +2,11 @@
   "id": "grand-theft-auto-v",
   "title": "Grand Theft Auto V (Legacy)",
   "steam_appid": 271590,
-  "status": "community",
-  "renderer": "d3dmetal",
-  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
-  "notes": "Community reports say story mode runs and GTA Online is blocked by BattlEye. Highball has not been able to confirm either, because Rockstar's launcher is required to sign in and its UI does not render on this engine. Treat the renderer below as the community's claim, not a route that currently works.",
-  "lastVerified": null,
+  "status": "verified-local",
+  "renderer": "dxmt",
+  "provenance": "played here on the Steam copy, M1 Pro, macOS 26.6.2, engine x64-crossover26.3-r5, 2026-09-09",
+  "notes": "Story mode plays. Needs engine x64-crossover26.3-r5 or later and the DXMT renderer. Launch it from Steam: Steam starts the Rockstar Games Launcher, which signs in and hands off to the game with -nobattleye, the story-mode path.\n\nBoth of the things that used to stop this game are fixed. The launcher's sign-in window is a Chromium surface whose GPU process draws into another process's window, which rendered nothing until engine patch 0007 (cross-process child swapchains) plus DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1, both of which the rockstar recipe applies. And the sign-in itself was refused for reasons that looked like a network or account problem but were the Mac's clock: with the time zone set automatically, it signs in.\n\nGTA Online cannot work. BattlEye ships with the game (a BattlEye directory and GTA5_BE.exe) and is kernel-level anti-cheat, so online is out under Wine on any tool. Story mode is the whole claim here.\n\nCommunity reports of about 120 fps on an M1 Pro were measured on CrossOver's own tree, often with frame generation on. Our range overlaps at the top but the low end is 60, and the open world has not been measured at all, so treat the community figure as an upper bound rather than an expectation.",
+  "lastVerified": "2026-09-09",
   "anticheat": {
     "names": [
       "BattlEye"
@@ -20,5 +20,29 @@
     "impact": "blocks",
     "note": "Rockstar's launcher installer deadlocks waiting on its Windows service, so the install never finishes. Even with the launcher files forced into place, Launcher.exe fails to initialize because its embedded-browser UI does not render on this Wine build, so the game cannot be reached even though the game itself is reported to run. Tracked upstream at Sikarugir issue #258.",
     "tracking": "https://github.com/Sikarugir-App/Sikarugir/issues/258"
-  }
+  },
+  "verified": {
+    "chip": "M1 Pro",
+    "macos": "26.6.2",
+    "engine": "x64-crossover26.3-r5",
+    "fps": "60-120 in the prologue mission at 1280x800 windowed on DXMT (D3D11 feature level 11_0, fork 7421db2, VSync off), read from the Metal HUD by the maintainer during play; a capture taken on the loading screen at the same settings showed 59.8. An earlier reading of 48 was at 800x600 while shaders were still compiling, so it is not comparable. Not yet measured in open-world Los Santos, which is gated behind the prologue and will be the harder scene."
+  },
+  "knownIssues": [
+    {
+      "symptom": "The Rockstar launcher shows a blank or black sign-in window and the game never starts.",
+      "cause": "the sign-in is a Chromium surface drawn by a separate GPU process into the browser process's window. Wine returned nothing for it until engine patch 0007.",
+      "fix": "use engine x64-crossover26.3-r5 or later with the DXMT renderer, and apply the rockstar recipe, which sets DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1.",
+      "fixedIn": "x64-crossover26.3-r5"
+    },
+    {
+      "symptom": "Sign in fails with 'Sorry, we are unable to handle your request at this time' (error 1.000.7).",
+      "cause": "the Mac's clock being wrong, not the network or the account. Rockstar rejects the request.",
+      "fix": "System Settings, General, Date & Time, with the time zone set automatically using your location."
+    },
+    {
+      "symptom": "GTA Online will not connect.",
+      "cause": "BattlEye, a kernel-level anti-cheat, which cannot run under Wine.",
+      "fix": "none. Story mode only."
+    }
+  ]
 }
