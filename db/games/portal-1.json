@@ -11,6 +11,6 @@
     "chip": "M1 Pro",
     "macos": "26.6.2",
     "engine": "x64-sikarugir10.0_6-r1",
-    "fps": "menu renders, DXVK, HDR-off recipe"
+    "fps": "DISPUTED, do not quote. 96 was recorded on engine x64-sikarugir10.0_6-r1. Re-measured 2026-09-10 on r2, the shipping default, DXVK, 1728x1117, in the first chamber: 17.4 fps, with GPU time of 4.0 ms inside a 57 ms frame and the process at 124% CPU, so the GPU is idle and the cost is on the CPU. Portal 2 shows the same shape on the same engine while Five Nights at Freddy's, which is not a Source game, hits its recorded 60 fps in the same session. That points at something specific to Source rather than the machine, DXVK or MoltenVK. Confirming it needs engine r1 side by side, which is not installed here."
   }
 }
