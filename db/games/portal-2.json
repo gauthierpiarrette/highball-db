@@ -11,13 +11,6 @@
     "chip": "M1 Pro",
     "macos": "26.6.2",
     "engine": "x64-sikarugir10.0_6-r1",
-    "fps": "134 in the main menu; the portal-2 recipe records 138-147 fps in sp_a1_intro1 at 1728x1117 on engine r0 with DXVK async off"
-  },
-  "knownIssues": [
-    {
-      "symptom": "Much slower than recorded on some setups: 3-5 fps in sp_a1_intro1 and about 32 at the menu, with the picture visibly overexposed.",
-      "cause": "not established. Seen 2026-09-09/10 on an M1 Pro, macOS 26.6.2, engine r2. Ruled out: engine r1 versus r2 (Portal measured identically on both), background load, HDR (mat_hdr_level 0 confirmed in both config files, and forcing it plus mat_dxlevel 90 on the command line changed nothing), shader-cache warming, forced window and resolution flags, and Steam app identity. In every case the GPU is idle at 2-4 ms inside a 31-283 ms frame while the process holds 188% CPU. Portal shows the same shape; Five Nights at Freddy's, which is not Source, hits its recorded 60 fps on the same engine in the same session.",
-      "fix": "none known. DXVK async off was tried and made no difference (3.66 fps), so that documented difference is not the cause either. The maintainer reports the game playing properly at much higher rates, so this is a difference between setups rather than a verdict on the game."
-    }
-  ]
+    "fps": "134 in the main menu, DXVK, HDR-off recipe"
+  }
 }
