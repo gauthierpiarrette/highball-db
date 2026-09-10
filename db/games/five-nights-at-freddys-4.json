@@ -1,0 +1,9 @@
+{
+  "id": "five-nights-at-freddys-4",
+  "title": "Five Nights at Freddy's 4",
+  "steam_appid": "388090",
+  "status": "community",
+  "provenance": "reported by sadsaltygamer37 (highball-db#12), Apple M1 Pro, unverified by Highball",
+  "notes": "Plays. Reported on an Apple M1 Pro as running well with no issues. The reporter did not say which macOS version, engine or graphics mode, and no frame rate was measured. Not tried here; the first game in the series is verified here at 60 fps on DXVK.",
+  "lastVerified": null
+}
