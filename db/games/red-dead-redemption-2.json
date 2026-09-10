@@ -4,7 +4,15 @@
   "steam_appid": 1174180,
   "status": "community",
   "renderer": "d3dmetal",
-  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
-  "notes": "Vulkan mode via MoltenVK or DX12 via d3dmetal; heavy",
-  "lastVerified": null
+  "provenance": "tested locally on Apple Silicon (M1 Pro), macOS 26.6.2, engine x64-crossover26.3-r5, 2026-09-10: loads but never renders. Status stays community because there is no verdict for a title we tested and could not run.",
+  "notes": "Does not reach gameplay on this Mac as of 2026-09-10. Tested on an M1 Pro, macOS 26.6.2, engine x64-crossover26.3-r5. The Rockstar Games Launcher signs in and hands off, RDR2 starts, opens a window and loads for about six minutes to 98 per cent, creates its 1280x720 swapchain, and then exits cleanly without ever presenting a frame. The game uses its own Vulkan renderer, so Highball's graphics mode applies only to the launcher and cannot change the game's path. MoltenVK 1.4.1 refuses the images the game asks for: 'vkCreateImage(): If tiling is VK_IMAGE_TILING_LINEAR, mipLevels must be 1' and the same for 'imageType must be VK_IMAGE_TYPE_2D', with the last three refusals immediately before the exit. Earlier in the same run MoltenVK's shader translator also emits Metal that will not compile, writing gl_CullDistance into a vertex output struct that does not declare it ('no member named gl_CullDistance in VkMain_out'), which kills one pipeline, and Apple's driver logs 10866 'AGX: Texture read/write assertion failed: bytes_per_row >= used_bytes_per_row' assertions across the run. Forcing DirectX 12 with a commandline.txt holding -dx12 is ignored: the run is byte-identical and never touches d3d12. Setting the graphics mode to D3DMetal does not help either, because the Rockstar launcher needs a Direct3D 10.1 device that D3DMetal does not provide, so the launcher never opens a window and the game never starts. The fix belongs in MoltenVK.",
+  "lastVerified": null,
+  "nativeVulkan": true,
+  "knownIssues": [
+    {
+      "symptom": "Loads to about 98 per cent, creates a window, then exits without showing a frame.",
+      "cause": "the game's own Vulkan renderer asks MoltenVK for linear-tiled images with more than one mip level, which MoltenVK 1.4.1 refuses (VK_ERROR_FEATURE_NOT_PRESENT).",
+      "fix": "none today. The graphics mode setting cannot help: this is the game's own Vulkan, not a Direct3D translation layer."
+    }
+  ]
 }
