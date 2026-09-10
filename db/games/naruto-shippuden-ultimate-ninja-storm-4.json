@@ -5,18 +5,29 @@
   "status": "verified-local",
   "renderer": "dxmt",
   "provenance": "verified locally on Apple Silicon (M1 Pro), engine x64-sikarugir10.0_6-r2, macOS 26.6.2, Highball 0.9.3",
-  "notes": "Installs and runs on DXMT. Tested 2026-09-10 on an M1 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r2: the opening movie and the title screen render correctly at 1920x1080 with DXMT 0.80 at D3D11 feature level 11_0, holding the game's own 30 fps cinematic cap with only 3 to 9 ms of GPU per frame, so there is a lot of headroom left. Game Mode was on and the game presented directly rather than through the compositor for part of the run. Before it will start, Steam shows a Bandai Namco end user licence agreement inside the Steam window that has to be accepted once: until it is, NSUNS4.exe starts and then sits at a few megabytes of memory forever with clean logs, which looks exactly like a hang (issue #74). Not yet measured in a battle: the menus need a controller or keyboard and the automation used for this run could not deliver key presses to the game, which is a limit of the test rig and not a fault of the game. Anyone playing normally with a keyboard or pad should get past the title screen.",
+  "notes": "Not playable as of 2026-09-10, on an M1 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r2. The opening movie, title screen, save dialog and menus all render correctly at 1920x1080, and a fight loads, but in the fight itself neither graphics mode works: on DXMT 0.80 the frame flashes between black and the correct image, black most of the time with only brief moments of colour, at a steady 30 fps and 13 ms of GPU, so the game is running fine and the present is what fails. On DXVK 1.10.4 the 2D HUD (health bars, jutsu icons, portraits) draws and the 3D world (characters and stage) is solid black apart from a few effect sprites, with no error in the DXVK log. Not yet tried: D3DMetal, MSAA off or vsync off in config.ini, or fullscreen. Steam shows a Bandai Namco licence agreement inside its own window before the first start that has to be accepted once. The game is built for a pad and shows pad glyphs: on a keyboard the default mapping is A = L, B = ;, X = K, Y = O, Start = Enter, movement on WASD, so the Press A title screen and the first-run save dialog both want L. Change it in Options > Controls or in config.ini next to the exe.",
   "lastVerified": "2026-09-10",
   "rendererResults": {
     "dxmt": {
-      "verdict": "works",
-      "detail": "opening movie and title screen at 1920x1080, the game's 30 fps cinematic cap with 3-9 ms GPU per frame, DXMT 0.80 D3D11 FL 11_0 (2026-09-10, r2, macOS 26.6.2, M1 Pro). A battle was not reached, see notes."
+      "verdict": "partial",
+      "detail": "movie, title and menus correct; in a fight the frame flashes black with brief flashes of the correct image, 30 fps, 13 ms GPU (2026-09-10, r2, macOS 26.6.2, M1 Pro). Not playable."
+    },
+    "dxvk": {
+      "verdict": "fails",
+      "detail": "HUD draws, the 3D world is black apart from a few effect sprites, DXVK-Kegworks 1.10.4 log clean (2026-09-10, r2)."
     }
   },
   "verified": {
     "chip": "Apple M1 Pro",
     "macos": "26.6.2",
     "engine": "x64-sikarugir10.0_6-r2",
-    "fps": "30 at the title screen, which is the game's own cinematic cap, with 3-9 ms of GPU per frame"
-  }
+    "fps": "30 in menus and in a fight, the game's own cap, but the fight does not display: see notes"
+  },
+  "knownIssues": [
+    {
+      "symptom": "A fight is black most of the time with brief flashes of the picture on DXMT; on DXVK the characters and stage never draw at all.",
+      "cause": "unknown yet. The game runs at a steady frame rate, the HUD is fine, and the failure is in presenting the 3D scene.",
+      "fix": "none yet. D3DMetal and the game's own MSAA and vsync settings in config.ini are the next things to try."
+    }
+  ]
 }
