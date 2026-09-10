@@ -4,9 +4,9 @@
   "steam_appid": 230410,
   "status": "verified-local",
   "renderer": "dxmt",
-  "provenance": "verified locally on Apple Silicon (M-series), engine sikarugir-10.0_6, Highball 0.7.21",
-  "notes": "Apply the warframe recipe first: it turns DirectWrite off for the game's launcher only (Tools\\Launcher.exe), whose embedded browser otherwise paints a black window on this engine, the same DirectWrite problem as Sikarugir #255. With that override the launcher shows its EULA, updates the game and starts it. The game itself needs nothing. Use DXMT: the first tutorial mission, with combat, ran at about 35 fps at 1728x1117 borderless (the game's own low preset, 1280x720 render, anti-aliasing and ambient occlusion off) with the Metal HUD reading 28 ms of GPU per frame; later in the same session, past the tutorial, the maintainer's own play ran above 100 fps by the HUD. DXVK also reaches the mission but is GPU-bound at about 16 fps (51 ms GPU) with the same settings. 'Login with Steam' works; a Steam account without a Warframe account gets the game's own bind-or-create dialog, which is normal. A sleeping display stalls the game for as long as it sleeps, so keep the Mac awake for long sessions. Verified 2026-09-04 on macOS 26.6.2, M1 Pro: launcher update, Steam login, account creation, tutorial mission and later play; Exit Game shuts the process down cleanly (the game log ends with its normal shutdown).",
-  "lastVerified": "2026-09-04",
+  "provenance": "verified locally on Apple Silicon (M1 Pro), engine x64-sikarugir10.0_6-r2, macOS 26.6.2, Highball 0.9.3",
+  "notes": "Re-verified on engine r2 on 2026-09-10: the launcher updates and starts the game, Login with Steam signs in without typing anything, and the Orbiter runs at 82-94 fps at 1728x1117 fullscreen on DXMT 0.80. Apply the warframe recipe first: it turns DirectWrite off for the game's launcher only (Tools\\Launcher.exe), whose embedded browser otherwise paints a black window on this engine, the same DirectWrite problem as Sikarugir #255. With that override the launcher shows its EULA, updates the game and starts it. The game itself needs nothing. Use DXMT: the first tutorial mission, with combat, ran at about 35 fps at 1728x1117 borderless (the game's own low preset, 1280x720 render, anti-aliasing and ambient occlusion off) with the Metal HUD reading 28 ms of GPU per frame; later in the same session, past the tutorial, the maintainer's own play ran above 100 fps by the HUD. DXVK also reaches the mission but is GPU-bound at about 16 fps (51 ms GPU) with the same settings. 'Login with Steam' works; a Steam account without a Warframe account gets the game's own bind-or-create dialog, which is normal. A sleeping display stalls the game for as long as it sleeps, so keep the Mac awake for long sessions. Verified 2026-09-04 on macOS 26.6.2, M1 Pro: launcher update, Steam login, account creation, tutorial mission and later play; Exit Game shuts the process down cleanly (the game log ends with its normal shutdown).",
+  "lastVerified": "2026-09-10",
   "anticheat": {
     "names": [
       "Unknown (Custom)"
@@ -17,7 +17,7 @@
   "rendererResults": {
     "dxmt": {
       "verdict": "works",
-      "detail": "tutorial mission at about 35 fps, 28 ms GPU per frame, 1728x1117 borderless with the low preset; above 100 fps later in the session (2026-09-04, r1, macOS 26.6.2, M1 Pro)"
+      "detail": "re-verified on engine r2 2026-09-10: signed in with the Login with Steam button, reached the Orbiter with live chat and the Vor's Prize objective, 82-94 fps at 1728x1117 fullscreen with 12.0-12.4 ms of GPU per frame, DXMT 0.80 (macOS 26.6.2, M1 Pro). The launcher reports up to date and its Play button works. On r1 the tutorial mission ran at about 35 fps with 28 ms GPU per frame and above 100 fps later in that session (2026-09-04)"
     },
     "dxvk": {
       "verdict": "works",
@@ -27,7 +27,7 @@
   "verified": {
     "chip": "Apple M1 Pro",
     "macos": "26.6.2",
-    "engine": "x64-sikarugir10.0_6-r1",
-    "fps": "35 in the tutorial, above 100 later"
+    "engine": "x64-sikarugir10.0_6-r2",
+    "fps": "82-94 in the Orbiter"
   }
 }
