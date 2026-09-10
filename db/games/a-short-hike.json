@@ -1,0 +1,9 @@
+{
+  "id": "a-short-hike",
+  "title": "A Short Hike",
+  "steam_appid": 1055540,
+  "status": "community",
+  "provenance": "reported by HappySmurfday (highball-db#13), Apple Silicon, chip not stated, unverified by Highball",
+  "notes": "Plays. Reported as running at full speed with no issues. The reporter did not say which chip, macOS version, engine or graphics mode, and no frame rate was measured, so this row records that it works and nothing more. Not tried here.",
+  "lastVerified": null
+}

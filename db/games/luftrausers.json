@@ -1,0 +1,9 @@
+{
+  "id": "luftrausers",
+  "title": "LUFTRAUSERS",
+  "steam_appid": 233150,
+  "status": "community",
+  "provenance": "reported by HappySmurfday (highball-db#16), Apple Silicon, chip not stated, unverified by Highball",
+  "notes": "Plays. Reported as playing fine. The reporter did not say which chip, macOS version, engine or graphics mode, and no frame rate was measured, so this row records that it works and nothing more. Not tried here.",
+  "lastVerified": null
+}

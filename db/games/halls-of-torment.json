@@ -1,0 +1,9 @@
+{
+  "id": "halls-of-torment",
+  "title": "Halls of Torment",
+  "steam_appid": 2218750,
+  "status": "community",
+  "provenance": "reported by olivil (highball-db#15), Apple M4, unverified by Highball",
+  "notes": "Plays. Reported on an Apple M4 as running fine and at full speed. The reporter did not say which macOS version, engine or graphics mode, and no frame rate was measured. Not tried here.",
+  "lastVerified": null
+}
