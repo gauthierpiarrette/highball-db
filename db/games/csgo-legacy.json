@@ -36,7 +36,7 @@
     "chip": "M1 Pro",
     "macos": "26.6.2",
     "engine": "x64-crossover26.3-r7",
-    "fps": "17 at 1728x1117 windowed with the game's defaults (cl_showfps), wined3d on OpenGL for this game only",
+    "fps": "17 at 1728x1117 windowed with the game's defaults; 30 to 62 at 1280x800 windowed by scene (60 at spawn, 30 in the open with bots fighting), 2026-09-11 on 0.9.7, cl_showfps",
     "how": "Dust II with bots through Steam (-applaunch 4465480 +map de_dust2): main menu, map load, spawn, a round played with movement and damage. Twice from a clean state, the second time through the csgo-legacy recipe on a freshly installed r7."
   }
 }
