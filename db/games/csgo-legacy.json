@@ -32,9 +32,9 @@
       "fix": "Use engine r7 and the recipe."
     },
     {
-      "symptom": "The Steam client window may not draw while the environment is on wined3d.",
-      "cause": "Steam's browser UI needs the cross-process swapchain that the DXMT mode provides.",
-      "fix": "Launch the game from Highball's library, which does not need the client's window. Recorded pending a check."
+      "symptom": "With the environment on wined3d, the Steam client's own window is black.",
+      "cause": "Steam's browser UI presents through a child window of another process, which works on DXMT (Highball's cross-process swapchain) and not on wined3d's OpenGL path. The game itself is unaffected.",
+      "fix": "Launch the game from Highball's library, which starts Steam without needing its window, or give CS:GO its own environment so your other games keep DXMT. A per-game graphics mode for Steam games is the real fix (highball#77)."
     }
   ],
   "verified": {
