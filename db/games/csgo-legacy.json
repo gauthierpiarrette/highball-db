@@ -3,10 +3,10 @@
   "title": "Counter-Strike: Global Offensive (Legacy)",
   "steam_appid": 4465480,
   "status": "verified-local",
-  "renderer": "dxvk",
-  "provenance": "verified locally on Apple Silicon (M1 Pro), macOS 14.6, engine sikarugir-10.0_6, Highball 0.7.18-dev (2026-09-01): fresh install from Steam, launches to main menu (114 fps by Metal HUD on the equivalent 730 csgo_legacy build); a bot map (de_dust2) reached INGAME on the 730 csgo_legacy branch 2026-08-28. macOS 26 freeze is community-reported (issue #21), not reproduced on 14.6. macOS 26.6.2 (M1 Pro, 2026-09-02): the freeze reproduced and was traced; not fixed.",
-  "notes": "Valve now ships legacy CS:GO as its own free app (4465480), so it launches from Highball's library directly; the old route via CS2's launch chooser (appid 730 + csgo_legacy beta) still exists. Works on DXVK's Direct3D 9 on macOS 14/15. On macOS 26 the map load freezes at 'Initializing game data' (reporter's M1, issue #21; reproduced on an M1 Pro on 26.6.2, 2026-09-02, about five launches in six). Root cause, from a wineserver trace: a lost wake-up in the game's own thread-pool hand-off. An auto-reset event is set twice before any waiter runs, the second set is lost, the wrong worker consumes the one signal and skips the semaphore release that would wake the thread whose job it is to set the event again; the main thread and two workers then wait forever. Windows hides this ordering race with its wait-completion priority boost. Not a GPU or renderer problem (every DXVK thread is idle, no MoltenVK errors) and not the Wine sync primitive (identical under msync, esync and sync none). Ruled out as workarounds, each with cold starts: -windowed -noborder, mat_queue_mode 0, -nosound, -threads 1, threadpool_affinity 0, host_thread_mode 0, snd_mix_async 0, and launching under the macOS application scheduling policy. No launch-time fix yet; the candidates are a scheduler-boost emulation in Wine or the 730 csgo_legacy branch if it does not carry the race. 2026-09-11, engine x64-crossover26.3-r6 (Wine 11 with the yield-after-event patch), three cold launches of Dust II on an M1 Pro / macOS 26.6.2: the CSM gate does not exist there, DXVK's D3D9 loads and the map loads to the console's INGAME state every time. Two other things then happen. In two of the three runs MoltenVK loses the device at the end of the load (twelve 'No attachments, trimming render area to viewport' warnings then 'Lost VkDevice', the Source HDR zero-attachment pass, highball#34) and the screen goes black; writing mat_hdr_level 0 into cfg/video.txt and cfg/autoexec.cfg, the Portal fix, avoided it in one run and not in another. And in every run, with or without the device loss, the load ends at 'Initializing game data' after INGAME: the loading tips keep rotating, the Metal HUD keeps presenting, the process sits at a flat 110 per cent CPU, the team-select panels log 'Unable to find panel', and no frame of the world is ever drawn. That is the same point as the macOS 26 freeze on the Wine 10 engine but not the same shape (that one idles at 4 per cent with every thread waiting), so the yield patch changes the signature and not the outcome. Diagnosing it needs a wineserver trace like the one that resolved the first freeze.",
-  "lastVerified": "2026-09-02",
+  "renderer": "wined3d",
+  "provenance": "played here on the free standalone app, M1 Pro, macOS 26.6.2, engine x64-crossover26.3-r7, 2026-09-11",
+  "notes": "Plays on macOS 26 with engine x64-crossover26.3-r7 or later, the wined3d graphics mode and the csgo-legacy recipe, which gives csgo.exe alone an NVIDIA identity; r7 carries a 32-bit NVAPI stub the game then needs. 17 fps at 1728x1117 with the defaults on an M1 Pro, so lower the resolution or the settings. Why this route: on DXVK's Direct3D 9 the map load on macOS 26 either loses the GPU device on Source's HDR pass (highball#34) or never finishes after the console reaches INGAME, and on the Wine 10 engine it freezes in a lost wake-up; wined3d (CodeWeavers' Direct3D 9 on OpenGL, the route CrossOver users take) has none of those, and it fails Source's shadow-map check only with an AMD identity. History: NVAPI 0xFFFFFFFE with any non-AMD identity was a dead end while the stub was placed beside the game; NVIDIA's SDK loads nvapi.dll from the system directory only. After moving a bottle to r7, Repair it once so the stub's placeholder is written. On macOS 14 and 15 the game also runs on DXVK's Direct3D 9 (verified 2026-09-02 on the Wine 10 engine).",
+  "lastVerified": "2026-09-11",
   "anticheat": {
     "names": [
       "VAC"
@@ -22,19 +22,26 @@
   },
   "knownIssues": [
     {
-      "symptom": "macOS 26: loading screen reaches 'Initializing game data' and freezes; the process idles, the console log keeps writing",
-      "cause": "Lost wake-up in Source's job hand-off (auto-reset event set twice before any waiter ran), a scheduling-order race that macOS 26 under Rosetta resolves the wrong way on most launches. Verified 2026-09-02 with a wineserver trace on M1 Pro / 26.6.2.",
-      "fix": "None yet. Retrying the launch escapes it roughly one time in six. Nothing at the launch-option or bottle level changed the odds in a 16-launch measurement."
+      "symptom": "On DXVK's Direct3D 9 (the default graphics mode) on macOS 26: the map load stops at 'Initializing game data', or the screen goes black at the end of the load.",
+      "cause": "MoltenVK loses the device on Source's zero-attachment HDR pass (highball#34), and a second stall after INGAME that is not explained.",
+      "fix": "The csgo-legacy recipe on engine r7 or later: wined3d plus an NVIDIA identity for csgo.exe."
     },
     {
-      "symptom": "On macOS 26 the game reaches the map load and then freezes (music keeps playing, the process stays alive); roughly five launches in six. Windowed or fullscreen makes no difference.",
-      "cause": "Reproduced 2026-09-05 on an M1 Pro / macOS 26.6.2 with engine r1. It is a lost wake-up on an auto-reset event during map load under Wine's msync (a threading race macOS 26 exposes), not a renderer or shader issue: the same freeze happens with async shader compilation off and with sync set to none. Counter-Strike: Source shows the same class of hang.",
-      "fix": "No user-side fix. Highball's Wine 11 engines (r5, r6) carry the yield-after-signal patch and DXVK's D3D9, and on them the game reaches the map load without the CSM error, but the load still never finishes (see the r6 entry)."
+      "symptom": "On the Wine 10 engine (macOS 26): freezes at 'Initializing game data' with the process idle.",
+      "cause": "A lost wake-up in Source's job hand-off, a scheduling-order race macOS 26 exposes (wineserver trace, 2026-09-02).",
+      "fix": "Use engine r7 and the recipe."
     },
     {
-      "symptom": "On engine x64-crossover26.3-r6 (macOS 26): Dust II loads to 'Initializing game data', the console reaches INGAME, and the world is never drawn; in two of three runs the GPU device is also lost at that point and the screen goes black.",
-      "cause": "Two things. The black screen is MoltenVK losing the device on Source's zero-attachment HDR render pass (highball#34), intermittent here even with mat_hdr_level 0 in the config files. The stall with the device intact is unexplained: the process stays busy (about 110 per cent CPU) with the loading UI animating, unlike the idle lost-wake-up freeze on the Wine 10 engine.",
-      "fix": "None. Needs a wineserver trace on r6 to see what the main thread is doing after INGAME."
+      "symptom": "The Steam client window may not draw while the environment is on wined3d.",
+      "cause": "Steam's browser UI needs the cross-process swapchain that the DXMT mode provides.",
+      "fix": "Launch the game from Highball's library, which does not need the client's window. Recorded pending a check."
     }
-  ]
+  ],
+  "verified": {
+    "chip": "M1 Pro",
+    "macos": "26.6.2",
+    "engine": "x64-crossover26.3-r7",
+    "fps": "17 at 1728x1117 windowed with the game's defaults (cl_showfps), wined3d on OpenGL",
+    "how": "Dust II with bots through Steam (-applaunch 4465480 +map de_dust2): main menu, map load, spawn, a round played with movement and damage. Twice from a clean state, the second time through the csgo-legacy recipe on a freshly installed r7."
+  }
 }

@@ -1,0 +1,52 @@
+{
+  "id": "csgo-legacy",
+  "kind": "game",
+  "title": "Counter-Strike: Global Offensive (legacy)",
+  "requires": [
+    "steam"
+  ],
+  "renderer": "wined3d",
+  "engine": "x64-crossover26.3-r7",
+  "steps": [
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\AppDefaults\\csgo.exe\\Direct3D",
+      "name": "VideoPciVendorID",
+      "valueType": "REG_DWORD",
+      "data": "4318"
+    },
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\AppDefaults\\csgo.exe\\Direct3D",
+      "name": "VideoPciDeviceID",
+      "valueType": "REG_DWORD",
+      "data": "7040"
+    },
+    {
+      "type": "note",
+      "text": "Needs engine x64-crossover26.3-r7 or later and the wined3d graphics mode: CodeWeavers' Direct3D 9 on OpenGL, the route CrossOver users take for this game. On DXVK's Direct3D 9 the map load on macOS 26 either loses the GPU device on Source's HDR pass or never finishes."
+    },
+    {
+      "type": "note",
+      "text": "The two registry values give csgo.exe alone an NVIDIA identity (GeForce GTX 1080, 0x10de:0x1b80). Source's shadow-map check passes on NVIDIA's depth-texture path, which wined3d supports, and fails on AMD's, which it does not. With an NVIDIA identity the game insists on NVIDIA's driver library, which r7's engine answers with a stub. Other programs in the bottle keep Highball's AMD identity."
+    },
+    {
+      "type": "note",
+      "text": "Legacy CS:GO is Valve's free standalone app 4465480; Highball launches it directly. The Metal HUD does not show on this game because OpenGL presents the frames, so use the game's own cl_showfps or net_graph for a frame rate."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "On the default (DXVK) graphics mode on macOS 26: the map load stops at 'Initializing game data' or the screen goes black at the end of the load.",
+      "cause": "MoltenVK loses the device on Source's zero-attachment HDR pass (highball#34), and a second stall after the console reaches INGAME that is not yet explained.",
+      "fix": "This recipe: wined3d plus the NVIDIA identity for csgo.exe on engine r7."
+    }
+  ],
+  "lastVerified": {
+    "date": "2026-09-11",
+    "engine": "x64-crossover26.3-r7",
+    "macos": "26.6.2",
+    "chip": "Apple M1 Pro",
+    "result": "wined3d: Dust II with bots plays at 17 fps (1728x1117, defaults) on an M1 Pro. Two clean-state runs, the second through this recipe on a fresh r7 install. After moving a bottle to r7, Repair it once so the NVAPI stub's placeholder is written."
+  }
+}
