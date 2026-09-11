@@ -16,7 +16,7 @@
     },
     {
       "symptom": "One vertex shader fails to compile to Metal (gl_CullDistance emitted into an undeclared struct member) and the driver logs many bytes_per_row assertions during loading.",
-      "cause": "SPIRV-Cross's Metal output for cull distance, and the row pitch of the game's linear 2D textures.",
+      "cause": "SPIRV-Cross's Metal output for cull distance, a known limitation (SPIRV-Cross issue 1403, MoltenVK issue 1484: Metal has no cull distance built-in and the translator emits an array member the output struct lacks), and the row pitch of the game's linear 2D textures.",
       "fix": "none needed so far: nothing visibly missing in the prologue. Recorded so a texture glitch later has a lead."
     }
   ],
