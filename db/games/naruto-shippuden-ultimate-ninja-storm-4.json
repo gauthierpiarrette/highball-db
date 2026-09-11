@@ -25,7 +25,7 @@
     "chip": "Apple M1 Pro",
     "macos": "26.6.2",
     "engine": "x64-sikarugir10.0_6-r2",
-    "fps": "plays in a fight on D3DMetal at 1920x1080; 30 in menus and cinematics, the game's own cap. Not measured in the fight."
+    "fps": "30 in menus and cinematics, the game's own cap; plays in a fight on D3DMetal at 1920x1080, not measured there"
   },
   "knownIssues": [
     {

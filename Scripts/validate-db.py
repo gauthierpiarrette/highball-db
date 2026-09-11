@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Validate every db/games entry and recipes/*.json against the schema rules CI enforces."""
-import json, sys, glob
+import re, json, sys, glob
 
 STATUSES = {"verified-local", "reported-upstream", "community", "blocked-anticheat"}
 RENDERERS = {"wined3d", "dxmt", "d3dmetal", "dxvk", "vkd3d", None}
@@ -20,6 +20,11 @@ for f in glob.glob("db/games/*.json"):
         errors.append(f"{f}: lastVerified must be a date string (YYYY-MM-DD) or null; details go under \"verified\"")
     if d.get("verified") is not None and not (isinstance(d["verified"], dict) and all(isinstance(v, str) for v in d["verified"].values())):
         errors.append(f"{f}: verified must be an object of strings (chip, macos, engine, fps)")
+    # The app reads this field as "<figure> where it was read" and puts "frames per second" after
+    # the figure, one sentence. A figure first, or a short status with no figure at all.
+    fps = d["verified"].get("fps") if isinstance(d.get("verified"), dict) else None
+    if fps is not None and not (re.match(r"^(about )?[0-9]", fps, re.I) or len(fps) <= 64):
+        errors.append(f"{f}: verified.fps must start with the figure ('about 34 in the prologue ride at 1280x720') or be a short status; details go in notes")
     if "nativeVulkan" in d and not isinstance(d["nativeVulkan"], bool):
         errors.append(f"{f}: nativeVulkan must be true or false")
     if "epic_app_name" in d and not isinstance(d["epic_app_name"], str):

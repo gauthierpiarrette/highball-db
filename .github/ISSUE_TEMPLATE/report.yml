@@ -2,6 +2,9 @@ name: Compatibility report
 description: How did a game or launcher run through Highball?
 labels: [report]
 body:
+  - type: markdown
+    attributes:
+      value: "One line is enough. If you played through Highball, the button it shows after a session opens this form with the chip, macOS, engine and graphics mode filled in."
   - type: input
     id: title
     attributes: { label: Game or launcher, placeholder: "Elden Ring" }
@@ -20,19 +23,21 @@ body:
     attributes:
       label: Renderer
       options: [dxmt, d3dmetal, dxvk, wined3d]
-    validations: { required: true }
   - type: input
     id: chip
     attributes: { label: Chip, placeholder: "Apple M1 Pro" }
-    validations: { required: true }
   - type: input
     id: macos
     attributes: { label: macOS version, placeholder: "14.6" }
-    validations: { required: true }
   - type: input
     id: engine
     attributes: { label: Engine id, placeholder: "x64-sikarugir10.0_6-r0" }
-    validations: { required: true }
+  - type: input
+    id: version
+    attributes: { label: Highball version, placeholder: "0.9.6" }
   - type: textarea
     id: notes
-    attributes: { label: Notes, description: Settings that mattered, glitches, fps, workarounds. }
+    attributes:
+      label: Notes
+      description: "Three short lines help most: what you played into (a menu, a level, a match), for how long, and the frame rate if the Metal HUD was on. Then anything that mattered: a setting, a glitch, a workaround."
+      placeholder: "Played a full bot match on Dust II for 25 min, 100 to 108 fps at 1728x1117 on the Metal HUD. No settings changed."

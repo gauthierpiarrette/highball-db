@@ -1,0 +1,8 @@
+# Reports arrive however people can give them: one line beats nothing, so blank issues stay on.
+# The form is the fast path, and the app fills it in after a session (chip, macOS, engine,
+# renderer, Steam id, version), so a player only adds a rating and a line.
+blank_issues_enabled: true
+contact_links:
+  - name: A problem with the Highball app itself
+    url: https://github.com/gauthierpiarrette/highball/issues
+    about: Crashes, updates, the window, the installer. Game results belong in the report form here.
