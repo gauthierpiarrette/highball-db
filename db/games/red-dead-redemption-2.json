@@ -24,7 +24,7 @@
     "chip": "M1 Pro",
     "macos": "26.6.2",
     "engine": "x64-crossover26.3-r6",
-    "fps": "about 34 in the prologue blizzard ride at 1280x720 windowed (GPU 18-21 ms), 55-60 in the menus and the intro montage, 35 in the opening cutscene, read from the Metal HUD",
+    "fps": "about 40 in the prologue blizzard ride at 1280x720 windowed (Metal HUD steady at 39.9, 25 ms frame interval, third run 2026-09-12 on 0.9.7 engine r7), 55-60 in the menus and the intro montage, 35 in the opening cutscene",
     "how": "Steam, Rockstar launcher signs in, first-run prompts (brightness, subtitles, audio), main menu, Story: intro montage, opening cutscene, then the blizzard ride under keyboard control (W moves the horse). Zero faults in two runs of 15 and 12 minutes."
   }
 }
