@@ -1,0 +1,9 @@
+{
+  "id": "astral-ascent",
+  "title": "Astral Ascent",
+  "steam_appid": 1280930,
+  "status": "community",
+  "provenance": "reported by kandzsem (highball-db#18), Apple Silicon, chip not stated, unverified by Highball",
+  "notes": "Plays. Reported as a smooth 60 fps in gameplay, with drops to about 25 fps during the intro and cutscenes, and a DualShock 4 controller working. The reporter did not say which chip, macOS version, engine or graphics mode. Not tried here.",
+  "lastVerified": null
+}

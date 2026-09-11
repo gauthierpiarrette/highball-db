@@ -1,0 +1,16 @@
+{
+  "id": "cloverpit",
+  "title": "CloverPit",
+  "steam_appid": 3314790,
+  "status": "community",
+  "provenance": "reported by Meshy10 (highball-db#17), Apple Silicon, chip not stated, unverified by Highball",
+  "notes": "Reported as not working: the game freezes on launch in DXMT graphics mode, and the reporter says no graphics mode works. The reporter did not say which chip, macOS version or engine, and no log was attached. Not tried here. This row records the failure so nobody spends an evening rediscovering it; a report with a log would let it be diagnosed.",
+  "lastVerified": null,
+  "knownIssues": [
+    {
+      "symptom": "Freezes on launch (reported on DXMT; the reporter says every graphics mode fails).",
+      "cause": "Unknown. No log or machine details in the report.",
+      "fix": "None known."
+    }
+  ]
+}
