@@ -1,0 +1,48 @@
+{
+  "id": "red-dead-redemption-2",
+  "kind": "game",
+  "title": "Red Dead Redemption 2",
+  "requires": [
+    "steam",
+    "rockstar"
+  ],
+  "renderer": "dxmt",
+  "engine": "x64-crossover26.3-r6",
+  "steps": [
+    {
+      "type": "note",
+      "text": "Needs engine x64-crossover26.3-r6 or later: its MoltenVK accepts the linear-tiled 3D, mipmapped and array images the game creates. On every earlier engine the game exits at 98 per cent of its first load."
+    },
+    {
+      "type": "note",
+      "text": "Leave the game on its own Vulkan renderer (the default). The graphics mode setting applies to the Rockstar launcher, which needs DXMT, not to the game."
+    },
+    {
+      "type": "note",
+      "text": "Tested at 1280x720 windowed, set in Documents/Rockstar Games/Red Dead Redemption 2/Settings/system.xml (<screenWidth>, <screenHeight>, <windowed value=\"1\" />) after the first run writes the file. About 34 fps in the prologue snow on an M1 Pro."
+    },
+    {
+      "type": "note",
+      "text": "The first key after the game window regains focus is ignored. Press it again."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "On engines before r6: loads to about 98 per cent, opens a window and exits without a frame (Vulkan), or crashes about 30 seconds in with DirectX 12 selected in system.xml.",
+      "cause": "MoltenVK 1.4.1 refuses linear-tiled 3D, mipmapped and array images (fixed in r6's MoltenVK). D3DMetal answers a D3D12 call the game needs with 'Not implemented' (not fixable here).",
+      "fix": "use engine x64-crossover26.3-r6 or later and leave the game on its default Vulkan renderer."
+    },
+    {
+      "symptom": "One vertex shader fails to compile to Metal (gl_CullDistance emitted into an undeclared struct member) and the driver logs many bytes_per_row assertions during loading.",
+      "cause": "SPIRV-Cross's Metal output for cull distance, and the row pitch of the game's linear 2D textures.",
+      "fix": "none needed so far: nothing visibly missing in the prologue. Recorded so a texture glitch later has a lead."
+    }
+  ],
+  "lastVerified": {
+    "date": "2026-09-11",
+    "engine": "x64-crossover26.3-r6",
+    "macos": "26.6.2",
+    "chip": "Apple M1 Pro",
+    "result": "Vulkan (game default) with DXMT for the launcher: main menu, intro, opening cutscene and the prologue blizzard ride under keyboard control at about 34 fps, 1280x720 windowed. Zero faults in two runs."
+  }
+}
