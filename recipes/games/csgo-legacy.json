@@ -5,9 +5,21 @@
   "requires": [
     "steam"
   ],
-  "renderer": "wined3d",
   "engine": "x64-crossover26.3-r7",
   "steps": [
+    {
+      "type": "copy",
+      "from": "engine/lib/wine/i386-windows/d3d9.dll",
+      "to": "Program Files (x86)/Steam/steamapps/common/csgo legacy/bin/d3d9.dll",
+      "asNative": true
+    },
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\AppDefaults\\csgo.exe\\DllOverrides",
+      "name": "d3d9",
+      "valueType": "REG_SZ",
+      "data": "n,b"
+    },
     {
       "type": "registry",
       "key": "HKCU\\Software\\Wine\\AppDefaults\\csgo.exe\\Direct3D",
@@ -24,7 +36,7 @@
     },
     {
       "type": "note",
-      "text": "Needs engine x64-crossover26.3-r7 or later and the wined3d graphics mode: CodeWeavers' Direct3D 9 on OpenGL, the route CrossOver users take for this game. On DXVK's Direct3D 9 the map load on macOS 26 either loses the GPU device on Source's HDR pass or never finishes."
+      "text": "Needs engine x64-crossover26.3-r7 or later. The game gets the engine's own Direct3D 9 (wined3d, on OpenGL) as a d3d9.dll in its bin folder, loaded first for csgo.exe only, so this one game runs on wined3d while the environment and the Steam client keep their graphics mode. On DXVK's Direct3D 9 the map load on macOS 26 either loses the GPU device on Source's HDR pass or never finishes."
     },
     {
       "type": "note",
@@ -33,10 +45,6 @@
     {
       "type": "note",
       "text": "Legacy CS:GO is Valve's free standalone app 4465480; Highball launches it directly. The Metal HUD does not show on this game because OpenGL presents the frames, so use the game's own cl_showfps or net_graph for a frame rate."
-    },
-    {
-      "type": "note",
-      "text": "While this environment is on wined3d the Steam client's own window is black (its browser UI needs DXMT's cross-process swapchain). The game launches fine from Highball's library, which never needs that window. If you also use the Steam window, keep CS:GO in its own environment."
     }
   ],
   "knownIssues": [
@@ -44,11 +52,6 @@
       "symptom": "On the default (DXVK) graphics mode on macOS 26: the map load stops at 'Initializing game data' or the screen goes black at the end of the load.",
       "cause": "MoltenVK loses the device on Source's zero-attachment HDR pass (highball#34), and a second stall after the console reaches INGAME that is not yet explained.",
       "fix": "This recipe: wined3d plus the NVIDIA identity for csgo.exe on engine r7."
-    },
-    {
-      "symptom": "With the environment on wined3d, the Steam client's own window is black.",
-      "cause": "Steam's browser UI presents through a child window of another process, which works on DXMT (Highball's cross-process swapchain) and not on wined3d's OpenGL path. The game itself is unaffected.",
-      "fix": "Launch the game from Highball's library, which starts Steam without needing its window, or give CS:GO its own environment so your other games keep DXMT. A per-game graphics mode for Steam games is the real fix (highball#77)."
     }
   ],
   "lastVerified": {
@@ -56,6 +59,6 @@
     "engine": "x64-crossover26.3-r7",
     "macos": "26.6.2",
     "chip": "Apple M1 Pro",
-    "result": "wined3d: Dust II with bots plays at 17 fps (1728x1117, defaults) on an M1 Pro. Two clean-state runs, the second through this recipe on a fresh r7 install. After moving a bottle to r7, Repair it once so the NVAPI stub's placeholder is written."
+    "result": "Dust II with bots plays at 17 fps (1728x1117, defaults) on an M1 Pro: main menu, map load, spawn, a round with movement and damage. Verified through this recipe on a fresh r7 install with the environment on DXMT, so the Steam client draws as usual."
   }
 }

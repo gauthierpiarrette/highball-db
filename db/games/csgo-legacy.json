@@ -3,9 +3,9 @@
   "title": "Counter-Strike: Global Offensive (Legacy)",
   "steam_appid": 4465480,
   "status": "verified-local",
-  "renderer": "wined3d",
+  "renderer": "dxmt",
   "provenance": "played here on the free standalone app, M1 Pro, macOS 26.6.2, engine x64-crossover26.3-r7, 2026-09-11",
-  "notes": "Plays on macOS 26 with engine x64-crossover26.3-r7 or later, the wined3d graphics mode and the csgo-legacy recipe, which gives csgo.exe alone an NVIDIA identity; r7 carries a 32-bit NVAPI stub the game then needs. 17 fps at 1728x1117 with the defaults on an M1 Pro, so lower the resolution or the settings. Why this route: on DXVK's Direct3D 9 the map load on macOS 26 either loses the GPU device on Source's HDR pass (highball#34) or never finishes after the console reaches INGAME, and on the Wine 10 engine it freezes in a lost wake-up; wined3d (CodeWeavers' Direct3D 9 on OpenGL, the route CrossOver users take) has none of those, and it fails Source's shadow-map check only with an AMD identity. History: NVAPI 0xFFFFFFFE with any non-AMD identity was a dead end while the stub was placed beside the game; NVIDIA's SDK loads nvapi.dll from the system directory only. After moving a bottle to r7, Repair it once so the stub's placeholder is written. On macOS 14 and 15 the game also runs on DXVK's Direct3D 9 (verified 2026-09-02 on the Wine 10 engine).",
+  "notes": "Plays on macOS 26 with engine x64-crossover26.3-r7 or later and the csgo-legacy recipe: the game alone gets the engine's wined3d Direct3D 9 (a native d3d9.dll in its bin folder, taken first for csgo.exe) and an NVIDIA identity; r7 carries the 32-bit NVAPI stub the game then needs. The environment stays on DXMT, so Steam and every other game are untouched. 17 fps at 1728x1117 with the defaults on an M1 Pro, so lower the resolution or the settings. Why this route: on DXVK's Direct3D 9 the map load on macOS 26 either loses the GPU device on Source's HDR pass (highball#34) or never finishes after the console reaches INGAME, and on the Wine 10 engine it freezes in a lost wake-up; wined3d (CodeWeavers' Direct3D 9 on OpenGL, the route CrossOver users take) has none of those, and it fails Source's shadow-map check only with an AMD identity. History: NVAPI 0xFFFFFFFE with any non-AMD identity was a dead end while the stub was placed beside the game; NVIDIA's SDK loads nvapi.dll from the system directory only. After moving a bottle to r7, Repair it once so the stub's placeholder is written. On macOS 14 and 15 the game also runs on DXVK's Direct3D 9 (verified 2026-09-02 on the Wine 10 engine).",
   "lastVerified": "2026-09-11",
   "anticheat": {
     "names": [
@@ -30,18 +30,13 @@
       "symptom": "On the Wine 10 engine (macOS 26): freezes at 'Initializing game data' with the process idle.",
       "cause": "A lost wake-up in Source's job hand-off, a scheduling-order race macOS 26 exposes (wineserver trace, 2026-09-02).",
       "fix": "Use engine r7 and the recipe."
-    },
-    {
-      "symptom": "With the environment on wined3d, the Steam client's own window is black.",
-      "cause": "Steam's browser UI presents through a child window of another process, which works on DXMT (Highball's cross-process swapchain) and not on wined3d's OpenGL path. The game itself is unaffected.",
-      "fix": "Launch the game from Highball's library, which starts Steam without needing its window, or give CS:GO its own environment so your other games keep DXMT. A per-game graphics mode for Steam games is the real fix (highball#77)."
     }
   ],
   "verified": {
     "chip": "M1 Pro",
     "macos": "26.6.2",
     "engine": "x64-crossover26.3-r7",
-    "fps": "17 at 1728x1117 windowed with the game's defaults (cl_showfps), wined3d on OpenGL",
+    "fps": "17 at 1728x1117 windowed with the game's defaults (cl_showfps), wined3d on OpenGL for this game only",
     "how": "Dust II with bots through Steam (-applaunch 4465480 +map de_dust2): main menu, map load, spawn, a round played with movement and damage. Twice from a clean state, the second time through the csgo-legacy recipe on a freshly installed r7."
   }
 }
