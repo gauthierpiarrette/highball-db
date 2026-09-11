@@ -7,11 +7,11 @@
     "rockstar"
   ],
   "renderer": "dxmt",
-  "engine": "x64-crossover26.3-r6",
+  "engine": "x64-crossover26.3-r7",
   "steps": [
     {
       "type": "note",
-      "text": "Needs engine x64-crossover26.3-r6 or later: its MoltenVK accepts the linear-tiled 3D, mipmapped and array images the game creates. On every earlier engine the game exits at 98 per cent of its first load."
+      "text": "Needs engine x64-crossover26.3-r6 or later (the recipe asks for r7, which carries the same MoltenVK plus the NVAPI stub other games need): its MoltenVK accepts the linear-tiled 3D, mipmapped and array images the game creates. On every earlier engine the game exits at 98 per cent of its first load."
     },
     {
       "type": "note",
