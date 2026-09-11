@@ -1,0 +1,30 @@
+{
+  "id": "five-nights-at-freddys",
+  "kind": "game",
+  "title": "Five Nights at Freddy's",
+  "requires": [
+    "steam"
+  ],
+  "renderer": "dxvk",
+  "steps": [
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\AppDefaults\\FiveNightsatFreddys.exe\\X11 Driver",
+      "name": "EmulateModeset",
+      "valueType": "REG_SZ",
+      "data": "y"
+    },
+    {
+      "type": "note",
+      "text": "The game asks Windows for a 1280x800 fullscreen mode. Wine's Mac driver cannot switch a Mac display for it, and without this setting it reported success while leaving the display as it was, so the picture landed down and to the right with black bars and a clipped edge on any display that is not 16:10. With EmulateModeset, Wine emulates the mode change itself (the game sees its 1280x800, Wine scales the fullscreen window to the real screen), and the picture fills the screen and centres. Scoped to the game's executable; nothing else in the environment changes."
+    }
+  ],
+  "knownIssues": [],
+  "lastVerified": {
+    "date": "2026-09-11",
+    "engine": "x64-sikarugir10.0_6-r2",
+    "macos": "26.6.2",
+    "chip": "Apple M1 Pro",
+    "result": "DXVK: with the setting, the game fills a 1728x1117 display edge to edge and centred, confirmed by eye twice (bottle-wide value, then this per-application value). Screenshots cannot show it: the Mac driver captures the display for a game that requests a mode, and captures read black."
+  }
+}
