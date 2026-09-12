@@ -1,0 +1,10 @@
+{
+  "id": "fallout-sonora",
+  "title": "Fallout Sonora",
+  "steam_appid": null,
+  "status": "community",
+  "renderer": null,
+  "provenance": "community report on highball-db#21 (HappySmurfday, Apple M4 Max, macOS 27.0, engine x64-crossover26.3-r5, 2026-09-11), sent from Highball's after-play report after 42 minutes",
+  "notes": "Fallout Sonora is a free total conversion of Fallout 2 (a Windows program, not on Steam). Reported playable with minor issues on an M4 Max on the Wine 11 engine (r5) after 42 minutes of play; the reporter did not say which graphics mode or what the minor issues were. Run it as a Windows program in Highball (Add, A Windows program I have).",
+  "lastVerified": null
+}
