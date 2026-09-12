@@ -3,8 +3,20 @@
   "title": "Persona 5 Royal",
   "steam_appid": 1687950,
   "status": "community",
-  "renderer": "dxmt",
-  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
-  "notes": "works",
-  "lastVerified": null
+  "renderer": "d3dmetal",
+  "provenance": "Reported by ry-diffusion (highball-db#22, 2026-09-12): M5, macOS 27.0, Highball 0.9.7, engine x64-crossover26.3-r7, D3DMetal, rated 5 of 5 after 6 minutes of play on medium graphics. Not verified by the maintainer.",
+  "notes": "DirectX 11. Reported playing on D3DMetal with the CrossOver-tree engine (x64-crossover26.3-r7); the reporter says it does not work on the Sikarugir (Wine 10) engines. Medium graphics on an M5 in a hot room, so the reporter's Mac was throttling. Do not use DXMT for this game for now: it needs DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1 to show a window, and with that set the reporter's Mac kernel-panicked (a watchdog panic, macOS's GPU driver going down, not a game crash). Not reproduced here.",
+  "lastVerified": null,
+  "knownIssues": [
+    {
+      "symptom": "On DXMT with DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1 the whole Mac kernel-panics (reported on an M5, macOS 27.0, engine r7)",
+      "cause": "not measured; the panic log names the watchdog timer, which is what fires when the GPU driver stops responding",
+      "fix": "use D3DMetal, which the recipe sets"
+    },
+    {
+      "symptom": "Does not run on the Sikarugir (Wine 10) engines",
+      "cause": "not measured (reported)",
+      "fix": "the recipe asks for engine x64-crossover26.3-r7"
+    }
+  ]
 }
