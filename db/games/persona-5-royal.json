@@ -4,19 +4,19 @@
   "steam_appid": 1687950,
   "status": "community",
   "renderer": "d3dmetal",
-  "provenance": "Reported by ry-diffusion (highball-db#22, 2026-09-12): M5, macOS 27.0, Highball 0.9.7, engine x64-crossover26.3-r7, D3DMetal, rated 5 of 5 after 6 minutes of play on medium graphics. Not verified by the maintainer.",
-  "notes": "DirectX 11. Reported playing on D3DMetal with the CrossOver-tree engine (x64-crossover26.3-r7); the reporter says it does not work on the Sikarugir (Wine 10) engines. Medium graphics on an M5 in a hot room, so the reporter's Mac was throttling. Do not use DXMT for this game for now: it needs DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1 to show a window, and with that set the reporter's Mac kernel-panicked (a watchdog panic, macOS's GPU driver going down, not a game crash). Not reproduced here.",
+  "provenance": "Reported by ry-diffusion (highball-db#22, 2026-09-12): M5, macOS 27.0, Highball 0.9.7 then 0.9.9, D3DMetal on engine x64-crossover26.3-r7 rated 5 of 5 after 6 minutes on medium graphics, then DXMT on engine x64-crossover26.3-r8 running in Shibuya at 26 fps, 1280x800 windowed, on a Mac the reporter says was throttling in the heat. Not verified by the maintainer.",
+  "notes": "DirectX 11. Needs the CrossOver-tree engine: the reporter says the Sikarugir (Wine 10) engines do not run it. The recipe asks for x64-crossover26.3-r8, which the reporter found more stable than r7 while the game loads. Mode: D3DMetal is the one rated 5 of 5 (on r7). DXMT: on r7, with DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1 set to get a window, the reporter's Mac kernel-panicked (a watchdog panic, macOS's GPU driver going down); on r8 the reporter says DXMT runs, 26 fps in Shibuya at 1280x800 on a throttling M5, and the panic did not recur. The panic's cause was not measured, and whether r8's fiber slot change is what removed it is the reporter's inference, not a measurement. No measurement here yet.",
   "lastVerified": null,
   "knownIssues": [
     {
-      "symptom": "On DXMT with DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1 the whole Mac kernel-panics (reported on an M5, macOS 27.0, engine r7)",
-      "cause": "not measured; the panic log names the watchdog timer, which is what fires when the GPU driver stops responding",
-      "fix": "use D3DMetal, which the recipe sets"
+      "symptom": "On engine r7 with DXMT and DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1 the whole Mac kernel-panicked (reported on an M5, macOS 27.0)",
+      "cause": "not measured; the panic log names the watchdog timer, which is what fires when the GPU driver stops responding. The reporter says it did not recur on engine r8 with DXMT",
+      "fix": "the recipe asks for engine r8 and sets D3DMetal, the mode the reporter rated; DXMT on r8 is reported working"
     },
     {
       "symptom": "Does not run on the Sikarugir (Wine 10) engines",
       "cause": "not measured (reported)",
-      "fix": "the recipe asks for engine x64-crossover26.3-r7"
+      "fix": "the recipe asks for engine x64-crossover26.3-r8"
     }
   ]
 }
