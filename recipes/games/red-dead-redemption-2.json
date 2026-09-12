@@ -24,6 +24,10 @@
     {
       "type": "note",
       "text": "The first key after the game window regains focus is ignored. Press it again."
+    },
+    {
+      "type": "note",
+      "text": "On a 16 GB Mac the game is memory-bound: its footprint passes 13 GB in the prologue and macOS swaps, so the frame rate decays over a minute of play. In Documents/Rockstar Games/Red Dead Redemption 2/Settings/system.xml, vSync 0 and fsr2Index 2 (FSR 2 balanced) keep the menus and cutscenes smoother and halve the GPU time there; they do not remove the memory wall. 24 GB or more removes it."
     }
   ],
   "knownIssues": [
