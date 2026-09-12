@@ -2,23 +2,30 @@
   "id": "metaphor-refantazio",
   "title": "Metaphor: ReFantazio",
   "steam_appid": 2679460,
-  "status": "community",
+  "status": "verified-local",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reproduced by the maintainer with the free Prologue Demo (Steam 3130330) on an M1 Pro, macOS 26.6.2, Highball 0.9.7, 2026-09-12; first reported on the full game by Napo2k (highball#80, M5 Max, macOS 26.5.2, Highball 0.8.8, engine r0). CrossOver 24 and 26 users show the game running on Apple Silicon. Not playable on Highball yet.",
-  "notes": "DirectX 11, Denuvo on the full game. Measured with the demo: on the Wine 10 engine (Sikarugir, r0 to r2) the game faults seconds after launch, before any window, reading address 0x20FF in its own code. Wine's relay trace shows the thread creating fibers and switching to one right before the fault: on macOS the fiber pointer a game reads with GetCurrentFiber() comes from the host thread block, where that slot holds the thread's QoS class, not the fiber. The same crash with AVX advertised and on DXVK instead of DXMT, so neither the CPU feature nor the graphics layer is involved. On the Wine 11 engine (r5 to r7), which mirrors the fiber pointer into that slot, the game reaches its window, then the process hangs at full CPU with a black window: the mirrored fiber pointer sits in the slot macOS's dispatch library reads as a QoS class, and its main thread faults inside that library. The fix is in the engine (an r8 that keeps the fiber pointer for the game and the QoS class for macOS), not in a setting. Until then the game does not play on Highball.",
+  "provenance": "Verified by the maintainer with the free Prologue Demo (Steam 3130330) on an M1 Pro, macOS 26.6.2, Highball 0.9.7, engine x64-crossover26.3-r8, 2026-09-12: title, cutscenes, dialogue and the desert run of the prologue. First reported on the full game by Napo2k (highball#80, M5 Max, macOS 26.5.2, Highball 0.8.8, engine r0). The full game, with Denuvo, has not been run here. CrossOver 24 and 26 users show it running on Apple Silicon.",
+  "notes": "DirectX 11, Denuvo on the full game. Needs engine x64-crossover26.3-r8 or later: on every earlier engine the game does not reach play, and no setting changes that. Measured with the demo on r8, DXMT, 1728x1117: language and brightness prompts, the opening cutscenes, the title menu, New Game, the naming and difficulty prompts, the first dialogue and the run through the Tradia Desert prologue, 55 to 59 fps throughout by the Metal HUD, GPU 1.5 ms in cutscenes and 10 to 12 ms in the desert, no fault in 35 minutes. The first battle was not reached in that session. Why earlier engines fail, measured: on the Wine 10 engine (Sikarugir, r0 to r2) the game faults seconds after launch reading address 0x20FF in its own code, right after creating fibers and switching to one; on macOS the slot a game reads as its current fiber is the host thread's QoS class. Same crash with AVX advertised and on DXVK, so neither the CPU feature nor the graphics layer is involved. On the Wine 11 engines r5 to r7, which mirror the fiber pointer into that slot, the game opens a black window and hangs at full CPU: the mirrored pointer is what macOS's dispatch library reads as a QoS class on the main thread, and it faults on it. r8 swaps the slot between the two owners at every crossing between game code and Wine. Keyboard: Return confirms, Escape opens the pause menu with Skip for cutscenes, F fast-forwards dialogue. The Yes/No prompts default to No, so press Up before Return.",
   "knownIssues": [
     {
-      "symptom": "Wine 10 engine: page fault reading 0x20FF in the game's own code seconds after launch, no window",
-      "cause": "measured: the game's fiber pointer on macOS reads back as the thread's QoS class; the game hands it to SwitchToFiber",
-      "fix": "engine work (r8); no setting changes it"
+      "symptom": "Engines before r8: page fault reading 0x20FF seconds after launch (Wine 10, r0 to r2), or a black window and a hang at full CPU (Wine 11, r5 to r7)",
+      "cause": "measured: the game's fiber pointer and macOS's per-thread QoS class share one slot in the thread block; the earlier engines gave the slot to one side only",
+      "fix": "engine x64-crossover26.3-r8 or later; no setting changes it"
     },
     {
-      "symptom": "Wine 11 engine (r5 to r7): the window opens black and the process hangs at full CPU",
-      "cause": "measured: the engine's fiber mirror occupies the QoS slot macOS's dispatch library reads on the main thread, which then faults",
-      "fix": "engine work (r8)"
+      "symptom": "The full game with Denuvo is not verified here, only the free Prologue Demo",
+      "cause": "not measured",
+      "fix": "one report from a full-game run fills the gap"
     }
   ],
   "launchArgs": null,
-  "lastVerified": null
+  "lastVerified": "2026-09-12",
+  "verified": {
+    "chip": "M1 Pro",
+    "macos": "26.6.2",
+    "engine": "x64-crossover26.3-r8",
+    "fps": "55 to 59 in the prologue desert run at 1728x1117 on DXMT (Prologue Demo), 57 to 59 in cutscenes and menus",
+    "how": "Steam, demo launch, language and brightness prompts, opening cutscenes (skipped one with Escape then Skip), title menu, New Game, naming and difficulty prompts, first dialogue, then the run through the Tradia Desert under keyboard control. No fault in 35 minutes. The first battle was not reached."
+  }
 }
