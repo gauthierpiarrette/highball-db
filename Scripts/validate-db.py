@@ -39,6 +39,13 @@ for f in glob.glob("recipes/*/*.json"):
     if d.get("kind") not in ("launcher", "game", "tweak"): errors.append(f"{f}: bad kind")
     if not isinstance(d.get("steps"), list) or not d["steps"]: errors.append(f"{f}: steps missing")
     recipe_engines[d.get("id")] = d.get("engine")
+    # The CLI decodes a recipe's lastVerified as an object of five strings (date, engine, macos,
+    # chip, result), unlike a row's, which is a date string. A bare date here fails every CI run
+    # that validates recipes against the CLI (2026-09-12, the Metaphor recipe).
+    lv = d.get("lastVerified")
+    if lv is not None:
+        if not isinstance(lv, dict) or not all(isinstance(lv.get(k), str) and lv.get(k) for k in ("date", "engine", "macos", "chip", "result")):
+            errors.append(f"{f}: recipe lastVerified must be null or an object with string date, engine, macos, chip, result")
 
 # A fix that lives in an engine only reaches people if a recipe names that engine: Highball offers
 # a required engine at Play time, and otherwise the owner has to find "Update engine" in Settings.

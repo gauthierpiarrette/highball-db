@@ -27,6 +27,12 @@
       "fix": "engine x64-crossover26.3-r8 or later; no setting changes it"
     }
   ],
-  "lastVerified": "2026-09-12",
+  "lastVerified": {
+    "date": "2026-09-12",
+    "engine": "x64-crossover26.3-r8",
+    "macos": "26.6.2",
+    "chip": "Apple M1 Pro",
+    "result": "dxmt: the free Prologue Demo through the opening cutscenes, title menu, New Game, naming and difficulty prompts, first dialogue and the run through the Tradia Desert, 55 to 59 fps at 1728x1117 on an M1 Pro, no fault in 35 minutes. First battle not reached. Full game with Denuvo not run here."
+  },
   "engine": "x64-crossover26.3-r8"
 }
