@@ -1,0 +1,32 @@
+{
+  "id": "metaphor-refantazio",
+  "kind": "game",
+  "title": "Metaphor: ReFantazio",
+  "requires": [
+    "steam"
+  ],
+  "renderer": "dxmt",
+  "steps": [
+    {
+      "type": "environment",
+      "name": "ROSETTA_ADVERTISE_AVX",
+      "value": "1"
+    },
+    {
+      "type": "note",
+      "text": "Advertises AVX to the game through Rosetta. The one crash report on Highball (highball#80) is a page fault in the game's own code seconds after launch with AVX hidden, the shape a CPU-feature or anti-tamper check produces; CrossOver users run the game with AVX visible. If it still crashes with this on, say so on highball#80 with the new log."
+    },
+    {
+      "type": "note",
+      "text": "DirectX 11, so DXMT. CrossOver users report the sound cutting out and an audio fix; not looked at here yet."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "Crash within seconds of launch, page fault in the game's own code",
+      "cause": "assumed: AVX hidden under Rosetta",
+      "fix": "this recipe sets ROSETTA_ADVERTISE_AVX=1"
+    }
+  ],
+  "lastVerified": null
+}

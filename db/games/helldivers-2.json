@@ -1,0 +1,30 @@
+{
+  "id": "helldivers-2",
+  "title": "HELLDIVERS 2",
+  "steam_appid": 553850,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": {
+    "names": [
+      "GameGuard"
+    ],
+    "macVerdict": "warning",
+    "note": "nProtect GameGuard, a user-mode anti-cheat: CrossOver 26 users report it plays online through it, and it breaks with some game patches and comes back with the next. Not verified by Highball."
+  },
+  "provenance": "CrossOver 26 community reports (r/macgaming and r/Helldivers, 2026); on Highball one reporter hit the game's own 'Incompatible CPU detected' AVX check (highball#81, M5 Max, macOS 26.5.2, Highball 0.8.8, engine r0). Not verified by Highball.",
+  "notes": "DirectX 12 only, so it needs Apple's D3DMetal (Play offers the licence) and the Wine 11 engine (CrossOver 26.3 tree), which is where CrossOver users play it. Its first check is the CPU: it requires AVX2 and refuses to start with 'Incompatible CPU detected' unless AVX is advertised through Rosetta, which the recipe does. GameGuard runs in user mode and CrossOver users play online through it; every game patch can break that until the next one. 135 GB on disk.",
+  "knownIssues": [
+    {
+      "symptom": "'Incompatible CPU detected' at launch",
+      "cause": "the game requires AVX2 and Rosetta hides AVX unless asked",
+      "fix": "the recipe sets ROSETTA_ADVERTISE_AVX=1 (same as the Advertise AVX switch); Rosetta supports AVX2 on macOS 15 and later"
+    },
+    {
+      "symptom": "No DirectX 12 device on the default engine",
+      "cause": "the game is DirectX 12 only; DXMT and DXVK are DirectX 11 and 9",
+      "fix": "D3DMetal on the Wine 11 engine, which Play offers"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

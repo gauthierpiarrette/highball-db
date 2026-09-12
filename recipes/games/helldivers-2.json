@@ -1,0 +1,33 @@
+{
+  "id": "helldivers-2",
+  "kind": "game",
+  "title": "HELLDIVERS 2",
+  "requires": [
+    "steam"
+  ],
+  "engine": "x64-crossover26.3-r7",
+  "renderer": "d3dmetal",
+  "steps": [
+    {
+      "type": "environment",
+      "name": "ROSETTA_ADVERTISE_AVX",
+      "value": "1"
+    },
+    {
+      "type": "note",
+      "text": "The game checks for AVX2 before anything else and stops with 'Incompatible CPU detected' when Rosetta hides it (Highball's default). This recipe advertises it. Rosetta supports AVX2 on macOS 15 and later."
+    },
+    {
+      "type": "note",
+      "text": "DirectX 12 only: needs Apple's D3DMetal, which Play offers with Apple's licence, on the Wine 11 engine (CrossOver 26.3 tree) that CrossOver users play it on. GameGuard runs in user mode and CrossOver 26 users play online through it; a game patch can break that until the next one. Not verified on Highball yet: the first report that reaches the ship is the row."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "'Incompatible CPU detected' at launch",
+      "cause": "AVX2 required, AVX hidden under Rosetta",
+      "fix": "this recipe sets ROSETTA_ADVERTISE_AVX=1"
+    }
+  ],
+  "lastVerified": null
+}

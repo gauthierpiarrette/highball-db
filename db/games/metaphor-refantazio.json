@@ -1,0 +1,19 @@
+{
+  "id": "metaphor-refantazio",
+  "title": "Metaphor: ReFantazio",
+  "steam_appid": 2679460,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "CrossOver users show it running on Apple Silicon (a CrossOver 26 video on an M4 Mac mini with an audio fix, a CrossOver 24 report on macOS 15 reaching an early save); on Highball it crashed at launch for one reporter (highball#80, M5 Max, macOS 26.5.2, Highball 0.8.8, engine r0, DXMT, AVX not advertised). Not verified by Highball.",
+  "notes": "DirectX 11, Denuvo. The one Highball report is a crash inside the game's own code seconds after launch with AVX not advertised to the game (Highball's default): the crash sits in a fresh thread with nothing on its stack, the shape an anti-tamper or CPU-feature check produces. The recipe advertises AVX the way the Cyberpunk 2077 recipe does, which is the first thing to try; DXMT for the graphics. CrossOver users report the sound cutting out and a fix for it; not looked at here. Free Prologue Demo (Steam 3130330, 64 GB) reproduces the launch path.",
+  "knownIssues": [
+    {
+      "symptom": "Crash within seconds of launch, page fault in the game's own code, before any window",
+      "cause": "assumed, not measured: AVX hidden from the game under Rosetta (Highball's default), which the game or its anti-tamper does not tolerate",
+      "fix": "the recipe sets ROSETTA_ADVERTISE_AVX=1 (same as the Advertise AVX switch in the environment settings); report back if it still crashes with it on"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
