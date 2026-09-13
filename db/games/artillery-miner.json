@@ -1,0 +1,13 @@
+{
+  "id": "artillery-miner",
+  "title": "Artillery Miner",
+  "steam_appid": 4391380,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by phs1997 (highball-db#31, 2026-09-13), Apple M2 Max, macOS 15.6, Highball 0.9.9, engine x64-sikarugir10.0_6-r2, rated 5 of 5 after 302 minutes. Graphics mode not stated. Not verified by the maintainer.",
+  "notes": "Reported perfect on the default engine after five hours of play. The reporter did not say which graphics mode. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
