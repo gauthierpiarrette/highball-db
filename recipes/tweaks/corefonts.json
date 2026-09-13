@@ -1,0 +1,33 @@
+{
+  "id": "corefonts",
+  "kind": "tweak",
+  "title": "Microsoft core fonts",
+  "requires": [],
+  "renderer": null,
+  "steps": [
+    {
+      "type": "winetricks",
+      "verbs": [
+        "corefonts"
+      ],
+      "slow": "Downloads Microsoft's free core fonts (Arial, Times New Roman, Verdana and the rest of the 1996 set) from SourceForge and installs them into the environment, about a minute."
+    },
+    {
+      "type": "note",
+      "text": "Microsoft core fonts installed (Arial, Andale Mono, Comic Sans, Courier New, Georgia, Impact, Times New Roman, Trebuchet, Verdana, Webdings). Games that ask Windows for Arial by name draw text with it instead of nothing. Symptom this fixes when it applies, menus and labels that come up blank while images render, seen in Unity games."
+    }
+  ],
+  "knownIssues": [],
+  "lastVerified": {
+    "date": "2026-09-13",
+    "engine": "x64-sikarugir10.0_6-r2",
+    "macos": "26.6.2",
+    "chip": "Apple M1 Pro",
+    "result": "winetricks corefonts completes in about a minute on a fresh environment, 31 font files land in windows/Fonts (arial.ttf, times.ttf, verdana.ttf and the rest). Whether it restores a given game's missing text is per game, first asked for on highball#84 (PC Building Simulator, Unity, blank menus on DXMT and DXVK)."
+  },
+  "installedMarkers": [
+    {
+      "file": "windows/Fonts/arial.ttf"
+    }
+  ]
+}
