@@ -102,6 +102,12 @@ def answered(v):
 
 def appid_of(body):
     hits = {m for m in LABEL_AID.findall(body)} | {m for m in URL_AID.findall(body)}
+    # The issue form's own field: a '### Steam AppID (if a Steam game)' heading over the
+    # bare number. The parenthetical pushed the digits past LABEL_AID's reach, so the
+    # form's AppID read as null on every report after the form was shortened (#24).
+    v = find_label(body, ["Steam AppID (if a Steam game)", "Steam AppID", "Steam App ID", "AppID"])
+    if v and re.fullmatch(r"\d{2,8}", v.strip()):
+        hits.add(v.strip())
     return hits.pop() if len(hits) == 1 else None
 
 
