@@ -1,0 +1,13 @@
+{
+  "id": "cricket-19",
+  "title": "Cricket 19",
+  "steam_appid": 1028630,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by rajeshwrn (highball-db#25, 2026-09-13): Apple M1 Pro, macOS 26.5, Highball 0.9.9, engine x64-sikarugir10.0_6-r2, rated 4 of 5 (playable, minor issues) after 5 minutes. Graphics mode not stated. Not verified by the maintainer.",
+  "notes": "Reported playable on the default engine. The reporter did not say which graphics mode or what the minor issues were. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
