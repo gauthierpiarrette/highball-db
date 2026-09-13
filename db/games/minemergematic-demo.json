@@ -1,0 +1,13 @@
+{
+  "id": "minemergematic-demo",
+  "title": "MineMergeMatic Demo",
+  "steam_appid": 5029110,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by phs1997 (highball-db#28, 2026-09-13), Apple M2 Max, macOS 15.6, Highball 0.9.9, engine x64-sikarugir10.0_6-r2, rated 5 of 5 after 189 minutes. Graphics mode not stated. Not verified by the maintainer.",
+  "notes": "The free demo of MineMergeMatic (full game Steam 4976010). Reported perfect on the default engine after three hours. The reporter did not say which graphics mode. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
