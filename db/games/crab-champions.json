@@ -1,0 +1,13 @@
+{
+  "id": "crab-champions",
+  "title": "Crab Champions",
+  "steam_appid": 774801,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by atkgitxp (highball-db#27, 2026-09-13): Apple M4 Pro, macOS 26.6.2, Highball 0.9.9, engine x64-sikarugir10.0_6-r2, DXMT, rated 5 of 5 after 90 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT on the default engine after 90 minutes. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

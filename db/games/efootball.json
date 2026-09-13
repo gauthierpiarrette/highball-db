@@ -1,0 +1,13 @@
+{
+  "id": "efootball",
+  "title": "eFootball",
+  "steam_appid": 1665460,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by chinaitechs (highball-db#26, 2026-09-13): Apple M5 Pro, macOS 26.6.2, Highball 0.9.9, engine x64-sikarugir10.0_6-r2, rated 5 of 5 after 10 minutes. Graphics mode not stated. Not verified by the maintainer.",
+  "notes": "Reported perfect on the default engine after 10 minutes. The reporter did not say which graphics mode. Online play is the whole game, so the report covers that unless the reporter says otherwise. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
