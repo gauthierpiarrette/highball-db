@@ -1,0 +1,13 @@
+{
+  "id": "zoria-age-of-shattering",
+  "title": "Zoria: Age of Shattering",
+  "steam_appid": 1159090,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by soycanopa (highball-db#23, 2026-09-13): Apple M4, macOS 27.0, Highball 0.9.9, engine x64-sikarugir10.0_6-r2, D3DMetal, rated 4 of 5 (playable, minor issues) after 6 minutes. Not verified by the maintainer.",
+  "notes": "Reported playable on D3DMetal on the default engine. The reporter did not say what the minor issues were. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
