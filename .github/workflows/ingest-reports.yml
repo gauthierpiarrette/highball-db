@@ -71,6 +71,9 @@ jobs:
 
       - name: Ask the site to rebuild
         if: steps.parse.outputs.outcome == 'WROTE'
+        # The record is already committed above; a failed dispatch only delays the site,
+        # which rebuilds on its own schedule anyway (GitHub answered HTTP 500 twice, 2026-09-13).
+        continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
