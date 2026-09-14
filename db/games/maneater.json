@@ -1,0 +1,13 @@
+{
+  "id": "maneater",
+  "title": "Maneater",
+  "steam_appid": 629820,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by TONSCENE (highball-db#39, 2026-09-14), Apple M4, macOS 26.6.2, Highball 0.9.12, engine x64-crossover26.3-r4, rated 5 of 5 after 12 minutes. Store and graphics mode not stated. Not verified by the maintainer.",
+  "notes": "Reported perfect after 12 minutes on the CrossOver-tree engine r4. The reporter did not say which graphics mode or store. The Steam id on this row identifies the game, the reporter's copy may be the Epic one. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
