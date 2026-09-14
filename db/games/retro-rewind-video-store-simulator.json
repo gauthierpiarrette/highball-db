@@ -1,0 +1,13 @@
+{
+  "id": "retro-rewind-video-store-simulator",
+  "title": "Retro Rewind: Video Store Simulator",
+  "steam_appid": 3552140,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by barryloh (highball-db#32, 2026-09-14), Apple M1 Pro, macOS 26.5.1, Highball 0.9.11, engine x64-sikarugir10.0_6-r2, rated 5 of 5. Graphics mode not stated. Not verified by the maintainer.",
+  "notes": "Reported smooth with no frame drops on the game's Low graphics setting, on the default engine. The reporter did not say which graphics mode. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

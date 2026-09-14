@@ -1,0 +1,19 @@
+{
+  "id": "tcg-card-shop-simulator",
+  "title": "TCG Card Shop Simulator",
+  "steam_appid": 3070070,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by barryloh (highball-db#33, 2026-09-14), Apple M1 Pro, macOS 26.5.1, Highball 0.9.11, engine x64-sikarugir10.0_6-r2, rated 5 of 5. Graphics mode not stated. Not verified by the maintainer.",
+  "notes": "Reported playing well with no frame drops on the game's High setting, on the default engine. The reporter says the game hangs when switching away to another app while it runs, which is the fullscreen behaviour tracked on highball#72. The reporter did not say which graphics mode. No measurement here yet.",
+  "knownIssues": [
+    {
+      "symptom": "Hangs when switching to another app while the game runs (reported)",
+      "cause": "not measured, consistent with a fullscreen game losing the display, see highball#72",
+      "fix": "none recorded yet, stay in the game or quit it before switching"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
