@@ -5,6 +5,13 @@
   "status": "community",
   "renderer": "dxmt",
   "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
-  "notes": "D3D11; works",
-  "lastVerified": null
+  "notes": "D3D11; works Reported on the Epic copy by atkgitxp (highball-db#46, 2026-09-14), Apple M4 Pro, macOS 26.6.2, Highball 0.9.9, default engine, DXMT, 37 minutes: 30 to 55 fps at 100 percent render scale, noise artifacts on Kratos and Atreus that depend on lighting and depth, and inconsistent lighting with AMD FSR on, so the reporter recommends turning FSR off.",
+  "lastVerified": null,
+  "knownIssues": [
+    {
+      "symptom": "Noise artifacts on Kratos and Atreus depending on lighting and depth on DXMT (reported on an M4 Pro)",
+      "cause": "not measured",
+      "fix": "none verified, the reporter recommends turning AMD FSR off in the game's settings, which also cured inconsistent lighting"
+    }
+  ]
 }
