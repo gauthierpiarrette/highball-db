@@ -26,8 +26,8 @@
     },
     {
       "symptom": "On D3DMetal the session dies on Start with a Metal assertion, a texture of width and height 4294967295 (reported on a 13-inch M1 with 8 GB, macOS 26.6.2, highball#94)",
-      "cause": "not measured; the game asked for a render target sized -1, which points at its video settings, likely a resolution the game could not match on that display, rather than memory",
-      "fix": "none verified; set the resolution in the launcher's Options, Video to the display's own size and untick fullscreen, then Start"
+      "cause": "measured from the reporter's video.ini (highball#94): SHADOW_MAP_SIZE=-1, which the launcher writes when Shadows is set to off, becomes a shadow texture of size 4294967295 on D3DMetal and Metal refuses it. Mirror and cubemap SIZE=0 are the same class of value",
+      "fix": "in the launcher's Options, Video set Shadows to Low or higher (SHADOW_MAP_SIZE 1024 or 2048 in cfg/video.ini) and give Mirrors and Reflections a size (512 here); reported fix pending the reporter's confirmation"
     }
   ],
   "verified": {
