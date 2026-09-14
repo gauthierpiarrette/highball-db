@@ -1,0 +1,19 @@
+{
+  "id": "humanitz",
+  "title": "HumanitZ",
+  "steam_appid": 1766060,
+  "status": "community",
+  "renderer": "dxvk",
+  "anticheat": null,
+  "provenance": "Reported by frogkochapon (highball#95, 2026-09-14), Apple M5 Pro, macOS 26.6.2, Highball 0.9.11, engine x64-sikarugir10.0_6-r2. Crashed on DXMT, then reached the main menu on DXVK. Not verified by the maintainer.",
+  "notes": "Unreal Engine 4, DirectX 11. Use DXVK. On DXMT the game dies at start with an Unreal fatal error, CreateTexture2D failed with E_FAIL for a 1000x1000 R8G8 texture flagged D3D11_RESOURCE_MISC_SHARED (shared between processes), which DXMT cannot create. The recipe sets DXVK for this game. Reported reaching the main menu on DXVK on an M5 Pro; play beyond the menu not reported yet. No measurement here yet.",
+  "knownIssues": [
+    {
+      "symptom": "On DXMT the game crashes at start with \"Direct3DDevice->CreateTexture2D failed with error E_FAIL\", MiscFlags 0x2 (reported on an M5 Pro)",
+      "cause": "reported crash text: Unreal asks for a texture shared between processes and DXMT does not support shared resources",
+      "fix": "DXVK, set by the recipe"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

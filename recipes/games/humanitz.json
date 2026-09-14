@@ -1,0 +1,27 @@
+{
+  "id": "humanitz",
+  "kind": "game",
+  "title": "HumanitZ",
+  "requires": [
+    "steam"
+  ],
+  "renderer": "dxvk",
+  "steps": [
+    {
+      "type": "renderer",
+      "renderer": "dxvk"
+    },
+    {
+      "type": "note",
+      "text": "DXVK for this game. On DXMT it crashes at start asking for a texture shared between processes, which DXMT cannot create (highball#95, M5 Pro). Reported reaching the main menu on DXVK."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "On DXMT the game crashes at start with \"Direct3DDevice->CreateTexture2D failed with error E_FAIL\", MiscFlags 0x2 (reported on an M5 Pro)",
+      "cause": "reported crash text: Unreal asks for a texture shared between processes and DXMT does not support shared resources",
+      "fix": "DXVK, set by the recipe"
+    }
+  ],
+  "lastVerified": null
+}
