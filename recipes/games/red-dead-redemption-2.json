@@ -28,6 +28,17 @@
     {
       "type": "note",
       "text": "On a 16 GB Mac the game is memory-bound: its footprint passes 13 GB in the prologue and macOS swaps, so the frame rate decays over a minute of play. In Documents/Rockstar Games/Red Dead Redemption 2/Settings/system.xml, vSync 0 and fsr2Index 2 (FSR 2 balanced) keep the menus and cutscenes smoother and halve the GPU time there; they do not remove the memory wall. 24 GB or more removes it."
+    },
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\AppDefaults\\RDR2.exe\\DllOverrides",
+      "name": "vulkan-1",
+      "valueType": "REG_SZ",
+      "data": "native,builtin"
+    },
+    {
+      "type": "note",
+      "text": "Epic copy: Highball 0.9.12 or later starts it through a stand-in for Epic's launcher so the Rockstar launcher accepts the entitlement. If the game then stops with Error 18 (its Vulkan layer missing), copy vulkan-1.dll from Program Files/Rockstar Games/Social Club next to RDR2.exe in the game folder; the per-program override above makes the game use it. Reported on an M5 Max on engine r8, main menu reached at 1080p ultra (highball#93)."
     }
   ],
   "knownIssues": [
