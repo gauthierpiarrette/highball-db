@@ -4,7 +4,19 @@
   "steam_appid": 292030,
   "status": "community",
   "renderer": "dxmt",
-  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
-  "notes": "DX11 mode recommended",
-  "lastVerified": null
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball Report with details from WaterWANG-1014 (highball-db#38, 2026-09-14), Apple M4 Max, macOS 15.7.7, Highball 0.9.11, engine x64-sikarugir10.0_6-r2, DXMT, rated 3 of 5 (playable with workarounds). Not verified by the maintainer.",
+  "notes": "DirectX 11 build on DXMT is the reported way to play. Reported on an M4 Max: the CD Projekt RED launcher (REDlauncher.exe) that Steam starts first fails with \"Failed to create OpenGL context for QSurfaceFormat\", a Qt rendering problem in the launcher rather than the game. Workaround the reporter used, start bin/x64/witcher3.exe (the DirectX 11 build) directly, with Steam running, and the game launches on DXMT. Steam's own --launcher-skip option skips the launcher too but starts the DirectX 12 build, which needs D3DMetal, not measured here. In game the reporter sees the mouse pointer offset from where clicks and aim land, not yet resolved; running windowed at the display's own resolution is the usual remedy for that class of problem and is not verified for this game. No measurement by the maintainer yet.",
+  "lastVerified": null,
+  "knownIssues": [
+    {
+      "symptom": "The CD Projekt RED launcher fails before the game with \"Failed to create OpenGL context for QSurfaceFormat\" (reported on an M4 Max, DXMT)",
+      "cause": "reported, the launcher is a Qt app drawing through OpenGL and that path is not available under this Wine",
+      "fix": "start bin/x64/witcher3.exe (the DirectX 11 build) directly with Steam running, for example by dropping it onto Highball, which runs it in the environment; --launcher-skip as a Steam launch option also skips it but picks the DirectX 12 build"
+    },
+    {
+      "symptom": "Mouse pointer drawn away from where clicks and aim land in game (reported)",
+      "cause": "not measured",
+      "fix": "none verified, try windowed mode at the display's own resolution"
+    }
+  ]
 }
