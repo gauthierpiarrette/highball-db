@@ -1,0 +1,13 @@
+{
+  "id": "tape-to-tape",
+  "title": "Tape to Tape",
+  "steam_appid": 1566200,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by tyonoir (highball-db#34, 2026-09-14), Apple M1 Pro, macOS 26.6.2, Highball 0.9.11, engine x64-sikarugir10.0_6-r2, rated 5 of 5 after 1 minute. Graphics mode not stated. Not verified by the maintainer.",
+  "notes": "Reported perfect on the default engine after a one-minute session, so the report covers launch and the first screen rather than a match. The reporter did not say which graphics mode. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
