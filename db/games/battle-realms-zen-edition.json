@@ -1,0 +1,13 @@
+{
+  "id": "battle-realms-zen-edition",
+  "title": "Battle Realms: Zen Edition",
+  "steam_appid": 1025600,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by aefsupchom (highball-db#43, 2026-09-14), Apple M2 Ultra, macOS 15.7.7, Highball 0.9.13, engine x64-sikarugir10.0_6-r2, DXMT, rated 5 of 5 after 1 minute. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT on the default engine after a one-minute session, so launch and the first screen rather than a full match. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

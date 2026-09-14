@@ -1,0 +1,19 @@
+{
+  "id": "sayonara-wild-hearts",
+  "title": "Sayonara Wild Hearts",
+  "steam_appid": 1122720,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by atkgitxp (highball-db#45, 2026-09-14), Apple M4 Pro, macOS 26.6.2, Highball 0.9.9, engine x64-sikarugir10.0_6-r2, DXMT, rated 5 of 5 after 10 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT on the default engine as long as you stay in the game. Switching to another app loses the audio and the keyboard and mouse, which is the fullscreen behaviour tracked on highball#72. No measurement here yet.",
+  "knownIssues": [
+    {
+      "symptom": "Switching to another app while the game runs loses audio and keyboard and mouse input (reported)",
+      "cause": "not measured, consistent with a fullscreen game losing the display, see highball#72",
+      "fix": "none recorded, stay in the game or quit it before switching"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

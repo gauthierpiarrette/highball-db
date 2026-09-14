@@ -1,0 +1,19 @@
+{
+  "id": "story-of-seasons-friends-of-mineral-town",
+  "title": "STORY OF SEASONS: Friends of Mineral Town",
+  "steam_appid": 978780,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by piggybb (highball-db#42, 2026-09-14), Apple A18 Pro, macOS 26.5, Highball 0.9.12, engine x64-sikarugir10.0_6-r2, DXMT, rated 4 of 5 after 18 minutes. Not verified by the maintainer.",
+  "notes": "Reported smooth on DXMT on the default engine, with occasional minor screen flicker. Mods work (a Thai language patch tested by the reporter). No measurement here yet.",
+  "knownIssues": [
+    {
+      "symptom": "Occasional minor screen flicker (reported)",
+      "cause": "not measured",
+      "fix": "none recorded"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
