@@ -1,0 +1,13 @@
+{
+  "id": "soulstice",
+  "title": "Soulstice",
+  "steam_appid": 1602080,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by TonPC64 (highball-db#37, 2026-09-14) with the Epic copy, Apple M3 Pro, macOS 26.6.2, Highball 0.9.11, engine x64-sikarugir10.0_6-r2, DXMT, rated 4 of 5 (playable, minor issues) after 6 minutes. Not verified by the maintainer.",
+  "notes": "Reported playable on DXMT on the default engine, Epic copy, six minutes in. The reporter did not say what the minor issues were. The Steam id on this row is the same game on Steam, not measured on that copy. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
