@@ -13,7 +13,7 @@
     },
     {
       "type": "note",
-      "text": "DXVK for this game. On DXMT it crashes at start asking for a texture shared between processes, which DXMT cannot create (highball#95, M5 Pro). Reported reaching the main menu on DXVK."
+      "text": "DXVK gets past the DXMT crash (a shared texture DXMT cannot create, highball#95) but the reporter then found the game far too dark to play on it. D3DMetal is the next mode to try, unverified."
     }
   ],
   "knownIssues": [
@@ -21,6 +21,11 @@
       "symptom": "On DXMT the game crashes at start with \"Direct3DDevice->CreateTexture2D failed with error E_FAIL\", MiscFlags 0x2 (reported on an M5 Pro)",
       "cause": "reported crash text: Unreal asks for a texture shared between processes and DXMT does not support shared resources",
       "fix": "DXVK, set by the recipe"
+    },
+    {
+      "symptom": "On DXVK the menu draws but the game itself is very dark, characters and terrain barely visible (reported on an M5 Pro)",
+      "cause": "not measured, a lighting or shader problem on the DXVK path",
+      "fix": "none verified yet, D3DMetal is the next mode to try, the row is updated when the reporter answers"
     }
   ],
   "lastVerified": null
