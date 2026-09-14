@@ -18,6 +18,11 @@
       "symptom": "Without the recipe, on a display whose logical resolution is not 16:10: the picture sits down and to the right with black bars along the top and left, and is clipped at the right and bottom edges.",
       "cause": "The game asks Wine for a 1280x800 fullscreen mode; Wine's Mac driver reports success but leaves the display as it is (measured 2026-09-07), so the game positions itself for a resolution it never got.",
       "fix": "The recipe (2026-09-11): one registry value, EmulateModeset=y for the game's executable, makes Wine emulate the mode change and scale the fullscreen window to the real screen. Verified by eye at 1728x1117: fills the screen, centred. No engine change, works on the default engine."
+    },
+    {
+      "symptom": "On a 14-inch M1 Pro the game draws small in a corner of the screen and the mouse position does not match what it clicks (reported on 0.9.12, highball#67)",
+      "cause": "reported, consistent with the game's fullscreen mode switch being ignored so the window stays at the game's own size, see highball#72",
+      "fix": "none yet, tracked on highball#72"
     }
   ]
 }
