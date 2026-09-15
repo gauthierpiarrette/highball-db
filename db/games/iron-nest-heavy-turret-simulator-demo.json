@@ -1,0 +1,13 @@
+{
+  "id": "iron-nest-heavy-turret-simulator-demo",
+  "title": "IRON NEST: Heavy Turret Simulator Demo",
+  "steam_appid": 4300500,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by pookai16963 (highball-db#50, 2026-09-15), Apple M1, macOS 27.0, Highball 0.9.15, engine x64-sikarugir10.0_6-r2, rated 5 of 5 after 135 minutes. Graphics mode not stated. Not verified by the maintainer.",
+  "notes": "The free demo of IRON NEST: Heavy Turret Simulator (full game Steam 2950790). Reported perfect on the default engine after more than two hours on a base M1 on macOS 27. The reporter did not say which graphics mode. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
