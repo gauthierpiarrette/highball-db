@@ -1,0 +1,13 @@
+{
+  "id": "phasmophobia",
+  "title": "Phasmophobia",
+  "steam_appid": 739630,
+  "status": "community",
+  "renderer": "dxvk",
+  "anticheat": null,
+  "provenance": "Reported by L1am-cd (highball-db#55, 2026-09-15), Apple M3, macOS 27, Highball 0.9.10, engine x64-sikarugir10.0_6-r2, DXVK, rated 4 of 5 (playable, minor issues) after 84 minutes. Not verified by the maintainer.",
+  "notes": "Reported playable on DXVK over an 84-minute session with minor issues the reporter did not describe. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
