@@ -1,0 +1,13 @@
+{
+  "id": "train-simulator-classic",
+  "title": "Train Simulator Classic",
+  "steam_appid": 24010,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by D3NN15x (highball-db#51, 2026-09-15), MacBook Neo (Apple A18 Pro), macOS 27, Highball 0.9.16, engine x64-sikarugir10.0_6-r2, DXMT, rated 5 of 5 after about two hours. Not verified by the maintainer.",
+  "notes": "Reported to start and run perfectly on the low preset over a two-hour session on DXMT. On the fanless MacBook Neo the frame rate settled around 30 to 40 fps after a while as the machine warmed up, still playable. A Mac with active cooling should hold higher settings. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
