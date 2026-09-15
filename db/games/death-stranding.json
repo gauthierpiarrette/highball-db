@@ -4,8 +4,8 @@
   "steam_appid": 1190460,
   "status": "community",
   "renderer": "d3dmetal",
-  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
-  "notes": "DirectX 12, so D3DMetal. The game refuses to start without AVX (\"Death Stranding requires a CPU with AVX support\", highball#107 on an M5), which Rosetta hides unless asked, so the recipe advertises it to the game. Unverified until the reporter confirms.",
+  "provenance": "Reported working by detnarrrrrrrrr (highball#107, 2026-09-15), Apple M5, macOS 26.6.2, Highball 0.9.19, Epic copy, D3DMetal with AVX advertised. Not verified by the maintainer.",
+  "notes": "DirectX 12, so D3DMetal. The game refuses to start without AVX (\"Death Stranding requires a CPU with AVX support\", highball#107 on an M5), which Rosetta hides unless asked, so the recipe advertises it to the game. Confirmed by the reporter on an M5 with Highball 0.9.19.",
   "lastVerified": null,
   "nativeMac": {
     "available": true,
@@ -21,7 +21,7 @@
     {
       "symptom": "\"failed to load d3d12.dll\" with exception C06D007F right after the AVX check (reported on an M5, Epic copy, Highball 0.9.15)",
       "cause": "measured on Path of Exile 2 and Hogwarts Legacy the same day: the DirectX 12 timestamp shim numbered its exports from 1 and the game binds D3D12CreateDevice by ordinal 101",
-      "fix": "Highball 0.9.19 and its engines r3 and r9. Not yet confirmed by this reporter"
+      "fix": "Highball 0.9.19 and its engines r3 and r9. Confirmed by the reporter"
     }
   ]
 }

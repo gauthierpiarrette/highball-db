@@ -18,7 +18,7 @@
     },
     {
       "type": "note",
-      "text": "The game checks for AVX at launch and stops with \"Death Stranding requires a CPU with AVX support\" when Rosetta hides it (highball#107, M5). The recipe advertises AVX to the game. DirectX 12, so D3DMetal. Unverified until the reporter confirms."
+      "text": "The game checks for AVX at launch and stops with \"Death Stranding requires a CPU with AVX support\" when Rosetta hides it (highball#107, M5). The recipe advertises AVX to the game. DirectX 12, so D3DMetal. Confirmed by the reporter on an M5 with Highball 0.9.19 (Epic copy)."
     }
   ],
   "knownIssues": [
@@ -30,7 +30,7 @@
     {
       "symptom": "\"failed to load d3d12.dll\" with exception C06D007F right after the AVX check (reported on an M5, Epic copy, Highball 0.9.15)",
       "cause": "measured on Path of Exile 2 and Hogwarts Legacy the same day: the DirectX 12 timestamp shim numbered its exports from 1 and the game binds D3D12CreateDevice by ordinal 101",
-      "fix": "Highball 0.9.19 and its engines r3 and r9. Not yet confirmed by this reporter"
+      "fix": "Highball 0.9.19 and its engines r3 and r9. Confirmed by the reporter"
     }
   ],
   "lastVerified": null
