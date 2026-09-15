@@ -1,0 +1,24 @@
+{
+  "id": "path-of-exile-2",
+  "title": "Path of Exile 2",
+  "steam_appid": 2694490,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by littlemilktea (highball-db#53, 2026-09-15), Apple M5 16 GB, macOS 27, Highball 0.9.15, engine x64-crossover26.3-r8, rated 3 of 5: reached login, class selection and town at about 79 fps (FSR Performance, 1512x945, medium textures) through a manual launch on Apple's D3DMetal 4.0b2 with the timestamp shim off the path. The normal Play path failed on that Mac. Not verified by the maintainer.",
+  "notes": "DirectX 12 only, so D3DMetal. Until the engine update of 2026-09-15 the normal Play path failed at startup with Wine exception 0xc06d007f: the game binds D3D12CreateDevice by ordinal 101 (Microsoft's numbering, mirrored by D3DMetal) and Highball's timestamp shim in front of d3d12.dll numbered its exports from 1, so the delay-load failed. The shim now mirrors the real ordinals. On DXMT and DXVK the game stops at a GetAdapterInfo dialog, they have no DirectX 12. Reported playable on D3DMetal 4.0b2 with rendering artifacts, white overbright character surfaces at class selection and occasional green material artifacts in town, cause not isolated. The reporter needed the engine's library directories on the manual launch for text to render, which Highball's own launch sets.",
+  "knownIssues": [
+    {
+      "symptom": "Quits at startup, Wine reports unhandled exception 0xc06d007f, on both engines (reported on an M5, macOS 26 and 27)",
+      "cause": "measured: the game resolves D3D12CreateDevice by ordinal 101 and the timestamp shim's d3d12.dll numbered its exports from 1, so the delay-load found no ordinal 101",
+      "fix": "engine update of 2026-09-15 (shim component d3dmetal-tsshim-20260915 mirrors Microsoft's ordinals). Not yet confirmed by the reporter"
+    },
+    {
+      "symptom": "White overbright character surfaces at class selection and occasional green material artifacts in town (reported on D3DMetal 4.0b2)",
+      "cause": "not isolated",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
