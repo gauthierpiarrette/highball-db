@@ -5,13 +5,13 @@
   "status": "community",
   "renderer": "d3dmetal",
   "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball Failure report with a crash dump from WaterWANG-1014 (highball-db#48, 2026-09-15).",
-  "notes": "DirectX 12, so D3DMetal, and heavy. Under investigation with an M4 Max on macOS 15.7.7 (highball-db#48). The crash seconds after launch turned out to be the game refusing two graphics API flags on its command line (-dx11 plus a second one), measured from its crash context, so keep at most one such flag in the Steam launch options. On D3DMetal without -dx11 the game runs about 30 seconds then reports \"Failed to initialize DirectX 12\", cause not measured. CrossOver 26 users report the game running on this D3DMetal on macOS 15, so a working configuration exists. DXMT and DXVK cannot run the DirectX 12 build.",
+  "notes": "DirectX 12 only, so D3DMetal, and heavy. Do not add -dx11, the game appends its own DirectX 12 flag and Unreal refuses two, an immediate crash on every graphics mode (measured from the crash context on an M4 Max, highball-db#48). On D3DMetal on macOS 15.7.7 the game runs about 30 seconds then reports \"Failed to initialize DirectX 12\", cause under investigation. CrossOver 26 users report the game running on this D3DMetal on macOS 15, so a working configuration exists. DXMT and DXVK cannot run the DirectX 12 build.",
   "lastVerified": null,
   "knownIssues": [
     {
       "symptom": "Crashes at second zero at fixed addresses on any graphics mode when -dx11 is among the Steam launch options (reported on an M4 Max, macOS 15.7.7)",
-      "cause": "measured from CrashContext.runtime-xml: \"-d3d12, -d3d11, -vulkan, and -opengl are mutually exclusive options, but more than one was specified on the command-line\". The game got two graphics API flags. Highball and this row add none, the source of the second flag is being traced",
-      "fix": "one graphics API flag at most in the Steam launch options. AVX advertised to the game turned out unrelated, the runs that got past this crash were the runs without -dx11"
+      "cause": "measured from CrashContext.runtime-xml: \"-d3d12, -d3d11, -vulkan, and -opengl are mutually exclusive options, but more than one was specified on the command-line\", with only -dx11 on the line the process was started with. Inferred, not yet measured: the game appends its own DirectX 12 flag after start, it forces DirectX 12 and WB's FAQ warns DirectX 11 workarounds break launching",
+      "fix": "do not use -dx11 with this game, on any platform. The DirectX 12 build on D3DMetal is the only path. AVX advertised to the game turned out unrelated"
     },
     {
       "symptom": "\"Failed to initialize DirectX 12. Graphics drivers may require an update\" after about 30 seconds on D3DMetal with AVX on (reported on an M4 Max, macOS 15.7.7)",
