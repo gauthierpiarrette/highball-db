@@ -5,13 +5,18 @@
   "status": "community",
   "renderer": "d3dmetal",
   "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball Failure report with a crash dump from WaterWANG-1014 (highball-db#48, 2026-09-15).",
-  "notes": "DirectX 12, so D3DMetal, and heavy. Reported on an M4 Max, macOS 15.7.7 (highball-db#48): crashes a few seconds after launch at the same code addresses on DXVK and on D3DMetal, before rendering, so the graphics mode is not the cause. The recipe advertises AVX to the game as the first thing to rule out, unverified. DXMT and DXVK cannot run the DirectX 12 build at all.",
+  "notes": "DirectX 12, so D3DMetal, and heavy. The game assumes AVX, so the recipe advertises it to the game (confirmed on an M4 Max, highball-db#48, without it the game crashes seconds after launch whatever the mode). On macOS 15.7.7 the game then refused to initialise DirectX 12 on D3DMetal; every DirectX 12 game verified here ran on macOS 26, so that path may need 26. The DirectX 11 path (-dx11) on DXMT is the alternative to try, unverified. DXMT and DXVK cannot run the DirectX 12 build.",
   "lastVerified": null,
   "knownIssues": [
     {
-      "symptom": "Crashes a few seconds after launch, before any rendering, at the same addresses whatever the graphics mode (reported on an M4 Max, macOS 15.7.7)",
-      "cause": "not measured; a startup check is the likely class, AVX the usual suspect under Rosetta",
-      "fix": "unverified: advertise AVX to the game (the recipe sets ROSETTA_ADVERTISE_AVX=1)"
+      "symptom": "Crashes a few seconds after launch at the same addresses whatever the graphics mode (reported on an M4 Max)",
+      "cause": "confirmed by the reporter: the game assumes AVX, which Rosetta hides unless asked",
+      "fix": "the recipe advertises AVX to the game (ROSETTA_ADVERTISE_AVX=1)"
+    },
+    {
+      "symptom": "\"Failed to initialize DirectX 12. Graphics drivers may require an update\" after about 30 seconds on D3DMetal (reported on an M4 Max, macOS 15.7.7)",
+      "cause": "not measured; no DirectX 12 game has been verified here on macOS 15, all on macOS 26",
+      "fix": "unverified: the game's DirectX 11 path on DXMT with the -dx11 Steam launch option, or macOS 26"
     }
   ]
 }

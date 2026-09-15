@@ -18,14 +18,19 @@
     },
     {
       "type": "note",
-      "text": "DirectX 12, so D3DMetal. Advertising AVX to the game is set because on an M4 Max (highball-db#48) the game crashed a few seconds after launch at the same code addresses on DXVK and on D3DMetal, which points at a startup check rather than the renderer, and a CPU feature the game assumes is the usual cause of that pattern under Rosetta. Unverified until the reporter confirms."
+      "text": "DirectX 12, so D3DMetal. AVX advertised to the game is confirmed necessary (highball-db#48, M4 Max): without it the game crashes a few seconds after launch whatever the graphics mode. On macOS 15.7.7 the game then reports \"Failed to initialize DirectX 12\" on D3DMetal; every DirectX 12 title verified here ran on macOS 26, so the DirectX 12 path may need macOS 26. The game's own DirectX 11 path (Steam launch option -dx11) on DXMT is the alternative to try, unverified."
     }
   ],
   "knownIssues": [
     {
-      "symptom": "Crashes a few seconds after launch, before any rendering, at the same addresses whatever the graphics mode (reported on an M4 Max, macOS 15.7.7)",
-      "cause": "not measured; a startup check is the likely class, AVX the usual suspect under Rosetta",
-      "fix": "unverified: advertise AVX to the game (the recipe sets ROSETTA_ADVERTISE_AVX=1)"
+      "symptom": "Crashes a few seconds after launch at the same addresses whatever the graphics mode (reported on an M4 Max)",
+      "cause": "confirmed by the reporter: the game assumes AVX, which Rosetta hides unless asked",
+      "fix": "the recipe advertises AVX to the game (ROSETTA_ADVERTISE_AVX=1)"
+    },
+    {
+      "symptom": "\"Failed to initialize DirectX 12. Graphics drivers may require an update\" after about 30 seconds on D3DMetal (reported on an M4 Max, macOS 15.7.7)",
+      "cause": "not measured; no DirectX 12 game has been verified here on macOS 15, all on macOS 26",
+      "fix": "unverified: the game's DirectX 11 path on DXMT with the -dx11 Steam launch option, or macOS 26"
     }
   ],
   "lastVerified": null
