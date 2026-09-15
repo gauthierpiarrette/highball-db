@@ -1,0 +1,13 @@
+{
+  "id": "melatonin",
+  "title": "Melatonin",
+  "steam_appid": 1585220,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by detnarrrrrrrrr (highball-db#52, 2026-09-15), Apple M5, macOS 26.6.2, Highball 0.9.15, engine x64-sikarugir10.0_6-r2, DXMT, rated 5 of 5 after 4 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT after a four-minute session, so the report covers launch and the first levels of this rhythm game rather than a long run. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
