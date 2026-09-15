@@ -4,7 +4,14 @@
   "steam_appid": 990080,
   "status": "community",
   "renderer": "d3dmetal",
-  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
-  "notes": "heavy; D3D12 \u2014 d3dmetal",
-  "lastVerified": null
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball Failure report with a crash dump from WaterWANG-1014 (highball-db#48, 2026-09-15).",
+  "notes": "DirectX 12, so D3DMetal, and heavy. Reported on an M4 Max, macOS 15.7.7 (highball-db#48): crashes a few seconds after launch at the same code addresses on DXVK and on D3DMetal, before rendering, so the graphics mode is not the cause. The recipe advertises AVX to the game as the first thing to rule out, unverified. DXMT and DXVK cannot run the DirectX 12 build at all.",
+  "lastVerified": null,
+  "knownIssues": [
+    {
+      "symptom": "Crashes a few seconds after launch, before any rendering, at the same addresses whatever the graphics mode (reported on an M4 Max, macOS 15.7.7)",
+      "cause": "not measured; a startup check is the likely class, AVX the usual suspect under Rosetta",
+      "fix": "unverified: advertise AVX to the game (the recipe sets ROSETTA_ADVERTISE_AVX=1)"
+    }
+  ]
 }

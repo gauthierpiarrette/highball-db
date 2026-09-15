@@ -1,0 +1,32 @@
+{
+  "id": "hogwarts-legacy",
+  "kind": "game",
+  "title": "Hogwarts Legacy",
+  "requires": [
+    "steam"
+  ],
+  "renderer": "d3dmetal",
+  "steps": [
+    {
+      "type": "renderer",
+      "renderer": "d3dmetal"
+    },
+    {
+      "type": "environment",
+      "name": "ROSETTA_ADVERTISE_AVX",
+      "value": "1"
+    },
+    {
+      "type": "note",
+      "text": "DirectX 12, so D3DMetal. Advertising AVX to the game is set because on an M4 Max (highball-db#48) the game crashed a few seconds after launch at the same code addresses on DXVK and on D3DMetal, which points at a startup check rather than the renderer, and a CPU feature the game assumes is the usual cause of that pattern under Rosetta. Unverified until the reporter confirms."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "Crashes a few seconds after launch, before any rendering, at the same addresses whatever the graphics mode (reported on an M4 Max, macOS 15.7.7)",
+      "cause": "not measured; a startup check is the likely class, AVX the usual suspect under Rosetta",
+      "fix": "unverified: advertise AVX to the game (the recipe sets ROSETTA_ADVERTISE_AVX=1)"
+    }
+  ],
+  "lastVerified": null
+}
