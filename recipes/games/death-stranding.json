@@ -1,0 +1,32 @@
+{
+  "id": "death-stranding",
+  "kind": "game",
+  "title": "Death Stranding",
+  "requires": [
+    "steam"
+  ],
+  "renderer": "d3dmetal",
+  "steps": [
+    {
+      "type": "renderer",
+      "renderer": "d3dmetal"
+    },
+    {
+      "type": "environment",
+      "name": "ROSETTA_ADVERTISE_AVX",
+      "value": "1"
+    },
+    {
+      "type": "note",
+      "text": "The game checks for AVX at launch and stops with \"Death Stranding requires a CPU with AVX support\" when Rosetta hides it (highball#107, M5). The recipe advertises AVX to the game. DirectX 12, so D3DMetal. Unverified until the reporter confirms."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "\"Death Stranding requires a CPU with AVX support\" at launch (reported on an M5)",
+      "cause": "Rosetta hides AVX unless asked",
+      "fix": "the recipe advertises AVX to the game (ROSETTA_ADVERTISE_AVX=1), or the Compatibility switch in Environment settings"
+    }
+  ],
+  "lastVerified": null
+}

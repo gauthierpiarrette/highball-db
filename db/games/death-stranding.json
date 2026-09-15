@@ -5,11 +5,18 @@
   "status": "community",
   "renderer": "d3dmetal",
   "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
-  "notes": "D3D12 — d3dmetal",
+  "notes": "DirectX 12, so D3DMetal. The game refuses to start without AVX (\"Death Stranding requires a CPU with AVX support\", highball#107 on an M5), which Rosetta hides unless asked, so the recipe advertises it to the game. Unverified until the reporter confirms.",
   "lastVerified": null,
   "nativeMac": {
     "available": true,
     "where": "Mac App Store only",
     "note": "A native Director's Cut exists on the Mac App Store (macOS 13.3, M1 or later), but it is a separate purchase: a Steam copy will not launch it."
-  }
+  },
+  "knownIssues": [
+    {
+      "symptom": "\"Death Stranding requires a CPU with AVX support\" at launch (reported on an M5)",
+      "cause": "Rosetta hides AVX unless asked",
+      "fix": "the recipe advertises AVX to the game (ROSETTA_ADVERTISE_AVX=1), or the Compatibility switch in Environment settings"
+    }
+  ]
 }
