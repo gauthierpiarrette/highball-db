@@ -18,19 +18,19 @@
     },
     {
       "type": "note",
-      "text": "DirectX 12, so D3DMetal. AVX advertised to the game is confirmed necessary (highball-db#48, M4 Max): without it the game crashes a few seconds after launch whatever the graphics mode. On macOS 15.7.7 the game then reports \"Failed to initialize DirectX 12\" on D3DMetal; every DirectX 12 title verified here ran on macOS 26, so the DirectX 12 path may need macOS 26. The game's own DirectX 11 path (Steam launch option -dx11) on DXMT is the alternative to try, unverified."
+      "text": "DirectX 12, so D3DMetal. The recipe advertises AVX to the game; on an M4 Max a D3DMetal run only got past an immediate crash with it on, but a later DXMT -dx11 run crashed at the same addresses with AVX confirmed on, so the crash cause is not settled (highball-db#48). On macOS 15.7.7 the game then reported \"Failed to initialize DirectX 12\" on D3DMetal, cause not measured, not a macOS 26 requirement (CrossOver 26 runs this D3DMetal on macOS 15)."
     }
   ],
   "knownIssues": [
     {
-      "symptom": "Crashes a few seconds after launch at the same addresses whatever the graphics mode (reported on an M4 Max)",
-      "cause": "confirmed by the reporter: the game assumes AVX, which Rosetta hides unless asked",
-      "fix": "the recipe advertises AVX to the game (ROSETTA_ADVERTISE_AVX=1)"
+      "symptom": "Crashes a few seconds after launch at the same addresses on DXVK, DXMT (with -dx11) and once on D3DMetal (reported on an M4 Max, macOS 15.7.7)",
+      "cause": "not settled. AVX was the first lead and a D3DMetal run got past this point with AVX advertised, but a later DXMT -dx11 run with AVX confirmed in the launch log crashed at the same addresses, so AVX alone does not explain it",
+      "fix": "none yet. The recipe keeps ROSETTA_ADVERTISE_AVX=1, harmless either way. The game's own log (AppData/Local/Hogwarts Legacy/Saved/Logs) and CrashContext.runtime-xml are the next evidence"
     },
     {
-      "symptom": "\"Failed to initialize DirectX 12. Graphics drivers may require an update\" after about 30 seconds on D3DMetal (reported on an M4 Max, macOS 15.7.7)",
-      "cause": "not measured; no DirectX 12 game has been verified here on macOS 15, all on macOS 26",
-      "fix": "unverified: the game's DirectX 11 path on DXMT with the -dx11 Steam launch option, or macOS 26"
+      "symptom": "\"Failed to initialize DirectX 12. Graphics drivers may require an update\" after about 30 seconds on D3DMetal with AVX on (reported on an M4 Max, macOS 15.7.7)",
+      "cause": "not measured. Not a macOS 26 requirement, CrossOver 26 ships the same D3DMetal 3.0 on macOS 15 and the game is reported running there",
+      "fix": "none yet, waiting on the game's log lines from the D3D12 RHI"
     }
   ],
   "lastVerified": null
