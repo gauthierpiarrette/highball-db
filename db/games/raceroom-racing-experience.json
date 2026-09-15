@@ -1,0 +1,19 @@
+{
+  "id": "raceroom-racing-experience",
+  "title": "RaceRoom Racing Experience",
+  "steam_appid": 211500,
+  "status": "community",
+  "renderer": "dxvk",
+  "anticheat": null,
+  "provenance": "Reported by peppearci (highball-db#60, 2026-09-15), Apple M3, macOS 15.8, Highball 0.9.17, engine x64-sikarugir10.0_6-r2, DXVK, rated 3 of 5: practice sessions and races with AI for about five minutes, smooth with minor stutter, fullscreen, 4x AA and motion blur fine, after replacing the engine's Direct3D 9 DLL by hand. Not verified by the maintainer.",
+  "notes": "Direct3D 9 game. On the shipped engine it froze on the pre-race screen after the track loaded with VK_ERROR_DEVICE_LOST. The reporter replaced the engine's Direct3D 9 DLL (DXVK-Kegworks 1.10.4, frameworks/renderer/d9vk/wine/x86_64-windows/d3d9.dll) with the d3d9.dll from DXVK 3.1.1 and the game then played, practice and races with AI, smooth with minor stutter. That swap is a hand edit of the engine today; shipping a newer Direct3D 9 layer is an engine decision that needs the other Direct3D 9 games rechecked (Portal, Portal 2, Five Nights at Freddy's).",
+  "knownIssues": [
+    {
+      "symptom": "Freezes on the pre-race screen after the track loads, VK_ERROR_DEVICE_LOST (reported on an M3, macOS 15.8, engine r2)",
+      "cause": "reported: the engine's Direct3D 9 layer (DXVK-Kegworks 1.10.4); DXVK 3.1.1's d3d9.dll does not lose the device",
+      "fix": "workaround: replace frameworks/renderer/d9vk/wine/x86_64-windows/d3d9.dll in the engine with DXVK 3.1.1's, a hand edit the app does not support yet. Candidate for an engine revision after the other Direct3D 9 games are rechecked"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
