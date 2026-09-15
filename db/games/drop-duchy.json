@@ -1,0 +1,13 @@
+{
+  "id": "drop-duchy",
+  "title": "Drop Duchy",
+  "steam_appid": 2525310,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by tartartartartartar (highball-db#49, 2026-09-15), Apple M4, macOS 15.3.1, Highball 0.9.15, engine x64-sikarugir10.0_6-r2, DXMT, rated 5 of 5 after 2 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT on the default engine after a two-minute session, so launch and the first screens. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
