@@ -6,8 +6,19 @@
   "renderer": "dxvk",
   "anticheat": null,
   "provenance": "Reported by L1am-cd (highball-db#55, 2026-09-15), Apple M3, macOS 27, Highball 0.9.10, engine x64-sikarugir10.0_6-r2, DXVK, rated 4 of 5 (playable, minor issues) after 84 minutes. Not verified by the maintainer.",
-  "notes": "Reported playable on DXVK over an 84-minute session with minor issues the reporter did not describe. No measurement here yet.",
-  "knownIssues": [],
+  "notes": "Reported playable on DXVK over an 84-minute session. Voice chat works in a match but not in the lobby, and the game's voice recognition does not pick up speech, which the text interface covers. No measurement here yet.",
+  "knownIssues": [
+    {
+      "symptom": "Voice chat works in a match but not in the lobby (reported on an M3)",
+      "cause": "not investigated",
+      "fix": "none known"
+    },
+    {
+      "symptom": "Voice recognition does not pick up speech (reported on an M3)",
+      "cause": "not investigated, the game's Windows speech recognition has no counterpart in Wine",
+      "fix": "use the game's text interface for the ghost questions"
+    }
+  ],
   "launchArgs": null,
   "lastVerified": null
 }
