@@ -1,0 +1,24 @@
+{
+  "id": "left-4-dead",
+  "title": "Left 4 Dead",
+  "steam_appid": 500,
+  "status": "community",
+  "renderer": "wined3d",
+  "anticheat": null,
+  "provenance": "Reported by detnarrrrrrrrr (highball#108, 2026-09-15), Apple M5, macOS 26.6.2, Highball 0.9.15, engine x64-sikarugir10.0_6-r2: playable in a window on Wine's Direct3D at 15 to 20 fps on low settings with -w 1280 -h 720 -windowed -borderless. DXMT, DXVK and D3DMetal ran at 3 to 5 fps for the reporter. Not verified by the maintainer.",
+  "notes": "Fullscreen fails: the game asks macOS for its display mode, Wine's Mac driver refuses, and the Source engine then cannot create its Direct3D device (\"Failed to create D3D device!\") whatever the graphics mode. Windowed and borderless works, and the row adds -windowed -noborder to the launch. Reported playable only on Wine's Direct3D, 15 to 20 fps on low settings on an M5; the other modes ran at 3 to 5 fps for the reporter, cause not investigated. A per-game EmulateModeset registry value, as in the Five Nights at Freddy's recipe, should let fullscreen work too, untested here.",
+  "knownIssues": [
+    {
+      "symptom": "\"Failed to create D3D device!\" at launch in every graphics mode (reported on an M5, macOS 26.6.2)",
+      "cause": "measured from the log: the display mode change for fullscreen is refused (NtUserChangeDisplaySettings returns -2), so the Direct3D device cannot be created fullscreen",
+      "fix": "run windowed, the row adds -windowed -noborder. Confirmed by the reporter with -w 1280 -h 720 -windowed -borderless"
+    },
+    {
+      "symptom": "3 to 5 fps on DXMT, DXVK and D3DMetal, 15 to 20 fps on Wine's Direct3D on low settings (reported on an M5)",
+      "cause": "not investigated",
+      "fix": "none known, use Wine's Direct3D"
+    }
+  ],
+  "launchArgs": ["-windowed", "-noborder"],
+  "lastVerified": null
+}
