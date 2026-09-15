@@ -1,0 +1,17 @@
+{
+  "id": "dead-by-daylight",
+  "title": "Dead by Daylight",
+  "steam_appid": 381210,
+  "status": "blocked-anticheat",
+  "renderer": null,
+  "provenance": "Are We Anti-Cheat Yet? (MIT), kernel anti-cheat vendor; reported blocked at launch by detnarrrrrrrrr (highball#104, 2026-09-15, Apple M5, macOS 26.6.2, Highball 0.9.15)",
+  "notes": "Anti-cheat: Easy Anti-Cheat. The game refuses to start without the anti-cheat's kernel driver, which cannot run under Wine on macOS, so no mode or engine changes this. The reporter saw the anti-cheat block on an M5.",
+  "anticheat": {
+    "names": [
+      "Easy Anti-Cheat"
+    ],
+    "macVerdict": "blocked",
+    "note": "kernel anti-cheat; cannot work under Wine on macOS"
+  },
+  "lastVerified": null
+}
