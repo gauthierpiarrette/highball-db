@@ -27,7 +27,7 @@
     {
       "symptom": "Trees near the player pop in and out of view (reported on an M5 Max at 60 fps, Epic copy, engine r8)",
       "cause": "not measured; the reporter points at MoltenVK's Metal heap allocation",
-      "fix": "unverified: set MVK_CONFIG_USE_MTLHEAP=0 in the environment's variables"
+      "fix": "none known. Tested by the reporter on an M5 Max (highball#93): MVK_CONFIG_USE_MTLHEAP=0 stops the game from starting (vkCreateImage: MTLHeap must be enabled for 2D-on-3D or block texel view compatible images), MVK_CONFIG_LIVE_CHECK_ALL_RESOURCES=1 starts but the pop-in is worse, FSR off changes nothing, maximum geometry LOD drops below 1 fps. MoltenVK 1.4.2's heap and texture fixes are the next thing to try in a test engine"
     }
   ],
   "verified": {
