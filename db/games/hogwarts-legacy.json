@@ -4,19 +4,19 @@
   "steam_appid": 990080,
   "status": "community",
   "renderer": "d3dmetal",
-  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball Failure report with a crash dump from WaterWANG-1014 (highball-db#48, 2026-09-15).",
-  "notes": "DirectX 12 only, so D3DMetal, and heavy. Do not add -dx11, the game appends its own DirectX 12 flag and Unreal refuses two, an immediate crash on every graphics mode (measured from the crash context on an M4 Max, highball-db#48). On D3DMetal on macOS 15.7.7 the game runs about 30 seconds then reports \"Failed to initialize DirectX 12\", cause under investigation. CrossOver 26 users report the game running on this D3DMetal on macOS 15, so a working configuration exists. DXMT and DXVK cannot run the DirectX 12 build.",
+  "provenance": "Reported working by WaterWANG-1014 (highball-db#48, 2026-09-15), Apple M4 Max, macOS 15.7.7, Highball 0.9.19 with the corrected DirectX 12 shim, D3DMetal, launches and runs. Not verified by the maintainer.",
+  "notes": "DirectX 12 only, so D3DMetal. Before Highball 0.9.19 it stopped at \"Failed to initialize DirectX 12\" on every Mac: the timestamp shim in front of D3DMetal's d3d12.dll numbered its exports from 1 and the game asks for D3D12CreateDevice by ordinal 101, so it never got a device (highball-db#48, the same bug as Path of Exile 2). Fixed in the engines shipped with 0.9.19 (r3 and r9). Do not add -dx11, the game refuses two graphics API flags and crashes at start. The recipe still advertises AVX to the game, it was on in the working run and whether it is needed is not known.",
   "lastVerified": null,
   "knownIssues": [
     {
-      "symptom": "Crashes at second zero at fixed addresses on any graphics mode when -dx11 is among the Steam launch options (reported on an M4 Max, macOS 15.7.7)",
-      "cause": "measured from CrashContext.runtime-xml: \"-d3d12, -d3d11, -vulkan, and -opengl are mutually exclusive options, but more than one was specified on the command-line\", with only -dx11 on the line the process was started with. Inferred, not yet measured: the game appends its own DirectX 12 flag after start, it forces DirectX 12 and WB's FAQ warns DirectX 11 workarounds break launching",
-      "fix": "do not use -dx11 with this game, on any platform. The DirectX 12 build on D3DMetal is the only path. AVX advertised to the game turned out unrelated"
+      "symptom": "\"Failed to initialize DirectX 12\" a few seconds after launch on D3DMetal, no crash, no log (reported on an M4 Max, macOS 15.7.7)",
+      "cause": "measured: the DirectX 12 timestamp shim exported its functions numbered from 1 and the game binds D3D12CreateDevice by ordinal 101",
+      "fix": "Highball 0.9.19 and its engines r3 and r9. Confirmed by the reporter"
     },
     {
-      "symptom": "\"Failed to initialize DirectX 12. Graphics drivers may require an update\" after about 30 seconds on D3DMetal with AVX on (reported on an M4 Max, macOS 15.7.7)",
-      "cause": "not measured. Not a macOS 26 requirement, CrossOver 26 ships the same D3DMetal 3.0 on macOS 15 and the game is reported running there",
-      "fix": "none yet, waiting on the game's log lines from the D3D12 RHI"
+      "symptom": "Crashes at second zero at fixed addresses when -dx11 is among the Steam launch options",
+      "cause": "measured from the crash context: the game adds its own DirectX 12 flag and Unreal refuses two graphics API flags",
+      "fix": "never use -dx11 with this game"
     }
   ]
 }
