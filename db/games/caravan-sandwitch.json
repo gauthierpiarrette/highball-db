@@ -1,0 +1,13 @@
+{
+  "id": "caravan-sandwitch",
+  "title": "Caravan SandWitch",
+  "steam_appid": 1582650,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by abhishek-allyos (highball-db#75, 2026-09-16), Apple M1 Pro, macOS 26.6.2, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, rated 4 of 5 (playable, minor issues) after 14 minutes. Graphics mode not stated. Not verified by the maintainer.",
+  "notes": "Reported playable with minor issues the reporter did not describe, after a 14-minute session. The graphics mode was not stated. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

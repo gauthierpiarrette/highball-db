@@ -1,0 +1,13 @@
+{
+  "id": "9-kings",
+  "title": "9 Kings",
+  "steam_appid": 2784470,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by MarutSuwa (highball-db#76, 2026-09-16), Apple M3, macOS 15.7.4, Highball 0.9.15, engine x64-sikarugir10.0_6-r2, rated 5 of 5 after 48 minutes. Graphics mode not stated. Not verified by the maintainer.",
+  "notes": "This game has a native macOS version on Steam, so the Mac Steam app runs it directly without Highball. The Windows build was reported perfect through Highball after a 48-minute session, mode not stated. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
