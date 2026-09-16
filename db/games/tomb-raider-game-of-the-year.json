@@ -1,0 +1,13 @@
+{
+  "id": "tomb-raider-game-of-the-year",
+  "title": "Tomb Raider Game of the Year Edition",
+  "steam_appid": 203160,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by diego-wendt (highball-db#63, 2026-09-16), Apple M4 Pro, macOS 15.7.9, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, DXMT, rated 5 of 5 after 11 minutes on the Epic copy. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT after a session of 11 minutes, so the report covers launch and the opening rather than a long run. The reporter played the Epic copy; the Steam id here is the same game on Steam. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
