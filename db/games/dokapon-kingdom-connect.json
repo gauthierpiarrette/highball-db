@@ -1,0 +1,19 @@
+{
+  "id": "dokapon-kingdom-connect",
+  "title": "Dokapon Kingdom: Connect",
+  "steam_appid": 2338140,
+  "status": "community",
+  "renderer": "wined3d",
+  "anticheat": null,
+  "provenance": "Reported by JingKritsada (highball-db#87, 2026-09-16), Apple M3, macOS 27, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, rated 5 of 5 provisionally after a workaround: the game launches, displays and responds to input, extended play and frame rate not verified. Not verified by the maintainer.",
+  "notes": "An OpenGL game. On the stock engine it crashes at startup through a null OpenGL function pointer (GLEW's glClearDepthf, a function macOS's own OpenGL does not provide). The reporter got it running by placing Mesa's Windows OpenGL build (opengl32.dll and libgallium_wgl.dll from mesa-dist-win 26.2.0) beside the game's exe with a per-exe native override for opengl32, launched through Steam with sync off. That is a hand edit Highball does not ship; it points at the same OpenGL gap as Mewgenics and at Mesa as the way to close it. Performance was not measured and may be software rendering.",
+  "knownIssues": [
+    {
+      "symptom": "Crashes at startup with a page fault at address zero on every graphics mode (reported on an M3, macOS 27)",
+      "cause": "reported from the disassembly: the game calls glClearDepthf through GLEW and Wine's macOS OpenGL has no such function, so the pointer is null",
+      "fix": "workaround by hand: Mesa's Windows opengl32.dll and libgallium_wgl.dll next to DkkStm.exe with a native,builtin override for opengl32 on that exe. Not shipped by Highball yet"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
