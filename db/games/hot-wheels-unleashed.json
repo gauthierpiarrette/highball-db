@@ -1,0 +1,13 @@
+{
+  "id": "hot-wheels-unleashed",
+  "title": "HOT WHEELS UNLEASHED",
+  "steam_appid": 1271700,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by yanisgflann (highball-db#90, 2026-09-16), Apple M2, macOS 27, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, D3DMetal, Epic copy, rated 3 of 5 (playable with workarounds) after 36 minutes. The workarounds were not described. Not verified by the maintainer.",
+  "notes": "Reported playable with workarounds on D3DMetal over a 36-minute session on an M2, Epic copy; the reporter did not say which workarounds. The Steam id here is the same game on Steam. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
