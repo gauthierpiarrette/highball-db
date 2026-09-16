@@ -1,0 +1,19 @@
+{
+  "id": "half-life-2",
+  "title": "Half-Life 2",
+  "steam_appid": 220,
+  "status": "community",
+  "renderer": "dxvk",
+  "anticheat": null,
+  "provenance": "Reported by HasAks38 (highball#122, 2026-09-16), Apple M1, macOS 27, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, DXVK: playable, with frame drops when shooting or when an NPC is hit. Not verified by the maintainer.",
+  "notes": "Plays on DXVK, the default mode. The reporter saw frame drops on shots, blood and muzzle flashes on an M1, which matches DXVK compiling each effect the first time it appears with async compilation off; the stalls fade as effects get compiled. Async shader compilation in the environment's Graphics settings is the first thing to try. No measurement here yet.",
+  "knownIssues": [
+    {
+      "symptom": "Frame drops when shooting or when an NPC is hit, blood and muzzle flash effects (reported on an M1, macOS 27)",
+      "cause": "reported, consistent with first-use shader compilation on DXVK with async off",
+      "fix": "turn on DXVK async shader compilation in the environment's Graphics settings; the newer Direct3D 9 layer in candidate engine r4 is worth a try"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
