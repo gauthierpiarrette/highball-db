@@ -1,0 +1,13 @@
+{
+  "id": "heroes-of-might-and-magic-olden-era",
+  "title": "Heroes of Might and Magic: Olden Era",
+  "steam_appid": 3105440,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by tepliy (highball-db#82, 2026-09-16), Apple M5, macOS 27, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, rated 5 of 5 after 329 minutes. Graphics mode not stated. Not verified by the maintainer.",
+  "notes": "Reported perfect over a five and a half hour session on an M5, the longest single report in the database, so this covers real play rather than the opening. The graphics mode was not stated. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
