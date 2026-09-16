@@ -1,0 +1,19 @@
+{
+  "id": "five-nights-at-freddys-2",
+  "title": "Five Nights at Freddy's 2",
+  "steam_appid": 332800,
+  "status": "community",
+  "renderer": "dxvk",
+  "anticheat": null,
+  "provenance": "Reported by sadsaltygamer37 (highball#67, 2026-09-15): runs on Wine's own Direct3D at about 5 fps, freezes on DXVK after the first frame, default engine. Not verified by the maintainer.",
+  "notes": "Reported to freeze on DXVK and crawl on Wine's own Direct3D. The first game needed Wine to emulate its small fullscreen mode, and the recipe here applies the same setting to this game's executable, unverified. No measurement here yet.",
+  "knownIssues": [
+    {
+      "symptom": "Freezes on DXVK after the first frame, runs at about 5 fps on Wine's own Direct3D (reported on the default engine, highball#67)",
+      "cause": "not measured; the same fullscreen mode request the first game makes is the first suspect",
+      "fix": "this recipe's display-mode emulation, unverified"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
