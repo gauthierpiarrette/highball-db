@@ -1,0 +1,13 @@
+{
+  "id": "slay-the-spire-2",
+  "title": "Slay the Spire 2",
+  "steam_appid": 2868840,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by hamza-sahin (highball-db#84, 2026-09-16), Apple M2 Pro, macOS 26.6.2, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, rated 5 of 5 after 271 minutes. Graphics mode not stated. Not verified by the maintainer.",
+  "notes": "This game has a native macOS version on Steam, so the Mac Steam app runs it directly without Highball. The Windows build was reported perfect through Highball over a four and a half hour session on an M2 Pro, mode not stated. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
