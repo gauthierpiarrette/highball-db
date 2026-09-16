@@ -1,0 +1,13 @@
+{
+  "id": "lego-star-wars-the-skywalker-saga",
+  "title": "LEGO Star Wars: The Skywalker Saga",
+  "steam_appid": 920210,
+  "status": "community",
+  "renderer": "dxvk",
+  "anticheat": null,
+  "provenance": "Reported by yanisgflann (highball-db#89, 2026-09-16), Apple M2, macOS 27, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, DXVK, rated 4 of 5 (playable, minor issues) after 58 minutes. Not verified by the maintainer.",
+  "notes": "Reported playable on DXVK over a one-hour session on an M2, with minor issues the reporter did not describe. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
