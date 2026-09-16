@@ -1,0 +1,13 @@
+{
+  "id": "20-minutes-till-dawn",
+  "title": "20 Minutes Till Dawn",
+  "steam_appid": 1966900,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by joacocerdan (highball-db#92, 2026-09-16), Apple M4, macOS 26.6.2, Highball 0.9.22, engine x64-sikarugir10.0_6-r3, DXMT, rated 5 of 5 after 17 minutes. Not verified by the maintainer.",
+  "notes": "This game has a native macOS version on Steam, so the Mac Steam app runs it directly without Highball. The Windows build was reported perfect on DXMT after a 17-minute session on an M4. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
