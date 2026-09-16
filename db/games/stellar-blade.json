@@ -1,0 +1,13 @@
+{
+  "id": "stellar-blade",
+  "title": "Stellar Blade",
+  "steam_appid": 3489700,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#66, 2026-09-16), Apple M1, macOS 26.7, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, D3DMetal, rated 5 of 5 after 21 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on D3DMetal after a session of 21 minutes. The reporter migrated a save from a Whisky bottle and it restored fine. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

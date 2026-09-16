@@ -1,0 +1,13 @@
+{
+  "id": "golden-chambers",
+  "title": "Golden Chambers",
+  "steam_appid": 2437570,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by nikisheen (highball-db#74, 2026-09-16), Apple M1 Pro, macOS 26.5, Highball 0.9.9, engine x64-sikarugir10.0_6-r2, DXMT, rated 5 of 5 after 26 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT after a session of 26 minutes. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

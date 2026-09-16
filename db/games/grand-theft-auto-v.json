@@ -43,6 +43,11 @@
       "symptom": "GTA Online will not connect.",
       "cause": "BattlEye, a kernel-level anti-cheat, which cannot run under Wine.",
       "fix": "none. Story mode only."
+    },
+    {
+      "symptom": "A DualSense controller does not bind in the game while it works in other games in the same environment (reported on an M1, highball-db#72)",
+      "cause": "not investigated. The game reads controllers through XInput and DirectInput rather than Steam Input, and the log shows Wine's HID device-matching errors",
+      "fix": "none known, keyboard and mouse work. Steam's controller configuration for the game is the first thing to try"
     }
   ]
 }

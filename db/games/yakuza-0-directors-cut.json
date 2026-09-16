@@ -1,0 +1,13 @@
+{
+  "id": "yakuza-0-directors-cut",
+  "title": "Yakuza 0 Director's Cut",
+  "steam_appid": 2988580,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#67, 2026-09-16), Apple M1, macOS 26.7, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, D3DMetal, rated 5 of 5 after 1 minute plus about 40 minutes earlier in Whisky. Not verified by the maintainer.",
+  "notes": "Reported perfect on D3DMetal after a session of 1 minute plus about 40 minutes earlier in Whisky. The reporter imported a save from a Whisky bottle and got straight back in-game. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
