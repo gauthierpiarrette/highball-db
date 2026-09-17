@@ -1,0 +1,19 @@
+{
+  "id": "workers-and-resources-soviet-republic",
+  "title": "Workers & Resources: Soviet Republic",
+  "steam_appid": 784150,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by teoyidu (highball-db#102, 2026-09-17), Apple M3 Pro, macOS 26.6.2, Highball 0.9.23, engine x64-sikarugir10.0_6-r3, DXMT, rated 4 of 5 (playable, minor issues). Not verified by the maintainer.",
+  "notes": "Reported playable on DXMT. The reporter saw some audio and performance issues at very high graphics settings, more than the game's low demands would suggest. No measurement here yet.",
+  "knownIssues": [
+    {
+      "symptom": "Audio and performance issues at very high graphics settings",
+      "cause": null,
+      "fix": "Lower the graphics preset (reported by the community, not measured here)"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

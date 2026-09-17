@@ -1,0 +1,13 @@
+{
+  "id": "uncharted-legacy-of-thieves-collection",
+  "title": "UNCHARTED: Legacy of Thieves Collection",
+  "steam_appid": 1659420,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by Acremis57 (highball-db#103, 2026-09-17), Apple M4 Pro, macOS 27.0 as entered, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, D3DMetal, rated 4 of 5 (playable, minor issues) after 43 minutes. Not verified by the maintainer.",
+  "notes": "Reported playable with minor issues on D3DMetal after a session of 43 minutes; the report does not say which issues. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

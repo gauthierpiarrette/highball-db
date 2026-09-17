@@ -1,0 +1,13 @@
+{
+  "id": "this-war-of-mine",
+  "title": "This War of Mine",
+  "steam_appid": 282070,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by ericfelipemoreira (highball-db#101, 2026-09-17), Epic Games Store copy, Apple M3, macOS 26.6.2, Highball 0.9.23, engine x64-sikarugir10.0_6-r3, DXMT, rated 5 of 5 after 51 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT after a session of 51 minutes, installed through the Epic Games Store. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
