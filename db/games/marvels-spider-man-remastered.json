@@ -6,8 +6,19 @@
   "renderer": null,
   "anticheat": null,
   "provenance": "Reported by moffatluke (highball-db#99, 2026-09-17), Apple M5 Pro, macOS 27, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, rated 5 of 5 after 84 minutes. Graphics mode not stated. Not verified by the maintainer.",
-  "notes": "Reported perfect over an 84-minute session on an M5 Pro, 60 to 120 fps on medium to high settings with the game's own frame generation turned on. The game is DirectX 12 only, so the mode was almost certainly D3DMetal, but the reporter did not state it. No measurement here yet.",
-  "knownIssues": [],
+  "notes": "Reported perfect over an 84-minute session on an M5 Pro, 60 to 120 fps on medium to high settings with the game's own frame generation turned on. The game is DirectX 12 only, so the mode was almost certainly D3DMetal, but the reporter did not state it. No measurement here yet. Two warning dialogs appear at launch and can be dismissed with OK, one about the graphics driver being below requirements and one claiming no graphics card is installed; both come from the game reading a driver version D3DMetal does not report. The reporter also had to switch the game to windowed mode, fullscreen did not work.",
+  "knownIssues": [
+    {
+      "symptom": "Two warnings at launch, 'driver below the current game requirements' and 'no installed graphics card has been detected' (reported on an M5 Pro)",
+      "cause": "the game reads a driver version and adapter identity that D3DMetal does not report the way a Windows driver does",
+      "fix": "click OK on both, the game runs"
+    },
+    {
+      "symptom": "Fullscreen does not work, the game had to be switched to windowed (reported on an M5 Pro)",
+      "cause": "not measured; matches the fullscreen mode-switch limitation on macOS (highball#72)",
+      "fix": "use windowed or borderless in the game's display settings"
+    }
+  ],
   "launchArgs": null,
   "lastVerified": null
 }
