@@ -1,0 +1,13 @@
+{
+  "id": "holocure-save-the-fans",
+  "title": "HoloCure - Save the Fans!",
+  "steam_appid": 2420510,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by ksstp94139-byte (highball-db#98, 2026-09-17), Apple M2 Pro, macOS 26.5.2, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, D3DMetal, rated 5 of 5 after 2 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on D3DMetal after a two-minute session on an M2 Pro, so this covers launch and the first run. A free GameMaker game. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
