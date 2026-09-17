@@ -1,7 +1,9 @@
 {
   "id": "gog-galaxy",
   "kind": "launcher",
-  "blocked": { "reason": "GOG Galaxy installs but its login window renders black, so you can't sign in. Its DRM-free offline installers run directly in a bottle instead." },
+  "blocked": {
+    "reason": "GOG Galaxy installs but its login window renders black, so you can't sign in. Its DRM-free offline installers run directly in a bottle instead."
+  },
   "title": "GOG Galaxy",
   "renderer": "dxmt",
   "steps": [
@@ -48,7 +50,7 @@
   "knownIssues": [
     {
       "symptom": "Installs and runs (services, logs, background client) but the login window is black; login is impossible.",
-      "cause": "same engine limitation as Ubisoft Connect: the client's embedded Chromium UI fails GPU (ANGLE) init under this Wine build on every renderer. --disable-gpu switches and the Lutris libglesv2 override were tested 2026-08-25 and do not help (the override makes page load fail outright).",
+      "cause": "same engine limitation as Ubisoft Connect: the client's embedded Chromium UI fails GPU (ANGLE) init under this Wine build on every renderer. --disable-gpu switches and the Lutris libglesv2 override were tested 2026-08-25 and do not help (the override makes page load fail outright). On the Wine 11 engine (x64-crossover26.3-r9 with the cross-process CEF fix that made Steam, Rockstar and Ubisoft render), Galaxy 2.1.6.29 gets further: the login window is created and its frontend loads, then its Qt6WebEngineCore crashes with an access violation at a fixed offset one to three seconds later, with or without QTWEBENGINE_CHROMIUM_FLAGS=--disable-gpu (measured 2026-09-18, M1 Pro, DXMT).",
       "fix": "waiting on the engine fix tracked at Sikarugir-App/Sikarugir#257. Meanwhile GOG games are DRM-free: download offline game installers from gog.com in a browser and run them directly in a bottle."
     }
   ]
