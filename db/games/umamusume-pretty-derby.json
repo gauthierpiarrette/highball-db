@@ -5,7 +5,7 @@
   "status": "reported-upstream",
   "renderer": "dxmt",
   "provenance": "DXMT changelog v0.73 (github.com/3Shain/dxmt/releases)",
-  "notes": "login background video fixed",
+  "notes": "login background video fixed Community: left click dead in the game on macOS 27.0 beta while right click and the Steam window work (highball#144), unresolved.",
   "lastVerified": null,
   "anticheat": {
     "names": [
@@ -13,5 +13,12 @@
     ],
     "macVerdict": "warning",
     "note": "anti-cheat present; Linux/Proton support does not extend to macOS — userspace path works for some titles"
-  }
+  },
+  "knownIssues": [
+    {
+      "symptom": "Left click does nothing in the game while right click works (reported on an M5, macOS 27.0 beta, Highball 0.9.19, DXMT); clicks work in the Steam window",
+      "cause": "not measured: the game reads the mouse through Unity's Input System (raw input), the Steam client through ordinary window messages, and macOS 27 is untested here",
+      "fix": "none verified. Try Properties, Controller, Disable Steam Input for the game in the Steam window, and unplug any controller, the game is known to misroute mouse input with a pad present"
+    }
+  ]
 }
