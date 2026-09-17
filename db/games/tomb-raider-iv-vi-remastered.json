@@ -1,0 +1,24 @@
+{
+  "id": "tomb-raider-iv-vi-remastered",
+  "title": "Tomb Raider IV-VI Remastered",
+  "steam_appid": 2525380,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by marc-garcia (highball#136, 2026-09-17), Apple M1 Pro, macOS 27, Highball 0.9.19, engine x64-sikarugir10.0_6-r3: crashes at launch on every mode until CX_FWD_COMPAT_GL_CTX=1 is set, then runs correctly. Not verified by the maintainer.",
+  "notes": "An OpenGL game, so the graphics mode does not matter. It crashed at launch because it asks for an OpenGL 3.2 core context without the forward-compatible bit macOS requires; the recipe sets the CrossOver switch that adds it, confirmed by the reporter, and turns on RetinaMode for the game so it renders at full resolution. Highball 0.9.24 sets the switch for every launch. No measurement here yet.",
+  "knownIssues": [
+    {
+      "symptom": "Crashes right after launch on every graphics mode, page fault at address zero (reported on an M1 Pro, macOS 27)",
+      "cause": "measured by the reporter with WINEDEBUG=+wgl: the game requests an OpenGL 3.2 core context without the forward-compatible bit and Wine's Mac driver refuses it",
+      "fix": "this recipe sets CX_FWD_COMPAT_GL_CTX=1, confirmed by the reporter"
+    },
+    {
+      "symptom": "Pixelated picture, the game renders at 1512x982 and is upscaled (reported on an M1 Pro)",
+      "cause": "Wine's Mac driver renders at the logical resolution unless RetinaMode is on",
+      "fix": "this recipe turns RetinaMode on for the game's executable, unverified here"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

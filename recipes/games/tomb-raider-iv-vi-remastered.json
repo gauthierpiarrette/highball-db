@@ -1,0 +1,40 @@
+{
+  "id": "tomb-raider-iv-vi-remastered",
+  "kind": "game",
+  "title": "Tomb Raider IV-VI Remastered",
+  "requires": [
+    "steam"
+  ],
+  "renderer": null,
+  "steps": [
+    {
+      "type": "environment",
+      "name": "CX_FWD_COMPAT_GL_CTX",
+      "value": "1"
+    },
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\AppDefaults\\tomb456.exe\\Mac Driver",
+      "name": "RetinaMode",
+      "valueType": "REG_SZ",
+      "data": "y"
+    },
+    {
+      "type": "note",
+      "text": "An OpenGL game. It asks Wine's Mac driver for a 3.2 core context without the forward-compatible bit, which macOS requires, so the driver returned nothing and the game crashed on its first OpenGL call, on every graphics mode. The CrossOver switch the engine's Mac driver carries adds the bit (found and confirmed by the reporter of highball#136 on an M1 Pro, macOS 27). RetinaMode for the game's executable makes it render at the display's real resolution instead of an upscaled 1512x982, reported by the same person, scoped to tomb456.exe."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "Crashes right after launch on every graphics mode, page fault at address zero (reported on an M1 Pro, macOS 27)",
+      "cause": "measured by the reporter with WINEDEBUG=+wgl: the game requests an OpenGL 3.2 core context without the forward-compatible bit and Wine's Mac driver refuses it",
+      "fix": "this recipe sets CX_FWD_COMPAT_GL_CTX=1, confirmed by the reporter"
+    },
+    {
+      "symptom": "Pixelated picture, the game renders at 1512x982 and is upscaled (reported on an M1 Pro)",
+      "cause": "Wine's Mac driver renders at the logical resolution unless RetinaMode is on",
+      "fix": "this recipe turns RetinaMode on for the game's executable, unverified here"
+    }
+  ],
+  "lastVerified": null
+}
