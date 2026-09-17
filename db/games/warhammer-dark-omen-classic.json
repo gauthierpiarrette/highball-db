@@ -1,0 +1,19 @@
+{
+  "id": "warhammer-dark-omen-classic",
+  "title": "Warhammer: Dark Omen (Classic)",
+  "steam_appid": 4280860,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by the highball#120 reporter (2026-09-16), Apple M5 Pro, macOS 26.6.2, Highball 0.9.19: launches with audio but never draws a frame on any mode or engine. The maintainer bought it on 2026-09-17 and reproduced on an M1 Pro, engine x64-sikarugir10.0_6-r3.",
+  "notes": "1998 DirectDraw and Direct3D Retained Mode game, re-released by SNEG with dgVoodoo 2.86 (its ddraw.dll, D3DImm.dll and d3drm.dll sit beside DarkOmen.exe with dgVoodoo.conf). Wine loads its own ddraw in front of those by default, and that path renders nothing: Wine's ddraw logs 'Can't find a flip target' every frame, so the game runs blind (the reporter's finding, reproduced). Letting the bundled dgVoodoo load (DLL overrides ddraw,d3dimm,d3drm=n,b) gets a Direct3D 11 device and a 640x480 exclusive swapchain through DXMT or DXVK, then dgVoodoo's ddraw crashes with a page fault right after DXGI sets a 960x600 at 120 Hz display mode, with dgVoodoo set to Direct3D 11 feature level 10.0 or 11.0, windowed or not, with or without EmulateModeset. Not playable yet; investigation continues in highball#120.",
+  "knownIssues": [
+    {
+      "symptom": "Black screen with sound on every mode",
+      "cause": "measured: Wine's own DirectDraw has no flip target for the game's primary surface; the bundled dgVoodoo wrapper crashes at the display-mode change when loaded instead",
+      "fix": "none yet"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
