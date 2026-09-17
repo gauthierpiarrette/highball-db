@@ -20,11 +20,11 @@
     }
   ],
   "launchArgs": null,
-  "lastVerified": {
-    "date": "2026-09-17",
-    "engine": "x64-sikarugir10.0_6-r3",
-    "macos": "26.6.2",
+  "lastVerified": "2026-09-17",
+  "verified": {
     "chip": "Apple M1 Pro",
-    "result": "free demo only: title screen and main menu on D3DMetal, 84 to 110 fps at 1280x720 windowed; gameplay not exercised"
+    "macos": "26.6.2",
+    "engine": "x64-sikarugir10.0_6-r3",
+    "fps": "about 84 on the title screen and 30 to 110 in the main menu at 1280x720 windowed, free demo, gameplay not exercised"
   }
 }
