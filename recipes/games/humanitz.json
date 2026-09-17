@@ -5,15 +5,15 @@
   "requires": [
     "steam"
   ],
-  "renderer": "dxvk",
+  "renderer": "d3dmetal",
   "steps": [
     {
       "type": "renderer",
-      "renderer": "dxvk"
+      "renderer": "d3dmetal"
     },
     {
       "type": "note",
-      "text": "DXVK gets past the DXMT crash (a shared texture DXMT cannot create, highball#95) but the reporter then found the game far too dark to play on it. D3DMetal is the next mode to try, unverified."
+      "text": "D3DMetal gets past the DXMT crash (a shared texture DXMT cannot create, highball#95) and, unlike DXVK, lights the scenes: the maintainer ran the free demo on an M1 Pro on 2026-09-17 through the menus, character creation and the spawn picker, all with lit 3D backdrops at 45 to 57 fps fullscreen on the built-in display. The reporter found DXVK far too dark to play. Gameplay past the spawn is not measured here yet."
     }
   ],
   "knownIssues": [

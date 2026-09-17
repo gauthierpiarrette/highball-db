@@ -3,22 +3,28 @@
   "title": "HumanitZ",
   "steam_appid": 1766060,
   "status": "community",
-  "renderer": "dxvk",
+  "renderer": "d3dmetal",
   "anticheat": null,
   "provenance": "Reported by frogkochapon (highball#95, 2026-09-14), Apple M5 Pro, macOS 26.6.2, Highball 0.9.11, engine x64-sikarugir10.0_6-r2. Crashed on DXMT, then reached the main menu on DXVK. Not verified by the maintainer.",
-  "notes": "Unreal Engine 4, DirectX 11. Use DXVK. On DXMT the game dies at start with an Unreal fatal error, CreateTexture2D failed with E_FAIL for a 1000x1000 R8G8 texture flagged D3D11_RESOURCE_MISC_SHARED (shared between processes), which DXMT cannot create. The recipe sets DXVK for this game. Reported reaching the main menu on DXVK on an M5 Pro, but the game itself then draws far too dark to play. D3DMetal is the next mode to try, not reported yet. No measurement here yet.",
+  "notes": "Unreal Engine 4, DirectX 11. Use D3DMetal, set by the recipe. On DXMT the game dies at start with an Unreal fatal error, CreateTexture2D failed with E_FAIL for a 1000x1000 R8G8 texture flagged D3D11_RESOURCE_MISC_SHARED, which DXMT cannot create. On DXVK it reaches the menu but the reporter found the game far too dark to play. On D3DMetal the maintainer ran the free demo (Steam 1773210) through the menus, character creation and the spawn picker with lit 3D backdrops at 45 to 57 fps fullscreen at 1728x1117 on an M1 Pro; gameplay past the spawn is not measured here yet.",
   "knownIssues": [
     {
       "symptom": "On DXMT the game crashes at start with \"Direct3DDevice->CreateTexture2D failed with error E_FAIL\", MiscFlags 0x2 (reported on an M5 Pro)",
       "cause": "reported crash text: Unreal asks for a texture shared between processes and DXMT does not support shared resources",
-      "fix": "DXVK, set by the recipe"
+      "fix": "D3DMetal (or DXVK), set by the recipe"
     },
     {
-      "symptom": "On DXVK the menu draws but the game itself is very dark, characters and terrain barely visible (reported on an M5 Pro)",
-      "cause": "not measured, a lighting or shader problem on the DXVK path",
-      "fix": "none verified yet, D3DMetal is the next mode to try, the row is updated when the reporter answers"
+      "symptom": "On DXVK the menu draws but the game is very dark, characters and terrain barely visible (reported on an M5 Pro)",
+      "cause": "not measured, a lighting problem on the DXVK path; D3DMetal lights the same scenes",
+      "fix": "D3DMetal, set by the recipe from 2026-09-17"
     }
   ],
   "launchArgs": null,
-  "lastVerified": null
+  "lastVerified": "2026-09-17",
+  "verified": {
+    "chip": "Apple M1 Pro",
+    "macos": "26.6.2",
+    "engine": "x64-sikarugir10.0_6-r3",
+    "fps": "about 45 to 57 in the menus and spawn picker at 1728x1117 fullscreen, free demo, gameplay not exercised"
+  }
 }
