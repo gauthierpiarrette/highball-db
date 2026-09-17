@@ -1,0 +1,13 @@
+{
+  "id": "combat-master",
+  "title": "Combat Master",
+  "steam_appid": 2281730,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by willie (highball-db#107, 2026-09-17), Apple M4 Pro, macOS 27.0 as entered, Highball 0.9.23, engine x64-sikarugir10.0_6-r3, graphics mode not stated, rated 4 of 5 (playable, minor issues) after 2 minutes. Not verified by the maintainer.",
+  "notes": "This game has a native macOS version on Steam, so the Mac Steam app runs it directly without Highball. The Windows build was reported playable through Highball after two minutes, mode not stated, so this says it starts and renders. Online PvP: the game's own anti-cheat is not recorded here, so a ban risk on the Windows build under Wine cannot be ruled out. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
