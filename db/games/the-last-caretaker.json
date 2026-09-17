@@ -1,0 +1,30 @@
+{
+  "id": "the-last-caretaker",
+  "title": "The Last Caretaker",
+  "steam_appid": 1783560,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported crashing before the main menu by Metal-Gear-Solid (highball#138, 2026-09-17), Apple M3 Ultra, Highball 0.9.23, mode not stated. The maintainer ran the free demo (Steam 3916150) on 2026-09-17 on an M1 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r3, D3DMetal: it reaches the main menu; gameplay was not exercised.",
+  "notes": "Unreal Engine 5, Direct3D 12 only. Use D3DMetal: the demo starts, shows its title and main menu at 84 to 110 fps windowed at 1280x720 on an M1 Pro (Metal HUD), with the Visual C++ 2015-2022 runtime installed in the environment first, which the game's own prerequisite check demands. On DXMT or DXVK (no Direct3D 12) it cannot reach the menu, which is the most likely cause of the reported crash. From 0.9.26 Play picks D3DMetal for Unreal 5 builds on its own. Gameplay past the menu is not measured here yet.",
+  "knownIssues": [
+    {
+      "symptom": "Starts, then crashes before the main menu (reported on an M3 Ultra, Highball 0.9.23)",
+      "cause": "most likely the environment's DXMT mode, which has no Direct3D 12; the game is Direct3D 12 only",
+      "fix": "On the game's page, Advanced, set the mode to D3DMetal. The next release does this on its own for Unreal 5 games"
+    },
+    {
+      "symptom": "'Microsoft Visual C++ 2015-2022 Redistributable (x64) is required' dialog at launch",
+      "cause": "Unreal's prerequisite check; the runtime was not in the environment",
+      "fix": "Environment settings, Windows components, install the Visual C++ runtimes, then Play again"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": {
+    "date": "2026-09-17",
+    "engine": "x64-sikarugir10.0_6-r3",
+    "macos": "26.6.2",
+    "chip": "Apple M1 Pro",
+    "result": "free demo only: title screen and main menu on D3DMetal, 84 to 110 fps at 1280x720 windowed; gameplay not exercised"
+  }
+}
