@@ -1,0 +1,19 @@
+{
+  "id": "the-quarry",
+  "title": "The Quarry",
+  "steam_appid": 1577120,
+  "status": "community",
+  "renderer": "dxvk",
+  "anticheat": null,
+  "provenance": "Reported by szaloki (highball-db#110, 2026-09-17), Apple M4, macOS 27.0 as entered, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, DXVK, rated 3 of 5 (playable with workarounds) after 16 minutes. Not verified by the maintainer.",
+  "notes": "Unreal Engine 4, Direct3D 11. Reported playable on DXVK at the lowest settings on an M4, with some clothing glitches. D3DMetal is worth comparing for the glitches and for the frame rate, since the other Unreal 4 title measured here (HumanitZ) draws its lighting correctly on D3DMetal where DXVK does not. No measurement here yet.",
+  "knownIssues": [
+    {
+      "symptom": "Playable only at the lowest settings, some clothing glitches (reported on an M4, DXVK)",
+      "cause": "not measured",
+      "fix": "Try D3DMetal on the game's page (Advanced); not verified"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
