@@ -1,0 +1,13 @@
+{
+  "id": "deaths-door",
+  "title": "Death's Door",
+  "steam_appid": 894020,
+  "status": "community",
+  "renderer": "dxvk",
+  "anticheat": null,
+  "provenance": "Reported by SnoopyHuman (highball-db#97, 2026-09-17), Apple M5, macOS 27, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, DXVK, Epic copy, rated 5 of 5 after 3 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXVK after a three-minute session on an M5, Epic copy, so this covers launch and the opening. The Steam id here is the same game on Steam. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
