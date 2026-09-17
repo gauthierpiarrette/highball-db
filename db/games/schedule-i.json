@@ -1,0 +1,13 @@
+{
+  "id": "schedule-i",
+  "title": "Schedule I",
+  "steam_appid": 3164500,
+  "status": "community",
+  "renderer": "dxvk",
+  "anticheat": null,
+  "provenance": "Reported by rwell86 (highball-db#100, 2026-09-17), Apple M4, macOS 27.0 as entered, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, DXVK, rated 4 of 5 (playable, minor issues) after 65 minutes. Not verified by the maintainer.",
+  "notes": "Reported playable with minor issues on DXVK after a session of 65 minutes; the report does not say which issues. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
