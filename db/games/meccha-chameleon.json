@@ -1,0 +1,13 @@
+{
+  "id": "meccha-chameleon",
+  "title": "MECCHA CHAMELEON",
+  "steam_appid": 4704690,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by moffatluke (highball-db#105, 2026-09-17), Apple M5 Pro, macOS 27.0 as entered, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, graphics mode not stated, rated 3 of 5 (playable with workarounds) after 1 minute. Not verified by the maintainer.",
+  "notes": "Reported playable with workarounds after a session of one minute, mode not stated and the workaround not described, so this says the game starts and renders. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

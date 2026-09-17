@@ -1,0 +1,19 @@
+{
+  "id": "hollow-knight",
+  "title": "Hollow Knight",
+  "steam_appid": 367520,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by AYDJI (highball-db#106, 2026-09-17), Apple M4, macOS 27.0 as entered, Highball 0.9.6, engine x64-sikarugir10.0_6-r0, graphics mode not stated, rated 4 of 5 (playable, minor issues) at 1080p 75 Hz. Not verified by the maintainer.",
+  "notes": "This game has a native macOS version on Steam, so the Mac Steam app runs it directly without Highball. The Windows build was reported playable through Highball at 1080p and 75 Hz, mode not stated, with an occasional keyboard issue. No measurement here yet.",
+  "knownIssues": [
+    {
+      "symptom": "Keyboard input drops once in a while (reported, Windows build through Highball)",
+      "cause": null,
+      "fix": "Not investigated. The native macOS version avoids Wine altogether."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
