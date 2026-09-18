@@ -1,0 +1,14 @@
+{
+  "id": "wolfenstein-enemy-territory",
+  "title": "Wolfenstein: Enemy Territory",
+  "steam_appid": null,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by EusGoed (highball-db#114, 2026-09-18): rated 4, playable with minor issues, Apple M4 Pro, macOS 26.4, engine x64-sikarugir10.0_6-r3, Highball 0.9.23, about a minute played through Highball. Renderer not stated. Installed from the free standalone build (installer setup_wolfenstein_enemy_territory_1.0). Not run here.",
+  "notes": "Free standalone multiplayer game on the id Tech 3 (Quake III) engine, so it renders through OpenGL rather than a Direct3D layer and the graphics mode matters less than for most titles. The one report calls it playable with minor issues after a short session; which issues, the renderer used, and sustained frame rate are not recorded yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
