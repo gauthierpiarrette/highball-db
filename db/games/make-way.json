@@ -1,0 +1,14 @@
+{
+  "id": "make-way",
+  "title": "Make Way",
+  "steam_appid": null,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by Olimoo2014 (highball-db#117, 2026-09-18): rated 5, perfect, on DXMT, Apple M1 Pro, macOS 15.7.7, engine x64-sikarugir10.0_6-r3, Highball 0.9.23, six minutes played through Highball. Steam AppID not given. Not run here.",
+  "notes": "Top-down build-and-race game. The one report calls it perfect on DXMT after a short session; sustained frame rate and longer play are not recorded yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
