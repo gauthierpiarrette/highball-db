@@ -1,0 +1,19 @@
+{
+  "id": "the-mortuary-assistant",
+  "title": "The Mortuary Assistant",
+  "steam_appid": 1295920,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by szaloki (highball-db#111, 2026-09-18), Apple M4, macOS 27.0 as entered, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, DXMT, rated 4 of 5 (playable, minor issues) after 13 minutes. Not verified by the maintainer.",
+  "notes": "Reported very playable with a stable frame rate on DXMT, and the same on DXVK and Wine's Direct3D, with one skin type shading wrongly. No measurement here yet.",
+  "knownIssues": [
+    {
+      "symptom": "One skin type is shaded wrongly (reported on an M4, DXMT, DXVK and Wine's Direct3D alike)",
+      "cause": "not measured; the same on three modes points at the game's shader rather than a mode",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
