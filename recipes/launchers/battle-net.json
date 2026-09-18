@@ -45,8 +45,8 @@
   "knownIssues": [
     {
       "symptom": "On the Wine 11 engines (x64-crossover26.3-r8 to r10) the login window opens but its browser area stays black, with only the frame, the settings gear and the language switch drawn",
-      "cause": "measured 2026-09-18 on r10: with DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1 the client no longer crashes, but its embedded Chromium never paints. Under DXMT its renderer process dies and restarts ('Render process was terminated and reloaded automatically' in Battle.net's own log); under DXVK the GPU process gets a real Direct3D 11 device and the auth page loads logically, and the window still stays black after two minutes. The same client on the Wine 10 engine paints the full form.",
-      "fix": "Use the Wine 10 engine the recipe asks for (x64-sikarugir10.0_6-r5, the one Highball bundles); Highball offers it before installing"
+      "cause": "measured 2026-09-18 on r10: with the flag the client no longer crashes; its login sub-window was captured black in that run. But that was the login sub-window only, not measured the way Steam's main window was (Steam's main window does paint on Wine 11 with the flag, 2026-09-19), so whether Battle.net actually fails to paint on Wine 11, or the reading was a sub-window artifact, is not settled. Either way the recipe ships on the Wine 10 engine where the full form paints.",
+      "fix": "Use the Wine 10 engine the recipe asks for (x64-sikarugir10.0_6-r5, the one Highball bundles); Highball offers it before installing. The Wine 11 result is unconfirmed and not needed."
     },
     {
       "symptom": "Client dies with an int3 inside libcef on a Wine 11 engine (reported highball#119 on x64-crossover26.3-r8, DXMT, Highball 0.9.12)",
