@@ -6,12 +6,17 @@
   "renderer": "d3dmetal",
   "anticheat": null,
   "provenance": "Reported not launching by cgp9cvzk52-max (highball-db#115, 2026-09-18) on DXMT then D3DMetal, Apple M3 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r2, Highball 0.9.12: the game's own crash dialog at start. The working configuration comes from the Cellar project's published profile for this game (D3DMetal, Wine 11, MTL_DEBUG_LAYER=1), playable there on an M5. Not run here.",
-  "notes": "Direct3D 12 only (Cobra engine), so D3DMetal, and it needs a Wine 11 engine. The recipe carries the Cellar workaround, Metal's validation layer on, which stops a D3DMetal startup race that otherwise ends the game within seconds. Reported about 55 fps in the menu on an M5 there, with large parks CPU-bound under Rosetta. Denuvo, Steam must be online. Nothing measured here yet.",
+  "notes": "Direct3D 12 only (Cobra engine), so D3DMetal, and it needs a Wine 11 engine. The recipe carries the Cellar workaround, Metal's validation layer on, which stops a D3DMetal startup race that otherwise ends the game within seconds. Reported about 55 fps in the menu on an M5 there, with large parks CPU-bound under Rosetta. Denuvo, Steam must be online. Nothing measured here yet. A second report on an M3 Pro with the full configuration in place got no window in five minutes and a Mac freeze on Stop, so the recipe is unconfirmed outside the M5 it came from.",
   "knownIssues": [
     {
       "symptom": "Crash dialog at launch offering to send diagnostics to the developer",
       "cause": "DXMT has no Direct3D 12; and on the Wine 10 engines D3DMetal hits a startup race",
       "fix": "the planet-coaster-2 recipe: Wine 11 engine, D3DMetal, MTL_DEBUG_LAYER=1 and MTL_DEBUG_LAYER_ERROR_MODE=nslog"
+    },
+    {
+      "symptom": "Nothing visible for five minutes with the full recipe configuration on an M3 Pro, and a forced reboot after stopping it",
+      "cause": "not diagnosed; the working report behind the recipe was on an M5",
+      "fix": "none confirmed; recorded as not working on an M3 Pro, macOS 26.6.2, Wine 11 r9"
     }
   ],
   "launchArgs": null,

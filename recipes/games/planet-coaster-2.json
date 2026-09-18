@@ -31,6 +31,11 @@
   ],
   "knownIssues": [
     {
+      "symptom": "With the recipe's configuration in place (Wine 11 r9, D3DMetal, Metal's validation layer on, confirmed by 'Metal API Validation Enabled' in the launch log) the game shows nothing for five minutes; stopping the environment then froze the whole Mac and needed a forced reboot (highball-db#115, Apple M3 Pro, macOS 26.6.2, 2026-09-18)",
+      "cause": "not diagnosed; the Cellar profile this recipe carries was reported working on an M5. A first run in the same session went to a Steam client started before the variables were set, which reproduced the original crash dialog once.",
+      "fix": "none confirmed on an M3 Pro. Do not force-stop the environment while the game is up under D3DMetal, quit from the game if it ever shows; close Steam and Play again after changing the environment's variables so the client carries them"
+    },
+    {
       "symptom": "Crash dialog offering to send diagnostics to the developer right at launch (reported highball-db#115, DXMT and D3DMetal, engine x64-sikarugir10.0_6-r2 and r3)",
       "cause": "two things stack: DXMT has no Direct3D 12 at all, and on the Wine 10 engines D3DMetal hits a startup race that ends the game within seconds. Cellar's profile documents the race and the Wine 10.8+ requirement.",
       "fix": "Apply this recipe on the Wine 11 engine it asks for; until then, Environment settings, Advanced, Engine x64-crossover26.3-r9, mode D3DMetal, and add MTL_DEBUG_LAYER=1 and MTL_DEBUG_LAYER_ERROR_MODE=nslog under the environment's settings, then Play"
