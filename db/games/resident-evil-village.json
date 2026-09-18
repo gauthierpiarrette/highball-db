@@ -1,0 +1,25 @@
+{
+  "id": "resident-evil-village",
+  "title": "Resident Evil Village",
+  "steam_appid": 1196590,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by detnarrrrrrrrr (highball#154, 2026-09-18): stops right after the Bethesda-style logo splash on D3DMetal, Apple M5, macOS 27.0, engine x64-sikarugir10.0_6-r3, Highball 0.9.23. Reproduced by the maintainer with the free Gold Edition Gameplay Demo (Steam 2062120) on 2026-09-18, Apple M1 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r5, D3DMetal.",
+  "notes": "RE Engine, Direct3D 12 only, so D3DMetal. Two things happen on a first launch. First, Capcom's own first-run notice, a small 'CAPCOM InstallerMessage' window saying a 'VIDEO CODEC: WMVideo Decoder' must be installed: it is an unconditional notice, not a check (the program has no codec or registry test in it), so tick 'I accept the above message' and press Exit, and Steam starts the game. Second, the game then sits on a black screen with the process alive at under one percent CPU: its intro is a WMV video played through Wine's Windows Media reader, and on this engine that reader deadlocks. Measured with GStreamer's own debug log: the ASF demuxer fills one stream's queue to its 8 MB cap ('Queue is filled, signalling overrun') while the other stream never gets past preroll, and the demuxer blocks pushing to the full queue for as long as you wait. No renderer setting changes it (D3DMetal with MetalFX off measured the same). The Wine 11 engine could not be tested through Steam here because Steam's own window stays black on it. No fix yet; this is engine work in Wine's winegstreamer reader, and it affects the other RE Engine titles that play WMV intros the same way.",
+  "knownIssues": [
+    {
+      "symptom": "Small 'CAPCOM InstallerMessage' window on first launch asking to install 'VIDEO CODEC: WMVideo Decoder'",
+      "cause": "Capcom's unconditional first-run notice; the WMV decoder is present and registered in the environment (verified by creating it from 32-bit and 64-bit code)",
+      "fix": "Tick 'I accept the above message' and press Exit, the game then starts"
+    },
+    {
+      "symptom": "Black screen right after the game starts, process alive at under one percent CPU, for as long as you wait",
+      "cause": "the WMV intro video: Wine's Windows Media reader over GStreamer deadlocks in the ASF demuxer with one stream's queue full and the other stream stuck before preroll (measured 2026-09-18, engine x64-sikarugir10.0_6-r5)",
+      "fix": "none yet; engine work in Wine's winegstreamer. Not a renderer setting"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
