@@ -3,10 +3,10 @@
   "title": "Bodycam",
   "steam_appid": 2406770,
   "status": "community",
-  "renderer": null,
+  "renderer": "d3dmetal",
   "anticheat": null,
-  "provenance": "Reported by phmuni (highball-db#121, 2026-09-18): rated 3, playable with workarounds, Apple M5 (base), macOS 27.0, engine x64-sikarugir10.0_6-r3, Highball 0.9.23, about 15 minutes played through Highball including online matches. Renderer not stated. Not run here.",
-  "notes": "Unreal Engine 5 first-person shooter, Direct3D 12 only, so D3DMetal is the mode for it (from 0.9.26 Play picks it for Unreal 5 builds on its own). On a base M5 the one report gets about 40 to 50 fps on the training ground and around 30 fps online with every setting low, TSR at Quality, and the render resolution at half the display's native. Playable, but the reporter's own verdict is that a shooter at 30 to 40 fps is not the experience of better hardware. The game asks to install its Unreal prerequisites at every launch; agreeing to every prompt, including the ones labelled uninstall, lets it run (0.9.25 and later adopt runtimes a game installs, which may end the repeat prompts).",
+  "provenance": "Reported by phmuni (highball-db#121, 2026-09-18): rated 3, playable with workarounds, Apple M5 (base), macOS 27.0, engine x64-sikarugir10.0_6-r3, Highball 0.9.23, about 15 minutes played through Highball including online matches. Renderer D3DMetal, added in a follow-up comment. Not run here.",
+  "notes": "Unreal Engine 5 first-person shooter, Direct3D 12 only, and the report ran it on D3DMetal (from 0.9.26 Play picks that for Unreal 5 builds on its own). On a base M5 the one report gets about 40 to 50 fps on the training ground and around 30 fps online with every setting low, TSR at Quality, and the render resolution at half the display's native. Playable, but the reporter's own verdict is that a shooter at 30 to 40 fps is not the experience of better hardware. The game asks to install its Unreal prerequisites at every launch; agreeing to every prompt, including the ones labelled uninstall, lets it run (0.9.25 and later adopt runtimes a game installs, which may end the repeat prompts).",
   "knownIssues": [
     {
       "symptom": "Asks to install UE prerequisites at every launch",
