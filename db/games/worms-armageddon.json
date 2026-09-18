@@ -1,0 +1,14 @@
+{
+  "id": "worms-armageddon",
+  "title": "Worms Armageddon",
+  "steam_appid": 217200,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by EusGoed (highball-db#116, 2026-09-18): rated 5, perfect, Apple M4 Pro, macOS 26.4, engine x64-sikarugir10.0_6-r3, Highball 0.9.23, six minutes played through Highball. Renderer not stated. Not run here.",
+  "notes": "Late-1990s Team17 title, light on the graphics stack. The one report calls it perfect after a short session; renderer used and any edge cases are not recorded yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
