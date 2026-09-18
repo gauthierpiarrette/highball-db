@@ -2,16 +2,32 @@
   "id": "planet-coaster-2",
   "kind": "game",
   "title": "Planet Coaster 2",
-  "requires": ["steam"],
+  "requires": [
+    "steam"
+  ],
   "renderer": "d3dmetal",
   "engine": "x64-crossover26.3-r9",
   "steps": [
-    { "type": "renderer", "renderer": "d3dmetal" },
-    { "type": "environment", "name": "MTL_DEBUG_LAYER", "value": "1",
-      "note": "Metal's validation layer. The game hits a D3DMetal startup race and crashes within about twenty seconds without it; with it on, the race does not fire. Reported by the Cellar project's profile for this game (2026), not measured here." },
-    { "type": "environment", "name": "MTL_DEBUG_LAYER_ERROR_MODE", "value": "nslog",
-      "note": "Sends the validation layer's messages to the system log instead of stopping the process on them." },
-    { "type": "note", "text": "Direct3D 12 only, so D3DMetal, and it needs a Wine 11 engine (Wine 10.8 or newer): on the Wine 10 engines it dies at start with the game's own crash dialog even on D3DMetal. Highball offers the engine before applying this. The two Metal variables are the Cellar project's workaround for a D3DMetal startup race; playable there on an M5 at about 55 fps in the menu, a large park CPU-bound under Rosetta. Denuvo, so Steam must be signed in. Not yet run here." }
+    {
+      "type": "renderer",
+      "renderer": "d3dmetal"
+    },
+    {
+      "type": "environment",
+      "name": "MTL_DEBUG_LAYER",
+      "value": "1",
+      "note": "Metal's validation layer. The game hits a D3DMetal startup race and crashes within about twenty seconds without it; with it on, the race does not fire. Reported by the Cellar project's profile for this game (2026), not measured here."
+    },
+    {
+      "type": "environment",
+      "name": "MTL_DEBUG_LAYER_ERROR_MODE",
+      "value": "nslog",
+      "note": "Sends the validation layer's messages to the system log instead of stopping the process on them."
+    },
+    {
+      "type": "note",
+      "text": "Direct3D 12 only, so D3DMetal, and it needs a Wine 11 engine (Wine 10.8 or newer): on the Wine 10 engines it dies at start with the game's own crash dialog even on D3DMetal. Highball offers the engine before applying this. The two Metal variables are the Cellar project's workaround for a D3DMetal startup race; playable there on an M5 at about 55 fps in the menu, a large park CPU-bound under Rosetta. Denuvo, so Steam must be signed in. Not yet run here. The two variables apply to the whole environment, so Metal's validation layer also runs for Steam and any other game launched from it and costs frames there; give Planet Coaster 2 its own environment if you play other games."
+    }
   ],
   "knownIssues": [
     {
