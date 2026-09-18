@@ -44,9 +44,14 @@
   ],
   "knownIssues": [
     {
+      "symptom": "On the Wine 11 engines (x64-crossover26.3-r8 to r10) the login window opens but its browser area stays black, with only the frame, the settings gear and the language switch drawn",
+      "cause": "measured 2026-09-18 on r10: with DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1 the client no longer crashes, but its embedded Chromium never paints. Under DXMT its renderer process dies and restarts ('Render process was terminated and reloaded automatically' in Battle.net's own log); under DXVK the GPU process gets a real Direct3D 11 device and the auth page loads logically, and the window still stays black after two minutes. The same client on the Wine 10 engine paints the full form.",
+      "fix": "Use the Wine 10 engine the recipe asks for (x64-sikarugir10.0_6-r5, the one Highball bundles); Highball offers it before installing"
+    },
+    {
       "symptom": "Client dies with an int3 inside libcef on a Wine 11 engine (reported highball#119 on x64-crossover26.3-r8, DXMT, Highball 0.9.12)",
-      "cause": "the embedded browser's GPU process under DXMT on Wine 11; the recipe had no cross-process swapchain flag then. Not reproduced 2026-09-18 on x64-crossover26.3-r10 with the flag: the login window opened and the client ran without a crash line.",
-      "fix": "Reinstall through the recipe from 0.9.28 on (it sets DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1), or add that variable under the environment's settings; then Stop the environment and Play again"
+      "cause": "the embedded browser's GPU process under DXMT on Wine 11 without the cross-process swapchain flag",
+      "fix": "the recipe now sets DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1, which stops the crash on Wine 11, but the window is then black there (see above); the real fix is the Wine 10 engine"
     },
     {
       "symptom": "Login window crash on submit",
@@ -56,9 +61,10 @@
   ],
   "lastVerified": {
     "date": "2026-09-18",
-    "engine": "x64-crossover26.3-r10",
+    "engine": "x64-sikarugir10.0_6-r5",
     "macos": "26.6.2",
     "chip": "Apple M1 Pro",
-    "result": "Installer runs unattended through the recipe (exit 0 in 59 s). Client launched under DXMT with the cross-process swapchain flag and sync none: the 'Battle.net Login' window opens and the client runs with no crash after 80 s (measured from the process environment and the launch log). Whether the form draws was not captured this run. Also seen: the installer leaves Battle.net's Agent running under the setup-time stack, which then spawns the client without the renderer overlay on the first Play; Highball 0.9.29 ends installer leftovers so the first launch is a cold start. Earlier: login form and SSO rendered 2026-08-25 on the Wine 10 engine r0. Log in and game installs not yet exercised."
-  }
+    "result": "Fresh environment through the recipe on the bundled Wine 10 engine, DXMT: installer runs unattended (exit 0 in 74 s), the client cold-starts with the recipe's settings, and the 'Battle.net Login' window paints the full form (logo, email field, Continue, the SSO buttons) with no crash and no renderer restarts. The same day on the Wine 11 engine r10 the window stays black under both DXMT and DXVK, so the recipe asks for the Wine 10 engine. Log in and game installs not yet exercised."
+  },
+  "engine": "x64-sikarugir10.0_6-r5"
 }
