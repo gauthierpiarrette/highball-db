@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by phs1997 (highball-db#119, 2026-09-18) playing the Repentance+ expansion: rated 3, playable with workarounds, on DXMT, Apple M2 Max, macOS 27.0, engine x64-sikarugir10.0_6-r5, Highball 0.9.27, 97 minutes played through Highball. The workaround, added in a follow-up comment: when the game starts lagging, restarting it helps a lot. Not run here.",
-  "notes": "Steam 250900 is the Rebirth base game; Repentance+ is its expansion and what the one report played. Playable for a 97-minute session on DXMT. The one workaround reported is that performance degrades over a long session and restarting the game brings it back; frame rate is not recorded yet.",
+  "provenance": "Reported by phs1997 (highball-db#119, 2026-09-18) playing the Repentance+ expansion: rated 3, playable with workarounds, on DXMT, Apple M2 Max, macOS 27.0, engine x64-sikarugir10.0_6-r5, Highball 0.9.27, 97 minutes played through Highball. The workaround, added in a follow-up comment: when the game starts lagging, restarting it helps a lot. A later report from the same player (highball-db#125, 2026-09-19) rates it 5, perfect, after 244 minutes on DXMT, Apple M2 Max, macOS 27.0, engine x64-sikarugir10.0_6-r5, Highball 0.9.27, so the newer engine and app made the lag a non-issue for them. Not run here.",
+  "notes": "Steam 250900 is the Rebirth base game; Repentance+ is its expansion and what the reports played. On the r5 engine and Highball 0.9.27 the same player calls it perfect over a four-hour session on DXMT (M2 Max, macOS 27); an earlier report on r5 and 0.9.27 saw the frame rate degrade over a long session, cleared by restarting the game. Frame rate not measured here.",
   "knownIssues": [
     {
       "symptom": "Slows down after a while of play (reported on DXMT, M2 Max, macOS 27, engine r5)",
