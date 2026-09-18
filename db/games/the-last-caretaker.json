@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": "d3dmetal",
   "anticheat": null,
-  "provenance": "Reported crashing before the main menu by Metal-Gear-Solid (highball#138, 2026-09-17), Apple M3 Ultra, Highball 0.9.23, mode not stated. The maintainer ran the free demo (Steam 3916150) on 2026-09-17 on an M1 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r3, D3DMetal: it reaches the main menu; gameplay was not exercised.",
+  "provenance": "Reported crashing before the main menu by Metal-Gear-Solid (highball#138, 2026-09-17), Apple M3 Ultra, Highball 0.9.23, mode not stated. The maintainer ran the free demo (Steam 3916150) on 2026-09-17 on an M1 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r3, D3DMetal: it reaches the main menu; gameplay was not exercised. The reporter (M3 Ultra) then reached the game on D3DMetal at over 60 fps at 4K on the Epic preset on 0.9.23, keyboard not responding that time, and later launches failed again with the Steam window going blank.",
   "notes": "Unreal Engine 5, Direct3D 12 only. Use D3DMetal: the demo starts, shows its title and main menu at 84 to 110 fps windowed at 1280x720 on an M1 Pro (Metal HUD), with the Visual C++ 2015-2022 runtime installed in the environment first, which the game's own prerequisite check demands. On DXMT or DXVK (no Direct3D 12) it cannot reach the menu, which is the most likely cause of the reported crash. From 0.9.26 Play picks D3DMetal for Unreal 5 builds on its own. Gameplay past the menu is not measured here yet.",
   "knownIssues": [
     {
@@ -17,6 +17,11 @@
       "symptom": "'Microsoft Visual C++ 2015-2022 Redistributable (x64) is required' dialog at launch",
       "cause": "Unreal's prerequisite check; the runtime was not in the environment",
       "fix": "Environment settings, Windows components, install the Visual C++ runtimes, then Play again"
+    },
+    {
+      "symptom": "Steam's own window goes blank after the game's mode is set to D3DMetal (reported on 0.9.23)",
+      "cause": "on 0.9.23 the Steam client starts with the game's mode, and D3DMetal has no 32-bit Direct3D 11 for Steam's browser, so it drew nothing",
+      "fix": "0.9.26 (beta) routes 32-bit Direct3D 11 to DXMT on D3DMetal, so Steam keeps drawing; on 0.9.23 stop the environment and Play again"
     }
   ],
   "launchArgs": null,
