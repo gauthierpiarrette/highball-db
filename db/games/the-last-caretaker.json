@@ -24,9 +24,9 @@
       "fix": "0.9.26 (beta) routes 32-bit Direct3D 11 to DXMT on D3DMetal, so Steam keeps drawing; on 0.9.23 stop the environment and Play again"
     },
     {
-      "symptom": "Demo: after its first run it comes back fullscreen and the screen stays black on D3DMetal (measured twice 2026-09-18 on an M1 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r5, screen unlocked, captures 1% lit at display size)",
+      "symptom": "Demo: after its first run it comes back fullscreen and the screen stays black on D3DMetal, with or without -windowed -ResX=1280 -ResY=720 (measured three times 2026-09-18 on an M1 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r5, screen unlocked, captures 1% lit at display size)",
       "cause": "not diagnosed; the same build draws and runs its menu windowed at 1280x720",
-      "fix": "Launch it windowed: on the game's page add -windowed -ResX=1280 -ResY=720 to the launch arguments, then switch resolution from the game's own settings"
+      "fix": "none confirmed yet; the first run after a fresh install draws its menu, so deleting the demo's saved settings under the environment's users/<you>/AppData/Local/TheLastCaretaker may get it back, not measured"
     }
   ],
   "launchArgs": null,
