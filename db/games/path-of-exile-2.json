@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": "d3dmetal",
   "anticheat": null,
-  "provenance": "Reported by littlemilktea (highball-db#53, 2026-09-15), Apple M5 16 GB, macOS 27, Highball 0.9.19, engine x64-crossover26.3-r9, D3DMetal: fresh install, normal Play reaches the game, about 79 fps in town at 1512x945 with FSR Performance and medium textures. Not verified by the maintainer.",
+  "provenance": "Reported by littlemilktea (highball-db#53, 2026-09-15), Apple M5 16 GB, macOS 27, Highball 0.9.19, engine x64-crossover26.3-r9, D3DMetal: fresh install, normal Play reaches the game, about 79 fps in town at 1512x945 with FSR Performance and medium textures. Not verified by the maintainer. pannatorn-hub (highball#105, 2026-09-18): Mac mini M4, Highball on an external APFS SSD, playable on engine r3 after updating from r2 (the old Direct3D 12 shim crashed it), frame rate said to be lower than in the Sikarugir app, not measured.",
   "notes": "DirectX 12 only, so D3DMetal. Before Highball 0.9.19 the normal Play path died at startup with Wine exception 0xc06d007f: the game binds D3D12CreateDevice by ordinal 101 and the timestamp shim in front of d3d12.dll numbered its exports from 1 (highball-db#53). Fixed in the engines shipped with 0.9.19 (r3 and r9), confirmed by the reporter on a fresh install. On DXMT and DXVK the game stops at a GetAdapterInfo dialog, they have no DirectX 12. The white and green rendering artifacts the reporter saw on Apple's D3DMetal 4.0b2 did not show on the shipped 3.0. One crash in three launches after a \"Controller disconnected\" prompt, not reproduced since.",
   "knownIssues": [
     {
