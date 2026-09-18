@@ -1,0 +1,14 @@
+{
+  "id": "dice-dice-baby",
+  "title": "Dice Dice Baby",
+  "steam_appid": 3904950,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported twice by pristineeindustries (highball-db#126 for the game and #127 for its demo, 2026-09-18): rated 5, perfect, Apple M3 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r3, Highball 0.9.19, about a minute played through Highball each time. Renderer not stated. Not run here.",
+  "notes": "Both the game and its demo were reported perfect after a short session; renderer used, frame rate and longer play are not recorded yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
