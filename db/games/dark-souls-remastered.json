@@ -1,0 +1,14 @@
+{
+  "id": "dark-souls-remastered",
+  "title": "Dark Souls: Remastered",
+  "steam_appid": 570940,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by phmuni (highball-db#118, 2026-09-18): rated 5, perfect, on DXMT, Apple M5, macOS 27.0, engine x64-sikarugir10.0_6-r3, Highball 0.9.23, ten minutes played through Highball. Not run here.",
+  "notes": "Works offline in the one report, perfect on DXMT after a short session; sustained frame rate and longer play are not recorded yet. Like other FromSoftware titles it has a server-side anti-cheat with a softban risk if played online through Wine, so keep it offline. Steam AppID 570940.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
