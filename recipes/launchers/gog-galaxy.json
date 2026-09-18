@@ -49,9 +49,19 @@
   "lastVerified": null,
   "knownIssues": [
     {
-      "symptom": "Installs and runs (services, logs, background client) but the login window is black; login is impossible.",
-      "cause": "same engine limitation as Ubisoft Connect: the client's embedded Chromium UI fails GPU (ANGLE) init under this Wine build on every renderer. --disable-gpu switches and the Lutris libglesv2 override were tested 2026-08-25 and do not help (the override makes page load fail outright). On the Wine 11 engine (x64-crossover26.3-r9 with the cross-process CEF fix that made Steam, Rockstar and Ubisoft render), Galaxy 2.1.6.29 gets further: the login window is created and its frontend loads, then its Qt6WebEngineCore crashes with an access violation at a fixed offset one to three seconds later, with or without QTWEBENGINE_CHROMIUM_FLAGS=--disable-gpu (measured 2026-09-18, M1 Pro, DXMT).",
-      "fix": "waiting on the engine fix tracked at Sikarugir-App/Sikarugir#257. Meanwhile GOG games are DRM-free: download offline game installers from gog.com in a browser and run them directly in a bottle."
+      "symptom": "On the Wine 11 engines the client shows its login form and dies about two seconds later, sending a crash report",
+      "cause": "EXCEPTION_ACCESS_VIOLATION in Qt6WebEngineCore.dll at offset 0x292ada, the same instruction on x64-crossover26.3-r9 (2026-09-16) and r10 (2026-09-18), with and without DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1, on a clean cold start with the DXMT overlay. Galaxy's login is Chromium inside Qt WebEngine, and that build does not survive Wine 11 here. --disable-gpu makes no difference.",
+      "fix": "none yet; tracked at highball#149. GOG games are DRM-free, so run their offline installers from gog.com in an environment instead."
+    },
+    {
+      "symptom": "Installs and runs (services, logs, background client) but the login window is black on the Wine 10 engine; login is impossible",
+      "cause": "same engine limitation as Ubisoft Connect: the client's embedded Chromium UI fails GPU (ANGLE) init under this Wine build on every renderer. --disable-gpu switches it to software rendering but the window stays black.",
+      "fix": "none at the app level; run GOG's offline installers directly instead"
+    },
+    {
+      "symptom": "GalaxyClientService logs 'Failed to create Vulkan registry keys. Cannot create Vulkan keys without elevation and a registry elevator', and the client 'Failed to write Vulkan registry keys'",
+      "cause": "the overlay's Vulkan layer registration under HKLM\\SOFTWARE\\Khronos\\Vulkan\\ImplicitLayers goes through the service, which under Wine does not run as SYSTEM. Not fatal: the client files a problem report and carries on to the login form (measured 2026-09-18). Pre-seeding the two ImplicitLayers values does not stop the request.",
+      "fix": "ignore it; it is not what stops the client"
     }
   ]
 }
