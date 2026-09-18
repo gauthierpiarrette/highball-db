@@ -1,0 +1,14 @@
+{
+  "id": "manor-lords",
+  "title": "Manor Lords",
+  "steam_appid": 1363080,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by susarchitect (highball-db#113, 2026-09-18): rated 3, playable with workarounds, on D3DMetal, Apple M4 Pro, macOS 27.0, engine x64-crossover26.3-r10, Highball 0.9.23, about a minute played through Highball. The workarounds were not described. Not run here.",
+  "notes": "Unreal Engine 4 with a Direct3D 12 default. The one report runs it on D3DMetal (Direct3D 12) and calls it playable with unspecified workarounds after a minute of play. Session length, frame rate and what needed working around are not recorded yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
