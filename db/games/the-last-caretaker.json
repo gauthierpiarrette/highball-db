@@ -22,6 +22,11 @@
       "symptom": "Steam's own window goes blank after the game's mode is set to D3DMetal (reported on 0.9.23)",
       "cause": "on 0.9.23 the Steam client starts with the game's mode, and D3DMetal has no 32-bit Direct3D 11 for Steam's browser, so it drew nothing",
       "fix": "0.9.26 (beta) routes 32-bit Direct3D 11 to DXMT on D3DMetal, so Steam keeps drawing; on 0.9.23 stop the environment and Play again"
+    },
+    {
+      "symptom": "Demo: after its first run it comes back fullscreen and the screen stays black on D3DMetal (measured twice 2026-09-18 on an M1 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r5, screen unlocked, captures 1% lit at display size)",
+      "cause": "not diagnosed; the same build draws and runs its menu windowed at 1280x720",
+      "fix": "Launch it windowed: on the game's page add -windowed -ResX=1280 -ResY=720 to the launch arguments, then switch resolution from the game's own settings"
     }
   ],
   "launchArgs": null,
