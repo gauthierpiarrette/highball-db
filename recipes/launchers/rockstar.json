@@ -58,6 +58,11 @@
   ],
   "knownIssues": [
     {
+      "symptom": "The 'Rockstar Games - Sign In' window opens but stays empty on the first launch right after installing; stopping the environment and launching again shows the sign-in",
+      "cause": "verified 2026-09-18 on an M1 Pro, macOS 26.6.2, engine x64-crossover26.3-r9, fresh environment: the launcher's first run applies a self-update and restarts itself through its Windows service, and Windows services inherit the environment the Wine server was booted with, which on a fresh environment is a setup step without a graphics overlay (services.exe and the restarted launcher had no WINEDLLPATH_PREPEND while the launch that started them did). The restarted launcher's browser then ran on wined3d and drew nothing.",
+      "fix": "Highball 0.9.28 restarts the environment before a launch when its services would hand the program a different stack and nothing else is running. On older versions, Stop the environment (or quit the launcher from its tray icon) and press Play again."
+    },
+    {
       "symptom": "Installer sticks forever at 'Preparing to Install...'; if bypassed, the launcher shows 'The Rockstar Games Launcher failed to initialize!'",
       "cause": "verified 2026-08-26: the installer misses its service handshake and waits forever (files, VC++ and the service actually land), then Launcher.exe fails init after localisation on every renderer. CodeWeavers ships Rockstar fixes inside their Wine; this engine does not have them yet. Re-checked 2026-09-02 on macOS 26.6.2 (25G83), M1 Pro, fresh bottle with ServicesPipeTimeout=60000 present before the session started: identical. The installer's own log (ProgramData\\Rockstar Games\\Launcher\\installer_log.txt) shows both VC++ redists exit 0, 'RockstarService.exe install' exit 0, the uninstall registry keys written, then nothing; it never starts the service (sc query: STOPPED, exit 1077 never started). A manual 'sc start \"Rockstar Service\"' reaches RUNNING with the service logging its handshake subsystem up, and the installer stays parked at 'Preparing to Install...' regardless (12 minutes, twice). Re-tested 2026-09-02 on macOS 26.6.2: same install-time deadlock (the installer never requests the service start). On CrossOver 26.3's Wine the install completes and the service runs; the launcher then fails on its Direct3D 10.1 + Direct2D device, not on CEF: wined3d has no feature level, DXVK builds for macOS cannot serve it, D3DMetal ships no d3d10core, and DXMT 0.80 aborts in SwapDeviceContextState. With that method stubbed the launcher window appears, so the graphics half is a DXMT fix.",
       "fix": "none at the app level. Tracked upstream at Sikarugir-App/Sikarugir#258. Highball ships a fixed engine as soon as one exists."
@@ -69,10 +74,10 @@
     }
   ],
   "lastVerified": {
-    "date": "2026-09-08",
-    "engine": "x64-crossover26.3-r4",
+    "date": "2026-09-18",
+    "engine": "x64-crossover26.3-r9",
     "macos": "26.6.2",
     "chip": "Apple M1 Pro",
-    "result": "dxmt + DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1 on the Wine 11 engine: installer, service and launcher run, the 'Rockstar Games - Sign In' window renders, and signing in succeeds once the Mac's clock is right. Verified end to end 2026-09-08: signed in, the launcher reached Grand Theft Auto V Enhanced and started it. Bundled Wine 10 engine: the browser dies on a missing user32 export, no sign-in."
+    "result": "Fresh environment through the recipe on the Wine 11 engine: installer, service and launcher run, and the 'Rockstar Games - Sign In' window renders and is interactive under the pin's DXVK once the environment's services carry the launch stack (first launch after install stayed empty until then, see the known issue). Earlier: signed in end to end on 2026-09-08 and started Grand Theft Auto V Enhanced. Bundled Wine 10 engine: the browser dies on a missing user32 export, no sign-in."
   }
 }
