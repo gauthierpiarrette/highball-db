@@ -1,13 +1,21 @@
 {
   "id": "battle-net",
   "kind": "launcher",
-  "flaky": { "reason": "Login can crash on submit (CEF under Wine). Retry, keep sync none, and disable hardware acceleration in Battle.net's settings." },
+  "flaky": {
+    "reason": "Login can crash on submit (CEF under Wine). Retry, keep sync none, and disable hardware acceleration in Battle.net's settings."
+  },
   "title": "Battle.net",
   "renderer": "dxmt",
   "steps": [
     {
       "type": "sync",
       "sync": "none"
+    },
+    {
+      "type": "environment",
+      "name": "DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN",
+      "value": "1",
+      "note": "Battle.net's login is a Chromium browser whose GPU process draws into the client's window. DXMT refuses such cross-process swapchains unless told the driver supports them; Highball's Wine 11 engines do. Same fix as the Rockstar launcher."
     },
     {
       "type": "installer",
@@ -31,10 +39,15 @@
     },
     {
       "type": "note",
-      "text": "Installer runs unattended with the recipe's language and path arguments; the client then opens its login window, which renders fully (verified 2026-08-25 on engine sikarugir-10.0_6, the one CEF launcher that paints on this engine). Log in and game installs not yet exercised. The installer is a GUI (no silent mode): pick the install path and let it download the client. Battle.net's login is CEF-based like Steam's \u2014 keep sync: none. Historically the top-1 Whisky issue (54 comments); expect login flakiness."
+      "text": "Installer runs unattended with the recipe's language and path arguments; the client then opens its login window, which renders fully (verified 2026-08-25 on engine sikarugir-10.0_6, the one CEF launcher that paints on this engine). Log in and game installs not yet exercised. The installer is a GUI (no silent mode): pick the install path and let it download the client. Battle.net's login is CEF-based like Steam's — keep sync: none. Historically the top-1 Whisky issue (54 comments); expect login flakiness."
     }
   ],
   "knownIssues": [
+    {
+      "symptom": "Client dies with an int3 inside libcef on a Wine 11 engine (reported highball#119 on x64-crossover26.3-r8, DXMT, Highball 0.9.12)",
+      "cause": "the embedded browser's GPU process under DXMT on Wine 11; the recipe had no cross-process swapchain flag then. Not reproduced 2026-09-18 on x64-crossover26.3-r10 with the flag: the login window opened and the client ran without a crash line.",
+      "fix": "Reinstall through the recipe from 0.9.28 on (it sets DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1), or add that variable under the environment's settings; then Stop the environment and Play again"
+    },
     {
       "symptom": "Login window crash on submit",
       "cause": "CEF under Wine; historically broken on CrossOver-derived engines too",
@@ -42,10 +55,10 @@
     }
   ],
   "lastVerified": {
-    "date": "2026-08-25",
-    "engine": "x64-sikarugir10.0_6-r0",
-    "macos": "14.6",
+    "date": "2026-09-18",
+    "engine": "x64-crossover26.3-r10",
+    "macos": "26.6.2",
     "chip": "Apple M1 Pro",
-    "result": "installer runs unattended via recipe args; client login window renders fully (form + SSO). Log in and game installs not yet exercised."
+    "result": "Installer runs unattended through the recipe (exit 0 in 59 s). Client launched under DXMT with the cross-process swapchain flag and sync none: the 'Battle.net Login' window opens and the client runs with no crash after 80 s (measured from the process environment and the launch log). Whether the form draws was not captured this run. Also seen: the installer leaves Battle.net's Agent running under the setup-time stack, which then spawns the client without the renderer overlay on the first Play; Highball 0.9.29 ends installer leftovers so the first launch is a cold start. Earlier: login form and SSO rendered 2026-08-25 on the Wine 10 engine r0. Log in and game installs not yet exercised."
   }
 }
