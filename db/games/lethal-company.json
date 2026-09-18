@@ -4,7 +4,7 @@
   "steam_appid": 1966720,
   "status": "community",
   "renderer": "dxmt",
-  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
-  "notes": "works",
+  "provenance": "Community consensus (AppleGamingWiki / r-macgaming / MacPlay), then a Highball report by phmuni (highball-db#124, 2026-09-18): rated 5, perfect, on DXMT, Apple M5, macOS 27.0, engine x64-sikarugir10.0_6-r3, Highball 0.9.23, ten minutes played through Highball. Not run here.",
+  "notes": "Boots with no configuration and runs smoothly at 120 fps on an M5 in the one Highball report, stable over a ten-minute session. Longer play and lobbies are not recorded yet.",
   "lastVerified": null
 }
