@@ -1,0 +1,14 @@
+{
+  "id": "megabonk",
+  "title": "Megabonk",
+  "steam_appid": 3405340,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by greedjesse (highball-db#123, 2026-09-18): rated 4, playable with minor issues, Apple M5, macOS 26.6.2, engine x64-sikarugir10.0_6-r3, Highball 0.9.23, 270 minutes played through Highball. Renderer not stated, minor issues not described. Not run here.",
+  "notes": "Playable for a four and a half hour session in the one report; which minor issues, the renderer used and frame rate are not recorded yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
