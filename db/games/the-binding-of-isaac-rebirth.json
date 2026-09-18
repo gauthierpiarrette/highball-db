@@ -5,9 +5,15 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by phs1997 (highball-db#119, 2026-09-18) playing the Repentance+ expansion: rated 3, playable with workarounds, on DXMT, Apple M2 Max, macOS 27.0, engine x64-sikarugir10.0_6-r5, Highball 0.9.27, 97 minutes played through Highball. The workarounds were not described. Not run here.",
-  "notes": "Steam 250900 is the Rebirth base game; Repentance+ is its expansion and what the one report played. Playable for a long session on DXMT with unspecified workarounds; what needed working around, and frame rate, are not recorded yet.",
-  "knownIssues": [],
+  "provenance": "Reported by phs1997 (highball-db#119, 2026-09-18) playing the Repentance+ expansion: rated 3, playable with workarounds, on DXMT, Apple M2 Max, macOS 27.0, engine x64-sikarugir10.0_6-r5, Highball 0.9.27, 97 minutes played through Highball. The workaround, added in a follow-up comment: when the game starts lagging, restarting it helps a lot. Not run here.",
+  "notes": "Steam 250900 is the Rebirth base game; Repentance+ is its expansion and what the one report played. Playable for a 97-minute session on DXMT. The one workaround reported is that performance degrades over a long session and restarting the game brings it back; frame rate is not recorded yet.",
+  "knownIssues": [
+    {
+      "symptom": "Slows down after a while of play (reported on DXMT, M2 Max, macOS 27, engine r5)",
+      "cause": "not diagnosed; reported as lag building up over a long session",
+      "fix": "Quit the game and start it again, the reporter says that helps a lot"
+    }
+  ],
   "launchArgs": null,
   "lastVerified": null,
   "verified": null
