@@ -1,0 +1,24 @@
+{
+  "id": "planet-coaster-2",
+  "kind": "game",
+  "title": "Planet Coaster 2",
+  "requires": ["steam"],
+  "renderer": "d3dmetal",
+  "engine": "x64-crossover26.3-r9",
+  "steps": [
+    { "type": "renderer", "renderer": "d3dmetal" },
+    { "type": "environment", "name": "MTL_DEBUG_LAYER", "value": "1",
+      "note": "Metal's validation layer. The game hits a D3DMetal startup race and crashes within about twenty seconds without it; with it on, the race does not fire. Reported by the Cellar project's profile for this game (2026), not measured here." },
+    { "type": "environment", "name": "MTL_DEBUG_LAYER_ERROR_MODE", "value": "nslog",
+      "note": "Sends the validation layer's messages to the system log instead of stopping the process on them." },
+    { "type": "note", "text": "Direct3D 12 only, so D3DMetal, and it needs a Wine 11 engine (Wine 10.8 or newer): on the Wine 10 engines it dies at start with the game's own crash dialog even on D3DMetal. Highball offers the engine before applying this. The two Metal variables are the Cellar project's workaround for a D3DMetal startup race; playable there on an M5 at about 55 fps in the menu, a large park CPU-bound under Rosetta. Denuvo, so Steam must be signed in. Not yet run here." }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "Crash dialog offering to send diagnostics to the developer right at launch (reported highball-db#115, DXMT and D3DMetal, engine x64-sikarugir10.0_6-r2 and r3)",
+      "cause": "two things stack: DXMT has no Direct3D 12 at all, and on the Wine 10 engines D3DMetal hits a startup race that ends the game within seconds. Cellar's profile documents the race and the Wine 10.8+ requirement.",
+      "fix": "Apply this recipe on the Wine 11 engine it asks for; until then, Environment settings, Advanced, Engine x64-crossover26.3-r9, mode D3DMetal, and add MTL_DEBUG_LAYER=1 and MTL_DEBUG_LAYER_ERROR_MODE=nslog under the environment's settings, then Play"
+    }
+  ],
+  "lastVerified": null
+}
