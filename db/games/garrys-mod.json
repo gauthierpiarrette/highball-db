@@ -1,0 +1,25 @@
+{
+  "id": "garrys-mod",
+  "title": "Garry's Mod",
+  "steam_appid": 4000,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by phmuni (highball-db#120, 2026-09-18): rated 4, playable with minor issues, on DXMT, Apple M5, macOS 27.0, engine x64-sikarugir10.0_6-r3, Highball 0.9.23, 58 minutes played through Highball. Not run here.",
+  "notes": "Source engine, Direct3D 9. Boots and plays fine at the display's native resolution in the one report, completely playable over a near-hour session. Two things noted: it crashed once while creating a world for the first time and was fine after a restart, and motion feels a little jittery, not a true 120 Hz feel, even though the game itself runs well. Frame rate not measured.",
+  "knownIssues": [
+    {
+      "symptom": "Crashed once while creating a world for the first time (M5, macOS 27, DXMT)",
+      "cause": "not diagnosed; the reporter thinks it was a one-off",
+      "fix": "Start the game again, it went fine on the second try"
+    },
+    {
+      "symptom": "Motion feels slightly jittery and not a true 120 Hz, though performance is good",
+      "cause": "not diagnosed; reads like a frame pacing issue rather than raw frame rate",
+      "fix": "none recorded yet; the game stays fully playable"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
