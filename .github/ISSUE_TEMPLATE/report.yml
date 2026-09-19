@@ -36,6 +36,12 @@ body:
     id: version
     attributes: { label: Highball version, placeholder: "0.9.6" }
   - type: textarea
+    id: settings
+    attributes:
+      label: Environment settings
+      description: "Filled in by Highball from the environment the session ran in, only what was set away from its default. Nothing to add unless you changed something outside the app."
+      render: text
+  - type: textarea
     id: notes
     attributes:
       label: Notes
