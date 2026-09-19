@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by barryloh (highball-db#81, 2026-09-16), Apple M1 Pro, macOS 26.5.1, Highball 0.9.15, engine x64-sikarugir10.0_6-r2, DXMT, rated 5 of 5 on High settings with no frame drops. Session length not stated. Not verified by the maintainer.",
-  "notes": "Reported perfect on DXMT at High settings with no frame drops on an M1 Pro. No measurement here yet.",
+  "provenance": "Reported by barryloh (highball-db#81, 2026-09-16), Apple M1 Pro, macOS 26.5.1, Highball 0.9.15, engine x64-sikarugir10.0_6-r2, DXMT, rated 5 of 5 on High settings with no frame drops. Session length not stated. Not verified by the maintainer. A second report by juancarlosf2 (highball-db#128, 2026-09-18): rated 5, perfect, on DXMT, Apple M1 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r3, Highball 0.9.23, 190 minutes played through Highball.",
+  "notes": "Reported perfect on DXMT twice on an M1 Pro: at High settings with no frame drops on the r2 engine, and over a three-hour session on the r3 engine. No measurement here yet.",
   "knownIssues": [],
   "launchArgs": null,
   "lastVerified": null
