@@ -1,0 +1,14 @@
+{
+  "id": "crusader-kings-iii",
+  "title": "Crusader Kings III",
+  "steam_appid": 1158310,
+  "status": "community",
+  "renderer": "dxvk",
+  "anticheat": null,
+  "provenance": "Reported by nghuyenthevinh2000 (highball-db#135, 2026-09-19): rated 4, playable with minor issues, DXVK, Apple M1 Pro, macOS 26.3, engine x64-sikarugir10.0_6-r3, Highball 0.9.23, 73 minutes played through Highball. The minor issues were not described. The report left the Steam AppID blank; 1158310 added here. Not run here.",
+  "notes": "Reported playable with unspecified minor issues after a 73-minute session on DXVK; frame rate not recorded yet. The game is Direct3D 11 on Windows, so DXMT is the other renderer worth trying.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -1,0 +1,14 @@
+{
+  "id": "the-alters",
+  "title": "The Alters",
+  "steam_appid": 1601570,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by nodegraphics (highball-db#130, 2026-09-19): rated 5, perfect, Apple M5 Max, macOS 27.0, engine x64-sikarugir10.0_6-r5, Highball 0.9.28, 87 minutes played through Highball. Renderer not stated. Not run here.",
+  "notes": "Reported perfect after an 87-minute session on an M5 Max; the renderer used and the frame rate are not recorded yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

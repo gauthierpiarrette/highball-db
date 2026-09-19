@@ -1,0 +1,14 @@
+{
+  "id": "last-pirates-die-together",
+  "title": "Last Pirates: Die Together",
+  "steam_appid": 4317790,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by spyrofhinixw-lab (highball-db#133, 2026-09-19): rated 5, perfect, DXMT, Apple M1, macOS 15.8, engine x64-sikarugir10.0_6-r3, Highball 0.9.23, 6 minutes played through Highball. Not run here.",
+  "notes": "Reported perfect after a six-minute session on DXMT on an M1; frame rate and longer play are not recorded yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -1,0 +1,20 @@
+{
+  "id": "final-fantasy-xiii",
+  "title": "FINAL FANTASY XIII",
+  "steam_appid": 292120,
+  "status": "community",
+  "renderer": "wined3d",
+  "anticheat": null,
+  "provenance": "Reported by ziquies (highball-db#132, 2026-09-19): rated 4, playable with minor issues, wined3d, Apple M4, macOS 27.2, engine x64-sikarugir10.0_6-r3, Highball 0.9.19, 2 minutes played through Highball, with the FF13Fix 1.6.4 community patch installed to get past the start. Not run here.",
+  "notes": "A two-minute session on wined3d rated playable with minor issues. The reporter runs the game with FF13Fix 1.6.4, a community patch for the PC port, because the start would not load without it. The minor issues, longer play and the frame rate are not recorded yet. The port is Direct3D 9, so DXVK is the other renderer worth trying.",
+  "knownIssues": [
+    {
+      "symptom": "The game does not get past its initial load at start",
+      "cause": "Not measured here",
+      "fix": "Install FF13Fix 1.6.4 into the game folder, the community patch for the PC port (the reporter's setup)"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
