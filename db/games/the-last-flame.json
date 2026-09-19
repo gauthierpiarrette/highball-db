@@ -1,0 +1,20 @@
+{
+  "id": "the-last-flame",
+  "title": "The Last Flame",
+  "steam_appid": 1830970,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by WWWcool (highball#99, 2026-09-14): Apple M1 Pro, macOS 14.5, Highball 0.9.12, engine x64-sikarugir10.0_6-r2, DXVK: the menu comes up, pressing Start does nothing. Measured here 2026-09-19 with the free Prologue (Steam 2517810, same Unity 2021.3 build) on an M1 Pro, macOS 27.0, blind (session locked: logs and process state only).",
+  "notes": "Unity 2021.3 with a 2560x1440 H.264 video behind the menu, played through Windows Media Foundation and handed to Direct3D 11 as a shared texture. On the r5 engine (Wine 10) the video fails inside Wine's MF transform after the frames decode (Player.log: WindowsVideoMedia error 0x80004004, IMFSourceReader::WaitForSample; Wine: source_reader_process_sample Transform failed to process output), with the hardware and the software H.264 decoder alike. On the Wine 11 engine (x64-crossover26.3-r10) the frames decode and keep flowing, but Unity asks DXGI for a shared handle every frame and DXMT returns none (Got null handle from IDXGIResource::GetSharedHandle), and DXVK cannot create the shared texture at all (VK_KHR_external_memory_win32). So no mode shows the video today. Whether Start hangs on that video could not be checked blind (Enter, Space and a centre click did nothing). The menu itself renders under DXMT and the game stays alive.",
+  "knownIssues": [
+    {
+      "symptom": "Pressing Start in the menu does nothing (reported); the menu's background video never shows",
+      "cause": "measured: the game's video path needs a Direct3D 11 shared texture, which no macOS mode provides, and on Wine 10 the decode hand-off fails before that",
+      "fix": "None yet. Needs shared-resource support in DXMT (or Wine 11's decode plus a sharing path); tracked in highball#99"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
