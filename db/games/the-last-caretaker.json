@@ -6,7 +6,7 @@
   "renderer": "d3dmetal",
   "anticheat": null,
   "provenance": "Reported crashing before the main menu by Metal-Gear-Solid (highball#138, 2026-09-17), Apple M3 Ultra, Highball 0.9.23, mode not stated. The maintainer ran the free demo (Steam 3916150) on 2026-09-17 on an M1 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r3, D3DMetal: it reaches the main menu; gameplay was not exercised. The reporter (M3 Ultra) then reached the game on D3DMetal at over 60 fps at 4K on the Epic preset on 0.9.23, keyboard not responding that time, and later launches failed again with the Steam window going blank.",
-  "notes": "Unreal Engine 5, Direct3D 12 only. Use D3DMetal: the demo starts, shows its title and main menu at 84 to 110 fps windowed at 1280x720 on an M1 Pro (Metal HUD), with the Visual C++ 2015-2022 runtime installed in the environment first, which the game's own prerequisite check demands. On DXMT or DXVK (no Direct3D 12) it cannot reach the menu, which is the most likely cause of the reported crash. From 0.9.26 Play picks D3DMetal for Unreal 5 builds on its own. Gameplay past the menu is not measured here yet.",
+  "notes": "Unreal Engine 5, Direct3D 12 only. Use D3DMetal: the demo starts, shows its title and main menu at 84 to 110 fps windowed at 1280x720 on an M1 Pro (Metal HUD), with the Visual C++ 2015-2022 runtime installed in the environment first, which the game's own prerequisite check demands. On DXMT or DXVK (no Direct3D 12) it cannot reach the menu, which is the most likely cause of the reported crash. From 0.9.26 Play picks D3DMetal for Unreal 5 builds on its own. Gameplay past the menu is not measured here yet. On engine x64-sikarugir10.0_6-r6 (D3DMetal from GPTK 4.0 beta 2, macOS 27 only) the demo drew at 99% GPU for the whole run where r5 sits at 2% with its black screen; measured blind on 2026-09-19 (session locked: process, GPU load and logs, no captures), so whether the picture is right is not confirmed yet.",
   "knownIssues": [
     {
       "symptom": "Starts, then crashes before the main menu (reported on an M3 Ultra, Highball 0.9.23)",
@@ -27,6 +27,11 @@
       "symptom": "Demo: after its first run it comes back fullscreen and the screen stays black on D3DMetal, with or without -windowed -ResX=1280 -ResY=720 (measured three times 2026-09-18 on an M1 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r5, screen unlocked, captures 1% lit at display size)",
       "cause": "not diagnosed; the same build draws and runs its menu windowed at 1280x720",
       "fix": "none confirmed yet; the first run after a fresh install draws its menu, so deleting the demo's saved settings under the environment's users/<you>/AppData/Local/TheLastCaretaker may get it back, not measured"
+    },
+    {
+      "symptom": "Black fullscreen on D3DMetal on the r5 engine (2% GPU after the first run)",
+      "cause": "not diagnosed; the GPU stays idle, so nothing is drawn rather than drawn black",
+      "fix": "Try engine x64-sikarugir10.0_6-r6 under Advanced on macOS 27 (D3DMetal from GPTK 4): here it draws at full GPU load, picture not yet confirmed by eye"
     }
   ],
   "launchArgs": null,
