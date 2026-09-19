@@ -56,6 +56,11 @@
       "fix": "set bottle sync to none"
     },
     {
+      "symptom": "A brand-new client quits about three minutes after its first self-update, before you sign in, leaving an assert dump (BMainLoop appears to have stalled > 15 seconds / fatal stalled cross-thread pipe)",
+      "cause": "An upstream Steam client regression, not the renderer or Wine: the same stall hits Linux (ValveSoftware/steam-for-linux#13576, from the 2026-09-03 client) and reproduces on both the release and the beta build here. Measured 2026-09-19 on an M1 Pro, engine r5, a fresh prefix. A prefix that has signed in once is stable.",
+      "fix": "Press Play again. Once you reach the sign-in window and log in, the client stops doing this; it is only the very first post-update run that quits."
+    },
+    {
       "symptom": "err:virtual:virtual_setup_exception nested exception on signal stack during first update",
       "cause": "32-bit bootstrapper under experimental WoW64 (seen with msync+DXMT)",
       "fix": "relaunch; the update resumes from package/"
