@@ -1,0 +1,14 @@
+{
+  "id": "europa-universalis-5",
+  "title": "Europa Universalis 5",
+  "steam_appid": 3450310,
+  "status": "community",
+  "renderer": "dxvk",
+  "anticheat": null,
+  "provenance": "Reported by teoyidu (highball-db#139, 2026-09-19): rated 5, perfect, DXVK, Apple M3 Pro, macOS 26.6.2, engine x64-crossover26.3-r10, Highball 0.9.23, 44 minutes played through Highball. Not run here.",
+  "notes": "Reported perfect after a 44-minute session on DXVK, running on the Wine 11 CrossOver engine (x64-crossover26.3-r10); frame rate not recorded yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
