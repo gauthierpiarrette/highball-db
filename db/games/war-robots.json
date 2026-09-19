@@ -1,0 +1,14 @@
+{
+  "id": "war-robots",
+  "title": "War Robots",
+  "steam_appid": 767560,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by viperwraith47 (highball-db#143, 2026-09-19): rated 5, perfect, macOS 27.2, engine x64-sikarugir10.0_6-r3, Highball 0.9.19, 1 minute played through Highball. Renderer not stated. The chip field read Apple A18 Pro, an iPhone chip name, as filled in from the machine; unexplained, recorded as reported. Not run here.",
+  "notes": "Reported perfect after a one-minute session on macOS 27.2; the renderer used, frame rate and longer play are not recorded yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
