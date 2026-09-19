@@ -5,8 +5,8 @@
   "status": "reported-upstream",
   "renderer": "dxmt",
   "provenance": "DXMT changelog v0.73 (github.com/3Shain/dxmt/releases)",
-  "notes": "login background video fixed Community: left click dead in the game on macOS 27.0 beta while right click and the Steam window work (highball#144), unresolved.",
-  "lastVerified": null,
+  "notes": "login background video fixed Community: left click dead in the game on macOS 27.0 beta while right click and the Steam window work (highball#144), unresolved. Measured here 2026-09-19 on an M1 Pro, macOS 27.0, engine r5, Highball 0.9.32: the title screen and the in-game menu react to a left click on DXMT and on DXVK alike (tap to start proceeds to the data download), so the dead left click reported on an M5 is not a macOS 27 or a graphics-mode matter on this hardware.",
+  "lastVerified": "2026-09-19",
   "anticheat": {
     "names": [
       "CrackProof"
@@ -17,8 +17,14 @@
   "knownIssues": [
     {
       "symptom": "Left click does nothing in the game while right click works (reported on an M5, macOS 27.0 beta, Highball 0.9.19, DXMT); clicks work in the Steam window",
-      "cause": "not measured: the game reads the mouse through Unity's Input System (raw input), the Steam client through ordinary window messages, and macOS 27 is untested here",
+      "cause": "not measured: the game reads the mouse through Unity's Input System (raw input), the Steam client through ordinary window messages, and macOS 27 is untested here Not reproduced on an M1 Pro with macOS 27.0 (2026-09-19): left click works on DXMT and DXVK there.",
       "fix": "none verified. Try Properties, Controller, Disable Steam Input for the game in the Steam window, and unplug any controller, the game is known to misroute mouse input with a pad present"
     }
-  ]
+  ],
+  "verified": {
+    "engine": "x64-sikarugir10.0_6-r5",
+    "macos": "27.0",
+    "chip": "Apple M1 Pro",
+    "result": "Title screen renders and reacts to a left click on DXMT and on DXVK (tap to start, menu button); the data download then starts. Gameplay not exercised."
+  }
 }
