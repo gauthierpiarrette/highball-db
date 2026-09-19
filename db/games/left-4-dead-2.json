@@ -1,0 +1,20 @@
+{
+  "id": "left-4-dead-2",
+  "title": "Left 4 Dead 2",
+  "steam_appid": 550,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by greph123 (highball-db#78, 2026-09-16 to 2026-09-18): Apple M2 MacBook Air with 8 GB, macOS 26.6.2, engine x64-sikarugir10.0_6-r3, Highball 0.9.19. First rated 2, laggy on Wine's Direct3D and frozen at campaign load on DXVK; the cause was the many workshop add-ons loading, and with those off the game ran flawlessly at maximum settings at 1280x820. Mode of the clean run not stated. Not run here.",
+  "notes": "Runs well on an M2 Air once workshop add-ons are not loaded automatically; with them the campaign froze at load on DXVK and crawled on Wine's Direct3D. The mode of the clean run is not recorded yet. A Source game, so DXVK is the expected mode.",
+  "knownIssues": [
+    {
+      "symptom": "Campaign freezes as it loads on DXVK, or runs at very low fps on Wine's Direct3D",
+      "cause": "reported: many workshop add-ons loading at start (M2 Air, 8 GB)",
+      "fix": "Disable the add-ons from loading automatically, then play"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -3,8 +3,15 @@
   "title": "The Elder Scrolls V: Skyrim Special Edition",
   "steam_appid": 489830,
   "status": "community",
-  "renderer": "dxmt",
-  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
-  "notes": "long-standing Wine staple",
-  "lastVerified": null
+  "renderer": "dxvk",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball. Reported by phmuni (highball-db#122, 2026-09-18 to 2026-09-19): on an Apple M5, macOS 27.0, engine x64-sikarugir10.0_6-r3, Highball 0.9.23, the game crashed right after the Bethesda logo on DXMT and on D3DMetal, then booted and ran well on DXVK, stable with occasional early stutters and no visual defects. Not run here.",
+  "notes": "Use DXVK. One real report on an M5 with macOS 27: DXMT and D3DMetal both crash right after the Bethesda logo, DXVK runs the game well with early stutters that fade as shaders build. Whether DXMT works on other chips is not recorded yet.",
+  "lastVerified": null,
+  "knownIssues": [
+    {
+      "symptom": "Crashes right after the Bethesda logo on DXMT and on D3DMetal (reported on an M5, macOS 27.0, engine r3)",
+      "cause": "not diagnosed; the same machine runs the game on DXVK",
+      "fix": "On the game's page under Advanced set the mode to DXVK"
+    }
+  ]
 }
