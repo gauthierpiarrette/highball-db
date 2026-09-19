@@ -1,0 +1,30 @@
+{
+  "id": "the-last-caretaker",
+  "kind": "game",
+  "title": "The Last Caretaker",
+  "requires": [
+    "steam"
+  ],
+  "renderer": "d3dmetal",
+  "steps": [
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\AppDefaults\\VoyageSteam-Win64-Shipping.exe\\DllOverrides",
+      "name": "mfplat",
+      "valueType": "REG_SZ",
+      "data": ""
+    },
+    {
+      "type": "note",
+      "text": "The menu plays a 4K 60 fps video (Content/Movies/Menubgvideo4k60.mp4) through Windows Media Foundation. Under Wine the decoded frames reach D3DMetal as a texture it has no Metal format for: Metal refuses the descriptor (invalid pixelFormat 0), the thread that asked dies, and the game's main thread then waits on it forever, so the window stays black at idle GPU. With Media Foundation's platform library disabled for the game's executable only, the media player fails to open the file, the menu comes up without its background video, and the game plays. Nothing else in the environment changes."
+    }
+  ],
+  "knownIssues": [],
+  "lastVerified": {
+    "date": "2026-09-19",
+    "engine": "x64-sikarugir10.0_6-r5",
+    "macos": "27.0",
+    "chip": "Apple M1 Pro",
+    "result": "Demo (3916150) on D3DMetal: with the override, title screen and full main menu render, confirmed by eye on r5 and on r6 (GPTK 4 D3DMetal); without it, black window, Metal assertion in the log, main thread stuck. The exe name is the same in the demo and the full game."
+  }
+}
