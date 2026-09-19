@@ -1,0 +1,14 @@
+{
+  "id": "coral-island",
+  "title": "Coral Island",
+  "steam_appid": 1158160,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by gelarr (highball-db#136, 2026-09-19): rated 5, perfect, Apple M1 Pro, macOS 26.5, engine x64-sikarugir10.0_6-r3, Highball 0.9.19, 6 minutes played through Highball. Renderer not stated. Not run here.",
+  "notes": "Reported perfect after a six-minute session on an M1 Pro; the renderer used, frame rate and longer play are not recorded yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
