@@ -1,0 +1,14 @@
+{
+  "id": "i-know-a-guy-shady-life-simulator",
+  "title": "I Know a Guy: Shady Life Simulator",
+  "steam_appid": 4173620,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by WickednessPro (highball-db#146, 2026-09-20): rated 5, perfect, Apple M4 Max, macOS 26.6.2, engine x64-sikarugir10.0_6-r3, Highball 0.9.23, 105 minutes played through Highball. Renderer not stated. Not run here.",
+  "notes": "Reported perfect after a 105-minute session on an M4 Max; the renderer used and the frame rate are not recorded yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
