@@ -1,0 +1,14 @@
+{
+  "id": "aniimo",
+  "title": "Aniimo",
+  "steam_appid": 4126040,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by lewyuburi (highball-db#147, 2026-09-20): rated 4, playable with minor issues, Apple M1 Pro, macOS 27.0, engine x64-sikarugir10.0_6-r5, Highball 0.9.32, 54 minutes played through Highball; the environment ran DXMT with msync and the steam and vcrun2022 recipes (from the report's settings field). The minor issues were not described. Not run here.",
+  "notes": "Reported playable with unspecified minor issues after a 54-minute session on DXMT on an M1 Pro with macOS 27; frame rate not recorded yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
