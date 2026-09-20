@@ -1,0 +1,14 @@
+{
+  "id": "tekken-7",
+  "title": "TEKKEN 7",
+  "steam_appid": 389730,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#145, 2026-09-20): rated 4, playable with minor issues, D3DMetal, Apple M1, macOS 26.7, engine x64-sikarugir10.0_6-r5, Highball 0.9.31, a standalone (non-Steam) copy run through Highball for 52 minutes: Story campaign to Chapter 3, occasional choppiness, DualSense gamepad fine, environment on msync, Windows 10, 96 dpi. Not run here.",
+  "notes": "Story mode played to Chapter 3 on D3DMetal on an M1 with occasional choppiness (the reporter's CPU sat around 150%, so likely the M1's GPU rather than the CPU). A DualSense gamepad worked without setup. Tip from the report: the game's Borderless Window mode makes switching to other apps easier. Frame rate not recorded.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
