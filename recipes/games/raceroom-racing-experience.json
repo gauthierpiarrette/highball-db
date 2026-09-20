@@ -32,6 +32,11 @@
       "symptom": "Pre-race screen freezes after the track loads, VK_ERROR_DEVICE_LOST in the Direct3D 9 log (default layer)",
       "cause": "reported: the DXVK-Kegworks 1.10.4 Direct3D 9 loses the Metal device on this game",
       "fix": "apply this optional fix under Advanced on the game's page; if the picture turns grayscale, remove the copied d3d9.dll next to RRRE64.exe and the override, both reported outcomes exist"
+    },
+    {
+      "symptom": "Applying this fix changes nothing on a DXVK launch",
+      "cause": "measured 2026-09-20 on Half-Life 2 with +loaddll: on a DXVK launch the engine's own Direct3D 9 overlay is found before the copy beside the game's executable (the launch's WINEDLLOVERRIDES outranks the per-program registry entry), so the newer layer never loads; it loads on a wined3d launch",
+      "fix": "none shipped yet; a per-program layer choice is planned (Highball plan item 14). Setting this game's mode to Wine's own Direct3D makes the copy the Direct3D 9 in use, untested on RaceRoom"
     }
   ],
   "lastVerified": null
