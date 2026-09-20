@@ -1,0 +1,14 @@
+{
+  "id": "age-of-history-3",
+  "title": "Age of History 3",
+  "steam_appid": 2772750,
+  "status": "community",
+  "renderer": "dxvk",
+  "anticheat": null,
+  "provenance": "Reported by JarlaxleXenocide (highball-db#152, 2026-09-20): rated 5, perfect, Apple M5 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r5, Highball 0.9.28, DXVK, 85 minutes played through Highball. Not run here.",
+  "notes": "Reported perfect after an 85-minute session on DXVK on an M5 Pro with macOS 26.6.2, long enough to cover real play rather than only the launch; frame rate not recorded yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
