@@ -5,15 +5,31 @@
   "status": "community",
   "renderer": "dxvk",
   "anticheat": null,
-  "provenance": "Reported by HasAks38 (highball#122, 2026-09-16), Apple M1, macOS 27, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, DXVK: playable, with frame drops when shooting or when an NPC is hit. Not verified by the maintainer.",
-  "notes": "Plays on DXVK, the default mode. The reporter saw frame drops on shots, blood and muzzle flashes on an M1, which matches DXVK compiling each effect the first time it appears with async compilation off; the stalls fade as effects get compiled. Async shader compilation in the environment's Graphics settings is the first thing to try. No measurement here yet.",
+  "provenance": "Reported by HasAks38 (highball#122, 2026-09-16), Apple M1, macOS 27, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, DXVK: playable, with frame drops when shooting or when an NPC is hit. Not verified by the maintainer. Measured here 2026-09-20 with the free Half-Life 2: Demo (Steam 219, the same 20th-anniversary build, 32-bit) on an M1 Pro, macOS 27.0, engine x64-sikarugir10.0_6-r5: menu, the first map and a recorded timedemo of the opening on every graphics mode; not played through.",
+  "notes": "Plays on DXVK, the default mode. The reporter saw frame drops on shots, blood and muzzle flashes on an M1, which matches DXVK compiling each effect the first time it appears with async compilation off; the stalls fade as effects get compiled. Async shader compilation in the environment's Graphics settings is the first thing to try. Measured here with the demo, a 35-second timedemo of the opening at 1280x720 windowed with -dxlevel 95: 14 to 17 fps on DXVK's Direct3D 9 and 33 on Wine's own Direct3D, with the GPU idle at 2 to 3 ms a frame, so the cost is the Direct3D 9 translation on the CPU under Rosetta, not the graphics. Wine's own Direct3D draws the intro correctly and is worth a try for the frame rate; its picture past the intro was not checked, which is why DXVK stays the mode here. Without -dxlevel 95 on the command line the game picked its DirectX 8 path on this Mac; adding it once forces the proper path (Source resets video settings on every launch that carries it, so add it once, then remove it). The game's own -vulkan switch cannot create a device on a Mac. The r5 engine's newer Direct3D 9 layer loses the device on this game. Faster Direct3D 9 on Metal and faster x87 under Rosetta are both being looked at (highball#165).",
   "knownIssues": [
     {
       "symptom": "Frame drops when shooting or when an NPC is hit, blood and muzzle flash effects (reported on an M1, macOS 27)",
       "cause": "reported, consistent with first-use shader compilation on DXVK with async off",
-      "fix": "turn on DXVK async shader compilation in the environment's Graphics settings; the newer Direct3D 9 layer in candidate engine r4 is worth a try"
+      "fix": "turn on DXVK async shader compilation in the environment's Graphics settings"
+    },
+    {
+      "symptom": "Low frame rate for such an old game, 14 to 33 fps at 1280x720 on an M1 Pro depending on the mode",
+      "cause": "measured: CPU-side cost of the Direct3D 9 translation and Rosetta; the GPU sits at 2 to 3 ms per frame",
+      "fix": "Wine's own Direct3D is twice as fast in the opening here (33 against 17); engine work tracked in highball#165"
+    },
+    {
+      "symptom": "The -vulkan launch option shows nothing",
+      "cause": "measured: the game's bundled DXVK-native requests geometryShader and shaderCullDistance, which MoltenVK does not offer, so vkCreateDevice fails",
+      "fix": "leave -vulkan off"
     }
   ],
   "launchArgs": null,
-  "lastVerified": null
+  "lastVerified": null,
+  "verified": {
+    "engine": "x64-sikarugir10.0_6-r5",
+    "macos": "27.0",
+    "chip": "Apple M1 Pro",
+    "fps": "33 in a timedemo of the opening at 1280x720 windowed on Wine's own Direct3D, 14 to 17 on DXVK's Direct3D 9 (dxlevel 95); measured with the free demo, the game itself not played"
+  }
 }
