@@ -1,0 +1,14 @@
+{
+  "id": "kingdom-two-crowns",
+  "title": "Kingdom Two Crowns",
+  "steam_appid": 701160,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by sahildave (highball-db#151, 2026-09-20): rated 4, playable with minor issues, Apple M5 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r5, Highball 0.9.32, 2 minutes played through Highball; the environment ran DXMT with msync and the steam recipe (from the report's settings field). The minor issues were not described. Not run here.",
+  "notes": "Reported playable with unspecified minor issues after a two-minute session on DXMT on an M5 Pro with macOS 26.6.2, so the report covers launch and the opening rather than a long run; frame rate not recorded yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
