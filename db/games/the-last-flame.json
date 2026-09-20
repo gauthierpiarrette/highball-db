@@ -2,19 +2,29 @@
   "id": "the-last-flame",
   "title": "The Last Flame",
   "steam_appid": 1830970,
-  "status": "community",
-  "renderer": null,
+  "status": "verified-local",
+  "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by WWWcool (highball#99, 2026-09-14): Apple M1 Pro, macOS 14.5, Highball 0.9.12, engine x64-sikarugir10.0_6-r2, DXVK: the menu comes up, pressing Start does nothing. Measured here 2026-09-19 with the free Prologue (Steam 2517810, same Unity 2021.3 build) on an M1 Pro, macOS 27.0, blind (session locked: logs and process state only).",
-  "notes": "Unity 2021.3 with a 2560x1440 H.264 video behind the menu, played through Windows Media Foundation and handed to Direct3D 11 as a shared texture. On the r5 engine (Wine 10) the video fails inside Wine's MF transform after the frames decode (Player.log: WindowsVideoMedia error 0x80004004, IMFSourceReader::WaitForSample; Wine: source_reader_process_sample Transform failed to process output), with the hardware and the software H.264 decoder alike. On the Wine 11 engine (x64-crossover26.3-r10) the frames decode and keep flowing, but Unity asks DXGI for a shared handle every frame and DXMT returns none (Got null handle from IDXGIResource::GetSharedHandle), and DXVK cannot create the shared texture at all (VK_KHR_external_memory_win32). So no mode shows the video today. Whether Start hangs on that video could not be checked blind (Enter, Space and a centre click did nothing). The menu itself renders under DXMT and the game stays alive.",
+  "provenance": "Reported by WWWcool (highball#99, 2026-09-14): Apple M1 Pro, macOS 14.5, Highball 0.9.12, engine x64-sikarugir10.0_6-r2, DXVK: the menu comes up, pressing Start does nothing. Measured here 2026-09-19 and 2026-09-20 with the free Prologue (Steam 2517810, the same Unity 2021.3 build) on an M1 Pro, macOS 27.0.",
+  "notes": "Needs the Wine 11 engine x64-crossover26.3-r11 or later (the recipe names it). Two bugs sat behind the report, both in Wine on macOS and both fixed in r11. Start did nothing because the game's save code asks Windows for the last error after a file call and, on macOS, the place Unity's Mono reads it from (%gs:0x68) held a stray pointer instead of the error code, so a missing save file became an IOException that ended the click (Player.log: IOException: Unknown error (0x...)). The menu's 2560x1440 H.264 video, played through Media Foundation and handed to Direct3D 11 as a shared texture, got no shared handle from DXMT on Wine 11 (Got null handle from IDXGIResource::GetSharedHandle) and failed inside the decoder on Wine 10. On r11 both are gone: the run starts on DXMT and on DXVK, and the video plays on DXMT. DXVK draws the board at 20 fps against DXMT's 86 and shows a still behind the menu instead of the video, so use DXMT. On the default Wine 10 engine (r2 to r5) neither fix exists and Start still does nothing.",
   "knownIssues": [
     {
-      "symptom": "Pressing Start in the menu does nothing (reported); the menu's background video never shows",
-      "cause": "measured: the game's video path needs a Direct3D 11 shared texture, which no macOS mode provides, and on Wine 10 the decode hand-off fails before that",
-      "fix": "None yet. Needs shared-resource support in DXMT (or Wine 11's decode plus a sharing path); tracked in highball#99"
+      "symptom": "Pressing Start or Embark in the menu does nothing; Player.log has IOException: Unknown error (0x...) from System.IO on the save file",
+      "cause": "measured: Wine on macOS keeps GetLastError in a different thread slot from the one MSVC-built Mono reads, so the game sees garbage instead of ERROR_FILE_NOT_FOUND",
+      "fix": "Engine x64-crossover26.3-r11 or later (patch 0011 keeps the two in step). No fix exists on the Wine 10 engines."
+    },
+    {
+      "symptom": "The menu's background video does not show",
+      "cause": "measured: the video needs a Direct3D 11 shared texture; Wine 10 fails in the decoder, Wine 11 before r11 got no handle from DXMT, and DXVK cannot share textures at all",
+      "fix": "Engine r11 or later with DXMT (patch 0010). On DXVK the menu keeps a still image; the game plays anyway."
     }
   ],
   "launchArgs": null,
-  "lastVerified": null,
-  "verified": null
+  "lastVerified": "2026-09-20",
+  "verified": {
+    "engine": "x64-crossover26.3-r11",
+    "macos": "27.0",
+    "chip": "Apple M1 Pro",
+    "result": "Prologue on DXMT, three launches: menu with its video, Ascension, Embark, hero and relic picks, the Act I map, the first fight (won, 76 fps during it, 86 to 89 fps on the board at 1728x1117), quit through the menu with the save written each time. One launch on DXVK continued a save to the board at 20 fps. Zero exceptions and zero null-handle lines in Player.log across all runs. The full game was not run; the report's build is the same Unity player."
+  }
 }

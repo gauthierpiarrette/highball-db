@@ -1,0 +1,39 @@
+{
+  "id": "the-last-flame",
+  "kind": "game",
+  "title": "The Last Flame",
+  "requires": [
+    "steam"
+  ],
+  "renderer": "dxmt",
+  "engine": "x64-crossover26.3-r11",
+  "steps": [
+    {
+      "type": "note",
+      "text": "Needs engine x64-crossover26.3-r11 or later. Two Wine-on-macOS bugs are fixed there and nowhere else: the last-error slot Unity's Mono reads held a stray pointer, so a missing save file ended the Start click with IOException Unknown error, and the menu video's shared texture got no handle from DXMT. On the Wine 10 engines pressing Start still does nothing and no setting changes that."
+    },
+    {
+      "type": "note",
+      "text": "Use DXMT. DXVK also starts the run on r11 but draws the board at 20 fps against DXMT's 86 on an M1 Pro, and its menu shows a still image where DXMT plays the video."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "Pressing Start or Embark does nothing; Player.log has IOException: Unknown error (0x...) on the save file",
+      "cause": "Wine on macOS kept GetLastError in a different thread slot from the one MSVC-built Mono reads (highball-engine patch 0011)",
+      "fix": "This recipe's engine, r11 or later."
+    },
+    {
+      "symptom": "The menu's background video does not show",
+      "cause": "Its shared Direct3D 11 texture got no handle from DXMT before r11 (patch 0010); DXVK cannot share textures at all",
+      "fix": "r11 or later with DXMT. On DXVK the game plays with a still behind the menu."
+    }
+  ],
+  "lastVerified": {
+    "date": "2026-09-20",
+    "engine": "x64-crossover26.3-r11",
+    "macos": "27.0",
+    "chip": "Apple M1 Pro",
+    "result": "Free Prologue (Steam 2517810, the same Unity player as the full game) on DXMT, three launches: menu with its video, Embark, hero and relic picks, the Act I map, the first fight won at 76 fps, quit through the menu with the save written. One launch on DXVK continued a save to the board at 20 fps. Zero exceptions in Player.log."
+  }
+}
