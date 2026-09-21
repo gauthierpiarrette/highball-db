@@ -1,0 +1,14 @@
+{
+  "id": "upload-labs",
+  "title": "Upload Labs",
+  "steam_appid": 3606890,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by mrkev (highball-db#169, 2026-09-21): rated 5, perfect, Apple M3, macOS 15.8, engine x64-sikarugir10.0_6-r5, Highball 0.9.33, DXMT, 186 minutes played through Highball; the environment ran msync with the steam recipe (from the report's settings field). Not run here.",
+  "notes": "Reported perfect after a three-hour session on DXMT on an M3 with macOS 15.8, long enough to cover real play; frame rate not recorded yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
