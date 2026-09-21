@@ -1,0 +1,14 @@
+{
+  "id": "fumes",
+  "title": "FUMES",
+  "steam_appid": 1920430,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by a user (highball-db#144, 2026-09-19): rated 5, perfect, Apple M1, macOS 15.7.1, engine x64-sikarugir10.0_6-r5, Highball 0.9.28, 11 minutes played through Highball; graphics mode not stated. Not run here.",
+  "notes": "Reported perfect after an eleven-minute session on an M1 with macOS 15.7.1; the graphics mode was not stated and the frame rate not recorded.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

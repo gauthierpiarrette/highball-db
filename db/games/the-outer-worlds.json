@@ -1,0 +1,14 @@
+{
+  "id": "the-outer-worlds",
+  "title": "The Outer Worlds",
+  "steam_appid": 578650,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by a user (highball-db#142, 2026-09-19): rated 4, playable with minor issues, the Epic copy, Apple M4, macOS 27.0, engine x64-sikarugir10.0_6-r3, Highball 0.9.23, 70 minutes played through Highball; graphics mode and the minor issues not stated. Not run here.",
+  "notes": "Reported playable with unspecified minor issues after a 70-minute session with the Epic copy on an M4 with macOS 27, long enough to cover real play; graphics mode not stated, frame rate not recorded. The Steam id here is the same game on Steam.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
