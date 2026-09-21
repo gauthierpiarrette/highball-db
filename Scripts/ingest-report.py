@@ -245,6 +245,10 @@ def extract(body):
 
     n = find_label(b, ["Notes", "Test notes"])
     rec["notes"] = n if answered(n) else None
+    # The form's "What was not perfect?" line (added 2026-09-21 after a day of rating-4 reports
+    # with nothing to act on). Kept apart from notes so a known-issue line can be lifted from it.
+    w = find_label(b, ["What was not perfect?", "What was not perfect"])
+    rec["issues"] = w if answered(w) else None
     return rec, asks
 
 

@@ -32,6 +32,16 @@ for f in glob.glob("db/games/*.json"):
     if d.get("status") == "blocked-anticheat" and d.get("renderer") is not None:
         errors.append(f"{f}: blocked entries must not recommend a renderer")
 
+# One Steam id, one row: the ingest index refuses duplicates, and a second row for the same game
+# broke every ingest run on 2026-09-21 (europa-universalis-5 and europa-universalis-v).
+seen_appids = {}
+for f in glob.glob("db/games/*.json"):
+    d = json.load(open(f))
+    a = d.get("steam_appid")
+    if a is None: continue
+    if a in seen_appids: errors.append(f"{f}: steam_appid {a} is already used by {seen_appids[a]}")
+    seen_appids[a] = f
+
 recipe_engines = {}
 for f in glob.glob("recipes/*/*.json"):
     if f.endswith("LICENSE"): continue

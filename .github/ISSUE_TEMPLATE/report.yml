@@ -18,6 +18,12 @@ body:
       label: Rating
       options: ["5 — perfect", "4 — playable, minor issues", "3 — playable with workarounds", "2 — launches, not playable", "1 — does not launch"]
     validations: { required: true }
+  - type: input
+    id: issues
+    attributes:
+      label: What was not perfect?
+      description: "Skip this for a 5. For anything lower, one line on what you saw is what turns the report into a fix: a glitch, a stutter, a crash point, a control that stopped working."
+      placeholder: "Frame drops when shooting; the family portrait is noise; clicks stop after alt-tab"
   - type: dropdown
     id: renderer
     attributes:
