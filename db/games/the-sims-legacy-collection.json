@@ -17,7 +17,7 @@
   "knownIssues": [
     {
       "symptom": "Sims drawn as black silhouettes on the lot, and in the neighbourhood view the family portrait is coloured noise and the lot preview a black block (reported on an M4, macOS 27, engine r5, Highball 0.9.32, DXVK, 2880x1620)",
-      "cause": "reported, not yet reproduced here; the pattern (small textures arriving as uninitialised memory) points at the host-memory import path this 32-bit Vulkan game needs (MVK_SHADOW_IMPORT=1)",
+      "cause": "reported, not reproduced yet: on an M1 Pro with the same engine and Highball 0.9.34 the neighbourhood and an empty lot (walls, floors, objects, trees) drew correctly on 2026-09-21; an occupied lot and a family portrait were not reached in that session. The pattern (small textures arriving as uninitialised memory) points at the host-memory import path this 32-bit Vulkan game needs (MVK_SHADOW_IMPORT=1)",
       "fix": "None yet. The game plays through it; tracked from highball-db#160."
     }
   ]
