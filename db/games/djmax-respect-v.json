@@ -1,0 +1,14 @@
+{
+  "id": "djmax-respect-v",
+  "title": "DJMAX RESPECT V",
+  "steam_appid": 960170,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by paripob (highball-db#165, 2026-09-21): rated 4, playable with minor issues, Apple M4 Pro, macOS 27.0, engine x64-sikarugir10.0_6-r5, Highball 0.9.32, 10 minutes played through Highball; the environment ran DXMT with msync and the steam recipe (from the report's settings field). The minor issues were not described. Not run here.",
+  "notes": "A rhythm game, so timing is the thing to watch. Reported playable with unspecified minor issues after a ten-minute session on DXMT on an M4 Pro with macOS 27; frame rate not recorded yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -1,0 +1,14 @@
+{
+  "id": "hubert-demo",
+  "title": "Hubert Demo",
+  "steam_appid": 3676940,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by Legacycz (highball-db#164, 2026-09-21): rated 5, perfect, Apple M2, macOS 27.0, engine x64-crossover26.3-r10 (the Wine 11 engine), Highball 0.9.32, D3DMetal, 1 minute played through Highball; the environment ran msync with the steam and vcrun2022 recipes. Not run here.",
+  "notes": "Reported perfect after a one-minute session on D3DMetal on the Wine 11 engine, an M2 with macOS 27, so the report covers launch and the first screen; frame rate not recorded yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

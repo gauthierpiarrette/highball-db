@@ -1,0 +1,14 @@
+{
+  "id": "restory-chill-electronics-repairs",
+  "title": "ReStory: Chill Electronics Repairs",
+  "steam_appid": 3812600,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by ben24wr5 (highball-db#158, 2026-09-20): rated 5, perfect, Apple M4, macOS 27.0, engine x64-sikarugir10.0_6-r3, Highball 0.9.26, 1 minute played through Highball, 'good'; graphics mode not stated. The report named the game only as 'Restory'; matched to the Steam title. Not run here.",
+  "notes": "Reported perfect after a one-minute session on an M4 with macOS 27, so the report covers launch and the first screen; graphics mode not stated, frame rate not recorded.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

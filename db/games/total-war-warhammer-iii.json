@@ -1,0 +1,14 @@
+{
+  "id": "total-war-warhammer-iii",
+  "title": "Total War: WARHAMMER III",
+  "steam_appid": 1142710,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by KirillMuhin (highball-db#161, 2026-09-20): rated 4, playable with minor issues, Apple M4, macOS 27.0, engine x64-sikarugir10.0_6-r3, Highball 0.9.19, 238 minutes played through Highball; graphics mode and the minor issues not stated. Not run here.",
+  "notes": "Reported playable with unspecified minor issues after a four-hour session on an M4 with macOS 27, long enough to cover real campaign play; the graphics mode was not stated and the frame rate not recorded.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

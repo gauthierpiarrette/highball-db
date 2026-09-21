@@ -1,0 +1,14 @@
+{
+  "id": "manifold-garden",
+  "title": "Manifold Garden",
+  "steam_appid": 473950,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by mrkev (highball-db#166, 2026-09-21): rated 5, perfect, Apple M3, macOS 15.8, engine x64-sikarugir10.0_6-r5, Highball 0.9.33, DXMT, 9 minutes played through Highball. Not run here.",
+  "notes": "Reported perfect after a nine-minute session on DXMT on an M3 with macOS 15.8; frame rate not recorded yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

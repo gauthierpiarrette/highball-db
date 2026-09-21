@@ -3,7 +3,8 @@
   "title": "art of rally",
   "steam_appid": 550320,
   "status": "community",
-  "provenance": "reported by HappySmurfday (highball-db#14), Apple Silicon, chip not stated, unverified by Highball",
-  "notes": "Plays. Reported as running fine. The only message seen was about the Steam overlay not being available because of a missing DLL, which does not affect the game. The reporter did not say which chip, macOS version, engine or graphics mode, and no frame rate was measured. Not tried here.",
-  "lastVerified": null
+  "provenance": "reported by HappySmurfday (highball-db#14), Apple Silicon, chip not stated, unverified by Highball ISAKOO (highball-db#159, 2026-09-20): rated 5, perfect, the Epic copy, Apple M2, macOS 27.0, engine x64-sikarugir10.0_6-r5, Highball 0.9.32, 6 minutes played through Highball; the environment ran DXMT (from the report's settings field).",
+  "notes": "Plays. Reported as running fine. The only message seen was about the Steam overlay not being available because of a missing DLL, which does not affect the game. The reporter did not say which chip, macOS version, engine or graphics mode, and no frame rate was measured. Not tried here. A second reporter played the Epic copy for six minutes on DXMT on an M2 with macOS 27 and rated it perfect.",
+  "lastVerified": null,
+  "renderer": "dxmt"
 }

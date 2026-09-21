@@ -1,0 +1,20 @@
+{
+  "id": "heartopia",
+  "title": "Heartopia",
+  "steam_appid": 4025700,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by myzenon (highball-db#155, 2026-09-20): rated 4, playable with minor issues, Apple M4 Pro, macOS 27.0, engine x64-sikarugir10.0_6-r5, Highball 0.9.28; graphics mode not stated. Not run here.",
+  "notes": "Reported playable at 120 fps, about 100 on the 2K highest preset, on an M4 Pro with macOS 27. One issue reported: after switching to another window and back, the game has focus but takes no clicks or keyboard input until it is closed and started again.",
+  "knownIssues": [
+    {
+      "symptom": "After switching to another app and back, the game window has focus but ignores the mouse and keyboard until the game is restarted",
+      "cause": "reported; not reproduced here",
+      "fix": "None known yet. Avoid switching away mid-session, or restart the game when it happens."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
