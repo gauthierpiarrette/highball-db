@@ -1,0 +1,17 @@
+{
+  "id": "vrchat",
+  "title": "VRChat",
+  "steam_appid": 438100,
+  "status": "blocked-anticheat",
+  "renderer": null,
+  "provenance": "Asked by Chestnutree04 (highball-db#156, 2026-09-20, M1 Pro, macOS 27.0, Highball 0.9.32): the game stops at 'Failed to load the anti-cheat module'. Are We Anti-Cheat Yet? (MIT): Easy Anti-Cheat, 'Supported' on Linux through the runtime EAC ships for Proton, which has no macOS counterpart.",
+  "notes": "Anti-cheat: Easy Anti-Cheat. On Windows it loads a kernel driver, which Wine cannot run, and the Linux route (EAC's own Proton runtime) does not exist for macOS, so the launch stops at 'Failed to load the anti-cheat module' on every engine and graphics mode. Linux/Proton status 'Supported' does not apply to macOS.",
+  "anticheat": {
+    "names": [
+      "Easy Anti-Cheat"
+    ],
+    "macVerdict": "blocked",
+    "note": "kernel anti-cheat; cannot work under Wine on macOS"
+  },
+  "lastVerified": null
+}
