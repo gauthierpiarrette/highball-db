@@ -13,5 +13,12 @@
     "macos": "26.6.2",
     "engine": "x64-sikarugir10.0_6-r2",
     "fps": "99.3 in the neighbourhood view at 1728x1117 on DXVK with 2.8 ms of GPU per frame (2026-09-10, engine r2)"
-  }
+  },
+  "knownIssues": [
+    {
+      "symptom": "Sims drawn as black silhouettes on the lot, and in the neighbourhood view the family portrait is coloured noise and the lot preview a black block (reported on an M4, macOS 27, engine r5, Highball 0.9.32, DXVK, 2880x1620)",
+      "cause": "reported, not yet reproduced here; the pattern (small textures arriving as uninitialised memory) points at the host-memory import path this 32-bit Vulkan game needs (MVK_SHADOW_IMPORT=1)",
+      "fix": "None yet. The game plays through it; tracked from highball-db#160."
+    }
+  ]
 }
