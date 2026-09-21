@@ -1,0 +1,14 @@
+{
+  "id": "rv-there-yet",
+  "title": "RV There Yet?",
+  "steam_appid": 3949040,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by FizzyCoffee (highball-db#168, 2026-09-21): rated 4, playable with minor issues, Apple M2, macOS 26.6.2, engine x64-sikarugir10.0_6-r5, Highball 0.9.33, D3DMetal, 11 minutes played through Highball; the environment ran msync with the Metal HUD on and the steam and vcrun2022 recipes (from the report's settings field). The minor issues were not described. Not run here.",
+  "notes": "Reported playable with unspecified minor issues after an eleven-minute session on D3DMetal on an M2 with macOS 26.6.2; frame rate not recorded (the reporter had the Metal HUD on, so a figure may follow).",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
