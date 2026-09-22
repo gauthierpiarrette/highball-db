@@ -19,9 +19,9 @@
   ],
   "knownIssues": [
     {
-      "symptom": "Pressing Start or Embark does nothing; Player.log has IOException: Unknown error (0x...) on the save file",
+      "symptom": "Pressing Start or Embark does nothing on a first run; Player.log has IOException: Unknown error (0x...) on the save file",
       "cause": "Wine on macOS kept GetLastError in a different thread slot from the one MSVC-built Mono reads (highball-engine patch 0011)",
-      "fix": "This recipe's engine, r11 or later."
+      "fix": "This recipe's engine, r11 or later. The fault needs the save to be missing, so it hits a first run; a copy that already has a save plays on Wine 10 too (measured 2026-09-22)."
     },
     {
       "symptom": "The menu's background video does not show",
