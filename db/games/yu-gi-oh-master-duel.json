@@ -1,0 +1,14 @@
+{
+  "id": "yu-gi-oh-master-duel",
+  "title": "Yu-Gi-Oh! Master Duel",
+  "steam_appid": 1449850,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by a user (highball-db#181, 2026-09-22): rated 5, perfect, Apple M4 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r5, Highball 0.9.32, DXMT with the Metal HUD on and the steam and vcrun2022 recipes, 39 minutes played through Highball. Not run here.",
+  "notes": "Reported perfect after a 39-minute session on DXMT on an M4 Pro with macOS 26.6.2, long enough to cover real duels; the reporter had the Metal HUD on but did not pass a frame rate on.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

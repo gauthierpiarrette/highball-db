@@ -17,7 +17,7 @@
   "knownIssues": [
     {
       "symptom": "Sims drawn as black silhouettes on the lot, and in the neighbourhood view the family portrait is coloured noise and the lot preview a black block",
-      "cause": "reported by two people, both on an M4 (M4 with macOS 27 and DXVK, M4 Pro with macOS 26.5.2 and DXMT), so it is not tied to one graphics mode. Not reproduced here on an M1 Pro, where the neighbourhood and an empty lot drew correctly at the default resolution on 2026-09-21; the first reporter says it shows at a high in-game resolution (they ran 2880x1620) and after a house is built. The pattern, small textures arriving as uninitialised memory, points at the host-memory import path this 32-bit Vulkan game needs (MVK_SHADOW_IMPORT=1)",
+      "cause": "reported by two people, both on an M4 (M4 with macOS 27 and DXVK, M4 Pro with macOS 26.5.2 and DXMT), so it is not tied to one graphics mode. Not reproduced here on an M1 Pro, where the neighbourhood and an empty lot drew correctly at the default resolution on 2026-09-21; the two reporters describe it differently, one saying it shows at a high in-game resolution (2880x1620) once a house is built, the other that it shows from the start and survives a restart of the game. The pattern, small textures arriving as uninitialised memory, points at the host-memory import path this 32-bit Vulkan game needs (MVK_SHADOW_IMPORT=1)",
       "fix": "None yet. The game plays through it; tracked from highball-db#160."
     }
   ]
