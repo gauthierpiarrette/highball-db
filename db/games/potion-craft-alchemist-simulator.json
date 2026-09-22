@@ -1,0 +1,14 @@
+{
+  "id": "potion-craft-alchemist-simulator",
+  "title": "Potion Craft: Alchemist Simulator",
+  "steam_appid": 1210320,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by a user (highball-db#173, 2026-09-21): rated 5, perfect, Apple M2, macOS 26.6.2, engine x64-sikarugir10.0_6-r5, Highball 0.9.33, 18 minutes played through Highball; the environment ran D3DMetal with the steam and vcrun2022 recipes (from the report's settings field). Not run here.",
+  "notes": "Reported perfect after an 18-minute session on D3DMetal on an M2 with macOS 26.6.2; frame rate not recorded yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
