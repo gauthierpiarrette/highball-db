@@ -5,7 +5,7 @@
   "status": "verified-local",
   "renderer": "dxvk",
   "anticheat": null,
-  "provenance": "Played by the maintainer on 2026-09-15, Apple M1 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r2, DXVK, about 30 fps. CrossOver users report 60 fps on an M1 Pro and 110 to 120 fps on M4 Pro (MacGamingDB, 23 reports).",
+  "provenance": "Played by the maintainer on 2026-09-15, Apple M1 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r2, DXVK, about 30 fps. CrossOver users report 60 fps on an M1 Pro and 110 to 120 fps on M4 Pro (MacGamingDB, 23 reports). Re-checked 2026-09-22 on the current default engine x64-sikarugir10.0_6-r7 through Highball's automated game smoke: the window comes up and draws within six seconds on DXVK. That covers starting, not playing.",
   "notes": "Works on DXVK, the default mode. The maintainer played it at about 30 fps on an M1 Pro; settings were not recorded, so the number is what was seen, not a measurement of the best the machine can do. CrossOver reports on the same chip reach 60 fps on medium to high, so there is headroom to find. Known from CrossOver users: the Steam overlay can break friend invites, and shadows flicker on some setups.",
   "knownIssues": [
     {
