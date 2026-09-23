@@ -1,5 +1,11 @@
 {
-  "anticheat": "Easy Anti-Cheat",
+  "anticheat": {
+    "names": [
+      "Easy Anti-Cheat"
+    ],
+    "macVerdict": "blocked",
+    "note": "kernel anti-cheat; cannot work under Wine on macOS, and the Proton EAC runtime that covers Linux has no macOS build"
+  },
   "knownIssues": [],
   "launchArgs": null,
   "lastVerified": null,

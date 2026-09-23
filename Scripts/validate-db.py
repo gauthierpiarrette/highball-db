@@ -31,6 +31,24 @@ for f in glob.glob("db/games/*.json"):
         errors.append(f"{f}: epic_app_name must be a string")
     if d.get("status") == "blocked-anticheat" and d.get("renderer") is not None:
         errors.append(f"{f}: blocked entries must not recommend a renderer")
+    # The app decodes both of these with fixed types, and a wrong shape makes the whole row fail
+    # to decode, which drops it from the app in silence. Caught on 2026-09-23 only by the app's
+    # own test suite a repository away, after satisfactory.json shipped launchArgs as a string
+    # and battlebit-remastered.json shipped anticheat as a string.
+    if d.get("launchArgs") is not None and not (
+            isinstance(d["launchArgs"], list) and all(isinstance(a, str) for a in d["launchArgs"])):
+        errors.append(f"{f}: launchArgs must be a list of strings ([\"-d3d11\"]) or null, not a bare string")
+    ac = d.get("anticheat")
+    if ac is not None:
+        if not isinstance(ac, dict):
+            errors.append(f"{f}: anticheat must be an object with names/macVerdict/note, or null, not a bare string")
+        else:
+            if not (isinstance(ac.get("names"), list) and ac["names"]
+                    and all(isinstance(n, str) for n in ac["names"])):
+                errors.append(f"{f}: anticheat.names must be a non-empty list of strings")
+            for k in ("macVerdict", "note"):
+                if ac.get(k) is not None and not isinstance(ac[k], str):
+                    errors.append(f"{f}: anticheat.{k} must be a string or absent")
 
 # One Steam id, one row: the ingest index refuses duplicates, and a second row for the same game
 # broke every ingest run on 2026-09-21 (europa-universalis-5 and europa-universalis-v).

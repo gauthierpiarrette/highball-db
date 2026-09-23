@@ -7,7 +7,9 @@
       "fix": "add -d3d11 to the game's launch options in Steam."
     }
   ],
-  "launchArgs": "-d3d11",
+  "launchArgs": [
+    "-d3d11"
+  ],
   "lastVerified": null,
   "id": "satisfactory",
   "title": "Satisfactory",
