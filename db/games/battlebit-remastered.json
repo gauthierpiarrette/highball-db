@@ -1,0 +1,13 @@
+{
+  "anticheat": "Easy Anti-Cheat",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "id": "battlebit-remastered",
+  "title": "BattleBit Remastered",
+  "steam_appid": 671860,
+  "status": "blocked-anticheat",
+  "renderer": null,
+  "provenance": "Reported by freewhirlo7 (highball-db#184, 2026-09-22).",
+  "notes": "Cannot work. BattleBit Remastered uses Easy Anti-Cheat, which loads a kernel driver on Windows, and Wine cannot run one. The Proton runtime that makes EAC work on Linux has no macOS build. The reporter also notes that the game's offline mode cannot be reached without the anti-cheat installed, so there is no way around it from inside the game either."
+}

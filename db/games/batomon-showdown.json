@@ -1,0 +1,19 @@
+{
+  "anticheat": null,
+  "knownIssues": [
+    {
+      "symptom": "Sound effects stutter occasionally.",
+      "cause": "not established. Reported once, on an M5 under DXMT, and not reproduced here.",
+      "fix": "none known."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "id": "batomon-showdown",
+  "title": "Batomon Showdown",
+  "steam_appid": 4557380,
+  "status": "community",
+  "renderer": "dxmt",
+  "provenance": "Reported by DMonitor (highball-db#191, 2026-09-23), Apple M5, macOS 27.0, DXMT, rated 4 of 5. Not verified by the maintainer.",
+  "notes": "Reported playable on DXMT on an M5, with occasional stuttering in the sound effects as the only complaint. No session length or frame rate was given and nothing was measured here."
+}

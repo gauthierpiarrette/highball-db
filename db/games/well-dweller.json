@@ -1,0 +1,13 @@
+{
+  "anticheat": null,
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "id": "well-dweller",
+  "title": "Well Dweller",
+  "steam_appid": 3699590,
+  "status": "community",
+  "renderer": null,
+  "provenance": "Reported by kanuva (highball-db#185, 2026-09-22), Apple M4 Pro, macOS 27.0, engine x64-sikarugir10.0_6-r7, rated 5 of 5. Graphics mode not stated. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M4 Pro on the r7 engine. The reporter did not say which graphics mode, and no session length or frame rate was given, so this row records that it works and nothing more. Nothing was measured here."
+}

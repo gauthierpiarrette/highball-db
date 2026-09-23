@@ -5,13 +5,18 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by a user (highball-db#180, 2026-09-22): rated 4, playable with minor issues, Apple M5, macOS 27.0, engine x64-sikarugir10.0_6-r5, Highball 0.9.6, DXMT. Not run here.",
-  "notes": "An online game, and signing in is where the patience goes: the reporter waited five to ten minutes at the server login, after which it played near seamlessly with minor frame rate dips. No frame rate measured. Their Highball was several versions old, so the login wait has not been checked against a current build.",
+  "provenance": "Reported twice, not run here. highball-db#180 (2026-09-22): rated 4, playable with minor issues, Apple M5, macOS 27.0, engine x64-sikarugir10.0_6-r5, Highball 0.9.6, DXMT. highball-db#183 by freewhirlo7 (2026-09-23): rated 3, playable with workarounds, Apple M5, macOS 27.0, D3DMetal.",
+  "notes": "An online game, and signing in is where the patience goes: both reporters waited five to ten minutes at the server login, after which the first said it played near seamlessly with minor frame rate dips. Two independent reports agree on that wait, both on an M5. No frame rate measured and nothing run here.\n\nDXMT is the mode to start in. The second reporter went to D3DMetal and found the game would not open at all until DirectX 12 had been turned on inside the game's own video settings, which means first reaching those settings under DXMT.",
   "knownIssues": [
     {
-      "symptom": "Signing in to the game's servers takes five to ten minutes",
-      "cause": "reported on an M5 with macOS 27; not reproduced here, and not yet checked on a current Highball",
-      "fix": "None known. The reporter's advice is to be patient, after which the game plays well."
+      "symptom": "Signing in to the game's servers takes five to ten minutes.",
+      "cause": "not established. Reported twice, both on an M5 with macOS 27, and not reproduced here.",
+      "fix": "None known. Both reporters' advice is to wait it out, after which the game plays well."
+    },
+    {
+      "symptom": "On D3DMetal the game does not open at all.",
+      "cause": "the game starts in its DirectX 11 path, and D3DMetal does not serve it. Reported once, on an M5, and not reproduced here.",
+      "fix": "Launch under DXMT first, turn DirectX 12 on in the game's own video settings, then D3DMetal will start it. Staying on DXMT avoids the whole step and is what the higher of the two reports used."
     }
   ],
   "launchArgs": null,
