@@ -1,0 +1,13 @@
+{
+  "anticheat": null,
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "id": "abiotic-factor",
+  "title": "Abiotic Factor",
+  "steam_appid": 427410,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "provenance": "Reported by Maksim-822 (highball-db#198, 2026-09-24), Apple M4 Pro, macOS 26.6.2, Highball 0.9.35, engine x64-crossover26.3-r11, D3DMetal, rated 5 of 5. Not verified by the maintainer.",
+  "notes": "Reported perfect on D3DMetal on an M4 Pro on the Wine 11 engine r11. No session length or frame rate was given and nothing was measured here."
+}

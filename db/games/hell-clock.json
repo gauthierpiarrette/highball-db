@@ -1,0 +1,13 @@
+{
+  "anticheat": null,
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "id": "hell-clock",
+  "title": "Hell Clock",
+  "steam_appid": 1782460,
+  "status": "community",
+  "renderer": "dxmt",
+  "provenance": "Reported by saulr7 (highball-db#201, 2026-09-24), Apple M4 Pro, macOS 27.0, Highball 0.9.35, engine x64-sikarugir10.0_6-r7, DXMT (the environment's mode), rated 5 of 5 after 2 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT on an M4 Pro, after a 2-minute session, which is enough to show it starts but not how it holds up. No frame rate was given and nothing was measured here."
+}

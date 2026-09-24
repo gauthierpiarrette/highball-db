@@ -1,0 +1,19 @@
+{
+  "anticheat": {
+    "names": [
+      "Easy Anti-Cheat"
+    ],
+    "macVerdict": "blocked",
+    "note": "Easy Anti-Cheat works on Linux through its runtime for Proton, which has no macOS build"
+  },
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "id": "tom-clancys-the-division-2",
+  "title": "Tom Clancy's The Division 2",
+  "steam_appid": 2221490,
+  "status": "blocked-anticheat",
+  "renderer": null,
+  "provenance": "Reported by freewhirlo7 (highball-db#199, 2026-09-24), Apple M5, macOS 27.0, Highball 0.9.33, engine x64-sikarugir10.0_6-r5, DXMT.",
+  "notes": "Not playable on a Mac. The game uses Easy Anti-Cheat, which works on Linux through its runtime for Proton, and that runtime has no macOS build. The reporter confirms the anti-cheat check crashes the game window. They could only keep playing by repeatedly stopping the check from running and do not recommend it, and it is not recorded as a workaround here, since it defeats the anti-cheat and puts the account at risk."
+}
