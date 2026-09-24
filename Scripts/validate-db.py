@@ -82,6 +82,10 @@ for f in glob.glob("recipes/*/*.json"):
 for f in glob.glob("db/games/*.json"):
     d = json.load(open(f))
     for issue in d.get("knownIssues") or []:
+        if not isinstance(issue, dict) or "symptom" not in issue:
+            errors.append(f'{f}: every knownIssues entry is an object with a "symptom" (and usually a '
+                          f'"cause" and a "fix"), not {json.dumps(issue, ensure_ascii=False)[:60]}')
+            continue
         want = issue.get("fixedIn")
         if not want: continue
         have = recipe_engines.get(d["id"], "MISSING")
