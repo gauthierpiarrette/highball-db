@@ -21,8 +21,8 @@
     },
     {
       "symptom": "On a 14-inch M1 Pro the game draws small in a corner of the screen and the mouse position does not match what it clicks (reported on 0.9.12, highball#67)",
-      "cause": "reported, consistent with the game's fullscreen mode switch being ignored so the window stays at the game's own size, see highball#72",
-      "fix": "none yet, tracked on highball#72"
+      "cause": "not established. The reporter has the recipe's display-mode setting applied, the same one that centred the picture at 1728x1117 here on 2026-09-11, so something else differs on their Mac.",
+      "fix": "none confirmed. highball#72, which this pointed to, closed with the recipe, but this report comes after it. To be retested here on the current engine: a first look on 2026-09-24, with the session locked and nothing visible, found the window centred at about 90 percent of the screen rather than filling it, which settles nothing."
     }
   ]
 }
