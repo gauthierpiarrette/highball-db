@@ -13,5 +13,12 @@
     ],
     "macVerdict": "warning",
     "note": "anti-cheat present; Linux/Proton support does not extend to macOS — userspace path works for some titles"
-  }
+  },
+  "knownIssues": [
+    {
+      "symptom": "Audio crackles in the main hub on an M5 MacBook Air (highball#187, macOS 26.4.1, Highball 0.9.33, DXVK).",
+      "cause": "not established. Setting the Mac's output to 48 kHz changed nothing, so it is not the sample-rate conversion; the same game is clean on the reporter's Steam Deck, which points at the Mac side. Next suspect is CPU starvation of Wine's audio in the hub on an Air.",
+      "fix": "none known."
+    }
+  ]
 }
