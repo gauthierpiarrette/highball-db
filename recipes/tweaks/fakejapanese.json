@@ -1,0 +1,33 @@
+{
+  "id": "fakejapanese",
+  "kind": "tweak",
+  "title": "Japanese fonts",
+  "requires": [],
+  "renderer": null,
+  "steps": [
+    {
+      "type": "winetricks",
+      "verbs": [
+        "fakejapanese"
+      ],
+      "slow": "Downloads Adobe's free Source Han Sans (one 100 MB font collection covering Japanese, Chinese and Korean) from GitHub and installs it into the environment, then points the Windows Japanese font names at it. A few minutes."
+    },
+    {
+      "type": "note",
+      "text": "Source Han Sans installed and registered as Meiryo, MS Gothic, MS PGothic, MS Mincho, MS PMincho, MS UI Gothic and Yu Gothic (and their Japanese names). Games that ask Windows for one of those draw Japanese text with it instead of boxes or nothing. Symptom this fixes when it applies, Japanese menus, names and chat that come up as blank squares while Latin text renders."
+    }
+  ],
+  "knownIssues": [],
+  "lastVerified": {
+    "date": "2026-09-25",
+    "engine": "x64-sikarugir10.0_6-r8",
+    "macos": "27.0",
+    "chip": "Apple M1 Pro",
+    "result": "winetricks fakejapanese completes in 27 seconds on a fresh environment: sourcehansans.ttc (117 MB) lands in windows/Fonts and user.reg maps Meiryo, MS Gothic and the other Windows Japanese names to Source Han Sans. A second apply skips the download (the installedMarkers file is there). Whether it restores a given game's Japanese text is per game, first asked for on highball-db#206 (Toram Online, the reporter added fonts by hand)."
+  },
+  "installedMarkers": [
+    {
+      "file": "windows/Fonts/sourcehansans.ttc"
+    }
+  ]
+}

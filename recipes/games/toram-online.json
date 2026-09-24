@@ -1,0 +1,19 @@
+{
+  "id": "toram-online",
+  "kind": "game",
+  "title": "Toram Online",
+  "requires": [
+    "steam",
+    "fakejapanese"
+  ],
+  "renderer": "dxvk",
+  "engine": null,
+  "steps": [
+    {
+      "type": "note",
+      "text": "Japanese fonts are installed by the fakejapanese recipe this one pulls in, so Japanese names and chat draw instead of blank squares. One report so far (highball-db#206): playable on DXVK on the Wine 11 engine r8 with the reporter's own fonts. The default Wine 10 engine and the recipe's fonts are not yet confirmed on this game."
+    }
+  ],
+  "knownIssues": [],
+  "lastVerified": null
+}

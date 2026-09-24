@@ -6,12 +6,12 @@
   "renderer": "dxvk",
   "anticheat": null,
   "provenance": "Reported by mtits (highball-db#206, 2026-09-24), Apple M1 Pro, macOS 26.5.2, Highball 0.9.36, engine x64-crossover26.3-r8, DXVK, rated 4 of 5 after 233 minutes. Not verified by the maintainer.",
-  "notes": "Free to play on Steam. The reporter played for almost four hours on DXVK with the steam, vcrun2022 and corefonts recipes and calls it perfect apart from one thing: Japanese text needs Japanese fonts in the environment, which they added by hand. No frame rate was given and nothing was measured here.",
+  "notes": "Free to play on Steam. The reporter played for almost four hours on DXVK with the steam, vcrun2022 and corefonts recipes and calls it perfect apart from one thing: Japanese text needs Japanese fonts in the environment, which they added by hand. The fakejapanese recipe now does that in one step, untested on this game. No frame rate was given and nothing was measured here.",
   "knownIssues": [
     {
       "symptom": "Japanese text does not draw until Japanese fonts are installed in the environment (reported on the Wine 11 engine r8 with DXVK, highball-db#206).",
       "cause": "the environment has no Japanese font, and the corefonts recipe only installs Microsoft's Latin set.",
-      "fix": "the reporter added Japanese fonts by hand. There is no font recipe for this yet."
+      "fix": "apply the fakejapanese recipe (Source Han Sans, registered under the Windows Japanese font names). The reporter added fonts by hand before the recipe existed, so the recipe itself is not yet confirmed on this game."
     }
   ],
   "launchArgs": null,
