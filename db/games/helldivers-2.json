@@ -26,8 +26,8 @@
     },
     {
       "symptom": "After the CPU check passes, the game warns that the GPU drivers are out of date (installed AMD 65535.65535.65535.65535), and after Continue it shows a black screen for a few seconds, closes, and opens the PlayStation crash reporter (reported on an M4 Pro with 24 GB, macOS 26.6.2, engine x64-crossover26.3-r7, D3DMetal, highball#81).",
-      "cause": "not established. CrossOver 26.2 lists a fix for Helldivers 2 not launching after a game update. The only change in CrossOver 26.3's open Wine source that names the game, CW Hack 26536 in winemac.drv (set the app icon once), is already in Highball's Wine 11 engines, so that fix is not in the open code.",
-      "fix": "none known yet."
+      "cause": "a deadlock inside the game right after start, read from the reporter's full log on 2026-09-24: about a minute in, a game thread waits on one of the game's own critical sections (at 0x14190d008, inside its image) held by another thread that never releases it, RtlpWaitForCriticalSection times out at 60 s, and the process exits. What the holding thread is stuck on is not in the log. Three helper processes in the same session die of an NSException (-[NSViewBackingLayer setDisplaySyncEnabled:], sent by MoltenVK to a layer that is not a CAMetalLayer) right after creating a Vulkan instance, but those are not the game. CrossOver 26.2 lists a fix for Helldivers 2 not launching after a game update, and the only change naming the game in CrossOver 26.3's open Wine source (CW Hack 26536, set the app icon once) is already in Highball's Wine 11 engines, so that fix is not in the open code.",
+      "fix": "none known yet. Not reproducible here, the game is not owned and is 135 GB."
     }
   ],
   "launchArgs": null,
