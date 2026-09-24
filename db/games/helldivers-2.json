@@ -23,6 +23,11 @@
       "symptom": "No DirectX 12 device on the default engine",
       "cause": "the game is DirectX 12 only; DXMT and DXVK are DirectX 11 and 9",
       "fix": "D3DMetal on the Wine 11 engine, which Play offers"
+    },
+    {
+      "symptom": "After the CPU check passes, the game warns that the GPU drivers are out of date (installed AMD 65535.65535.65535.65535), and after Continue it shows a black screen for a few seconds, closes, and opens the PlayStation crash reporter (reported on an M4 Pro with 24 GB, macOS 26.6.2, engine x64-crossover26.3-r7, D3DMetal, highball#81).",
+      "cause": "not established. CrossOver 26.2 lists a fix for Helldivers 2 not launching after a game update. The only change in CrossOver 26.3's open Wine source that names the game, CW Hack 26536 in winemac.drv (set the app icon once), is already in Highball's Wine 11 engines, so that fix is not in the open code.",
+      "fix": "none known yet."
     }
   ],
   "launchArgs": null,
