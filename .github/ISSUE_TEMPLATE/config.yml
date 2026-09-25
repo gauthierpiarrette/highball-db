@@ -6,3 +6,6 @@ contact_links:
   - name: A problem with the Highball app itself
     url: https://github.com/gauthierpiarrette/highball/issues
     about: Crashes, updates, the window, the installer. Game results belong in the report form here.
+  - name: Quick question or help
+    url: https://discord.gg/WnyYpXuf67
+    about: "The Highball Discord. A game result still belongs in the report form, so it lands in the database."
