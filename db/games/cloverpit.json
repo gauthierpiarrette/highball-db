@@ -2,15 +2,22 @@
   "id": "cloverpit",
   "title": "CloverPit",
   "steam_appid": 3314790,
-  "status": "community",
+  "status": "verified-local",
   "provenance": "reported by Meshy10 (highball-db#17), Apple Silicon, chip not stated, unverified by Highball",
-  "notes": "Reported as not working: the game freezes on launch in DXMT graphics mode, and the reporter says no graphics mode works. The reporter did not say which chip, macOS version or engine, and no log was attached. Not tried here. This row records the failure so nobody spends an evening rediscovering it; a report with a log would let it be diagnosed.",
-  "lastVerified": null,
+  "notes": "Unity, Direct3D 11. The free demo (Steam 3347820) plays here on DXMT: the language picker, the epilepsy warning, the developers' note, the 3D main menu and the first run's slot-machine scene, all drawing and animating, on an M1 Pro with the default engine. No frame rate was measured. One report says the game freezes on launch in every mode (no chip, engine or log given). The demo's opening is three static screens that each wait for a click, so a game that stops taking mouse input looks frozen there; that matches the input loss reported on M4 Pro, M4 and M5 Macs (highball#182 and others), which does not occur on this M1 Pro. A report with the chip and a log would settle it.",
+  "lastVerified": "2026-09-25",
   "knownIssues": [
     {
-      "symptom": "Freezes on launch (reported on DXMT; the reporter says every graphics mode fails).",
-      "cause": "Unknown. No log or machine details in the report.",
-      "fix": "None known."
+      "symptom": "Reported frozen on launch in every graphics mode (no chip, engine or log given).",
+      "cause": "not reproduced: the demo plays through its opening screens and into a run on an M1 Pro on DXMT. The opening is three click-to-continue screens, so lost mouse input would look like this, which is what M4-family Macs report on other games.",
+      "fix": "none needed on the M1 Pro. On an M4 Pro, M4 or M5, this is likely the input loss tracked on highball#182; a report with the chip and a launch log would confirm it."
     }
-  ]
+  ],
+  "renderer": "dxmt",
+  "verified": {
+    "chip": "Apple M1 Pro",
+    "macos": "27.0",
+    "engine": "x64-sikarugir10.0_6-r7",
+    "fps": "not measured"
+  }
 }
