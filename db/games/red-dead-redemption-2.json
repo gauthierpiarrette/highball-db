@@ -28,6 +28,11 @@
       "symptom": "Trees near the player pop in and out of view (reported on an M5 Max at 60 fps, Epic copy, engine r8)",
       "cause": "not measured; the reporter points at MoltenVK's Metal heap allocation",
       "fix": "none known. Tested by the reporter on an M5 Max (highball#93): MVK_CONFIG_USE_MTLHEAP=0 stops the game from starting (vkCreateImage: MTLHeap must be enabled for 2D-on-3D or block texel view compatible images), MVK_CONFIG_LIVE_CHECK_ALL_RESOURCES=1 starts but the pop-in is worse, FSR off changes nothing, maximum geometry LOD drops below 1 fps. MoltenVK 1.4.2's heap and texture fixes are the next thing to try in a test engine"
+    },
+    {
+      "symptom": "On an 8 GB Mac the game crashes in the intro cutscene at the lowest settings (reported by a Reddit user on an iMac M3 8 GB, 2026-09-25).",
+      "cause": "memory. On a 16 GB Mac the game's footprint passes 13 GB in the prologue and macOS already swaps, so 8 GB shared between the CPU and the GPU cannot hold it.",
+      "fix": "none. No setting brings the game under 8 GB, and switching it to DirectX 12 does not help, that path crashes on its own; the game needs a 16 GB Mac or more on this path."
     }
   ],
   "verified": {
