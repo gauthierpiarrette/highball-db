@@ -11,7 +11,7 @@
     {
       "symptom": "Under 10 fps with lag spikes in the main menu on the Wine 11 engine r11 with DXVK (M3 Pro, macOS 27.0, highball-db#211).",
       "cause": "not measured on this game. DXVK's Direct3D 9 is slow on that tree in general (highball#198's measurements).",
-      "fix": "none confirmed. To try: Wine's own Direct3D as this game's mode on r11, or the default engine."
+      "fix": "none confirmed. To try: Wine's own Direct3D as this game's mode on r11, or the default engine. From Highball 0.9.38 the DXMT and D3DMetal modes on r11 and r12 use Wine's own Direct3D 9 by themselves; the DXVK mode the reporter used does not change."
     }
   ],
   "launchArgs": null,

@@ -27,7 +27,7 @@
     {
       "symptom": "On the Wine 11 engines (x64-crossover26.3-r11, r12) under DXVK the game runs at about 40 fps with cut sound and uneven frames, against 76 fps on the default engine's DXVK Direct3D 9 (Metal HUD, menu, M1 Pro, macOS 27.0, 2026-09-25).",
       "cause": "DXVK's Direct3D 9 is slower on that tree, GPU time is under a millisecond either way. Separately, an environment where the Sims recipe was applied carries MVK_SHADOW_IMPORT=1 bottle-wide, and on those engines that stops DXVK's Direct3D 9 from drawing at all (highball#198).",
-      "fix": "stay on the default engine for this game, or on a Wine 11 engine use Wine's own Direct3D."
+      "fix": "stay on the default engine for this game, or on a Wine 11 engine use Wine's own Direct3D. From Highball 0.9.38 the DXMT and D3DMetal modes do that on their own on r11 and r12 (the engine says so); the DXVK mode, which this row recommends for the default engine, still uses DXVK's Direct3D 9 everywhere."
     }
   ]
 }
