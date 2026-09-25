@@ -1,0 +1,13 @@
+{
+  "id": "triangle-strategy",
+  "title": "TRIANGLE STRATEGY",
+  "steam_appid": 1850510,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by ryneandal (highball-db#212, 2026-09-25), Apple M4 Max, macOS 27.2, Highball 0.9.35, engine x64-crossover26.3-r9, DXMT, sync off, rated 5 of 5 after 42 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT after a 42-minute session on an M4 Max, on the Wine 11 engine r9 with sync off (the environment also carried the Rockstar launcher recipe, which is unrelated to this game). No frame rate was given and nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

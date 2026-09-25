@@ -3,15 +3,25 @@
   "title": "Dark Souls III",
   "steam_appid": 374320,
   "status": "community",
-  "renderer": "dxmt",
+  "renderer": "d3dmetal",
   "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball. A failure report on an M4 Pro (highball-db#204, 2026-09-24) is open.",
-  "notes": "works offline; anti-cheat softban risk online",
+  "notes": "works offline; anti-cheat softban risk online. Direct3D 11. On an M4 Pro DXMT froze the game on every kill and hung macOS's window server; D3DMetal (Apple's DirectX 12 support in the app) plays through kills there, confirmed 2026-09-25 by the reporter, so it is the mode the page recommends.",
   "lastVerified": null,
   "knownIssues": [
     {
       "symptom": "The game freezes when an enemy is killed, then crashes (reported on an M4 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r7, DXMT, Highball 0.9.35, highball-db#204, rated 2, launches but not playable).",
       "cause": "not in the game's log, which ends normally. The file the reporter attached is a WindowServer watchdog stackshot: macOS's window server stopped answering while the game ran (display state OFF at capture), which is the GPU or its driver hanging on the M4 Pro, not a fault inside Wine. Every kill triggers it for the reporter. Not reproduced on the M1 Pro here.",
-      "fix": "none confirmed. The reporter is trying D3DMetal in place of DXMT for this game (highball-db#204)."
+      "fix": "use D3DMetal for this game (Apple's DirectX 12 support in the app). Confirmed by the reporter on the M4 Pro: kills no longer freeze it."
     }
-  ]
+  ],
+  "rendererResults": {
+    "d3dmetal": {
+      "verdict": "works",
+      "detail": "On an M4 Pro (macOS 26.6.2, engine r7) kills no longer freeze the game, confirmed by the reporter of highball-db#204 (shown as Apple's DirectX 12 support in the app)."
+    },
+    "dxmt": {
+      "verdict": "fails",
+      "detail": "On an M4 Pro every kill froze the game and then took the WindowServer down with it (a watchdog stackshot, highball-db#204). Community reports on other chips say DXMT works; the freeze is tied to the M4 Pro's GPU driver."
+    }
+  }
 }
