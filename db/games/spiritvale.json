@@ -1,0 +1,17 @@
+{
+  "id": "spiritvale",
+  "title": "SpiritVale",
+  "steam_appid": 3767850,
+  "status": "blocked-anticheat",
+  "renderer": null,
+  "provenance": "Reported by VrtZean (highball#200, 2026-09-25): the launch stops in the Easy Anti-Cheat and EOS bootstrap before the game starts. The game's 0.32.0.8 update added Linux support, where Proton loads EAC's Linux runtime.",
+  "notes": "Anti-cheat: Easy Anti-Cheat. Proton's EAC support works through a Linux-native runtime (easyanticheat_x64.so) that Proton loads beside the game; there is no such runtime for Wine on macOS and Wine cannot load Linux libraries, so the bootstrap fails here whatever the engine. Only Epic can change that.",
+  "anticheat": {
+    "names": [
+      "Easy Anti-Cheat"
+    ],
+    "macVerdict": "blocked",
+    "note": "EAC's Wine path is a Linux runtime Proton ships; nothing equivalent exists for macOS"
+  },
+  "lastVerified": null
+}

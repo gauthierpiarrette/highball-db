@@ -1,0 +1,19 @@
+{
+  "id": "fallout-new-vegas",
+  "title": "Fallout: New Vegas",
+  "steam_appid": 22380,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by matthiasseghers (highball-db#211, 2026-09-25), Apple M3 Pro, macOS 27.0, Highball 0.9.35, engine x64-crossover26.3-r11, DXVK, AVX advertised, rated 2 of 5: the main menu holds 40 to 50 fps and drops under 10 with lag spikes when hovering menu items. The Wine 10 engine launched worse for them. Not verified by the maintainer.",
+  "notes": "A Direct3D 9 game. On the Wine 11 engines DXVK's Direct3D 9 runs at about half the speed the default engine's does (Five Nights at Freddy's, 40 against 76 fps, measured 2026-09-25), which fits this report. Untested here whether Wine's own Direct3D on r11, or the default engine, gets the menu to a playable rate.",
+  "knownIssues": [
+    {
+      "symptom": "Under 10 fps with lag spikes in the main menu on the Wine 11 engine r11 with DXVK (M3 Pro, macOS 27.0, highball-db#211).",
+      "cause": "not measured on this game. DXVK's Direct3D 9 is slow on that tree in general (highball#198's measurements).",
+      "fix": "none confirmed. To try: Wine's own Direct3D as this game's mode on r11, or the default engine."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
