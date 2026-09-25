@@ -1,0 +1,13 @@
+{
+  "id": "path-of-building-poe2",
+  "title": "Path of Building Community Fork (Path of Exile 2)",
+  "steam_appid": null,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by akauascarvalho (highball-db#209, 2026-09-25), Apple M1 Pro 16 GB, macOS 26.5, Highball 0.9.35, engine x64-sikarugir10.0_6-r7, DXMT, msync, Windows 10, version 0.23.1 of the official portable release, rated 5 of 5 after one session. Not verified by the maintainer.",
+  "notes": "Not a game: the free build planner for Path of Exile 2, an open-source Windows program from github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2 (the official portable release). Listed because PoE2 players run it beside the game and the official release is a verifiable source. The reporter unpacked the portable release in a fresh environment, added the executable to Programs and, on DXMT with msync, reached the build interface and used build import and export, account sign-in, saving and reopening builds, and the built-in updater, all without extra runtimes or DLL changes. Keep game files inside the environment was on. Long sessions were not tested and nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
