@@ -10,8 +10,8 @@
   "knownIssues": [
     {
       "symptom": "The game freezes when an enemy is killed, then crashes (reported on an M4 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r7, DXMT, Highball 0.9.35, highball-db#204, rated 2, launches but not playable).",
-      "cause": "not established. Log requested. One more report from an M4-generation Mac on a game that community reports call working, the same pattern as the Sims glitch and the focus-loss cluster, both M4-only so far.",
-      "fix": "none known."
+      "cause": "not in the game's log, which ends normally. The file the reporter attached is a WindowServer watchdog stackshot: macOS's window server stopped answering while the game ran (display state OFF at capture), which is the GPU or its driver hanging on the M4 Pro, not a fault inside Wine. Every kill triggers it for the reporter. Not reproduced on the M1 Pro here.",
+      "fix": "none confirmed. The reporter is trying D3DMetal in place of DXMT for this game (highball-db#204)."
     }
   ]
 }

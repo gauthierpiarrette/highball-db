@@ -1,0 +1,13 @@
+{
+  "id": "train-sim-world-2",
+  "title": "Train Sim World 2",
+  "steam_appid": 1282590,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by chinmaychavan19 (highball-db#210, 2026-09-25), an Epic Games copy, Apple M5, macOS 27.0, Highball 0.9.35, engine x64-sikarugir10.0_6-r7, D3DMetal (the environment's mode), frame generation 2x and the Metal HUD on, rated 4 of 5 after 4 minutes. Not verified by the maintainer.",
+  "notes": "Sold on Steam and on Epic. Reported playable on D3DMetal from an Epic copy after a four-minute session on an M5 with the steam and vcrun2022 recipes. The one complaint, graphics that look a bit choppy, came with frame generation set to 2x, which holds a real frame back to interpolate and paces output to the display, so on the built-in screen a game already above 60 fps can feel worse with it on. Whether that is the cause here was not tested. No frame rate was given and nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

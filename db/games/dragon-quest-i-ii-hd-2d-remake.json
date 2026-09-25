@@ -1,0 +1,13 @@
+{
+  "id": "dragon-quest-i-ii-hd-2d-remake",
+  "title": "DRAGON QUEST I & II HD-2D Remake",
+  "steam_appid": 2893570,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by thejudge22 (highball-db#208, 2026-09-25), Apple M4 Pro, macOS 27.0, Highball 0.9.35, engine x64-sikarugir10.0_6-r7, DXMT (the environment's mode, AVX advertised), rated 5 of 5 after 40 minutes. Not verified by the maintainer.",
+  "notes": "Windows only on Steam. Reported perfect on DXMT after a 40-minute session on an M4 Pro with the steam, corefonts and vcrun2022 recipes. The reporter's only remark was button mapping on a Switch controller, which they put down to the controller. No frame rate was given and nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
