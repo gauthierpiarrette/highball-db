@@ -14,7 +14,8 @@ kernel-anti-cheat blocklist.
 - `Scripts/` — validator, report ingester, importers (AWACY, ProtonDB dumps), static-site generator (GitHub Pages)
 
 **Contribute:** run something through Highball, then `highball report` — it opens a pre-filled
-issue here. Or PR a recipe with the CLI output attached. Almost everything here is CC0: use it in your
+issue here. Or PR a recipe with the CLI output attached. Questions and quick help: the
+[Highball Discord](https://discord.gg/WnyYpXuf67). Almost everything here is CC0: use it in your
 own launcher, wiki, or even with CrossOver.
 
 **Licensing, precisely:** curated game data, recipes and reports are **CC0-1.0**.
