@@ -1,0 +1,19 @@
+{
+  "id": "contractville",
+  "title": "ContractVille",
+  "steam_appid": 2698780,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by ObT1337 (highball#202, 2026-09-25), Apple M1, macOS 15.6.1, Highball 0.9.35, engine x64-sikarugir10.0_6-r7, DXVK mode, launched as a pinned program with -dx11 from an external exFAT drive: the Unreal, GeForce NOW and publisher logos play, then a black screen. Not verified by the maintainer.",
+  "notes": "Unreal Engine. Reported stuck on a black screen after the three startup logos. The launch log ends in Wine's media layer failing to decode a video (GStreamer 'gst_video_info_from_caps' assertions), so the lead is the game's next video hanging the way The Last Caretaker's menu video did; the reporter is trying Media Foundation switched off for the game. No frame rate, nothing measured here.",
+  "knownIssues": [
+    {
+      "symptom": "Black screen after the startup logos (reported on an M1, macOS 15.6.1, engine r7, DXVK mode, highball#202).",
+      "cause": "lead, not confirmed: the game's next video does not decode in Wine's media layer, and the game waits on it.",
+      "fix": "none confirmed. Being tried: Media Foundation off for the game's executable (mfplat DLL override), the fix that works for The Last Caretaker."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
