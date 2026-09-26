@@ -1,0 +1,19 @@
+{
+  "id": "word-link",
+  "title": "Word Link",
+  "steam_appid": 5149020,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by maddada (highball#204, 2026-09-26), Apple M5 Pro, macOS 27.0, Highball 0.9.35: the demo did not run on the default Wine 10 engine and runs on the Wine 11 engine x64-crossover26.3-r11 with DXMT. Not verified by the maintainer.",
+  "notes": "An Electron game. The reporter runs the demo on r11 with DXMT. On an M1 Pro (macOS 27.0) the demo (Steam 5157480) exits three seconds after Steam starts it on the default engine and on r11 alike, with no window and nothing in the log, so the maintainer could not reproduce either half of the report yet. The game rejects Chromium command-line switches (--disable-gpu, --no-sandbox come back as bad options), so launch arguments are not a route.",
+  "knownIssues": [
+    {
+      "symptom": "Does not run on the default engine (reported on an M5 Pro); on an M1 Pro the demo quits three seconds after launch on every engine tried (2026-09-26).",
+      "cause": "not found. The process loads Windows' base DLLs and exits with code 0 before any window, no exception logged.",
+      "fix": "none confirmed. The reporter runs it on engine x64-crossover26.3-r11."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
