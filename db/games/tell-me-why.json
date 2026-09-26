@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by 1223Joker (highball-db#88, 2026-09-16), Apple M5, macOS 27, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, DXMT, rated 5 of 5 after 8 minutes. Not verified by the maintainer.",
-  "notes": "Reported perfect on DXMT after a session of 8 minutes. No measurement here yet.",
+  "provenance": "Reported by 1223Joker (highball-db#88, 2026-09-16), Apple M5, macOS 27, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, DXMT, rated 5 of 5 after 8 minutes. Not verified by the maintainer. Lettly (highball-db#230, 2026-09-26): rated 5, perfect, Apple M5 Pro, macOS 27.0, engine x64-sikarugir10.0_6-r7, Highball 0.9.35, DXMT with sync off, 17 minutes played through Highball.",
+  "notes": "Reported perfect on DXMT twice, 8 minutes on an M5 (engine r3) and 17 minutes on an M5 Pro with macOS 27.0 (engine r7, sync off). No measurement here yet.",
   "knownIssues": [],
   "launchArgs": null,
   "lastVerified": null

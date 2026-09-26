@@ -4,8 +4,8 @@
   "steam_appid": 1245620,
   "status": "community",
   "renderer": "d3dmetal",
-  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball. A user (highball-db#179, 2026-09-22) rated it 5, perfect, Apple M1, macOS 26.6.2, engine x64-sikarugir10.0_6-r5, Highball 0.9.33, D3DMetal, 231 minutes played through Highball with the steam and vcrun2022 recipes.",
-  "notes": "EAC is userspace under Wine — runs; use d3dmetal (D3D12) A reporter played 231 minutes on D3DMetal on an M1 with macOS 26.6.2 and rated it perfect, which is the longest session recorded for it here; frame rate not measured.",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball. A user (highball-db#179, 2026-09-22) rated it 5, perfect, Apple M1, macOS 26.6.2, engine x64-sikarugir10.0_6-r5, Highball 0.9.33, D3DMetal, 231 minutes played through Highball with the steam and vcrun2022 recipes. nimbold (highball-db#228, 2026-09-26): rated 5, perfect, Apple M3, macOS 27.0, engine x64-sikarugir10.0_6-r10, Highball 0.9.37, D3DMetal with frame generation 2x and AVX advertised.",
+  "notes": "EAC is userspace under Wine — runs; use d3dmetal (D3D12) A reporter played 231 minutes on D3DMetal on an M1 with macOS 26.6.2 and rated it perfect, which is the longest session recorded for it here; frame rate not measured. A second perfect report on an M3 with macOS 27.0 and engine r10, D3DMetal with frame generation 2x. That reporter's controller was not recognised until they switched Wine's controller driver in the registry (HKCU\\Software\\Wine\\WineBus, DisableHidraw=1 and Enable SDL=1), after which it worked.",
   "lastVerified": null,
   "anticheat": {
     "names": [
@@ -13,5 +13,12 @@
     ],
     "macVerdict": "warning",
     "note": "anti-cheat present; Linux/Proton support does not extend to macOS — userspace path works for some titles"
-  }
+  },
+  "knownIssues": [
+    {
+      "symptom": "Controller not recognised (reported on an M3, macOS 27.0, engine r10).",
+      "cause": "not measured. The reporter fixed it by switching Wine's controller driver from the system HID path to SDL.",
+      "fix": "Registry HKCU\\Software\\Wine\\WineBus, DisableHidraw=1 and Enable SDL=1 (both DWORD), then restart the environment. Reported working, not verified here."
+    }
+  ]
 }

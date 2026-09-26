@@ -1,0 +1,19 @@
+{
+  "id": "terra-nil",
+  "title": "Terra Nil",
+  "steam_appid": 1593030,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by beckett-glitch (highball-db#213, 2026-09-25), Apple M2, macOS 26.3.1, Highball 0.9.35, engine x64-sikarugir10.0_6-r7, DXMT, default settings, rated 4 of 5 after 14 minutes. Not verified by the maintainer.",
+  "notes": "Reported playable on DXMT with default settings on an M2. The one issue reported is that the arrow keys and WASD do not move the camera while mouse scrolling does. Nothing was measured here. The game has a native Mac version on Steam as well.",
+  "knownIssues": [
+    {
+      "symptom": "Arrow keys and WASD do not move the camera, mouse scrolling does (reported on an M2, DXMT, engine r7).",
+      "cause": "not measured.",
+      "fix": "none known, the reporter moved the camera with the mouse."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
