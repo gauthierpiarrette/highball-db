@@ -1,0 +1,13 @@
+{
+  "id": "sin-reloaded",
+  "title": "SiN Reloaded",
+  "steam_appid": 632950,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by Bokka1980 (highball-db#226, 2026-09-26), Apple M2, macOS 27.0, Highball 0.9.35, engine x64-sikarugir10.0_6-r7, DXMT, default settings, rated 5 of 5. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT with default settings on an M2. No session length or frame rate was given and nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
