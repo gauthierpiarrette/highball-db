@@ -1,0 +1,19 @@
+{
+  "id": "dune-spice-wars",
+  "title": "Dune: Spice Wars",
+  "steam_appid": 1605220,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by xcagricolak (highball#206, 2026-09-26), Apple M3, macOS 27.0, Highball 0.9.35, engine x64-sikarugir10.0_6-r7, DXMT mode with AVX advertised: an 'OpenGL Error' dialog, the application was unable to create an OpenGL context, OpenGL 3.2+ is required. Not verified by the maintainer.",
+  "notes": "Reported not starting: the game's OpenGL renderer asks for a context macOS's OpenGL cannot provide, and the switch Highball sets for 3.2 core contexts (CX_FWD_COMPAT_GL_CTX) was in place. Whether the game can be made to use its DirectX renderer instead, which would go through DXMT, is being asked on the report.",
+  "knownIssues": [
+    {
+      "symptom": "'OpenGL Error: unable to create an OpenGL context, OpenGL 3.2+ is required' at launch (reported on an M3, highball#206).",
+      "cause": "the game's OpenGL path asks for a context macOS does not offer; not looked at beyond the dialog yet.",
+      "fix": "none confirmed. If Steam offers a DirectX launch choice for it, that is the thing to try."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
