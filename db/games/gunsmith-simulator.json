@@ -1,0 +1,19 @@
+{
+  "id": "gunsmith-simulator",
+  "title": "Gunsmith Simulator",
+  "steam_appid": 1101120,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by xcagricolak (highball-db#221, 2026-09-26), Apple M3, macOS 27.0, Highball 0.9.35, engine x64-sikarugir10.0_6-r7, D3DMetal, AVX advertised, rated 3 of 5 after 8 minutes: 60 fps at 1280 wide on the lowest graphics settings. Not verified by the maintainer.",
+  "notes": "Reported playable on D3DMetal on an M3 once the resolution is set to 1280 wide and every graphics setting to its lowest, at 60 fps by the reporter's counter. Higher settings were not playable for them. Nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "Needs 1280 wide and the lowest graphics settings for 60 fps on an M3 (reported, highball-db#221).",
+      "cause": "GPU load at the game's defaults, not measured here.",
+      "fix": "lower the resolution and settings as the reporter did."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
