@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by phs1997 (highball-db#28, 2026-09-13), Apple M2 Max, macOS 15.6, Highball 0.9.9, engine x64-sikarugir10.0_6-r2, rated 5 of 5 after 189 minutes. Graphics mode not stated. Not verified by the maintainer.",
-  "notes": "The free demo of MineMergeMatic (full game Steam 4976010). Reported perfect on the default engine after three hours. The reporter did not say which graphics mode. No measurement here yet.",
+  "provenance": "Reported by phs1997 (highball-db#28, 2026-09-13), Apple M2 Max, macOS 15.6, Highball 0.9.9, engine x64-sikarugir10.0_6-r2, rated 5 of 5 after 189 minutes. Graphics mode not stated.. A second report by ZiarnoM (highball-db#227, 2026-09-26), Apple M2 Pro, macOS 26.5.1, Highball 0.9.19, engine r3, rated 5 of 5 after 36 minutes, mode not stated. Not verified by the maintainer.",
+  "notes": "The free demo of MineMergeMatic (full game Steam 4976010). Reported perfect twice on the default engine line, three hours on an M2 Max (r2) and 36 minutes on an M2 Pro (r3). Neither reporter said which graphics mode. No measurement here yet.",
   "knownIssues": [],
   "launchArgs": null,
   "lastVerified": null
