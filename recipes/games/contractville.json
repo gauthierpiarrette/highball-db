@@ -1,0 +1,24 @@
+{
+  "id": "contractville",
+  "kind": "game",
+  "title": "ContractVille",
+  "requires": [
+    "steam"
+  ],
+  "renderer": "dxmt",
+  "engine": "x64-crossover26.3-r12",
+  "steps": [
+    {
+      "type": "note",
+      "text": "ContractVille runs on the Wine 11 engine and not on the Wine 10 one. On the default engine the game sits on its loading screen forever after the logos, with the game running and nothing loading (highball#202, reproduced on an M1 Pro). On the Wine 11 tree the same install loads, plays its intros and reaches the character creator. DXMT is the mode to use there: DXVK on Wine 11 gets through but draws the character preview black, and DXMT on the Wine 10 engine crashes at start on a shared texture. So this fix only names the engine and the mode, nothing in the environment changes."
+    }
+  ],
+  "knownIssues": [],
+  "lastVerified": {
+    "date": "2026-09-26",
+    "engine": "x64-crossover26.3-r12",
+    "macos": "27.0",
+    "chip": "Apple M1 Pro",
+    "result": "Full game (Steam 2698780) on the Wine 11 engines. On r11, DXVK: intros, a loading screen with a progress bar, then the character creator after about five minutes, its hair and beard tabs clicked through by the owner, character preview black. On r11, DXMT: the character creator with the 3D scene and the character drawn, no crash. On r12, DXMT: the same process profile over four minutes (memory climbing to 1 GB then settling, three cores busy, no crash, no crash report), the screen itself not captured because the Mac's session was locked. On the Wine 10 engine r7 the same install never leaves its loading screen. Gameplay past the character creator not exercised, frame rate not read."
+  }
+}

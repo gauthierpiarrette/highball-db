@@ -2,33 +2,44 @@
   "id": "contractville",
   "title": "ContractVille",
   "steam_appid": 2698780,
-  "status": "community",
-  "renderer": null,
+  "status": "verified-local",
+  "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by ObT1337 (highball#202, 2026-09-25), Apple M1, macOS 15.6.1, Highball 0.9.35, engine x64-sikarugir10.0_6-r7, DXVK mode: the logos play, then a black screen. Reproduced by the maintainer on 2026-09-26 on an M1 Pro, macOS 27.0, engine r7: on DXVK the game reaches its loading screen and never leaves it, on DXMT it crashes at start.",
-  "notes": "Unreal Engine 4.27 with the Epic Online Services SDK (EOSCore plugin) and the AsyncLoadingScreen plugin. Measured here on 2026-09-26, engine r7, M1 Pro: on DXVK the intros play, then the loading screen (the plugin's slides with Loading... at the bottom) stays for 20 minutes with the game ticking, memory flat and nothing loading. It is not the videos: with Media Foundation off for the game (mfplat=) the intros are skipped and the same loading screen stays, and with the Movies folder set aside it stays too. A trace of the Epic Online Services SDK's own calls shows it initialises normally (its HTTP and websocket threads start, it reads its EOS_ variables) and then sits idle, never asked to log in, and the game never resolves an Epic hostname. So the game's startup logic stops at a step before the Epic login, which one is not known. ProtonDB rates it Gold on Linux, so the wait is specific to this platform. Still being looked at. On DXMT the game crashes at start: D3D11 CreateTexture2D with the shared flag (D3D11_RESOURCE_MISC_SHARED, 500x500 R16G16B16A16_FLOAT) returns E_FAIL on DXMT 0.80. No frame rate, the game was not reached.",
+  "provenance": "Reported by ObT1337 (highball#202, 2026-09-25), Apple M1, macOS 15.6.1, Highball 0.9.35, engine x64-sikarugir10.0_6-r7, DXVK: the logos play, then a black screen, later confirmed on an M2 with the full game. Verified by the maintainer on 2026-09-26 on an M1 Pro, macOS 27.0: the same install loads and reaches the character creator on the Wine 11 engines r11 (seen on screen, DXVK and DXMT) and r12 (process profile, DXMT), and never leaves its loading screen on the Wine 10 engine r7.",
+  "notes": "Unreal Engine 4.27. Needs the Wine 11 engine (x64-crossover26.3-r12, the recipe names it) and DXMT. On the default Wine 10 engine the game sits on its loading screen forever after the logos, game running, nothing loading, Epic's SDK idle, on DXVK and with or without Media Foundation, measured for 20 minutes on an M1 Pro. On the Wine 11 tree the same install plays its intros, shows a loading screen with a progress bar and reaches the character creator in about five minutes. DXMT draws it fully. DXVK on Wine 11 gets there too but draws the character preview black. DXMT on the Wine 10 engine crashes at start (D3D11 CreateTexture2D with the shared flag returns E_FAIL on DXMT 0.80). Gameplay past the character creator was not exercised and no frame rate was read. Why the Wine 10 tree stalls is open.",
   "knownIssues": [
     {
-      "symptom": "Black screen or an endless loading screen after the startup logos (reported on an M1, macOS 15.6.1, engine r7, DXVK, highball#202, reproduced on an M1 Pro, macOS 27.0).",
-      "cause": "not confirmed. Not the intro videos, they play or skip and the wait is the same. The Epic Online Services SDK initialises and then idles, never asked to log in, so the game's own startup logic stops one step earlier for a reason not found yet.",
-      "fix": "none yet. Media Foundation off for the game (DLL overrides mfplat=) only skips the intros and does not get past the loading screen."
+      "symptom": "Endless loading screen after the logos on the default engine (reported on an M1 and an M2, reproduced on an M1 Pro, engine r7).",
+      "cause": "the Wine 10 tree. The game's startup stops before its Epic login and nothing loads. Not the videos, not the renderer. The same install loads on the Wine 11 tree.",
+      "fix": "move the environment to the Wine 11 engine (Settings, Environments, the environment's page, Advanced, engine Wine 11.0 (CrossOver 26.3) r12) and use the DXMT mode. The recipe names both, so a Highball with it offers the engine on Play."
     },
     {
-      "symptom": "Crashes at start on DXMT with the Unreal crash reporter (measured on an M1 Pro, engine r7, DXMT 0.80).",
-      "cause": "measured: the game creates a shared D3D11 render target (MISC_SHARED, R16G16B16A16_FLOAT) and DXMT returns E_FAIL, which Unreal treats as fatal.",
-      "fix": "use the DXVK mode, which accepts the texture."
+      "symptom": "Character preview drawn black in the character creator on DXVK (Wine 11, M1 Pro).",
+      "cause": "not measured, DXVK on MoltenVK with this game's preview render target.",
+      "fix": "use DXMT, which draws it."
+    },
+    {
+      "symptom": "Crashes at start on DXMT with the Unreal crash reporter on the Wine 10 engine (M1 Pro, engine r7, DXMT 0.80).",
+      "cause": "measured: a shared D3D11 render target (MISC_SHARED, R16G16B16A16_FLOAT) gets E_FAIL from that DXMT build, which Unreal treats as fatal.",
+      "fix": "the Wine 11 engine, whose DXMT accepts it."
     }
   ],
   "launchArgs": null,
-  "lastVerified": null,
+  "lastVerified": "2026-09-26",
   "rendererResults": {
+    "dxmt": {
+      "verdict": "works",
+      "detail": "on the Wine 11 engines r11 and r12: character creator with the 3D scene (M1 Pro, 2026-09-26). On the Wine 10 engine r7: crash at start, shared texture E_FAIL"
+    },
     "dxvk": {
       "verdict": "partial",
-      "detail": "intros and loading screen render, the loading screen never ends (M1 Pro, engine r7, 2026-09-26)"
-    },
-    "dxmt": {
-      "verdict": "fails",
-      "detail": "crash at start, shared D3D11 texture creation returns E_FAIL on DXMT 0.80"
+      "detail": "on Wine 11 r11 the game loads and the creator works but the character preview is black. On the Wine 10 engine r7 the loading screen never ends"
     }
+  },
+  "verified": {
+    "chip": "Apple M1 Pro",
+    "macos": "27.0",
+    "engine": "x64-crossover26.3-r12",
+    "fps": "not measured"
   }
 }
