@@ -1,0 +1,25 @@
+{
+  "id": "detroit-become-human",
+  "title": "Detroit: Become Human",
+  "steam_appid": 1222140,
+  "status": "community",
+  "renderer": null,
+  "nativeVulkan": true,
+  "anticheat": null,
+  "provenance": "Reported by daniel-kub (highball#125, 2026-09-16), Apple M2 8 GB, macOS 27.0, Highball 0.9.19: on the default engine the game warned about the GPU and crashed; on the Wine 11 engine x64-crossover26.3-r10 its launcher compiled shaders slowly and stopped at 98 percent. The maintainer tried the free demo (Steam 1224230) on 2026-09-26.",
+  "notes": "The game draws with Vulkan directly, through MoltenVK, so the graphics mode does not apply. Its launcher first shows a 'graphics card not officially supported' warning, press OK. On an M1 Pro 16 GB with engine x64-crossover26.3-r10 (2026-09-26, demo) the launcher then showed a spinner for twenty minutes at full CPU on one core and never reached the shader compile or the game, so the reporter's 98 percent stop could not be reproduced here either way. The 8 GB stall is most likely memory, the compile loads every shader at once, but that is not measured.",
+  "knownIssues": [
+    {
+      "symptom": "Launcher's shader compile stops at 98 percent on an 8 GB M2 with engine r10 (highball#125).",
+      "cause": "not measured; the compile loads every shader at once and 8 GB shared with the GPU is likely the limit.",
+      "fix": "none confirmed."
+    },
+    {
+      "symptom": "Launcher shows only a spinner and never starts the compile (M1 Pro 16 GB, engine r10, demo, 2026-09-26).",
+      "cause": "not found. The launcher process sits at full CPU on one core, no error in Wine's log.",
+      "fix": "none. Not looked at further yet."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
