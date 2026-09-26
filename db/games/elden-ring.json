@@ -18,7 +18,7 @@
     {
       "symptom": "Controller not recognised (reported on an M3, macOS 27.0, engine r10).",
       "cause": "not measured. The reporter fixed it by switching Wine's controller driver from the system HID path to SDL.",
-      "fix": "Registry HKCU\\Software\\Wine\\WineBus, DisableHidraw=1 and Enable SDL=1 (both DWORD), then restart the environment. Reported working, not verified here."
+      "fix": "The dependency \"Controllers through SDL\" (recipe controller-sdl) sets Wine's controller driver to SDL only, the same two registry values the reporter set by hand. Restart the environment after applying. Reported working, not verified here."
     }
   ]
 }

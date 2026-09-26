@@ -1,0 +1,35 @@
+{
+  "id": "controller-sdl",
+  "kind": "tweak",
+  "title": "Controllers through SDL",
+  "requires": [],
+  "renderer": null,
+  "steps": [
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\WineBus",
+      "name": "DisableHidraw",
+      "valueType": "REG_DWORD",
+      "data": "1"
+    },
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\WineBus",
+      "name": "Enable SDL",
+      "valueType": "REG_DWORD",
+      "data": "1"
+    },
+    {
+      "type": "note",
+      "text": "Wine's controller driver now sees gamepads through SDL only, instead of the Mac's raw HID path as well. Symptom this fixes when it applies, a controller that a game does not recognise or that shows up twice. Restart the environment after applying so the driver reloads. First reported working on Elden Ring by a user who set these two registry values by hand (highball-db#228)."
+    }
+  ],
+  "knownIssues": [],
+  "lastVerified": {
+    "date": "2026-09-26",
+    "engine": "x64-sikarugir10.0_6-r7",
+    "macos": "27.0",
+    "chip": "Apple M1 Pro",
+    "result": "Applies cleanly to a fresh environment: HKCU\\Software\\Wine\\WineBus gets DisableHidraw=1 and Enable SDL=1 (reg query confirms both). No gamepad here, so the controller effect itself is the reporter's observation on Elden Ring (highball-db#228), not measured by the maintainer."
+  }
+}
