@@ -1,0 +1,13 @@
+{
+  "id": "zero-sievert",
+  "title": "ZERO Sievert",
+  "steam_appid": 1782120,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by xcagricolak (highball-db#218, 2026-09-26), Apple M3, macOS 27.0, Highball 0.9.35, engine x64-sikarugir10.0_6-r7, D3DMetal, rated 5 of 5 after 3 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on D3DMetal after a short session on an M3 with the steam recipe. No frame rate was given and nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
