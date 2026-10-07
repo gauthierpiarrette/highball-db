@@ -1,0 +1,19 @@
+{
+  "id": "trailmakers",
+  "title": "Trailmakers",
+  "steam_appid": 585420,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by Random-Storm (highball-db#384, 2026-10-07), Apple A18 Pro, macOS 27.2, DXMT, rated 4 of 5. Engine and Highball version not given. Not verified by the maintainer.",
+  "notes": "Reported playable on DXMT, the default mode, on an A18 Pro: about 50 to 60 fps on the Downtown Drive map at the lowest graphics setting, with a large drop at the next one up. No measurement here yet.",
+  "knownIssues": [
+    {
+      "symptom": "Much lower frame rate above the lowest graphics setting on an A18 Pro",
+      "cause": "not measured here (highball-db#384)",
+      "fix": "play at the lowest setting, about 50 to 60 fps reported"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

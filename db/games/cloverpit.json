@@ -3,14 +3,19 @@
   "title": "CloverPit",
   "steam_appid": 3314790,
   "status": "verified-local",
-  "provenance": "reported by Meshy10 (highball-db#17), Apple Silicon, chip not stated, unverified by Highball",
-  "notes": "Unity, Direct3D 11. The free demo (Steam 3347820) plays here on DXMT: the language picker, the epilepsy warning, the developers' note, the 3D main menu and the first run's slot-machine scene, all drawing and animating, on an M1 Pro with the default engine. No frame rate was measured. One report says the game freezes on launch in every mode (no chip, engine or log given). The demo's opening is three static screens that each wait for a click, so a game that stops taking mouse input looks frozen there; that matches the input loss reported on M4 Pro, M4 and M5 Macs (highball#182 and others), which does not occur on this M1 Pro. A report with the chip and a log would settle it.",
+  "provenance": "reported by Meshy10 (highball-db#17), Apple Silicon, chip not stated, unverified by Highball; reported by Random-Storm (highball-db#385, 2026-10-07), Apple A18 Pro, macOS 27.2, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, DXMT, frame cap 60, rated 4 of 5 after 15 minutes of the full game",
+  "notes": "Unity, Direct3D 11. The free demo (Steam 3347820) plays here on DXMT: the language picker, the epilepsy warning, the developers' note, the 3D main menu and the first run's slot-machine scene, all drawing and animating, on an M1 Pro with the default engine. No frame rate was measured. One report says the game freezes on launch in every mode (no chip, engine or log given). The demo's opening is three static screens that each wait for a click, so a game that stops taking mouse input looks frozen there; that matches the input loss reported on M4 Pro, M4 and M5 Macs (highball#182 and others), which does not occur on this M1 Pro. A report with the chip and a log would settle it. A player on an A18 Pro played the full game for 15 minutes on DXMT, with low performance and heavy battery drain (highball-db#385). The launch freeze below predates the input fixes in engines r15 and r16 (highball#182) and has not been reported since.",
   "lastVerified": "2026-09-25",
   "knownIssues": [
     {
       "symptom": "Reported frozen on launch in every graphics mode (no chip, engine or log given).",
       "cause": "not reproduced: the demo plays through its opening screens and into a run on an M1 Pro on DXMT. The opening is three click-to-continue screens, so lost mouse input would look like this, which is what M4-family Macs report on other games.",
       "fix": "none needed on the M1 Pro. On an M4 Pro, M4 or M5, this is likely the input loss tracked on highball#182; a report with the chip and a launch log would confirm it."
+    },
+    {
+      "symptom": "Low frame rate and heavy battery drain on an A18 Pro",
+      "cause": "not measured here (highball-db#385)",
+      "fix": "lower the game's graphics settings and keep Highball's frame rate limit on"
     }
   ],
   "renderer": "dxmt",
