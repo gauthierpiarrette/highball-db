@@ -10,12 +10,12 @@
     {
       "type": "file",
       "path": "Program Files (x86)/Steam/steamapps/common/Portal 2/portal2/cfg/video.txt",
-      "contents": "\"VideoConfig\"\n{\n\t\"setting.mat_hdr_level\"\t\t\"0\"\n}\n"
+      "contents": "\"VideoConfig\"\n{\n\t\"setting.mat_hdr_level\"\t\t\"2\"\n}\n"
     },
     {
       "type": "file",
       "path": "Program Files (x86)/Steam/steamapps/common/Portal 2/portal2/cfg/autoexec.cfg",
-      "contents": "mat_hdr_level 0\n"
+      "contents": "mat_hdr_level 2\nmat_tonemapping_occlusion_use_stencil 1\n"
     },
     {
       "type": "registry",
@@ -26,7 +26,7 @@
     },
     {
       "type": "note",
-      "text": "Portal 2 needs HDR off on this engine: Source's HDR path triggers a MoltenVK bug (a giant zero-attachment render pass aborts the GPU) that froze or crashed every map load. With mat_hdr_level 0 — which this recipe writes into the game's config — it runs at 200+ fps under DXVK. Keep the bottle on DXVK. The visual cost is Source's HDR bloom, minor in Portal 2. If you later change video settings in-game and loads start freezing again, set Shader Detail/HDR to none or re-apply this recipe."
+      "text": "Portal 2 runs with HDR on, with the lighting, bloom and haze it has on Windows. On a Mac, Source's HDR auto-exposure pass used to make every map load freeze or crash, because it draws into a pass with nothing attached, which the Mac's GPU driver gives up on. This recipe sets mat_tonemapping_occlusion_use_stencil 1, Source's own switch that runs that pass on the stencil buffer instead, and HDR then loads and plays. If loads ever freeze with a white or stuck screen, turn HDR off again by changing mat_hdr_level 2 to 0 in portal2/cfg/autoexec.cfg and in portal2/cfg/video.txt. Keep the game on DXVK."
     },
     {
       "type": "note",
@@ -36,8 +36,8 @@
   "knownIssues": [
     {
       "symptom": "Freeze or crash at the end of every map load (white or stuck screen), menus fine",
-      "cause": "Source's HDR rendering path emits a 16384x16384 zero-attachment render pass that hard-aborts the Apple GPU inside MoltenVK 1.4.x (VK_ERROR_DEVICE_LOST). Engine-level; affects other Source titles too.",
-      "fix": "mat_hdr_level 0 (this recipe writes it into portal2/cfg). Verified on macOS 14.6 and again on 26.6.2: with it, no freeze across the observed runs; without it, every load died (crash on 14.6, frozen or white screen on 26.6.2). Re-checked on 2026-10-06 on an M4, macOS 27.0, engine x64-sikarugir10.0_6-r21: with mat_hdr_level 2 the map loads and the screen stays white, so HDR stays off."
+      "cause": "Source's HDR auto-exposure pass draws occlusion queries into a render pass with no attachments, and the Apple GPU loses the device on it inside MoltenVK (VK_ERROR_DEVICE_LOST, Metal 'Internal Error (0000010d)', and Metal API and shader validation report nothing before it). Engine-level, and it affects other Source titles too.",
+      "fix": "mat_tonemapping_occlusion_use_stencil 1 (this recipe writes it into portal2/cfg/autoexec.cfg) runs that pass on the stencil buffer, so it has an attachment, and HDR works. Measured on an M4 with macOS 27.0, engine x64-sikarugir10.0_6-r21 and DXVK on 2026-10-07, in nine map loads with HDR on across sp_a1_intro1, sp_a1_intro2, sp_a1_intro3 and sp_a2_laser_intro, the last two with this recipe applied by Highball itself. No device loss, and portals drawn correctly. Without the switch every HDR load lost the device. Earlier this recipe turned HDR off (mat_hdr_level 0), which still works as a fallback."
     },
     {
       "symptom": "Textures look softer than on Windows. Options, Video, Advanced shows Model / Texture Detail on Low after the first start",
@@ -46,10 +46,10 @@
     }
   ],
   "lastVerified": {
-    "date": "2026-09-02",
-    "engine": "x64-sikarugir10.0_6-r0",
-    "macos": "26.6.2 (25G83)",
-    "chip": "Apple M1 Pro",
-    "result": "Intro map (sp_a1_intro1) loads and runs at 138-147 fps, 1728x1117, DXVK with async off, HDR off via the cfg files only (no launch options); two runs, each live for 130 s. Without the cfg files (mat_hdr_level 2) the map load froze on both of two runs: once a stuck frame, once a white screen, process still alive, no device-lost line in the logs. On macOS 14.6 (2026-08-28, async on) the same map ran at 210-216 fps."
+    "date": "2026-10-07",
+    "engine": "x64-sikarugir10.0_6-r21",
+    "macos": "27.0",
+    "chip": "Apple M4",
+    "result": "HDR on with mat_tonemapping_occlusion_use_stencil 1 in nine map loads (sp_a1_intro3 four times, sp_a1_intro1 and sp_a1_intro2 twice each, sp_a2_laser_intro once), the last two with this recipe applied by highball recipe apply. No device loss, HDR lighting, bloom and fog drawn, and an orange and a blue portal opened from the console drawn with the far side visible. Without the switch, every HDR load lost the device (four runs on sp_a1_intro1 and sp_a1_intro3). Earlier verifications with HDR off on an M1 Pro, macOS 14.6 and 26.6.2 (2026-08-28, 2026-09-02)."
   }
 }
