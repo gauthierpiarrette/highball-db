@@ -29,9 +29,9 @@
       "fix": "Turn Steam Input off for the game in its Steam properties"
     },
     {
-      "symptom": "A .NET 3.5 prompt when the configuration tool starts",
-      "cause": "The configuration tool is a .NET 3.5 program",
-      "fix": "The player installed .NET 3.5 SP1 with winetricks; Highball has no dependency entry for it yet"
+      "symptom": "A 'Microsoft .NET Framework 3.5 Setup' error box ('You must use Turn Windows features on or off...') behind Steam's 'Setup is loading installation components', at every start",
+      "cause": "Steam runs the game's first-start step, which installs .NET 3.5 from Steam's redistributables, before each launch, and Microsoft's 3.5 installer refuses to run on the Windows 10 that Wine reports (screenshot in highball-db#345). Installing dotnet35sp1 with winetricks did not silence it for the reporter",
+      "fix": "harmless: press OK and the game starts"
     },
     {
       "symptom": "Controller button hints show as plain black squares",
