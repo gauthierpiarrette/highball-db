@@ -1,0 +1,57 @@
+{
+  "id": "half-life-2",
+  "kind": "game",
+  "title": "Half-Life 2 DirectX 9 path",
+  "requires": [
+    "steam"
+  ],
+  "optIn": true,
+  "steps": [
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Valve\\Source\\hl2\\Settings",
+      "name": "AutoConfigVersion",
+      "valueType": "REG_DWORD",
+      "data": "1"
+    },
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Valve\\Source\\hl2\\Settings",
+      "name": "VendorID",
+      "valueType": "REG_DWORD",
+      "data": "4098"
+    },
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Valve\\Source\\hl2\\Settings",
+      "name": "DeviceID",
+      "valueType": "REG_DWORD",
+      "data": "29631"
+    },
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Valve\\Source\\hl2\\Settings",
+      "name": "DXLevel_V1",
+      "valueType": "REG_DWORD",
+      "data": "95"
+    },
+    {
+      "type": "note",
+      "text": "Optional. This build of Half-Life 2 ships no table of graphics cards, so on its first start on a Mac it picks its DirectX 8 path whatever the graphics mode: no HDR lighting, simpler water and shaders. This fix stores the DirectX 9 level (95) with the graphics card Wine's own Direct3D presents, so the game keeps it. It costs about a fifth of the frame rate: 65 fps against 52 in the game's own benchmark on an M4. It works with Wine's own Direct3D, the mode this game's page picks. In another mode the game goes back to its DirectX 8 path by itself."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "The game runs its DirectX 8 path (no HDR lighting, simpler water and shaders) on a fresh install",
+      "cause": "this build has no dxsupport.cfg (none in bin or in any VPK), and its first-start autodetect picks DirectX level 80 on a Mac under wined3d, DXVK and DXMT alike, whatever GPU identity it sees (measured on an M4, 2026-10-07)",
+      "fix": "this optional recipe. A stored DXLevel_V1 sticks only next to the DeviceID and VendorID of the card the game sees, which is why the recipe writes Wine's own Direct3D identity (0x1002, 0x73BF) with it. A lone DXLevel_V1 is re-detected to 80"
+    }
+  ],
+  "lastVerified": {
+    "date": "2026-10-07",
+    "engine": "x64-sikarugir10.0_6-r21",
+    "macos": "27.0",
+    "chip": "Apple M4",
+    "result": "With these four values Half-Life 2 starts at DirectX level 95 under Wine's own Direct3D (mat_dxlevel 95, mat_hdr_level 2), and d1_trainstation_01 loads and draws with HDR lighting, no device loss. Without them a fresh start picks 80 under wined3d, DXVK and DXMT. The game's bench.dem timedemo at 1280x720 windowed: 65.5 and 64.6 fps at level 80, 52.2 and 51.6 fps at level 95."
+  }
+}
