@@ -4,9 +4,9 @@
   "steam_appid": 400,
   "status": "verified-local",
   "renderer": "dxvk",
-  "provenance": "verified locally on Apple Silicon (M1 Pro), engine sikarugir-10.0_6, Highball 0.7.13, 2026-08-28",
-  "notes": "Works at ~96 fps under DXVK with HDR off — and the Portal recipe turns it off for you (one button on the game's page in Highball). Same MoltenVK HDR bug and same fix as Portal 2: without mat_hdr_level 0 map loads die on this engine; with it the opening vault renders flawlessly with a clean device log. Apply the Portal fix after installing, keep the bottle on DXVK.",
-  "lastVerified": "2026-09-04",
+  "provenance": "verified locally on Apple Silicon (M1 Pro), engine sikarugir-10.0_6, Highball 0.7.13, 2026-08-28; HDR with mat_tonemapping_occlusion_use_stencil 1 checked on an M4, macOS 27.0, engine x64-sikarugir10.0_6-r21, DXVK, 2026-10-07: testchmb_a_00 and testchmb_a_08 load, the first portals draw",
+  "notes": "Works under DXVK with HDR on, as on Windows, and the Portal recipe sets it up. Source's HDR used to freeze map loads on Macs (seen on an M1 Pro in August 2026, engine r0), so the recipe turned HDR off with mat_hdr_level 0, at about 96 fps in the first chamber. From Highball 0.10.14 it keeps HDR on and sets mat_tonemapping_occlusion_use_stencil 1, the switch that fixed the same freeze in Portal 2. Checked on an M4 with macOS 27.0 and engine r21: testchmb_a_00 and testchmb_a_08 load with HDR, and the first portals draw. On that Mac Portal's HDR loaded even without the switch, which stays as a precaution for the Macs where the freeze was seen. Players who applied the recipe before get HDR with Re-apply the Portal fix on the game's page. Keep the bottle on DXVK.",
+  "lastVerified": "2026-10-07",
   "verified": {
     "chip": "M1 Pro",
     "macos": "26.6.2",

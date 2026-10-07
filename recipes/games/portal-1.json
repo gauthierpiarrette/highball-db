@@ -2,31 +2,33 @@
   "id": "portal-1",
   "kind": "game",
   "title": "Portal",
-  "requires": ["steam"],
+  "requires": [
+    "steam"
+  ],
   "renderer": "dxvk",
   "steps": [
     {
       "type": "file",
       "path": "Program Files (x86)/Steam/steamapps/common/Portal/portal/cfg/autoexec.cfg",
-      "contents": "mat_hdr_level 0\n"
+      "contents": "mat_hdr_level 2\nmat_tonemapping_occlusion_use_stencil 1\n"
     },
     {
       "type": "note",
-      "text": "Portal needs HDR off on this engine, same as Portal 2: Source's HDR path triggers a MoltenVK bug that kills map loads. This recipe writes mat_hdr_level 0 into the game's config; with it the opening vault runs at ~96 fps under DXVK. Keep the bottle on DXVK. Visual cost is Source's HDR bloom only."
+      "text": "Portal runs with HDR on, with the lighting and bloom it has on Windows. On a Mac, Source's HDR auto-exposure pass used to make map loads freeze or crash, so this recipe turned HDR off. It now sets mat_tonemapping_occlusion_use_stencil 1, Source's own switch that runs that pass on the stencil buffer, the fix that brought HDR back in Portal 2. If loads ever freeze, turn HDR off again by changing mat_hdr_level 2 to 0 in portal/cfg/autoexec.cfg. Keep the game on DXVK."
     }
   ],
   "knownIssues": [
     {
       "symptom": "Freeze or crash at the end of map loads with HDR enabled",
-      "cause": "Source's HDR path emits a zero-attachment render pass that aborts the Apple GPU inside MoltenVK (same root cause as Portal 2)",
-      "fix": "mat_hdr_level 0 via this recipe's autoexec.cfg — verified device-clean"
+      "cause": "Source's HDR auto-exposure pass draws occlusion queries into a render pass with no attachments, which the Apple GPU can fail on inside MoltenVK, the same freeze Portal 2 had. Seen on an M1 Pro with engine r0 (2026-08-28). On an M4 with engine r21 Portal's HDR loaded even without the switch below (2026-10-07).",
+      "fix": "mat_tonemapping_occlusion_use_stencil 1 (this recipe writes it into portal/cfg/autoexec.cfg) runs that pass on the stencil buffer. Checked on an M4, macOS 27.0, engine x64-sikarugir10.0_6-r21, DXVK, 2026-10-07: testchmb_a_00 and testchmb_a_08 load with HDR on and the first portals draw. Turning HDR off (mat_hdr_level 0) still works as a fallback."
     }
   ],
   "lastVerified": {
-    "date": "2026-08-28",
-    "engine": "x64-sikarugir10.0_6-r0",
-    "macos": "14.6",
-    "chip": "Apple M1 Pro",
-    "result": "First chamber renders at ~96 fps, 1728x1117, DXVK + async, HDR off via autoexec only (cfg persistence verified, no launch options). Zero device loss."
+    "date": "2026-10-07",
+    "engine": "x64-sikarugir10.0_6-r21",
+    "macos": "27.0",
+    "chip": "Apple M4",
+    "result": "HDR on with mat_tonemapping_occlusion_use_stencil 1: testchmb_a_00 loads and plays its opening (the countdown runs, the scripted orange and blue portals open with the Relaxation Vault drawn through them), testchmb_a_08 loads, no device loss. HDR on without the switch also loaded testchmb_a_00 here. DirectX level 95 after a fresh autodetect (this build ships dxsupport.cfg). Earlier, with HDR off on an M1 Pro, macOS 14.6, engine r0: about 96 fps in the first chamber (2026-08-28)."
   }
 }
