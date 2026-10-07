@@ -27,7 +27,7 @@
     {
       "symptom": "Trees near the player pop in and out of view (reported on an M5 Max at 60 fps, Epic copy, engine r8)",
       "cause": "not measured; the reporter points at MoltenVK's Metal heap allocation",
-      "fix": "none known. Tested by the reporter on an M5 Max (highball#93): MVK_CONFIG_USE_MTLHEAP=0 stops the game from starting (vkCreateImage: MTLHeap must be enabled for 2D-on-3D or block texel view compatible images), MVK_CONFIG_LIVE_CHECK_ALL_RESOURCES=1 starts but the pop-in is worse, FSR off changes nothing, maximum geometry LOD drops below 1 fps. MoltenVK 1.4.2's heap and texture fixes are the next thing to try in a test engine"
+      "fix": "none known. Tested by the reporter on an M5 Max (highball#93): MVK_CONFIG_USE_MTLHEAP=0 stops the game from starting (vkCreateImage: MTLHeap must be enabled for 2D-on-3D or block texel view compatible images), MVK_CONFIG_LIVE_CHECK_ALL_RESOURCES=1 starts but the pop-in is worse, FSR off changes nothing, maximum geometry LOD drops below 1 fps. MoltenVK 1.4.2 (engine r10) did not change it either. Do not set MVK_CONFIG_USE_MTLHEAP=0. Turning the game's Tree Tessellation off is untested (highball#261)"
     },
     {
       "symptom": "On an 8 GB Mac the game crashes in the intro cutscene at the lowest settings (reported by a Reddit user on an iMac M3 8 GB, 2026-09-25).",
@@ -46,8 +46,8 @@
     },
     {
       "symptom": "Fullscreen at 1920x1080 shows the picture misplaced and cut off, with black where the rest of the menu should be; windowed borderless at 1080p draws correctly but smaller than a Retina display (highball#261, an M5 with Retina resolution at 100% on)",
-      "cause": "the game asks Windows for a fullscreen mode and Wine leaves the Mac display at its own size, the case highball#72 describes",
-      "fix": "to try: Emulate display mode changes on the game page's Advanced panel, then Fullscreen; not yet confirmed for this game (highball#261)"
+      "cause": "with Retina resolution on, Wine 11 engines before r21 reported the screen twice its size through one of the two ways a game can ask (7680x4320 against 3840x2160 on an M4), and a game that sizes its fullscreen picture from that number crops it (highball#261)",
+      "fix": "engine x64-crossover26.3-r21 (Highball 0.10.11 and later) reports the real size: pick it in the environment's Advanced settings, keep Retina resolution and Emulate display mode changes on. 1600x900 fullscreen fits meanwhile. Waiting on the reporter's confirmation (highball#261)"
     }
   ],
   "verified": {

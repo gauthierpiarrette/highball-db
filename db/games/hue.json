@@ -1,0 +1,13 @@
+{
+  "id": "hue",
+  "title": "Hue",
+  "steam_appid": 383270,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#369, 2026-10-07), Apple M1, macOS 27.0.1, Highball 0.10.12, engine x64-sikarugir10.0_6-r22, D3DMetal, the Epic Games Store copy (his first Epic install through Highball), rated 5 of 5 after 3 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on D3DMetal in a short session with the Epic copy. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

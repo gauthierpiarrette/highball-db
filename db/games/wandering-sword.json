@@ -1,0 +1,13 @@
+{
+  "id": "wandering-sword",
+  "title": "Wandering Sword",
+  "steam_appid": 1876890,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by nghuyenthevinh2000 (highball-db#377, 2026-10-07), Apple M1 Pro, macOS 26.3, Highball 0.9.39, engine x64-sikarugir10.0_6-r11, the environment in DXMT mode, frame cap 30, rated 4 of 5 after 86 minutes. Not verified by the maintainer.",
+  "notes": "Reported playable on DXMT over an 86-minute session. The report names no problem behind the 4 of 5. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

@@ -11,7 +11,7 @@
     {
       "symptom": "The window is larger than the screen and runs past its bottom edge, cutting off parts of the game (profiles, menus)",
       "cause": "the game's own ManageFullScreen script sets a 1754x1240 window whatever the screen size",
-      "fix": "turn on Retina resolution in the environment's settings, which halves the window's size on screen (measured on an M4)"
+      "fix": "turn on Retina resolution in the environment's settings, which halves the window's size on screen (measured on an M4); confirmed by the reporter (highball-db#350)"
     }
   ],
   "launchArgs": null,

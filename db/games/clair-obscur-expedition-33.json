@@ -1,0 +1,13 @@
+{
+  "id": "clair-obscur-expedition-33",
+  "title": "Clair Obscur: Expedition 33",
+  "steam_appid": 1903340,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by DeHeaven (highball-db#370, 2026-10-07), Apple M1 Max, macOS 27.0.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, the environment in DXMT mode with DXVK async shader compilation and AVX advertised, rated 4 of 5 after 9 minutes (frame pacing, but entirely playable). The report leaves the game's mode blank; as a Direct3D 12 game it most likely ran on D3DMetal, which Highball picks for Direct3D 12 by itself (inferred, not reported). Not verified by the maintainer.",
+  "notes": "Reported entirely playable with uneven frame pacing in a 9-minute session. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

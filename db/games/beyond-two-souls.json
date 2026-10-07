@@ -1,0 +1,19 @@
+{
+  "id": "beyond-two-souls",
+  "title": "Beyond: Two Souls",
+  "steam_appid": 960990,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by w8079 (highball-db#367, 2026-10-07), Apple M4, macOS 27.0.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, DXMT set as the game's own mode, rated 4 of 5 after about 4 minutes. The menu and the 3D scene render; frame rate not measured. Not verified by the maintainer.",
+  "notes": "Renders on DXMT. Start it from Highball's library: a game started from Steam's own window gets the environment's mode, not the one set on its page, and this game shows a black screen on DXVK.",
+  "knownIssues": [
+    {
+      "symptom": "Black screen with no error box",
+      "cause": "on DXVK the device is lost (VK_ERROR_DEVICE_LOST, Metal 'Internal Error (0000010d)'); the VK_ERROR_OUT_OF_DEVICE_MEMORY in the same log is misleading, 345 MB of 12 GB were in use (highball-db#367)",
+      "fix": "set Mode for this game to DXMT on its page and start it from Highball's library, not from Steam's window"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

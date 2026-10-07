@@ -1,0 +1,13 @@
+{
+  "id": "risk-of-rain-2",
+  "title": "Risk of Rain 2",
+  "steam_appid": 632360,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by PrisedRabbit (highball-db#368, 2026-10-07), Apple M1 Max, macOS 27.0.1, Highball 0.10.12, engine x64-crossover26.3-r21, DXMT as the game's own mode in an environment set to D3DMetal with sync none, rated 5 of 5 after 46 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT on the Wine 11 engine over 46 minutes. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

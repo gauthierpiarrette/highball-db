@@ -1,0 +1,13 @@
+{
+  "id": "brothers-a-tale-of-two-sons",
+  "title": "Brothers - A Tale of Two Sons",
+  "steam_appid": 225080,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by IgnisDa (highball-db#363, 2026-10-06), Apple M4, macOS 26.3.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, the environment in DXMT mode, the Epic Games Store copy, rated 4 of 5 after 1 minute (frame drops). The 2013 original, not the 2024 remake. Not verified by the maintainer.",
+  "notes": "Reported playable with frame drops in a one-minute session. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

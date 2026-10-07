@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by WahyuFauzi (highball-db#336, 2026-10-05), Apple M3, macOS 27.0, Highball 0.10.2, engine x64-sikarugir10.0_6-r18, DXMT, rated 4 of 5 after 53 minutes. Not verified by the maintainer.",
-  "notes": "Reported playable on DXMT, mostly at 60 fps by the player's account, with occasional frame drops. No measurement here yet.",
+  "provenance": "Reported by WahyuFauzi (highball-db#336, 2026-10-05), Apple M3, macOS 27.0, Highball 0.10.2, engine x64-sikarugir10.0_6-r18, DXMT, rated 4 of 5 after 53 minutes. Not verified by the maintainer. Follow-up from the same player (highball-db#373, 2026-10-07), rated 4 of 5.",
+  "notes": "Reported playable on DXMT, mostly at 60 fps by the player's account, with occasional frame drops. No measurement here yet. The reporter also set TargetPlatform=DirectX11 under [Render] in dmc5config.ini in the game folder (highball-db#373), so the game uses Direct3D 11; not checked here.",
   "knownIssues": [],
   "launchArgs": null,
   "lastVerified": null

@@ -11,7 +11,7 @@
     {
       "symptom": "Wine's Program Error dialog (winedbg) right at launch, page fault on read access at address 0, on every graphics mode",
       "cause": "the game calls glClearDepthf, which Wine's opengl32 withholds in macOS's OpenGL 2.1 context (needs GL_ARB_ES2_compatibility or OpenGL 4.1); measured with WINEDEBUG=warn+opengl,+wgl on an M4",
-      "fix": "engine x64-crossover26.3-r21 (Wine 11, patch 0021), shipped in Highball 0.10.11; reaches the title menu on an M4"
+      "fix": "engine x64-crossover26.3-r21 (Wine 11, patch 0021), shipped in Highball 0.10.11; reaches the title menu on an M4; confirmed by the reporter on an M1 (highball-db#349). Highball 0.10.12 and later offer r21 on Play"
     }
   ],
   "launchArgs": null,

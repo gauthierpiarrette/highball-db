@@ -4,7 +4,7 @@
   "steam_appid": 1794680,
   "status": "community",
   "renderer": "dxmt",
-  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball. Reported by Leoskiex (highball-db#332, 2026-10-05), Apple M4, macOS 26.3, Highball 0.10.3, engine x64-sikarugir10.0_6-r19, DXMT, rated 5 of 5 after 13 minutes.",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball. Reported by Leoskiex (highball-db#332, 2026-10-05), Apple M4, macOS 26.3, Highball 0.10.3, engine x64-sikarugir10.0_6-r19, DXMT, rated 5 of 5 after 13 minutes. A second session by the same player (highball-db#374, 2026-10-07), 5 of 5 after 17 minutes.",
   "notes": "Trivial load; works. A player on an M4 rates it perfect on DXMT (highball-db#332). Steam also sells a Mac build of the game.",
   "lastVerified": null,
   "nativeMac": {

@@ -1,0 +1,13 @@
+{
+  "id": "frostpunk",
+  "title": "Frostpunk",
+  "steam_appid": 323190,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by AbhinavRobinson (highball-db#376, 2026-10-07), Apple M5 Pro, macOS 27.0.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, DXMT, the Epic Games Store copy, rated 5 of 5 after 6 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT in a short session with the Epic copy. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

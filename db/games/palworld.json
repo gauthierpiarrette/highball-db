@@ -4,7 +4,14 @@
   "steam_appid": 1623730,
   "status": "community",
   "renderer": "d3dmetal",
-  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
-  "notes": "works, heavy",
-  "lastVerified": null
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball. Reported by w8079 (highball-db#366, 2026-10-07), Apple M4 with 16 GB, macOS 27.0.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, D3DMetal as the game's own mode, rated 4 of 5 after about 16 minutes on D3DMetal.",
+  "notes": "Works on D3DMetal, started from Highball's library. GPU-bound on an M4 at 1920x1080: about 15 fps on the highest preset, 30 fps on medium and 32.5 fps on low with DLSS Performance. DLSS needs two switches: Enable DLSS (MetalFX) in the environment's Graphics settings, and DLSS in the game's video settings. Memory is tight on 16 GB (swap in use). (highball-db#366)",
+  "lastVerified": null,
+  "knownIssues": [
+    {
+      "symptom": "The 3D world is black while menus, HUD and text draw",
+      "cause": "seen on DXVK, and when the game is started from Steam's own window, which gives it the environment's mode instead of the one set on its page (highball-db#366)",
+      "fix": "set Mode for this game to D3DMetal on its page and start it from Highball's library"
+    }
+  ]
 }

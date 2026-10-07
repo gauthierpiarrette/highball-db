@@ -1,0 +1,13 @@
+{
+  "id": "denshattack",
+  "title": "Denshattack!",
+  "steam_appid": 2524850,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by Random-Storm (highball-db#362, 2026-10-06), Apple A18 Pro (MacBook Neo), macOS 27.2, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, DXMT, frame cap 60, rated 4 of 5 after 7 minutes (quite mediocre frame rate even on the lowest settings). Not verified by the maintainer.",
+  "notes": "Reported playable on a MacBook Neo, with a low frame rate even on the lowest settings. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
