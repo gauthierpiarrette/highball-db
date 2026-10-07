@@ -1,0 +1,19 @@
+{
+  "id": "space-pirates-and-zombies",
+  "title": "Space Pirates and Zombies",
+  "steam_appid": 107200,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by valdroff (highball-db#381, 2026-10-07), Apple M3, macOS 27.0.1, Highball 0.10.13, engine x64-sikarugir10.0_6-r22, the environment set to DXVK, Windows 7, rated 4 of 5 after 54 minutes. Not verified by the maintainer.",
+  "notes": "Reported playable on DXVK over a 54-minute session. Quitting the game leaves a black screen that stays, and Stop on the game's page in Highball ends it. Not reproduced here.",
+  "knownIssues": [
+    {
+      "symptom": "Black screen after quitting the game, nothing happens",
+      "cause": "not investigated yet (highball-db#381)",
+      "fix": "press Stop on the game's page in Highball"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
