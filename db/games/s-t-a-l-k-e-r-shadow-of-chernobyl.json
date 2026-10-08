@@ -1,0 +1,19 @@
+{
+  "id": "s-t-a-l-k-e-r-shadow-of-chernobyl",
+  "title": "S.T.A.L.K.E.R.: Shadow of Chernobyl",
+  "steam_appid": 4500,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "OneKQuad (highball#237, 2026-10-02): Apple A18 Pro, macOS 27.0, Highball 0.9.39, engine x64-sikarugir10.0_6-r11, DXMT, stuck on synchronization for at least 20 minutes, not confirmed since. v1kk5 (highball#237, 2026-10-07): an M1 with 8 GB, \"works very good, no errors, perfect sound and image\", short lags while loading new data. Not verified by the maintainer.",
+  "notes": "Reported working well on an M1, with short lags when new areas load. An earlier report on an A18 Pro with an older Highball sat on synchronization for 20 minutes and is not resolved. No measurement here yet.",
+  "knownIssues": [
+    {
+      "symptom": "Loading hangs on synchronization for 20 minutes or more (an A18 Pro with Highball 0.9.39, highball#237)",
+      "cause": "not known. The log showed the game's main thread waiting during loading, on an older engine",
+      "fix": "none confirmed. Update Highball, since later engines fixed a sync bug that could leave a game waiting and keep data execution prevention on for 32-bit games"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
