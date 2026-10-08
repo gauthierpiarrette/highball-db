@@ -41,7 +41,7 @@
     },
     {
       "type": "note",
-      "text": "In Steam: Settings → Interface → disable 'GPU accelerated rendering in web views'; Settings → In-Game → disable the Steam Overlay. Both are unstable under Wine."
+      "text": "Leave Steam's Settings → Interface → 'GPU accelerated rendering in web views' on: with it off, Steam's window stays black on the Wine 11 engine (highball#282). If a game misbehaves with the Steam Overlay, turn the overlay off under Settings → In-Game."
     }
   ],
   "knownIssues": [
@@ -79,6 +79,11 @@
       "symptom": "NO CONNECTION right after login",
       "cause": "native macOS Steam holds the session",
       "fix": "quit native Steam"
+    },
+    {
+      "symptom": "Steam's own window stays black on the Wine 11 engine, with DXMT and with DXVK (highball#282)",
+      "cause": "Steam's web views with GPU acceleration turned off (the --disable-gpu flags in Steam/logs/webhelper.txt) never draw on the Wine 11 engines. Measured on an M4 with Wine 11 r17 and Wine 10 r22 (2026-10-07): with the GPU on it draws, and on the Wine 10 engine both settings draw. A player confirmed the fix on Wine 11 r19 (2026-10-08). This recipe used to advise turning the setting off",
+      "fix": "switch the environment to the Wine 10 engine for a moment, open Steam's Settings, Interface, turn on 'GPU accelerated rendering in web views', restart Steam, then switch back to the Wine 11 engine"
     }
   ],
   "lastVerified": {
