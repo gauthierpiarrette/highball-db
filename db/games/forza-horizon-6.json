@@ -4,8 +4,8 @@
   "steam_appid": 2483190,
   "status": "verified-local",
   "renderer": "d3dmetal",
-  "provenance": "verified locally on Apple Silicon (M4, 32 GB), macOS 27.0, Wine 11 engine r18 release candidate with D3DMetal 4.0b2, 2026-10-05",
-  "notes": "Plays from the intro through races and free roam on the Wine 11 engine r18 (D3DMetal 4), macOS 27 only. Base M4 at 1080p: 28 fps on High, 38 on Medium with FSR Balanced, 50 on Very Low; 39 to 48 in a race at Medium. The recipe sets the engine and the graphics card D3DMetal reports (the AMD default crashes the game). Xbox sign-in once, by code at microsoft.com/link. Built-in Benchmark Mode shows a black screen. Online play and controllers not tested.",
+  "provenance": "verified locally on Apple Silicon (M4, 32 GB), macOS 27.0, Wine 11 engine r18 release candidate with D3DMetal 4.0b2, 2026-10-05. Arachne1111 (highball-db#390, 2026-10-08): rated 3, playable with workarounds, after 25 minutes, Apple M5 Max, macOS 27.0.1, Highball 0.10.12, engine x64-crossover26.3-r18, D3DMetal, Windows 11, 192 dpi, AVX advertised, the forza-horizon-6 recipe applied.",
+  "notes": "Plays from the intro through races and free roam on the Wine 11 engine r18 (D3DMetal 4), macOS 27 only. Base M4 at 1080p: 28 fps on High, 38 on Medium with FSR Balanced, 50 on Very Low; 39 to 48 in a race at Medium. The recipe sets the engine and the graphics card D3DMetal reports (the AMD default crashes the game). Xbox sign-in once, by code at microsoft.com/link. Built-in Benchmark Mode shows a black screen. Online play and controllers not tested. A player on an M5 Max played 25 minutes on 0.10.12 and rated it playable with workarounds, without naming them.",
   "recipe": "recipes/games/forza-horizon-6.json",
   "lastVerified": "2026-10-05",
   "rendererResults": {
@@ -24,5 +24,12 @@
     "engine": "x64-crossover26.3-r18",
     "fps": "28 at High native, 33 at High + FSR Balanced, 38 at Medium + FSR Balanced, 44 at Low + FSR Balanced, 50 at Very Low + FSR Balanced, all at 1920x1080 in Tokyo City with the Metal HUD, D3DMetal 4.0b2, base M4"
   },
-  "arch": "x64"
+  "arch": "x64",
+  "knownIssues": [
+    {
+      "symptom": "A hitch of about a tenth of a second roughly once a second, in menus, the garage and while driving",
+      "cause": "the game's copy protection runs a periodic check of about 2,000 deliberate traps while holding a lock the frame needs. Under Rosetta each trap costs about 50 microseconds against 1 to 2 on a PC, so a check of a few milliseconds takes about 100 (measured on an M4)",
+      "fix": "none in Highball. No setting removes it: priorities, Game Mode and fewer processors were measured and shorten it by a fifth at best. It would take cheaper traps in Rosetta or a change in the game"
+    }
+  ]
 }

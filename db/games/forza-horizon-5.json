@@ -4,7 +4,34 @@
   "steam_appid": 1551360,
   "status": "community",
   "renderer": "d3dmetal",
-  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
-  "notes": "D3D12; reported via d3dmetal",
-  "lastVerified": null
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball. tusharchawre (highball-db#386, 2026-10-07): rated 2, launches but not playable, Apple M4 16 GB, macOS 27.2, Highball 0.10.13, engines x64-crossover26.3-r20 and r21, D3DMetal, Steam build 21856128, about an hour of testing.",
+  "notes": "Direct3D 12, so D3DMetal. A detailed report on an M4 gets past startup, the Xbox sign-in and into free roam and the benchmark on both Wine 11 engines, but the game is not playable: every piece of scenery draws tilted and a Fatal Error ends it within minutes. Getting that far took a graphics card disguise and a hand-made way around the black sign-in window, see the known issues. Not measured by the maintainer.",
+  "lastVerified": null,
+  "knownIssues": [
+    {
+      "symptom": "The game crashes at startup during graphics setup (a read of address 0x10 in ForzaHorizon5.exe)",
+      "cause": "the default graphics card D3DMetal reports (AMD), the same as Forza Horizon 6",
+      "fix": "report another card with the variables D3DM_VENDOR_ID, D3DM_DEVICE_ID and D3DM_DEVICE_DESCRIPTION (the reporter used an NVIDIA GeForce RTX 3060, 0x10de and 0x2503, or an Intel Arc A750, 0x8086 and 0x56a1)"
+    },
+    {
+      "symptom": "The Xbox sign-in window is black",
+      "cause": "the game's own WebView2 (a fixed runtime, 91.0.864.67) does not draw under D3DMetal, like Steam's window",
+      "fix": "none built in. The reporter replaced msedgewebview2.exe with a stand-in that drops the D3DMetal folders from WINEDLLPATH_PREPEND and opens a remote debugging port, then signed in from a Mac browser with a password (passkeys cannot work under Wine)"
+    },
+    {
+      "symptom": "All scenery (trees, poles, buildings) draws tilted, only the car and the road look right (highball-db#386)",
+      "cause": "not known. The same on D3DMetal 3 and 4, with either graphics card disguise and on the Low preset",
+      "fix": "none known"
+    },
+    {
+      "symptom": "A Fatal Error with code 0x800705aa (not enough system resources) after 37 seconds to 6 minutes of driving (highball-db#386)",
+      "cause": "not known. Graphics memory in use was only 200 MB to 1.5 GB, and one crash followed a critical section wait that timed out after 60 seconds",
+      "fix": "none known"
+    },
+    {
+      "symptom": "On DXMT the game crashes at DXGI, asking for an interface DXMT does not know ({f0db4c7f-fe5a-42a2-bd62-f2a6cf6fc83e})",
+      "cause": "a Direct3D 12 game, which DXMT does not cover",
+      "fix": "use D3DMetal"
+    }
+  ]
 }

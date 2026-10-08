@@ -4,8 +4,8 @@
   "steam_appid": 1422450,
   "status": "reported-upstream",
   "renderer": "dxmt",
-  "provenance": "DXMT changelog v0.73 (github.com/3Shain/dxmt/releases). playX18 (highball-db#243, 2026-09-28): rated 4, playable with minor issues, Apple M5 Pro, macOS 27.0, DXMT, a full standard match played; engine and Highball version not stated.",
-  "notes": "DXMT's changelog lists the MetalFX temporal scaler output as fixed. A report has a full standard match playable on DXMT on an M5 Pro, with two costs: about ten minutes of shader compilation before the game stops stuttering, and audio crackle, which that player fixed by setting the Mac's output to 88.2 kHz in Audio MIDI Setup.",
+  "provenance": "DXMT changelog v0.73 (github.com/3Shain/dxmt/releases). playX18 (highball-db#243, 2026-09-28): rated 4, playable with minor issues, Apple M5 Pro, macOS 27.0, DXMT, a full standard match played; engine and Highball version not stated. Hetens (highball-db#387, 2026-10-08): rated 4 after 19 minutes, Apple M5 Pro, macOS 27.0.1, Highball 0.10.3, engine x64-sikarugir10.0_6-r19, DXMT, \"temperatures on the higher side but still very good\".",
+  "notes": "DXMT's changelog lists the MetalFX temporal scaler output as fixed. A report has a full standard match playable on DXMT on an M5 Pro, with two costs: about ten minutes of shader compilation before the game stops stuttering, and audio crackle, which that player fixed by setting the Mac's output to 88.2 kHz in Audio MIDI Setup. A second M5 Pro report (19 minutes on DXMT) says it runs very well and only runs warm.",
   "lastVerified": null,
   "anticheat": {
     "names": [
