@@ -56,9 +56,9 @@
       "fix": "start the game from Steam with Steam Input on for it. The reporter's DualSense works that way, in the default environment, with the game added to Steam as a non-Steam game and -nobattleye in its launch options (highball-db#72, 2026-10-07)"
     },
     {
-      "symptom": "The game stays at 800x600 on a 4K monitor, and -fullscreen stretches 800x600 to the screen (reported on an M1 with the game started from Steam, highball-db#72, 2026-10-07)",
-      "cause": "not known yet. It ran on DXMT, which is what this page recommends and what a game started from inside Steam gets in an environment set to D3DMetal, since Steam's own window starts with DXMT there",
-      "fix": "none known yet"
+      "symptom": "The game starts at 800x600 in a window with low settings, or goes back to it after you set a resolution",
+      "cause": "GTA V doesn't know the Apple GPU that DXMT presents, so on its first start it picks its lowest preset. It also resets to that preset whenever the graphics card it sees changes, for example with a settings.xml copied from Whisky or CrossOver, where D3DMetal presents an AMD card (udance4ever, highball-db#72).",
+      "fix": "Set the resolution and quality once in the game's Graphics settings, they stay from then on. Don't copy settings.xml from another tool, or set the resolution again after doing it. Presenting an AMD card through DXMT_CONFIG made it worse in a test: the resolution list then held only the window size."
     }
   ],
   "launchArgs": [
