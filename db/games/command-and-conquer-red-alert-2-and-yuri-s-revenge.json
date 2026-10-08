@@ -1,0 +1,19 @@
+{
+  "id": "command-and-conquer-red-alert-2-and-yuri-s-revenge",
+  "title": "Command & Conquer Red Alert™ 2 and Yuri’s Revenge™",
+  "steam_appid": 2229850,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by valdroff (highball-db#365, 2026-10-06), Apple M3, macOS 27.0.1, Highball 0.10.12, the Steam release: it did not start ('Error - unable to set video mode') on engine x64-sikarugir10.0_6-r22 in Wine's own Direct3D mode, Windows 7, AVX advertised. Confirmed working on 2026-10-08 with Emulate display mode changes on for the game and the environment in D3DMetal mode. Not verified by the maintainer.",
+  "notes": "The game asks Windows for a display mode the Mac doesn't offer, Wine refuses, and the game stops with 'Error - unable to set video mode'. The reporter got it running with Emulate display mode changes on for the game (Wine pretends the mode changed and scales the picture) and the D3DMetal graphics mode, whose 32-bit DirectDraw is cnc-ddraw. Which of the two did it was not separated, so the page sets no mode. No measurement here yet.",
+  "knownIssues": [
+    {
+      "symptom": "'Error - unable to set video mode' and the game doesn't start",
+      "cause": "the game asks for a display mode the Mac doesn't offer, and Wine refuses the switch",
+      "fix": "On the game's page, open Game settings and tick Emulate display mode changes. If it still stops, set the game's graphics mode to D3DMetal (Apple's DirectX), which runs the game's DirectDraw through cnc-ddraw. Both together worked for the reporter."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
