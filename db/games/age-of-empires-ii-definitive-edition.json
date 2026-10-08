@@ -1,0 +1,19 @@
+{
+  "id": "age-of-empires-ii-definitive-edition",
+  "title": "Age of Empires II: Definitive Edition",
+  "steam_appid": 813780,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by nunnsy (highball-db#399 and #400, 2026-10-08), Apple M3 Pro, macOS 27.0.1, Highball 0.10.10: on engine x64-sikarugir10.0_6-r21 it crashed before its splash screen (rated 1), and on engine x64-crossover26.3-r19 in DXMT mode with the steam and vcrun2022 recipes it ran (rated 5 of 5 after 3 minutes). Not verified by the maintainer.",
+  "notes": "This game has a native macOS version on Steam, so the Mac Steam app runs it directly without Highball. Through Highball, the Windows build crashed before its splash screen on the Wine 10 engine (r21) and ran on the Wine 11 engine (r19, DXMT) for the same player. No measurement here yet.",
+  "knownIssues": [
+    {
+      "symptom": "Crashes before the splash screen on the Wine 10 engine",
+      "cause": "not measured",
+      "fix": "Play the native Mac version, or use the Wine 11 engine (Advanced, Engine on the environment's page), where it ran."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

@@ -1,0 +1,30 @@
+{
+  "id": "elden-ring-nightreign",
+  "title": "ELDEN RING NIGHTREIGN",
+  "steam_appid": 2622380,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": {
+    "names": [
+      "Easy Anti-Cheat"
+    ],
+    "macVerdict": "warning",
+    "note": "anti-cheat present; Linux/Proton support does not extend to macOS — userspace path works for some titles"
+  },
+  "provenance": "Reported by aj2wavy (highball-db#405, 2026-10-08), Apple M1 Pro, macOS 27.0.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, the environment in DXMT mode, the controller-sdl, corefonts, steam and vcrun2022 recipes, rated 3 of 5 after 14 minutes, offline only. Not verified by the maintainer.",
+  "notes": "Reported playable offline over a 14-minute session. The reporter could only start it without its anti-cheat, Easy Anti-Cheat, which keeps the game out of online play, and the resolution behaved oddly. It's a Direct3D 12 game, so the page asks for D3DMetal like Elden Ring's. No measurement here yet.",
+  "knownIssues": [
+    {
+      "symptom": "The game only starts without its anti-cheat, so online play is unavailable",
+      "cause": "Easy Anti-Cheat. Its support for Proton on Linux doesn't extend to Wine on a Mac.",
+      "fix": "none for online play"
+    },
+    {
+      "symptom": "The resolution behaves oddly",
+      "cause": "not measured",
+      "fix": null
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

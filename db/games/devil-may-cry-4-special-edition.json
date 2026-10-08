@@ -1,0 +1,13 @@
+{
+  "id": "devil-may-cry-4-special-edition",
+  "title": "Devil May Cry 4 Special Edition",
+  "steam_appid": 329050,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by flacknabe-cpu (highball-db#410, 2026-10-08), Apple M1 Pro, macOS 26.7, Highball 0.10.14, engine x64-sikarugir10.0_6-r24, the environment in DXMT mode with Retina pixels at 100% and a 60 fps cap, rated 5 of 5 after 1 minute. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT, the default mode, after a one-minute session, so it shows the game starts and little more. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

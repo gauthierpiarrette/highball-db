@@ -1,0 +1,19 @@
+{
+  "id": "phantom-brigade",
+  "title": "Phantom Brigade",
+  "steam_appid": 553540,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by nickv2002 (highball-db#398, 2026-10-08), Apple M4 Pro, macOS 15.8.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, the environment in DXMT mode, rated 4 of 5 after 35 minutes. Not verified by the maintainer.",
+  "notes": "Reported playable on DXMT, the default mode, over a 35-minute session. In full screen the reporter couldn't switch away to other apps, in windowed mode they could. No measurement here yet.",
+  "knownIssues": [
+    {
+      "symptom": "In full screen the game can't be hidden or switched away from to other apps",
+      "cause": "not measured",
+      "fix": "Play in windowed mode, where switching works."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

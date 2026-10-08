@@ -1,0 +1,13 @@
+{
+  "id": "mi-chang-sheng",
+  "title": "觅长生",
+  "steam_appid": 1189490,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by w8079 (highball-db#391, 2026-10-08), Apple M4, macOS 27.0.1, Highball 0.10.10, engine x64-crossover26.3-r19, the environment in DXMT mode, rated 5 of 5 after about 7 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT, the default mode, over about 7 minutes on an M4 at 1920x1080: 160 fps (the display's refresh rate) at the main menu and on the world map, about 68 fps in the market scene with a character panel open. Unity, 64-bit, Direct3D 11. The store has no English title. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

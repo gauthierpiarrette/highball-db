@@ -1,0 +1,19 @@
+{
+  "id": "ho-tu-lo-shu-the-books-of-dragon",
+  "title": "河洛群俠傳 (Ho Tu Lo Shu ： The Books of Dragon)",
+  "steam_appid": 952860,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by w8079 (highball-db#397, 2026-10-08), Apple M4, macOS 27.0.1, Highball 0.10.10, engine x64-crossover26.3-r19, the environment in DXMT mode, rated 4 of 5 after about 9 minutes. Not verified by the maintainer.",
+  "notes": "Reported playable on DXMT, the default mode, over about 9 minutes on an M4: 23 fps in the opening village at 1920x1080 and 30 at 1600x900, steady, with no stutter. The interface and subtitles are Chinese only. Unity 2019.3, 64-bit, Direct3D 11. No measurement here yet.",
+  "knownIssues": [
+    {
+      "symptom": "About 23 fps at 1920x1080 on an M4",
+      "cause": "the frame rate follows the resolution, so the GPU is the limit at that size (the reporter's measurement)",
+      "fix": "Lower the resolution in the game's video settings: 1600x900 gave about 30 fps."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

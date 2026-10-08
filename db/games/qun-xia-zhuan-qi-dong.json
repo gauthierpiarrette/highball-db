@@ -1,0 +1,13 @@
+{
+  "id": "qun-xia-zhuan-qi-dong",
+  "title": "群侠传，启动！",
+  "steam_appid": 2098790,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by w8079 (highball-db#393, 2026-10-08), Apple M4, macOS 27.0.1, Highball 0.10.10, engine x64-crossover26.3-r19, the environment in DXMT mode, rated 5 of 5 after 12 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT, the default mode, over 12 minutes on an M4: 98 to 147 fps at 1920x1080 with a 160 Hz display, no stutter. The game is a framework that loads user-made games, and this run played a Steam Workshop one (item 2865676700). An earlier run of the reporter's on the Wine 10 engine r21 in DXVK mode ended in a page fault, this one on the Wine 11 engine did not. Unity (Mono), 64-bit, Direct3D 11. The store has no English title. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

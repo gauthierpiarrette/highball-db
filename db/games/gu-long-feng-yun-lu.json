@@ -1,0 +1,13 @@
+{
+  "id": "gu-long-feng-yun-lu",
+  "title": "古龙风云录",
+  "steam_appid": 2340650,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by w8079 (highball-db#394, 2026-10-08), Apple M4, macOS 27.0.1, Highball 0.10.10, engine x64-crossover26.3-r19, the environment in DXMT mode, rated 5 of 5 after about 6 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT, the default mode, over about 6 minutes on an M4 at 1920x1080: 48 fps on the world map and 38 in a hex battle at the game's higher preset, steady, and about 70 at its lowest preset with shadows still on. Unity 2020.1, 64-bit, Direct3D 11. The store has no English title. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

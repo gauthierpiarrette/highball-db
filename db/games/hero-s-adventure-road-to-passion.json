@@ -1,0 +1,13 @@
+{
+  "id": "hero-s-adventure-road-to-passion",
+  "title": "Hero's Adventure: Road to Passion",
+  "steam_appid": 1948980,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by w8079 (highball-db#392, 2026-10-08), Apple M4, macOS 27.0.1, Highball 0.10.10, engine x64-crossover26.3-r19, the environment in DXMT mode, rated 5 of 5 after 8 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT, the default mode, over 8 minutes on an M4 in full screen: 160 fps throughout, the display's refresh rate, walking a town, in dialogue and encounter screens and on the map. Unity (IL2CPP), 64-bit, Direct3D 11. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

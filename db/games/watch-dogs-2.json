@@ -1,0 +1,30 @@
+{
+  "id": "watch-dogs-2",
+  "title": "Watch_Dogs® 2",
+  "steam_appid": 447040,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": {
+    "names": [
+      "Easy Anti-Cheat"
+    ],
+    "macVerdict": "warning",
+    "note": "anti-cheat present; Linux/Proton support does not extend to macOS — userspace path works for some titles"
+  },
+  "provenance": "Reported by Picksley (highball-db#409, 2026-10-08), Apple M4, macOS 27.0.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, the environment in DXMT mode, rated 4 of 5 after 2 minutes. Not verified by the maintainer.",
+  "notes": "Reported playable on DXMT, the default mode, over a 2-minute session, with a few stutters. Ubisoft Connect's overlay stayed on screen claiming the graphics drivers are outdated, and online play didn't work, which the reporter put down to the anti-cheat. No measurement here yet.",
+  "knownIssues": [
+    {
+      "symptom": "Ubisoft Connect's overlay stays on screen saying the graphics drivers are outdated",
+      "cause": "not measured",
+      "fix": null
+    },
+    {
+      "symptom": "No online play",
+      "cause": "the game's Easy Anti-Cheat, per the reporter. Its support for Proton on Linux doesn't extend to Wine on a Mac.",
+      "fix": "none. Single player only."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

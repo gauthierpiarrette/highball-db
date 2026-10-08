@@ -5,13 +5,13 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by w8079 (highball-db#352, 2026-10-06), Apple M4, macOS 27.0.1, the Steam release v1.0.3.1, rated 2 of 5: menus over 100 fps, maps about 4.4 fps on engines x64-sikarugir10.0_6-r19 and r21, about 45 fps on the Wine 11 engine r19 with the third-party x87 sidecar v1.8.0 attached (hook confirmed in the log). Not verified by the maintainer.",
+  "provenance": "Reported by w8079 (highball-db#352, 2026-10-06), Apple M4, macOS 27.0.1, the Steam release v1.0.3.1, rated 2 of 5: menus over 100 fps, maps about 4.4 fps on engines x64-sikarugir10.0_6-r19 and r21 in DXMT mode, about 45 fps on the Wine 11 engine r19 in DXVK mode with the third-party x87 sidecar v1.8.0 attached (hook confirmed in the log). Not verified by the maintainer.",
   "notes": "Menus are fast, maps crawl. The player's samples put the busy thread in the game's x87 floating-point code, which Rosetta translates slowly.",
   "knownIssues": [
     {
       "symptom": "Maps run at about 4 fps while menus run at 100 fps or more",
       "cause": "the game's x87 floating-point code runs slowly under Rosetta (winedbg samples in highball-db#352)",
-      "fix": "none in Highball yet. A player measured 45 fps with the x87 sidecar on the Wine 11 engine; whether Highball ships it is still open (highball#165)"
+      "fix": "none in Highball yet. A player measured 45 fps with the x87 sidecar on the Wine 11 engine in DXVK mode. On the Wine 11 engines DXMT mode hands Direct3D 9 to Wine's own implementation, which wasn't measured, so DXVK is the mode to reproduce it in. Whether Highball ships the sidecar is still open (highball#165)"
     }
   ],
   "launchArgs": null,

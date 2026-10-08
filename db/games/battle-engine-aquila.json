@@ -1,0 +1,19 @@
+{
+  "id": "battle-engine-aquila",
+  "title": "Battle Engine Aquila",
+  "steam_appid": 1346400,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by valdroff (highball-db#404, 2026-10-08), Apple M3, macOS 27.0.1, Highball 0.10.14, engine x64-sikarugir10.0_6-r24, the environment in DXVK mode with Windows 7 and AVX advertised, the steam and vcrun2022 recipes, Emulate display mode changes on for the game, rated 5 of 5 after 5 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXVK over a 5-minute session once Emulate display mode changes was on, without which the game's resolution was wrong. DXVK was the environment's own setting, so the page sets no mode. No measurement here yet.",
+  "knownIssues": [
+    {
+      "symptom": "The game's resolution is wrong",
+      "cause": "not measured. The game changes the display mode, which the Mac doesn't do for Windows programs.",
+      "fix": "On the game's page, open Game settings and tick Emulate display mode changes."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
