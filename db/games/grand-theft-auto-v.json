@@ -52,8 +52,13 @@
     },
     {
       "symptom": "A DualSense controller does not bind in the game while it works in other games in the same environment (reported on an M1, highball-db#72)",
-      "cause": "not investigated. The game reads controllers through XInput and DirectInput rather than Steam Input, and the log shows Wine's HID device-matching errors",
-      "fix": "none known, keyboard and mouse work. Steam's controller configuration for the game is the first thing to try"
+      "cause": "the game reads controllers through XInput and DirectInput, and Wine's HID layer does not offer the DualSense to it (the log shows Wine's HID device-matching errors)",
+      "fix": "start the game from Steam with Steam Input on for it. The reporter's DualSense works that way, in the default environment, with the game added to Steam as a non-Steam game and -nobattleye in its launch options (highball-db#72, 2026-10-07)"
+    },
+    {
+      "symptom": "The game stays at 800x600 on a 4K monitor, and -fullscreen stretches 800x600 to the screen (reported on an M1 with the game started from Steam, highball-db#72, 2026-10-07)",
+      "cause": "not known yet. It ran on DXMT, which is what this page recommends and what a game started from inside Steam gets in an environment set to D3DMetal, since Steam's own window starts with DXMT there",
+      "fix": "none known yet"
     }
   ],
   "launchArgs": [
