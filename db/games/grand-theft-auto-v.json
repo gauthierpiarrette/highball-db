@@ -2,6 +2,7 @@
   "id": "grand-theft-auto-v",
   "title": "Grand Theft Auto V (Legacy)",
   "steam_appid": 271590,
+  "epic_app_name": "9d2d0eb64d5c44529cece33fe2a46482",
   "status": "verified-local",
   "renderer": "dxmt",
   "provenance": "played here on the Steam copy, M1 Pro, macOS 26.6.2, engine x64-crossover26.3-r5, 2026-09-09. Also reported 5 of 5 by vancevcs (highball-db#202, 2026-09-24), Apple M1, macOS 27.0, Highball 0.9.32, engine x64-sikarugir10.0_6-r5, DXMT, after 36 minutes, with the Metal HUD on. Checked 2026-10-03 on an M4, macOS 27.0, Highball 0.10.4 build, engine x64-crossover26.3-r16, DXMT: reached the display calibration screen with -nobattleye, not played.",

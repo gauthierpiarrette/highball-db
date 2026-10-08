@@ -2,6 +2,7 @@
   "id": "grand-theft-auto-v-enhanced",
   "title": "Grand Theft Auto V Enhanced",
   "steam_appid": 3240220,
+  "epic_app_name": "8769e24080ea413b8ebca3f1b8c50951",
   "status": "community",
   "renderer": "vkd3d",
   "provenance": "tested locally on Apple Silicon (M1 Pro, macOS 26.6.2, engine x64-crossover26.3-r4) on 2026-09-08: it launches and loads under vkd3d and the GPU device is then lost, twice, at default and at minimum settings",
