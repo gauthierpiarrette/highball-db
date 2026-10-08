@@ -5,9 +5,15 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by PrisedRabbit (highball-db#368, 2026-10-07), Apple M1 Max, macOS 27.0.1, Highball 0.10.12, engine x64-crossover26.3-r21, DXMT as the game's own mode in an environment set to D3DMetal with sync none, rated 5 of 5 after 46 minutes. Not verified by the maintainer.",
-  "notes": "Reported perfect on DXMT on the Wine 11 engine over 46 minutes. No measurement here yet.",
-  "knownIssues": [],
+  "provenance": "Reported by PrisedRabbit (highball-db#368, 2026-10-07), Apple M1 Max, macOS 27.0.1, Highball 0.10.12, engine x64-crossover26.3-r21, DXMT as the game's own mode in an environment set to D3DMetal with sync none, rated 5 of 5 after 46 minutes. Second report by murilopereirame (highball-db#414, 2026-10-08), Apple M3, macOS 26.6.2, Highball 0.10.10, engine x64-crossover26.3-r19, the environment in D3DMetal mode with sync none and AVX advertised (the report names DXMT), rated 4 of 5 after 5 hours: frame times a bit uneven, the health bar missing until a mod fixed it. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT on the Wine 11 engine over 46 minutes, and playable over 5 hours on an M3 with frame times a bit uneven and the health bar missing until the player added a mod. No measurement here yet.",
+  "knownIssues": [
+    {
+      "symptom": "The health bar is missing",
+      "cause": "not measured",
+      "fix": "A mod fixed it for one player (which one is not known yet)."
+    }
+  ],
   "launchArgs": null,
   "lastVerified": null
 }
