@@ -127,6 +127,10 @@ def load_index():
             if not cand:
                 continue
             k = norm(cand)
+            if not k:
+                # A title with no Latin letters or digits (觅长生, 古龙风云录) has no text key: two of them
+                # collided on "" and stopped every ingest (2026-10-08). The id and the appid still match.
+                continue
             if k in key and key[k] != gid:
                 sys.exit(f"ambiguous key {k!r}: {key[k]} and {gid}")
             key[k] = gid
