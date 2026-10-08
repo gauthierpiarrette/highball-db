@@ -52,7 +52,7 @@
     },
     {
       "symptom": "A DualSense controller does not bind in the game while it works in other games in the same environment (reported on an M1, highball-db#72)",
-      "cause": "the game reads controllers through XInput and DirectInput, and Wine's HID layer does not offer the DualSense to it (the log shows Wine's HID device-matching errors)",
+      "cause": "not investigated. The game reads controllers through XInput and DirectInput, and the only HID error in the reporter's log names an Apple device (vendor 004c), not the DualSense",
       "fix": "start the game from Steam with Steam Input on for it. The reporter's DualSense works that way, in the default environment, with the game added to Steam as a non-Steam game and -nobattleye in its launch options (highball-db#72, 2026-10-07)"
     },
     {
