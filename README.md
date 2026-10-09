@@ -12,6 +12,7 @@ kernel-anti-cheat blocklist.
 - `db/derived/` — **prediction layer** (ODbL): recent ProtonDB verdicts × anti-cheat knowledge → a macOS likelihood for ~12,500 more games. Predictions, never verifications.
 - `db/anticheat.json` — Mac-aware anti-cheat map for 1,166 titles, imported from [Are We Anti-Cheat Yet?](https://areweanticheatyet.com) (MIT)
 - `Scripts/` — validator, report ingester, importers (AWACY, ProtonDB dumps), static-site generator (GitHub Pages)
+- **As JSON on the web** — [gethighball.com/data/steam/&lt;appid&gt;.json](https://gethighball.com/docs/data/) returns one Steam game by app id (the whole curated entry, or its prediction, each with its licence; 404 when there is nothing), `/data/games.json` every curated entry, `/data/predictions.json` every prediction. Rebuilt on every change here.
 
 **Contribute:** run something through Highball, then `highball report` — it opens a pre-filled
 issue here. Or PR a recipe with the CLI output attached. Questions and quick help: the
