@@ -1,0 +1,19 @@
+{
+  "id": "ascend-to-zero",
+  "title": "Ascend to ZERO",
+  "steam_appid": 2697940,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by krptg0 (highball-db#420, 2026-10-09), Apple M2 Pro, macOS 26.6.2, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, DXMT, rated 4 of 5 after 1 minute. Not verified by the maintainer.",
+  "notes": "Reported playable on DXMT, the default mode, with frame drops and a little stutter. The session was one minute, so this covers the start only.",
+  "knownIssues": [
+    {
+      "symptom": "Frame drops and a little stutter (reported on an M2 Pro, one-minute session)",
+      "cause": "not investigated",
+      "fix": "none known."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

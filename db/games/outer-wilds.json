@@ -5,9 +5,15 @@
   "status": "community",
   "renderer": "dxvk",
   "anticheat": null,
-  "provenance": "Reported by RuhaanB6 (highball-db#163, 2026-09-21): rated 5, perfect, Apple M2 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r5, Highball 0.9.33, DXVK, 4 minutes played through Highball, with the note that little testing was done yet. Not run here.",
-  "notes": "Reported perfect after a four-minute session on DXVK on an M2 Pro with macOS 26.6.2, so the report covers launch and the opening; the reporter had not tested much yet. Frame rate not recorded.",
-  "knownIssues": [],
+  "provenance": "Reported by RuhaanB6 (highball-db#163, 2026-09-21): rated 5, perfect, Apple M2 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r5, Highball 0.9.33, DXVK, 4 minutes played through Highball, with the note that little testing was done yet. Not run here. ruari8 (highball-db#424, 2026-10-09), Apple M5 Pro, macOS 26.6.2, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, DXMT, rated 5 of 5 after 46 minutes. marieuuuh (highball-db#437 and #445, 2026-10-10), Apple M1 Pro, macOS 26.5.2, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, mode not stated, rated 5 of 5 after sessions of 56 and 136 minutes.",
+  "notes": "Reported perfect after a four-minute session on DXVK on an M2 Pro with macOS 26.6.2, so the report covers launch and the opening; the reporter had not tested much yet. Frame rate not recorded. It also plays perfectly on DXMT, the default mode, on an M5 Pro over 46 minutes. A player on an M1 Pro rates it perfect over two long sessions, with two small notes. It takes two to three minutes to run smoothly, and the other travelers are invisible, only their instruments show.",
+  "knownIssues": [
+    {
+      "symptom": "The other travelers are invisible, only their instruments show (reported on an M1 Pro, engine r21, mode not stated)",
+      "cause": "not investigated",
+      "fix": "none known yet. The DXMT report on an M5 Pro does not mention it."
+    }
+  ],
   "launchArgs": null,
   "lastVerified": null,
   "verified": null

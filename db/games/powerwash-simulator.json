@@ -1,0 +1,19 @@
+{
+  "id": "powerwash-simulator",
+  "title": "PowerWash Simulator",
+  "steam_appid": 1290000,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by mpandrade (highball-db#441, 2026-10-11), Apple M5 Pro, macOS 27.0.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, DXMT, rated 4 of 5 after 2 minutes. Not verified by the maintainer.",
+  "notes": "Reported to run on DXMT, the default mode, on an M5 Pro, but with no sound at all. The session was two minutes.",
+  "knownIssues": [
+    {
+      "symptom": "No sound at all (reported on an M5 Pro, macOS 27.0.1)",
+      "cause": "not investigated. Other players on M5 Macs report missing sounds in other games, so the cause may be specific to those Macs",
+      "fix": "none known yet."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

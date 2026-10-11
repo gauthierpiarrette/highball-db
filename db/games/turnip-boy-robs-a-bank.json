@@ -1,0 +1,19 @@
+{
+  "id": "turnip-boy-robs-a-bank",
+  "title": "Turnip Boy Robs a Bank",
+  "steam_appid": null,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by kandzsem (highball-db#448, 2026-10-11), Apple M4, macOS 26.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, DXMT, frame cap 60, an environment with Epic set up, rated 4 of 5 after 6 minutes. Not verified by the maintainer.",
+  "notes": "Reported playable on DXMT, the default mode, on an M4, except that the game did not see a DualShock 4 controller.",
+  "knownIssues": [
+    {
+      "symptom": "A DualShock 4 is not recognized (reported on an M4)",
+      "cause": "not investigated",
+      "fix": "none known yet."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

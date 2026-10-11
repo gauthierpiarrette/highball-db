@@ -1,0 +1,13 @@
+{
+  "id": "nekopara-vol-1-demo",
+  "title": "NEKOPARA Vol. 1 Demo",
+  "steam_appid": 334660,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#432, 2026-10-10), Apple M1, macOS 27.0.1, Highball 0.10.14, engine x64-sikarugir10.0_6-r24, the environment in D3DMetal mode, rated 5 of 5 after 19 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect after 19 minutes on an M1. The report is for the demo, the full game has not been reported yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

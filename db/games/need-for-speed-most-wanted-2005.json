@@ -1,0 +1,13 @@
+{
+  "id": "need-for-speed-most-wanted-2005",
+  "title": "Need for Speed: Most Wanted (2005)",
+  "steam_appid": null,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by balumn (highball-db#425, 2026-10-09), Apple M4, macOS 26.2, Highball 0.9.35, engine x64-crossover26.3-r9, Wine's own Direct3D (wined3d), rated 5 of 5 after 40 minutes, no Steam app id given. Not verified by the maintainer.",
+  "notes": "Reported perfect on Wine's own Direct3D over a 40-minute session on an M4 with the Wine 11 engine r9. Whether the default DXMT mode also works is not recorded, so the page sets no mode.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

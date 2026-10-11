@@ -1,0 +1,13 @@
+{
+  "id": "nested-lands",
+  "title": "Nested Lands",
+  "steam_appid": 2553040,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by mrgarygary (highball-db#440, 2026-10-10), Apple M5, macOS 26.6.2, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, DXMT, rated 5 of 5 after 56 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT, the default mode, over a 56-minute session on an M5. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

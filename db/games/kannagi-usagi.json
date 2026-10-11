@@ -1,0 +1,19 @@
+{
+  "id": "kannagi-usagi",
+  "title": "巫兎 - KANNAGI USAGI",
+  "steam_appid": 2551500,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#433, 2026-10-10), Apple M1, macOS 27.0.1, Highball 0.10.14, engine x64-sikarugir10.0_6-r24, the environment in D3DMetal mode, rated 4 of 5 after 7 minutes. Not verified by the maintainer.",
+  "notes": "Reported playable on an M1 at about 23 fps, which the reporter still found playable. Other modes were not tried.",
+  "knownIssues": [
+    {
+      "symptom": "About 23 fps on an M1",
+      "cause": "not investigated",
+      "fix": "none known."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

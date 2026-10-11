@@ -1,0 +1,19 @@
+{
+  "id": "voices-of-the-void",
+  "title": "Voices of the Void",
+  "steam_appid": null,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by dee728 (highball-db#439, 2026-10-10), Apple M4, macOS 26.6.2, Highball 0.10.3, engine x64-sikarugir10.0_6-r19, DXMT, rated 4 of 5 after 173 minutes, no Steam app id given. Not verified by the maintainer.",
+  "notes": "Reported playable on DXMT, the default mode, over nearly three hours on an M4. Now and then the game window does not take focus and the game has to be restarted.",
+  "knownIssues": [
+    {
+      "symptom": "Sometimes the game does not take focus and has to be restarted (reported on Highball 0.10.3)",
+      "cause": "not investigated",
+      "fix": "none known."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

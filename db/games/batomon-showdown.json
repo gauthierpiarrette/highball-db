@@ -14,6 +14,6 @@
   "steam_appid": 4557380,
   "status": "community",
   "renderer": "dxmt",
-  "provenance": "Reported by DMonitor (highball-db#191, 2026-09-23), Apple M5, macOS 27.0, DXMT, rated 4 of 5. Not verified by the maintainer.",
-  "notes": "Reported playable on DXMT on an M5, with occasional stuttering in the sound effects as the only complaint. No session length or frame rate was given and nothing was measured here."
+  "provenance": "Reported by DMonitor (highball-db#191, 2026-09-23), Apple M5, macOS 27.0, DXMT, rated 4 of 5. Not verified by the maintainer. Second report by dynreb (highball-db#426, 2026-10-09), Apple M1, macOS 15.7.4, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, mode not stated (the page's DXMT applies unless the environment sets its own), rated 5 of 5 after 88 minutes.",
+  "notes": "Reported playable on DXMT on an M5, with occasional stuttering in the sound effects as the only complaint. No session length or frame rate was given and nothing was measured here. A second player rated it perfect over 88 minutes on an M1 with macOS 15."
 }

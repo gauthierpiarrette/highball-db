@@ -1,0 +1,13 @@
+{
+  "id": "door-kickers",
+  "title": "Door Kickers",
+  "steam_appid": 248610,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by ajaxxxx2019 (highball-db#443, 2026-10-10), Apple M4, macOS 27.0.1, Highball 0.10.14, engine x64-sikarugir10.0_6-r26, mode not stated, rated 5 of 5 after 21 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect over a 21-minute session on an M4. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

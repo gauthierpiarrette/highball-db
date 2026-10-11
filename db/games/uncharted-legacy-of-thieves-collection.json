@@ -5,9 +5,20 @@
   "status": "community",
   "renderer": "d3dmetal",
   "anticheat": null,
-  "provenance": "Reported by Acremis57 (highball-db#103, 2026-09-17), Apple M4 Pro, macOS 27.0 as entered, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, D3DMetal, rated 4 of 5 (playable, minor issues) after 43 minutes. Not verified by the maintainer.",
-  "notes": "Reported playable with minor issues on D3DMetal after a session of 43 minutes; the reporter adds that it needed Direct3D 12, so D3DMetal is the mode, DXMT does not run it. No measurement here yet.",
-  "knownIssues": [],
+  "provenance": "Reported by Acremis57 (highball-db#103, 2026-09-17), Apple M4 Pro, macOS 27.0 as entered, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, D3DMetal, rated 4 of 5 (playable, minor issues) after 43 minutes. Not verified by the maintainer. Second report by hello-al0ne (highball-db#430, 2026-10-10), Apple M4, macOS 27.0.1, Highball 0.10.10, engine x64-crossover26.3-r18, D3DMetal, rated 4 of 5 after 35 minutes.",
+  "notes": "Reported playable with minor issues on D3DMetal after a session of 43 minutes; the reporter adds that it needed Direct3D 12, so D3DMetal is the mode, DXMT does not run it. No measurement here yet. A second player on an M4 with the Wine 11 engine r18 rated it playable with good frame rates. An error report window opens when the game quits, and trees flicker in some scenes.",
+  "knownIssues": [
+    {
+      "symptom": "An error report window opens when the game quits (reported on an M4, engine r18)",
+      "cause": "not investigated",
+      "fix": "close it, it does not affect play."
+    },
+    {
+      "symptom": "Trees flicker in some scenes (reported on an M4, engine r18)",
+      "cause": "not investigated",
+      "fix": "none known yet."
+    }
+  ],
   "launchArgs": null,
   "lastVerified": null
 }

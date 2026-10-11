@@ -1,0 +1,13 @@
+{
+  "id": "neon-abyss",
+  "title": "Neon Abyss",
+  "steam_appid": null,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by kandzsem (highball-db#447, 2026-10-11), Apple M4, macOS 26.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, D3DMetal, frame cap 60, an environment with Epic set up, rated 5 of 5 after 18 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect over an 18-minute session on an M4. Whether the default DXMT mode also works is not recorded, so the page sets no mode.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

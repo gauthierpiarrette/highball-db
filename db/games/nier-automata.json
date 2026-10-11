@@ -2,9 +2,9 @@
   "id": "nier-automata",
   "title": "NieR: Automata",
   "steam_appid": 524220,
-  "status": "reported-upstream",
+  "status": "community",
   "renderer": "dxmt",
-  "provenance": "DXMT changelog v0.41+ (github.com/3Shain/dxmt/releases)",
-  "notes": "first DXMT milestone title; runs decently",
+  "provenance": "DXMT changelog v0.41+ (github.com/3Shain/dxmt/releases) Reported by flacknabe-cpu (highball-db#423, 2026-10-09), Apple M1 Pro, macOS 26.7, Highball 0.10.14, engine x64-sikarugir10.0_6-r24, mode not stated (the page's DXMT applies unless the environment sets its own), rated 5 of 5 after 16 minutes.",
+  "notes": "first DXMT milestone title; runs decently A player reported it perfect after 16 minutes on an M1 Pro.",
   "lastVerified": null
 }

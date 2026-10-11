@@ -1,0 +1,29 @@
+{
+  "id": "alice-madness-returns",
+  "title": "Alice: Madness Returns",
+  "steam_appid": 19680,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#429, 2026-10-10), Apple M1, macOS 27.0.1, Highball 0.10.14, engine x64-sikarugir10.0_6-r24, the environment in D3DMetal mode, Steam Input on, rated 3 of 5 (playable with workarounds). Not verified by the maintainer.",
+  "notes": "Playable with a controller once three things are handled, by udance4ever's report. The game folder held 4,407 macOS '._' metadata files, and the game only ran after they were deleted. DXSETUP shows errors on the first start only and can be dismissed. Clicking inside the game window zooms it and makes it unplayable until the game restarts. Once in game it ran perfectly. Turn Steam Input on for the controller.",
+  "knownIssues": [
+    {
+      "symptom": "The game fails until thousands of '._' files are deleted from its folder",
+      "cause": "the folder held 4,407 '._' files, the kind macOS writes beside files on drives not formatted for a Mac. Not investigated further",
+      "fix": "delete every file whose name starts with '._' in the game's folder"
+    },
+    {
+      "symptom": "DXSETUP.exe shows errors on the first start",
+      "cause": "the DirectX setup the game runs once",
+      "fix": "dismiss them, they do not come back"
+    },
+    {
+      "symptom": "Clicking in the game window zooms the picture and the game becomes unplayable",
+      "cause": "not investigated",
+      "fix": "do not click in the window, restart the game if it happens"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

@@ -4,8 +4,8 @@
   "steam_appid": 489830,
   "status": "community",
   "renderer": "dxvk",
-  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball. Reported by phmuni (highball-db#122, 2026-09-18 to 2026-09-19): on an Apple M5, macOS 27.0, engine x64-sikarugir10.0_6-r3, Highball 0.9.23, the game crashed right after the Bethesda logo on DXMT and on D3DMetal, then booted and ran well on DXVK, stable with occasional early stutters and no visual defects. Not run here.",
-  "notes": "Use DXVK. One real report on an M5 with macOS 27: DXMT and D3DMetal both crash right after the Bethesda logo, DXVK runs the game well with early stutters that fade as shaders build. Whether DXMT works on other chips is not recorded yet.",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball. Reported by phmuni (highball-db#122, 2026-09-18 to 2026-09-19): on an Apple M5, macOS 27.0, engine x64-sikarugir10.0_6-r3, Highball 0.9.23, the game crashed right after the Bethesda logo on DXMT and on D3DMetal, then booted and ran well on DXVK, stable with occasional early stutters and no visual defects. Not run here. Second report by GCECEditz (highball-db#417, 2026-10-09), Apple M4, macOS 26.6.2, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, mode not stated (the page's DXVK applies unless the environment sets its own), rated 4 of 5 after 42 minutes.",
+  "notes": "Use DXVK. One real report on an M5 with macOS 27: DXMT and D3DMetal both crash right after the Bethesda logo, DXVK runs the game well with early stutters that fade as shaders build. Whether DXMT works on other chips is not recorded yet. A second player on an M4 rated it playable after 42 minutes, with a few dropped frames in the opening cutscene and smooth play after it.",
   "lastVerified": null,
   "knownIssues": [
     {

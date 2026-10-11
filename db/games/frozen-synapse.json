@@ -1,0 +1,19 @@
+{
+  "id": "frozen-synapse",
+  "title": "Frozen Synapse",
+  "steam_appid": 98200,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by dennisstewart (highball#317, 2026-10-11), Apple M2, macOS 26.7.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, the Windows version through Steam, tried on DXMT, DXVK, Wine's own Direct3D and D3DMetal. Not verified by the maintainer.",
+  "notes": "Plays, but the frame rate falls steeply once the shooting starts and particles fly, in every graphics mode the reporter tried, with menus at 60 fps and occasional hitches when scrolling the map. Playable since the game is turn based. The Mac version on Steam is 32-bit and does not run on current macOS, so the Windows version is the one to use.",
+  "knownIssues": [
+    {
+      "symptom": "The frame rate falls steeply when the action starts, in every graphics mode (reported on an M2)",
+      "cause": "not investigated, the same in every mode, so probably not graphics",
+      "fix": "none known yet."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

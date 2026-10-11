@@ -1,0 +1,13 @@
+{
+  "id": "boxes-lost-fragments",
+  "title": "Boxes: Lost Fragments",
+  "steam_appid": null,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#446, 2026-10-11), Apple M1, macOS 27.0.1, Highball 0.10.14, engine x64-sikarugir10.0_6-r24, the environment in D3DMetal mode, rated 5 of 5 after 5 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect through the tutorial on an M1. No measurement here yet.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
