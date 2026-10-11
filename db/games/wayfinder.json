@@ -1,0 +1,21 @@
+{
+  "id": "wayfinder",
+  "title": "Wayfinder",
+  "steam_appid": 1171690,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by AmarokSpiritch (highball#294, 2026-10-08 to 10-11), Apple M4, macOS 27.0.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21. Without a launch option the world stayed invisible on DXVK and DXMT stopped with Unreal's message that DirectX 12 is not supported. With -dx11 the player reports it works like a charm. Not verified by the maintainer.",
+  "notes": "An Unreal game that starts in DirectX 12, which DXMT and DXVK do not have. Highball passes -dx11 at Play so it starts in DirectX 11 and plays.",
+  "knownIssues": [
+    {
+      "symptom": "The world stays invisible, or the game stops saying DirectX 12 is not supported",
+      "cause": "the game starts in DirectX 12, which DXMT and DXVK do not have",
+      "fix": "start it with -dx11, which Highball now passes at Play"
+    }
+  ],
+  "launchArgs": [
+    "-dx11"
+  ],
+  "lastVerified": null
+}
