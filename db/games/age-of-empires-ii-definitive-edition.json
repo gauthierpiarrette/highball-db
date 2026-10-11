@@ -12,6 +12,11 @@
       "symptom": "Crashes before the splash screen on the Wine 10 engine",
       "cause": "not measured",
       "fix": "Play the native Mac version, or use the Wine 11 engine (Advanced, Engine on the environment's page), where it ran."
+    },
+    {
+      "symptom": "Memory use keeps growing during play (reported on an M3 Pro, Wine 11 engine r19, highball-db#400)",
+      "cause": "not investigated. A Sikarugir report describes the same (Sikarugir-App/Sikarugir#233)",
+      "fix": "none known yet."
     }
   ],
   "launchArgs": null,
