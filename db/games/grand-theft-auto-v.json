@@ -52,9 +52,9 @@
       "fix": "none. Story mode only."
     },
     {
-      "symptom": "A DualSense controller does not bind in the game while it works in other games in the same environment (reported on an M1, highball-db#72)",
-      "cause": "not investigated. The game reads controllers through XInput and DirectInput, and the only HID error in the reporter's log names an Apple device (vendor 004c), not the DualSense",
-      "fix": "start the game from Steam with Steam Input on for it. The reporter's DualSense works that way, in the default environment, with the game added to Steam as a non-Steam game and -nobattleye in its launch options (highball-db#72, 2026-10-07)"
+      "symptom": "A DualSense or other PlayStation controller does not work in the game, while it works in other games in the same environment (reported on an M1, highball-db#72, highball-db#415)",
+      "cause": "not investigated. The game reads controllers through XInput and DirectInput. The player traced it to the DirectInput side, since an 8BitDo pad in XInput mode works (highball-db#415), and the only HID error in the first log names an Apple device (vendor 004c), not the DualSense",
+      "fix": "use an Xbox controller or a pad in XInput mode. For the Steam copy, starting the game from Steam with Steam Input on also works, with the game added to Steam as a non-Steam game and -nobattleye in its launch options (highball-db#72, 2026-10-07)"
     },
     {
       "symptom": "The game starts at 800x600 in a window with low settings, or goes back to it after you set a resolution",
@@ -62,9 +62,14 @@
       "fix": "Set the resolution and quality once in the game's Graphics settings, they stay from then on. Don't copy settings.xml from another tool, or set the resolution again after doing it. Presenting an AMD card through DXMT_CONFIG made it worse in a test: the resolution list then held only the window size."
     },
     {
-      "symptom": "A DualSense or other PlayStation controller does not work in the game's menus",
-      "cause": "Not diagnosed. The player traced it to the controller's DirectInput side, since an 8BitDo pad in XInput mode works (highball-db#415)",
-      "fix": "Use an Xbox controller or a pad in XInput mode"
+      "symptom": "After a graphics change that restarts the renderer in game (Texture Quality, or Screen Type set to Fullscreen), only the top-left quarter of the picture shows, Retina on or off",
+      "cause": "not investigated. Reported by a player on Discord on an M1 MacBook Air (2026-10-11)",
+      "fix": "restart the game, which then draws correctly with the same settings, or change those settings with the game closed in Documents/Rockstar Games/GTA V/settings.xml"
+    },
+    {
+      "symptom": "The first load into story mode stalls for many minutes (about 18 in one report) while the game window is not in front",
+      "cause": "the game pauses itself while it does not have focus (Pause Game On Focus Loss, PauseOnFocusLoss in settings.xml). Reported by a player on Discord on an M1 MacBook Air (2026-10-11)",
+      "fix": "keep the game in front during the load, or turn Pause Game On Focus Loss off"
     }
   ],
   "launchArgs": [
