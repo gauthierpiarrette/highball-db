@@ -15,7 +15,7 @@
     },
     {
       "symptom": "Sound and picture stutter together in game",
-      "cause": "Not diagnosed. Microsoft's XAudio 2.7 (the Linux fix for this game's CRI audio) did not change it here (highball-db#345, 0.10.9). Sound and picture stuttering together points at the CPU side of a 2012 32-bit game under Rosetta rather than at audio",
+      "cause": "Not diagnosed. Microsoft's XAudio 2.7 (the Linux fix for this game's CRI audio) did not change it here (highball-db#345, 0.10.9). Sound and picture stuttering together points at the CPU side of a 2012 32-bit game under Rosetta rather than at audio. Highball's limiter in the 0.10.15 engines did not change it either, so it is not clipping (highball-db#345, 2026-10-12)",
       "fix": "None known yet. DXVK async shader compilation in the environment's Graphics settings removes only the stutter of shaders compiling for the first time"
     },
     {

@@ -1,0 +1,13 @@
+{
+  "id": "order-of-the-sinking-star",
+  "title": "Order of the Sinking Star",
+  "steam_appid": 499170,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by dannycoates (highball-db#458, 2026-10-12), Apple M5, macOS 27.0.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, the game on D3DMetal in an environment on DXMT, recipes steam and vcrun2022, rated 5 of 5 after 7 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M5 in a short session, with the game set to D3DMetal in an environment on DXMT.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

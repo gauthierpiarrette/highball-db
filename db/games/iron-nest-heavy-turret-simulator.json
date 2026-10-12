@@ -1,0 +1,13 @@
+{
+  "id": "iron-nest-heavy-turret-simulator",
+  "title": "IRON NEST: Heavy Turret Simulator",
+  "steam_appid": 2950790,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by sudo-slingshot (highball-db#456, 2026-10-11), Apple M1 Pro, macOS 27.0.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, the environment on DXVK, recipes steam and vcrun2022, rated 5 of 5 after 64 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect over an hour on an M1 Pro, with the environment on DXVK. The free demo has its own page and was reported perfect on a base M1.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
