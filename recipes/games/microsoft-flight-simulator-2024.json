@@ -1,0 +1,62 @@
+{
+  "id": "microsoft-flight-simulator-2024",
+  "kind": "game",
+  "title": "Microsoft Flight Simulator 2024",
+  "requires": [
+    "steam"
+  ],
+  "renderer": "vkd3d",
+  "engine": "arm64-wine11.18-r1",
+  "steps": [
+    {
+      "type": "renderer",
+      "renderer": "vkd3d"
+    },
+    {
+      "type": "environment",
+      "name": "VKD3D_SHADER_MODEL",
+      "value": "6_7"
+    },
+    {
+      "type": "environment",
+      "name": "VKD3D_FEATURE_LEVEL",
+      "value": "12_1"
+    },
+    {
+      "type": "environment",
+      "name": "VKD3D_CONFIG",
+      "value": "force_native_fp16"
+    },
+    {
+      "type": "environment",
+      "name": "HB_MVK_TEXTURE_2D_AS_ARRAY",
+      "value": "1"
+    },
+    {
+      "type": "environment",
+      "name": "DXVK_CONFIG",
+      "value": "dxgi.maxVideoMemoryBudget=${memoryMB*0.375}"
+    },
+    {
+      "type": "dlloverride",
+      "value": "gameoverlayrenderer64,gameoverlayrenderer=d"
+    },
+    {
+      "type": "note",
+      "text": "Microsoft Flight Simulator 2024 runs on Highball's native arm64 engine, which translates its DirectX 12 through vkd3d-proton and MoltenVK. The game asks for Shader Model 6.7, which this route reports. Steam has to be online, because the game signs in to its servers through Steam. The first start asks for your Microsoft account inside the game, and later starts remember it. Every start then prepares shaders for 6 to 7 minutes behind a still window, and the start screen comes about 9 minutes after Play. The game is told it has three eighths of this Mac's memory as video memory (12 GB on a 32 GB Mac). The Steam overlay is off, as in every flight measured so far."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "The window stays white, then black, for several minutes after Play",
+      "cause": "the game prepares its shaders before it draws anything, and its intro videos do not play on this route yet",
+      "fix": "none yet, wait for the start screen"
+    },
+    {
+      "symptom": "'Authentication in progress' never ends",
+      "cause": "Steam is offline, and the game signs in to its servers through Steam",
+      "fix": "put Steam online and start the game again"
+    }
+  ],
+  "lastVerified": null
+}
