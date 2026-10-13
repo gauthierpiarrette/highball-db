@@ -5,7 +5,7 @@
   "renderer": null,
   "anticheat": null,
   "provenance": "Reported by Sylvia on Highball's Discord (2026-10-10), an M5 MacBook Pro with 16 GB, engine x64-sikarugir10.0_6-r21, the hair glitch seen with DXMT, DXVK and D3DMetal alike and gone with GPU skinning off. Not verified by the maintainer.",
-  "notes": "A Unity game its developer gives away on his own site, not on Steam. Characters' hair stretches into huge black polygons or disappears when the camera moves, in every graphics mode, and turning off Unity's GPU skinning fixes it.",
+  "notes": "A Unity game its developer gives away on his own site, not on Steam. Characters' hair stretches into huge black polygons or disappears when the camera moves, in every graphics mode, and turning off Unity's GPU skinning fixes it. Add the line disable-gpu-skinning=1 to boot.config in the game's YandereSimulator_Data folder, add -disable-gpu-skinning to the game's launch arguments in Highball, and clear the game's saved data in AppData/LocalLow/YandereDev/YandereSimulator, as the player did.",
   "knownIssues": [
     {
       "symptom": "Hair stretches into huge black polygons or disappears when the camera moves (Ryoba in the tutorial), with DXMT, DXVK and D3DMetal",
