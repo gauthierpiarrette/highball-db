@@ -1,0 +1,24 @@
+{
+  "id": "steep",
+  "title": "Steep",
+  "steam_appid": 460920,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by Sean-Shmulevich (highball-db#465, 2026-10-12), Apple M2 Pro with 16 GB, macOS 26.3.1, a Highball CLI built from source at gin 0e0eb5d, engine x64-sikarugir10.0_6-r21, D3DMetal with d3d10, d3d10_1 and d3d10core disabled, msync, AVX advertised, 1280x720 capped at 30 fps, rated 5 of 5 after a short session. steep.exe was started directly, so the Steam and Ubisoft sign-in path was not tested. Not verified by the maintainer.",
+  "notes": "Reported working on an M2 Pro with D3DMetal once DirectX 10 is turned off for it. In D3DMetal mode a 64-bit game that loads DirectX 10 gets DXMT's d3d10core, which asks D3DMetal's Direct3D 11 for a function it does not have, and Steep stopped right at start with 'unimplemented function D3D11.DLL.D3D11CoreCreateDevice'. Setting the DLL overrides to d3d10,d3d10_1,d3d10core=d fixed it. DXMT refused the game's 8-sample texture on that Mac, and DXVK started but drew stretched menus and ran slowly. Long sessions and online play are untested.",
+  "knownIssues": [
+    {
+      "symptom": "In D3DMetal mode the game stops at start with 'Call to unimplemented function D3D11.DLL.D3D11CoreCreateDevice, aborting'",
+      "cause": "the game loads DirectX 10, and in D3DMetal mode the 64-bit d3d10core comes from DXMT, which needs a Direct3D 11 function D3DMetal does not export",
+      "fix": "set the environment's DLL overrides (Full page, Advanced) to d3d10,d3d10_1,d3d10core=d and keep D3DMetal"
+    },
+    {
+      "symptom": "DXMT refuses an 8-sample texture and the game does not start",
+      "cause": "the Mac's GPU offers 1, 2 or 4 samples, not 8",
+      "fix": "use D3DMetal with DirectX 10 turned off as above"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
