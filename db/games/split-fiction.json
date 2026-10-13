@@ -1,0 +1,19 @@
+{
+  "id": "split-fiction",
+  "title": "Split Fiction",
+  "steam_appid": 2001120,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by MagnusPladsen (highball-db#476, 2026-10-13), Apple M3 Max, rated 4 of 5, engine and Highball version not given, played in split screen on the high preset. Not verified by the maintainer.",
+  "notes": "Reported playable on an M3 Max in split screen on the high preset at what felt like a steady 60 fps with minor drops, with some graphical glitches that did not get in the way.",
+  "knownIssues": [
+    {
+      "symptom": "Some graphical glitches, not described yet",
+      "cause": "not diagnosed",
+      "fix": "none needed so far"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
