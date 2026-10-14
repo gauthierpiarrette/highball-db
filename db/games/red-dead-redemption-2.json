@@ -42,12 +42,17 @@
     {
       "symptom": "The Rockstar launcher reports error 113, 'Steam failed to initialize. Please verify that the Steam Client is running', when Steam starts the game (highball-db#272, a Discord report on an M2, both on engine r7, Highball 0.10.2, macOS 27).",
       "cause": "found by a player (crêpe on Discord, 2026-10-13). The environment's user registry had HKCU\\Software\\Wow6432Node keys, left by an early Wine 11 engine's first boot when it was moved off the Wine 10 engine (r7, 2026-09-29). Wine then sends a 32-bit lookup of HKCU\\Software into that subtree, which Windows never does, so the launcher's lookup of Steam's keys under HKCU\\Software\\Valve found nothing and it decided Steam was not running. Reproduced on engines r26 and r23. The M4 test environments never had the subtree, which is why it did not reproduce there",
-      "fix": "Highball links the key itself from the version after 0.10.15 (gin fcee4f6). On the first launch after the environment stops it adds a registry link from HKCU\\Software\\Wow6432Node\\Valve to HKCU\\Software\\Valve, the player's own fix, which they confirmed gets the launcher to its sign-in window"
+      "fix": "Highball 0.10.16 links the key itself (gin fcee4f6). On the first launch after the environment stops it adds a registry link from HKCU\\Software\\Wow6432Node\\Valve to HKCU\\Software\\Valve, the player's own fix, which they confirmed gets the launcher to its sign-in window"
     },
     {
       "symptom": "Fullscreen at 1920x1080 shows the picture misplaced and cut off, with black where the rest of the menu should be; windowed borderless at 1080p draws correctly but smaller than a Retina display (highball#261, an M5 with Retina resolution at 100% on)",
       "cause": "with Retina resolution on, Wine 11 engines before r21 reported the screen twice its size through one of the two ways a game can ask (7680x4320 against 3840x2160 on an M4), and a game that sizes its fullscreen picture from that number crops it (highball#261)",
       "fix": "engine x64-crossover26.3-r21 (Highball 0.10.11 and later) reports the real size: pick it in the environment's Advanced settings, keep Retina resolution and Emulate display mode changes on. 1600x900 fullscreen fits meanwhile. Waiting on the reporter's confirmation (highball#261)"
+    },
+    {
+      "symptom": "The game offers only three small resolutions, well below an external ultrawide's (3440x1440) and below the MacBook's own, and its fullscreen picture runs past the edges of the screen, so the menus cannot be reached (highball-db#272, a MacBook Air M5 15-inch with an ultrawide, engine r23, DXVK, 2026-10-13).",
+      "cause": "not measured. Games list the modes of the main display, so a MacBook's own screen can be what the game sees when an external one is attached.",
+      "fix": "the reporter's workaround: open the game's system.xml (in its Rockstar Games folder on the environment's drive, Show the Windows drive) in TextEdit, set the screen width and height to the resolution macOS shows for the display (1440x900 on their MacBook Air), use windowed borderless, and hide the menu bar and the Dock. Making the external display the main one (System Settings, Displays, Arrange, drag the menu bar onto it) before starting the game may also give the game its modes."
     }
   ],
   "verified": {
