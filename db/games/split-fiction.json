@@ -9,7 +9,7 @@
   "notes": "Reported playable on an M3 Max in split screen on the high preset at what felt like a steady 60 fps with minor drops, with some graphical glitches that did not get in the way.",
   "knownIssues": [
     {
-      "symptom": "Some graphical glitches, not described yet",
+      "symptom": "Some graphical glitches here and there, like the artifacts other players have posted for the game, not game breaking (highball-db#476)",
       "cause": "not diagnosed",
       "fix": "none needed so far"
     }
