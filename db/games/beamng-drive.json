@@ -4,8 +4,8 @@
   "steam_appid": 284160,
   "status": "community",
   "renderer": "d3dmetal",
-  "provenance": "community report with logs and a screenshot (highball-db#5, Michael-Liendo), unverified by Highball. Second report by imluculent-eng (highball-db#329, 2026-10-05), Apple M5, macOS 26.6.2, Highball 0.10.3, engine x64-sikarugir10.0_6-r19, DXMT, rated 4 of 5 after 7 minutes: the laptop heats up at once, and generating a seed for story mode fails. Third report by Random-Storm (highball-db#378, 2026-10-07), Apple A18 Pro (MacBook Neo), macOS 27.2, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, DXMT, frame cap 60, rated 4 of 5 after 7 minutes, some stuttering (about 25 to 30 fps on low settings, he said on Discord).",
-  "notes": "Reported playable at 40-60 fps on an Apple M4 with the bottle set to D3DMetal, installed through Steam inside the bottle and launched from Highball. No workarounds, launch options or DLL overrides were needed. BeamNG probes for Direct3D 12, finds no usable device and falls back to Direct3D 11 on its own, so it does not depend on the D3D12-only path. Reported on Highball 0.7.14 with game Alpha v0.39.4, windowed at 1470x934, 6 GB reported to the game as video memory. DXMT is untested on this hardware: the earlier DXMT note came from the DXMT changelog rather than a run. A second, short report on an M5 with DXMT rates it playable, with the laptop heating up at once and story mode unable to generate a seed.",
+  "provenance": "community report with logs and a screenshot (highball-db#5, Michael-Liendo), unverified by Highball. Second report by imluculent-eng (highball-db#329, 2026-10-05), Apple M5, macOS 26.6.2, Highball 0.10.3, engine x64-sikarugir10.0_6-r19, DXMT, rated 4 of 5 after 7 minutes: the laptop heats up at once, and generating a seed for story mode fails. Third report by Random-Storm (highball-db#378, 2026-10-07), Apple A18 Pro (MacBook Neo), macOS 27.2, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, DXMT, frame cap 60, rated 4 of 5 after 7 minutes, some stuttering (about 25 to 30 fps on low settings, he said on Discord). Reported by DJTheron (highball-db#474, 2026-10-13), Apple M3 MacBook Air, macOS 27.0.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, D3DMetal, rated 4 of 5 after 4 minutes. The terrain did not load on DirectX 12 and loaded with -gfx dx11. Reported by tajrk800 (highball-db#475, 2026-10-13), Apple M5, macOS 26.6, Highball 0.10.15, engine x64-sikarugir10.0_6-r24, DXMT, rated 3 of 5 after 7 minutes, with the frame rate dropping while new buildings load and the game running in slow motion at times.",
+  "notes": "Reported playable at 40-60 fps on an Apple M4 with the bottle set to D3DMetal, installed through Steam inside the bottle and launched from Highball. No workarounds, launch options or DLL overrides were needed. BeamNG probes for Direct3D 12, finds no usable device and falls back to Direct3D 11 on its own, so it does not depend on the D3D12-only path. Reported on Highball 0.7.14 with game Alpha v0.39.4, windowed at 1470x934, 6 GB reported to the game as video memory. DXMT is untested on this hardware: the earlier DXMT note came from the DXMT changelog rather than a run. A second, short report on an M5 with DXMT rates it playable, with the laptop heating up at once and story mode unable to generate a seed. On D3DMetal the game now picks DirectX 12, where the terrain does not load (highball-db#474), so Play passes -gfx dx11 to keep it on DirectX 11. Frame spikes come from the CPU side under Rosetta rather than the GPU.",
   "lastVerified": null,
   "knownIssues": [
     {
@@ -13,5 +13,9 @@
       "cause": "reported once (DXMT, M5, engine r19), not diagnosed",
       "fix": "none known yet (highball-db#329)"
     }
+  ],
+  "launchArgs": [
+    "-gfx",
+    "dx11"
   ]
 }

@@ -1,0 +1,13 @@
+{
+  "id": "chained-together",
+  "title": "Chained Together",
+  "steam_appid": 2567870,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by hunzalaqamar (highball-db#471, 2026-10-13), Apple M4 Pro, macOS 26.6.2, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, rated 5 of 5 after 6 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT, the default mode, on an M4 Pro in a short session.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

@@ -1,0 +1,19 @@
+{
+  "id": "brazilian-drug-dealer-3",
+  "title": "BRAZILIAN DRUG DEALER 3: I OPENED A PORTAL TO HELL IN THE FAVELA TRYING TO REVIVE MIT AIA I NEED TO CLOSE IT",
+  "steam_appid": 3191050,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by DragonDough (highball-db#478, 2026-10-13), Apple M5, macOS 27.0.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, recipes steam and vcrun2022, rated 4 of 5 after 1 minute. Not verified by the maintainer.",
+  "notes": "Playable on DXMT on the default engine; the mouse cursor stays visible in the game.",
+  "knownIssues": [
+    {
+      "symptom": "The mouse cursor stays visible",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

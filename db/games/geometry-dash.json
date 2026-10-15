@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by cshan5389-droid (highball-db#403, 2026-10-08), Apple M2, macOS 26.6.2, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, the environment in DXMT mode, version 2.2081, rated 5 of 5 after 2 minutes with a low frame rate. Not verified by the maintainer.",
-  "notes": "This game has a native macOS version on Steam, so the Mac Steam app runs it directly without Highball. That is the better way to play it. The Windows build was reported working through Highball over a 2-minute session, with a low frame rate. It draws with OpenGL, which Highball's graphics modes don't change, so the page sets no mode.",
+  "provenance": "Reported by cshan5389-droid (highball-db#403, 2026-10-08), Apple M2, macOS 26.6.2, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, the environment in DXMT mode, version 2.2081, rated 5 of 5 after 2 minutes with a low frame rate. Not verified by the maintainer. Reported by khoitruongsg-boop (highball-db#470, 2026-10-13), Apple M2, macOS 27.0, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, rated 5 of 5 after 123 minutes.",
+  "notes": "This game has a native macOS version on Steam, so the Mac Steam app runs it directly without Highball. That is the better way to play it. The Windows build was reported working through Highball over a 2-minute session, with a low frame rate. It draws with OpenGL, which Highball's graphics modes don't change, so the page sets no mode. A second player rates it perfect after two hours on an M2.",
   "knownIssues": [
     {
       "symptom": "Low frame rate (reported on an M2)",

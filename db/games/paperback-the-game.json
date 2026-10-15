@@ -6,12 +6,17 @@
   "renderer": "dxmt",
   "anticheat": null,
   "provenance": "Reported not launching by udance4ever (highball-db#349, 2026-10-06), Apple M1, macOS 27.0.1, Highball 0.10.9, engine x64-sikarugir10.0_6-r21, every graphics mode. Reproduced here on an M4 (macOS 27.0, r21, 2026-10-06), both the 32-bit Paperback.exe that Steam starts and the 64-bit Paperback64.exe beside it.",
-  "notes": "Does not start. The game is built on the Loom engine (SDL and OpenGL, 2017), so the graphics mode setting does not apply to it. It creates an old-style OpenGL context, which macOS gives as OpenGL 2.1, then loads glClearDepthf. Wine refuses that function there, since macOS's 2.1 context does not list GL_ARB_ES2_compatibility, and the game calls the empty pointer: a page fault at address 0 a second after start and Wine's crash dialog. Windows drivers list that extension in every context, which is why it runs there. No setting gets past it on today's engines. The Wine 11 engine x64-crossover26.3-r21 answers that extension's five calls in old-style contexts (engine patch 0021), and on an M4 both of the game's builds reach the title menu on it, installed from its manifest into an empty home (2026-10-06). r21 ships with Highball 0.10.11. The recipe that offers it is in the database from 2026-10-06 and reaches the app with the version after 0.10.11, since the database is bundled with the app. Until then, pick x64-crossover26.3-r21 by hand on the environment's Full page, under Advanced, Engine, or make a new environment on it for the game.",
+  "notes": "Plays on the Wine 11 engine r21 or later, which Play offers by itself since Highball 0.10.12. The game is built on the Loom engine (SDL and OpenGL, 2017), so the graphics mode setting does not apply to it. On older engines it crashed a second after start, because macOS's old-style OpenGL 2.1 context lacks a function the game loads (glClearDepthf), and engine patch 0021 in r21 answers it. The game also mixes its music louder than full scale. Windows' audio engine turns such peaks down before the speakers, while Wine on a Mac clipped them, which made loud parts sound like a bad bitrate. The Wine 11 engines r22 and r23 (Highball 0.10.15) add a limiter that does what Windows does. On r23 the reporter still hears the music as too loud (highball-db#349), not yet compared with Windows.",
   "knownIssues": [
     {
       "symptom": "Wine's Program Error dialog (winedbg) right at launch, page fault on read access at address 0, on every graphics mode",
       "cause": "the game calls glClearDepthf, which Wine's opengl32 withholds in macOS's OpenGL 2.1 context (needs GL_ARB_ES2_compatibility or OpenGL 4.1); measured with WINEDEBUG=warn+opengl,+wgl on an M4",
       "fix": "engine x64-crossover26.3-r21 (Wine 11, patch 0021), shipped in Highball 0.10.11; reaches the title menu on an M4; confirmed by the reporter on an M1 (highball-db#349). Highball 0.10.12 and later offer r21 on Play"
+    },
+    {
+      "symptom": "Loud parts of the music sound harsh, like a bad bitrate",
+      "cause": "The game mixes its music above full scale (the title music goes over in 25 of every 30 seconds, measured on an M4). Windows' audio engine limits such peaks, and Wine on a Mac clipped them",
+      "fix": "The Wine 11 engine r23, or r22 for D3DMetal 4, carries Highball's limiter from Highball 0.10.15. Pick it on the environment's Full page under Advanced, Engine. On r23 the reporter still hears the music as too loud (highball-db#349), not compared with Windows yet"
     }
   ],
   "launchArgs": null,

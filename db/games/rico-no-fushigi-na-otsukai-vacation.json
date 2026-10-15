@@ -1,0 +1,18 @@
+{
+  "id": "rico-no-fushigi-na-otsukai-vacation",
+  "title": "リコの不思議なお使い ばけーしょん！",
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by FloraKira (highball-db#462, 2026-10-12), Apple M5 Pro, macOS 27.0.1, Highball 0.10.15, engine x64-crossover26.3-r23, the environment on DXMT, rated 3 of 5 after 6 minutes, started from its Game.exe rather than a store. Not verified by the maintainer.",
+  "notes": "An NW.js game. A translation tool that runs it on NW.js 0.48.4 (Chromium 85) does not work in Highball. Without the tool, and with the game's NW.js runtime replaced by 0.83.0 (Chromium 120), the player reports it running perfectly.",
+  "knownIssues": [
+    {
+      "symptom": "The game does not run through a translation tool built on NW.js 0.48.4 (Chromium 85)",
+      "cause": "Not diagnosed",
+      "fix": "Run it without the tool on a newer NW.js runtime, 0.83.0 (Chromium 120) in this report"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

@@ -1,0 +1,19 @@
+{
+  "id": "onimusha-way-of-the-sword-demo",
+  "title": "Onimusha: Way of the Sword Demo",
+  "steam_appid": 3974650,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by flacknabe-cpu (highball-db#450, 2026-10-11), Apple M1 Pro, macOS 26.7, Highball 0.10.14, engine x64-sikarugir10.0_6-r24, the game on D3DMetal in a DXMT environment, 60 fps cap, rated 3 of 5 after 19 minutes, the game's benchmark at 11341 points and 32 fps on average with a modified D3DMetal. Not verified by the maintainer.",
+  "notes": "Capcom's RE Engine, DirectX 12. On an M1 Pro it stops with an unsupported graphics card error, because D3DMetal answers no to the game's check for 64-bit atomics on descriptor heap resources (D3D12 OPTIONS11), the same check that blocks Kunitsu-Gami. A player got it running, through its benchmark at 32 fps, by patching D3DMetal itself so the check says yes. Highball cannot ship a modified D3DMetal, so out of the box it does not start on an M1. On an M4 D3DMetal 3 already answers yes (measured here 2026-10-14 with a probe). Highball's Wine 11 engines r24 and r25 (0.10.16) can answer yes for a game whose environment sets HB_TSSHIM_ATOMIC64=1, not yet tried with this game. PRAGMATA SKETCHBOOK's demo stops at the same check and ran with the same D3DMetal patch (highball-db#485).",
+  "knownIssues": [
+    {
+      "symptom": "Unsupported graphics card error at start, then the game quits (M1 Pro)",
+      "cause": "D3DMetal reports AtomicInt64OnDescriptorHeapResourceSupported as false, and the game requires it",
+      "fix": "none confirmed in Highball yet. Candidate: a Wine 11 engine r24 or r25 environment on D3DMetal with HB_TSSHIM_ATOMIC64=1 in its variables, which makes Highball's shim answer yes (Highball 0.10.16)"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

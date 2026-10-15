@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": "d3dmetal",
   "anticheat": null,
-  "provenance": "Reported by dylanhuff (highball-db#290, 2026-10-03), Apple M4 Pro, macOS 26.6.2, Highball 0.10.3, engine x64-crossover26.3-r15 (the Wine 11 engine), D3DMetal as the environment's mode with AVX advertised and Retina pixels at 100%, recipes steam and vcrun2022, rated 5 of 5 after 13 minutes. Not verified by the maintainer.",
-  "notes": "Reported perfect on D3DMetal on the Wine 11 engine r15 on an M4 Pro. Two of the reporter's settings match what the game's own Steam page asks for, DirectX 12 and a processor with AVX. D3DMetal is the DirectX 12 route, and AVX advertised lets the game see AVX. Whether it starts without AVX advertised, in another graphics mode, or on the default engine was not reported, no frame rate was given, and nothing was measured here.",
+  "provenance": "Reported by dylanhuff (highball-db#290, 2026-10-03), Apple M4 Pro, macOS 26.6.2, Highball 0.10.3, engine x64-crossover26.3-r15 (the Wine 11 engine), D3DMetal as the environment's mode with AVX advertised and Retina pixels at 100%, recipes steam and vcrun2022, rated 5 of 5 after 13 minutes. Not verified by the maintainer. Reported by moosenter (highball-db#461, 2026-10-12), Apple M2, macOS 26.2, Highball 0.10.10, engine x64-crossover26.3-r19, D3DMetal with sync off and AVX advertised, recipes steam and vcrun2022, rated 4 of 5, playable with minor issues not described, after 95 minutes.",
+  "notes": "Reported perfect on D3DMetal on the Wine 11 engine r15 on an M4 Pro. Two of the reporter's settings match what the game's own Steam page asks for, DirectX 12 and a processor with AVX. D3DMetal is the DirectX 12 route, and AVX advertised lets the game see AVX. Whether it starts without AVX advertised, in another graphics mode, or on the default engine was not reported, no frame rate was given, and nothing was measured here. A second player rates it playable with minor issues they did not describe after 95 minutes on an M2, also on D3DMetal on the Wine 11 engine with AVX advertised.",
   "knownIssues": [],
   "launchArgs": null,
   "lastVerified": null

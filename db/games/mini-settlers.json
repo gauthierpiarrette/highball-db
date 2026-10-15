@@ -1,0 +1,13 @@
+{
+  "id": "mini-settlers",
+  "title": "Mini Settlers",
+  "steam_appid": 2521630,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by sseaan (highball-db#457, 2026-10-12), Apple M5, macOS 27.0.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, the environment on DXMT, rated 5 of 5 after 21 minutes. The report names no store or app id, and the id here is the full game's on Steam. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT, the default mode, on an M5 over a 21-minute session.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

@@ -1,0 +1,19 @@
+{
+  "id": "raft",
+  "title": "Raft",
+  "steam_appid": 648800,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Red-Pathfinder (highball-db#468, 2026-10-13), Apple M5, macOS 27.0.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, rated 3 of 5 after 6 minutes. Not verified by the maintainer.",
+  "notes": "Reported playable on an M5 on DXMT. Playing online with Windows players worked only after installing the game's 1.09_precrossplayupdate branch from its Steam properties and turning off Limit IP Address Tracking in the Mac's Wi-Fi settings.",
+  "knownIssues": [
+    {
+      "symptom": "Multiplayer with Windows players does not connect",
+      "cause": "not diagnosed",
+      "fix": "in Steam choose the game's 1.09_precrossplayupdate branch under Properties, Betas, and turn off Limit IP Address Tracking in the Mac's Wi-Fi settings, as the player did"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

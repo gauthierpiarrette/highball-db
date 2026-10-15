@@ -1,0 +1,17 @@
+{
+  "id": "lego-star-wars-the-force-awakens",
+  "title": "LEGO Star Wars: The Force Awakens",
+  "steam_appid": 438640,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Steam's app data for 438640 (checked 2026-10-12 through api.steamcmd.net) lists Mac depots and a Mac launch entry with no 64-bit mark, and its store page names Windows only. Two native reports on macgamingdb.app play the Mac build on Apple silicon, an M2 Pro and an M4 at a median of about 50 fps, which a 32-bit build could not do. udance4ever's Steam for Mac offers Install for it (highball#310). The Windows version has no report in Highball yet.",
+  "notes": "Feral's Mac port runs on Apple silicon, and Steam for Mac installs it with the same Steam purchase, though the store page names Windows only and Steam's data never marks the build as 64-bit. Highball offers that Mac version. The Windows version has no report here yet.",
+  "nativeMac": {
+    "available": true,
+    "where": "Steam"
+  },
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

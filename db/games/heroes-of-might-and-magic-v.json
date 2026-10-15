@@ -1,0 +1,18 @@
+{
+  "id": "heroes-of-might-and-magic-v",
+  "title": "Heroes of Might and Magic V",
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by thomaskuncewicz (highball-db#473, 2026-10-13), the GOG edition (H5_Game.exe), Apple M1 Max, macOS 14.5, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXVK with async shader compilation, rated 4 of 5 after 3 minutes. Not verified by the maintainer.",
+  "notes": "Reported playable on an M1 Max with DXVK, with a one second frame drop at most about once a minute on busy scenes. To get a window instead of fullscreen, start the game once on WineD3D so it writes its profile, then set gfx_fullscreen to 0 in profiles, default_profile, user_a2.cfg and switch back to DXVK.",
+  "knownIssues": [
+    {
+      "symptom": "Occasional one second frame drop on busy scenes, at most about once a minute",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

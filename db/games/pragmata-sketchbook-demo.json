@@ -3,14 +3,21 @@
   "title": "PRAGMATA Sketchbook (Demo)",
   "steam_appid": 4003800,
   "status": "community",
-  "renderer": null,
-  "provenance": "user report on Highball (highball-db#1, OdynOOb) — Apple M4, macOS 15.7.3, wine-10.0 Sikarugir r6",
-  "notes": "Unplayable on the current engine. DX12-only (RE Engine): dxmt is correctly rejected (0x80004002 — it translates D3D11); d3dmetal crashes at thread init even with CrashReport.exe bypassed. Retest when the engine moves (Wine 11 bump / D3DMetal 4).",
+  "renderer": "d3dmetal",
+  "provenance": "user report on Highball (highball-db#1, OdynOOb) — Apple M4, macOS 15.7.3, wine-10.0 Sikarugir r6 flacknabe-cpu (highball-db#485, 2026-10-14), Apple M1 Pro 16 GB, macOS 26.7, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, D3DMetal 3 with a modified D3DMetal, DXVK environment, Metal HUD, 60 fps cap, recipes steam and vcrun2022, rated 3 of 5 after 12 minutes, gameplay and combat at 20 to 60 fps. Not verified by the maintainer.",
+  "notes": "Capcom's RE Engine, DirectX 12 only, so it needs D3DMetal (DXMT translates Direct3D 11 and is rightly refused). On an M1 Pro the game stops at its graphics check because D3DMetal answers no to 64-bit atomics on descriptor heap resources (D3D12 OPTIONS11), the same check as the Onimusha: Way of the Sword demo and Kunitsu-Gami. A player patched that answer inside D3DMetal and reached gameplay and combat at 20 to 60 fps, which says the game does not need the feature to draw. Highball cannot ship a modified D3DMetal. On an M4 D3DMetal 3 already answers yes (measured here 2026-10-14 with a probe), so newer chips may pass the check as they are. Highball's Wine 11 engines r24 and r25 (0.10.16) can answer yes for a game whose environment sets HB_TSSHIM_ATOMIC64=1, not yet tried with this game. An earlier report (M4, macOS 15.7, engine r6) crashed at thread start on D3DMetal; it predates every current engine.",
   "lastVerified": null,
   "rendererResults": {
     "d3dmetal": {
       "verdict": "fails",
       "detail": "crashes at thread init"
     }
-  }
+  },
+  "knownIssues": [
+    {
+      "symptom": "Unsupported graphics card error at start, then the game quits (M1 Pro)",
+      "cause": "D3DMetal reports AtomicInt64OnDescriptorHeapResourceSupported as false on M1 chips, and RE Engine requires it",
+      "fix": "none confirmed in Highball yet. Candidate: a Wine 11 engine r24 or r25 environment on D3DMetal with HB_TSSHIM_ATOMIC64=1 in its variables, which makes Highball's shim answer yes (Highball 0.10.16)"
+    }
+  ]
 }
