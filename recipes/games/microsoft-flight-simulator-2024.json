@@ -1,0 +1,67 @@
+{
+  "id": "microsoft-flight-simulator-2024",
+  "kind": "game",
+  "title": "Microsoft Flight Simulator 2024",
+  "requires": [
+    "steam"
+  ],
+  "renderer": "vkd3d",
+  "engine": "arm64-wine11.18-r1",
+  "steps": [
+    {
+      "type": "renderer",
+      "renderer": "vkd3d"
+    },
+    {
+      "type": "environment",
+      "name": "VKD3D_SHADER_MODEL",
+      "value": "6_7"
+    },
+    {
+      "type": "environment",
+      "name": "VKD3D_FEATURE_LEVEL",
+      "value": "12_1"
+    },
+    {
+      "type": "environment",
+      "name": "VKD3D_CONFIG",
+      "value": "force_native_fp16,no_staggered_submit"
+    },
+    {
+      "type": "environment",
+      "name": "HB_MVK_TEXTURE_2D_AS_ARRAY",
+      "value": "1"
+    },
+    {
+      "type": "environment",
+      "name": "DXVK_CONFIG",
+      "value": "dxgi.maxVideoMemoryBudget=${memoryMB*0.375}"
+    },
+    {
+      "type": "dlloverride",
+      "value": "gameoverlayrenderer64,gameoverlayrenderer=d"
+    },
+    {
+      "type": "note",
+      "text": "Microsoft Flight Simulator 2024 runs on Highball's native arm64 engine, which translates its DirectX 12 through vkd3d-proton and MoltenVK. The game asks for Shader Model 6.7, which this route reports. Steam has to be online, because the game signs in to its servers through Steam. The first start asks for your Microsoft account inside the game, and later starts remember it. The first start takes about nine minutes to reach the start screen while the game activates its packages and compiles its shaders, and every later start about six, since the engine keeps the compiled shaders for the game. The loading screen plays its videos and shows the progress the whole way. The game is told it has three eighths of this Mac's memory as video memory (12 GB on a 32 GB Mac). The Steam overlay is off, as in every flight measured so far. Motion blur is best off on a Mac (Settings, General, Graphics, Global Rendering Quality, Motion Blur): at the frame rates a Mac reaches it smears the whole picture when the view turns and leaves stepped trails behind the ground at takeoff."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "The start screen takes about nine minutes to come the first time, about six after that",
+      "cause": "the game activates its packages and compiles its shaders before the start screen on every start; the engine keeps the compiled shaders, so later starts are shorter",
+      "fix": "wait for the start screen; the loading screen shows its progress, and the first minute may stay blank before the first loading video"
+    },
+    {
+      "symptom": "'Authentication in progress' never ends",
+      "cause": "Steam is offline, and the game signs in to its servers through Steam",
+      "fix": "put Steam online and start the game again"
+    },
+    {
+      "symptom": "Turning the view or taking off leaves smeared trails behind buildings and lights",
+      "cause": "the game's motion blur, on in the Medium preset, smears each frame's movement, and at the frame rates a Mac reaches every frame moves three to four times as far as at 60 frames per second",
+      "fix": "Settings, General, Graphics, Global Rendering Quality, Motion Blur set to Off, then Ctrl+Return to apply"
+    }
+  ],
+  "lastVerified": null
+}

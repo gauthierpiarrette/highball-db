@@ -36,6 +36,13 @@ for f in glob.glob("db/games/*.json"):
         errors.append(f"{f}: nativeVulkan must be true or false")
     if "epic_app_name" in d and not isinstance(d["epic_app_name"], str):
         errors.append(f"{f}: epic_app_name must be a string")
+    # The app shows startNotice under "<game> is running" for startNoticeMinutes and decodes both
+    # with fixed types, so a wrong shape would drop the whole row.
+    if d.get("startNotice") is not None and not isinstance(d["startNotice"], str):
+        errors.append(f"{f}: startNotice must be a string or absent")
+    sm = d.get("startNoticeMinutes")
+    if sm is not None and not (isinstance(sm, int) and not isinstance(sm, bool) and sm > 0):
+        errors.append(f"{f}: startNoticeMinutes must be a positive whole number of minutes")
     if str(d.get("status")).startswith("blocked-") and d.get("renderer") is not None:
         errors.append(f"{f}: blocked entries must not recommend a renderer")
     # The app decodes both of these with fixed types, and a wrong shape makes the whole row fail
