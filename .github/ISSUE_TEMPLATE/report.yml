@@ -46,6 +46,12 @@ body:
     attributes:
       label: Environment settings
       description: "Filled in by Highball from the environment the session ran in, only what was set away from its default. Nothing to add unless you changed something outside the app."
+  - type: input
+    id: session
+    attributes:
+      label: Session
+      description: "Filled in by Highball: how long the game ran. Leave it as it is and put your own words under Notes."
+      placeholder: "Played for 25 min through Highball."
   - type: textarea
     id: notes
     attributes:
