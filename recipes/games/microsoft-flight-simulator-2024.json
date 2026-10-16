@@ -66,6 +66,21 @@
       "symptom": "Turning the view or taking off leaves smeared trails behind buildings and lights",
       "cause": "the game's motion blur, on in the Medium preset, smears each frame's movement, and at the frame rates a Mac reaches every frame moves three to four times as far as at 60 frames per second",
       "fix": "Settings, General, Graphics, Global Rendering Quality, Motion Blur set to Off, then Ctrl+Return to apply"
+    },
+    {
+      "symptom": "A brief freeze just before the start screen on every start",
+      "cause": "the last frames of the 4K loading video trip a GPU fault on the Mac as the video ends, and the engine resumes the device at once",
+      "fix": "none needed, the start screen follows; a fix in the engine's next revision"
+    },
+    {
+      "symptom": "In daylight, a faint dark wedge drifts across the sky for a few seconds at a time while parked",
+      "cause": "a volumetric effect the Mac route draws wrong (not the clouds, the light shafts or the terrain shadows, which were each turned off to check)",
+      "fix": "none yet; it goes once airborne and never shows at night"
+    },
+    {
+      "symptom": "A short hitch every 30 to 40 seconds in flight",
+      "cause": "work on the game's side under the translation layer, not shader compiles (the engine keeps those from the first start on)",
+      "fix": "none yet; the upscaler setting above keeps the rest of the frames steady"
     }
   ],
   "lastVerified": null
