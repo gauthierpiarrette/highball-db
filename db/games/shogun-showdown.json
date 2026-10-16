@@ -1,0 +1,19 @@
+{
+  "id": "shogun-showdown",
+  "title": "Shogun Showdown",
+  "steam_appid": 2084000,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#490, 2026-10-14), Apple M1, macOS 27.0.1, Highball 0.10.16, engine x64-sikarugir10.0_6-r26, D3DMetal, Metal HUD, DXVK async on, AVX advertised, recipes steam, controller-sdl, corefonts, dotnet48, vcrun2022, bloody-spell and xact, rated 4 of 5 after 3 minutes. The report had no app id; 2084000 is Steam's listing. Not verified by the maintainer.",
+  "notes": "Playable on D3DMetal on the default engine. A DualSense is not picked up as a DirectInput pad despite the game's Sony glyph option; an XInput controller works.",
+  "knownIssues": [
+    {
+      "symptom": "No DualSense (DirectInput) support out of the box, an XInput controller works",
+      "cause": "not diagnosed",
+      "fix": "use an XInput controller, or Steam Input"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

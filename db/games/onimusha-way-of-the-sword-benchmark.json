@@ -1,0 +1,19 @@
+{
+  "id": "onimusha-way-of-the-sword-benchmark",
+  "title": "Onimusha: Way of the Sword Benchmark",
+  "steam_appid": 4196100,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by flacknabe-cpu (highball-db#515, 2026-10-16), Apple M1 Pro 16 GB, macOS 26.7, Highball 0.10.16, engine x64-crossover26.3-r25, D3DMetal 3 unmodified, HB_TSSHIM_ATOMIC64=1, Metal HUD, 60 fps cap, recipes steam and vcrun2022, rated 3 of 5 after 8 minutes. Not verified by the maintainer.",
+  "notes": "Capcom's RE Engine, DirectX 12, so it needs D3DMetal. On M1 and M2 chips D3DMetal says no to the engine's check for 64-bit atomics on descriptor heap resources and the benchmark stops with an unsupported graphics card error. On the Wine 11 engine r25 (Highball 0.10.16) the variable HB_TSSHIM_ATOMIC64=1 makes Highball's DirectX 12 layer answer yes, and the benchmark completes on an M1 Pro: score 11,127 at 1800x1169, 31.9 fps on average, 1 per cent low 15.1, ray tracing off, upscaling off, frame generation off. The recipe sets the engine and the variable.",
+  "knownIssues": [
+    {
+      "symptom": "Unsupported graphics card error at start on M1 and M2 chips",
+      "cause": "D3DMetal reports AtomicInt64OnDescriptorHeapResourceSupported as false there, and RE Engine requires it",
+      "fix": "the recipe: Wine 11 engine r25 or later with HB_TSSHIM_ATOMIC64=1, which has Highball's layer in front of D3DMetal answer yes (confirmed on an M1 Pro, highball-db#515). On an M4 D3DMetal answers yes by itself."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

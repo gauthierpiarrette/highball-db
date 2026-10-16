@@ -1,0 +1,19 @@
+{
+  "id": "elsword",
+  "title": "Elsword",
+  "steam_appid": 237310,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by lucasaarch (highball-db#491, 2026-10-14) as Elsword (INT), Apple M4, macOS 27.2, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, recipes vcrun2022, corefonts and steam, rated 5 of 5 after 79 minutes. The report had no app id; 237310 is Steam's listing for Elsword. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT on the default engine in the game's DirectX 9 mode. Its DirectX 11 mode does not work for the reporter.",
+  "knownIssues": [
+    {
+      "symptom": "The game's DirectX 11 mode does not work, DirectX 9 does",
+      "cause": "not diagnosed",
+      "fix": "keep the game on its DirectX 9 mode"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

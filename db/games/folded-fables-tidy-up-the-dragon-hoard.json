@@ -1,0 +1,19 @@
+{
+  "id": "folded-fables-tidy-up-the-dragon-hoard",
+  "title": "Folded Fables: Tidy Up The Dragon Hoard",
+  "steam_appid": 4995030,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by Zexu17 (highball-db#504, 2026-10-15), Apple M3, macOS 26.6.2, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, DXMT, DXVK async shader compilation on, recipe steam, rated 4 of 5 after 38 minutes, with frame drops when moving around. Not verified by the maintainer.",
+  "notes": "Playable on DXMT on the default engine, with frame drops when moving around on an M3.",
+  "knownIssues": [
+    {
+      "symptom": "Frame drops when moving around (M3)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

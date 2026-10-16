@@ -6,12 +6,12 @@
   "renderer": null,
   "anticheat": null,
   "provenance": "Reported by Veebav on an Apple M1, macOS 26.3.1, Highball 0.10.14, engine x64-sikarugir10.0_6-r24. First stuck on an endless loading screen after the main menu with the environment on DXVK (highball#322, 2026-10-12), then playable with workarounds in an environment on D3DMetal, rated 3 of 5 after 2 minutes (highball-db#459). Not verified by the maintainer.",
-  "notes": "Reported playable on an M1 after workarounds the player has not described yet. With the environment on DXVK the game stayed on an endless loading screen after its main menu. The second report ran the environment on D3DMetal.",
+  "notes": "Reported playable on an M1 after workarounds the player has not described yet. With the environment on DXVK the game stayed on an endless loading screen after its main menu. The second report ran the environment on D3DMetal. The reporter got past the endless loading screen with a steam_appid.txt file holding 2168680 in the game's folder, which the recipe now writes; mods built as DLLs did not load for them.",
   "knownIssues": [
     {
       "symptom": "An endless loading screen after the main menu",
       "cause": "Not diagnosed. Seen with the environment on DXVK (highball#322)",
-      "fix": "The player got past it with a workaround not described yet, in an environment set to D3DMetal (highball-db#459)"
+      "fix": "a file named steam_appid.txt containing 2168680 in the game's folder (the reporter's fix, highball#322); the nuclear-option recipe writes it"
     }
   ],
   "launchArgs": null,

@@ -1,0 +1,13 @@
+{
+  "id": "spam",
+  "title": "SPAM",
+  "steam_appid": 2902720,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by lucashrm (highball-db#501, 2026-10-15), Apple M5 Pro, macOS 26.5.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, DXMT, recipe steam, rated 5 of 5 after 26 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT on the default engine.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

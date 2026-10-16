@@ -1,0 +1,19 @@
+{
+  "id": "skillshot-city",
+  "title": "Skillshot City",
+  "steam_appid": 308600,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by m0vi0 (highball-db#499, 2026-10-15), Apple M5, macOS 26.6.2, Highball 0.10.15, the default engine r26 and the Wine 11 engine r23, D3DMetal and DXMT modes: the game exits about ten seconds after starting on every one of them. Not verified by the maintainer.",
+  "notes": "Does not run. The game (GLFW and GLAD) asks for a legacy OpenGL context, gets the 2.1 context macOS allows for those, and then quits because it needs OpenGL 3.0 features (vertex buffer objects, 'needs OpenGL VBO support'). Apple only offers OpenGL above 2.1 as a core profile, which a program has to ask for, and the game asks for the old kind. Nothing in Highball's engines or recipes changes that: the CX_FWD_COMPAT_GL_CTX setting only helps programs that ask for 3.2 or newer. A software OpenGL (Mesa's llvmpipe) inside the environment is the only known way around it for games like this, not something Highball ships.",
+  "knownIssues": [
+    {
+      "symptom": "Exits at startup; the game's data/log.txt says 'needs OpenGL VBO support', with GLAD_GL_VERSION_3_0 0 in a 2.1 context",
+      "cause": "macOS gives a legacy OpenGL context only at version 2.1, and the game asks for a legacy context then requires 3.0",
+      "fix": "none in Highball"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

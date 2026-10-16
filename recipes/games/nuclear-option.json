@@ -1,0 +1,19 @@
+{
+  "id": "nuclear-option",
+  "kind": "game",
+  "title": "Nuclear Option",
+  "requires": [
+    "steam"
+  ],
+  "steps": [
+    {
+      "type": "file",
+      "path": "Program Files (x86)/Steam/steamapps/common/Nuclear Option/steam_appid.txt",
+      "contents": "2168680\n"
+    },
+    {
+      "type": "note",
+      "text": "Without this file the game can sit on its loading screen after the main menu for good; with it the game's Steam support initialises on its own and the load finishes (a player's fix, highball#322)."
+    }
+  ]
+}

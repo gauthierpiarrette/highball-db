@@ -1,0 +1,19 @@
+{
+  "id": "car-park-capital",
+  "title": "Car Park Capital",
+  "steam_appid": 3031880,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by barryloh (highball-db#498, 2026-10-15), engine x64-sikarugir10.0_6-r26, DXMT, recipe steam: a command prompt window opens and closes after a few seconds, the game never shows. Steam community reports on CrossOver 26.3 name the same failure. Not verified by the maintainer.",
+  "notes": "Does not run. The game opens a console window that closes within seconds. Players on CrossOver see 'GLFW ERROR: WGL: Failed to create OpenGL context': the game needs OpenGL 4.2 and macOS stops at 4.1, so no Mac OpenGL driver can give it the context it asks for. The workaround those players use is Mesa's software OpenGL (llvmpipe) copied into the game folder with an opengl32 override, which runs on the CPU and is choppy; Highball does not ship it.",
+  "knownIssues": [
+    {
+      "symptom": "A command prompt opens and closes after a few seconds, no game window",
+      "cause": "the game asks for an OpenGL 4.2 context and macOS offers 4.1 at most (GLFW: WGL failed to create OpenGL context, from the game's Steam discussions)",
+      "fix": "none in Highball. Players on CrossOver put Mesa's software OpenGL (llvmpipe, opengl32.dll and libgallium_wgl.dll from mesa-dist-win) beside the game with an opengl32 native override, at CPU-rendering speed"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

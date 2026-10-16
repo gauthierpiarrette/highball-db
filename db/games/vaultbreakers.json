@@ -1,0 +1,19 @@
+{
+  "id": "vaultbreakers",
+  "title": "Vaultbreakers",
+  "steam_appid": 306910,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by LucasMenezeslc (highball#355, 2026-10-15), Apple M4, macOS 26.3, Highball 0.10.15: in a DXMT environment the game stops at 'DirectX 11 not supported, Vaultbreakers requires DirectX 12' (0xC361). Not verified by the maintainer.",
+  "notes": "DirectX 12 only. In the DXMT mode, which has no DirectX 12, it stops with its own 'DirectX 11 not supported' box. The recipe sets D3DMetal, which needs Apple's licence accepted in the environment's settings; whether the game then plays has not been reported yet.",
+  "knownIssues": [
+    {
+      "symptom": "'DIRECTX 11 NOT SUPPORTED, Vaultbreakers requires DirectX 12' (0xC361) at start",
+      "cause": "the environment's DXMT mode has no DirectX 12",
+      "fix": "the recipe sets D3DMetal for the game (Review licence under Graphics in the environment's settings if it has not been accepted)"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

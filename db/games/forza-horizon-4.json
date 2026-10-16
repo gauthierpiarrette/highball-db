@@ -1,0 +1,19 @@
+{
+  "id": "forza-horizon-4",
+  "title": "Forza Horizon 4",
+  "steam_appid": 1293830,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by whcjimmy (highball#268, from 2026-10-06), Apple M1 Pro, macOS 27.0.1, Highball 0.10.3 to 0.10.16, Wine 11 engines r18 and r24 with D3DMetal 4 and the Forza Horizon 6 variables: the game installs and Steam starts it, but no window ever opens and it quits after a few minutes. AppleGamingWiki lists it as not starting on CrossOver and Wine. Not verified by the maintainer.",
+  "notes": "Does not start. Steam starts the game and it hangs inside its own startup with no window. Two walls were found in turn. The first, Wine answering the game's lookup of the Visual C++ libraries package with nothing (Wine bug 55397), is fixed in the Wine 11 engines r24 and r25 (Highball 0.10.16), which register that package the way Proton does. Behind it a second one remains: inside the game a thread loads Steam's own client library (steamclient64.dll) and never releases Wine's loader lock, so the other threads wait until the game gives up; Steam's overlay off changes nothing (traced 2026-10-15). Proton on Linux does not load that library, it ships its own, which is one reason the game runs there. No Mac Wine setup is known to run it (AppleGamingWiki: does not start on CrossOver and Wine).",
+  "knownIssues": [
+    {
+      "symptom": "Steam shows the game running, no window ever opens, the game quits after a few minutes",
+      "cause": "a startup deadlock on Wine's loader lock while the game loads Steam's steamclient64.dll (after the VCLibs package lookup, fixed in engine r24), traced in highball#268",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

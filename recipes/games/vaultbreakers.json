@@ -1,0 +1,15 @@
+{
+  "id": "vaultbreakers",
+  "kind": "game",
+  "title": "Vaultbreakers",
+  "requires": [
+    "steam"
+  ],
+  "renderer": "d3dmetal",
+  "steps": [
+    {
+      "type": "note",
+      "text": "Vaultbreakers is DirectX 12 only and stops with its own 'DirectX 11 not supported' box in the DXMT mode, so this recipe runs it on D3DMetal. D3DMetal needs Apple's licence accepted once, under Graphics in the environment's settings."
+    }
+  ]
+}

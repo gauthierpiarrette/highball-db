@@ -1,0 +1,13 @@
+{
+  "id": "elite-dangerous-odyssey",
+  "title": "Elite Dangerous: Odyssey",
+  "steam_appid": 1336350,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by kurimanju-dev (highball-db#503, 2026-10-15), Apple M1 Pro, macOS 27.0.1, Highball 0.10.16, engine x64-sikarugir10.0_6-r26, D3DMetal, recipes steam and vcrun2022, rated 5 of 5: flawless from the launcher into the game, Ultra at 1080p, 60 fps and more in space, 40 to 50 in a station. Not verified by the maintainer.",
+  "notes": "Reported flawless on D3DMetal on the default engine, from Frontier's launcher into the game. The reporter says switching the environment to D3DMetal improved performance and loading times substantially over the mode they had before. Ultra settings at 1080p: 60 fps and more in space, 40 to 50 in a space station, on an M1 Pro.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

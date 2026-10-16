@@ -1,0 +1,13 @@
+{
+  "id": "ikaruga",
+  "title": "Ikaruga",
+  "steam_appid": 253750,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by DeepBlade (highball-db#488, 2026-10-14), Apple M2 Max, macOS 27.0, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, recipe steam, rated 5 of 5 after 16 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT on the default engine.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

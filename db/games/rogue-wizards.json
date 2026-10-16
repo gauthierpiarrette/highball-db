@@ -1,0 +1,13 @@
+{
+  "id": "rogue-wizards",
+  "title": "Rogue Wizards",
+  "steam_appid": 392260,
+  "status": "community",
+  "renderer": "dxvk",
+  "anticheat": null,
+  "provenance": "Reported by PrisedRabbit (highball-db#510, 2026-10-16), Apple M1 Max, macOS 27.0.1, Highball 0.10.16, engine id x64-crossover26.3-r23-doom-patched (a Wine 11 engine the player modified), DXVK, AVX advertised, 60 fps cap, recipes steam, vcrun2022 and counter-strike-2, rated 5 of 5 after 34 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXVK on a Wine 11 engine the player had modified for another game.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

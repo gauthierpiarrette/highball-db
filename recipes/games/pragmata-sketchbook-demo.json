@@ -1,0 +1,21 @@
+{
+  "id": "pragmata-sketchbook-demo",
+  "kind": "game",
+  "title": "PRAGMATA SKETCHBOOK - DEMO",
+  "requires": [
+    "steam"
+  ],
+  "renderer": "d3dmetal",
+  "engine": "x64-crossover26.3-r25",
+  "steps": [
+    {
+      "type": "environment",
+      "name": "HB_TSSHIM_ATOMIC64",
+      "value": "1"
+    },
+    {
+      "type": "note",
+      "text": "Capcom's RE Engine asks DirectX 12 for 64-bit atomics on descriptor heap resources and refuses the graphics card without them. On M1 and M2 chips Apple's D3DMetal answers no, so this recipe moves the game to the Wine 11 engine r25 or later, whose DirectX 12 layer in front of D3DMetal answers yes when HB_TSSHIM_ATOMIC64=1 is set, and sets it. Confirmed by a player on an M1 Pro with the unmodified D3DMetal 3 (Highball 0.10.16). On an M4 D3DMetal answers yes by itself and the variable changes nothing."
+    }
+  ]
+}

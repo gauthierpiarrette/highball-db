@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by valdroff (highball-db#364, 2026-10-06 and 2026-10-08), Apple M3, macOS 27.0.1, Highball 0.10.11, the Steam release: rated 2 of 5 in Wine's own Direct3D mode (menus and loading fine, very slow in play even at very low settings), then playable with a few slowdowns after switching the environment to automatic and turning on Emulate display mode changes. Not verified by the maintainer.",
-  "notes": "Playable with a few slowdowns in automatic mode with Emulate display mode changes on, per the reporter. Wine's own Direct3D mode was very slow in play. On the default engine, automatic mode runs the game's Direct3D 9 through DXVK. No measurement here yet.",
+  "provenance": "Reported by valdroff (highball-db#364, 2026-10-06 and 2026-10-08), Apple M3, macOS 27.0.1, Highball 0.10.11, the Steam release: rated 2 of 5 in Wine's own Direct3D mode (menus and loading fine, very slow in play even at very low settings), then playable with a few slowdowns after switching the environment to automatic and turning on Emulate display mode changes. HypocriteOnHere (highball-db#495, 2026-10-15), chip entered as Apple A18 Pro, macOS 27.0.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, Metal HUD, recipe steam, rated 4 of 5 after 3 minutes: stutters with V-Sync off, the frame rate all over the place. Not verified by the maintainer.",
+  "notes": "Playable with a few slowdowns in automatic mode with Emulate display mode changes on, per the reporter. Wine's own Direct3D mode was very slow in play. On the default engine, automatic mode runs the game's Direct3D 9 through DXVK. No measurement here yet. Stutters with V-Sync off (highball-db#495), so leave V-Sync on.",
   "knownIssues": [
     {
       "symptom": "Very low frame rate in play, even at the lowest settings",
