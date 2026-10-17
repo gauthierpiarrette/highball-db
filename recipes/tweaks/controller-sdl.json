@@ -7,29 +7,35 @@
   "steps": [
     {
       "type": "registry",
-      "key": "HKCU\\Software\\Wine\\WineBus",
+      "key": "HKLM\\System\\CurrentControlSet\\Services\\winebus",
       "name": "DisableHidraw",
       "valueType": "REG_DWORD",
       "data": "1"
     },
     {
       "type": "registry",
-      "key": "HKCU\\Software\\Wine\\WineBus",
+      "key": "HKLM\\System\\CurrentControlSet\\Services\\winebus",
       "name": "Enable SDL",
       "valueType": "REG_DWORD",
       "data": "1"
     },
     {
       "type": "note",
-      "text": "Wine's controller driver now sees gamepads through SDL only, instead of the Mac's raw HID path as well. Symptom this fixes when it applies, a controller that a game does not recognise or that shows up twice. Restart the environment after applying so the driver reloads. First reported working on Elden Ring by a user who set these two registry values by hand (highball-db#228)."
+      "text": "Wine's controller driver now sees gamepads through SDL only, instead of the Mac's raw HID path as well. Symptom this fixes when it applies, a controller that a game does not recognise or that shows up twice, or an Xbox controller over Bluetooth that does not rumble. Restart the environment after applying so the driver reloads. First reported working on Elden Ring by a user who set these two registry values by hand (highball-db#228). Until 2026-10-17 this tweak wrote them under HKCU\\Software\\Wine\\WineBus, which Wine never reads, so an environment that installed it before then has the old values and needs them set by hand once (highball#324)."
     }
   ],
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "symptom": "A DualSense gives no input in Unity games",
+      "cause": "Through SDL, Wine presents a DualSense as an Xbox style pad that keeps Sony's ids (054C:0CE6), and Unity's Input System reads its reports with its DualSense layout (highball#324)",
+      "fix": "Leave this tweak off for a DualSense or DualShock 4, which Wine already sends through the Mac's raw HID path"
+    }
+  ],
   "lastVerified": {
-    "date": "2026-09-26",
-    "engine": "x64-sikarugir10.0_6-r7",
+    "date": "2026-10-17",
+    "engine": "x64-sikarugir10.0_6-r26",
     "macos": "27.0",
     "chip": "Apple M1 Pro",
-    "result": "Applies cleanly to a fresh environment: HKCU\\Software\\Wine\\WineBus gets DisableHidraw=1 and Enable SDL=1 (reg query confirms both). No gamepad here, so the controller effect itself is the reporter's observation on Elden Ring (highball-db#228), not measured by the maintainer."
+    "result": "With WINEDEBUG=trace+hid in a fresh environment, DisableHidraw=1 under HKLM\\System\\CurrentControlSet\\Services\\winebus stops the IOHID bus and the SDL bus starts, on the default engine r26 and on the Wine 11 engine x64-crossover26.3-r25. The same value under HKCU\\Software\\Wine\\WineBus changes nothing on either. No gamepad here: rumble on an Xbox Series controller over Bluetooth and the DualSense problem in Unity are luchuyong17's observations (highball#324)."
   }
 }

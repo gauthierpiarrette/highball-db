@@ -1,0 +1,19 @@
+{
+  "id": "just-cause-4",
+  "title": "Just Cause 4",
+  "steam_appid": 517630,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by VAGCoded (highball-db#525, 2026-10-17) for the Epic Games Store copy, Apple M5 Pro, macOS 27.0, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, rated 4 of 5 after 26 minutes with frame drops. Not verified by the maintainer.",
+  "notes": "Reported playable on DXMT on the default engine on an M5 Pro, with frame drops, how often or where was not said. The report is for the Epic copy, the Steam copy is the same game.",
+  "knownIssues": [
+    {
+      "symptom": "Frame drops (M5 Pro, DXMT)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

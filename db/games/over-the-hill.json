@@ -1,0 +1,13 @@
+{
+  "id": "over-the-hill",
+  "title": "over the hill",
+  "steam_appid": 2929250,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by luchuyong17 (highball-db#523, 2026-10-17), Apple M2 Pro, macOS 26.6.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, recipes steam, vcrun2022 and controller-sdl, with SDL 3 and sdl2-compat of their own build through SDL_DYNAMIC_API, rated 4 of 5 after 3 minutes. klinaker (highball-db#529, 2026-10-17), Apple M3 Max, macOS 27.0.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r27, D3DMetal 4 beta 2 through the per-game override with -force-d3d11, msync, Retina pixels and the Metal HUD on, recipes steam and vcrun2022, rated 5 of 5 after 5 minutes with rare stutter. Not verified by the maintainer.",
+  "notes": "A Unity game. Reported playable on DXMT on an M2 Pro and perfect on an M3 Max on D3DMetal 4 with -force-d3d11, with a rare stutter. Rumble works with an Xbox Series controller over Bluetooth once Wine's controller bus is set to SDL in the right registry key (highball#324), and a DualSense then gives no input in Unity games, see that issue.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

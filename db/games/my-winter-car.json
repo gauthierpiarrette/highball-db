@@ -1,0 +1,13 @@
+{
+  "id": "my-winter-car",
+  "title": "My Winter Car",
+  "steam_appid": 4164420,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by goginki (highball-db#527, 2026-10-17), Apple M3 Pro, macOS 26.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, D3DMetal, DLL overrides version=n,b;winmm=n,b;winhttp=n,b, recipes steam and vcrun2022, rated 5 of 5 after 39 minutes. Not verified by the maintainer.",
+  "notes": "My Summer Car's sequel, Unity. Reported perfect on D3DMetal on the default engine on an M3 Pro, with the same DLL overrides My Summer Car's mod loader uses (in the DLL overrides field). DXMT, the default mode, is untested here, so the page does not pick a mode.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
