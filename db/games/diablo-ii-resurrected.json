@@ -10,7 +10,7 @@
   "knownIssues": [
     {
       "symptom": "Never opens a window on the default engine, the game process idle (M5, macOS 27.0.1)",
-      "cause": "not diagnosed. Blizzard games hit a Rosetta 2 deadlock from January 2026 that Apple fixed in macOS 26.5, and Overwatch 2 needs the Wine 11 engine on Highball",
+      "cause": "not diagnosed. Blizzard games hit a Rosetta 2 deadlock from January 2026, CodeWeavers reports Diablo IV and Overwatch running again with macOS 26.5 on CrossOver 26.1 and later, and Overwatch 2 needs the Wine 11 engine on Highball",
       "fix": "none confirmed. Untested: the Wine 11 engine (environment settings, Advanced, Engine) with DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1"
     }
   ],
