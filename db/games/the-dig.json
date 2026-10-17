@@ -1,0 +1,24 @@
+{
+  "id": "the-dig",
+  "title": "The Dig",
+  "steam_appid": 6040,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by tommireinikainen (highball#374, 2026-10-17), Apple M4 Max, macOS 26.6.2, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT: it starts in a small window that stays small in full screen, and speech played in the opening cinematic but not in play, where only text shows. Not verified by the maintainer.",
+  "notes": "Steam's Windows build runs the game in ScummVM. ScummVM for Mac (free, scummvm.org) plays the same Steam files natively, and Steam also sells a Mac version with the same purchase, not checked on current macOS here. Through Highball the window stays small and in-game speech is missing for the one report so far.",
+  "knownIssues": [
+    {
+      "symptom": "Small window that stays small in full screen; speech in the opening but not in play",
+      "cause": "not diagnosed",
+      "fix": "Play it in ScummVM for Mac with the game's Steam folder, or Steam's Mac version"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "nativeMac": {
+    "available": true,
+    "where": "Steam",
+    "note": "Steam's Mac version comes with the purchase; whether it still starts on current macOS was not checked here. ScummVM for Mac plays the Steam files either way."
+  }
+}

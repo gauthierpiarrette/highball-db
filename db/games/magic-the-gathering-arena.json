@@ -1,0 +1,23 @@
+{
+  "id": "magic-the-gathering-arena",
+  "title": "Magic: The Gathering Arena",
+  "steam_appid": 2141910,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by qqiu-png (highball#372, 2026-10-17), Apple M4, macOS 26.6.2, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, Steam copy: the game's first download stops at 5.97 MB. Not verified by the maintainer.",
+  "notes": "Steam sells a Mac version with the same purchase, which is the one to play on a Mac. The Windows version through Highball stopped at 5.97 MB of its first download for the one report so far.",
+  "knownIssues": [
+    {
+      "symptom": "The first download stops at 5.97 MB",
+      "cause": "not diagnosed",
+      "fix": "Play Steam's Mac version"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "nativeMac": {
+    "available": true,
+    "where": "Steam"
+  }
+}
