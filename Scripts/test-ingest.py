@@ -148,6 +148,22 @@ check("two renderers in one phrase -> null", rec["renderer"], None)
 check("log noise is not an appid", rec["steam_appid"], None)
 shutil.rmtree(box)
 
+print("== the form's Session field (2026-10-17) ==")
+FORM = ("### Game or launcher\n\nCyberpunk 2077\n\n### Rating\n\n5 — perfect\n\n"
+        "### Session\n\n{session}\n\n### Notes\n\n{notes}\n")
+for name, session, notes, want in [
+        ("session alone becomes the notes", "Played for 26 min through Highball.", "_No response_",
+         ("Played for 26 min through Highball.", "Played for 26 min through Highball.")),
+        ("own notes win over the session", "Played for 26 min through Highball.", "Fans spin up in towns.",
+         ("Fans spin up in towns.", "Played for 26 min through Highball.")),
+        ("older form, notes only", "_No response_", "Played for 5 min through Highball.",
+         ("Played for 5 min through Highball.", None))]:
+    box = sandbox()
+    run(box, FORM.format(session=session, notes=notes), 953, "Cyberpunk 2077")
+    rec = json.loads(open(os.path.join(box, "db", "reports", "cyberpunk-2077.jsonl")).read().strip())
+    check(name, (rec["notes"], rec.get("session")), want)
+    shutil.rmtree(box)
+
 print()
 if fails:
     print(f"{len(fails)} FAILED: " + ", ".join(fails))

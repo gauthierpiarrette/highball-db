@@ -28,8 +28,10 @@ import glob, json, os, re, sys
 
 REPORTS, GAMES = "db/reports", "db/games"
 RENDERERS = {"d3dmetal", "dxmt", "dxvk", "wined3d"}
+# "no response" is what the issue form writes under a field left empty ("_No response_",
+# underscores stripped by clean()); it was stored as the answer in 24 reports until 2026-10-17.
 NON_ANSWERS = {"not reported", "not given", "unknown", "unspecified", "n/a", "na",
-               "none", "-", "—", "?", ""}
+               "none", "-", "—", "?", "", "no response"}
 
 AID = r"(?<![\d.])(\d{1,8})(?![\d.])"
 LABEL_AID = re.compile(r"\b(?:steam\s*app\s*id|steam\s*id|app\s*id)\b[^0-9\n]{0,12}" + AID, re.I)
@@ -249,6 +251,12 @@ def extract(body):
 
     n = find_label(b, ["Notes", "Test notes"])
     rec["notes"] = n if answered(n) else None
+    # The form's Session line (added 2026-10-17): Highball's "Played for N min" moved out of Notes so a
+    # reporter can type into Notes freely (highball#347). An empty Notes keeps the session line as notes.
+    s = find_label(b, ["Session"])
+    rec["session"] = s if answered(s) else None
+    if rec["notes"] is None and rec["session"]:
+        rec["notes"] = rec["session"]
     # The form's "What was not perfect?" line (added 2026-09-21 after a day of rating-4 reports
     # with nothing to act on). Kept apart from notes so a known-issue line can be lifted from it.
     w = find_label(b, ["What was not perfect?", "What was not perfect"])
