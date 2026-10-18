@@ -81,6 +81,10 @@ for f in glob.glob("recipes/*/*.json"):
     if d.get("kind") not in ("launcher", "game", "tweak"): errors.append(f"{f}: bad kind")
     if not isinstance(d.get("steps"), list) or not d["steps"]: errors.append(f"{f}: steps missing")
     recipe_engines[d.get("id")] = d.get("engine")
+    # The app decodes minMemoryGB as an integer; anything else makes the whole recipe undecodable, and a recipe the
+    # app cannot decode is dropped silently (Play would launch the game without it).
+    if "minMemoryGB" in d and not (type(d["minMemoryGB"]) is int and d["minMemoryGB"] > 0):
+        errors.append(f"{f}: minMemoryGB must be a positive whole number of GB, not {d['minMemoryGB']!r}")
     # The CLI decodes a recipe's lastVerified as an object of five strings (date, engine, macos,
     # chip, result), unlike a row's, which is a date string. A bare date here fails every CI run
     # that validates recipes against the CLI (2026-09-12, the Metaphor recipe).
