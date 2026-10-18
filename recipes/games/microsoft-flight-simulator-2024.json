@@ -54,6 +54,35 @@
   "steps": [
     {
       "type": "environment",
+      "name": "VKD3D_FEATURE_LEVEL",
+      "value": "12_1"
+    },
+    {
+      "type": "environment",
+      "name": "VKD3D_SHADER_MODEL",
+      "value": "6_7"
+    },
+    {
+      "type": "environment",
+      "name": "VKD3D_CONFIG",
+      "value": "force_native_fp16,no_staggered_submit"
+    },
+    {
+      "type": "environment",
+      "name": "HB_MVK_TEXTURE_2D_AS_ARRAY",
+      "value": "1"
+    },
+    {
+      "type": "environment",
+      "name": "DXVK_CONFIG",
+      "value": "dxgi.maxVideoMemoryBudget=${memoryMB*0.375}"
+    },
+    {
+      "type": "dlloverride",
+      "value": "gameoverlayrenderer64,gameoverlayrenderer=d"
+    },
+    {
+      "type": "environment",
       "name": "HB_MVK_NO_LOSSLESS",
       "value": "1"
     },
