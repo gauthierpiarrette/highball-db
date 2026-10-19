@@ -50,7 +50,7 @@
     "engine": "arm64-wine11.18-r5 (Wine 11.18 with patches-arm64 0001 to 0043, FEX 2610 with fex/patches 0001 to 0023 and this recipe's FEX switches, MoltenVK 1.4.2 with patches 0001 to 0016, vkd3d-proton)",
     "macos": "27.0",
     "chip": "Apple M4",
-    "result": "Steam copy (2537590) on a Mac mini M4 with 32 GB through Highball's test harness, in daylight at Gibraltar in a Cessna 172: boot, Free Flight, three 2-minute parks and three 1-minute take-off rolls with two in-game restarts a flight, at the Medium preset with FSR Balanced in 1080p. With this recipe's FEX switches (engine r5, FEX patch 0023), two flights against two on r4: frames over 100 ms 5 per park instead of 59 and 23 per minute of take-off roll instead of 55, frames over 250 ms 0.5 instead of 9 per park, the 99th percentile frame time 72 ms parked instead of 160, 22 fps parked and 19 rolling instead of 19 and 16. No crash, no GPU hang, about 7 minutes to the start screen and 13 to the cockpit. Not tested: camera turns, a longer flight, other aircraft or airports, a controller, any other Mac."
+    "result": "Steam copy (2537590) on a Mac mini M4 with 32 GB through Highball's test harness, in daylight at Gibraltar in a Cessna 172: boot, Free Flight, three 2-minute parks and three 1-minute take-off rolls with two in-game restarts a flight, at the Medium preset with FSR Balanced in 1080p. With this recipe's FEX switches (engine r5, FEX patch 0023), three flights against two on r4: frames over 100 ms 4 per park instead of 59 and 21 per minute of take-off roll instead of 55, frames over 250 ms 0.4 instead of 9 per park, the 99th percentile frame time 70 ms parked instead of 160, 23 fps parked and 19 rolling instead of 19 and 16. No crash, no GPU hang, about 7 minutes to the start screen and 13 to the cockpit. Not tested: camera turns, a longer flight, other aircraft or airports, a controller, any other Mac."
   },
   "steps": [
     {
@@ -119,7 +119,7 @@
     },
     {
       "type": "note",
-      "text": "Microsoft Flight Simulator 2024 runs on Highball's native arm64 preview engine only, which this recipe asks for (installs with the preview key see it; the Intel engines cannot start the game). It needs about 25 GB of memory, so a 16 GB Mac is unlikely to hold it. The first start takes about seven minutes to the start screen and four more from Start to the cockpit; later starts reuse the shader and code caches. Expect about 22 fps parked and 19 on the take-off roll in daylight at the Medium preset with FSR Balanced in 1080p on a base M4, and turn Motion Blur off in the graphics settings."
+      "text": "Microsoft Flight Simulator 2024 runs on Highball's native arm64 preview engine only, which this recipe asks for (installs with the preview key see it; the Intel engines cannot start the game). It needs about 25 GB of memory, so a 16 GB Mac is unlikely to hold it. The first start takes about seven minutes to the start screen and four more from Start to the cockpit; later starts reuse the shader and code caches. Expect about 23 fps parked and 19 on the take-off roll in daylight at the Medium preset with FSR Balanced in 1080p on a base M4, and turn Motion Blur off in the graphics settings."
     }
   ]
 }
