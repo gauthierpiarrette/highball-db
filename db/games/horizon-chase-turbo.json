@@ -1,0 +1,17 @@
+{
+  "id": "horizon-chase-turbo",
+  "title": "Horizon Chase Turbo",
+  "steam_appid": 389140,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by SaschMie (highball-db#532, 2026-10-17) for the Epic Games Store copy, Apple M5, macOS 27.0.1, Highball 0.10.16, engine x64-sikarugir10.0_6-r26, D3DMetal environment, rated 5 of 5 after 28 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on D3DMetal on the default engine (the Epic copy). Steam also sells a Mac version.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "nativeMac": {
+    "available": true,
+    "where": "Steam"
+  }
+}

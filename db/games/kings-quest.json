@@ -1,0 +1,13 @@
+{
+  "id": "kings-quest",
+  "title": "King's Quest",
+  "steam_appid": 345390,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by NorseGaud (highball-db#555, 2026-10-19), Apple M5, macOS 26.6.2, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, rated 5 of 5 after 40 minutes. Not verified by the maintainer.",
+  "notes": "The 2015 King's Quest, reported perfect on DXMT on the default engine.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

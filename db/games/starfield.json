@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": "d3dmetal",
   "anticheat": null,
-  "provenance": "Reported by tomislav (highball#352, 2026-10-15), Apple M1 Max, macOS 27.0.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, D3DMetal: the game runs, with blocky shadows in some scenes (screenshots on the issue). The same reporter later found D3DMetal 4 (the Wine 11 engine r24) draws them the same and that Shadow Quality makes no difference (2026-10-17). Not verified by the maintainer. ",
-  "notes": "Runs on D3DMetal on the default engine (DirectX 12 only, so D3DMetal is the mode). Some shadows come out blocky with stair-stepped edges, seen inside a ship on an M1 Max. D3DMetal 4 (the Wine 11 engine r24) draws them the same, and a higher Shadow Quality does not change them.",
+  "provenance": "Reported by tomislav (highball#352, 2026-10-15), Apple M1 Max, macOS 27.0.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, D3DMetal: the game runs, with blocky shadows in some scenes (screenshots on the issue). The same reporter later found D3DMetal 4 (the Wine 11 engine r24) draws them the same and that Shadow Quality makes no difference (2026-10-17). Not verified by the maintainer. On the Wine 11 engine r26 (D3DMetal 4 beta 3) the blocky shadows remain but are rare enough that the reporter calls the game fully playable; DLSS upscaling works when turned on in Highball (tomislav, 2026-10-18).",
+  "notes": "Runs on D3DMetal on the default engine (DirectX 12 only, so D3DMetal is the mode). Some shadows come out blocky with stair-stepped edges, seen inside a ship on an M1 Max. D3DMetal 4 (the Wine 11 engine r24) draws them the same, and a higher Shadow Quality does not change them. On r26 (D3DMetal 4 beta 3) the shadows still show now and then, rare enough that the game is fully playable, and DLSS upscaling works when turned on in Highball.",
   "knownIssues": [
     {
       "symptom": "Blocky, stair-stepped shadows in some scenes (M1 Max, D3DMetal 3 and 4)",

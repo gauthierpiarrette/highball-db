@@ -1,0 +1,13 @@
+{
+  "id": "ship-of-fools",
+  "title": "Ship of Fools",
+  "steam_appid": 1286580,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by dmark04 (highball-db#531, 2026-10-17), Apple M4 Pro, macOS 27.0.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, rated 5 of 5 after 118 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT on the default engine for about two hours.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

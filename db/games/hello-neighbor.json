@@ -1,0 +1,13 @@
+{
+  "id": "hello-neighbor",
+  "title": "Hello Neighbor",
+  "steam_appid": 521890,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by ghadgkdbfvkdab (highball-db#550, 2026-10-18), Apple M5, macOS 27.0.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, rated 5 of 5 after 63 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT on the default engine for an hour.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

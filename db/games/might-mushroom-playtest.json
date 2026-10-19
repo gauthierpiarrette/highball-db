@@ -1,0 +1,13 @@
+{
+  "id": "might-mushroom-playtest",
+  "title": "Might & Mushroom Playtest",
+  "steam_appid": 4399150,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by MagnusPladsen (highball-db#557, 2026-10-19), Apple M3 Max, macOS 26.6.2, the Wine 11 engine x64-crossover26.3-r25 with DXMT, started through Steam with Proton-ish 0.1.0-beta.5 (a NotProton fork that runs Highball's engines as a Steam Play tool), not the Highball app, rated 5 of 5, over 200 fps. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT with Highball's Wine 11 engine, started through another tool, at over 200 fps.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

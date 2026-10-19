@@ -1,0 +1,13 @@
+{
+  "id": "nubbys-number-factory",
+  "title": "Nubby's Number Factory",
+  "steam_appid": 3191030,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by MagnusPladsen (highball-db#556, 2026-10-19), Apple M3 Max, macOS 26.6.2, the Wine 11 engines x64-crossover26.3-r19 and r25 with DXMT, started through Steam with Proton-ish 0.1.0-beta.5 (a NotProton fork that runs Highball's engines as a Steam Play tool), not the Highball app, rated 4 of 5: a little stutter now and then, fine about 95% of the time. Not verified by the maintainer.",
+  "notes": "Reported playable on DXMT with Highball's Wine 11 engines, started through another tool.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

@@ -1,0 +1,13 @@
+{
+  "id": "undertale-yellow",
+  "title": "Undertale Yellow",
+  "steam_appid": null,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by therealopg17676-ai (highball-db#544, 2026-10-18), Apple M1 Max, macOS 27.0.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, rated 5 of 5 after 20 minutes, no frame drops. Not verified by the maintainer.",
+  "notes": "A free fan game, not on Steam. Reported perfect on the default engine.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

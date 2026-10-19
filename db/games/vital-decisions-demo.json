@@ -1,0 +1,13 @@
+{
+  "id": "vital-decisions-demo",
+  "title": "Vital Decisions Demo",
+  "steam_appid": 5213930,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by ignaciareyes (highball-db#553, 2026-10-18), Apple M2, macOS 15.6.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXVK environment, rated 4 of 5 after 1 minute, issues not named. Not verified by the maintainer.",
+  "notes": "Reported playable on DXVK on macOS 15, a short session.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

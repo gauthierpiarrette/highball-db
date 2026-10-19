@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by IgnisDa (highball-db#363, 2026-10-06), Apple M4, macOS 26.3.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, the environment in DXMT mode, the Epic Games Store copy, rated 4 of 5 after 1 minute (frame drops). The 2013 original, not the 2024 remake. Not verified by the maintainer.",
-  "notes": "Reported playable with frame drops in a one-minute session. No measurement here yet.",
+  "provenance": "Reported by IgnisDa (highball-db#363, 2026-10-06), Apple M4, macOS 26.3.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, the environment in DXMT mode, the Epic Games Store copy, rated 4 of 5 after 1 minute (frame drops). The 2013 original, not the 2024 remake. Not verified by the maintainer. NorseGaud (highball-db#554, 2026-10-19), Apple M5, macOS 26.6.2, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, rated 4 of 5 after about 15 minutes: freezing and jerking in some story scenes.",
+  "notes": "Reported playable with frame drops in a one-minute session. No measurement here yet. Story scenes can freeze or jerk briefly (M5, DXMT, default engine).",
   "knownIssues": [],
   "launchArgs": null,
   "lastVerified": null

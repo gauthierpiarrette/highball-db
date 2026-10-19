@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by xcagricolak (highball#206, 2026-09-26), Apple M3, macOS 27.0, Highball 0.9.35, engine x64-sikarugir10.0_6-r7, DXMT mode with AVX advertised: an 'OpenGL Error' dialog, the application was unable to create an OpenGL context, OpenGL 3.2+ is required. Not verified by the maintainer.",
+  "provenance": "Reported by xcagricolak (highball#206, 2026-09-26), Apple M3, macOS 27.0, Highball 0.9.35, engine x64-sikarugir10.0_6-r7, DXMT mode with AVX advertised: an 'OpenGL Error' dialog, the application was unable to create an OpenGL context, OpenGL 3.2+ is required. Not verified by the maintainer. DrTurkey (highball-db#535, 2026-10-18), Apple M5, macOS 26.6.2, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, rated 5 of 5 after 85 minutes.",
   "notes": "Reported not starting: the game's OpenGL renderer asks for a context macOS's OpenGL cannot provide, and the switch Highball sets for 3.2 core contexts (CX_FWD_COMPAT_GL_CTX) was in place. Whether the game can be made to use its DirectX renderer instead, which would go through DXMT, is being asked on the report. Play passes hlbootdx.dat so the game starts on DirectX instead of OpenGL, from outside reports, not run here.",
   "knownIssues": [
     {

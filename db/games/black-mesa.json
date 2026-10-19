@@ -1,0 +1,24 @@
+{
+  "id": "black-mesa",
+  "title": "Black Mesa",
+  "steam_appid": 362890,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Swiss-Mac-User (highball#385, highball#386, 2026-10-18), Apple M5 Pro, macOS 27.2, Highball 0.10.19: on the Wine 11 engine r27 with DXVK the GPU device is lost (MoltenVK 'Internal Error (0000010d)', the error Portal 2's HDR pass caused), and on the default engine r28 in a DXMT environment the game needs -oldgameui in Steam's launch options, loads for a couple of minutes and runs at 5 fps at most. Not verified by the maintainer.",
+  "notes": "Unplayable for the one report so far: the GPU device is lost on DXVK, and in a DXMT environment (where Direct3D 9 still goes through DXVK) it needs -oldgameui and runs at about 5 fps. The device loss is the same Metal error Portal 2's HDR exposure pass caused, which Source's mat_tonemapping_occlusion_use_stencil 1 fixed there; untested on Black Mesa.",
+  "knownIssues": [
+    {
+      "symptom": "GPU device lost (MoltenVK Internal Error 0000010d) on DXVK",
+      "cause": "not diagnosed here; the same error came from Source's HDR exposure pass in Portal 2",
+      "fix": "none confirmed. Untested: mat_tonemapping_occlusion_use_stencil 1 in the game's autoexec.cfg, as Portal 2's fix does"
+    },
+    {
+      "symptom": "About 5 fps, and the game needs -oldgameui to start, in a DXMT environment",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

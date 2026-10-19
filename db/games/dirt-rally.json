@@ -1,0 +1,17 @@
+{
+  "id": "dirt-rally",
+  "title": "DiRT Rally",
+  "steam_appid": 310560,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by artem6542 (highball-db#551, 2026-10-18), Apple M1, macOS 26.6.2, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, sync none, rated 4 of 5 after 2 minutes, issues not named. Not verified by the maintainer.",
+  "notes": "Reported playable on DXMT on an M1, a short session. Steam also sells a Mac version.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "nativeMac": {
+    "available": true,
+    "where": "Steam"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "planet-zoo-2",
+  "title": "Planet Zoo 2",
+  "steam_appid": 3219030,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by jazzyblu (highball-db#537, 2026-10-18), Apple M2 Max, macOS 27.0.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, D3DMetal, AVX advertised and not, rated 1 of 5 (does not launch), with a WINEDEBUG=+seh analysis: the executable's anti-tamper raises a few hundred deliberate exceptions, which pass, then sets hardware debug registers with NtSetContextThread (Wine logs 'Setting debug registers is not supported under Rosetta, faking success'), after which the main thread faults on the same address over and over (13,000 times in 7 minutes) at 100% CPU until it exits with c0000409. The same game under FEX (Proton ARM64) stops earlier at the self-modifying code stage. Also highball#383 (M2 Pro). Not verified by the maintainer.",
+  "notes": "Does not start on the Rosetta engines: its anti-tamper relies on hardware debug registers, which Rosetta does not provide, and then loops without a window until it exits. D3DMetal is never reached. Highball's native arm64 preview engine implements x86 debug registers in FEX and Wine, untested with this game.",
+  "knownIssues": [
+    {
+      "symptom": "No window; the game runs at 100% CPU for one to six minutes and exits with c0000409",
+      "cause": "the anti-tamper sets hardware debug registers, which Rosetta cannot provide (Wine fakes success), and then faults on the same instruction in a loop (highball-db#537)",
+      "fix": "none on the Rosetta engines. Untested: the arm64 preview engine, which implements debug registers"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

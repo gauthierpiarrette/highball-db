@@ -1,0 +1,17 @@
+{
+  "id": "hack-n-slash",
+  "title": "Hack 'n' Slash",
+  "steam_appid": 246070,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported twice by KinSapalot, Apple M4 Pro, macOS 26.5.2, Highball 0.10.15, engine x64-sikarugir10.0_6-r26: rated 5 of 5 after 5 minutes on DXMT (highball-db#548, 2026-10-18) and 5 of 5 after 11 minutes in a D3DMetal environment (highball-db#563, 2026-10-19). Not verified by the maintainer.",
+  "notes": "Reported perfect on the default engine. Steam also sells a Mac version.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "nativeMac": {
+    "available": true,
+    "where": "Steam"
+  }
+}

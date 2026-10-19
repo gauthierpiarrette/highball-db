@@ -1,0 +1,19 @@
+{
+  "id": "mortal-kombat-11",
+  "title": "Mortal Kombat 11",
+  "steam_appid": 976310,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by hisis5707-droid (highball#390, 2026-10-19), Apple M1 with 8 GB, macOS 26, Highball 0.7.6: character faces are distorted on both DXVK and DXMT while clothing and stages look normal (screenshot on the issue). Not verified by the maintainer.",
+  "notes": "Faces are distorted for the one report so far, made with Highball 0.7.6 from August, whose engines predate every DXMT fix since. Not checked on a current version.",
+  "knownIssues": [
+    {
+      "symptom": "Character faces distorted, clothing and stages fine (DXVK and DXMT)",
+      "cause": "not diagnosed; reported on Highball 0.7.6",
+      "fix": "none known. Update Highball first"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

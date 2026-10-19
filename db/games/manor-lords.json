@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": "d3dmetal",
   "anticheat": null,
-  "provenance": "Reported by susarchitect (highball-db#113, 2026-09-18): rated 3, playable with workarounds, on D3DMetal, Apple M4 Pro, macOS 27.0, engine x64-crossover26.3-r10, Highball 0.9.23, about a minute played through Highball. The workarounds were not described. Not run here. bentleyw117 (highball-db#516, 2026-10-16), Apple M5 Pro MacBook Pro, macOS 27.0.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, recipes steam and vcrun2022, rated 5 of 5 after 54 minutes: Ultra settings at 60 fps. Not verified by the maintainer.",
+  "provenance": "Reported by susarchitect (highball-db#113, 2026-09-18): rated 3, playable with workarounds, on D3DMetal, Apple M4 Pro, macOS 27.0, engine x64-crossover26.3-r10, Highball 0.9.23, about a minute played through Highball. The workarounds were not described. Not run here. bentleyw117 (highball-db#516, 2026-10-16), Apple M5 Pro MacBook Pro, macOS 27.0.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, recipes steam and vcrun2022, rated 5 of 5 after 54 minutes: Ultra settings at 60 fps. Not verified by the maintainer. tommireinikainen (highball-db#536, 2026-10-18), Apple M4 Max, macOS 26.6.2, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, rated 5 of 5 after 25 minutes.",
   "notes": "Unreal Engine 4 with a Direct3D 12 default. The one report runs it on D3DMetal (Direct3D 12) and calls it playable with unspecified workarounds after a minute of play. Session length, frame rate and what needed working around are not recorded yet. An M5 Pro plays it on Ultra at 60 fps on DXMT (highball-db#516).",
   "knownIssues": [],
   "launchArgs": null,
