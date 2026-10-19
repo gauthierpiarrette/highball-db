@@ -2,9 +2,9 @@
   "id": "microsoft-flight-simulator-2024",
   "title": "Microsoft Flight Simulator 2024",
   "steam_appid": 2537590,
-  "status": "community",
-  "renderer": null,
-  "provenance": "community report with a full teardown (highball-db#6, Michael-Liendo), unverified by Highball",
+  "status": "verified-local",
+  "renderer": "vkd3d",
+  "provenance": "verified locally on Apple Silicon (base M4, 32 GB), macOS 27.0, native arm64 preview engine arm64-wine11.18-r5, 2026-10-19. The first teardown is Michael-Liendo's (highball-db#6).",
   "notes": "Runs on Highball's native arm64 preview engine (arm64-wine11.18-r5), which Play offers for this game in one click, through vkd3d-proton on MoltenVK. The game's recipe asks for that engine and sets the feature level, shader model and other variables it needs, including emulator switches that cut most of the stutter (frames over 100 ms per 2-minute park from 59 to 5 on a base M4 in daylight, highball-engine#16). On a base M4 with 32 GB it flies at 22 to 25 fps parked and 19 to 21 on the take-off roll at the Medium preset with FSR Balanced, takes about seven minutes to the start screen and four more to the cockpit, and crashes during the world load about one start in sixteen to forty. The engine needs macOS 26.5 or later. On the Intel engines the game does not run: D3DMetal 3 and the first D3DMetal 4 betas report Shader Model 6.6 and the game refuses to start, and past that check it stops during its first load. How it was made to run: gethighball.com/docs/flight-simulator-2024-apple-silicon/. The first teardown, probes and DXVK patches are Michael-Liendo's, in highball-db#6 and github.com/Michael-Liendo/msfs2024-apple-silicon.",
   "lastVerified": "2026-10-19",
   "startNotice": "The start screen comes about seven minutes after Play and the cockpit four minutes after Start. The loading screen shows the progress.",
@@ -14,5 +14,20 @@
     "macos": "27.0",
     "engine": "arm64-wine11.18-r5",
     "fps": "22 to 25 parked, 19 to 21 on the take-off roll in daylight, Medium + FSR Balanced, 1920x931 window"
+  },
+  "arch": "x64",
+  "rendererResults": {
+    "d3dmetal": {
+      "verdict": "fails",
+      "detail": "D3DMetal 3 and the first D3DMetal 4 betas report Shader Model 6.6 and the game refuses to start. Past that check it stops during its first load under Rosetta."
+    },
+    "dxmt": {
+      "verdict": "fails",
+      "detail": "DirectX 12 only, DXMT has no DirectX 12"
+    },
+    "dxvk": {
+      "verdict": "fails",
+      "detail": "DirectX 12 only, DXVK covers Direct3D 9 to 11"
+    }
   }
 }
