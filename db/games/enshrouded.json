@@ -1,0 +1,19 @@
+{
+  "id": "enshrouded",
+  "title": "Enshrouded",
+  "steam_appid": 1203620,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by joeyfigaro (highball-db#77, 2026-09-16), Apple M4 Pro, macOS 26.6.2, Highball version and engine not given: does not launch, on DXMT or on DXVK. No log came with it, and the thread closed after a month without a reply (2026-10-19). Not verified by the maintainer.",
+  "notes": "Did not launch on DXMT or DXVK for the one report so far (September, engine unknown). Not diagnosed, and not tried on a current engine or on D3DMetal.",
+  "knownIssues": [
+    {
+      "symptom": "Does not launch (DXMT and DXVK)",
+      "cause": "not diagnosed (no log)",
+      "fix": "none known. Untested: D3DMetal and current engines"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

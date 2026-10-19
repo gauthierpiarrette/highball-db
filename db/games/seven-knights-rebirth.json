@@ -1,0 +1,19 @@
+{
+  "id": "seven-knights-rebirth",
+  "title": "Seven Knights Re:BIRTH",
+  "steam_appid": null,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by 8rkqh7wq5n-ship-it (highball#115, 2026-09-16), Apple M3 Pro, macOS 27.0, Highball 0.9.14: the Netmarble launcher does not install, so the game never starts. The attached log was dxdiag's, not the launcher's, and the thread closed after a month without a reply (2026-10-19). Not verified by the maintainer.",
+  "notes": "Netmarble's launcher did not install for the one report so far (September). Not diagnosed.",
+  "knownIssues": [
+    {
+      "symptom": "The Netmarble launcher does not install",
+      "cause": "not diagnosed (no launcher log)",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

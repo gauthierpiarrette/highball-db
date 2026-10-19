@@ -1,0 +1,19 @@
+{
+  "id": "sniper-ghost-warrior-contracts",
+  "title": "Sniper Ghost Warrior Contracts",
+  "steam_appid": 973580,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by kakapiilub (highball-db#61, 2026-09-15), Apple M5, macOS 26.6.2, Highball 0.9.19, the Wine 11 engine x64-crossover26.3-r8: launches but is not playable, textures and assets do not load. No log came with it, and the thread closed after a month without a reply (2026-10-19). Not verified by the maintainer.",
+  "notes": "Launches without its textures and assets for the one report so far, on an early Wine 11 engine (r8). Not diagnosed, and not tried on a current engine.",
+  "knownIssues": [
+    {
+      "symptom": "Launches, but textures and assets do not load",
+      "cause": "not diagnosed (no log)",
+      "fix": "none known. Untested on current engines"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
