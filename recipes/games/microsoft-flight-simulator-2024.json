@@ -10,24 +10,34 @@
   "minMemoryGB": 32,
   "knownIssues": [
     {
-      "symptom": "The game refuses to start with 'Your graphics card does not support Shader Model 6.7'",
-      "cause": "the Intel engines' D3DMetal reports Shader Model 6.6",
-      "fix": "this recipe asks for the native arm64 preview engine, which the game runs on through vkd3d-proton (shown to installs with the preview key)"
+      "symptom": "On the Intel engines the game refuses to start with 'Your graphics card does not support Shader Model 6.7', or quits during its first loading screen",
+      "cause": "D3DMetal 3 and the first D3DMetal 4 betas report Shader Model 6.6, and past that check the game stops during its first load under Rosetta",
+      "fix": "this recipe asks for the native arm64 preview engine, which Play offers for this game"
     },
     {
       "symptom": "A short freeze of one to two seconds a few times a flight, more in daylight",
       "cause": "Metal stopping on lossless-compressed images the game copies every frame",
-      "fix": "this recipe sets HB_MVK_NO_LOSSLESS=1 on the environment, which removes most of them; one flight in four still shows two in daylight"
+      "fix": "this recipe sets HB_MVK_NO_LOSSLESS=1 on the environment, which removes most of them, and one flight in four still shows two in daylight"
     },
     {
-      "symptom": "About one start in sixteen ends in a crash during the world load",
+      "symptom": "About one start in sixteen to forty ends in a crash during the world load",
       "cause": "under study (memory corruption during the load)",
-      "fix": "none yet; start again"
+      "fix": "none yet, start again"
     },
     {
-      "symptom": "Seven minutes to the start screen and four more from Start to the cockpit",
-      "cause": "the emulator translating the game's code and the shader preparation",
-      "fix": "none; the second start reuses the shader and code caches"
+      "symptom": "About seven minutes to the start screen and four more from Start to the cockpit",
+      "cause": "the emulator translating the game's code, the shader preparation and the game unpacking its packages on one thread",
+      "fix": "none, later starts reuse the shader and code caches"
+    },
+    {
+      "symptom": "Short hitches remain, most on the first take-off after loading and when one of the game's pop-ups opens",
+      "cause": "under study",
+      "fix": "none yet"
+    },
+    {
+      "symptom": "Menus can freeze for three to four seconds",
+      "cause": "under study",
+      "fix": "switching to another app and back with Cmd+Tab ends the freeze, as a tester found"
     },
     {
       "symptom": "Far map tiles stay coarse on the Free Flight page away from the departure airport, and the main menu's globe shows pale wedges over the oceans",
@@ -47,10 +57,10 @@
   ],
   "lastVerified": {
     "date": "2026-10-19",
-    "engine": "arm64-wine11.18-r5 (Wine 11.18 with patches-arm64 0001 to 0043, FEX 2610 with fex/patches 0001 to 0023 and this recipe's FEX switches, MoltenVK 1.4.2 with patches 0001 to 0016, vkd3d-proton)",
+    "engine": "arm64-wine11.18-r5 (Wine 11.18 with Highball's 25 arm64 patches, FEX 2610 with fex/patches 0001 to 0023 and this recipe's FEX switches, MoltenVK 1.4.2 with patches 0001 to 0016, vkd3d-proton 3.0.1)",
     "macos": "27.0",
     "chip": "Apple M4",
-    "result": "Steam copy (2537590) on a Mac mini M4 with 32 GB through Highball's test harness, in daylight at Gibraltar in a Cessna 172: boot, Free Flight, three 2-minute parks and three 1-minute take-off rolls with two in-game restarts a flight, at the Medium preset with FSR Balanced in 1080p. With this recipe's FEX switches (engine r5, FEX patch 0023), three flights against two on r4: frames over 100 ms 4 per park instead of 59 and 21 per minute of take-off roll instead of 55, frames over 250 ms 0.4 instead of 9 per park, the 99th percentile frame time 70 ms parked instead of 160, 23 fps parked and 19 rolling instead of 19 and 16. No crash, no GPU hang, about 7 minutes to the start screen and 13 to the cockpit. Not tested: camera turns, a longer flight, other aircraft or airports, a controller, any other Mac."
+    "result": "Steam copy (2537590) on a Mac mini M4 with 32 GB, in daylight at Gibraltar in a Cessna 172: boot, Free Flight, three 2-minute parks and three 1-minute take-off rolls with two in-game restarts a flight, at the Medium preset with FSR Balanced in a 1920x931 window. With this recipe's FEX switches (engine r5, FEX patch 0023), four flights against two on r4 in Highball's test harness: frames over 100 ms 5 per park instead of 59 and 23 per minute of take-off roll instead of 55, frames over 250 ms 0.5 instead of 9 per park, the 99th percentile frame time 71 ms parked instead of 160, 22.5 fps parked and 19 rolling instead of 19 and 16. A check flight on the released engine without the harness instrumentation did 24 fps parked and 20.5 rolling, with 5 and 4 frames over 100 ms per window. No crash, no GPU hang, about 7 minutes to the start screen and 13 to the cockpit. Not tested: camera turns, a longer flight, other aircraft or airports, a controller, any other Mac."
   },
   "steps": [
     {
@@ -119,7 +129,7 @@
     },
     {
       "type": "note",
-      "text": "Microsoft Flight Simulator 2024 runs on Highball's native arm64 preview engine only, which this recipe asks for (installs with the preview key see it; the Intel engines cannot start the game). It needs about 25 GB of memory, so a 16 GB Mac is unlikely to hold it. The first start takes about seven minutes to the start screen and four more from Start to the cockpit; later starts reuse the shader and code caches. Expect about 23 fps parked and 19 on the take-off roll in daylight at the Medium preset with FSR Balanced in 1080p on a base M4, and turn Motion Blur off in the graphics settings."
+      "text": "Microsoft Flight Simulator 2024 runs on Highball's native arm64 preview engine, which this recipe asks for, and the Intel engines cannot start it. The engine needs macOS 26.5 or later. It was tested on a Mac with 32 GB of memory, where the game used 25 to 27 GB. The first start takes about seven minutes to the start screen and four more from Start to the cockpit, and later starts reuse the shader and code caches. On a base M4 in daylight, expect 22 to 25 fps parked and 19 to 21 on the take-off roll at the Medium preset with FSR Balanced. Turn Motion Blur off in the graphics settings."
     }
   ]
 }
