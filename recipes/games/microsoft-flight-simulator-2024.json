@@ -3,7 +3,8 @@
   "kind": "game",
   "title": "Microsoft Flight Simulator 2024",
   "requires": [
-    "steam"
+    "steam",
+    "flight-controls-raw-hid"
   ],
   "renderer": "vkd3d",
   "engine": "arm64-wine11.18-r6",
@@ -13,6 +14,11 @@
       "symptom": "Joysticks, yokes, throttles and pedals do not show up in the game's controls, only mouse and keyboard",
       "cause": "the preview engines before r6 never started Wine's controller support (a missing SDL3 library name)",
       "fix": "this recipe's engine r6 starts it, and Highball offers the move when you press Play"
+    },
+    {
+      "symptom": "A Honeycomb Bravo throttle quadrant shows up as a gamepad (Controller_1) and its levers move the menus, or the Alpha yoke does not show up at all",
+      "cause": "Wine's controller driver counted the Bravo, six levers and dozens of switches, as a gamepad when it read it through SDL, and Apple's game controller layer hid the Alpha",
+      "fix": "this recipe's Flight controls as on Windows tweak reads Honeycomb devices directly, as Windows does; from Highball 0.10.23, Play applies it to environments set up before"
     },
     {
       "symptom": "On the Intel engines the game refuses to start with 'Your graphics card does not support Shader Model 6.7', or quits during its first loading screen",

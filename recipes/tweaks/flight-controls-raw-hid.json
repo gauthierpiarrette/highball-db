@@ -1,0 +1,28 @@
+{
+  "id": "flight-controls-raw-hid",
+  "kind": "tweak",
+  "title": "Flight controls as on Windows",
+  "requires": [],
+  "renderer": null,
+  "steps": [
+    {
+      "type": "registry",
+      "key": "HKLM\\System\\CurrentControlSet\\Services\\winebus\\Devices\\294b",
+      "name": "Hidraw",
+      "valueType": "REG_DWORD",
+      "data": "1"
+    },
+    {
+      "type": "note",
+      "text": "Wine's controller driver now reads Honeycomb flight controls (the Alpha yoke, the Bravo throttle quadrant, the Charlie pedals) directly, the way Windows does, with all their axes and buttons. Through SDL the Bravo, six levers and dozens of switches, came through as a gamepad, because Wine counts a device with six axes and at least 14 buttons as one (highball#397). It takes effect when the environment starts again. It does nothing while Controllers through SDL is on, since that tweak turns this path off."
+    }
+  ],
+  "knownIssues": [],
+  "lastVerified": {
+    "date": "2026-10-20",
+    "engine": "arm64-wine11.18-r6",
+    "macos": "27.0",
+    "chip": "Apple M1 Pro",
+    "result": "With WINEDEBUG=trace+hid, winebus logs '294b/ffffffff: enabling hidraw' when the environment starts, so every Honeycomb device (USB vendor 0x294B, the Bravo is 0x1901) takes the raw HID path and its SDL copy is dropped. No Honeycomb hardware here: the Bravo showing up as a gamepad is CaptMoore's report on an M4 Pro (highball#397)."
+  }
+}
