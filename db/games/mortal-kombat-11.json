@@ -6,12 +6,12 @@
   "renderer": null,
   "anticheat": null,
   "provenance": "Reported by hisis5707-droid (highball#390, 2026-10-19), Apple M1 with 8 GB, macOS 26, Highball 0.7.6: character faces are distorted on both DXVK and DXMT while clothing and stages look normal (screenshot on the issue). Not verified by the maintainer.",
-  "notes": "Faces are distorted, clothing and stages fine. Still so on Highball 0.10.21 with engine x64-sikarugir10.0_6-r28 and DXMT on an M1 with 8 GB (highball#390, 2026-10-19). That log shows MK11 asking DXMT for a tessellation factor of 32 on 16 pipelines, and DXMT clamping it to 8, its limit on GPUs before Apple9 (M1, M2) for tessellation through mesh shaders. Whether that clamp is what distorts the faces is not confirmed yet; D3DMetal, which has no such clamp, is the test.",
+  "notes": "Faces are distorted, clothing and stages fine: the skin shows deep creases on the forehead, the cheeks and under the eyes, as if the game's facial wrinkle detail were turned all the way up. Still so on Highball 0.10.21 with engine x64-sikarugir10.0_6-r28 on an M1 with 8 GB (highball#390, 2026-10-19), on DXMT and, tried the next day, on D3DMetal too. The DXMT log shows the game's tessellation factor clamped from 32 to 8 on GPUs before Apple9, but since D3DMetal, which has no such clamp, draws the faces the same way, that clamp is not the cause. Not diagnosed.",
   "knownIssues": [
     {
-      "symptom": "Character faces distorted, clothing and stages fine (DXMT on an M1, Highball 0.10.21, and DXVK on 0.7.6)",
-      "cause": "not confirmed. On M1 and M2 DXMT caps tessellation at 8 where MK11 asks for 32 (measured in the log), which would flatten detail the game adds to faces",
-      "fix": "untested. The game's own graphics mode set to D3DMetal"
+      "symptom": "Character faces distorted, with deep creases in the skin, clothing and stages fine (DXMT and D3DMetal on an M1 with 8 GB, Highball 0.10.21, highball#390; DXVK on 0.7.6)",
+      "cause": "not diagnosed. The same on DXMT and D3DMetal, so not either translator's limits (DXMT's tessellation clamp ruled out, 2026-10-20)",
+      "fix": "none known"
     }
   ],
   "launchArgs": null,
