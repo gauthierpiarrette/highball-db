@@ -6,9 +6,14 @@
     "steam"
   ],
   "renderer": "vkd3d",
-  "engine": "arm64-wine11.18-r5",
+  "engine": "arm64-wine11.18-r6",
   "minMemoryGB": 32,
   "knownIssues": [
+    {
+      "symptom": "Joysticks, yokes, throttles and pedals do not show up in the game's controls, only mouse and keyboard",
+      "cause": "the preview engines before r6 never started Wine's controller support (a missing SDL3 library name)",
+      "fix": "this recipe's engine r6 starts it, and Highball offers the move when you press Play"
+    },
     {
       "symptom": "On the Intel engines the game refuses to start with 'Your graphics card does not support Shader Model 6.7', or quits during its first loading screen",
       "cause": "D3DMetal 3 and the first D3DMetal 4 betas report Shader Model 6.6, and past that check the game stops during its first load under Rosetta",
@@ -56,11 +61,11 @@
     }
   ],
   "lastVerified": {
-    "date": "2026-10-19",
-    "engine": "arm64-wine11.18-r5 (Wine 11.18 with Highball's 25 arm64 patches, FEX 2610 with fex/patches 0001 to 0023 and this recipe's FEX switches, MoltenVK 1.4.2 with patches 0001 to 0016, vkd3d-proton 3.0.1)",
+    "date": "2026-10-20",
+    "engine": "arm64-wine11.18-r6 (r5 with the SDL3 library name Wine's controller support needs: Wine 11.18 with Highball's 25 arm64 patches, FEX 2610 with fex/patches 0001 to 0023 and this recipe's FEX switches, MoltenVK 1.4.2 with patches 0001 to 0016, vkd3d-proton 3.0.1)",
     "macos": "27.0",
     "chip": "Apple M4",
-    "result": "Steam copy (2537590) on a Mac mini M4 with 32 GB, in daylight at Gibraltar in a Cessna 172: boot, Free Flight, three 2-minute parks and three 1-minute take-off rolls with two in-game restarts a flight, at the Medium preset with FSR Balanced in a 1920x931 window. With this recipe's FEX switches (engine r5, FEX patch 0023), four flights against two on r4 in Highball's test harness: frames over 100 ms 5 per park instead of 59 and 23 per minute of take-off roll instead of 55, frames over 250 ms 0.5 instead of 9 per park, the 99th percentile frame time 71 ms parked instead of 160, 22.5 fps parked and 19 rolling instead of 19 and 16. A check flight on the released engine without the harness instrumentation did 24 fps parked and 20.5 rolling, with 5 and 4 frames over 100 ms per window. No crash, no GPU hang, about 7 minutes to the start screen and 13 to the cockpit. Not tested: camera turns, a longer flight, other aircraft or airports, a controller, any other Mac."
+    "result": "On r6 (2026-10-20), one check flight in Highball's test harness: boot, Free Flight, a 2-minute park and a 1-minute take-off roll at Gibraltar, 26.1 fps parked and 21.8 rolling, no crash, no GPU hang, and Wine's controller buses (SDL, UDEV, IOHID) started. On r5 (2026-10-19): steam copy (2537590) on a Mac mini M4 with 32 GB, in daylight at Gibraltar in a Cessna 172: boot, Free Flight, three 2-minute parks and three 1-minute take-off rolls with two in-game restarts a flight, at the Medium preset with FSR Balanced in a 1920x931 window. With this recipe's FEX switches (engine r5, FEX patch 0023), four flights against two on r4 in Highball's test harness: frames over 100 ms 5 per park instead of 59 and 23 per minute of take-off roll instead of 55, frames over 250 ms 0.5 instead of 9 per park, the 99th percentile frame time 71 ms parked instead of 160, 22.5 fps parked and 19 rolling instead of 19 and 16. A check flight on the released engine without the harness instrumentation did 24 fps parked and 20.5 rolling, with 5 and 4 frames over 100 ms per window. No crash, no GPU hang, about 7 minutes to the start screen and 13 to the cockpit. Not tested: camera turns, a longer flight, other aircraft or airports, a real controller, any other Mac."
   },
   "steps": [
     {
