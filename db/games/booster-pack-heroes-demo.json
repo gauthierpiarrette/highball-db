@@ -1,0 +1,13 @@
+{
+  "id": "booster-pack-heroes-demo",
+  "title": "Booster Pack Heroes Demo",
+  "steam_appid": 4659940,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by MagnusPladsen (highball-db#585, 2026-10-20), Apple M3 Max, macOS 26.6.2, the Wine 11 engine x64-crossover26.3-r25 with DXMT and Highball's launch environment, started from the Mac Steam client through Proton-ish 0.1.0-beta.5 (a NotProton fork that runs Highball's engines as a Steam Play tool), not the Highball app, rated 4 of 5 after 40 minutes with a few short frame drops. Not verified by the maintainer.",
+  "notes": "A Unity 6 game. Reported playable on DXMT with Highball's Wine 11 engine, started through another tool, with a few short frame drops.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

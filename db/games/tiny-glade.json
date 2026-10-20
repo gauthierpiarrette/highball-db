@@ -1,0 +1,13 @@
+{
+  "id": "tiny-glade",
+  "title": "Tiny Glade",
+  "steam_appid": 2198150,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by boglr (highball-db#589, 2026-10-20), Apple M2 Pro, macOS 26.5.2, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT environment, msync, rated 5 of 5 after 18 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect with the default engine, 18 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

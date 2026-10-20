@@ -1,0 +1,13 @@
+{
+  "id": "counter-strike-condition-zero",
+  "title": "Counter-Strike: Condition Zero",
+  "steam_appid": 80,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by linjunpop (highball-db#582, 2026-10-20), Apple M2 Max, macOS 27.0.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXVK, msync, recipes steam and vcrun2022, rated 5 of 5 after 41 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect with the default engine, 41 minutes. A GoldSrc game that draws with OpenGL, so the graphics mode does not apply to it.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

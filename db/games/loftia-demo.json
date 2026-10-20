@@ -1,0 +1,13 @@
+{
+  "id": "loftia-demo",
+  "title": "Loftia Demo",
+  "steam_appid": 5315310,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by amfakh (highball-db#580, 2026-10-20), Apple M4, macOS 27.0.1, Highball 0.10.21, engine x64-sikarugir10.0_6-r29, D3DMetal, msync, recipes steam and vcrun2022, rated 5 of 5 after 67 minutes. Not verified by the maintainer.",
+  "notes": "Reported flawless on D3DMetal with the default engine, 67 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

@@ -4,7 +4,7 @@
   "steam_appid": 374320,
   "status": "community",
   "renderer": "d3dmetal",
-  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball. A failure report on an M4 Pro (highball-db#204, 2026-09-24) is open. smalltin (highball-db#435, 2026-10-10), Apple M5, macOS 27.0.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, DXMT, rated 4 of 5 after 38 minutes, the issues not described.",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball. A failure report on an M4 Pro (highball-db#204, 2026-09-24) is open. smalltin (highball-db#435, 2026-10-10), Apple M5, macOS 27.0.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, DXMT, rated 4 of 5 after 38 minutes, the issues not described. detnarrrrrrrrr (highball-db#583, 2026-10-20), Apple M5, macOS 27.0.1, Highball 0.10.21, engine x64-sikarugir10.0_6-r28, D3DMetal for the game, AVX advertised, rated 4 of 5 after 8 minutes: the game crashed when opening its settings until Emulate display mode changes was turned on.",
   "notes": "works offline; anti-cheat softban risk online. Direct3D 11. On an M4 Pro DXMT froze the game on every kill and hung macOS's window server; D3DMetal (Apple's DirectX 12 support in the app) plays through kills there, confirmed 2026-09-25 by the reporter, so it is the mode the page recommends. A player on an M5 with the Wine 10 engine r21 rated it playable on DXMT over 38 minutes, so the freeze on kills may not happen on every Mac or engine. The page keeps D3DMetal until more reports agree.",
   "lastVerified": null,
   "knownIssues": [
@@ -12,6 +12,11 @@
       "symptom": "The game freezes when an enemy is killed, then crashes (reported on an M4 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r7, DXMT, Highball 0.9.35, highball-db#204, rated 2, launches but not playable).",
       "cause": "not in the game's log, which ends normally. The file the reporter attached is a WindowServer watchdog stackshot: macOS's window server stopped answering while the game ran (display state OFF at capture), which is the GPU or its driver hanging on the M4 Pro, not a fault inside Wine. Every kill triggers it for the reporter. Not reproduced on the M1 Pro here.",
       "fix": "use D3DMetal for this game (Apple's DirectX 12 support in the app). Confirmed by the reporter on the M4 Pro: kills no longer freeze it."
+    },
+    {
+      "symptom": "The game crashes when its settings open (reported on an M5, engine r28, D3DMetal, highball-db#583)",
+      "cause": "not diagnosed. Turning on Emulate display mode changes stopped it, which points at the display mode list the game reads there",
+      "fix": "turn on Emulate display mode changes in the environment's settings, as the reporter did"
     }
   ],
   "rendererResults": {

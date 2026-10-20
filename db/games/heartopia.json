@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by myzenon (highball-db#155, 2026-09-20): rated 4, playable with minor issues, Apple M4 Pro, macOS 27.0, engine x64-sikarugir10.0_6-r5, Highball 0.9.28; graphics mode not stated. Not run here.",
+  "provenance": "Reported by myzenon (highball-db#155, 2026-09-20): rated 4, playable with minor issues, Apple M4 Pro, macOS 27.0, engine x64-sikarugir10.0_6-r5, Highball 0.9.28; graphics mode not stated. Not run here. amfakh (highball-db#577 and #578, 2026-10-20), Apple M4, macOS 27.0.1, Highball 0.10.21, rated 4 of 5 twice: on engine r15 with DXMT at Ultra with FXAA, 40 to 50 fps once loaded, the first logo video stuttering, and on engine r29 with D3DMetal, the video fixed and the frame rate steadier. Both times the account page's text did not draw.",
   "notes": "Reported playable at 120 fps, about 100 on the 2K highest preset, on an M4 Pro with macOS 27. Measured on an M4 with macOS 27.0 on 2026-09-30, DXMT, up to the announcement board, about 59 fps on the game's own counter there, not played further. The input faults below are fixed in engine r15. Checked here on 2026-10-05 on an M4 with engine r21 in DXMT mode: the login dialog comes up over the game scene at 110 s, its text not drawn (a web view); not played.",
   "knownIssues": [
     {
@@ -19,7 +19,7 @@
       "fix": "Fixed in engine r15, which environments on the default engine pick up by themselves once Steam is closed"
     },
     {
-      "symptom": "The dialog shown while the game loads has no text, only a white and a teal button",
+      "symptom": "The dialog shown while the game loads has no text, only a white and a teal button. The account page's text is missing the same way (still on engine r29 with D3DMetal, highball-db#578, 2026-10-20)",
       "cause": "Not the graphics mode: it looks the same on DXMT and DXVK (an M4 with macOS 27.0). Not found yet. The game embeds a Chromium web view (Vuplex 3D WebView), whose helper process was not running, and logs \"Got null handle from IDXGIResource::GetSharedHandle\" 30 times at start, so the dialog's page may never reach the screen. Not confirmed",
       "fix": "The teal button on the right continues into the game"
     }
