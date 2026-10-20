@@ -1,0 +1,19 @@
+{
+  "id": "ore-factory-squad",
+  "title": "Ore Factory Squad",
+  "steam_appid": 4210580,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by APlusTotalgut (highball-db#568, 2026-10-19), Apple M5, macOS 27.0.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, msync, recipes steam and vcrun2022, rated 4 of 5 after 91 minutes: the top bar sits in the wrong place. Not verified by the maintainer.",
+  "notes": "Reported playable on DXMT with the default engine, 91 minutes, with the top bar out of place.",
+  "knownIssues": [
+    {
+      "symptom": "The top bar sits in the wrong place",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

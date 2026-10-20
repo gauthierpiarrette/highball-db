@@ -1,0 +1,13 @@
+{
+  "id": "azeroth-survivors",
+  "title": "Azeroth Survivors (艾澤拉斯倖存者)",
+  "steam_appid": null,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by YeeDragon (highball-db#565, 2026-10-19), Apple M2 Max, macOS 26.6.2, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, sync off, Windows 10, in an environment with Steam and Battle.net, rated 5 of 5 after 8 minutes. The report names no store, and the game is not on Steam. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT with the default engine. Where the game comes from is not known.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

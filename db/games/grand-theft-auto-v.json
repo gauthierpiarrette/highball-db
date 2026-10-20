@@ -74,7 +74,7 @@
     {
       "symptom": "The lighting turns far too bright during play (M2 Max, highball-db#452)",
       "cause": "not diagnosed",
-      "fix": "restart the game; the player also cleared it by turning a setting off in the game's menu"
+      "fix": "turn off the Steam overlay in game (Steam, Settings, In Game), which stopped it for the reporter. Setting Post FX to High in the game's graphics settings also helped (highball-db#452, 2026-10-19)"
     }
   ],
   "launchArgs": [

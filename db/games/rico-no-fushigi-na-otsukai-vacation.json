@@ -8,7 +8,7 @@
   "notes": "An NW.js game. A translation tool that runs it on NW.js 0.48.4 (Chromium 85) does not work in Highball. Without the tool, and with the game's NW.js runtime replaced by 0.83.0 (Chromium 120), the player reports it running perfectly.",
   "knownIssues": [
     {
-      "symptom": "The game does not run through a translation tool built on NW.js 0.48.4 (Chromium 85)",
+      "symptom": "The game does not run through a translation tool built on NW.js 0.48.4 (Chromium 85). Nothing happens after starting it, and its log only shows WinHttpCrackUrl errors (FloraKira, 2026-10-18)",
       "cause": "Not diagnosed",
       "fix": "Run it without the tool on a newer NW.js runtime, 0.83.0 (Chromium 120) in this report"
     }

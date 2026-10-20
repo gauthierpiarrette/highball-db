@@ -1,0 +1,13 @@
+{
+  "id": "wrath-aeon-of-ruin",
+  "title": "WRATH: Aeon of Ruin",
+  "steam_appid": 1000410,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Swiss-Mac-User (highball-db#571, 2026-10-19), Apple M5 Pro, macOS 27.2, Highball 0.10.21, engine x64-sikarugir10.0_6-r29, DXVK, sync off, rated 5 of 5 after 19 minutes: almost straight 120 fps, with short hitches when new sprites or effects load and some drops in larger areas. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXVK with the default engine, close to 120 fps on an M5 Pro, with short hitches the first time new effects load.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

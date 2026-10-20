@@ -1,0 +1,19 @@
+{
+  "id": "star-wars-galaxy-of-heroes",
+  "title": "Star Wars: Galaxy of Heroes",
+  "steam_appid": null,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Dionysos211 (highball-db#566, 2026-10-19), Apple M5 Pro, macOS 27.0.1, Highball 0.10.21, engine x64-crossover26.3-r27, DXMT, msync, Windows 10, AVX advertised, DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1 and WINE_NO_DELAYED_FORK=1 in the environment's variables, through the EA app, rated 5 of 5. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT with the Wine 11 engine, through the EA app. Started straight from Highball's library, the game runs, but Highball says it may have failed to start and offers another graphics mode.",
+  "knownIssues": [
+    {
+      "symptom": "Highball says the game may have failed to start and offers another graphics mode, while the game is running (started from Highball's library)",
+      "cause": "not diagnosed",
+      "fix": "ignore the message (open the log, then close it) and keep DXMT, as the reporter does"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
