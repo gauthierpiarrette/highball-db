@@ -1,0 +1,13 @@
+{
+  "id": "amanda-the-adventurer",
+  "title": "Amanda the Adventurer",
+  "steam_appid": 2166060,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by kinging742 (highball-db#593, 2026-10-20), Apple M4, macOS 27.2, Highball 0.10.21, engine x64-sikarugir10.0_6-r28, DXMT environment, AVX advertised, rated 5 of 5 after 11 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect with the default engine, 11 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

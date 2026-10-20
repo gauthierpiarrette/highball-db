@@ -1,0 +1,13 @@
+{
+  "id": "abyssal-lapidary-demo",
+  "title": "Abyssal Lapidary Demo",
+  "steam_appid": 4736580,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by flacknabe-cpu (highball-db#591, 2026-10-20), Apple M1 Pro, macOS 26.7, Highball 0.10.21, engine x64-sikarugir10.0_6-r28, DXMT, msync, a 60 fps cap, rated 5 of 5 after 6 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT with the default engine, in a short session.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
