@@ -1,0 +1,33 @@
+{
+  "id": "physx",
+  "kind": "tweak",
+  "title": "NVIDIA PhysX System Software (legacy PhysX 2.x)",
+  "requires": [],
+  "renderer": null,
+  "steps": [
+    {
+      "type": "winetricks",
+      "verbs": [
+        "physx"
+      ],
+      "slow": "Downloads NVIDIA's PhysX System Software 9.23.1019 (28 MB) and installs it silently, a minute or two."
+    },
+    {
+      "type": "note",
+      "text": "NVIDIA's PhysX System Software is installed in this environment. Games built on PhysX 2.7 and 2.8 (2007 to 2011) ship only PhysXLoader.dll and load PhysXCore.dll from Program Files (x86)\\NVIDIA Corporation\\PhysX\\Engine\\v2.x, which this installs. Without it such a game can stop with its own fatal error right after starting (Bionic Commando Rearmed, highball#375, not yet confirmed). Newer PhysX games carry their runtime themselves and don't need it. PhysX runs on the CPU here."
+    }
+  ],
+  "installedMarkers": [
+    {
+      "file": "Program Files (x86)/NVIDIA Corporation/PhysX/Engine/v2.8.1/PhysXCore.dll"
+    }
+  ],
+  "knownIssues": [],
+  "lastVerified": {
+    "date": "2026-10-20",
+    "engine": "x64-sikarugir10.0_6-r28",
+    "macos": "27.0",
+    "chip": "Apple M4",
+    "result": "winetricks physx downloads PhysX_9.23.1019_SystemSoftware.exe from NVIDIA and installs it silently in a fresh environment: Program Files (x86)\\NVIDIA Corporation\\PhysX\\Engine holds PhysXCore.dll and PhysXCooking.dll for v2.7.3 to v2.7.6, v2.8.0, v2.8.1 and v2.8.3. Whether it mends a given game is per game; Bionic Commando Rearmed not yet tried."
+  }
+}

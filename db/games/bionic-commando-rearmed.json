@@ -11,7 +11,7 @@
     {
       "symptom": "Crash on launch, on DXVK and on Wine's own Direct3D alike (highball#375)",
       "cause": "not diagnosed. The game raises its own fatal error after starting a second copy of itself, and PhysXCore never loads, which points at NVIDIA's PhysX System Software missing (assumed)",
-      "fix": "none known yet"
+      "fix": "untested yet. Install NVIDIA's PhysX System Software in the environment (the PhysX component under Windows components from the next Highball version, or now NVIDIA's PhysX_9.23.1019_SystemSoftware.exe run with Run a Windows program), then start the game again"
     }
   ],
   "launchArgs": null,
