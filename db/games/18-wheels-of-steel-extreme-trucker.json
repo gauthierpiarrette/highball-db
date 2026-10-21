@@ -1,0 +1,19 @@
+{
+  "id": "18-wheels-of-steel-extreme-trucker",
+  "title": "18 Wheels of Steel: Extreme Trucker",
+  "steam_appid": 33730,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by kokoshkv (highball-db#603, 2026-10-21), Apple M1, macOS 26.5.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT environment, msync, rated 4 of 5 after 6 minutes. Not verified by the maintainer.",
+  "notes": "Reported playable on the default engine with DXMT on an M1 after a six-minute session, with frame drops when switching cameras. Nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "Frame drops when switching cameras (reported on an M1, macOS 26.5.2, DXMT, engine r28)",
+      "cause": "not measured",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

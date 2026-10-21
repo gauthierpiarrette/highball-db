@@ -1,0 +1,19 @@
+{
+  "id": "god-of-war-ragnarok",
+  "title": "God of War Ragnarök",
+  "steam_appid": 2322010,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by Jessebnda (highball-db#596, 2026-10-20), Apple M5 Pro, macOS 26.6.2, Highball 0.10.22, engine x64-crossover26.3-r27, D3DMetal environment, msync, AVX advertised, rated 3 of 5 (playable with workarounds). Not verified by the maintainer.",
+  "notes": "Reported running on the Wine 11 engine (x64-crossover26.3-r27) with the environment on D3DMetal and AVX advertised, which the game needs: without it the game stops at launch asking for AVX2, F16C and FMA. On the default engine (x64-sikarugir10.0_6-r28) with D3DMetal it showed a black screen for about two minutes and crashed, after CheckFeatureSupport queries that D3DMetal did not handle (0xc06d007e). The reporter also set D3DM_ENABLE_METALFX=1 and DXMT_ENABLE_NVEXT=1, which were not shown to matter, and installed the engine with the command-line tool, while the environment's Advanced, Engine picker offers the same Wine 11 engine. The game is DirectX 12 only. No session length or frame rate was given and nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "A black screen for about two minutes, then a crash, on the default engine with D3DMetal (reported on an M5 Pro, macOS 26.6.2)",
+      "cause": "by the reporter's log, the default engine's D3DMetal does not answer some of the game's CheckFeatureSupport queries (0xc06d007e)",
+      "fix": "move the environment to the Wine 11 engine (Advanced, Engine, x64-crossover26.3, r27 or later), keep D3DMetal and turn on Advertise AVX"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

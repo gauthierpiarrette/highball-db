@@ -1,0 +1,13 @@
+{
+  "id": "spore-galactic-adventures",
+  "title": "SPORE Galactic Adventures",
+  "steam_appid": 24720,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by TheLegendGabe (highball-db#600, 2026-10-21), Apple M4, macOS 26.5, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT environment, msync, rated 5 of 5 after 27 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on the default engine with DXMT over a 27-minute session, with every graphics setting at its highest: the creature creator and the Sporepedia ran as they do on Windows, by the reporter. Nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
