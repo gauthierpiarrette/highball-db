@@ -15,21 +15,21 @@
     {
       "type": "environment",
       "name": "D3DM_VENDOR_ID",
-      "value": "0x8086"
+      "value": "0x10de"
     },
     {
       "type": "environment",
       "name": "D3DM_DEVICE_ID",
-      "value": "0x56a1"
+      "value": "0x2786"
     },
     {
       "type": "environment",
       "name": "D3DM_DEVICE_DESCRIPTION",
-      "value": "Intel(R) Arc(TM) A750 Graphics"
+      "value": "NVIDIA GeForce RTX 4070"
     },
     {
       "type": "note",
-      "text": "Forza Horizon 6 needs macOS 27 and the Wine 11 engine r18, which carries Apple's D3DMetal 4. Its copy protection opens files in a way the Wine 10 engine does not handle, and it refuses D3DMetal 3 as an unsupported graphics card (FH205). D3DMetal presents itself as an AMD card by default, and the game then crashes in its AMD-only code (its FHE21 dialog), so this recipe has D3DMetal report an Intel Arc A750 instead. The first start spends about three minutes at 'Optimizing for your PC'. The game asks you to sign in to Xbox once with a code at microsoft.com/link, and remembers it from then on. On a base M4 at 1080p expect about 28 fps on the High preset the game picks, 38 on Medium with FSR Balanced (Video settings), 50 on Very Low."
+      "text": "Forza Horizon 6 needs macOS 27 and the Wine 11 engine r18, which carries Apple's D3DMetal 4. Its copy protection opens files in a way the Wine 10 engine does not handle, and it refuses D3DMetal 3 as an unsupported graphics card (FH205). D3DMetal presents itself as an AMD card by default, and the game then crashes in its AMD-only code (its FHE21 dialog), so this recipe has D3DMetal report an NVIDIA GeForce RTX 4070 instead. The game then offers NVIDIA Reflex, and DLSS Super Resolution when Enable DLSS (MetalFX) is on in the environment's Graphics settings (Highball 0.10.23 or later): D3DMetal runs it on MetalFX. DLSS Frame Generation stays unavailable. The first start spends about three minutes at 'Optimizing for your PC'. The game asks you to sign in to Xbox once with a code at microsoft.com/link, and remembers it from then on. On a base M4 at 1080p expect about 28 fps on the High preset the game picks, 38 on Medium with FSR Balanced (Video settings), 50 on Very Low."
     }
   ],
   "knownIssues": [
@@ -40,13 +40,18 @@
     },
     {
       "symptom": "'Your graphics card is not supported (Code: FH205)' or a crash with Code FHE21 right after the splash",
-      "cause": "the environment is not on r18, or the recipe's graphics card setting is missing",
+      "cause": "the environment is not on a D3DMetal 4 engine (r18 or later), or the recipe's graphics card setting is missing",
       "fix": "apply this recipe and accept the engine Play offers"
     },
     {
       "symptom": "Asked to sign in to Xbox again on every start",
       "cause": "engines before r18 and r19 lose the saved Xbox login on macOS",
       "fix": "the r18 engine this recipe asks for keeps it"
+    },
+    {
+      "symptom": "DLSS is not in the game's Video settings",
+      "cause": "Enable DLSS (MetalFX) is off in the environment's Graphics settings, or Highball is older than 0.10.23, which left NVIDIA's DLSS loader without a signed core to load",
+      "fix": "update Highball, turn on Enable DLSS (MetalFX), stop the environment and start the game again"
     }
   ],
   "lastVerified": {
