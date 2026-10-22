@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": "d3dmetal",
   "anticheat": null,
-  "provenance": "Reported by sgoger (highball-db#358, 2026-10-06), the Steam copy v5.1.50313.0, Apple M4 Pro, macOS 27.0, Highball 0.10.3, engine x64-sikarugir10.0_6-r19, D3DMetal, rated 3 of 5. The workaround and causes below are the reporter's; not verified by the maintainer.",
-  "notes": "Single-player plays on the Wine 10 engine with D3DMetal, about 50 fps on the Metal HUD at 2560x1440 in the campaign, after a manual fix for a start-up crash. Multiplayer needs Microsoft's ucrtbase.dll: with Wine's own, matches desync. Both fixes are by hand for now; Highball's recipes cannot yet move or copy a game's own files. The reporter found the Wine 11 engine (r19) desyncs the same way, and Steam's window draws black there with Microsoft's ucrtbase, so stay on the Wine 10 engine.",
+  "provenance": "Reported by sgoger (highball-db#358, 2026-10-06), the Steam copy v5.1.50313.0, Apple M4 Pro, macOS 27.0, Highball 0.10.3, engine x64-sikarugir10.0_6-r19, D3DMetal, rated 3 of 5. The workaround and causes below are the reporter's; not verified by the maintainer. davidysding (highball-db#631, 2026-10-22), Apple M5, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, rated 3 of 5 after 9 minutes.",
+  "notes": "Single-player plays on the Wine 10 engine with D3DMetal, about 50 fps on the Metal HUD at 2560x1440 in the campaign, after a manual fix for a start-up crash. Multiplayer needs Microsoft's ucrtbase.dll: with Wine's own, matches desync. Both fixes are by hand for now; Highball's recipes cannot yet move or copy a game's own files. The reporter found the Wine 11 engine (r19) desyncs the same way, and Steam's window draws black there with Microsoft's ucrtbase, so stay on the Wine 10 engine. A second player on an M5 got it running with the same ucrtbase steps, Advertise AVX, Automatic graphics (D3DMetal for the game) and Synchronization set to None, which cleared a black-screen freeze for them (highball-db#631).",
   "knownIssues": [
     {
       "symptom": "Crash at start-up",

@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by Naavalanarul (highball-db#301, 2026-10-04, game confirmed as the first Cities: Skylines on 2026-10-05), Apple M4 Max, macOS 27.0, Highball 0.10.2, engine x64-sikarugir10.0_6-r17, environment on DXMT, rated 5 of 5 after 3 minutes. Not verified by the maintainer.",
-  "notes": "Reported perfect with the environment on DXMT, in a short session. Steam also sells a Mac build of the game.",
+  "provenance": "Reported by Naavalanarul (highball-db#301, 2026-10-04, game confirmed as the first Cities: Skylines on 2026-10-05), Apple M4 Max, macOS 27.0, Highball 0.10.2, engine x64-sikarugir10.0_6-r17, environment on DXMT, rated 5 of 5 after 3 minutes. Not verified by the maintainer. umdPetme (highball-db#627, 2026-10-22), Apple M5 Max, macOS 26.6.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, Windows 11, rated 4 of 5 after 126 minutes.",
+  "notes": "Reported perfect with the environment on DXMT, in a short session. Steam also sells a Mac build of the game. A longer session of 126 minutes on an M5 Max rates it 4, with the picture a little less sharp than expected.",
   "nativeMac": {
     "available": true,
     "where": "Steam"

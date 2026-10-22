@@ -1,0 +1,19 @@
+{
+  "id": "assassins-creed-brotherhood",
+  "title": "Assassin's Creed Brotherhood",
+  "steam_appid": 48190,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Denis-Rubtsov (highball-db#630, 2026-10-22), Apple M1, macOS 26.6.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 2 hours at 1680x1050 with the default graphics settings. Not verified by the maintainer.",
+  "notes": "Reported playable over two hours on an M1 with the default engine and DXMT, at 1680x1050 with the game's default settings, with freezes in some cutscenes. Nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "Freezes in some cutscenes (reported on an M1, macOS 26.6.2, DXMT, engine r28)",
+      "cause": "not measured",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

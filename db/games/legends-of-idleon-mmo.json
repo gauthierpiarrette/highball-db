@@ -1,0 +1,19 @@
+{
+  "id": "legends-of-idleon-mmo",
+  "title": "Legends of Idleon MMO",
+  "steam_appid": 1476970,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by MagnusPladsen (highball-db#628, 2026-10-22) through Proton-ish (macOS Steam) with Highball's Wine 11 engine x64-crossover26.3-r27 and DXMT, Apple M3 Max, macOS 26.6.2, rated 3 of 5 after about 30 minutes in a 1280x720 window. Not run through the Highball app, not verified by the maintainer.",
+  "notes": "Reported working but laggy over about 30 minutes, which the reporter puts down partly to the game being an MMO. Run through Proton-ish on Highball's Wine 11 engine, not through the Highball app. Nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "Frequent lag (reported on an M3 Max, macOS 26.6.2, DXMT, Wine 11 engine r27, through Proton-ish)",
+      "cause": "not measured",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

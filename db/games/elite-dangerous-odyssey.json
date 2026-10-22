@@ -5,13 +5,23 @@
   "status": "community",
   "renderer": "d3dmetal",
   "anticheat": null,
-  "provenance": "Reported by kurimanju-dev (highball-db#503, 2026-10-15), Apple M1 Pro, macOS 27.0.1, Highball 0.10.16, engine x64-sikarugir10.0_6-r26, D3DMetal, recipes steam and vcrun2022, rated 5 of 5: flawless from the launcher into the game, Ultra at 1080p, 60 fps and more in space, 40 to 50 in a station. Not verified by the maintainer.",
-  "notes": "Reported flawless on D3DMetal on the default engine, from Frontier's launcher into the game. The reporter says switching the environment to D3DMetal improved performance and loading times substantially over the mode they had before. Ultra settings at 1080p: 60 fps and more in space, 40 to 50 in a space station, on an M1 Pro. Odyssey is an expansion of Elite Dangerous (Steam 359320), so this page is the base game's too (the reporter, 2026-10-19).",
+  "provenance": "Reported by kurimanju-dev (highball-db#503, 2026-10-15), Apple M1 Pro, macOS 27.0.1, Highball 0.10.16, engine x64-sikarugir10.0_6-r26, D3DMetal, recipes steam and vcrun2022, rated 5 of 5: flawless from the launcher into the game, Ultra at 1080p, 60 fps and more in space, 40 to 50 in a station. Not verified by the maintainer. Jimbo5793 (highball-db#634, 2026-10-22), Apple M2 Pro with 16 GB, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal, Retina pixels at 100%, rated 4 of 5 after 20 minutes.",
+  "notes": "Reported flawless on D3DMetal on the default engine, from Frontier's launcher into the game. The reporter says switching the environment to D3DMetal improved performance and loading times substantially over the mode they had before. Ultra settings at 1080p: 60 fps and more in space, 40 to 50 in a space station, on an M1 Pro. Odyssey is an expansion of Elite Dangerous (Steam 359320), so this page is the base game's too (the reporter, 2026-10-19). On an M2 Pro with 16 GB at 1080p medium a player saw about 40 fps leaving the ship, 20 to 30 in the common room and 50 in space, a drop to 10 fps browsing ships in the shipyard that only a restart of the game cleared, and no sound at all (highball-db#634).",
   "knownIssues": [
     {
       "symptom": "A HOTAS or other flight stick is not seen by the game",
       "cause": "not diagnosed here. SDL_JOYSTICK_MFI=0 turns off SDL's Game Controller framework driver, which points at that driver taking the device",
       "fix": "add SDL_JOYSTICK_MFI=0 to the environment's variables (Environment settings, Advanced), reported by kurimanju-dev (highball-db#503, 2026-10-19), not tried here"
+    },
+    {
+      "symptom": "No sound at all (reported on an M2 Pro, macOS 27.0.1, D3DMetal, engine r28)",
+      "cause": "not measured",
+      "fix": "none known"
+    },
+    {
+      "symptom": "The frame rate falls to about 10 fps while browsing ships in the shipyard and stays low until the game is restarted (reported on an M2 Pro with 16 GB)",
+      "cause": "not measured, possibly memory",
+      "fix": "restart the game"
     }
   ],
   "launchArgs": null,
