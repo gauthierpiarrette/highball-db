@@ -1,0 +1,13 @@
+{
+  "id": "saints-row-iv-re-elected",
+  "title": "Saints Row IV: Re-Elected",
+  "steam_appid": 206420,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Byron-aire (highball-db#612, 2026-10-21), the Epic Games copy, Apple M4, macOS 27.0.1, Highball 0.10.22, the Wine 11 engine x64-crossover26.3-r27, DXMT environment, sync off, DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1, rated 5 of 5 after 183 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on the Epic copy over a three-hour session, on the Wine 11 engine with DXMT. Nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

@@ -1,0 +1,13 @@
+{
+  "id": "defense-grid-the-awakening",
+  "title": "Defense Grid: The Awakening",
+  "steam_appid": 18500,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by KinSapalot (highball-db#613, 2026-10-21), Apple M4 Pro, macOS 26.5.2, Highball 0.10.22, the Wine 11 engine x64-crossover26.3-r23, D3DMetal environment, sync off, rated 5 of 5 after 11 minutes. The report gives no store or Steam AppID, the AppID here is the Steam store's. Not verified by the maintainer.",
+  "notes": "Reported perfect on the Wine 11 engine with the environment in D3DMetal mode over 11 minutes. Nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

@@ -1,0 +1,19 @@
+{
+  "id": "darksiders-warmastered-edition",
+  "title": "Darksiders Warmastered Edition",
+  "steam_appid": 462780,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by flacknabe-cpu (highball-db#611, 2026-10-21), Apple M1 Pro, macOS 26.7, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXVK environment, msync, Metal HUD on, frame cap 60, recipes steam, vcrun2022 and fakejapanese, rated 4 of 5 after 2 minutes. Not verified by the maintainer.",
+  "notes": "Reported playable on the default engine with DXVK after a two-minute session, the one problem named being a crash when quitting the game. Nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "Crashes on exit (reported on an M1 Pro, macOS 26.7, DXVK, engine r28)",
+      "cause": "not measured",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

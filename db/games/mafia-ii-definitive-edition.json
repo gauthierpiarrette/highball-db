@@ -1,0 +1,13 @@
+{
+  "id": "mafia-ii-definitive-edition",
+  "title": "Mafia II: Definitive Edition",
+  "steam_appid": 1030830,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by valdroff (highball-db#610, 2026-10-21), Apple M3, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r29, DXVK environment with sync off and Windows 7, the report naming DXMT as the renderer, AVX advertised, rated 5 of 5 after 2 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect after a two-minute session on the default engine, the report naming DXMT as the renderer in a DXVK environment. The reporter turned PhysX off in the game's own settings and does not say what happens with it on. A short session, so it says the game starts and plays, not much more. Nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

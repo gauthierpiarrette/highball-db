@@ -1,0 +1,35 @@
+{
+  "id": "marvel-rivals",
+  "title": "Marvel Rivals",
+  "steam_appid": 2767030,
+  "status": "community",
+  "renderer": null,
+  "anticheat": {
+    "names": [
+      "NetEase Game Security"
+    ],
+    "macVerdict": "warning",
+    "note": "anti-cheat present; it runs on Linux through Proton, which does not settle macOS"
+  },
+  "provenance": "Reported by kushagrmishra (highball-db#615, 2026-10-21), Apple M4 Pro, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal environment, msync, rated 4 of 5 after 7 minutes. Not verified by the maintainer.",
+  "notes": "Reported playable on the default engine with D3DMetal over 7 minutes, smooth by the reporter's account, with frame drops they tie to framing and the connection. The game asks about the graphics driver at launch and runs after it, and it drains the battery fast, so the reporter suggests playing plugged in. The anti-cheat map lists NetEase Game Security for it. Nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "Frame drops, which the reporter ties to framing and the connection (reported on an M4 Pro, macOS 27.0.1, D3DMetal, engine r28)",
+      "cause": "not measured",
+      "fix": "none known"
+    },
+    {
+      "symptom": "The game asks about the graphics driver at launch (reported on an M4 Pro, macOS 27.0.1, D3DMetal, engine r28)",
+      "cause": "not measured",
+      "fix": "none needed by the report, the game runs after it"
+    },
+    {
+      "symptom": "Heavy battery drain (reported on an M4 Pro, macOS 27.0.1, D3DMetal, engine r28)",
+      "cause": "not measured",
+      "fix": "play plugged in, as the reporter suggests"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

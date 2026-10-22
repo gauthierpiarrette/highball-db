@@ -1,0 +1,19 @@
+{
+  "id": "aethermancer-demo",
+  "title": "Aethermancer Demo",
+  "steam_appid": 3462260,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by MagnusPladsen (highball-db#626, 2026-10-22), Apple M3 Max, macOS 26.6.2, not through the Highball app but through Proton-ish 1.0.1 (HighballKit 0.10.15, highball-db f2c34a9ff6da) from the macOS Steam client, the Wine 11 engine x64-crossover26.3-r27, DXMT, msync off, Retina off, rated 4 of 5 after 90 minutes. Not verified by the maintainer.",
+  "notes": "The demo of Aethermancer, a Unity 2022.3 game by moi rai games. Reported about 95 percent smooth at 100 fps over an hour and a half on DXMT with the Wine 11 engine, with short frame hiccups here and there, one of them a drop of about 2 seconds, which do not matter in the turn-based play. The run went through Proton-ish from the macOS Steam client, not through Highball itself. Nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "Short frame hiccups here and there, one a drop of about 2 seconds (reported on an M3 Max, macOS 26.6.2, DXMT, Wine 11 engine r27, through Proton-ish)",
+      "cause": "not measured",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

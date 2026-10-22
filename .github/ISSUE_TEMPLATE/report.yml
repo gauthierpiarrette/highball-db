@@ -50,7 +50,7 @@ body:
     id: session
     attributes:
       label: Session
-      description: "Filled in by Highball: how long the game ran. Leave it as it is and put your own words under Notes."
+      description: "Filled in by Highball: how long the game ran. When you fill in the form yourself, leave it empty. Your own words go under Notes."
       placeholder: "Played for 25 min through Highball."
   - type: textarea
     id: notes

@@ -1,0 +1,19 @@
+{
+  "id": "magicka",
+  "title": "Magicka",
+  "steam_appid": 42910,
+  "status": "community",
+  "renderer": null,
+  "anticheat": {
+    "names": [
+      "VAC"
+    ],
+    "macVerdict": "warning",
+    "note": "anti-cheat present; it runs on Linux through Proton, which does not settle macOS"
+  },
+  "provenance": "Reported by valdroff (highball-db#606, 2026-10-21), Apple M3, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r29, DXVK environment with sync off and Windows 7, the game on Wine's own Direct3D (wined3d), AVX advertised, rated 5 of 5 after 1 minute. Not verified by the maintainer.",
+  "notes": "Reported perfect after a one-minute session on the default engine, with the game set to Wine's own Direct3D in a DXVK environment and Emulate display mode changes turned on. One minute shows that it starts and plays, not much more. The anti-cheat map lists VAC for it. Nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

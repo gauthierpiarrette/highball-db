@@ -1,0 +1,34 @@
+{
+  "id": "darksiders-ii-deathinitive-edition",
+  "title": "Darksiders II Deathinitive Edition",
+  "steam_appid": 388410,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by flacknabe-cpu (highball-db#609, 2026-10-21), Apple M1 Pro with 16 GB, macOS 26.7, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXVK environment, msync, Metal HUD on, frame cap 60, rated 4 of 5 after 2 minutes, with a longer write-up in a comment that also tried the Wine 11 engine x64-crossover26.3-r27. Not verified by the maintainer.",
+  "notes": "Reported playable on an M1 Pro with DXVK, around 60 fps in the areas tested by the Metal HUD at 1800x1169, with sound, controller, saves and resolution changes working and occasional flickering and stuttering. In windowed mode the game sometimes stays on a black screen until its window is dragged by the title bar or minimized and restored, after which the intro videos play, on both the default engine r28 and the Wine 11 engine r27. Fullscreen starts without that, and Emulate display mode changes fixed a wrongly scaled or offset fullscreen picture. A controller has to be connected before the game starts. Nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "In windowed mode the game sometimes stays on a black screen with no response to keyboard or mouse (reported on an M1 Pro, macOS 26.7, DXVK, engine r28 and the Wine 11 engine r27)",
+      "cause": "not measured. The reporter suspects window state changes or event handling",
+      "fix": "drag the game window by its title bar, or minimize and restore it, and the intro videos start. Starting in fullscreen avoids it"
+    },
+    {
+      "symptom": "The fullscreen picture is wrongly scaled or positioned (reported on an M1 Pro, macOS 26.7, DXVK, engine r28)",
+      "cause": "not measured",
+      "fix": "turn on Emulate display mode changes in Highball, by the report"
+    },
+    {
+      "symptom": "A controller connected after the game has started is not picked up (reported on an M1 Pro, macOS 26.7, DXVK, engine r28)",
+      "cause": "not measured",
+      "fix": "connect the controller before starting the game"
+    },
+    {
+      "symptom": "Occasional flickering and stuttering (reported on an M1 Pro, macOS 26.7, DXVK, engine r28)",
+      "cause": "not measured",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

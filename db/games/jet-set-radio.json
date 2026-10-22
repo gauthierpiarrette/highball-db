@@ -1,0 +1,13 @@
+{
+  "id": "jet-set-radio",
+  "title": "Jet Set Radio",
+  "steam_appid": 205950,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by DeepBlade (highball-db#605, 2026-10-21), Apple M2 Max, macOS 27.0, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT environment, msync, rated 5 of 5 after 13 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on the default engine with DXMT over 13 minutes. Nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

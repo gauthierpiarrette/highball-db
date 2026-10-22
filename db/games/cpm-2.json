@@ -1,0 +1,19 @@
+{
+  "id": "cpm-2",
+  "title": "CPM 2",
+  "steam_appid": 4252340,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by nik-19201 (highball#295, 2026-10-08), Apple M1, macOS 27.0.1, Highball 0.10.14, engine x64-crossover26.3-r21, D3DMetal and then DXMT, and by fajriyan (highball#435, 2026-10-22), Apple M1, macOS 15.7.8, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT. Does not start. Not verified by the maintainer.",
+  "notes": "Car Parking Multiplayer 2 does not start on either engine: UnityPlayer.dll fails to initialize before the game writes its Player.log, on D3DMetal and on DXMT alike, without the bottle's winhttp override too. Players on Linux report it running under Proton (ProtonDB, 8 reports by 2026-10-21), so a protection that refuses Wine is unlikely. Advertise AVX to games has not been tried yet. Nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "The game never shows a window: UnityPlayer.dll fails to initialize at startup (reported on an M1, macOS 27.0.1 and 15.7.8, engines r21 and r28, D3DMetal and DXMT, highball#295 and #435)",
+      "cause": "not found. It fails inside Unity's startup, before Player.log is written",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

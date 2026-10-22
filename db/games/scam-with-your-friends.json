@@ -1,0 +1,19 @@
+{
+  "id": "scam-with-your-friends",
+  "title": "Scam With Your Friends",
+  "steam_appid": 4954910,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by 0Janyx (highball#353, 2026-10-15), Apple M4, macOS 27.0.1, Highball 0.9.39, engine x64-sikarugir10.0_6-r11, DXMT, and IndiannDino (highball#437, 2026-10-22), Apple M1 Pro, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT. Not verified by the maintainer.",
+  "notes": "Plays, then crashes partway through, after about ten minutes in one report. The crash is Wine's thread pool asserting on 'ioqueue.objcount' when the game closes an asynchronous pipe. Moritz Jost tracked it down in this game and fixed it in highball-engine patch 0025 (#17, 2026-10-19), which ships with the next Wine 11 engine revision. Nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "The game crashes partway through a session (reported on an M4 and an M1 Pro, macOS 27.0.1, DXMT, engines r11 and r28)",
+      "cause": "Wine's thread pool asserts 'ioqueue.objcount' (threadpool.c) when an asynchronous I/O object is closed while a completion is in flight",
+      "fix": "highball-engine patch 0025 by Moritz Jost, in the next Wine 11 engine revision. Move the game's environment to it under Advanced, Engine once it is out"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
