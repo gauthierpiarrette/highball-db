@@ -1,0 +1,19 @@
+{
+  "id": "bomber-crew",
+  "title": "Bomber Crew",
+  "steam_appid": 537800,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by valdroff (highball#277, 2026-10-06), Apple M3, macOS 27.0.1, Highball 0.10.12. Not verified by the maintainer.",
+  "notes": "The menus and the mission preparation screen work, then the mission never starts and the menu freezes, on Wine's own Direct3D and on DXMT with Emulate display mode changes. The cause was not found: the launch log does not show the game's own errors and its Player.log was not sent. Bomber Crew also has a native Mac version on Steam, whose graphics quality is fixed at Low by the reporter's account.",
+  "knownIssues": [
+    {
+      "symptom": "A mission never starts and the menu freezes after the preparation screen (reported on an M3, macOS 27.0.1, Wine's own Direct3D and DXMT)",
+      "cause": "not found",
+      "fix": "none known. The Wine 11 engine is untried"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

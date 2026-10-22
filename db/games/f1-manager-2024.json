@@ -1,0 +1,19 @@
+{
+  "id": "f1-manager-2024",
+  "title": "F1 Manager 2024",
+  "steam_appid": 2591280,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by bethstibbles (highball#234, 2026-10-01), Apple M1, macOS 26.6.2, Highball 0.9.35, the Epic copy. Not verified by the maintainer.",
+  "notes": "Installed through Highball's Epic support with the Visual C++ runtimes, then crashed at the copyright screen, where the game starts its intro video, without writing a log of its own. Just before the crash the graphics layer printed 'Invalid device handle' for a shared texture, the failure engines before r13 had when a game and its video player share a texture. Engines since r13 no longer fail that texture. Whether that was the whole crash was not measured, and the reporter did not test again.",
+  "knownIssues": [
+    {
+      "symptom": "Crash at the copyright screen (reported on an M1, macOS 26.6.2, engine of Highball 0.9.35)",
+      "cause": "likely the shared texture between the game and its intro video, which engines before r13 failed to open",
+      "fix": "update Highball, engines r13 and later open that texture. Not confirmed on this game"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

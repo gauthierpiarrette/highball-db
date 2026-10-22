@@ -22,7 +22,7 @@
     {
       "symptom": "Epic copy (installed through Highball's Epic support): the Rockstar Games Launcher opens the store page with BUY NOW instead of starting the game (reported on an M5 Max, highball#93)",
       "cause": "the Rockstar launcher accepts an Epic entitlement only while a process named EpicGamesLauncher.exe exists, and no launcher runs when Legendary starts the game directly. The launch arguments themselves are passed",
-      "fix": "Highball 0.9.12 starts the game through a stand-in named EpicGamesLauncher.exe, and the reporter then reached the main menu on engine r8 (M5 Max, 1080p ultra) after one more step, copying vulkan-1.dll from Program Files/Rockstar Games/Social Club next to RDR2.exe with a per-program override vulkan-1=native,builtin, which cleared the game's Error 18. The recipe sets the override; the copy is manual for now"
+      "fix": "Highball 0.9.12 starts the game through a stand-in named EpicGamesLauncher.exe, and the reporter then reached the main menu on engine r8 (M5 Max, 1080p ultra) after one more step, copying vulkan-1.dll from Program Files/Rockstar Games/Social Club next to RDR2.exe with a per-program override vulkan-1=native,builtin, which cleared the game's Error 18. The recipe sets the override; the copy is manual for now. A second Epic player confirms it: copying vulkan-1.dll next to RDR2.exe cleared 'failed to initialize graphics device' at every start on an M5, macOS 27.0.1, engine x64-crossover26.3-r27 (highball#429, 2026-10-22)"
     },
     {
       "symptom": "Trees near the player pop in and out of view (reported on an M5 Max at 60 fps, Epic copy, engine r8)",

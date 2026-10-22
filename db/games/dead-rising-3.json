@@ -1,0 +1,24 @@
+{
+  "id": "dead-rising-3",
+  "title": "Dead Rising 3 Apocalypse Edition",
+  "steam_appid": 265550,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by detnarrrrrrrrr (highball#103, 2026-09-15), Apple M5, macOS 26.6.2, Highball 0.9.15. Not verified by the maintainer.",
+  "notes": "Runs, with two problems reported: the mouse could not move the character or aim, and split screen froze the game. The mouse problem comes from the game's switch to a 1280x720 fullscreen mode the Mac did not list. Since Highball 0.10.11 (0.10.15 for everyone) Emulate display mode changes on the game's page makes Wine list that mode and scale the picture, with the pointer where it belongs. Keep the game on DXVK, since DXMT could not build some of its shaders. The game was not run here and the reporter did not confirm the fix.",
+  "knownIssues": [
+    {
+      "symptom": "The mouse cannot move the character or aim (reported on an M5, macOS 26.6.2)",
+      "cause": "the game switches to 1280x720 fullscreen, a mode the Mac does not list, so the picture and the pointer disagree",
+      "fix": "Emulate display mode changes on the game's page, Highball 0.10.15 or later, untested on this game"
+    },
+    {
+      "symptom": "Split screen freezes the game (reported on an M5, macOS 26.6.2)",
+      "cause": "not investigated",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

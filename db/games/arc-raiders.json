@@ -1,0 +1,19 @@
+{
+  "id": "arc-raiders",
+  "title": "ARC Raiders",
+  "steam_appid": 1808500,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by VaSiLoNG (highball#291, 2026-10-08), Apple M1, macOS 27.0.1, Highball 0.10.10. Not verified by the maintainer.",
+  "notes": "An online game with Easy Anti-Cheat. Easy Anti-Cheat runs under Proton on Linux when a game allows it, but that support does not carry over to Wine on a Mac, so the game is not expected to get past its anti-cheat through Highball. The report did not say where it stopped.",
+  "knownIssues": [
+    {
+      "symptom": "The game does not start (reported on an M1, macOS 27.0.1)",
+      "cause": "most likely Easy Anti-Cheat, which has no Mac Wine support",
+      "fix": "none"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

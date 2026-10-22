@@ -1,0 +1,19 @@
+{
+  "id": "prince-of-persia-the-two-thrones",
+  "title": "Prince of Persia: The Two Thrones",
+  "steam_appid": 13530,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by weincreative (highball#128, 2026-09-16), Apple M2 Pro, macOS 26.6.1, Highball 0.9.19. Not verified by the maintainer.",
+  "notes": "The game showed its launch screen, then a black screen, then quit, on every graphics mode. Its log showed Wine refusing the fullscreen mode the game asked for. Since Highball 0.10.11 (0.10.15 for everyone) Emulate display mode changes on the game's page makes Wine list the older display modes, so that switch goes through and the picture is scaled to the screen. The game was not run here and the reporter did not confirm the fix.",
+  "knownIssues": [
+    {
+      "symptom": "Black screen after the launch screen, then the game quits (reported on an M2 Pro, macOS 26.6.1)",
+      "cause": "the game's fullscreen mode switch was refused, the mode was not listed by the Mac",
+      "fix": "Emulate display mode changes on the game's page, Highball 0.10.15 or later, untested on this game"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

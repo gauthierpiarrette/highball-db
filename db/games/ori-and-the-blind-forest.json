@@ -1,0 +1,19 @@
+{
+  "id": "ori-and-the-blind-forest",
+  "title": "Ori and the Blind Forest",
+  "steam_appid": null,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Dex69-shadow (highball#321, 2026-10-11), Apple M5, macOS 26.6.2, Highball 0.10.10, DXVK for the game and the environment. The report does not say which edition. Not verified by the maintainer.",
+  "notes": "Micro freezes made it unplayable on DXVK with async compilation off, where each new shader compiles while playing. DXMT, Highball's default mode, or DXVK with async shader compilation on in the environment's settings, are the things to try. Not confirmed by the reporter.",
+  "knownIssues": [
+    {
+      "symptom": "Micro freezes (reported on an M5, macOS 26.6.2, DXVK)",
+      "cause": "likely shaders compiling on first use with DXVK's async compilation off",
+      "fix": "DXMT, or DXVK async shader compilation in the environment's settings, untested here"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

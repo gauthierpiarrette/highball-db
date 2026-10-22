@@ -1,0 +1,19 @@
+{
+  "id": "project-igi",
+  "title": "Project I.G.I.: I'm Going In",
+  "steam_appid": null,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by abdulrab22 (highball#244, 2026-10-03), Apple M1 Pro, macOS 26.1, Highball 0.10.3. Not verified by the maintainer.",
+  "notes": "The game drew small in the left part of the screen. It asks for a 2000-era fullscreen mode the Mac does not list. Since Highball 0.10.11 (0.10.15 for everyone) Emulate display mode changes on the game's page makes Wine list the older modes, so the switch goes through and the picture is scaled to the screen. The game was not run here and the reporter did not confirm the fix.",
+  "knownIssues": [
+    {
+      "symptom": "The picture sits small in the left part of the screen (reported on an M1 Pro, macOS 26.1)",
+      "cause": "the game's old fullscreen mode is not listed by the Mac",
+      "fix": "Emulate display mode changes on the game's page, Highball 0.10.15 or later, untested on this game"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
