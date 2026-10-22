@@ -6,7 +6,7 @@ body:
     attributes:
       value: "One line is enough. If you played through Highball, the button it shows after a session opens this form with the chip, macOS, engine and graphics mode filled in."
   - type: input
-    id: title
+    id: game
     attributes: { label: Game or launcher, placeholder: "Elden Ring" }
     validations: { required: true }
   - type: input
@@ -24,11 +24,12 @@ body:
       label: What was not perfect?
       description: "Skip this for a 5. For anything lower, one line on what you saw is what turns the report into a fix: a glitch, a stutter, a crash point, a control that stopped working."
       placeholder: "Frame drops when shooting; the family portrait is noise; clicks stop after alt-tab"
-  - type: dropdown
+  - type: input
     id: renderer
     attributes:
       label: Renderer
-      options: [dxmt, d3dmetal, dxvk, wined3d]
+      description: "The graphics mode the game ran in, one of dxmt, d3dmetal, dxvk or wined3d. A link from Highball fills it in. It is a text field because GitHub fills only text fields from a link."
+      placeholder: "dxmt"
   - type: input
     id: chip
     attributes: { label: Chip, placeholder: "Apple M1 Pro" }
