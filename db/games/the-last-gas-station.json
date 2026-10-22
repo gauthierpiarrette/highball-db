@@ -1,0 +1,13 @@
+{
+  "id": "the-last-gas-station",
+  "title": "The Last Gas Station",
+  "steam_appid": 3690030,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by ymah (highball-db#636, 2026-10-22), Apple M3 Pro, macOS 26.6.2, Highball 0.10.22, engine x64-crossover26.3-r15, DXMT, msync, frame cap 60, rated 5 of 5 after 79 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on the Wine 11 engine with DXMT over a 79-minute session, with Highball's frame rate cap at 60. The environment also had Controllers through SDL, Japanese fonts and the core fonts installed, which the report does not say the game needed. Nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
