@@ -5,9 +5,15 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by w8079 (highball-db#395, 2026-10-08), Apple M4, macOS 27.0.1, Highball 0.10.10, engine x64-crossover26.3-r19, the environment in DXMT mode, rated 5 of 5 after 12 minutes. Not verified by the maintainer.",
-  "notes": "Reported perfect on DXMT, the default mode, over 12 minutes on an M4 in exclusive full screen at 1920x1080 and 120 Hz, medium quality: 43 fps in dense jungle, 53 to 60 around the river, where 60 is the game's own cap. No stutter. Unity 2021.2, 64-bit, Direct3D 11. No measurement here yet.",
-  "knownIssues": [],
+  "provenance": "Reported by w8079 (highball-db#395, 2026-10-08), Apple M4, macOS 27.0.1, Highball 0.10.10, engine x64-crossover26.3-r19, the environment in DXMT mode, rated 5 of 5 after 12 minutes. Not verified by the maintainer. A second report by Red-Pathfinder (highball-db#640, 2026-10-23), Apple M5, macOS 27.0.1, Highball 0.10.22, engine x64-crossover26.3-r26, DXMT, msync, rated 4 of 5 after 16 minutes.",
+  "notes": "Reported perfect on DXMT, the default mode, over 12 minutes on an M4 in exclusive full screen at 1920x1080 and 120 Hz, medium quality: 43 fps in dense jungle, 53 to 60 around the river, where 60 is the game's own cap. No stutter. Unity 2021.2, 64-bit, Direct3D 11. No measurement here yet. A second player on an M5 found it lagged on the default Wine 10 engine and played fine at high settings on the Wine 11 engine r26 with DXMT (highball-db#640). Not measured here.",
+  "knownIssues": [
+    {
+      "symptom": "Lags on the default Wine 10 engine (reported on an M5, macOS 27.0.1, DXMT, highball-db#640)",
+      "cause": "not measured",
+      "fix": "use the Wine 11 engine, the newest x64-crossover26.3 under the environment's Advanced, Engine. Both reports played well there, by the reporters"
+    }
+  ],
   "launchArgs": null,
   "lastVerified": null
 }
