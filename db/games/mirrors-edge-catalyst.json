@@ -6,12 +6,17 @@
   "renderer": null,
   "anticheat": null,
   "provenance": "Reported by udance4ever (highball-db#318, 2026-10-04), Apple M1, macOS 27.0.1, Highball 0.10.4, engine x64-sikarugir10.0_6-r19, rated 1 of 5: the Steam copy runs the EA app installer first, and that installer fails. The installer failure reproduced here on an M4 (macOS 27.0, engine x64-sikarugir10.0_6-r21) on 2026-10-05.",
-  "notes": "The Steam copy depends on EA's launcher: Steam runs the EA app installer before the game. On the default engine that installer rolls back at its last step: the EA app's setup moves its files into a versioned folder and leaves a directory link in their place, the prebuilt Wine 10 reports the link as made without making it, and the background service then cannot be found (INST-14-1627 here, INST-14-1603 for the reporter). On the Wine 11 engine the same installer completes and the EA app opens on its sign-in window (measured on an M4 on 2026-10-05), so the recipe asks for that engine and installs the EA app first. Whether the game itself then runs is not verified yet.",
+  "notes": "The Steam copy depends on EA's launcher: Steam runs the EA app installer before the game. On the default engine that installer rolls back at its last step: the EA app's setup moves its files into a versioned folder and leaves a directory link in their place, the prebuilt Wine 10 reports the link as made without making it, and the background service then cannot be found (INST-14-1627 here, INST-14-1603 for the reporter). On the Wine 11 engine the same installer completes and the EA app opens on its sign-in window (measured on an M4 on 2026-10-05), so the recipe asks for that engine and installs the EA app first. Whether the game itself then runs is not verified yet. With the EA app installed on the Wine 11 engine r27 and its in-game overlay off, the game itself starts, shows its splash, makes its DirectX 11 device through DXMT, loads for three to four minutes and quits with exit code 0xFFFFFFFA, the same on four runs on an M1 (highball-db#318, 2026-10-23). Clearing the macOS '._' files from its folder on the exFAT library drive changed nothing.",
   "knownIssues": [
     {
       "symptom": "Does not launch: the EA app installer Steam runs first ends with Something went wrong (INST-14-1603 or INST-14-1627)",
       "cause": "the EA app's setup needs a directory symbolic link that the default Wine 10 engine reports as created without creating it, so its background service is missing when it starts",
       "fix": "use the Wine 11 engine, which the recipe offers on Play; the EA app then installs (highball-db#318)"
+    },
+    {
+      "symptom": "The game loads for three to four minutes after its splash, then quits (exit code 0xFFFFFFFA) on DXMT (reported on an M1, macOS 27.0.1, Wine 11 r27, highball-db#318)",
+      "cause": "not known. The game logs no reason",
+      "fix": "none yet. D3DMetal and DXVK not tried yet"
     }
   ],
   "launchArgs": null,
