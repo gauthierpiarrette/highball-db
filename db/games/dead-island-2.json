@@ -6,12 +6,17 @@
   "renderer": "d3dmetal",
   "anticheat": null,
   "provenance": "Reported by b3cookie (highball#451, 2026-10-22), Apple M1 Pro, macOS 26.5.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXVK: smooth to the menu, then the game quits. Not verified by the maintainer.",
-  "notes": "Dead Island 2 needs DirectX 12 (Steam lists DirectX version 12), so this page has Play pick D3DMetal, Apple's DirectX 12 layer. A player on an M1 Pro reached the menu in DXVK mode, where DirectX 12 has no proper path, and the game then quit. D3DMetal itself has not been reported on yet. Nothing was measured here.",
+  "notes": "Dead Island 2 needs DirectX 12 (Steam lists DirectX version 12), so this page has Play pick D3DMetal, Apple's DirectX 12 layer. A player on an M1 Pro reached the menu in DXVK mode, where DirectX 12 has no proper path, and the game then quit. On D3DMetal the same player got to the opening copyright screen, where the game stopped with its music still playing (highball#451, 2026-10-23). Whether it was still building shaders there is not known. Nothing was measured here.",
   "knownIssues": [
     {
       "symptom": "Smooth to the menu, then the game quits (reported on an M1 Pro, macOS 26.5.2, DXVK, engine r28)",
       "cause": "the game needs DirectX 12, which DXVK mode does not provide",
       "fix": "D3DMetal, which this page now picks. Untested here"
+    },
+    {
+      "symptom": "On D3DMetal the game stops on the opening copyright screen with the music playing (reported on an M1 Pro, macOS 26.5.2, highball#451)",
+      "cause": "not known. A first start can spend a long time building shaders around this point",
+      "fix": "none confirmed. Give a first start 15 minutes and press Enter once"
     }
   ],
   "launchArgs": null,
