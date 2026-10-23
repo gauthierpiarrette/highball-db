@@ -22,6 +22,11 @@
       "symptom": "Clicking in the game window zooms the picture and the game becomes unplayable",
       "cause": "not investigated",
       "fix": "do not click in the window, restart the game if it happens"
+    },
+    {
+      "symptom": "Clicking in the game switches the resolution so only a quarter of the picture shows (reported on an M1, macOS 27.0.1, D3DMetal environment, highball-db#429)",
+      "cause": "not measured. The game changes its display mode when it regains the mouse, and the new size does not match what the Mac shows",
+      "fix": "play with a gamepad and leave the mouse alone, by the reporter. Emulate display mode changes on the game's page is untested and may keep the switch from happening"
     }
   ],
   "launchArgs": null,

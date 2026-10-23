@@ -14,9 +14,9 @@
       "fix": "none known. Wine's own Direct3D makes the pre-launcher crash (2026-10-19). Untested: starting game.exe directly, without settings.exe"
     },
     {
-      "symptom": "game.exe started directly exits about two seconds in with DXVK's 'Failed to create surface' after creating a 1x1 windowed Direct3D 9 device (reported on an M1, engine r28, highball-db#493, 2026-10-21)",
-      "cause": "DXVK cannot create the Vulkan surface for the game's window at that moment. It may depend on timing, since the game starts once in a while",
-      "fix": "none known. Wine's own Direct3D on game.exe itself is untested"
+      "symptom": "game.exe exits about two seconds in, or stops itself with a fatal error (0xc0000409), right after creating its Direct3D 9 device, on DXVK ('Failed to create surface') and on Wine's own Direct3D ('failed to set pixel format') alike (reported on an M1, engine r28, highball-db#493, 2026-10-21 and 23)",
+      "cause": "both graphics paths fail at the same step, attaching the picture to the game's window, so it is how Wine's Mac driver handles that window at that moment rather than the graphics mode. It depends on timing, since the game starts once in a while",
+      "fix": "none known. Needs work in Wine's Mac driver"
     }
   ],
   "launchArgs": null,
