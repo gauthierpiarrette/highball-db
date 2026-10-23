@@ -10,8 +10,8 @@
   "knownIssues": [
     {
       "symptom": "The game fails until thousands of '._' files are deleted from its folder",
-      "cause": "the folder held 4,407 '._' files, the kind macOS writes beside files on drives not formatted for a Mac (here an exFAT drive holding the Steam library), and the game trips over them. A reinstall brings them back. Highball 0.10.20 removes them only from the engines it installs, not from game folders",
-      "fix": "delete every file whose name starts with '._' in the game's folder, for example with find in Terminal from the steamapps/common folder: find 'Alice Madness Returns' -name '._*' -delete"
+      "cause": "the folder held 4,407 '._' files, the kind macOS writes beside files on drives not formatted for a Mac (here an exFAT drive holding the Steam library), and the game trips over them. A reinstall brings them back. Highball 0.10.20 removed them only from the engines it installs",
+      "fix": "from the next Highball version, Play removes them from the game's folder before each launch when the folder is on such a drive (highball#457). Until then delete every file whose name starts with '._' in the game's folder, for example with find in Terminal from the steamapps/common folder: find 'Alice Madness Returns' -name '._*' -delete"
     },
     {
       "symptom": "DXSETUP.exe shows errors on the first start",
