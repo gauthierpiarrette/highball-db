@@ -1,0 +1,13 @@
+{
+  "id": "mycopunk",
+  "title": "Mycopunk",
+  "steam_appid": 3247750,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by FizzyCoffee (highball-db#639, 2026-10-23), Apple M4, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, played on D3DMetal with the environment in DXMT mode, msync, rated 5 of 5 after 41 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on the default engine on an M4, played for 41 minutes on D3DMetal. Nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

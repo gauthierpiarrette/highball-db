@@ -6,12 +6,12 @@
   "renderer": null,
   "anticheat": null,
   "provenance": "Reported by udance4ever (highball-db#429, 2026-10-10), Apple M1, macOS 27.0.1, Highball 0.10.14, engine x64-sikarugir10.0_6-r24, the environment in D3DMetal mode, Steam Input on, rated 3 of 5 (playable with workarounds). Not verified by the maintainer.",
-  "notes": "Playable with a controller once three things are handled, by udance4ever's report. The game folder held 4,407 macOS '._' metadata files, and the game only ran after they were deleted. DXSETUP shows errors on the first start only and can be dismissed. Clicking inside the game window zooms it and makes it unplayable until the game restarts. Once in game it ran perfectly. Turn Steam Input on for the controller.",
+  "notes": "Playable once two things are handled, by udance4ever's report. The game folder held 4,407 macOS '._' metadata files, and the game only ran after they were deleted. DXSETUP shows errors on the first start only and can be dismissed. Clicking in the game switched the resolution so only a quarter of the picture showed, and Emulate display mode changes on the game's page stops that, so the mouse works too (confirmed by the reporter, 2026-10-23). Once in game it ran perfectly. Turn Steam Input on for a controller.",
   "knownIssues": [
     {
       "symptom": "The game fails until thousands of '._' files are deleted from its folder",
-      "cause": "the folder held 4,407 '._' files, the kind macOS writes beside files on drives not formatted for a Mac. Not investigated further",
-      "fix": "delete every file whose name starts with '._' in the game's folder"
+      "cause": "the folder held 4,407 '._' files, the kind macOS writes beside files on drives not formatted for a Mac (here an exFAT drive holding the Steam library), and the game trips over them. A reinstall brings them back. Highball 0.10.20 removes them only from the engines it installs, not from game folders",
+      "fix": "delete every file whose name starts with '._' in the game's folder, for example with find in Terminal from the steamapps/common folder: find 'Alice Madness Returns' -name '._*' -delete"
     },
     {
       "symptom": "DXSETUP.exe shows errors on the first start",
@@ -19,14 +19,9 @@
       "fix": "dismiss them, they do not come back"
     },
     {
-      "symptom": "Clicking in the game window zooms the picture and the game becomes unplayable",
-      "cause": "not investigated",
-      "fix": "do not click in the window, restart the game if it happens"
-    },
-    {
       "symptom": "Clicking in the game switches the resolution so only a quarter of the picture shows (reported on an M1, macOS 27.0.1, D3DMetal environment, highball-db#429)",
-      "cause": "not measured",
-      "fix": "play with a gamepad and leave the mouse alone, by the reporter. Emulate display mode changes on the game's page is untested and may keep the switch from happening"
+      "cause": "the game changes the display mode when clicked. Not measured further",
+      "fix": "turn on Emulate display mode changes on the game's page (or EmulateModeset=y for AliceMadnessReturns.exe by hand), confirmed by the reporter. The game's recipe sets it from the next Highball version. Playing with a gamepad also avoids it"
     }
   ],
   "launchArgs": null,

@@ -1,0 +1,24 @@
+{
+  "id": "alice-madness-returns",
+  "kind": "game",
+  "title": "Alice: Madness Returns",
+  "requires": [
+    "steam"
+  ],
+  "renderer": null,
+  "steps": [
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\AppDefaults\\AliceMadnessReturns.exe\\X11 Driver",
+      "name": "EmulateModeset",
+      "valueType": "REG_SZ",
+      "data": "y"
+    },
+    {
+      "type": "note",
+      "text": "Clicking in the game switched the resolution so only a quarter of the picture showed (highball-db#429, Apple M1, macOS 27.0.1). With EmulateModeset for AliceMadnessReturns.exe, Wine emulates the game's display mode changes instead of switching the Mac's display, and the reporter could play with the mouse again. It is the same setting as Emulate display mode changes on the game's page. Scoped to the game's executable; nothing else in the environment changes."
+    }
+  ],
+  "knownIssues": [],
+  "lastVerified": null
+}
