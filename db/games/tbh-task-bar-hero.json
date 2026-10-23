@@ -1,0 +1,13 @@
+{
+  "id": "tbh-task-bar-hero",
+  "title": "TBH: Task Bar Hero",
+  "steam_appid": 3678970,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by bettercalldoel (highball-db#641, 2026-10-23), Apple M2, macOS 26.5.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, msync, rated 5 of 5 after 140 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on the default engine with DXMT on an M2, over a 140-minute session. Nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
