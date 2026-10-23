@@ -1,0 +1,13 @@
+{
+  "id": "breach-and-clear",
+  "title": "Breach & Clear",
+  "steam_appid": 266130,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by linjunpop (highball-db#642, 2026-10-23), Apple M2 Max, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, msync, rated 5 of 5 after 43 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on the default engine with DXMT on an M2 Max, played for 43 minutes through Highball's Windows route. Nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
