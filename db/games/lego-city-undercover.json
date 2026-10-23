@@ -1,0 +1,13 @@
+{
+  "id": "lego-city-undercover",
+  "title": "LEGO City Undercover",
+  "steam_appid": 578330,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by dasherzin (highball-db#638, 2026-10-23), Apple M4 MacBook Air, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r29, DXMT, msync, DXVK async on, Metal HUD on, rated 5 of 5 after 49 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on the default engine with DXMT on an M4 MacBook Air: a steady 55 to 60 fps at the native 2560x1600 by the Metal HUD over 49 minutes, with small frame time spikes mostly at autosaves. Nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
