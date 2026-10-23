@@ -1,0 +1,13 @@
+{
+  "id": "wanderburg",
+  "title": "Wanderburg",
+  "steam_appid": 3624140,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by jackscotti (highball-db#643, 2026-10-23), Apple M1 Pro, macOS 26.6.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, msync, rated 5 of 5 after 26 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on the default engine with DXMT on an M1 Pro, over a 26-minute session. Nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
