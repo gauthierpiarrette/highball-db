@@ -52,7 +52,12 @@
     {
       "symptom": "The game offers only three small resolutions, well below an external ultrawide's (3440x1440) and below the MacBook's own, and its fullscreen picture runs past the edges of the screen, so the menus cannot be reached (highball-db#272, a MacBook Air M5 15-inch with an ultrawide, engine r23, DXVK, 2026-10-13).",
       "cause": "not measured. Games list the modes of the main display, so a MacBook's own screen can be what the game sees when an external one is attached.",
-      "fix": "the reporter's workaround: open the game's system.xml (Documents, Rockstar Games, Red Dead Redemption 2, Settings in the environment's Windows drive) in TextEdit, set the screen width and height to the resolution macOS shows for the display (1440x900 on their MacBook Air), use windowed borderless, and hide the menu bar and the Dock. Making the external display the main one (System Settings, Displays, Arrange, drag the menu bar onto it) before starting the game may also give the game its modes."
+      "fix": "the reporter's workaround: open the game's system.xml (Documents, Rockstar Games, Red Dead Redemption 2, Settings in the environment's Windows drive) in TextEdit, set the screen width and height to the resolution macOS shows for the display (1440x900 on their MacBook Air), use windowed borderless, and hide the menu bar and the Dock. Making the external display the main one (System Settings, Displays, Arrange, drag the menu bar onto it) before starting the game may also give the game its modes. A second player on a 21:9 display (2560x1080, Epic copy, M5, highball#429) got it by setting 2560x1080 in the windowed part of system.xml with windowed set to 1, then pressing the window's green full screen button. That is also where 144 Hz could be set. At that resolution the M5 ran about 20 fps."
+    },
+    {
+      "symptom": "A 'Profile error occurred' dialog says the preferences can not be read, and the game does not start (reported on the Epic copy, M5, macOS 27.0.1, highball#429)",
+      "cause": "Chromium's message, from the Rockstar Games Launcher's built in browser, whose profile is in Documents/Rockstar Games/Social Club/Launcher/Renderer. It came back after restarts in which the game changed its own settings. Not measured further",
+      "fix": "quit the launcher and the game, rename that Renderer folder (add .bak), and start the game again, which rebuilds it. The reporter got past it by uninstalling and reinstalling the launcher, which also works"
     }
   ],
   "verified": {
