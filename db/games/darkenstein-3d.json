@@ -1,0 +1,19 @@
+{
+  "id": "darkenstein-3d",
+  "title": "Darkenstein 3D",
+  "steam_appid": 2195910,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by Swiss-Mac-User (highball-db#662, 2026-10-24), Apple M5 Pro, macOS 27.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r29, played on DXMT in an environment set to DXVK, sync off, rated 5 of 5 after 18 minutes. Not verified by the maintainer.",
+  "notes": "Reported flawless on DXMT on an M5 Pro over 18 minutes. In the reporter's DXVK environment the game crashed at startup, right after Steam's overlay notice, so this page has Play pick DXMT. Nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "The game crashes at startup, after Steam's overlay notice, on DXVK (reported on an M5 Pro, macOS 27.2, engine r29)",
+      "cause": "not known",
+      "fix": "DXMT, which this page picks. In an environment set to DXVK, set Mode for this game to DXMT"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
