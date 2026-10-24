@@ -1,0 +1,13 @@
+{
+  "id": "batman-arkham-knight",
+  "title": "Batman: Arkham Knight",
+  "steam_appid": 208650,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by SHN5906 (highball-db#668, 2026-10-24), the Epic copy, Apple M5 Pro, macOS 27.0.1, Highball 0.10.22, the Wine 11 engine x64-crossover26.3-r27, DXMT, msync, rated 5 of 5 after 14 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on the Epic copy with the Wine 11 engine and DXMT on an M5 Pro over 14 minutes. Nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
