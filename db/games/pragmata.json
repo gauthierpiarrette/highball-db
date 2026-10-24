@@ -1,0 +1,13 @@
+{
+  "id": "pragmata",
+  "title": "PRAGMATA",
+  "steam_appid": 3357650,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by pijenomar (highball-db#672, 2026-10-24), Apple M5 Pro, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal, esync, Windows 11, rated 5 of 5 after 13 minutes, run as PRAGMATA.exe. Not verified by the maintainer.",
+  "notes": "Capcom's RE Engine, DirectX 12 only, so it needs D3DMetal, which this page picks. Reported perfect on an M5 Pro. The reporter's tip is to turn on Enable DLSS (MetalFX) in the environment's settings, which makes the game offer DLSS and raised the frame rate. On an M1 Pro the free demo stopped at its graphics check (see the PRAGMATA SKETCHBOOK demo's page), so older chips may differ. Nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

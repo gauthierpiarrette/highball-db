@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by valdroff (highball-db#355, 2026-10-06), the Steam copy, Apple M3, macOS 27.0.1, Highball 0.10.8, engine x64-sikarugir10.0_6-r21, environment mode DXMT, rated 5 of 5 after 41 minutes. Not verified by the maintainer.",
-  "notes": "Reported perfect on the Steam copy in a 41-minute session. The reporter's environment had Windows set to Windows 7, AVX advertised and the vcrun2022 tweak; whether any of those is needed is not known.",
+  "provenance": "Reported by valdroff (highball-db#355, 2026-10-06), the Steam copy, Apple M3, macOS 27.0.1, Highball 0.10.8, engine x64-sikarugir10.0_6-r21, environment mode DXMT, rated 5 of 5 after 41 minutes. Not verified by the maintainer. Second report by mloganabramo-gif (highball-db#673, 2026-10-24), Apple M3 Pro, macOS 27.1, DXMT, rated 5 of 5, filled in by hand without engine or version.",
+  "notes": "Reported perfect on the Steam copy in a 41-minute session. The reporter's environment had Windows set to Windows 7, AVX advertised and the vcrun2022 tweak; whether any of those is needed is not known. Perfect again on an M3 Pro with DXMT (highball-db#673).",
   "knownIssues": [],
   "launchArgs": null,
   "lastVerified": null
