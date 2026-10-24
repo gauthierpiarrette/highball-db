@@ -38,8 +38,8 @@
     },
     {
       "symptom": "Sign in fails with 'Sorry, we are unable to handle your request at this time' (error 1.000.7).",
-      "cause": "the Mac's clock being wrong, not the network or the account. Rockstar rejects the request.",
-      "fix": "System Settings, General, Date & Time, with the time zone set automatically using your location."
+      "cause": "the Mac's clock being wrong, not the network or the account. Rockstar rejects the request. A second cause, confirmed 2026-10-24 by a player in Turkey (highball#477, M1 Max, macOS 27.0.1, Wine 11 r27): Wine names the Windows time zone by taking the first one in its list with the Mac's offset, so a Mac set to Europe/Istanbul reports Arab Standard Time (Riyadh) and Rockstar refuses the sign in, while the website works in a Mac browser.",
+      "fix": "System Settings, General, Date & Time, with the time zone set automatically using your location. For the Turkey case, with the environment stopped, delete the seven UTC+3 zones listed before Turkey Standard Time (Arab, Arabic, Belarus, E. Africa, Jordan, Russian, Syria) under HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Time Zones in the environment's registry, which makes Wine report Turkey Standard Time. An engine update brings them back, so redo it after one. A fix in the engine is planned."
     },
     {
       "symptom": "The BattlEye Launcher window asks to install BattlEye (Install / Cancel) and the game never starts (seen on an M4, Wine 11 engine r16, 2026-10-03)",

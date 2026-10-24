@@ -58,6 +58,11 @@
       "symptom": "A 'Profile error occurred' dialog says the preferences can not be read, and the game does not start (reported on the Epic copy, M5, macOS 27.0.1, highball#429)",
       "cause": "Chromium's message, from the Rockstar Games Launcher's built in browser, whose profile is in Documents/Rockstar Games/Social Club/Launcher/Renderer. It came back after restarts in which the game changed its own settings. Not measured further",
       "fix": "quit the launcher and the game, rename that Renderer folder (add .bak), and start the game again, which rebuilds it. The reporter got past it by uninstalling and reinstalling the launcher, which also works"
+    },
+    {
+      "symptom": "The Rockstar launcher's sign in fails with #1.000.7 (#1.500.7 when creating an account) on a Mac set to Europe/Istanbul, while the website works in a Mac browser (highball#477, highball#478)",
+      "cause": "Wine names the Windows time zone by taking the first one in its list with the Mac's offset, so Istanbul becomes Arab Standard Time (Riyadh), and Rockstar refuses the sign in. Confirmed by a player in Turkey on 2026-10-24",
+      "fix": "with the environment stopped, delete the seven UTC+3 zones listed before Turkey Standard Time (Arab, Arabic, Belarus, E. Africa, Jordan, Russian, Syria) under HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Time Zones in the environment's registry, as in highball#477. An engine update brings them back. A fix in the engine is planned"
     }
   ],
   "verified": {
