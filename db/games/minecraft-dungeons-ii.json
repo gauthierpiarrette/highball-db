@@ -1,0 +1,19 @@
+{
+  "id": "minecraft-dungeons-ii",
+  "title": "Minecraft Dungeons II",
+  "steam_appid": 1912410,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by magnipaulus (highball-db#661, 2026-10-24), Apple M1, macOS 27.0, Highball 0.10.22, the Wine 11 engine x64-crossover26.3-r27, DXMT, Visual C++ runtimes installed, rated 4 of 5. Not verified by the maintainer.",
+  "notes": "Reported playable on the Wine 11 engine with DXMT on an M1. Signing in with a Microsoft account does not work, so capes cannot be redeemed, and everything else is available. The reporter says the sign-in needs an implementation of xgameruntime.dll, Microsoft's Gaming Runtime, which Wine does not have. Nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "Microsoft account sign-in does not work, so capes cannot be redeemed (reported on an M1, Wine 11 r27, DXMT)",
+      "cause": "the game wants Microsoft's Gaming Runtime (xgameruntime.dll), which Wine does not provide, by the reporter",
+      "fix": "none yet. The rest of the game plays without signing in"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

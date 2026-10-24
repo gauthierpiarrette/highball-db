@@ -1,0 +1,13 @@
+{
+  "id": "half-life-deathmatch-source",
+  "title": "Half-Life Deathmatch: Source",
+  "steam_appid": 360,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Swiss-Mac-User (highball-db#660, 2026-10-24), Apple M5 Pro, macOS 27.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r29, DXVK, sync off, rated 5 of 5 after 15 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXVK on an M5 Pro over 15 minutes. Nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}

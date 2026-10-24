@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": "d3dmetal",
   "anticheat": null,
-  "provenance": "Reported by xcagricolak (highball-db#220, 2026-09-26), Apple M3, macOS 27.0, Highball 0.9.35, engine x64-sikarugir10.0_6-r7, D3DMetal, AVX advertised, rated 5 of 5 after 4 minutes, with 'a little bit sometimes' as the only remark. Not verified by the maintainer.",
-  "notes": "Reported perfect on D3DMetal after a short session on an M3 with the steam and vcrun2022 recipes and AVX advertised. No frame rate was given and nothing was measured here.",
+  "provenance": "Reported by xcagricolak (highball-db#220, 2026-09-26), Apple M3, macOS 27.0, Highball 0.9.35, engine x64-sikarugir10.0_6-r7, D3DMetal, AVX advertised, rated 5 of 5 after 4 minutes, with 'a little bit sometimes' as the only remark. Not verified by the maintainer. Second report by mgh6355 (highball-db#649, 2026-10-24), Apple M4, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal, AVX advertised, rated 5 of 5 after 50 minutes.",
+  "notes": "Reported perfect on D3DMetal after a short session on an M3 with the steam and vcrun2022 recipes and AVX advertised. No frame rate was given and nothing was measured here. Perfect again on an M4 with D3DMetal over 50 minutes (highball-db#649).",
   "knownIssues": [],
   "launchArgs": null,
   "lastVerified": null

@@ -1,0 +1,13 @@
+{
+  "id": "pacific-drive",
+  "title": "Pacific Drive",
+  "steam_appid": 1458140,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Jimbo5793 (highball-db#650, 2026-10-24), Apple M2 Pro, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal, msync, Retina pixels at 100%, rated 5 of 5 after 137 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on D3DMetal on an M2 Pro over 137 minutes, at about 50 to 60 fps on medium settings by the reporter, who recommends it. Nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
