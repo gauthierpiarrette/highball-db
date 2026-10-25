@@ -5,13 +5,18 @@
   "status": "community",
   "renderer": "dxvk",
   "anticheat": null,
-  "provenance": "Reported by peppearci (highball-db#60, 2026-09-15), Apple M3, macOS 15.8, Highball 0.9.17, engine x64-sikarugir10.0_6-r2, DXVK, rated 3 of 5: practice sessions and races with AI for about five minutes, smooth with minor stutter, fullscreen, 4x AA and motion blur fine, after replacing the engine's Direct3D 9 DLL by hand. Not verified by the maintainer.",
+  "provenance": "Reported by peppearci (highball-db#60, 2026-09-15), Apple M3, macOS 15.8, Highball 0.9.17, engine x64-sikarugir10.0_6-r2, DXVK, rated 3 of 5: practice sessions and races with AI for about five minutes, smooth with minor stutter, fullscreen, 4x AA and motion blur fine, after replacing the engine's Direct3D 9 DLL by hand. Not verified by the maintainer. kgrao18 (highball#498, 2026-10-25), Apple M1, macOS 27.0.1, Highball 0.10.22, an environment still on engine x64-sikarugir10.0_6-r5, DXVK, esync: stuck on the first loading screen with the logo, and on the splash screen with music when started from Steam's window.",
   "notes": "Direct3D 9 game. On the shipped engine it froze on the pre-race screen after the track loaded with VK_ERROR_DEVICE_LOST. The reporter replaced the engine's Direct3D 9 DLL (DXVK-Kegworks 1.10.4, frameworks/renderer/d9vk/wine/x86_64-windows/d3d9.dll) with the d3d9.dll from DXVK 3.1.1 and the game then played, practice and races with AI, smooth with minor stutter. That swap is a hand edit of the engine today; shipping a newer Direct3D 9 layer is an engine decision that needs the other Direct3D 9 games rechecked (Portal, Portal 2, Five Nights at Freddy's). Correction 2026-09-18: the reporter's working d3d9.dll prints 'DXVK: v3.1+' with gcc 16.1.0, which is the string of the withdrawn r4 engine's dgVoodoo-free DXVK-macOS 3.1 fork, not of the official DXVK 3.1.1 (which prints 'v3.1.1' and refuses MoltenVK for geometry shaders on every Mac tested). So the layer that renders RaceRoom for him is the fork that froze FNAF and drew RaceRoom in grayscale for another reporter on r4.",
   "knownIssues": [
     {
       "symptom": "Freezes on the pre-race screen after the track loads, VK_ERROR_DEVICE_LOST (reported on an M3, macOS 15.8, engine r2)",
       "cause": "reported: the engine's Direct3D 9 layer (DXVK-Kegworks 1.10.4); DXVK 3.1.1's d3d9.dll does not lose the device",
       "fix": "From 0.9.27 an optional fix on the game's page (Advanced, never applied by Play) copies the DXVK-MacOS 3.1 Direct3D 9 beside RRRE64.exe for this game only. One reporter's sessions run on it, another got grayscale, so try it and remove it if the picture goes gray."
+    },
+    {
+      "symptom": "Stuck on the first loading screen with the logo, or on the splash screen with its music playing (reported on an M1, macOS 27.0.1, engine r5, DXVK, highball#498)",
+      "cause": "not diagnosed; the environment was on the old engine r5",
+      "fix": "none confirmed. Untested: the newest engine (r28), then Wine's own Direct3D for this game, then the optional fix on the game's page"
     }
   ],
   "launchArgs": null,
