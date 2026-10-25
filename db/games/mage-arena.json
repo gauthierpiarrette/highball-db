@@ -1,0 +1,19 @@
+{
+  "id": "mage-arena",
+  "title": "Mage Arena",
+  "steam_appid": 3716600,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by adisng (highball-db#693, 2026-10-25), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal environment, msync, rated 3 of 5 (playable with workarounds) after a 9-minute session, with a resolution problem not described further. Not verified by the maintainer.",
+  "notes": "Reported playable with workarounds on the default engine with Apple's DirectX 12 support on an M1, with a resolution problem the report does not describe. Nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "A resolution problem (not described in the report)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
