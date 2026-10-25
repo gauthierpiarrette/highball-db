@@ -40,7 +40,9 @@ URL_AID = re.compile(r"store\.steampowered\.com/app/" + AID)
 MODEL_ID = re.compile(r"(?<![A-Za-z0-9])"
                       r"(?:iMacPro|iMac|MacBookPro|MacBookAir|MacBook|Macmini|MacPro|MacStudio|Mac)"
                       r"\d{1,2},\d{1,2}(?![A-Za-z0-9.])")
-CHIP = re.compile(r"^apple\s+m(\d{1,2})(\s+(pro|max|ultra))?$", re.I)
+# A MacBook Neo reports its iPhone-class chip, Apple A18 Pro, and players often type "M3 Pro" or
+# "Apple M4 (16 GB)": 25 reports lost their chip before these were read (highball-db#680).
+CHIP = re.compile(r"^(?:apple\s+)?([ma])(\d{1,2})\s*(pro|max|ultra)?$", re.I)
 MACOS_INLINE = re.compile(r"(?i)\bmacos\s+v?(\d{2}(?:\.\d{1,2}){0,2})\b")
 MACOS_OK = re.compile(r"^\d{2}(\.\d{1,2}){0,2}$")
 GAME_ID_OVERRIDE = re.compile(r"^\s*game_id\s*:\s*([A-Za-z0-9._-]+)\s*$", re.M)
@@ -218,11 +220,12 @@ def extract(body):
 
     c = find_label(b, ["Chip", "CPU", "SoC"])
     rec["chip"] = None
-    if answered(c) and CHIP.match(c):
+    c = re.sub(r"\s*\([^)]*\)$", "", c).strip() if answered(c) else None
+    if c and CHIP.match(c):
         g = CHIP.match(c)
-        rec["chip"] = "Apple M" + g.group(1) + (" " + g.group(3).capitalize() if g.group(3) else "")
+        rec["chip"] = "Apple " + g.group(1).upper() + g.group(2) + (" " + g.group(3).capitalize() if g.group(3) else "")
     if rec["chip"] is None:
-        asks.append("chip: no labelled 'Apple M<n> [Pro|Max|Ultra]'")
+        asks.append("chip: no labelled 'Apple M<n> [Pro|Max|Ultra]' or 'Apple A<n> [Pro]'")
 
     mv = find_label(b, ["macOS version", "macOS", "macOS ver", "OS version"])
     rec["macos"] = None

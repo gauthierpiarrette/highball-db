@@ -1,0 +1,19 @@
+{
+  "id": "freddy-fazbears-pizzeria-simulator",
+  "title": "Freddy Fazbear's Pizzeria Simulator",
+  "steam_appid": 738060,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by im-theslimeguy (highball-db#680, 2026-10-25), Apple A18 Pro, macOS 27.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT environment, msync, rated 4 of 5 after a 26-minute session. Not verified by the maintainer.",
+  "notes": "Reported playable on the default engine on an Apple A18 Pro after a 26-minute session, with text missing in some minigames such as Midnight Motorist. Nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "Text does not show in some minigames, for example Midnight Motorist",
+      "cause": "not investigated",
+      "fix": "none yet"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

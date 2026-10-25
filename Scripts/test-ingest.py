@@ -131,6 +131,14 @@ for k, v in [("chip", "Apple M4"), ("macos", "26.5.2"), ("renderer", "d3dmetal")
 shutil.rmtree(box)
 
 box = sandbox()
+for i, (typed, chip) in enumerate([("Apple A18 Pro", "Apple A18 Pro"), ("Apple A18Pro", "Apple A18 Pro"),
+                                    ("M3 Pro", "Apple M3 Pro"), ("Apple M4 (16 GB)", "Apple M4")]):
+    run(box, f"| Chip | {typed} |\n| macOS version | 27.2 |\n", 953 + i, "Cyberpunk 2077")
+    rec = json.loads(open(os.path.join(box, "db", "reports", "cyberpunk-2077.jsonl")).read().strip().splitlines()[-1])
+    check(f"reads the chip {typed!r}", rec["chip"], chip)
+shutil.rmtree(box)
+
+box = sandbox()
 body = ("| Renderer | not reported, presumably the default (dxmt) |\n"
         "| Chip | M4 MacBook (exact model not given) |\n"
         "| macOS | not reported |\n")
