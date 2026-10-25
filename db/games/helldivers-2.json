@@ -2,17 +2,17 @@
   "id": "helldivers-2",
   "title": "HELLDIVERS 2",
   "steam_appid": 553850,
-  "status": "community",
-  "renderer": "d3dmetal",
+  "status": "blocked-anticheat",
+  "renderer": null,
   "anticheat": {
     "names": [
-      "GameGuard"
+      "Easy Anti-Cheat"
     ],
-    "macVerdict": "warning",
-    "note": "nProtect GameGuard, a user-mode anti-cheat: CrossOver 26 users report it plays online through it, and it breaks with some game patches and comes back with the next. Not verified by Highball."
+    "macVerdict": "blocked",
+    "note": "Easy Anti-Cheat since patch 7.2.0 on 2026-10-20, in place of GameGuard. Arrowhead keeps it working on Linux and the Steam Deck through the Easy Anti-Cheat runtime Proton ships, which has no macOS build, so Wine on a Mac (Highball or CrossOver) cannot pass it."
   },
   "provenance": "CrossOver 26 community reports (r/macgaming and r/Helldivers, 2026); on Highball one reporter hit the game's own 'Incompatible CPU detected' AVX check (highball#81, M5 Max, macOS 26.5.2, Highball 0.8.8, engine r0). Not verified by Highball.",
-  "notes": "DirectX 12 only, so it needs Apple's D3DMetal (Play offers the licence) and the Wine 11 engine (CrossOver 26.3 tree), which is where CrossOver users play it. Its first check is the CPU: it requires AVX2 and refuses to start with 'Incompatible CPU detected' unless AVX is advertised through Rosetta, which the recipe does. GameGuard runs in user mode and CrossOver users play online through it; every game patch can break that until the next one. 135 GB on disk. A player reports that the game now starts Easy Anti-Cheat in place of GameGuard and stops at its start (an M5, macOS 27.0.1, Highball 0.10.22, highball#439, 2026-10-22). Easy Anti-Cheat does not run under Wine on a Mac, so the game is out of reach while that holds. The switch itself is not confirmed here.",
+  "notes": "DirectX 12 only, so it needs Apple's D3DMetal (Play offers the licence) and the Wine 11 engine (CrossOver 26.3 tree), which is where CrossOver users play it. Its first check is the CPU: it requires AVX2 and refuses to start with 'Incompatible CPU detected' unless AVX is advertised through Rosetta, which the recipe does. GameGuard runs in user mode and CrossOver users play online through it; every game patch can break that until the next one. 135 GB on disk. Since patch 7.2.0 on 2026-10-20 the game uses Easy Anti-Cheat in place of GameGuard (Arrowhead's announcement, with Linux and Steam Deck support kept through Proton's Easy Anti-Cheat runtime). That runtime has no macOS build, so the game stops at Easy Anti-Cheat's start on a Mac and is out of reach for Highball and CrossOver alike while it holds (highball#439, an M5, 2026-10-22). What follows describes the game before the switch.",
   "knownIssues": [
     {
       "symptom": "'Incompatible CPU detected' at launch",
