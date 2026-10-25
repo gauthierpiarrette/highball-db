@@ -15,8 +15,8 @@
     },
     {
       "symptom": "Stuck on the first loading screen with the logo, or on the splash screen with its music playing (reported on an M1, macOS 27.0.1, engine r5, DXVK, highball#498)",
-      "cause": "not diagnosed; the environment was on the old engine r5",
-      "fix": "none confirmed. Not the old engine alone: on r28 with msync, Wine's own Direct3D crashes the game at start (a null read in RRRE64.exe, 'RRRE64 has encountered a serious issue'). Untested: DXVK on r28 with the optional fix on the game's page"
+      "cause": "not diagnosed. Not graphics: the splash draws correctly. The game's menu is an embedded Chromium (CEF) browser, and its log under Wine shows network calls failing (errors 10042 and 10045) and 'Unable to allocate frame for first frame capture'",
+      "fix": "none confirmed. Tried on r28 with msync in a fresh environment: Wine's own Direct3D crashes at start, DXVK stays on the splash with music and no loading progress"
     }
   ],
   "launchArgs": null,
