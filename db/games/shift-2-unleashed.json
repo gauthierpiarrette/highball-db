@@ -1,0 +1,34 @@
+{
+  "id": "shift-2-unleashed",
+  "title": "Shift 2 Unleashed",
+  "steam_appid": 47920,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Dloshak (highball#241, 2026-10-25), Apple M1 Max Mac Studio with two displays, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, a separate environment with Steam: activation and menus reached, a race not yet. Not verified by the maintainer.",
+  "notes": "Starts and reaches its setup screens on the default engine on an M1 Max, but has not reached a race yet. Every version uses TAGES Solidshield, which activates online through EA's servers, and its activation window stayed hidden while a second display was connected. The game needs NVIDIA's legacy PhysX, which it ships in its install\\PhysX folder. On DXVK the GPU is lost as a race starts, with MoltenVK's Internal Error 0000010d right after passes drawn with no render target, the fault Portal 2's HDR pass caused. In DXMT mode (Direct3D 9 still goes through DXVK there) the window disappears when the game changes display mode. Nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "The activation window never appears after Steam's CD key dialog",
+      "cause": "it opens off screen when a second display is connected",
+      "fix": "disconnect the second display for the activation, as for Steam's own sign in window (highball#479)"
+    },
+    {
+      "symptom": "PhysXLoader.dll cannot be loaded",
+      "cause": "the game needs NVIDIA's legacy PhysX runtime",
+      "fix": "run install\\PhysX\\PhysX_SystemSoftware.exe from the game's folder with Run a Windows program… in the environment, then stop the environment"
+    },
+    {
+      "symptom": "On DXVK the game hangs as a race starts with the sound looping (MoltenVK Internal Error 0000010d, then VK_ERROR_DEVICE_LOST)",
+      "cause": "a GPU fault right after passes with no render target, as in Portal 2's HDR pass; not diagnosed for this game",
+      "fix": "none confirmed. Untested: Wine's own Direct3D for this game"
+    },
+    {
+      "symptom": "In DXMT mode the window disappears when the game changes display mode",
+      "cause": "not diagnosed",
+      "fix": "none confirmed. Untested: Emulate display mode changes in the game's settings"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
