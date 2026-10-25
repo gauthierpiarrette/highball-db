@@ -5,12 +5,17 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by adisng (highball-db#693, 2026-10-25), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal environment, msync, rated 3 of 5 (playable with workarounds) after a 9-minute session, with a resolution problem not described further. Not verified by the maintainer.",
-  "notes": "Reported playable with workarounds on the default engine with Apple's DirectX 12 support on an M1, with a resolution problem the report does not describe. Nothing was measured here.",
+  "provenance": "Reported by adisng (highball-db#693, 2026-10-25), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal environment, msync, rated 3 of 5 (playable with workarounds) after a 9-minute session, with the game opening larger than the Mac's screen and the microphone, which the game's spells use, not clearly working (asked after the report). Not verified by the maintainer.",
+  "notes": "Reported playable with workarounds on the default engine with Apple's DirectX 12 support on an M1. The game opened larger than the Mac's screen and its own settings did not bring it back, and the microphone, which casting spells needs, may not have worked well. Nothing was measured here.",
   "knownIssues": [
     {
-      "symptom": "A resolution problem (not described in the report)",
+      "symptom": "The game opens larger than the Mac's screen and its settings do not fix it",
       "cause": "not diagnosed",
+      "fix": "none confirmed. Untested: Unity's own arguments in the game page's Launch arguments, -screen-fullscreen 1 -screen-width and -screen-height set to the screen's size"
+    },
+    {
+      "symptom": "The microphone may not work well, and the game's spells are cast by voice",
+      "cause": "not diagnosed; Highball's audio buffer cap is a suspect for microphones (highball#350)",
       "fix": "none known"
     }
   ],
