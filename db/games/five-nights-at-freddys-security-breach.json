@@ -1,0 +1,19 @@
+{
+  "id": "five-nights-at-freddys-security-breach",
+  "title": "Five Nights at Freddy's: Security Breach",
+  "steam_appid": 747660,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by im-theslimeguy (highball#492, 2026-10-25), Apple A18 Pro, macOS 27.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28: the last run was on DXVK, where the game takes its Vulkan path. Not verified by the maintainer.",
+  "notes": "Not playable for the one report so far. The game starts, its 2D menus, dialogue and sound work and the player can walk around, but every 3D scene draws black. The game offers Vulkan and DirectX 12 only. Which other modes the reporter tried is not known. Nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "Every 3D scene is black while menus, dialogue and sound work",
+      "cause": "not diagnosed",
+      "fix": "none confirmed"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
