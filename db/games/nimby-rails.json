@@ -1,0 +1,19 @@
+{
+  "id": "nimby-rails",
+  "title": "NIMBY Rails",
+  "steam_appid": 1134710,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by iljajj (highball-db#689, 2026-10-25), Apple M5, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT environment, msync, rated 4 of 5 after a 7-minute session. Not verified by the maintainer.",
+  "notes": "Reported playable on the default engine with DXMT on an M5 after a short session. The game's speed indicator sits under the MacBook's notch, and moving around the map is hard with only a trackpad. Nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "The game speed indicator is hidden under the notch on a MacBook",
+      "cause": "the game draws its interface up to the top edge of the screen",
+      "fix": "none confirmed"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
