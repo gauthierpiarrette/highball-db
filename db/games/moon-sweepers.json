@@ -1,0 +1,13 @@
+{
+  "id": "moon-sweepers",
+  "title": "Moon Sweepers",
+  "steam_appid": 5335510,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by gdncomm-audi-asmarandana (highball-db#677, 2026-10-25), Apple M3, macOS 26.6.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, msync, rated 5 of 5 after 112 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on the default engine with DXMT on an M3 over 112 minutes. Nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
