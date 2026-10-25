@@ -1,0 +1,13 @@
+{
+  "id": "tower-dominion",
+  "title": "Tower Dominion",
+  "steam_appid": 3226530,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by smitjj (highball-db#695, 2026-10-25), Apple M5 Pro, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal environment, msync, rated 5 of 5 after a 5-minute session. Not verified by the maintainer.",
+  "notes": "Reported perfect on the default engine with Apple's DirectX 12 support on an M5 Pro after a short session. Nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
