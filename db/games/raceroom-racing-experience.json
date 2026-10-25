@@ -16,7 +16,7 @@
     {
       "symptom": "Stuck on the first loading screen with the logo, or on the splash screen with its music playing (reported on an M1, macOS 27.0.1, engine r5, DXVK, highball#498)",
       "cause": "not diagnosed; the environment was on the old engine r5",
-      "fix": "none confirmed. Untested: the newest engine (r28), then Wine's own Direct3D for this game, then the optional fix on the game's page"
+      "fix": "none confirmed. Not the old engine alone: on r28 with msync, Wine's own Direct3D crashes the game at start (a null read in RRRE64.exe, 'RRRE64 has encountered a serious issue'). Untested: DXVK on r28 with the optional fix on the game's page"
     }
   ],
   "launchArgs": null,
