@@ -6,12 +6,12 @@
   "renderer": null,
   "anticheat": null,
   "provenance": "Reported by ak9m12 (highball#482, 2026-10-25), Apple M4, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXVK, msync: the game ran, the mouse lagged. Not verified by the maintainer.",
-  "notes": "The 64-bit build (cstrike_win64.exe) starts and plays on the default engine through DXVK on an M4, but the mouse input lags (highball#482). The same session hit Wine 10's limit of 256 realized fonts ('out of realized font handles'); the Wine 11 engine allows 5000. Nothing was measured here.",
+  "notes": "The 64-bit build (cstrike_win64.exe) starts and plays on the default engine through DXVK on an M4, but the frame rate falls hard while the mouse moves, so cap it at 60 for now (highball#482). The same session hit Wine 10's limit of 256 realized fonts ('out of realized font handles'); the Wine 11 engine allows 5000. Nothing was measured here.",
   "knownIssues": [
     {
-      "symptom": "Mouse input lags (reported on an M4, macOS 27.0.1, DXVK, engine r28, highball#482)",
-      "cause": "not measured",
-      "fix": "none confirmed yet. Turning off Wait for vertical sync in the game's video settings and trying m_rawinput 1 in the console are the first things to try"
+      "symptom": "The frame rate falls from about 350 fps to under 100 while the mouse or trackpad moves, which feels like mouse lag (reported on an M4, macOS 27.0.1, DXVK, engine r28, highball#482)",
+      "cause": "not measured. The cost follows the frame rate, so likely Wine's Mac cursor handling done once per frame. Turning off vertical sync and switching m_rawinput did not change it",
+      "fix": "cap the frame rate at 60 (Highball's frame cap in the environment's settings, or fps_max 60 in the game's console), which made it playable for the reporter"
     }
   ],
   "launchArgs": null,
