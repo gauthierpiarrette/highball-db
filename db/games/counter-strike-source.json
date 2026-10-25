@@ -1,0 +1,19 @@
+{
+  "id": "counter-strike-source",
+  "title": "Counter-Strike: Source",
+  "steam_appid": 240,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by ak9m12 (highball#482, 2026-10-25), Apple M4, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXVK, msync: the game ran, the mouse lagged. Not verified by the maintainer.",
+  "notes": "The 64-bit build (cstrike_win64.exe) starts and plays on the default engine through DXVK on an M4, but the mouse input lags (highball#482). The same session hit Wine 10's limit of 256 realized fonts ('out of realized font handles'); the Wine 11 engine allows 5000. Nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "Mouse input lags (reported on an M4, macOS 27.0.1, DXVK, engine r28, highball#482)",
+      "cause": "not measured",
+      "fix": "none confirmed yet. Turning off Wait for vertical sync in the game's video settings and trying m_rawinput 1 in the console are the first things to try"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
