@@ -1,0 +1,13 @@
+{
+  "id": "shop-titans",
+  "title": "Shop Titans",
+  "steam_appid": 1258080,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by ArcMichael (highball-db#675, 2026-10-25), Apple M5 Max, macOS 26.5.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, msync, rated 3 of 5 (playable with workarounds) after 3 minutes. Not verified by the maintainer.",
+  "notes": "Reported playable with workarounds on the default engine with DXMT on an M5 Max, from a three-minute session. The report does not say which workarounds. The reporter's environment sent its traffic through a local proxy (http_proxy and https_proxy set to 127.0.0.1), which may be one of them for their network. Nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
