@@ -5,20 +5,27 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by Swiss-Mac-User (highball#385, highball#386, 2026-10-18), Apple M5 Pro, macOS 27.2, Highball 0.10.19: on the Wine 11 engine r27 with DXVK the GPU device is lost (MoltenVK 'Internal Error (0000010d)', the error Portal 2's HDR pass caused), and on the default engine r28 in a DXMT environment the game needs -oldgameui in Steam's launch options, loads for a couple of minutes and runs at 5 fps at most. Not verified by the maintainer.",
-  "notes": "Unplayable for the one report so far: the GPU device is lost on DXVK, and in a DXMT environment (where Direct3D 9 still goes through DXVK) it needs -oldgameui and runs at about 5 fps. The device loss is the same Metal error Portal 2's HDR exposure pass caused, which Source's mat_tonemapping_occlusion_use_stencil 1 fixed there; untested on Black Mesa.",
+  "provenance": "Reported by Swiss-Mac-User (highball#385, highball#386, 2026-10-18), Apple M5 Pro, macOS 27.2, Highball 0.10.19: on the Wine 11 engine r27 with DXVK the GPU device is lost (MoltenVK 'Internal Error (0000010d)', the error Portal 2's HDR pass caused), and on the default engine r28 in a DXMT environment the game needs -oldgameui in Steam's launch options, loads for a couple of minutes and runs at 5 fps at most. Not verified by the maintainer. Swiss-Mac-User again (highball#385, 2026-10-25), same Mac, Highball 0.10.22, a new game on Interloper with -oldgameui: on the default engine r29 Wine's own Direct3D ran at 5 fps (10 with Steam's Direct3D 9 fallback option) and DXMT, DXVK and Apple's DirectX 12 support crashed at the loading screen, while on the Wine 11 engine r27 Wine's own Direct3D, DXMT and Apple's DirectX 12 support ran well with some frame drops in heavy scenes (DXMT's menu very laggy) and DXVK crashed at the loading screen.",
+  "notes": "Plays on the Wine 11 engine for the one player so far (M5 Pro, macOS 27.2) in Wine's own Direct3D, DXMT or Apple's DirectX 12 support, with some frame drops in heavy scenes, and the recipe makes Play offer that engine. The game needs -oldgameui to start, which Play passes. On the default engine it runs at 5 to 10 fps on Wine's own Direct3D and crashes at the loading screen in every other mode. DXVK crashes at the loading screen on both engines. Nothing was measured here.",
   "knownIssues": [
     {
-      "symptom": "GPU device lost (MoltenVK Internal Error 0000010d) on DXVK",
-      "cause": "not diagnosed here; the same error came from Source's HDR exposure pass in Portal 2",
-      "fix": "none confirmed. Untested: mat_tonemapping_occlusion_use_stencil 1 in the game's autoexec.cfg, as Portal 2's fix does"
+      "symptom": "Crash at the loading screen, or the GPU device lost (MoltenVK Internal Error 0000010d), on DXVK",
+      "cause": "not diagnosed here; the same Metal error came from Source's HDR exposure pass in Portal 2, and its fix there (mat_tonemapping_occlusion_use_stencil 1) gave Black Mesa visual glitches",
+      "fix": "play in Wine's own Direct3D, DXMT or Apple's DirectX 12 support on the Wine 11 engine"
     },
     {
-      "symptom": "About 5 fps, and the game needs -oldgameui to start, in a DXMT environment",
+      "symptom": "5 to 10 fps on Wine's own Direct3D and a crash at the loading screen in every other mode, on the default engine",
       "cause": "not diagnosed",
-      "fix": "none known"
+      "fix": "the Wine 11 engine the recipe offers on Play (r27 or newer), or by hand on the environment's full page, Advanced, Engine"
+    },
+    {
+      "symptom": "The game does not start without -oldgameui",
+      "cause": "not diagnosed",
+      "fix": "Play passes -oldgameui"
     }
   ],
-  "launchArgs": null,
+  "launchArgs": [
+    "-oldgameui"
+  ],
   "lastVerified": null
 }
