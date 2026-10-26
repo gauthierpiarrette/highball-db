@@ -1,0 +1,19 @@
+{
+  "id": "the-walking-dead",
+  "title": "The Walking Dead",
+  "steam_appid": 207610,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#701, 2026-10-26), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, in a Steam library on an external drive shared with the Mac's own Steam, Steam's DirectX setup skipped: WalkingDead101.exe crashes into Wine's debugger right after it starts, on D3DMetal, DXMT and DXVK alike (a write to address 0 at 0x004DE934 inside the game's own code, before any graphics starts). Not verified by the maintainer.",
+  "notes": "Telltale's 2012 game, the Steam one called The Walking Dead. Does not launch for the one report so far: the game crashes in its own code a moment after it starts, before it opens its graphics, so the graphics mode makes no difference. PCGamingWiki's fix for the game not launching is the legacy DirectX runtime, which Steam's first-start setup installs, and the report skipped that setup. Nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "WalkingDead101.exe crashes into Wine's debugger right after starting, in every graphics mode (an M1, r28)",
+      "cause": "not diagnosed: a write to address 0 at 0x004DE934 inside the game, before any graphics. Steam's DirectX setup had been skipped, and the Steam library was shared with the Mac's Steam",
+      "fix": "none confirmed. Untested: verify the game's files in Highball's Steam, then let Steam's DirectX setup run"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
