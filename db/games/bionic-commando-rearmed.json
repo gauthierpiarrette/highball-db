@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by DeepBlade (highball#375, 2026-10-17), Apple M2 Max, macOS 27.0, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, D3DMetal environment: crashes on launch or shows a black screen. The log has two loader lock waits at start and the game's Direct3D 9 going through DXVK. Not verified by the maintainer. DeepBlade again (highball#428, 2026-10-26): runs after NVIDIA's PhysX System Software was installed in the environment.",
+  "provenance": "Reported by DeepBlade (highball#375, 2026-10-17), Apple M2 Max, macOS 27.0, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, D3DMetal environment: crashes on launch or shows a black screen. The log has two loader lock waits at start and the game's Direct3D 9 going through DXVK. Not verified by the maintainer. DeepBlade again (highball#428, 2026-10-26): runs after NVIDIA's PhysX System Software was installed in the environment. The same player's report (highball-db#714, 2026-10-26): Apple M2 Max, macOS 27.0, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, Wine's own Direct3D for the game, rated 5 of 5 after 5 minutes with the PhysX System Software installed.",
   "notes": "Runs once NVIDIA's PhysX System Software is in the environment, which the recipe now installs (the reporter of highball#375 and #428 confirmed it on an M2 Max, 2026-10-26). Without it the game crashed on launch on DXVK and on Wine's own Direct3D alike: it starts a second copy of itself, loads PhysX's loader and cooking DLLs from its folder but never PhysXCore, and raises its own fatal error. Nothing was measured here.",
   "knownIssues": [
     {
