@@ -1,0 +1,13 @@
+{
+  "id": "my-time-at-sandrock",
+  "title": "My Time at Sandrock",
+  "steam_appid": 1084600,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Giu27seppe (highball-db#703, 2026-10-26), Apple M4 Pro, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT environment, msync, vcrun2022, rated 5 of 5 after a 19-minute session. Not verified by the maintainer.",
+  "notes": "Reported perfect on the default engine with DXMT on an M4 Pro after a 19-minute session. Nothing was measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
