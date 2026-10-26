@@ -1,0 +1,18 @@
+{
+  "id": "minecraft-dungeons",
+  "kind": "game",
+  "title": "Minecraft Dungeons",
+  "requires": [
+    "steam"
+  ],
+  "renderer": null,
+  "engine": "x64-crossover26.3-r18",
+  "steps": [
+    {
+      "type": "note",
+      "text": "Asks for the Wine 11 engine r18 or newer. The game signs in with a Microsoft account through Xbox's sign-in, and on the default engine Wine forgets that sign-in at every start (its credential lookup fails on macOS when the Keychain has no match). The Wine 11 engines carry the fix, the same one that keeps Forza Horizon 6 signed in (highball-db#707). Everything installed in the environment stays."
+    }
+  ],
+  "knownIssues": [],
+  "lastVerified": null
+}
