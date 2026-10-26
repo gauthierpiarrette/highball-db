@@ -1,0 +1,20 @@
+{
+  "id": "heroes-of-might-and-magic-v-tribes-of-the-east",
+  "title": "Heroes of Might and Magic V: Tribes of the East",
+  "steam_appid": 15370,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by buturugaa (highball-db#720, 2026-10-26), the Steam edition, Apple M2, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, msync, Windows 10, rated 4 of 5 after 117 minutes through Highball. Not verified by the maintainer.",
+  "notes": "The standalone expansion, a separate Steam app from Heroes of Might and Magic V. Reported to run like on Windows on an M2 with DXMT over almost two hours. The only problem was on the very first launch, when macOS asked whether Highball may use the Documents folder (the game keeps its profile and saves there) and the screen went black after the answer. Quitting with Command Option Escape and starting it again fixed it for good.",
+  "knownIssues": [
+    {
+      "symptom": "Black screen on the very first launch, right after macOS asks for access to the Documents folder",
+      "cause": "macOS shows its one-time permission prompt while the game is starting fullscreen, the first time anything in the environment writes to Documents",
+      "fix": "Allow the access, quit the game with Command Option Escape and start it again. The prompt does not come back."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

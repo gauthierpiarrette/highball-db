@@ -4,8 +4,8 @@
   "steam_appid": 1222670,
   "status": "verified-local",
   "renderer": "dxmt",
-  "provenance": "verified by Highball through the EA app (free-to-play edition), 2026-09-06",
-  "notes": "Installed and played through the EA app on the Wine 11 (CrossOver 26.3) engine: 26 GB download, signed-in main menu, Create-A-Sim, the Willow Creek world map, and live mode on a lot (moved in, career panel, clock running) at 128-130 fps (7.8 ms frame, GPU 5.5 ms) at 1728x1117 on DXMT, D3D11 feature level 11_0. Needs the EA app recipe (cross-process swapchain flag, junction handling) and that engine; the EA app does not install on the bundled Wine 10 engine. First launch shows a black full-screen window for about two minutes before the intro. Starting the executable directly hands off to the EA app, which relaunches the game, so its graphics settings and the Metal HUD come from the EA app's process. The Steam-sold copy and the other renderers were not tried.",
+  "provenance": "verified by Highball through the EA app (free-to-play edition), 2026-09-06 The Steam copy (app 1222670) reported by udance4ever (highball-db#719, 2026-10-26), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-crossover26.3-r27, DXMT for the game, the EA app recipe, rated 4 of 5 after 12 minutes.",
+  "notes": "Installed and played through the EA app on the Wine 11 (CrossOver 26.3) engine: 26 GB download, signed-in main menu, Create-A-Sim, the Willow Creek world map, and live mode on a lot (moved in, career panel, clock running) at 128-130 fps (7.8 ms frame, GPU 5.5 ms) at 1728x1117 on DXMT, D3D11 feature level 11_0. Needs the EA app recipe (cross-process swapchain flag, junction handling) and that engine; the EA app does not install on the bundled Wine 10 engine. First launch shows a black full-screen window for about two minutes before the intro. Starting the executable directly hands off to the EA app, which relaunches the game, so its graphics settings and the Metal HUD come from the EA app's process. The Steam-sold copy and the other renderers were not tried. The Steam copy works too, through the EA app that Steam installs inside the environment: on its first two launches the EA app came up but the game did not, and the third worked once the EA app showed the game in its own library, which it does after it links a Steam purchase to the EA account. The same player could not start the download with Highball's Install button and installed it from Steam's own window.",
   "lastVerified": "2026-09-06",
   "verified": {
     "chip": "M1 Pro",
@@ -24,5 +24,17 @@
     "name": "EA app",
     "impact": "requires",
     "note": "Owned, downloaded and launched through the EA app; the game hands itself back to the EA app when started directly. Works on the Wine 11 engine with the EA app recipe; the EA app itself does not install on the bundled Wine 10 engine."
-  }
+  },
+  "knownIssues": [
+    {
+      "symptom": "After minimizing the game window, the mouse stays confined to part of the screen",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    },
+    {
+      "symptom": "Steam copy: the first launches start the EA app but not the game",
+      "cause": "the EA app has to link the Steam purchase to the EA account and list the game in its library first",
+      "fix": "keep the EA app open until the game shows in its library, then press Play again"
+    }
+  ]
 }
