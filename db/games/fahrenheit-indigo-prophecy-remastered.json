@@ -1,0 +1,19 @@
+{
+  "id": "fahrenheit-indigo-prophecy-remastered",
+  "title": "Fahrenheit: Indigo Prophecy Remastered",
+  "steam_appid": 312840,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#700, 2026-10-26), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, in a Steam library on an external drive shared with the Mac's own Steam: does not launch in DXMT, DXVK or D3DMetal. The DXMT and DXVK logs show Fahrenheit.exe failing to load its own DLLs (Qt5, SDL2, libgcc_s_dw2-1, libstdc++-6), which were not beside it, and Highball's page showed the game as not downloaded. Not verified by the maintainer.",
+  "notes": "Not playable yet for the one report, but the failure is the install, not the engine: the game folder held Fahrenheit.exe without the DLLs that ship with it, so it stopped before opening a window in every graphics mode. Steam's Mac version is 32-bit and no longer runs on macOS, so Highball installs the Windows one. Nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "The game stops before opening a window in every graphics mode, and its page says Not downloaded yet",
+      "cause": "Fahrenheit.exe's own DLLs (Qt5, SDL2, the MinGW runtime) were missing from the game folder, in a Steam library shared with the Mac's Steam",
+      "fix": "verify the game's files in Highball's Steam (the game's Properties, Installed Files) so Steam fetches the Windows files. Untested"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

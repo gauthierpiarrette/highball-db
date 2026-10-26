@@ -1,0 +1,19 @@
+{
+  "id": "sniper-ghost-warrior-2",
+  "title": "Sniper: Ghost Warrior 2",
+  "steam_appid": 34870,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by davido0102-rgb (highball#506, 2026-10-26), Apple M5, macOS 27.0.1, Highball 0.10.22, the game's Direct3D 9 through DXVK-Kegworks 1.10.4 with async shader compilation off: heavy frame drops, barely playable. Not verified by the maintainer.",
+  "notes": "Runs on an M5 but with heavy frame drops for the one report so far. Direct3D 9 game, drawn through DXVK's Direct3D 9 layer. Nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "Heavy frame drops, barely playable (an M5, DXVK, async shader compilation off)",
+      "cause": "not diagnosed",
+      "fix": "none confirmed. Untested: DXVK async shader compilation in the environment's Graphics settings"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
