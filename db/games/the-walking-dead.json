@@ -6,12 +6,12 @@
   "renderer": null,
   "anticheat": null,
   "provenance": "Reported by udance4ever (highball-db#701, 2026-10-26), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, in a Steam library on an external drive, Steam's DirectX setup skipped: WalkingDead101.exe crashes into Wine's debugger right after it starts, on D3DMetal, DXMT and DXVK alike (a write to address 0 at 0x004DE934 inside the game's own code, before any graphics starts). Not verified by the maintainer.",
-  "notes": "Telltale's 2012 game, the Steam one called The Walking Dead. Does not launch for the one report so far: the game crashes in its own code a moment after it starts, before it opens its graphics, so the graphics mode makes no difference. PCGamingWiki's fix for the game not launching is the legacy DirectX runtime, which Steam's first-start setup installs, and the report skipped that setup. Nothing was measured here.",
+  "notes": "Telltale's 2012 game, the Steam one called The Walking Dead. Does not launch for the one report so far: right after starting, the game asks for a single block of about 2 GB, which no 32-bit program can get under Wine, and crashes when it doesn't get it. The graphics mode makes no difference, and Steam's DirectX setup did not help. Nothing was measured here beyond the memory probe described in the issue.",
   "knownIssues": [
     {
       "symptom": "WalkingDead101.exe crashes into Wine's debugger right after starting, in every graphics mode (an M1, r28)",
-      "cause": "not diagnosed: a write to address 0 at 0x004DE934 inside the game, before any graphics. Steam's DirectX setup had been skipped",
-      "fix": "none confirmed. Untested: let Steam's DirectX setup run (PCGamingWiki's fix for the game not launching)"
+      "cause": "the game asks for one 2,056 MB block of memory at start (Wine logs 'out of memory for allocation, size 80810000'), gets nothing and writes through the null pointer. A 32-bit process cannot get a block that size: measured on the M4 with a probe in Wine 10 r28 and Wine 11 r25, the largest free block is 1,971 MB (2 GB address space) or 2,048 MB (4 GB, split at 0x7FFE0000 as on Windows). So the game sizes the block from something that reads differently under Wine, likely the memory status it is given (2,047 or 4,095 MB). Steam's DirectX setup did not change it",
+      "fix": "none yet. The reporter plays the console versions meanwhile"
     }
   ],
   "launchArgs": null,
