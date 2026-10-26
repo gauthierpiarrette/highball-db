@@ -1,0 +1,19 @@
+{
+  "id": "touhou-danmaku-kagura-phantasia-lost",
+  "title": "Touhou Danmaku Kagura Phantasia Lost",
+  "steam_appid": 2190220,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by modooki (highball-db#709, 2026-10-26), Apple M4, macOS 27.2, through Proton-ish 1.0.27 (Mac Steam with Highball's Wine 11 engine x64-crossover26.3-r27) rather than the Highball app, DXMT, sync off, AVX advertised: the game starts to a black screen and does not move. Not verified by the maintainer.",
+  "notes": "Does not launch for the one report so far, which ran through Proton-ish, not the Highball app: the window stays black. Nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "A black window that never moves (DXMT, Wine 11 r27, through Proton-ish)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}
