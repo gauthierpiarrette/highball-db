@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#700, 2026-10-26), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, in a Steam library on an external drive (its own, not the Mac Steam's): does not launch in DXMT, DXVK or D3DMetal. The DXMT and DXVK logs show Fahrenheit.exe failing to load its own DLLs (Qt5, SDL2, libgcc_s_dw2-1, libstdc++-6), which were not beside it. The reporter then found them in a Fahrenheit.exe.local folder next to the exe, Windows' DLL redirection, which Wine's loader does not look in; with the DLLs linked next to the exe the game reached gameplay, needing Emulate display mode changes to keep its resolution and a DirectX 9 warning dismissed. Not verified by the maintainer.",
-  "notes": "Plays for the one report once its DLLs are reachable. The game keeps its DLLs (Qt5, SDL2, the MinGW runtime, steam_api) in a Fahrenheit.exe.local folder beside the exe, which Windows' loader searches first (DLL redirection) and Wine's does not, so the game stopped before opening a window in every graphics mode. Linking those DLLs next to Fahrenheit.exe got the reporter in game; the resolution then needs Emulate display mode changes and is not always stable. Steam's Mac version is 32-bit and no longer runs on macOS, so Highball installs the Windows one. Nothing was measured here.",
+  "provenance": "Reported by udance4ever (highball-db#700, 2026-10-26), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, in a Steam library on an external drive (its own, not the Mac Steam's): does not launch in DXMT, DXVK or D3DMetal. The DXMT and DXVK logs show Fahrenheit.exe failing to load its own DLLs (Qt5, SDL2, libgcc_s_dw2-1, libstdc++-6), which were not beside it. The reporter then found them in a Fahrenheit.exe.local folder next to the exe, Windows' DLL redirection, which Wine's loader does not look in; with the DLLs linked next to the exe the game reached gameplay, needing Emulate display mode changes to keep its resolution and a DirectX 9 warning dismissed. Not verified by the maintainer. Later the same day the reporter played it through the tutorial with a working setup: In a Window in the pre-launch settings, the keyboard to get through login and enable the gamepad in Options, Controls, and Steam Input on for a DualSense.",
+  "notes": "Playable with workarounds for the one report so far (M1, default engine, DXVK's Direct3D 9). Link the DLLs from Fahrenheit.exe.local next to Fahrenheit.exe first (Wine's loader does not search that folder). Then choose In a Window in the pre-launch settings: fullscreen breaks on the first menu click. The window opens small, click its title bar so it has focus, use the keyboard to create a login and to enable the gamepad in Options, Controls, then play with a gamepad. The mouse cannot be used, its cursor stays at the screen's edge. A DualSense needs Steam Input on, or the right stick does nothing. Steam's Mac version is 32-bit and no longer runs on macOS, so Highball installs the Windows one. Nothing was measured here.",
   "knownIssues": [
     {
       "symptom": "The game stops before opening a window in every graphics mode, its own DLLs not found",
@@ -22,6 +22,16 @@
       "symptom": "A DirectX 9 warning dialog at start",
       "cause": "not diagnosed",
       "fix": "dismiss it, the game goes on"
+    },
+    {
+      "symptom": "In a window the mouse cursor sticks to the screen's edge and the mouse cannot be used",
+      "cause": "not diagnosed",
+      "fix": "play with the keyboard and a gamepad: enable the gamepad in Options, Controls with the arrow keys"
+    },
+    {
+      "symptom": "A DualSense's right stick does nothing",
+      "cause": "the game reads the pad through XInput",
+      "fix": "turn Steam Input on for the game. The XInputPlus route on PCGamingWiki did not help the reporter"
     }
   ],
   "launchArgs": null,
