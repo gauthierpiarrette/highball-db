@@ -1,0 +1,18 @@
+{
+  "id": "bionic-commando-rearmed",
+  "kind": "game",
+  "title": "Bionic Commando Rearmed",
+  "requires": [
+    "steam",
+    "physx"
+  ],
+  "renderer": null,
+  "steps": [
+    {
+      "type": "note",
+      "text": "The game loads NVIDIA's PhysX through its own loader and needs the PhysX System Software, which Windows players get from NVIDIA's drivers. Without it the game raises its own fatal error right after starting. With the PhysX component installed it runs (confirmed by the reporter of highball#375 and #428, 2026-10-26). Nothing else in the environment changes."
+    }
+  ],
+  "knownIssues": [],
+  "lastVerified": null
+}
