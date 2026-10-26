@@ -14,9 +14,9 @@
       "fix": "by hand, link each DLL from Fahrenheit.exe.local next to Fahrenheit.exe (for x in Fahrenheit.exe.local/*.dll; do ln -s \"$x\" .; done in the game folder). Support for the folder in Highball's engines is planned"
     },
     {
-      "symptom": "The resolution breaks as soon as it is changed, or is unstable",
-      "cause": "not diagnosed",
-      "fix": "turn on Emulate display mode changes for the game (helps, not always)"
+      "symptom": "The first menu click switches the game to 1024x768 and then it fails with 'A DirectX 9.0c or higher compliant video card is needed' or 'D3D ERROR! Fail to create texture surface' (an M1, DXVK's Direct3D 9, highball-db#700)",
+      "cause": "not diagnosed: opening a menu makes the game rebuild its Direct3D 9 device for its own fullscreen mode, and the device or its textures fail to create. In a window instead, the mouse sticks to the screen's right edge",
+      "fix": "none confirmed. Emulate display mode changes got the reporter in once, not reliably"
     },
     {
       "symptom": "A DirectX 9 warning dialog at start",
