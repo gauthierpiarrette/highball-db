@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by valdroff (highball-db#365, 2026-10-06), Apple M3, macOS 27.0.1, Highball 0.10.12, the Steam release: it did not start ('Error - unable to set video mode') on engine x64-sikarugir10.0_6-r22 in Wine's own Direct3D mode, Windows 7, AVX advertised. Confirmed working on 2026-10-08 with Emulate display mode changes on for the game and the environment in D3DMetal mode. Not verified by the maintainer.",
+  "provenance": "Reported by valdroff (highball-db#365, 2026-10-06), Apple M3, macOS 27.0.1, Highball 0.10.12, the Steam release: it did not start ('Error - unable to set video mode') on engine x64-sikarugir10.0_6-r22 in Wine's own Direct3D mode, Windows 7, AVX advertised. Confirmed working on 2026-10-08 with Emulate display mode changes on for the game and the environment in D3DMetal mode. Not verified by the maintainer. tatoedesign-art (highball-db#698, 2026-10-26): rated 5 of 5, the report gives no chip, macOS, engine or graphics mode.",
   "notes": "The game asks Windows for a display mode the Mac doesn't offer, Wine refuses, and the game stops with 'Error - unable to set video mode'. The reporter got it running with Emulate display mode changes on for the game (Wine pretends the mode changed and scales the picture) and the D3DMetal graphics mode, whose 32-bit DirectDraw is cnc-ddraw. Which of the two did it was not separated, so the page sets no mode. No measurement here yet.",
   "knownIssues": [
     {
