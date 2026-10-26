@@ -1,0 +1,19 @@
+{
+  "id": "death-stranding-directors-cut",
+  "title": "Death Stranding Director's Cut",
+  "steam_appid": 1850570,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by zezzzz11 (highball#514, 2026-10-26), Apple M4 Max, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r29, D3DMetal: stopped with 'requires a CPU with AVX support' until AVX was advertised in the environment's settings, then worked fine. The original Death Stranding's page and recipe carried the fix, but the Director's Cut is its own Steam app, so it never reached this copy. Not verified by the maintainer.",
+  "notes": "DirectX 12, so D3DMetal. Like the original, the game refuses to start without AVX, which Rosetta hides unless asked, so the recipe advertises it to the game. Works once that is on, by the reporter's account on an M4 Max. Nothing was measured here.",
+  "knownIssues": [
+    {
+      "symptom": "\"Death Stranding requires a CPU with AVX support\" at launch",
+      "cause": "Rosetta hides AVX unless asked",
+      "fix": "the recipe advertises AVX (from the next Highball version). By hand now, turn on Advertise AVX in the environment's settings"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null
+}

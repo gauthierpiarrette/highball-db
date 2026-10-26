@@ -1,0 +1,32 @@
+{
+  "id": "death-stranding-directors-cut",
+  "kind": "game",
+  "title": "Death Stranding Director's Cut",
+  "requires": [
+    "steam"
+  ],
+  "renderer": "d3dmetal",
+  "steps": [
+    {
+      "type": "renderer",
+      "renderer": "d3dmetal"
+    },
+    {
+      "type": "environment",
+      "name": "ROSETTA_ADVERTISE_AVX",
+      "value": "1"
+    },
+    {
+      "type": "note",
+      "text": "The Director's Cut checks for AVX at launch like the original and stops with \"Death Stranding requires a CPU with AVX support\" when Rosetta hides it. The recipe advertises AVX to the game. DirectX 12, so D3DMetal. Confirmed by a player on an M4 Max, who got it running once AVX was advertised (highball#514)."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "\"Death Stranding requires a CPU with AVX support\" at launch",
+      "cause": "Rosetta hides AVX unless asked",
+      "fix": "the recipe advertises AVX to the game (ROSETTA_ADVERTISE_AVX=1), or the Compatibility switch in Environment settings"
+    }
+  ],
+  "lastVerified": null
+}
