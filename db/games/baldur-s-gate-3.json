@@ -4,12 +4,19 @@
   "steam_appid": 1086940,
   "status": "community",
   "renderer": "d3dmetal",
-  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
-  "notes": "native mac build exists — prefer it; Wine works too",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball. nopenotlikethat (highball-db#721, 2026-10-27), the GOG edition in DirectX 11 mode, Apple M5, macOS 27.0.1, Highball 0.10.22, engine x64-crossover26.3-r27, DXMT, msync, 192 dpi, AVX advertised, frame cap 120, rated 4 of 5 after 9 minutes: the picture stretched when they changed the aspect ratio, in borderless and in fullscreen. Not verified by the maintainer.",
+  "notes": "native mac build exists — prefer it; Wine works too. Reported playable through Highball in DirectX 11 mode with DXMT on the Wine 11 engine on an M5 (GOG edition), apart from the picture stretching when the aspect ratio was changed.",
   "lastVerified": null,
   "nativeMac": {
     "available": true,
     "where": "Steam",
     "note": "Native Apple Silicon build, macOS 14.7.1 and M1 or later."
-  }
+  },
+  "knownIssues": [
+    {
+      "symptom": "Changing the aspect ratio in the game's video settings stretches the picture, in borderless and in fullscreen",
+      "cause": "not diagnosed",
+      "fix": "none known. Untested: keep the aspect ratio of the Mac's own screen (16:10 on a MacBook)"
+    }
+  ]
 }
