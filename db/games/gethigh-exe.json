@@ -4,8 +4,8 @@
   "status": "community",
   "renderer": "d3dmetal",
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#799, 2026-10-29), the Epic copy, Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal with AVX advertised, rated 2 of 5 after 2 minutes: the game opens on its settings screen at 60 fps and its arrow button did not start anything. A DualSense did not work, an XInput pad did. Not verified by the maintainer. Follow-up the same day: Esc closes the settings and starts the game (it has no title menu), the sound stutters badly, and a DualSense still gets no input.",
-  "notes": "Plays on an M1 (Epic) at 60 fps. It opens on its settings screen, and Esc starts the game. The sound stutters badly.",
+  "provenance": "Reported by udance4ever (highball-db#799, 2026-10-29), the Epic copy, Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal with AVX advertised, rated 2 of 5 after 2 minutes: the game opens on its settings screen at 60 fps and its arrow button did not start anything. A DualSense did not work, an XInput pad did. Not verified by the maintainer. Follow-up the same day: Esc closes the settings and starts the game (it has no title menu), the sound stutters badly, and a DualSense still gets no input. Second follow-up (highball-db#799 comment): moved to an environment on the Wine 11 engine, the player found it smooth, the stutter gone.",
+  "notes": "Plays on an M1 (Epic) at 60 fps. It opens on its settings screen, and Esc starts the game. The sound stuttered badly on the default engine and was smooth on the Wine 11 engine.",
   "knownIssues": [
     {
       "symptom": "Opens on its settings screen with no title menu",
@@ -14,8 +14,8 @@
     },
     {
       "symptom": "The sound stutters badly (M1, default engine)",
-      "cause": "not diagnosed",
-      "fix": "none known. Untested: the Wine 11 engine, whose sound held up better under load in our tests"
+      "cause": "not diagnosed, the default engine (Wine 10) only",
+      "fix": "Play it in an environment on the Wine 11 engine, where the same player found it smooth (highball-db#799)"
     }
   ],
   "launchArgs": null,

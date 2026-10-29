@@ -1,0 +1,19 @@
+{
+  "id": "ad-infinitum",
+  "title": "Ad Infinitum",
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#808, 2026-10-29), the Epic copy, Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal with AVX advertised, rated 4 of 5 after 5 minutes: the Epic preset was too heavy, at Low with textures on Medium it ran at 30 fps, about 25 while moving. A DualSense did not work, an XInput pad did. Not verified by the maintainer.",
+  "notes": "Playable on an M1 (Epic) at about 25 to 30 fps with every setting on Low and textures on Medium. It starts on the Epic preset, which is too heavy there.",
+  "knownIssues": [
+    {
+      "symptom": "A DualSense does nothing in game",
+      "cause": "not diagnosed",
+      "fix": "Use an XInput controller (highball-db#808)"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

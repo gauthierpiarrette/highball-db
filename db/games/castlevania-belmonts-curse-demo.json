@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": "d3dmetal",
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#353, 2026-10-06), Apple M1, macOS 27.0.1, Highball 0.10.9, engine x64-sikarugir10.0_6-r21, D3DMetal, rated 5 of 5 after 18 minutes, to the first boss at 50 to 60 fps by the player's account. Not verified by the maintainer. iansamz (highball-db#764, 2026-10-28), Apple M5, macOS 26.6.2, Highball 0.10.22, engine x64-crossover26.3-r27, D3DMetal, rated 4 of 5 after 26 minutes: played well, the fans ran loud at times.",
-  "notes": "Reported perfect on D3DMetal on a base M1, 50 to 60 fps. A DualSense was not picked up, which players report on Linux too. An XInput controller (an 8BitDo Lite) works.",
+  "provenance": "Reported by udance4ever (highball-db#353, 2026-10-06), Apple M1, macOS 27.0.1, Highball 0.10.9, engine x64-sikarugir10.0_6-r21, D3DMetal, rated 5 of 5 after 18 minutes, to the first boss at 50 to 60 fps by the player's account. Not verified by the maintainer. iansamz (highball-db#764, 2026-10-28), Apple M5, macOS 26.6.2, Highball 0.10.22, engine x64-crossover26.3-r27, D3DMetal, rated 4 of 5 after 26 minutes: played well, the fans ran loud at times. Follow-up the next day (highball-db#764 comment, 2026-10-29): with the frame rate capped at 60 fps it ran with no issues, and the player rated it 5 of 5.",
+  "notes": "Reported perfect on D3DMetal on a base M1, 50 to 60 fps, and on an M5 with Wine 11 once the frame rate was capped at 60 fps. A DualSense was not picked up, which players report on Linux too. An XInput controller (an 8BitDo Lite) works.",
   "knownIssues": [
     {
       "symptom": "A DualSense controller does nothing in game",

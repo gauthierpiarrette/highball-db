@@ -1,0 +1,14 @@
+{
+  "id": "carpe-diem",
+  "title": "Carpe Diem",
+  "steam_appid": 423880,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#805, 2026-10-29), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal with AVX advertised, rated 5 of 5 after 4 minutes. Not verified by the maintainer.",
+  "notes": "A visual novel, reported perfect on an M1.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

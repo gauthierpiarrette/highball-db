@@ -1,0 +1,19 @@
+{
+  "id": "metal-slug-awakening",
+  "title": "Metal Slug: Awakening",
+  "steam_appid": 2963870,
+  "status": "blocked-anticheat",
+  "renderer": null,
+  "anticheat": {
+    "names": [
+      "Anti-Cheat Expert"
+    ],
+    "macVerdict": "blocked",
+    "note": "Two of the game's threads stop on a breakpoint right after it starts and it never shows a window (highball-db#807). ProtonDB rates it poor on Linux too."
+  },
+  "provenance": "Reported by udance4ever (highball-db#807, 2026-10-29), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 1 of 5: no window after 35 minutes. Their log shows metal_slug_launcher.exe starting, then two threads ending on breakpoint exceptions (0x80000003) at the same address, Wine's debugger starting, and nothing after. Not verified by the maintainer.",
+  "notes": "Does not start. Its launcher runs, then the game stops on a breakpoint, which is how Tencent's Anti-Cheat Expert refuses to run. It fails the same way on Linux.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null
+}
