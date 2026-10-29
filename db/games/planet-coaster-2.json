@@ -5,13 +5,13 @@
   "status": "community",
   "renderer": "d3dmetal",
   "anticheat": null,
-  "provenance": "Reported not launching by cgp9cvzk52-max (highball-db#115, 2026-09-18) on DXMT then D3DMetal, Apple M3 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r2, Highball 0.9.12: the game's own crash dialog at start. The working configuration comes from the Cellar project's published profile for this game (D3DMetal, Wine 11, MTL_DEBUG_LAYER=1), playable there on an M5. Not run here.",
-  "notes": "Direct3D 12 only (Cobra engine), so D3DMetal, and it needs a Wine 11 engine. The recipe carries the Cellar workaround, Metal's validation layer on, which stops a D3DMetal startup race that otherwise ends the game within seconds. Reported about 55 fps in the menu on an M5 there, with large parks CPU-bound under Rosetta. Denuvo, Steam must be online. Nothing measured here yet. Two reports with the full configuration in place got no window at all: an M3 Pro (Wine 11 r9, D3DMetal 3, a Mac freeze on Stop) and an M5 Pro (r18 with D3DMetal 4 and r19 with D3DMetal 3, the Mac growing unresponsive within minutes without Stop). No report with this recipe has worked yet, so it stays unconfirmed.",
+  "provenance": "Reported not launching by cgp9cvzk52-max (highball-db#115, 2026-09-18) on DXMT then D3DMetal, Apple M3 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r2, Highball 0.9.12: the game's own crash dialog at start. The working configuration comes from the Cellar project's published profile for this game (D3DMetal, Wine 11, MTL_DEBUG_LAYER=1), playable there on an M5. Not run here. lucadev7 (highball#537, 2026-10-28), Apple M5 Pro 24 GB, macOS 27.0, Highball 0.10.22, engines x64-sikarugir10.0_6-r3 and r28, x64-crossover26.3-r26 and r27, with minidump disassembly of the Wine 10 crash.",
+  "notes": "Direct3D 12 only (Cobra engine), so D3DMetal, and it needs a Wine 11 engine. On the Wine 10 engines it crashes within seconds: the game reads the current fiber at gs:0x20, where macOS keeps the thread's scheduling priority (0x8ff and 0x20ff in a reporter's minidumps, highball#537), and the Wine 11 engines' patches 0008 and 0009 put the real fiber pointer there. The recipe no longer turns on Metal's validation layer (the Cellar workaround), which froze two Macs. Reported about 55 fps in the menu on an M5 there, with large parks CPU-bound under Rosetta. Denuvo, Steam must be online. Nothing measured here yet. Two reports with the full configuration in place got no window at all: an M3 Pro (Wine 11 r9, D3DMetal 3, a Mac freeze on Stop) and an M5 Pro (r18 with D3DMetal 4 and r19 with D3DMetal 3, the Mac growing unresponsive within minutes without Stop). No report with this recipe has worked yet, so it stays unconfirmed. A third report on an M5 Pro (highball#537, 2026-10-28) gets past the Wine 10 crash on Wine 11 and then hangs: a black window at 0% CPU on r26 (D3DMetal 4 beta 3), an exit after about 100 seconds with an empty dump on r27 (D3DMetal 3).",
   "knownIssues": [
     {
       "symptom": "Crash dialog at launch offering to send diagnostics to the developer",
-      "cause": "DXMT has no Direct3D 12; and on the Wine 10 engines D3DMetal hits a startup race",
-      "fix": "the planet-coaster-2 recipe: Wine 11 engine, D3DMetal, MTL_DEBUG_LAYER=1 and MTL_DEBUG_LAYER_ERROR_MODE=nslog"
+      "cause": "DXMT has no Direct3D 12, and on the Wine 10 engines the game reads the Mac's thread scheduling priority where Windows keeps the current fiber (gs:0x20), which our Wine 11 patches 0008 and 0009 fix",
+      "fix": "the planet-coaster-2 recipe, which asks for the Wine 11 engine and D3DMetal (it no longer sets Metal's validation layer)"
     },
     {
       "symptom": "Nothing visible for five minutes with the full recipe configuration on an M3 Pro, and a forced reboot after stopping it",
@@ -22,6 +22,11 @@
       "symptom": "The game process starts and stays alive, but no window ever appears, and after several minutes the whole Mac becomes unresponsive and needs a restart (highball-db#356, Apple M5 Pro, macOS 27.0.1, Highball 0.10.10, engine r18 with D3DMetal 4 and r19 with D3DMetal 3, the recipe's variables confirmed by 'Metal API Validation Enabled')",
       "cause": "not diagnosed; the same shape as the M3 Pro report in highball-db#115. Steam's web helpers throw setDisplaySyncEnabled: exceptions under D3DMetal 4 at the same time, which is known from other games and does not stop them",
       "fix": "none known; avoid running it until there is something new to try"
+    },
+    {
+      "symptom": "On Wine 11 the game starts and then hangs: a black window at 0% CPU for over four minutes on r26 (D3DMetal 4 beta 3), an exit after about 100 seconds with an empty crash dump on r27 (D3DMetal 3). The Mac stayed responsive (M5 Pro, macOS 27.0, highball#537)",
+      "cause": "not diagnosed, no error lines in the Wine log",
+      "fix": "none known"
     }
   ],
   "launchArgs": null,

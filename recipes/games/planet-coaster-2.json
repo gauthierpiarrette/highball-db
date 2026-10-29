@@ -30,7 +30,7 @@
     },
     {
       "symptom": "Crash dialog offering to send diagnostics to the developer right at launch (reported highball-db#115, DXMT and D3DMetal, engine x64-sikarugir10.0_6-r2 and r3)",
-      "cause": "two things stack: DXMT has no Direct3D 12 at all, and on the Wine 10 engines D3DMetal hits a startup race that ends the game within seconds. Cellar's profile documents the race and the Wine 10.8+ requirement.",
+      "cause": "two things stack: DXMT has no Direct3D 12 at all, and on the Wine 10 engines the game reads the Mac's thread scheduling priority at gs:0x20, where Windows keeps the current fiber, and crashes within seconds (minidumps in highball#537). The Wine 11 engines' patches 0008 and 0009 put the real fiber pointer there.",
       "fix": "Apply this recipe on the Wine 11 engine it asks for. The Cellar workaround (MTL_DEBUG_LAYER=1 and MTL_DEBUG_LAYER_ERROR_MODE=nslog) is not recommended: on an M3 Pro and an M5 Pro it led to a frozen Mac that needed a restart"
     }
   ],
