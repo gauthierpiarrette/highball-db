@@ -17,6 +17,11 @@
       "symptom": "Does not run on the Sikarugir (Wine 10) engines",
       "cause": "not measured (reported)",
       "fix": "the recipe asks for engine x64-crossover26.3-r8"
+    },
+    {
+      "symptom": "Drops to about 40 fps in the colour puzzle in Maruki's Palace, the final cutscene and the end credits (M1, DXVK, Wine 11 r27, highball#530)",
+      "cause": "assumed: the movies are decoded on the CPU by the game, under Rosetta, and DXVK is the heavier mode on an M1. Not measured",
+      "fix": "use D3DMetal, the mode the game is rated with. The movie dips may stay"
     }
   ]
 }

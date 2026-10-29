@@ -12,6 +12,11 @@
       "symptom": "The first download stops at 5.97 MB",
       "cause": "not diagnosed",
       "fix": "Play Steam's Mac version"
+    },
+    {
+      "symptom": "The Windows version downloads its update files before the login screen but cannot install them (M1 Pro, default engine r28, highball#527)",
+      "cause": "not diagnosed. Assumed: Unity's Mono reads the wrong slot for the Windows error code on the default engine (fixed on the Wine 11 engines), so file moves fail. Not measured",
+      "fix": "play the Mac version Steam includes with the same purchase"
     }
   ],
   "launchArgs": null,

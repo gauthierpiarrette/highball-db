@@ -12,6 +12,11 @@
       "symptom": "Campaign freezes as it loads on DXVK, or runs at very low fps on Wine's Direct3D",
       "cause": "reported: many workshop add-ons loading at start (M2 Air, 8 GB)",
       "fix": "Disable the add-ons from loading automatically, then play"
+    },
+    {
+      "symptom": "Freezes during a match, the log shows 'out of realized font handles' (M5, default engine r28, highball#525)",
+      "cause": "the default Wine 10 engine allows 256 realized fonts and the game runs past that, as Portal 2 and Counter-Strike Source do. Started from the Steam window it also inherits sync off",
+      "fix": "start it with Play in Highball, and if it still freezes move the environment to a Wine 11 engine (limit 5000)"
     }
   ],
   "launchArgs": null,
