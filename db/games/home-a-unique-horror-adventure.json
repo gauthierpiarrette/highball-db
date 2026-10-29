@@ -1,0 +1,19 @@
+{
+  "id": "home-a-unique-horror-adventure",
+  "title": "Home - A Unique Horror Adventure",
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#800, 2026-10-29), the Epic copy, Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal with AVX advertised, rated 4 of 5 after 5 minutes: plays fine, hangs on quit. Not verified by the maintainer.",
+  "notes": "Reported playable on an M1 (Epic). The game hangs when it quits.",
+  "knownIssues": [
+    {
+      "symptom": "Hangs on quit",
+      "cause": "not diagnosed",
+      "fix": "end it with Stop on the strip at the bottom of Highball"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
