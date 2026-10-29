@@ -1,0 +1,14 @@
+{
+  "id": "vital-shell",
+  "title": "Vital Shell",
+  "steam_appid": 3741860,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by unfatefull (highball-db#790, 2026-10-29), Apple M2, macOS 26.6.2, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, WineD3D by the report (the environment's mode is D3DMetal), msync, rated 5 of 5 after 89 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M2 over 89 minutes. The report names WineD3D while the environment was on D3DMetal, so which mode drew the game is not certain.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
