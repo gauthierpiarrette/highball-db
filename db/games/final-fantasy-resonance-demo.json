@@ -1,0 +1,14 @@
+{
+  "id": "final-fantasy-resonance-demo",
+  "title": "FINAL FANTASY RESONANCE DEMO",
+  "steam_appid": 4474710,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by Fonzho (highball-db#792, 2026-10-29), Apple M3 Pro, macOS 27.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, sync off, rated 5 of 5 after a one minute look. Not verified by the maintainer.",
+  "notes": "The demo, a separate Steam app from the full game (which has its own page). Reported perfect on an M3 Pro with DXMT on the default engine, over a one minute look.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
