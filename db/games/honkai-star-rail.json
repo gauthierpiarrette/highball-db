@@ -1,0 +1,25 @@
+{
+  "id": "honkai-star-rail",
+  "title": "Honkai: Star Rail",
+  "status": "community",
+  "renderer": null,
+  "anticheat": {
+    "names": [
+      "miHoYo Protect"
+    ],
+    "macVerdict": "warning",
+    "note": "kernel-level anti-cheat, broken under Wine on Linux too"
+  },
+  "provenance": "Reported by udance4ever (highball-db#798, 2026-10-29), the Epic copy, Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal with AVX advertised, rated 1 of 5: a black window, the same on DXMT. Not verified by the maintainer.",
+  "notes": "Does not start in Highball: a black window on D3DMetal and DXMT (Epic, M1). The game ships miHoYo's anti-cheat, which is listed as broken under Wine on Linux as well, so it is most likely out of reach.",
+  "knownIssues": [
+    {
+      "symptom": "A black window on D3DMetal and DXMT",
+      "cause": "assumed: the game's anti-cheat, which fails under Wine on Linux too. Not measured",
+      "fix": "none"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
