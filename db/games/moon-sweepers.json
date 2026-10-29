@@ -5,9 +5,15 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by gdncomm-audi-asmarandana (highball-db#677, 2026-10-25), Apple M3, macOS 26.6.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, msync, rated 5 of 5 after 112 minutes. Not verified by the maintainer.",
+  "provenance": "Reported by gdncomm-audi-asmarandana (highball-db#677, 2026-10-25), Apple M3, macOS 26.6.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, msync, rated 5 of 5 after 112 minutes. Not verified by the maintainer. justus-gas (highball-db#734, 2026-10-27), Apple M3, macOS 26.6.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 37 minutes: the Mac runs hot and frames drop when turning quickly. rudyj03 (highball-db#744, 2026-10-27), Apple M4 Pro, macOS 26.3.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 277 minutes: no issues over an extended session. brookflok (highball-db#749, 2026-10-27), Apple M1 Max, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 120 minutes. sebastianvarney-creator (highball-db#756, 2026-10-28), Apple M1 Pro, macOS 26.6.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 149 minutes: flawless, no changes needed. 54tkzcdc99-hash (highball-db#758, 2026-10-28), Apple M1, macOS 26.6.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 148 minutes: not very smooth on an M1 but playable for two hours, the Mac only got warm. Tyrantoodle (highball-db#781, 2026-10-29), Apple M4 Pro, macOS 27.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 236 minutes.",
   "notes": "Reported perfect on the default engine with DXMT on an M3 over 112 minutes. Nothing was measured here.",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "symptom": "The Mac runs hot and frames drop when moving or turning quickly (M3, M1)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
   "launchArgs": null,
   "lastVerified": null
 }

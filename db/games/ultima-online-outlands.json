@@ -1,0 +1,13 @@
+{
+  "id": "ultima-online-outlands",
+  "title": "Ultima Online: Outlands",
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by stefankuksenko (highball-db#727, 2026-10-27), Apple M3 Pro, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 25 minutes. Not verified by the maintainer.",
+  "notes": "A free, unofficial Ultima Online server with its own launcher, a custom ClassicUO client and Razor. Reported perfect on an M3 Pro with DXMT. Setup by the reporter: a new environment, run Outlands.exe from patch.uooutlands.com/download as a Windows program with the default folder, Verify, then Play Now, and pin the installed Outlands.exe (not ClassicUO.exe) so the launcher keeps patching. No .NET install is needed, the launcher bundles its own. For a sharp picture on a Retina or 4K display at 2x, set the environment's scale to 200% (192 dpi) and ClassicUO's Display Scale to twice the usual value. FNA3D runs on Direct3D 11 through DXMT at about half of one CPU core.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -1,0 +1,14 @@
+{
+  "id": "castlevania-lords-of-shadow-ultimate-edition",
+  "title": "Castlevania: Lords of Shadow - Ultimate Edition",
+  "steam_appid": 234080,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by RicardoJardines (highball-db#759, 2026-10-28), Apple M5, macOS 27.0.1, Highball 0.10.22, engine x64-crossover26.3-r27, DXMT, rated 5 of 5 after 9 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M5 with DXMT on the Wine 11 engine r27 over 9 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

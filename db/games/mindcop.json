@@ -1,0 +1,19 @@
+{
+  "id": "mindcop",
+  "title": "Mindcop",
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#773, 2026-10-29), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 4 of 5 after 26 minutes: a graphics driver check dialog shows at start and can be ignored, the Epic copy. Not verified by the maintainer.",
+  "notes": "Reported playable on an M1 with D3DMetal over 26 minutes (Epic).",
+  "knownIssues": [
+    {
+      "symptom": "A graphics driver check dialog shows at start",
+      "cause": "the game reads a driver version it does not know",
+      "fix": "dismiss it, the game runs"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

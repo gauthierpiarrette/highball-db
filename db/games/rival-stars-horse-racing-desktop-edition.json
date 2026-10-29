@@ -1,0 +1,13 @@
+{
+  "id": "rival-stars-horse-racing-desktop-edition",
+  "title": "Rival Stars Horse Racing: Desktop Edition",
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#779, 2026-10-29), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 5 of 5 after 11 minutes, the Epic copy. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M1 with D3DMetal over 11 minutes (Epic).",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

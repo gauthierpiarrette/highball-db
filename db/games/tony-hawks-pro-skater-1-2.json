@@ -1,0 +1,13 @@
+{
+  "id": "tony-hawks-pro-skater-1-2",
+  "title": "Tony Hawk's Pro Skater 1 + 2",
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by ofurkancoban (highball-db#783, 2026-10-29), Apple M2 Pro, macOS 26.6.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 11 minutes: connecting the controller was a little tricky. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M2 Pro with DXMT on the default engine over 11 minutes. Connecting the controller took some fiddling.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

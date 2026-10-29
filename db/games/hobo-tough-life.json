@@ -1,0 +1,20 @@
+{
+  "id": "hobo-tough-life",
+  "title": "Hobo: Tough Life",
+  "steam_appid": 632300,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by mrlowa (highball-db#748, 2026-10-27), Apple M4 Max, macOS 26.6.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 119 minutes: controller button prompts did not show. Not verified by the maintainer. mrlowa (highball-db#755, 2026-10-28), Apple M4 Max, macOS 26.6.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 65 minutes. mrlowa (highball-db#765, 2026-10-28), Apple M4 Max, macOS 26.6.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 26 minutes: controller bindings not visible, keyboard fine.",
+  "notes": "Reported playable three times by the same player on an M4 Max with DXMT, over about three and a half hours in total. The controller's button prompts and bindings do not show, the keyboard is fine.",
+  "knownIssues": [
+    {
+      "symptom": "Controller button prompts and bindings are not shown, the keyboard works (M4 Max, DXMT)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

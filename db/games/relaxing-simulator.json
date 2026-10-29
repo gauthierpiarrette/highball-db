@@ -1,0 +1,29 @@
+{
+  "id": "relaxing-simulator",
+  "title": "Relaxing Simulator",
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#777, 2026-10-29), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 4 of 5 after 6 minutes: it defaults to ultra settings (8 fps on an M1), low settings with medium textures give 24 fps, some places such as the old ruins show artifacts on the castle, and a DualSense was not recognized, the Epic copy. Not verified by the maintainer.",
+  "notes": "Reported playable on an M1 with D3DMetal once the graphics are lowered (Epic).",
+  "knownIssues": [
+    {
+      "symptom": "Defaults to ultra settings, 8 fps on an M1",
+      "cause": "not diagnosed",
+      "fix": "set graphics to low with medium textures, about 24 fps"
+    },
+    {
+      "symptom": "Graphical artifacts on the castle in the old ruins",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    },
+    {
+      "symptom": "DualSense controller not recognized by the game (an Xbox style XInput pad works)",
+      "cause": "not diagnosed",
+      "fix": "use an XInput pad, or start the game through Steam with Steam Input on (a non-Steam shortcut in the environment's Steam), as the reporter found with Breathedge"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

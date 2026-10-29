@@ -1,6 +1,12 @@
 {
   "anticheat": null,
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "symptom": "DualSense controller not recognized by the game (an Xbox style XInput pad works)",
+      "cause": "not diagnosed",
+      "fix": "use an XInput pad, or start the game through Steam with Steam Input on (a non-Steam shortcut in the environment's Steam), as the reporter found with Breathedge"
+    }
+  ],
   "launchArgs": null,
   "lastVerified": null,
   "id": "five-nights-at-freddys-into-the-pit",
@@ -8,6 +14,6 @@
   "steam_appid": 2638370,
   "status": "community",
   "renderer": "dxmt",
-  "provenance": "Reported by zerealfox (highball-db#197, 2026-09-23) on the Epic copy, Apple M5 Max, macOS 27.0, DXMT, rated 5 of 5. Not verified by the maintainer.",
+  "provenance": "Reported by zerealfox (highball-db#197, 2026-09-23) on the Epic copy, Apple M5 Max, macOS 27.0, DXMT, rated 5 of 5. Not verified by the maintainer. udance4ever (highball-db#772, 2026-10-29), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 4 of 5 after 17 minutes: the Epic copy, the game would not connect to a DualSense controller and an XInput pad worked.",
   "notes": "Reported perfect on DXMT on an M5 Max. The report was made on the Epic copy, so the Steam copy has not been reported. No session length or frame rate was given and nothing was measured here."
 }

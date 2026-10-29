@@ -11,7 +11,7 @@
     "macVerdict": "warning",
     "note": "anti-cheat present; Linux/Proton support does not extend to macOS — userspace path works for some titles"
   },
-  "provenance": "Reported by flacknabe-cpu (highball-db#372, 2026-10-07), Apple M1 Pro, macOS 26.7, Highball 0.10.12, engine x64-sikarugir10.0_6-r22, the environment in DXMT mode, rated 5 of 5 after 15 minutes. Not verified by the maintainer.",
+  "provenance": "Reported by flacknabe-cpu (highball-db#372, 2026-10-07), Apple M1 Pro, macOS 26.7, Highball 0.10.12, engine x64-sikarugir10.0_6-r22, the environment in DXMT mode, rated 5 of 5 after 15 minutes. Not verified by the maintainer. DaDa-Patrick (highball-db#753, 2026-10-28), Apple M5, macOS 26.6, Highball 0.10.22, engine x64-crossover26.3-r23, DXMT, rated 5 of 5 after 10 minutes.",
   "notes": "Reported perfect on DXMT in a 15-minute session. Online play with VAC is untested.",
   "knownIssues": [],
   "launchArgs": null,

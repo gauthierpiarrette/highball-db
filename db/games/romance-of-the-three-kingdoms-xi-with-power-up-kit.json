@@ -1,0 +1,13 @@
+{
+  "id": "romance-of-the-three-kingdoms-xi-with-power-up-kit",
+  "title": "Romance of the Three Kingdoms XI with Power Up Kit",
+  "status": "community",
+  "renderer": "dxvk",
+  "anticheat": null,
+  "provenance": "Reported by butiange (highball-db#752, 2026-10-28), Apple M4, macOS 15.7.9, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXVK, rated 5 of 5 after 87 minutes: the Chinese edition, Windows 7 mode, frame cap 60. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M4 with DXVK on the default engine r26 over 87 minutes (the Chinese edition, 三国志11威力加强版).",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
