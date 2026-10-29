@@ -45,6 +45,11 @@
       "symptom": "Dialogue, the navigator's voice and most of the engine sound are missing, on any Mac with a two-channel output such as its speakers or headphones (an M5 Max, an M5 Pro, an M5, an M2 Pro)",
       "cause": "the game mixes through Windows spatial audio as a 7.1.4 bed of twelve channels, Wine cannot set that layout on a two-channel output, and only the front left and right channels are heard. Found by @TxCsOffc (highball#313)",
       "fix": "Highball 0.10.16 (beta), engine x64-crossover26.3-r24: Tx's patches (highball#313) render the 12-channel bed with Apple's AUSpatialMixer for the Mac's speakers or headphones, so every channel is heard. Measured on an M4: the game's 12-channel bed and an 8-channel stream go through the mixer, and a 7.1.4 test bed reaches the speakers on every channel. Existing environments keep their engine, so pick r24 under Advanced, Engine. New environments made from the game's recipe get it by themselves."
+    },
+    {
+      "symptom": "FHE21 right after the splash, or a Wine crash, when forzahorizon6.exe is added to Highball and started by itself (highball#319, #486, #550)",
+      "cause": "the game needs Steam running in the same environment and has to be started through it",
+      "fix": "install it through Steam in the environment. To keep it on an external drive, add the drive in Steam's Settings, Storage, move the game folder into SteamLibrary/steamapps/common on that drive named ForzaHorizon6, install to that library so Steam checks the files, then press Play on the game's page"
     }
   ]
 }
