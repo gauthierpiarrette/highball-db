@@ -1,0 +1,22 @@
+{
+  "id": "hellblade-senuas-sacrifice",
+  "title": "Hellblade: Senua's Sacrifice",
+  "steam_appid": 414340,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by brunobrancoo (highball-db#788, 2026-10-29), Apple M5, macOS 26.4.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, msync, rated 3 of 5 after 94 minutes: it needs -dx11 as a launch option, and with it everything works. Not verified by the maintainer.",
+  "notes": "Reported working fully on an M5 with DXMT over 94 minutes once the game is started with -dx11, which Play now passes. Without it the game takes its DirectX 12 path, which DXMT does not have.",
+  "knownIssues": [
+    {
+      "symptom": "Does not start in DXMT mode without -dx11",
+      "cause": "the game picks DirectX 12, which DXMT does not provide",
+      "fix": "start it with -dx11, which Play passes from this page"
+    }
+  ],
+  "launchArgs": [
+    "-dx11"
+  ],
+  "lastVerified": null,
+  "verified": null
+}
