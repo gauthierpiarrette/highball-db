@@ -1,0 +1,13 @@
+{
+  "id": "space-grunts-chrono-shard",
+  "title": "Space Grunts: Chrono Shard",
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#803, 2026-10-29), the Epic copy, Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal with AVX advertised, rated 5 of 5 after a minute: DualSense works out of the box. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M1 (Epic), DualSense works out of the box.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

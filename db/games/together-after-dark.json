@@ -1,0 +1,13 @@
+{
+  "id": "together-after-dark",
+  "title": "Together After Dark",
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#802, 2026-10-29), the Epic copy, Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal with AVX advertised, rated 4 of 5 after 2 minutes: feels laggy at about 24 fps in a public co-op match. Not verified by the maintainer.",
+  "notes": "Reported playable on an M1 (Epic) at about 24 fps, which feels laggy. A co-op shooter, only a short public match was tried.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

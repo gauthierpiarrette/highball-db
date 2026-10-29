@@ -4,13 +4,18 @@
   "status": "community",
   "renderer": "d3dmetal",
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#799, 2026-10-29), the Epic copy, Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal with AVX advertised, rated 2 of 5 after 2 minutes: the game opens on its settings screen at 60 fps and its arrow button did not start anything. A DualSense did not work, an XInput pad did. Not verified by the maintainer.",
-  "notes": "Starts and draws at 60 fps on an M1 (Epic), but the reporter could not get from its settings screen into the game. Possibly the game's own menu flow rather than a fault.",
+  "provenance": "Reported by udance4ever (highball-db#799, 2026-10-29), the Epic copy, Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal with AVX advertised, rated 2 of 5 after 2 minutes: the game opens on its settings screen at 60 fps and its arrow button did not start anything. A DualSense did not work, an XInput pad did. Not verified by the maintainer. Follow-up the same day: Esc closes the settings and starts the game (it has no title menu), the sound stutters badly, and a DualSense still gets no input.",
+  "notes": "Plays on an M1 (Epic) at 60 fps. It opens on its settings screen, and Esc starts the game. The sound stutters badly.",
   "knownIssues": [
     {
-      "symptom": "Opens on its settings screen and the arrow button does nothing",
-      "cause": "not diagnosed, possibly the game's menu flow",
-      "fix": "untested: Esc or the menu icon at the top left to close the settings"
+      "symptom": "Opens on its settings screen with no title menu",
+      "cause": "the game's design",
+      "fix": "press Esc to start playing"
+    },
+    {
+      "symptom": "The sound stutters badly (M1, default engine)",
+      "cause": "not diagnosed",
+      "fix": "none known. Untested: the Wine 11 engine, whose sound held up better under load in our tests"
     }
   ],
   "launchArgs": null,
