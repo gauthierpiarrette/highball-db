@@ -1,0 +1,20 @@
+{
+  "id": "heavy-rain",
+  "title": "Heavy Rain",
+  "steam_appid": 960910,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#767, 2026-10-29), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal with AVX advertised, rated 1 of 5: the origami loading screen shows for under five seconds and the game crashes, on both graphics modes tried. Not verified by the maintainer.",
+  "notes": "Crashes a few seconds into its first loading screen on an M1 (D3DMetal's DirectX 11 at 59.5 fps on that screen, then exit). Beyond: Two Souls, from the same studio's PC ports, runs on DXMT, which is the next mode to try.",
+  "knownIssues": [
+    {
+      "symptom": "Crashes a few seconds into the first loading screen (origami in the corner)",
+      "cause": "not diagnosed",
+      "fix": "none known. Untested: DXMT as the game's mode"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

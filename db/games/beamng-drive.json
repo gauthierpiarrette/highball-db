@@ -12,6 +12,11 @@
       "symptom": "Story mode cannot generate a seed",
       "cause": "reported once (DXMT, M5, engine r19), not diagnosed",
       "fix": "none known yet (highball-db#329)"
+    },
+    {
+      "symptom": "Stuck on the loading screen while it enables the UI, in DXVK mode (M4 Mac mini, highball#521)",
+      "cause": "assumed: BeamNG draws its menus with a built-in browser in a separate process, and DXVK on the Mac cannot share that picture with the game (MoltenVK has no Windows external memory). Not measured",
+      "fix": "set the game's mode to DXMT (most reports) or D3DMetal under Game settings"
     }
   ],
   "launchArgs": [

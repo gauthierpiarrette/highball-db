@@ -1,0 +1,20 @@
+{
+  "id": "control-resonant",
+  "title": "Control Resonant",
+  "steam_appid": 3669870,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by DaceJoy02 (highball#531, 2026-10-27), Apple M5 Pro, macOS 27.2, Highball 0.10.22: on Wine 11 r26 (D3DMetal 4 beta 3) it freezes seconds after boot on the Remedy logo, rarely boots with heavy stutter and random freezes, and starts only with DLSS off. On Wine 10 r29 (D3DMetal 4 beta 2) it crashes at once with 'Game has encountered a serious problem'. Not verified by the maintainer.",
+  "notes": "DirectX 12 only. Not running reliably yet. Both engines tried carry Apple's D3DMetal 4 betas, and D3DMetal 3 on the Wine 11 engine r27 is untested.",
+  "knownIssues": [
+    {
+      "symptom": "Freezes on the Remedy logo seconds after boot on D3DMetal 4 beta 3, starts only with DLSS off, and crashes at once on the Wine 10 engine r29",
+      "cause": "not diagnosed",
+      "fix": "none known. Untested: Wine 11 r27 (D3DMetal 3) with DLSS off"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

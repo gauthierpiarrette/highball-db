@@ -4,9 +4,9 @@
   "steam_appid": 3240220,
   "epic_app_name": "8769e24080ea413b8ebca3f1b8c50951",
   "status": "community",
-  "renderer": "vkd3d",
+  "renderer": "d3dmetal",
   "provenance": "tested locally on Apple Silicon (M1 Pro, macOS 26.6.2, engine x64-crossover26.3-r4) on 2026-09-08: it launches and loads under vkd3d and the GPU device is then lost, twice, at default and at minimum settings",
-  "notes": "Starts under vkd3d, refuses under D3DMetal, and neither finishes. The game needs Highball's Wine 11 engine (CrossOver 26.3 base) and two graphics modes in one process tree: the Rockstar Games Launcher signs in under DXMT, the game is DirectX 12 only. Under D3DMetal it quits at once with ERR_GFX_D3D_NOD3D12, and what causes that is NOT yet known: the game creates a D3D12 device, makes 137 capability queries that all succeed, creates a DXGI factory and enumerates an adapter, and then refuses. Under vkd3d it reaches the story-mode loading screen at 53-62 fps and then loses the GPU device because MoltenVK cannot translate some of its shaders to Metal. Turn BattlEye off in the launcher first (Settings > My installed games), its driver cannot load under Wine. GTA Online is out of reach regardless. If sign-in is refused with #1.000.7, set the Mac's clock (see the rockstar recipe).",
+  "notes": "On M1 and M2 Macs it does not run in Highball, play GTA V Legacy instead, which runs there with DXMT. Every report of Enhanced starting comes from an M4 Pro or M5 Pro. vkd3d-proton is offered only on the arm64 preview engines, not the regular ones. Starts under vkd3d, refuses under D3DMetal, and neither finishes. The game needs Highball's Wine 11 engine (CrossOver 26.3 base) and two graphics modes in one process tree: the Rockstar Games Launcher signs in under DXMT, the game is DirectX 12 only. Under D3DMetal it quits at once with ERR_GFX_D3D_NOD3D12, and what causes that is NOT yet known: the game creates a D3D12 device, makes 137 capability queries that all succeed, creates a DXGI factory and enumerates an adapter, and then refuses. Under vkd3d it reaches the story-mode loading screen at 53-62 fps and then loses the GPU device because MoltenVK cannot translate some of its shaders to Metal. Turn BattlEye off in the launcher first (Settings > My installed games), its driver cannot load under Wine. GTA Online is out of reach regardless. If sign-in is refused with #1.000.7, set the Mac's clock (see the rockstar recipe).",
   "lastVerified": null,
   "requiresLauncher": {
     "id": "rockstar",
@@ -32,6 +32,11 @@
       "symptom": "Under vkd3d it loads to a black screen with only the progress bar, then exits on its own near the end of the load",
       "cause": "MoltenVK cannot translate two classes of the game's shaders to Metal, and one of them is a deliberate upstream limitation rather than a bug. Measured 2026-09-08 on an M1 Pro, macOS 26.6.2, engine x64-crossover26.3-r4 with MoltenVK 1.4.1: 42 graphics pipelines fail with 'Component decoration is not supported in tessellation shaders' (84 occurrences, control and evaluation stages), and 27 compute pipelines fail with MSL compile errors on vkd3d's bindless descriptor arrays ('reinterpret_cast casts away qualifiers', 'indirection requires pointer operand'). The tessellation one is an explicit SPIRV_CROSS_THROW in SPIRV-Cross's spirv_msl.cpp, with the comment 'Technically tessellation as well, but it is too complicated to support', still present on main, so a newer MoltenVK does not fix it. Setting the game's Tessellation option to 0 cuts the graphics failures from 42 to 13 and avoids the device loss, but does not eliminate them: the game still builds tessellation pipelines for some passes. Stock MoltenVK cannot be substituted to test newer translation code, because the engine needs an x86_64 build carrying the MVK_SHADOW_IMPORT patch that lets it work behind Wine's winevulkan; upstream fat builds report no Vulkan 1.3 device and nothing starts.",
       "fix": "none at the app level. The tessellation half needs SPIRV-Cross to implement Component decoration for tessellation, which upstream has declined as too complicated. Turning the game's Tessellation setting to 0 reduces the failures and removes the device loss, but the run still does not complete."
+    },
+    {
+      "symptom": "The Rockstar launcher says DirectX 11.1 (12.0 Required) with ERR_SYS_SYSREQ_GPU (MacBook Air M2, DXMT and D3DMetal, highball#540)",
+      "cause": "the launcher checks the DirectX level before the game, and past it the game quits with ERR_GFX_D3D_NOD3D12 on M1 and M2 under D3DMetal (cause not known)",
+      "fix": "play GTA V Legacy on M1 and M2"
     }
   ]
 }
