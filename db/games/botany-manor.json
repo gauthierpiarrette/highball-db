@@ -2,10 +2,10 @@
   "id": "botany-manor",
   "title": "Botany Manor",
   "status": "community",
-  "renderer": "d3dmetal",
+  "renderer": "dxmt",
   "anticheat": null,
   "provenance": "Reported by udance4ever (highball-db#797, 2026-10-29), the Epic copy, Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal with AVX advertised, rated 4 of 5 after a minute: on D3DMetal it starts at 960x1080, squished, on DXMT at 1024x768 (4:3), and the game's options list no other resolution on either. DualSense works. Not verified by the maintainer.",
-  "notes": "Reported playable on an M1 (Epic) with a limited resolution choice.",
+  "notes": "Reported playable on an M1 (Epic) with a limited resolution choice. The reporter prefers DXMT, which starts at 1024x768, over D3DMetal's squished 960x1080.",
   "knownIssues": [
     {
       "symptom": "Starts at 960x1080 (D3DMetal, squished) or 1024x768 (DXMT) and the options list no other resolution",
