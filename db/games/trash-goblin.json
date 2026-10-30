@@ -1,0 +1,19 @@
+{
+  "id": "trash-goblin",
+  "title": "Trash Goblin",
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#813, 2026-10-30), the Epic copy, Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal with AVX advertised, rated 5 of 5 after 13 minutes: 1080p at 60 fps, a DualSense not picked up. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M1 (Epic copy) at 1080p and 60 fps on D3DMetal.",
+  "knownIssues": [
+    {
+      "symptom": "A DualSense does nothing in game",
+      "cause": "not diagnosed",
+      "fix": "Use an XInput controller (highball-db#813)"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

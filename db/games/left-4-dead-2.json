@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by greph123 (highball-db#78, 2026-09-16 to 2026-09-18): Apple M2 MacBook Air with 8 GB, macOS 26.6.2, engine x64-sikarugir10.0_6-r3, Highball 0.9.19. First rated 2, laggy on Wine's Direct3D and frozen at campaign load on DXVK; the cause was the many workshop add-ons loading, and with those off the game ran flawlessly at maximum settings at 1280x820. Mode of the clean run not stated. Not run here.",
-  "notes": "Runs well on an M2 Air once workshop add-ons are not loaded automatically; with them the campaign froze at load on DXVK and crawled on Wine's Direct3D. The mode of the clean run is not recorded yet. A Source game, so DXVK is the expected mode.",
+  "provenance": "Reported by greph123 (highball-db#78, 2026-09-16 to 2026-09-18): Apple M2 MacBook Air with 8 GB, macOS 26.6.2, engine x64-sikarugir10.0_6-r3, Highball 0.9.19. First rated 2, laggy on Wine's Direct3D and frozen at campaign load on DXVK; the cause was the many workshop add-ons loading, and with those off the game ran flawlessly at maximum settings at 1280x820. Mode of the clean run not stated. Not run here. Also reported by theeirdna-commits (highball-db#818 and #820, 2026-10-30), Apple M1, macOS 15.7.7, Highball 0.10.22, engine x64-crossover26.3-r27 (Wine 11), the game on DXMT in an environment set to DXVK, 60 fps cap: 4 of 5 after 4 minutes with dips in big hordes, then 5 of 5 after 49 minutes.",
+  "notes": "Runs well on an M2 Air once workshop add-ons are not loaded automatically; with them the campaign froze at load on DXVK and crawled on Wine's Direct3D. The mode of the clean run is not recorded yet. A Source game, so DXVK is the expected mode. On an M1 with the Wine 11 engine and DXMT it played 49 minutes without trouble, with small dips when big hordes come.",
   "knownIssues": [
     {
       "symptom": "Campaign freezes as it loads on DXVK, or runs at very low fps on Wine's Direct3D",

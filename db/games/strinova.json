@@ -1,0 +1,26 @@
+{
+  "id": "strinova",
+  "title": "Strinova",
+  "steam_appid": 1282270,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": {
+    "names": [
+      "Anti-Cheat Expert"
+    ],
+    "macVerdict": "warning",
+    "note": "Anti-Cheat Expert lets it run on Linux under Proton (ProtonDB gold). On a Mac it stops before the match, see the known issue."
+  },
+  "provenance": "Reported by udance4ever (highball-db#814, 2026-10-30), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal with AVX advertised, rated 2 of 5 after 14 minutes. Their log shows Strinova.exe ending on an illegal instruction at the same address (0x141AE495F) twice, with Wine's debugger starting. Not verified by the maintainer.",
+  "notes": "Registering and signing in work, but pressing Start in the game's launcher ends Strinova.exe on an illegal instruction. The game runs on Linux, so the likely cause is an instruction Rosetta doesn't implement, not the anti-cheat refusing Wine. Not confirmed yet.",
+  "knownIssues": [
+    {
+      "symptom": "Pressing Start closes the game and opens Wine's debugger",
+      "cause": "an illegal instruction in Strinova.exe at the same address each time, most likely one Rosetta lacks (being looked at)",
+      "fix": "none yet"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

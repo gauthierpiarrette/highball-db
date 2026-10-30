@@ -1,0 +1,20 @@
+{
+  "id": "fireside-feelings",
+  "title": "Fireside Feelings",
+  "steam_appid": 2990600,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#816, 2026-10-30), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, the game on DXMT in an environment set to D3DMetal, rated 5 of 5 after 25 minutes (the whole game). On D3DMetal it crashed. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT on an M1, played start to end in about 25 minutes. It crashes on D3DMetal, so set the game's own mode to DXMT if its environment is on D3DMetal.",
+  "knownIssues": [
+    {
+      "symptom": "Crashes on D3DMetal",
+      "cause": "not diagnosed",
+      "fix": "Set Mode for this game to DXMT (highball-db#816)"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

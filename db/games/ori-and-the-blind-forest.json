@@ -1,17 +1,22 @@
 {
   "id": "ori-and-the-blind-forest",
   "title": "Ori and the Blind Forest",
-  "steam_appid": null,
+  "steam_appid": 387290,
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by Dex69-shadow (highball#321, 2026-10-11), Apple M5, macOS 26.6.2, Highball 0.10.10, DXVK for the game and the environment. The report does not say which edition. Not verified by the maintainer.",
-  "notes": "Micro freezes made it unplayable on DXVK with async compilation off, where each new shader compiles while playing. DXMT, Highball's default mode, or DXVK with async shader compilation on in the environment's settings, are the things to try. Not confirmed by the reporter.",
+  "provenance": "Reported by Dex69-shadow (highball#321, 2026-10-11), Apple M5, macOS 26.6.2, Highball 0.10.10, DXVK for the game and the environment. The report does not say which edition. Not verified by the maintainer. Definitive Edition (387290) reported by masonray1 (highball-db#812, 2026-10-30) through Proton-ish on Mac Steam with Highball's engine x64-crossover26.3-r27, DXMT, sync off, AVX advertised, Apple M4, macOS 26.5, rated 4 of 5: the audio plays twice, about a second apart. Not verified by the maintainer.",
+  "notes": "Micro freezes made it unplayable on DXVK with async compilation off, where each new shader compiles while playing. DXMT, Highball's default mode, or DXVK with async shader compilation on in the environment's settings, are the things to try. Not confirmed by the reporter. The Definitive Edition was reported playable on DXMT on an M4 through Proton-ish, apart from doubled audio.",
   "knownIssues": [
     {
       "symptom": "Micro freezes (reported on an M5, macOS 26.6.2, DXVK)",
       "cause": "likely shaders compiling on first use with DXVK's async compilation off",
       "fix": "DXMT, or DXVK async shader compilation in the environment's settings, untested here"
+    },
+    {
+      "symptom": "Audio plays twice, about a second apart (Definitive Edition through Proton-ish, Wine 11 r27, DXMT)",
+      "cause": "not diagnosed, not seen in Highball itself yet",
+      "fix": "none yet"
     }
   ],
   "launchArgs": null,
