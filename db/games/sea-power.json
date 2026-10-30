@@ -1,0 +1,20 @@
+{
+  "id": "sea-power",
+  "title": "Sea Power: Naval Combat in the Missile Age",
+  "steam_appid": 1286220,
+  "status": "community",
+  "renderer": "dxmt",
+  "anticheat": null,
+  "provenance": "Reported by Schnakatuku (highball-db#826, 2026-10-30), Apple M4, macOS 27.0.1, Highball 0.10.22, engine x64-crossover26.3-r27 (Wine 11), DXMT, recipes steam and vcrun2022, rated 4 of 5 after 102 minutes on the game's latest beta branch. Not verified by the maintainer.",
+  "notes": "Plays well for over an hour and a half on DXMT on an M4 with the Wine 11 engine, on the game's latest beta branch.",
+  "knownIssues": [
+    {
+      "symptom": "The game's Vuplex web view crashes",
+      "cause": "not diagnosed",
+      "fix": "none needed, play goes on without it (highball-db#826)"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

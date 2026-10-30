@@ -1,0 +1,14 @@
+{
+  "id": "persona-3-reload-demo",
+  "title": "Persona 3 Reload Demo",
+  "steam_appid": 3358440,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by rtmtree (highball-db#825, 2026-10-30), Apple M5 Pro, macOS 26.7.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, the game on D3DMetal, recipes steam and vcrun2022, rated 5 of 5 after 2 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on D3DMetal on an M5 Pro after a short session. The full game has its own page.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

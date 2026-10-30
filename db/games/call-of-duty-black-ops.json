@@ -1,0 +1,20 @@
+{
+  "id": "call-of-duty-black-ops",
+  "title": "Call of Duty: Black Ops",
+  "steam_appid": 42700,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by crowntwo (highball-db#824, 2026-10-30), Apple M2, macOS 27.0.1, Highball and engine not given (newest), DXMT and the default mode, rated 2 of 5 after 5 minutes: frame drops and freezes everywhere but the cutscenes. Not verified by the maintainer.",
+  "notes": "Starts, but a player on an M2 had frame drops and freezes outside cutscenes in DXMT mode. It's a Direct3D 9 game, which DXMT mode runs through DXVK, so the stutter is most likely shaders compiling as they first appear. Not measured here.",
+  "knownIssues": [
+    {
+      "symptom": "Frame drops and freezes outside cutscenes (M2)",
+      "cause": "most likely Direct3D 9 shaders compiling on first use, not measured",
+      "fix": "Turn on DXVK async shader compilation in the environment's settings, untested here"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
