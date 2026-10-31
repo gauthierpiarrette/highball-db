@@ -5,9 +5,15 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by AmarokSpiritch (highball-db#412, 2026-10-08), Apple M4, macOS 27.0.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, the environment in DXMT mode, the steam and vcrun2022 recipes, rated 5 of 5 after 98 minutes. Not verified by the maintainer.",
+  "provenance": "Reported by AmarokSpiritch (highball-db#412, 2026-10-08), Apple M4, macOS 27.0.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, the environment in DXMT mode, the steam and vcrun2022 recipes, rated 5 of 5 after 98 minutes. flacknabe-cpu (highball-db#841, 2026-10-31), Apple M1 Pro, macOS 26.7.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT with the environment in DXVK mode, a 60 fps cap, rated 4 of 5 after 40 minutes, minor issues not described. Not verified by the maintainer.",
   "notes": "Reported perfect on DXMT, the default mode, over a 98-minute session on an M4. No measurement here yet.",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "symptom": "Black window with sound and the game's cursor on macOS 14 (M2 Pro, DXMT, highball#584)",
+      "cause": "DXMT's own shaders are built for Metal language 3.2, which macOS 14 refuses (its log says so), so nothing it draws with them appears",
+      "fix": "Update to macOS 15 or later. Not tested here on macOS 14"
+    }
+  ],
   "launchArgs": null,
   "lastVerified": null
 }

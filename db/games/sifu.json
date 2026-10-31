@@ -1,0 +1,20 @@
+{
+  "id": "sifu",
+  "title": "Sifu",
+  "steam_appid": 2138710,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by ByteOwn3r (highball-db#832, 2026-10-30), Apple M5, macOS 27.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 3 of 5 after 3 minutes: some fps drops. Not verified by the maintainer.",
+  "notes": "Starts on DXMT on an M5, with some frame drops in a 3-minute session. Not measured here.",
+  "knownIssues": [
+    {
+      "symptom": "Some frame drops (M5, DXMT, a 3-minute session)",
+      "cause": "not investigated",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

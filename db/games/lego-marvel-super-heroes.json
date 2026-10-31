@@ -1,0 +1,30 @@
+{
+  "id": "lego-marvel-super-heroes",
+  "title": "LEGO® MARVEL Super Heroes",
+  "steam_appid": 249130,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by DCD55 (highball-db#836, 2026-10-31), Apple M5, macOS 27.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXVK with async shaders on, esync, a 60 fps cap, DLL overrides d3d9=n,b and d3d11=n,b, Emulate display mode on, an Xbox controller, rated 4 of 5 after 5 minutes: the first level at 60 fps. Not verified by the maintainer.",
+  "notes": "The first level plays at 60 fps on DXVK on an M5 with an Xbox controller. The reporter needed -novid to get past the intro videos, and in-engine cutscenes miss some textures. Not measured here.",
+  "knownIssues": [
+    {
+      "symptom": "The game freezes on its intro videos (M5, DXVK)",
+      "cause": "not investigated",
+      "fix": "add -novid to the game's launch arguments, as the reporter did"
+    },
+    {
+      "symptom": "In-engine cutscenes draw without some floor and background textures (M5, DXVK)",
+      "cause": "not investigated",
+      "fix": "none known"
+    },
+    {
+      "symptom": "Minor audio stutter (M5, DXVK)",
+      "cause": "not investigated",
+      "fix": "turning on V-Sync in the game fixed it for the reporter"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

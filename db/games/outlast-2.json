@@ -1,0 +1,14 @@
+{
+  "id": "outlast-2",
+  "title": "Outlast 2",
+  "steam_appid": 414700,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by babaiyu (highball-db#829, 2026-10-30), Apple M4, macOS 27.2, Highball 0.10.22, engine x64-crossover26.3-r27, D3DMetal, esync, a 120 fps cap, rated 5 of 5 after 16 minutes: runs smoothly with no extra configuration. Not verified by the maintainer.",
+  "notes": "Reported perfect on D3DMetal on the Wine 11 engine over a 16-minute session on an M4, with nothing to set up. Not measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

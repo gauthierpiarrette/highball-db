@@ -1,0 +1,14 @@
+{
+  "id": "slime-rancher-2",
+  "title": "Slime Rancher 2",
+  "steam_appid": 1657630,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by gplock2006 (highball-db#850, 2026-10-31), Apple M4, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 20 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT on an M4 in a 20-minute session. Not measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -1,0 +1,14 @@
+{
+  "id": "construction-simulator",
+  "title": "Construction Simulator",
+  "steam_appid": 1273400,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by dropz77 (highball-db#840, 2026-10-31), Apple M6, macOS 27.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 34 minutes, minor issues not described. Not verified by the maintainer.",
+  "notes": "Plays on DXMT on an M6 in a 34-minute session, with minor issues the reporter didn't describe. Not measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
