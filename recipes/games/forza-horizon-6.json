@@ -62,7 +62,7 @@
     "result": "Steam copy (2483190), builds 25104224 and 25588841, on a Mac mini M4 with 32 GB. Intro video, title, Xbox sign-in by device code, shader step, cinematics, character select, free roam in Tokyo and three races played, one of them start to finish. Metal HUD at 1920x1080 in Tokyo: 28 fps at the High preset the game picks, 33 with FSR Balanced, 38 at Medium + FSR Balanced, 44 at Low, 50 at Very Low. In a race at Medium + FSR Balanced 39 to 48 fps. Sound and keyboard work, saves sync. Not tested: online play, a controller, any other Mac."
   },
   "previewRoute": {
-    "engine": "arm64-kk-wine11.18-r1",
+    "engine": "arm64-kk-wine11.18-r2",
     "renderer": "vkd3d",
     "minMemoryGB": 32,
     "note": "On a base M4 it holds an even 30 frames a second at 1080p, without the hitch every second that the game's copy protection causes under Rosetta. The Rosetta engine reaches up to 50 with that hitch, so it is a choice between steady and fast. The first start takes about 10 minutes, most of it the game's Optimizing for your PC screen, and Steam and Xbox ask you to sign in once in the new environment.",
@@ -189,6 +189,11 @@
       },
       {
         "type": "environment",
+        "name": "HB_KK_NO_UBO_ROBUST",
+        "value": "1"
+      },
+      {
+        "type": "environment",
         "name": "VKD3D_CONFIG",
         "value": "no_staggered_submit"
       },
@@ -232,15 +237,15 @@
     "verified": {
       "chip": "Apple M4",
       "macos": "27.0",
-      "engine": "arm64-kk-wine11.18-r1",
+      "engine": "arm64-kk-wine11.18-r2",
       "fps": "an even 30 at 1920x1080, Very Low preset, FSR Quality, while driving, with no hitch from the copy protection"
     },
     "lastVerified": {
       "date": "2026-11-01",
-      "engine": "arm64-kk-wine11.18-r1",
+      "engine": "arm64-kk-wine11.18-r2",
       "macos": "27.0",
       "chip": "Apple M4",
-      "result": "Archives built by CI, Developer ID signed test app. Play, the ask, the new environment with the game cloned and Steam's sign-in window all ran in the app; the sign-in itself was not done. The game ran through steam -applaunch with the recipe's settings in a copy of a signed-in environment: Auto Drive for 255 s, 7713 new frames, 30.2 fps, 7554 at 2 vsyncs. First start with game data and caches removed: garage about 10 minutes from Play, settings kept. Base M4 with 32 GB only."
+      "result": "Engine r2 from the public release, in an environment moved from r1 with the command line, with the recipe's settings. Benchmark at 1080p, Very Low, FSR Quality, cap 30: 30 fps, GPU 1% low 40.6, against 32.4 on r1. Auto Drive for 213 s on a warm shader cache: 6400 new frames, 30.1 fps, 6349 at 2 vsyncs, no gap over 150 ms, no GPU errors. Base M4 with 32 GB only, no long session."
     }
   }
 }
