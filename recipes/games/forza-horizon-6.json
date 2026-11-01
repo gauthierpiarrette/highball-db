@@ -60,5 +60,187 @@
     "macos": "27.0",
     "chip": "Apple M4",
     "result": "Steam copy (2483190), builds 25104224 and 25588841, on a Mac mini M4 with 32 GB. Intro video, title, Xbox sign-in by device code, shader step, cinematics, character select, free roam in Tokyo and three races played, one of them start to finish. Metal HUD at 1920x1080 in Tokyo: 28 fps at the High preset the game picks, 33 with FSR Balanced, 38 at Medium + FSR Balanced, 44 at Low, 50 at Very Low. In a race at Medium + FSR Balanced 39 to 48 fps. Sound and keyboard work, saves sync. Not tested: online play, a controller, any other Mac."
+  },
+  "previewRoute": {
+    "engine": "arm64-kk-wine11.18-r1",
+    "renderer": "vkd3d",
+    "minMemoryGB": 32,
+    "note": "On a base M4 it holds an even 30 frames a second at 1080p, without the hitch every second that the game's copy protection causes under Rosetta. The Rosetta engine reaches up to 50 with that hitch, so it is a choice between steady and fast. The first start takes about 10 minutes, most of it the game's Optimizing for your PC screen, and Steam and Xbox ask you to sign in once in the new environment.",
+    "steps": [
+      {
+        "type": "environment",
+        "name": "HB_FEX_FAST_LEGACY_UD",
+        "value": "1"
+      },
+      {
+        "type": "environment",
+        "name": "HB_FEX_FAST_PREFIX_UD",
+        "value": "1"
+      },
+      {
+        "type": "environment",
+        "name": "HB_FEX_DIRECT_SIGILL",
+        "value": "1"
+      },
+      {
+        "type": "environment",
+        "name": "HB_FEX_SMC_GRAVE_SETS",
+        "value": "16384"
+      },
+      {
+        "type": "environment",
+        "name": "HB_FEX_SMC_INLINE",
+        "value": "1"
+      },
+      {
+        "type": "environment",
+        "name": "HB_FEX_SMC_INLINE_MS",
+        "value": "10000"
+      },
+      {
+        "type": "environment",
+        "name": "HB_FEX_SMC_INLINE_RETIRE_PROT",
+        "value": "1"
+      },
+      {
+        "type": "environment",
+        "name": "HB_FEX_SMC_INLINE_RETIRE_FREE",
+        "value": "1"
+      },
+      {
+        "type": "environment",
+        "name": "HB_FEX_SMC_INLINE_RETIRE_UNMAP",
+        "value": "1"
+      },
+      {
+        "type": "environment",
+        "name": "HB_FEX_SMC_INLINE_KEEP_READ",
+        "value": "1"
+      },
+      {
+        "type": "environment",
+        "name": "HB_FEX_SMC_INLINE_BLOCK_REMOVE",
+        "value": "1"
+      },
+      {
+        "type": "environment",
+        "name": "HB_FEX_PRIVATE_CHURN",
+        "value": "20000"
+      },
+      {
+        "type": "environment",
+        "name": "HB_DIRECT_CONTINUE",
+        "value": "1"
+      },
+      {
+        "type": "environment",
+        "name": "HB_FEX_MAPJIT",
+        "value": "1"
+      },
+      {
+        "type": "environment",
+        "name": "HB_FEX_SMC_RETIRE",
+        "value": "1"
+      },
+      {
+        "type": "environment",
+        "name": "HB_FEX_SMC_REINSTATE",
+        "value": "1"
+      },
+      {
+        "type": "environment",
+        "name": "HB_FEX_SMC_RETIRE_FAULTS",
+        "value": "1"
+      },
+      {
+        "type": "environment",
+        "name": "HB_FEX_CALLRET_EPOCH",
+        "value": "1"
+      },
+      {
+        "type": "environment",
+        "name": "HB_FEX_SMC_CACHE_FILTER",
+        "value": "1"
+      },
+      {
+        "type": "environment",
+        "name": "HB_FEX_SMC_REPLAY",
+        "value": "0"
+      },
+      {
+        "type": "environment",
+        "name": "FEX_SMCCHECKS",
+        "value": "mtrack"
+      },
+      {
+        "type": "environment",
+        "name": "FEX_DISKCACHE",
+        "value": "0"
+      },
+      {
+        "type": "environment",
+        "name": "VKD3D_FEATURE_LEVEL",
+        "value": "12_1"
+      },
+      {
+        "type": "environment",
+        "name": "VKD3D_SHADER_MODEL",
+        "value": "6_6"
+      },
+      {
+        "type": "environment",
+        "name": "VKD3D_CONFIG",
+        "value": "no_staggered_submit"
+      },
+      {
+        "type": "environment",
+        "name": "VKD3D_DEBUG",
+        "value": "err"
+      },
+      {
+        "type": "environment",
+        "name": "DXVK_LOG_LEVEL",
+        "value": "warn"
+      },
+      {
+        "type": "environment",
+        "name": "DXVK_CONFIG",
+        "value": "dxgi.maxVideoMemoryBudget=${memoryMB*0.375};dxgi.maxDeviceMemory=8192;dxgi.maxSharedMemory=8192;dxgi.customVendorId=8086;dxgi.customDeviceId=56a1;dxgi.customDeviceDesc=\"Intel(R) Arc(TM) A750 Graphics\""
+      },
+      {
+        "type": "dlloverride",
+        "value": "gameoverlayrenderer64,gameoverlayrenderer=d"
+      },
+      {
+        "type": "dlloverride",
+        "value": "concrt140,msvcp140,msvcp140_1,msvcp140_2,msvcp140_atomic_wait,msvcp140_codecvt_ids,vccorlib140,vcomp140,vcruntime140,vcruntime140_1=n,b"
+      },
+      {
+        "type": "framecap",
+        "value": 30
+      },
+      {
+        "type": "file",
+        "path": "users/${user}/AppData/Local/ForzaHorizon6/LocalStorage_Shared/ForzaUserConfigSelections/UserConfigSelections",
+        "contents": "\n<UserConfig Version=\"52\" HardwareHash=\"0\">\n  <settings>\n    <PresentInterval value=\"2\"/>\n    <MonitorRefreshPeriod value=\"0.016667\"/>\n    <CollidableShadows isDynamic=\"0\" dynamicValue=\"Default\" name=\"Default\" value=\"0\"/>\n    <UIScale value=\"1.000000\"/>\n    <CarSpecularCubemapResolution isDynamic=\"1\" dynamicValue=\"Low\"/>\n    <GlobalSpecularCubemapResolution isDynamic=\"0\" dynamicValue=\"Default\" name=\"Default\" value=\"128\"/>\n    <CarSpecularCubemapMSAA isDynamic=\"0\" dynamicValue=\"Default\" name=\"Default\" value=\"0\"/>\n    <CubemapDrawDistanceScalar isDynamic=\"0\" dynamicValue=\"Default\" name=\"Default\" value=\"1.000000\"/>\n    <CubemapMeshSizeThresholdScalar isDynamic=\"0\" dynamicValue=\"Default\" name=\"Default\" value=\"1.000000\"/>\n    <ParticleRateScale isDynamic=\"0\" dynamicValue=\"\" name=\"Default\" value=\"1.000000\"/>\n    <EnvMapFrequencyScale isDynamic=\"1\" dynamicValue=\"Off\"/>\n    <CarReflectionLOD isDynamic=\"1\" dynamicValue=\"VeryLow\"/>\n    <TilingScenario isDynamic=\"0\" dynamicValue=\"\" name=\"Default\" value=\"0\"/>\n    <CollidablesInMirror isDynamic=\"0\" dynamicValue=\"Default\" name=\"Default\" value=\"0\"/>\n    <MaxCarsInMirror isDynamic=\"0\" dynamicValue=\"Default\" name=\"Default\" value=\"3\"/>\n    <LOD3CarsInMirror isDynamic=\"0\" dynamicValue=\"Default\" name=\"Default\" value=\"0\"/>\n    <HalfRateMirror isDynamic=\"0\" dynamicValue=\"Default\" name=\"Default\" value=\"1\"/>\n    <ParticlesInMirror isDynamic=\"0\" dynamicValue=\"Default\" name=\"Default\" value=\"0\"/>\n    <CarFocusLODMinMax isDynamic=\"1\" dynamicValue=\"VeryLow\"/>\n    <CarNonFocusLODMinMax isDynamic=\"0\" dynamicValue=\"Default\" name=\"Default\" min=\"3\" max=\"5\"/>\n    <ShadowMapUpdateRateWhenReduced isDynamic=\"0\" dynamicValue=\"\" name=\"Default\" value=\"1.000000\"/>\n    <AllowScreenTearing isDynamic=\"0\" dynamicValue=\"Default\" name=\"Default\" value=\"0\"/>\n    <EnableWindshieldReflections isDynamic=\"0\" dynamicValue=\"Default\" name=\"Default\" value=\"0\"/>\n    <WindshieldReflectionResolution isDynamic=\"0\" dynamicValue=\"Default\" name=\"Default\" value=\"1\"/>\n    <MirrorResolution isDynamic=\"0\" dynamicValue=\"Default\" name=\"Default\" value=\"160\"/>\n    <MirrorFarDistance isDynamic=\"0\" dynamicValue=\"Default\" name=\"Default\" value=\"500\"/>\n    <ResolutionWidth value=\"1920\"/>\n    <ResolutionHeight value=\"1080\"/>\n    <Fullscreen value=\"1\"/>\n    <ShowFPS isDynamic=\"0\" dynamicValue=\"Default\" name=\"Default\" value=\"0\"/>\n    <UseDynamicOptimization value=\"1\"/>\n    <DeformableSnowQuality isDynamic=\"0\" dynamicValue=\"\" Active=\"1\" TessellationLOD0Dist=\"12.000000\" TessellationLOD0EdgeLength=\"0.250000\" TessellationLOD1Dist=\"20.000000\" TessellationLOD1EdgeLength=\"1.000000\" TessellationLOD2Dist=\"35.000000\" TessellationLOD2EdgeLength=\"2.000000\" VertexModifyMinDist=\"20.000000\" VertexModifyMaxDist=\"35.000000\"/>\n    <MasterVolume value=\"1.000000\"/>\n    <StreamerMode value=\"0\"/>\n    <ParticlesQuality isDynamic=\"0\" dynamicValue=\"\" name=\"Default\" value=\"Medium\"/>\n    <UIHUDGlassCaptureEnabled isDynamic=\"0\" dynamicValue=\"Default\" name=\"Default\" value=\"0\"/>\n    <MegaTextureLowSpeedBudget isDynamic=\"0\" dynamicValue=\"\" name=\"Default\" value=\"0.025000\"/>\n    <MegaTextureHighSpeedBudget isDynamic=\"0\" dynamicValue=\"\" name=\"Default\" value=\"0.003000\"/>\n    <FollowLowFOV value=\"48.500000\"/>\n    <FollowHighFOV value=\"58.000000\"/>\n    <DriverFOV value=\"48.000000\"/>\n    <DriverNoWheelFOV value=\"48.000000\"/>\n    <HoodFOV value=\"66.000000\"/>\n    <BumperHighFOV value=\"58.000000\"/>\n    <DepthPrePass isDynamic=\"0\" dynamicValue=\"\" TrackCullDistanceDefault=\"0.000000\" TrackCullDistanceReduced=\"200.000000\"/>\n    <ScreenAreaTestsMain isDynamic=\"0\" dynamicValue=\"Default\" MainScene=\"70.000000\" Depth=\"10.000000\" Cinematic=\"50.000000\" GroundReflection=\"23.000000\"/>\n    <ScreenAreaTestsShadow isDynamic=\"0\" dynamicValue=\"Default\" name=\"Default\" value=\"0.000000\"/>\n    <ScreenAreaTestsCubemap isDynamic=\"0\" dynamicValue=\"Default\" name=\"Default\" value=\"0.000000\"/>\n    <ScreenAreaTestsMirror isDynamic=\"0\" dynamicValue=\"Default\" name=\"Default\" value=\"3.000000\"/>\n    <FWDPlusQuality isDynamic=\"1\" dynamicValue=\"VeryLow\"/>\n    <KeepCarsClean isDynamic=\"0\" dynamicValue=\"\" name=\"Default\" value=\"0\"/>\n    <EnablePCHDR isDynamic=\"0\" dynamicValue=\"Default\" name=\"Default\" value=\"0\"/>\n    <UseLowQualityAIDrivers isDynamic=\"0\" dynamicValue=\"Default\" name=\"Default\" value=\"1\"/>\n    <TAASharpness value=\"0.500000\"/>\n    <CASSharpness value=\"0.500000\"/>\n    <DLAASharpness value=\"0.500000\"/>\n    <DLSSSharpness value=\"0.500000\"/>\n    <XeSSSharpness value=\"0.500000\"/>\n    <XeSSAASharpness value=\"0.500000\"/>\n    <DLC1FollowLowFOV value=\"65.000000\"/>\n    <DLC1FollowHighFOV value=\"65.000000\"/>\n    <DLC1DriverFOV value=\"45.000000\"/>\n    <DLC1DriverNoWheelFOV value=\"45.000000\"/>\n    <DLC1HoodFOV value=\"53.000000\"/>\n    <DLC1BumperHighFOV value=\"53.000000\"/>\n    <FSR3Sharpness value=\"0.500000\"/>\n    <FSR3AASharpness value=\"0.500000\"/>\n  </settings>\n  <selections>\n    <option id=\"UseDynamicOptimization\" value=\"0\"/>\n    <option id=\"FrameRate\" value=\"3\"/>\n    <option id=\"VSync\" value=\"1\"/>\n    <option id=\"EnableHDR\" value=\"0\"/>\n    <option id=\"MotionBlurAmount\" value=\"1\"/>\n    <option id=\"ShowFPS\" value=\"0\"/>\n    <option id=\"ResolutionScaling\" value=\"0\"/>\n    <option id=\"DLSSMode\" value=\"0\"/>\n    <option id=\"DLSSGMode\" value=\"0\"/>\n    <option id=\"FSR3Mode\" value=\"1\"/>\n    <option id=\"XeSSMode\" value=\"0\"/>\n    <option id=\"REFLEXMode\" value=\"0\"/>\n    <option id=\"NVIDIATech\" value=\"0\"/>\n    <option id=\"CarLOD\" value=\"0\"/>\n    <option id=\"EnvStreamingTex\" value=\"0\"/>\n    <option id=\"GeometryQuality\" value=\"0\"/>\n    <option id=\"ReflectionQuality\" value=\"0\"/>\n    <option id=\"SSRQuality\" value=\"0\"/>\n    <option id=\"RTReflectionQuality\" value=\"0\"/>\n    <option id=\"ShadowQuality\" value=\"0\"/>\n    <option id=\"NightShadows\" value=\"0\"/>\n    <option id=\"SSGIQuality\" value=\"0\"/>\n    <option id=\"RTGIQuality\" value=\"0\"/>\n    <option id=\"ShaderQuality\" value=\"0\"/>\n    <option id=\"AudioQuality\" value=\"0\"/>\n    <option id=\"DeformableSnowQuality\" value=\"0\"/>\n    <option id=\"ParticlesSettings\" value=\"0\"/>\n    <option id=\"VolumetricFogQuality\" value=\"0\"/>\n    <option id=\"LensEffects\" value=\"0\"/>\n    <option id=\"MotionBlurQuality\" value=\"0\"/>\n    <option id=\"TAA\" value=\"0\"/>\n    <option id=\"DLAA\" value=\"0\"/>\n    <option id=\"FSR3AA\" value=\"0\"/>\n    <option id=\"XeSSAA\" value=\"0\"/>\n  </selections>\n</UserConfig>"
+      },
+      {
+        "type": "note",
+        "text": "Forza Horizon 6 on the native arm64 engine starts at 1920x1080, the Very Low preset and FSR Quality, capped at 30 frames a second, the settings it was measured on. The first start takes about 10 minutes, most of it the game's Optimizing for your PC screen, and Steam and Xbox ask you to sign in once in this new environment. Raise the settings and the cap in the game and in the environment's Graphics settings if your Mac has room."
+      }
+    ],
+    "verified": {
+      "chip": "Apple M4",
+      "macos": "27.0",
+      "engine": "arm64-kk-wine11.18-r1",
+      "fps": "an even 30 at 1920x1080, Very Low preset, FSR Quality, while driving, with no hitch from the copy protection"
+    },
+    "lastVerified": {
+      "date": "2026-11-01",
+      "engine": "arm64-kk-wine11.18-r1",
+      "macos": "27.0",
+      "chip": "Apple M4",
+      "result": "Archives built by CI, Developer ID signed test app. Play, the ask, the new environment with the game cloned and Steam's sign-in window all ran in the app; the sign-in itself was not done. The game ran through steam -applaunch with the recipe's settings in a copy of a signed-in environment: Auto Drive for 255 s, 7713 new frames, 30.2 fps, 7554 at 2 vsyncs. First start with game data and caches removed: garage about 10 minutes from Play, settings kept. Base M4 with 32 GB only."
+    }
   }
 }

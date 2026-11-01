@@ -5,7 +5,7 @@
   "status": "verified-local",
   "renderer": "d3dmetal",
   "provenance": "verified locally on Apple Silicon (M4, 32 GB), macOS 27.0, Wine 11 engine r18 release candidate with D3DMetal 4.0b2, 2026-10-05. Arachne1111 (highball-db#390, 2026-10-08): rated 3, playable with workarounds, after 25 minutes, Apple M5 Max, macOS 27.0.1, Highball 0.10.12, engine x64-crossover26.3-r18, D3DMetal, Windows 11, 192 dpi, AVX advertised, the forza-horizon-6 recipe applied. Okami0ne (highball-db#438, 2026-10-10): rated 4 of 5 after 22 minutes, Apple M2 Pro, macOS 27.0.1, Highball 0.10.10, engine x64-crossover26.3-r18, D3DMetal, with frame drops and micro freezes. Beepdax (highball-db#449, 2026-10-11): rated 4 of 5 after 61 minutes, Apple M5 Pro, macOS 27.0.1, Highball 0.10.10, engine x64-crossover26.3-r18, the forza-horizon-6 recipe, about 47 fps at 1440p on Medium without frame generation. atheisticzc (highball-db#839, 2026-10-31), Apple M3 Max, macOS 27.2, Highball 0.10.22, engine x64-crossover26.3-r26, D3DMetal, rated 4 of 5 after 21 minutes, 50 to 55 fps at 2048x1330, with the periodic stutter and rendering glitches on some cars with dark metallic paint.",
-  "notes": "Plays from the intro through races and free roam on the Wine 11 engine r18 (D3DMetal 4), macOS 27 only. Base M4 at 1080p: 28 fps on High, 38 on Medium with FSR Balanced, 50 on Very Low; 39 to 48 in a race at Medium. The recipe sets the engine and the graphics card D3DMetal reports (the AMD default crashes the game). Xbox sign-in once, by code at microsoft.com/link. Built-in Benchmark Mode shows a black screen. Liveries, factory paint reflections and trees draw right from engine r28 (Highball 0.10.23), which works around a D3DMetal vertex layout bug; the same release lets the game offer DLSS Super Resolution (on MetalFX) with Enable DLSS (MetalFX) on, since the recipe now has D3DMetal report an NVIDIA GeForce RTX 4070. Online play and controllers not tested. A player on an M5 Max played 25 minutes on 0.10.12 and rated it playable with workarounds, without naming them. A player on an M2 Pro played 22 minutes on 0.10.10 and rated it playable, with frame drops and the micro freezes the copy protection causes. Voices and most of the engine sound were missing on every Mac until Highball 0.10.16 (beta), whose Wine 11 engine r24 plays the game's whole surround mix through Apple's spatial mixer. Pick r24 under Advanced, Engine in the game's environment.",
+  "notes": "Plays from the intro through races and free roam on the Wine 11 engine r18 (D3DMetal 4), macOS 27 only. Base M4 at 1080p: 28 fps on High, 38 on Medium with FSR Balanced, 50 on Very Low; 39 to 48 in a race at Medium. The recipe sets the engine and the graphics card D3DMetal reports (the AMD default crashes the game). Xbox sign-in once, by code at microsoft.com/link. Built-in Benchmark Mode shows a black screen. Liveries, factory paint reflections and trees draw right from engine r28 (Highball 0.10.23), which works around a D3DMetal vertex layout bug; the same release lets the game offer DLSS Super Resolution (on MetalFX) with Enable DLSS (MetalFX) on, since the recipe now has D3DMetal report an NVIDIA GeForce RTX 4070. Online play and controllers not tested. A player on an M5 Max played 25 minutes on 0.10.12 and rated it playable with workarounds, without naming them. A player on an M2 Pro played 22 minutes on 0.10.10 and rated it playable, with frame drops and the micro freezes the copy protection causes. Voices and most of the engine sound were missing on every Mac until Highball 0.10.16 (beta), whose Wine 11 engine r24 plays the game's whole surround mix through Apple's spatial mixer. Pick r24 under Advanced, Engine in the game's environment. Since Highball 0.10.24 Play also offers a native arm64 engine, once, for those who prefer steady to fast: Wine 11.18 with FEX, vkd3d-proton and KosmicKrisp in an environment of its own, the game carried along as a clone. On a base M4 with 32 GB it holds an even 30 fps at 1080p, Very Low and FSR Quality with no hitch from the copy protection, where D3DMetal reaches 50 with it. It starts on those settings, and the first start takes about 10 minutes. The Game page's Other route asks again later. Only that M4 has been measured.",
   "recipe": "recipes/games/forza-horizon-6.json",
   "lastVerified": "2026-10-05",
   "rendererResults": {
@@ -16,6 +16,10 @@
     "dxmt": {
       "verdict": "fails",
       "detail": "DirectX 12 only, DXMT has no DirectX 12"
+    },
+    "vkd3d": {
+      "verdict": "works",
+      "detail": "vkd3d-proton on KosmicKrisp, on the native arm64 engine only (arm64-kk-wine11.18, macOS 27). MoltenVK cannot run it: the game needs sparse resources."
     }
   },
   "verified": {
@@ -29,7 +33,7 @@
     {
       "symptom": "A hitch of about a tenth of a second roughly once a second, in menus, the garage and while driving",
       "cause": "the game's copy protection runs a periodic check of about 2,000 deliberate traps while holding a lock the frame needs. Under Rosetta each trap costs about 50 microseconds against 1 to 2 on a PC, so a check of a few milliseconds takes about 100 (measured on an M4)",
-      "fix": "none in Highball. No setting removes it: priorities, Game Mode and fewer processors were measured and shorten it by a fifth at best. It would take cheaper traps in Rosetta or a change in the game"
+      "fix": "none on D3DMetal: priorities, Game Mode and fewer processors were measured and shorten it by a fifth at best. The native arm64 engine Play offers does not have it, since Highball 0.10.24"
     },
     {
       "symptom": "Liveries look washed out or missing (the car shows mostly its base paint), factory paint has blotchy, faceted reflections, and trees sway oddly (an M5 in highball#290, an M5 Pro in highball-db#449, an M4 Max)",
@@ -50,6 +54,11 @@
       "symptom": "FHE21 right after the splash, or a Wine crash, when forzahorizon6.exe is added to Highball and started by itself (highball#319, #486, #550)",
       "cause": "the game needs Steam running in the same environment and has to be started through it",
       "fix": "install it through Steam in the environment. To keep it on an external drive, add the drive in Steam's Settings, Storage, move the game folder into SteamLibrary/steamapps/common on that drive named ForzaHorizon6, install to that library so Steam checks the files, then press Play on the game's page"
+    },
+    {
+      "symptom": "A freeze of several seconds in all, in one burst, about half a minute into the first drive after starting the game (native arm64 engine)",
+      "cause": "not known yet. It is not shaders compiling on first use, which were measured at zero there, and not the min/max sampler emulation. It only comes when the shader cache is already filled. Measured on an M4: 6.2 and 7.9 s in two runs",
+      "fix": "none yet, it passes and the rest of the drive stays even"
     }
   ]
 }
