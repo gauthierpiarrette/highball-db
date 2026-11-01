@@ -1,0 +1,14 @@
+{
+  "id": "hot-brass",
+  "title": "Hot Brass",
+  "steam_appid": 892860,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#860, 2026-11-01), Apple M1, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 5 of 5 after 3 minutes: a Mac build exists and the reporter played the Windows one, the GOG copy. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M1 with D3DMetal over a short session, mouse and keyboard.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

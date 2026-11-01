@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by KentWongHkMeow (highball-db#845, 2026-10-31), Apple M4, macOS 26.5, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 148 minutes. Not verified by the maintainer.",
+  "provenance": "Reported by KentWongHkMeow (highball-db#845, 2026-10-31), Apple M4, macOS 26.5, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 148 minutes. Not verified by the maintainer. ymah (highball-db#882, 2026-11-01), Apple M3 Pro, macOS 26.6.2, Highball 0.10.23, engine x64-crossover26.3-r15, DXMT, rated 5 of 5 after 5 minutes.",
   "notes": "Reported perfect on DXMT on an M4 over 148 minutes. Not measured here.",
   "knownIssues": [],
   "launchArgs": null,

@@ -1,0 +1,14 @@
+{
+  "id": "operator",
+  "title": "OPERATOR",
+  "steam_appid": 1913370,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by DrBendy23 (highball-db#854, 2026-11-01), Apple M3 Pro, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 6 minutes: about four hours in the notes, a raid against bots and then online servers, a steady 55 fps (capped) at 1080p with DLSS through MetalFX on Quality and the Medium preset, with BepInEx through winhttp=n,b. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M3 Pro with DXMT on the default engine, online play included, at a capped 55 fps at 1080p on Medium. The first launch takes a few minutes. Night vision and aiming look slightly blurry by design, and a narrower window sharpens them.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

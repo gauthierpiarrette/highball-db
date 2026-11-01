@@ -1,0 +1,14 @@
+{
+  "id": "red-dead-redemption",
+  "title": "Red Dead Redemption",
+  "steam_appid": 2668510,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by exonerate-dot (highball-db#881, 2026-11-01), Apple M4, macOS 26.6.2, Highball 0.10.22, engine x64-crossover26.3-r27, D3DMetal, rated 5 of 5 after 8 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M4 with D3DMetal on Wine 11 engine r27, over eight minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

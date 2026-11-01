@@ -1,0 +1,14 @@
+{
+  "id": "kingdom-come-deliverance-ii",
+  "title": "Kingdom Come: Deliverance II",
+  "steam_appid": 1771300,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by KnutKowalski (highball-db#852, 2026-10-31), Apple M2 Ultra, macOS 27.2, Highball 0.10.23, engine x64-crossover26.3-r29, D3DMetal by the report (the environment's mode is DXVK), rated 5 of 5 after 30 minutes: filed with the Mysteria Ecclesiae content, and highball#593 has the same player finding a huge difference from Wine 10. Not verified by the maintainer.",
+  "notes": "Direct3D 12 only, so it needs D3DMetal. On macOS 27 the same player found it runs very well on the Wine 11 engine with D3DMetal 4, against periodic stutter on Wine 10 with D3DMetal 3 (highball#593). One player's report, not measured here.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

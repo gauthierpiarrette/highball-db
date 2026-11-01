@@ -1,0 +1,20 @@
+{
+  "id": "final-fantasy-vii-rebirth",
+  "title": "FINAL FANTASY VII REBIRTH",
+  "steam_appid": 2909400,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by ulayera (highball-db#855, 2026-11-01), Apple M1 Max, macOS 27.2, Highball 0.10.22, engine x64-crossover26.3-r27, D3DMetal by the report (the environment's mode is DXMT), rated 3 of 5 after 2 minutes: about 20 minutes in an earlier session as well. Not verified by the maintainer.",
+  "notes": "Reported playable on an M1 Max with D3DMetal on low graphics.",
+  "knownIssues": [
+    {
+      "symptom": "The game doesn't run until AVX is advertised",
+      "cause": "the game asks for AVX",
+      "fix": "turn on Advertise AVX to games in the environment's Settings, Compatibility"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

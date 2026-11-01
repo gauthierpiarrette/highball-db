@@ -1,0 +1,20 @@
+{
+  "id": "moving-out",
+  "title": "Moving Out",
+  "steam_appid": 996770,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by eldracode (highball-db#872, 2026-11-01), Apple M3 Pro, macOS 27.0.1, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 9 minutes. Not verified by the maintainer.",
+  "notes": "Reported playable on an M3 Pro with DXMT with the keyboard.",
+  "knownIssues": [
+    {
+      "symptom": "Controller not detected in the game",
+      "cause": "not diagnosed",
+      "fix": "play with the keyboard"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

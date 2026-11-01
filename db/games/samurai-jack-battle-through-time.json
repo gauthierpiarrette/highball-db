@@ -1,0 +1,13 @@
+{
+  "id": "samurai-jack-battle-through-time",
+  "title": "Samurai Jack: Battle Through Time",
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by safeenkurd (highball-db#851, 2026-10-31), Apple M4 Pro, macOS 27.0, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 394 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M4 Pro with DXMT on the default engine over more than six hours.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

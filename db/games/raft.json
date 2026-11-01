@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by Red-Pathfinder (highball-db#468, 2026-10-13), Apple M5, macOS 27.0.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, rated 3 of 5 after 6 minutes. Not verified by the maintainer.",
+  "provenance": "Reported by Red-Pathfinder (highball-db#468, 2026-10-13), Apple M5, macOS 27.0.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, rated 3 of 5 after 6 minutes. Not verified by the maintainer. alfons-fhl (highball-db#887, 2026-11-01), Apple M3, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 1 minutes: a one minute look.",
   "notes": "Reported playable on an M5 on DXMT. Playing online with Windows players worked only after installing the game's 1.09_precrossplayupdate branch from its Steam properties and turning off Limit IP Address Tracking in the Mac's Wi-Fi settings.",
   "knownIssues": [
     {

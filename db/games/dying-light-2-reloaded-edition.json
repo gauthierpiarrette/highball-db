@@ -1,0 +1,14 @@
+{
+  "id": "dying-light-2-reloaded-edition",
+  "title": "Dying Light 2: Reloaded Edition",
+  "steam_appid": 534380,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by mehmetsedatovur (highball-db#876, 2026-11-01), Apple M1 Pro, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r19, D3DMetal, rated 5 of 5 after 20 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M1 Pro with D3DMetal over 20 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

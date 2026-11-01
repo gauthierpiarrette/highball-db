@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": "d3dmetal",
   "anticheat": null,
-  "provenance": "Reported by pijenomar (highball-db#672, 2026-10-24), Apple M5 Pro, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal, esync, Windows 11, rated 5 of 5 after 13 minutes, run as PRAGMATA.exe. Not verified by the maintainer.",
+  "provenance": "Reported by pijenomar (highball-db#672, 2026-10-24), Apple M5 Pro, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal, esync, Windows 11, rated 5 of 5 after 13 minutes, run as PRAGMATA.exe. Not verified by the maintainer. MatthewFrench (highball-db#863, 2026-11-01), Apple M2 Pro, macOS 26.6.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, D3DMetal by the report (the environment's mode is DXMT), rated 4 of 5 after 29 minutes: needed Steam's in-game controller setting, and it did not start at Retina resolution, which still looked good.",
   "notes": "Capcom's RE Engine, DirectX 12 only, so it needs D3DMetal, which this page picks. Reported perfect on an M5 Pro. The reporter's tip is to turn on Enable DLSS (MetalFX) in the environment's settings, which makes the game offer DLSS and raised the frame rate. On an M1 Pro the free demo stopped at its graphics check (see the PRAGMATA SKETCHBOOK demo's page), so older chips may differ. Nothing was measured here.",
   "knownIssues": [],
   "launchArgs": null,
