@@ -59,6 +59,11 @@
       "symptom": "A freeze of several seconds in all, in one burst, about half a minute into the first drive after starting the game (native arm64 engine)",
       "cause": "not known yet. It is not shaders compiling on first use, which were measured at zero there, and not the min/max sampler emulation. It only comes when the shader cache is already filled. Measured on an M4: 6.2 and 7.9 s in two runs",
       "fix": "none yet, it passes and the rest of the drive stays even"
+    },
+    {
+      "symptom": "On the native arm64 route, the game crashes the moment a controller is used (M5 Max, highball#618)",
+      "cause": "not known yet, controllers have not been tested on this route here",
+      "fix": "use the D3DMetal environment for a controller, or the keyboard on this route"
     }
   ]
 }
