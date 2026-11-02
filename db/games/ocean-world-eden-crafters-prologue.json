@@ -1,0 +1,20 @@
+{
+  "id": "ocean-world-eden-crafters-prologue",
+  "title": "Ocean World: Eden Crafters Prologue",
+  "steam_appid": 2811830,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by gerhardsmith84-bit (highball-db#922, 2026-11-02), Apple M4, macOS 27.2, Highball 0.10.23, engine x64-crossover26.3-r29, DXMT, rated 1 of 5: the game never opens a window, its log reports GLFW_VERSION_UNAVAILABLE and WGL failing to create an OpenGL context, on Wine 10 r28 and Wine 11 r29 alike. Not verified by the maintainer.",
+  "notes": "Does not start in one report on an M4. The game is built on libGDX with LWJGL3 and fails to get an OpenGL context.",
+  "knownIssues": [
+    {
+      "symptom": "Never opens a window, WGL fails to create an OpenGL context (GLFW_VERSION_UNAVAILABLE)",
+      "cause": "not diagnosed. Wine on macOS offers OpenGL up to 4.1 core, so a request for a newer or a compatibility context fails",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

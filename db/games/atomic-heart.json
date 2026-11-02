@@ -1,0 +1,14 @@
+{
+  "id": "atomic-heart",
+  "title": "Atomic Heart",
+  "steam_appid": 668580,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by SERPE9T (highball-db#920, 2026-11-02), Apple M1 Pro, macOS 27.2, Highball 0.10.23, engine x64-crossover26.3-r26, D3DMetal, rated 4 of 5 after 16 minutes: about 20 fps at first and 110 or more on the main screen after settings in the game and in Highball the reporter didn't list. Not verified by the maintainer.",
+  "notes": "Reported playable on an M1 Pro with D3DMetal on Wine 11 engine r26 once its settings are tuned, at 110 fps or more on the main screen.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by 1920668427 (highball-db#520, 2026-10-17), Apple M4, macOS 26.7.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, D3DMetal environment, recipes steam, fakejapanese, controller-sdl, corefonts and vcrun2022, rated 5 of 5 after 13 minutes. Not verified by the maintainer.",
+  "provenance": "Reported by 1920668427 (highball-db#520, 2026-10-17), Apple M4, macOS 26.7.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, D3DMetal environment, recipes steam, fakejapanese, controller-sdl, corefonts and vcrun2022, rated 5 of 5 after 13 minutes. Not verified by the maintainer. TheDunedinChad (highball-db#921, 2026-11-02), Apple M4, macOS 26.5.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, rated 5 of 5 after 10 minutes.",
   "notes": "Reported perfect on D3DMetal on the default engine on an M4. DXMT, the default mode, is untested, so the page does not pick a mode. No frame rate given.",
   "knownIssues": [],
   "launchArgs": null,

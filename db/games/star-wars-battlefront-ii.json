@@ -1,0 +1,14 @@
+{
+  "id": "star-wars-battlefront-ii",
+  "title": "STAR WARS Battlefront II",
+  "steam_appid": 1237950,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by tokim25 (highball-db#925, 2026-11-02), Apple M5, macOS 27.0.1, Highball 0.10.23, engine x64-crossover26.3-r27, DXMT, rated 5 of 5 after 8 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M5 with DXMT on Wine 11 engine r27 over a short session.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": "d3dmetal",
   "anticheat": null,
-  "provenance": "Reported by Vader-Femi (highball-db#494, 2026-10-15), Apple M4 16 GB MacBook Pro, macOS 27.0.1, Highball 0.10.16, engine x64-crossover26.3-r25, D3DMetal, Windows 11, Retina scale 192 dpi, AVX advertised, Metal HUD, the player's own DLL overrides d3d12,d3d12core=n,b, recipes steam and vcrun2022, the game on an external SSD, rated 5 of 5: about 46 fps on Medium in the intro. Not verified by the maintainer.",
+  "provenance": "Reported by Vader-Femi (highball-db#494, 2026-10-15), Apple M4 16 GB MacBook Pro, macOS 27.0.1, Highball 0.10.16, engine x64-crossover26.3-r25, D3DMetal, Windows 11, Retina scale 192 dpi, AVX advertised, Metal HUD, the player's own DLL overrides d3d12,d3d12core=n,b, recipes steam and vcrun2022, the game on an external SSD, rated 5 of 5: about 46 fps on Medium in the intro. Not verified by the maintainer. mohsin17-sys (highball-db#915, 2026-11-02), Apple M4 Pro, macOS 27.2, Highball 0.10.24, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 5 of 5 after 65 minutes.",
   "notes": "Reported perfect on D3DMetal on the Wine 11 engine r25, about 46 fps on Medium in the intro on a base M4 with 16 GB, from an external SSD. The reporter also had the DLL overrides d3d12,d3d12core=n,b set and ran the game under Windows 11; whether either matters was not tested.",
   "knownIssues": [],
   "launchArgs": null,

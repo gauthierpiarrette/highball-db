@@ -1,0 +1,25 @@
+{
+  "id": "grounded",
+  "title": "Grounded",
+  "steam_appid": 962130,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by abadu223 (highball-db#928, 2026-11-02), Apple M3 Pro, macOS 27.0, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 8 minutes: singleplayer and Xbox Live crossplay worked after two changes to the game's DLLs in Maine/Binaries/Win64. Not verified by the maintainer.",
+  "notes": "Reported playable on an M3 Pro with DXMT, multiplayer included, after two changes to the game's own DLLs.",
+  "knownIssues": [
+    {
+      "symptom": "Endless loading spinner at start",
+      "cause": "SpeechSynthWrapper.SetPreferredVoice throws because Wine's speech API returns no voices",
+      "fix": "rename SpeechSynthWrapper.dll in Maine/Binaries/Win64 to SpeechSynthWrapper.dll.bak"
+    },
+    {
+      "symptom": "Multiplayer fails with ConnectToNetwork: Failed: 3: 63",
+      "cause": "under Windows 10 the game loads PlayFab Party's PartyWin.dll, which fails under Wine",
+      "fix": "in Maine/Binaries/Win64, rename PartyWin.dll to PartyWin.dll.bak and put a copy of PartyWin7.dll in its place named PartyWin.dll"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

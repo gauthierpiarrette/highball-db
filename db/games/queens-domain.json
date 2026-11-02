@@ -1,0 +1,14 @@
+{
+  "id": "queens-domain",
+  "title": "Queen's Domain",
+  "steam_appid": 1799840,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Naylvis (highball-db#917, 2026-11-02), Apple M2 Max, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 505 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M2 Max with DXMT over more than eight hours.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
