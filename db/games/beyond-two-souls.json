@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by w8079 (highball-db#367, 2026-10-07), Apple M4, macOS 27.0.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, DXMT set as the game's own mode, rated 4 of 5 after about 4 minutes. The menu and the 3D scene render; frame rate not measured. Not verified by the maintainer.",
+  "provenance": "Reported by w8079 (highball-db#367, 2026-10-07), Apple M4, macOS 27.0.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, DXMT set as the game's own mode, rated 4 of 5 after about 4 minutes. The menu and the 3D scene render; frame rate not measured. Not verified by the maintainer. tonesto7 (highball-db#894, 2026-11-02), Apple M5 Max, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 25 minutes: the demo.",
   "notes": "Renders on DXMT. Start it from Highball's library: a game started from Steam's own window gets the environment's mode, not the one set on its page, and this game shows a black screen on DXVK.",
   "knownIssues": [
     {
