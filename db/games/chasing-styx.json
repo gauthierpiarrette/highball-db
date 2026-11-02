@@ -1,0 +1,14 @@
+{
+  "id": "chasing-styx",
+  "title": "Chasing Styx",
+  "steam_appid": 594300,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#902, 2026-11-02), Apple M1, macOS 27.2, Highball 0.10.24, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 5 of 5 after 3 minutes: a 32-bit game. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M1 with D3DMetal on engine r29 over a short session.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

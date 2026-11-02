@@ -1,0 +1,14 @@
+{
+  "id": "sounds-of-her-love",
+  "title": "Sounds of Her Love",
+  "steam_appid": 603880,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#897, 2026-11-02), Apple M1, macOS 27.2, Highball 0.10.24, engine r28, d2dmetal, rated 5 of 5. Not verified by the maintainer.",
+  "notes": "Reported perfect over a few minutes on an M1 with D3DMetal.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -1,0 +1,25 @@
+{
+  "id": "assassins-creed",
+  "title": "Assassin's Creed",
+  "steam_appid": 15100,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#901, 2026-11-02), Apple M1, macOS 27.2, Highball 0.10.24, engine x64-crossover26.3-r28, D3DMetal, rated 2 of 5 after 5 minutes: the title screen runs at 7 fps and the game crashes on the way in. The logo ran in slow motion on the Wine 10 engine r29 and normally on the Wine 11 engine. Not verified by the maintainer.",
+  "notes": "Not playable yet in one report on an M1, with D3DMetal on the Wine 11 engine.",
+  "knownIssues": [
+    {
+      "symptom": "The title screen stutters at about 7 fps and the game crashes on the way in (M1, Wine 11 r28, D3DMetal)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    },
+    {
+      "symptom": "The opening logo plays in slow motion on the Wine 10 engine",
+      "cause": "not diagnosed",
+      "fix": "the Wine 11 engine plays it normally"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
