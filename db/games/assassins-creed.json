@@ -11,7 +11,7 @@
     {
       "symptom": "The title screen stutters at about 7 fps and the game crashes on the way in (M1, Wine 11 r28, D3DMetal)",
       "cause": "not diagnosed",
-      "fix": "none known"
+      "fix": "none yet. On DXVK it doesn't crash and gets in game, at 3 to 4 fps (highball-db#901)"
     },
     {
       "symptom": "The opening logo plays in slow motion on the Wine 10 engine",
