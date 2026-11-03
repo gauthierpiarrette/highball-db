@@ -62,8 +62,8 @@
     },
     {
       "symptom": "On the native arm64 route, the game crashes the moment a controller is used (M5 Max, highball#618)",
-      "cause": "not known yet, controllers have not been tested on this route here",
-      "fix": "use the D3DMetal environment for a controller, or the keyboard on this route"
+      "cause": "FEX patched an unaligned atomic in its code buffer without the write permission the engine turns on",
+      "fix": "fixed in the native engine r3 (FEX patch 0034 by ineshd), which Play offers once"
     }
   ]
 }
