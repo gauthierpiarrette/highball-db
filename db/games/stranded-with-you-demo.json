@@ -1,0 +1,20 @@
+{
+  "id": "stranded-with-you-demo",
+  "title": "Stranded with You Demo",
+  "steam_appid": 4339760,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#940, 2026-11-03), Apple M1, macOS 27.2, Highball 0.10.24, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 1 of 5 after 2 minutes: Highball shows it running but no game window appears after several minutes, with DXMT too. Not verified by the maintainer.",
+  "notes": "Doesn't start in one report on an M1. Highball shows it running, but no game window appears, with D3DMetal or DXMT.",
+  "knownIssues": [
+    {
+      "symptom": "No game window appears while Highball shows the game running (M1, D3DMetal and DXMT, Wine 10 r29)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

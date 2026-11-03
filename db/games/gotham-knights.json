@@ -1,0 +1,14 @@
+{
+  "id": "gotham-knights",
+  "title": "Gotham Knights",
+  "steam_appid": 1496790,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#947, 2026-11-03), Apple M1, macOS 27.2, Highball 0.10.24, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 5 of 5 after 50 minutes: the first load takes long enough to look hung before the copyright screen, then about 25 to 35 fps on low settings. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M1 with D3DMetal over 50 minutes, at about 25 to 35 fps on low settings. The first load takes a while and looks hung before the copyright screen.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

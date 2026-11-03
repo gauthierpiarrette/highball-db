@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by khoitruongsg-boop (highball-db#711, 2026-10-26), Apple M2, macOS 27.0, Highball 0.10.22, engine x64-sikarugir10.0_6-r29, DXVK environment, msync, rated 5 of 5 after 73 minutes. Not verified by the maintainer. khoitruongsg-boop (highball-db#905, 2026-11-02), Apple M2, macOS 27.0, Highball 0.10.22, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 4 of 5 after 16 minutes: the connection sometimes fails.",
-  "notes": "Reported perfect on the default engine with DXVK on an M2 over 73 minutes. Nothing was measured here.",
+  "provenance": "Reported by khoitruongsg-boop (highball-db#711, 2026-10-26), Apple M2, macOS 27.0, Highball 0.10.22, engine x64-sikarugir10.0_6-r29, DXVK environment, msync, rated 5 of 5 after 73 minutes. Not verified by the maintainer. khoitruongsg-boop (highball-db#905, 2026-11-02), Apple M2, macOS 27.0, Highball 0.10.22, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 4 of 5 after 16 minutes: the connection sometimes fails. khoitruongsg-boop (highball-db#953, 2026-11-03), Apple M2, macOS 27.0, Highball 0.10.22, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 5 of 5 after 120 minutes: six rounds of Race in 22 minutes at 43 to 60 fps, voice chat working with push to talk on T.",
+  "notes": "Reported perfect on the default engine with DXVK on an M2 over 73 minutes. Nothing was measured here. A two hour report on D3DMetal, rated perfect, saw 43 to 60 fps in Race with voice chat working.",
   "knownIssues": [],
   "launchArgs": null,
   "lastVerified": null

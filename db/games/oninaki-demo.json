@@ -1,0 +1,20 @@
+{
+  "id": "oninaki-demo",
+  "title": "ONINAKI Demo",
+  "steam_appid": 1047000,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#937, 2026-11-03), Apple M1, macOS 27.2, Highball 0.10.24, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 3 of 5 after 15 minutes: it played well until it crashed at a healing point when Start was pressed. The backtrace shows a write to address 0 at ntdll+0x38314, nested many times through exception handling. The log attached is from the uninstall run. Not verified by the maintainer.",
+  "notes": "Reported playing well on an M1 with D3DMetal until a crash after about 15 minutes. A Unity game.",
+  "knownIssues": [
+    {
+      "symptom": "Crashes after a while, here at a healing point when Start was pressed (M1, D3DMetal, Wine 10 r29)",
+      "cause": "not diagnosed. The backtrace shows a write to address 0 inside Wine's ntdll (+0x38314) while it was handling an exception, nested many times over",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

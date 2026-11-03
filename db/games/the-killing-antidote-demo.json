@@ -1,0 +1,14 @@
+{
+  "id": "the-killing-antidote-demo",
+  "title": "The Killing Antidote Demo",
+  "steam_appid": 3274030,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#944, 2026-11-03), Apple M1, macOS 27.2, Highball 0.10.24, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 5 of 5 after 22 minutes: 35 to 40 fps on High Quality and 25 to 30 on Best Quality, a DualSense through Steam Input. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M1 with D3DMetal over 22 minutes, at 35 to 40 fps on High Quality and 25 to 30 on Best Quality as the reporter saw them, with a DualSense through Steam Input.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

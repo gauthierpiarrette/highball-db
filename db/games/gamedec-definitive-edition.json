@@ -1,0 +1,20 @@
+{
+  "id": "gamedec-definitive-edition",
+  "title": "Gamedec - Definitive Edition",
+  "steam_appid": 917720,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by panpietrek (highball-db#946, 2026-11-03), Apple M1, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 11 minutes: a little stutter when moving around, only at the start, which the reporter puts down to shaders. Not verified by the maintainer.",
+  "notes": "Reported playable on an M1 with DXMT over 11 minutes, with a little stutter when moving around at the start.",
+  "knownIssues": [
+    {
+      "symptom": "A little stutter when moving around at the start (M1, DXMT)",
+      "cause": "not diagnosed. The reporter suspects shaders being prepared",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

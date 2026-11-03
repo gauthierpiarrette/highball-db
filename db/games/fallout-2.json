@@ -1,0 +1,25 @@
+{
+  "id": "fallout-2",
+  "title": "Fallout 2",
+  "steam_appid": 38410,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#869, 2026-11-01), Apple M1, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, WineD3D by the report (the environment's mode is D3DMetal), rated 2 of 5 after 1 minutes: 'Error initializing video mode 640x480' until the High Resolution Patch is enabled in HiRes Config, then the same slow motion as Fallout (highball-db#862), the GOG copy. Not verified by the maintainer.",
+  "notes": "Doesn't play in one report on an M1. Without the High Resolution Patch it stops with 'Error initializing video mode 640x480'. With the patch enabled in HiRes Config it starts, then runs in slow motion like Fallout. It's a 32-bit game.",
+  "knownIssues": [
+    {
+      "symptom": "'Error initializing video mode 640x480' at start",
+      "cause": "not diagnosed",
+      "fix": "enable the High Resolution Patch in the game's HiRes Config, as the reporter did. Emulate display mode changes on the game's page got Red Alert 2 past a similar error, not tried with this game"
+    },
+    {
+      "symptom": "Runs in slow motion once started, as Fallout does (M1, Wine 10 r28)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

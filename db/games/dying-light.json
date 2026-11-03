@@ -1,0 +1,14 @@
+{
+  "id": "dying-light",
+  "title": "Dying Light",
+  "steam_appid": 239140,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by exonerate-dot (highball-db#931, 2026-11-02), Apple M4, macOS 26.6.2, Highball 0.10.23, engine x64-crossover26.3-r27, DXMT, rated 5 of 5 after 5 minutes: the report names the game DyingLightGame, which is Dying Light's exe, and links a SteamDB patch note. AVX advertised, frame cap 60. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M4 with DXMT on Wine 11 engine r27 over 5 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

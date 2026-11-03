@@ -1,0 +1,20 @@
+{
+  "id": "another-world-20th-anniversary-edition",
+  "title": "Another World: 20th Anniversary Edition",
+  "steam_appid": 233550,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#858, 2026-11-01), Apple M1, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT by the report (the environment's mode is D3DMetal), rated 2 of 5 after 1 minutes: after Play and then Intro the screen goes black, the GOG copy. Not verified by the maintainer.",
+  "notes": "Doesn't play in one report on an M1 with DXMT. After Play and then Intro the screen goes black. It's a 32-bit game.",
+  "knownIssues": [
+    {
+      "symptom": "Black screen after Play and then Intro (M1, DXMT, Wine 10 r28)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

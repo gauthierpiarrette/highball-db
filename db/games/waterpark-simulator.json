@@ -1,0 +1,14 @@
+{
+  "id": "waterpark-simulator",
+  "title": "Waterpark Simulator",
+  "steam_appid": 3293260,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by bcroc (highball-db#935, 2026-11-03), Apple M4, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 42 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M4 with DXMT over 42 minutes, with the default settings.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

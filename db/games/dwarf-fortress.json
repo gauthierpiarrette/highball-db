@@ -1,0 +1,14 @@
+{
+  "id": "dwarf-fortress",
+  "title": "Dwarf Fortress",
+  "steam_appid": 975370,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by luispereira11 (highball-db#933, 2026-11-03), Apple M4, macOS 27.2, Highball 0.10.24, engine x64-crossover26.3-r28, WineD3D by the report (the environment's mode is D3DMetal), rated 5 of 5 after 7 minutes: with Retina pixels at 100%. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M4 on Wine 11 engine r28 over 7 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

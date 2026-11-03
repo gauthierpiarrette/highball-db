@@ -4,8 +4,8 @@
   "steam_appid": 1888160,
   "status": "community",
   "renderer": "d3dmetal",
-  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
-  "notes": "reported working via GPTK-class stacks",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball. flacknabe-cpu (highball-db#948, 2026-11-03), Apple M1 Pro, macOS 26.7.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 4 of 5 after 21 minutes: offline with Easy Anti-Cheat skipped by renaming the game's exe, borderless at 1440x810 on low settings with HDR off and the frame rate capped at 30. The garage, AC assembly and missions rendered and played. Without GraphicsConfig.xml the first launch crashed at a macOS resolution of 1800x1169 and worked at 1512x982, and changing display modes in the game sometimes crashed or froze it (details in the report's comment).",
+  "notes": "reported working via GPTK-class stacks. Reported playable on an M1 Pro with D3DMetal, offline with Easy Anti-Cheat skipped, borderless at 1440x810 on low settings. The first launch needs a lower macOS resolution to get through, see the known issues.",
   "lastVerified": null,
   "anticheat": {
     "names": [
@@ -13,5 +13,22 @@
     ],
     "macVerdict": "warning",
     "note": "anti-cheat present; Linux/Proton support does not extend to macOS — userspace path works for some titles"
-  }
+  },
+  "knownIssues": [
+    {
+      "symptom": "The first launch crashes to a black screen and Wine's debugger when GraphicsConfig.xml doesn't exist yet and macOS is at 1800x1169, with 'MTLTextureDescriptor has width of zero' in the log (M1 Pro, D3DMetal, Wine 10 r28)",
+      "cause": "not diagnosed",
+      "fix": "set the Mac's display to 1512x982 for the first launch, so the game writes GraphicsConfig.xml, then go back to 1800x1169. Later launches use the saved file (highball-db#948)"
+    },
+    {
+      "symptom": "Switching between borderless and fullscreen, or changing the resolution in the game, sometimes crashes or freezes it, and the picture can sit offset with unused space around it",
+      "cause": "not diagnosed. The log shows Wine refusing a display mode change (ChangeDisplaySettings returned -2)",
+      "fix": "none known. Emulate display mode changes did not reliably help the reporter"
+    },
+    {
+      "symptom": "Played only without its anti-cheat, started offline with the exe renamed so Easy Anti-Cheat is skipped, so online play is unavailable",
+      "cause": "Easy Anti-Cheat. Its support for Proton on Linux doesn't extend to Wine on a Mac.",
+      "fix": "none for online play"
+    }
+  ]
 }

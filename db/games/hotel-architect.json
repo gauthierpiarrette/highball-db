@@ -1,0 +1,14 @@
+{
+  "id": "hotel-architect",
+  "title": "Hotel Architect",
+  "steam_appid": 1602000,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by randomnickname424 (highball-db#942, 2026-11-03), Apple M2, macOS 26.6.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 366 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M2 with DXMT over about six hours.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

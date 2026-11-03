@@ -1,0 +1,20 @@
+{
+  "id": "agent-a-a-puzzle-in-disguise",
+  "title": "Agent A: A puzzle in disguise",
+  "steam_appid": 801480,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#943, 2026-11-03), Apple M1, macOS 27.2, Highball 0.10.24, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 2 of 5 after 1 minutes: the title screen says Authentication failed. The log has D3DMetal's 'Unsupported: IDXGIResource::GetSharedHandle', then crash dumps and the Epic overlay's crash reporter starting, the Epic copy. Not verified by the maintainer.",
+  "notes": "Doesn't get past the title screen in one report on an M1 with D3DMetal, the Epic copy. A Unity game, Direct3D 11.",
+  "knownIssues": [
+    {
+      "symptom": "'Authentication failed' on the title screen (Epic copy, M1, D3DMetal, Wine 10 r29)",
+      "cause": "not diagnosed. The log shows D3DMetal answering 'Unsupported: IDXGIResource::GetSharedHandle', then crash dumps and the Epic overlay's crash reporter starting. Whether that is what fails the sign-in is not known",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

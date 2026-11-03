@@ -1,0 +1,25 @@
+{
+  "id": "onimusha-way-of-the-sword",
+  "title": "Onimusha: Way of the Sword",
+  "steam_appid": 2638890,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by wz11wz (highball-db#932, 2026-11-03), Apple M1 Max, macOS 27.2, Highball 0.10.23, engine x64-crossover26.3-r29, D3DMetal, rated 4 of 5 after 609 minutes: Wine 11 engine r29 with HB_TSSHIM_ATOMIC64=1 and the DLL overrides mscoree=d, mshtml=d and vcruntime140=n. In highball#624 the same player found that Highball's stock DirectX 12 layer gets the game past its graphics card check and then hits a Metal pipeline error, and got further with a patch of their own to that layer, so this run most likely used it (not confirmed yet). Not verified by the maintainer.",
+  "notes": "Capcom's RE Engine, DirectX 12, so it needs D3DMetal. Reported playable on an M1 Max with HB_TSSHIM_ATOMIC64=1, as for the demo and the benchmark, most likely with the reporter's own patch to Highball's DirectX 12 layer (highball#624), which Highball doesn't ship. On the stock layer Metal refuses one of the game's pipelines and no game window appears.",
+  "knownIssues": [
+    {
+      "symptom": "Unsupported graphics card error at start on M1 and M2 chips",
+      "cause": "D3DMetal reports AtomicInt64OnDescriptorHeapResourceSupported as false there, and RE Engine requires it",
+      "fix": "Wine 11 engine r25 or later with HB_TSSHIM_ATOMIC64=1, which has Highball's layer in front of D3DMetal answer yes (the check passes on an M1 Max, highball#624)"
+    },
+    {
+      "symptom": "After the graphics card check Metal refuses a pipeline ('output of type uint4 is not compatible with a MTLPixelFormatRGBA8Sint color attachment') and no game window appears (M1 Max, stock layer)",
+      "cause": "D3DMetal turns the game's 8-bit integer render target formats into Metal's RGBA8Sint while the shader writes uint4 (the reporter's analysis, highball#624)",
+      "fix": "none shipped. The reporter got past it by rewriting those formats in their own build of Highball's DirectX 12 layer"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

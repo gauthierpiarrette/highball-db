@@ -1,0 +1,20 @@
+{
+  "id": "injustice-gods-among-us-ultimate-edition",
+  "title": "Injustice: Gods Among Us Ultimate Edition",
+  "steam_appid": 242700,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#934, 2026-11-03), Apple M1, macOS 27.2, Highball 0.10.24, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 3 of 5 after 12 minutes: a steady 60 fps, but when a cutscene hands over to a fight the picture freezes for a few seconds and every sound effect then echoes until the next cutscene. The first launch from ES-DE showed about 45 seconds of black before the first logo, later ones 17 to 18 seconds. Not verified by the maintainer.",
+  "notes": "Reported playable on an M1 with D3DMetal at a steady 60 fps, with the sound effects echoing during fights.",
+  "knownIssues": [
+    {
+      "symptom": "Sound effects echo heavily from the moment a cutscene hands over to a fight until the next cutscene, after a freeze of a few seconds at the hand-over (M1, D3DMetal, Wine 10 r29)",
+      "cause": "not diagnosed",
+      "fix": "none known, besides playing with the sound off"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -1,0 +1,14 @@
+{
+  "id": "seasons-after-fall",
+  "title": "Seasons after Fall",
+  "steam_appid": 366320,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by aalexee (highball-db#952, 2026-11-03), Apple M4 Pro, macOS 26.7.1, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 10 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M4 Pro with DXMT over 10 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
