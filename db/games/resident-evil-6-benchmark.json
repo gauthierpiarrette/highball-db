@@ -7,7 +7,13 @@
   "anticheat": null,
   "provenance": "Started here on an M4 with macOS 27.0 on 2026-10-05, engine x64-sikarugir10.0_6-r21, the Steam copy: after Capcom's EULA and Steam's first-run DirectX and Visual C++ installers, the title screen (Press any key) comes up full screen at 120 s. The benchmark itself was not run, so not marked verified.",
   "notes": "Capcom's free benchmark for Resident Evil 6, a Direct3D 9 game, so it draws through DXVK's Direct3D 9 in every graphics mode but wined3d. On the default engine it reaches its title screen; no score was taken.",
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "symptom": "The benchmark loses the GPU while loading, a black screen after Benchmark is chosen (VK_ERROR_OUT_OF_DEVICE_MEMORY, then device lost in DXVK)",
+      "cause": "not diagnosed. Measured on an M4 on 2026-11-03 with the Wine 11 engine r28 and a candidate r31, both through DXVK's Direct3D 9, with 88% of memory free, so not the Mac running short",
+      "fix": "none known yet. wined3d mode is untried"
+    }
+  ],
   "launchArgs": null,
   "lastVerified": null
 }
