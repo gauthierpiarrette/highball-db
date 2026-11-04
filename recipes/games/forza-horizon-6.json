@@ -3,7 +3,8 @@
   "kind": "game",
   "title": "Forza Horizon 6",
   "requires": [
-    "steam"
+    "steam",
+    "concrt140-native"
   ],
   "renderer": "d3dmetal",
   "engine": "x64-crossover26.3-r18",
@@ -33,6 +34,11 @@
     }
   ],
   "knownIssues": [
+    {
+      "symptom": "Since the game's update of November 3, 2026, it closes within a minute of starting with Wine's Program Error dialog (forzahorizon6.exe, a write to address 0x9 or 0x29)",
+      "cause": "the game now fills a Concurrency::concurrent_vector from several threads at once, and the concrt140 built into Highball's Wine 11 engines up to r29 can hand out an address before the memory behind it exists (fixed in upstream Wine in May 2026)",
+      "fix": "Highball 0.10.26 or later loads Microsoft's concrt140 for this game by itself. Before that, in the environment's Settings, Advanced, DLL overrides, add concrt140=n,b, then stop the environment and start the game again"
+    },
     {
       "symptom": "The built-in Benchmark Mode shows a black screen",
       "cause": "not investigated",
