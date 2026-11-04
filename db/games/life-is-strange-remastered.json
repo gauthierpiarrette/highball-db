@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": "d3dmetal",
   "anticheat": null,
-  "provenance": "Reported by cometmcisaac (highball-db#246, 2026-09-28), Apple M1 Pro, macOS 27.0, Highball 0.9.39, engine x64-sikarugir10.0_6-r12 (the GPTK 4 line), D3DMetal, Windows 11, AVX advertised, frame cap 120, D3DM_ENABLE_METALFX=1 and D3DM_MTL4=1, recipe controller-sdl, rated 5 of 5 after 2 minutes. Not verified by the maintainer.",
-  "notes": "Reported perfect on D3DMetal with the GPTK 4 engine, which needs macOS 27, after a two-minute session. The reporter turned on Metal 4 (D3DM_MTL4=1) and MetalFX (D3DM_ENABLE_METALFX=1). That engine leaves Metal 4 off by default because it quietly kills some Unreal Engine 5 games, so this run is on the reporter's settings, not the defaults. The default engine was not tried. Nothing was measured here.",
+  "provenance": "Reported by cometmcisaac (highball-db#246, 2026-09-28), Apple M1 Pro, macOS 27.0, Highball 0.9.39, engine x64-sikarugir10.0_6-r12 (the GPTK 4 line), D3DMetal, Windows 11, AVX advertised, frame cap 120, D3DM_ENABLE_METALFX=1 and D3DM_MTL4=1, recipe controller-sdl, rated 5 of 5 after 2 minutes. Not verified by the maintainer. NevadaJr (highball-db#970, 2026-11-04), Apple M2, macOS 27.0.1, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, D3DMetal by the report (the environment's mode is DXMT), rated 5 of 5 after 54 minutes: on the game's Hella High settings with no frame drops.",
+  "notes": "Reported perfect on D3DMetal with the GPTK 4 engine, which needs macOS 27, after a two-minute session. The reporter turned on Metal 4 (D3DM_MTL4=1) and MetalFX (D3DM_ENABLE_METALFX=1). That engine leaves Metal 4 off by default because it quietly kills some Unreal Engine 5 games, so this run is on the reporter's settings, not the defaults. A second report played it perfectly for 54 minutes on the default Wine 10 engine (r28) on an M2, on D3DMetal per the report, at the game's Hella High settings with no frame drops. Nothing was measured here.",
   "knownIssues": [],
   "launchArgs": null,
   "lastVerified": null

@@ -1,0 +1,14 @@
+{
+  "id": "winter-burrow",
+  "title": "Winter Burrow",
+  "steam_appid": 3008740,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by ak1h3ro (highball-db#974, 2026-11-04), Apple M4 Pro, macOS 27.2, Highball 0.10.23, engine entered as 'wine 10.0 r28 x64-sikarugir19.9_6-r28' (most likely x64-sikarugir10.0_6-r28), DXMT (entered as dxmd), rated 5 of 5 after 10 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M4 Pro with DXMT over 10 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

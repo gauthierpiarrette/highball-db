@@ -5,13 +5,18 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#868, 2026-11-01), Apple M1, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 1 of 5 after 1 minutes: the loading screen hangs at launch and a helper seems to crash. The backtrace attached to the report is Civilization III's (highball-db#867), not this game's, the GOG copy. Not verified by the maintainer.",
-  "notes": "Doesn't start in one report on an M1 with D3DMetal. The loading screen hangs at launch.",
+  "provenance": "Reported by udance4ever (highball-db#868, 2026-11-01), Apple M1, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 1 of 5 after 1 minutes: the loading screen hangs at launch and a helper seems to crash. The backtrace attached to the report is Civilization III's (highball-db#867), not this game's, the GOG copy. Not verified by the maintainer. udance4ever again in a comment on highball-db#868 (2026-11-03), engine x64-sikarugir10.0_6-r29, whose D3DMetal is GPTK 4.0b2 per the Metal HUD: past the loading screen to a picture of Mars with a white rectangle in the middle, then a freeze without a crash about 30 seconds later. That run's log ends with Metal's assertion 'MTLTextureDescriptor has invalid pixelFormat (0)'.",
+  "notes": "Doesn't get past its first screens in one report on an M1 with D3DMetal. On engine r28 it hangs on the loading screen. On r29 it gets past that, shows a white rectangle over a picture of Mars and freezes about 30 seconds later, with the same Metal error that a menu video played through Windows Media Foundation caused in The Last Caretaker. An Unreal Engine 5 game on Direct3D 12.",
   "knownIssues": [
     {
       "symptom": "Hangs on the loading screen at launch (M1, D3DMetal, Wine 10 r28)",
       "cause": "not diagnosed",
-      "fix": "none known"
+      "fix": "engine r29 got past it for the reporter (highball-db#868), who then hit the freeze below"
+    },
+    {
+      "symptom": "On engine r29 a white rectangle shows over a picture of Mars after the loading screen, and the game freezes about 30 seconds later without crashing (M1, D3DMetal from GPTK 4.0b2)",
+      "cause": "most likely a video. The log ends with Metal's 'MTLTextureDescriptor has invalid pixelFormat (0)' assertion, the error The Last Caretaker hit when its menu video went through Windows Media Foundation into D3DMetal (inferred from the log, not checked with this game)",
+      "fix": "untested here. Turning Media Foundation off for the game's exe got The Last Caretaker and Bloody Spell past their videos: in winecfg add the exe on the Applications tab, then on the Libraries tab add mfplat and set it to Disabled. For an Unreal game that is most likely the exe ending in Win64-Shipping.exe in its Binaries folder, not fortsolis.exe"
     }
   ],
   "launchArgs": null,

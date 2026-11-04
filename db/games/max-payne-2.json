@@ -1,0 +1,14 @@
+{
+  "id": "max-payne-2",
+  "title": "Max Payne 2: The Fall of Max Payne",
+  "steam_appid": 12150,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by mahdi-malv (highball-db#971, 2026-11-04), Apple M5 Pro, macOS 26.7.1, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 3 minutes: the report names the game maxpayne2, taken here to be Max Payne 2, and doesn't say what wasn't perfect. Windows 7 as the environment's version, Command keys left as Alt. Not verified by the maintainer.",
+  "notes": "Reported playable with minor issues on an M5 Pro with DXMT over 3 minutes, without saying what the issues were. It's a 32-bit game.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

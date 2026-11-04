@@ -1,0 +1,20 @@
+{
+  "id": "fear",
+  "title": "F.E.A.R.",
+  "steam_appid": 21090,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#964, 2026-11-03), Apple M1, macOS 27.2, Highball 0.10.25, engine x64-sikarugir10.0_6-r29, WineD3D by the report (the environment's mode is D3DMetal), rated 2 of 5 after 1 minute: on D3DMetal and DXMT the picture is zoomed in from the start. On WineD3D the opening screens fit (the screenshot shows them at about 800x600 in the top left corner of the screen), but once the title menu is clicked the picture zooms in about four times, the menu no longer fits on the screen and the game can't be played. Emulate display mode changes didn't help. Not verified by the maintainer.",
+  "notes": "Doesn't get in game in one report on an M1. Clicking the title menu zooms the picture in so the menu no longer fits on the screen, and on D3DMetal and DXMT it is zoomed from the start. It's a 32-bit game from 2005.",
+  "knownIssues": [
+    {
+      "symptom": "Clicking the title menu zooms the picture in about four times, so the menu no longer fits on the screen and the game can't be played. On D3DMetal and DXMT it is zoomed from the start, on WineD3D only after the click (M1, Wine 10 r29)",
+      "cause": "not diagnosed. It looks like the display mode switch on click that Alice: Madness Returns has (highball-db#429), but Emulate display mode changes, which fixed that one, didn't help here",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

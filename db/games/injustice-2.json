@@ -1,0 +1,30 @@
+{
+  "id": "injustice-2",
+  "title": "Injustice 2",
+  "steam_appid": 627270,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#968, 2026-11-04), Apple M1, macOS 27.2, Highball 0.10.25, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 4 of 5 after 11 minutes: smooth at about 45 fps in fights, without the echoing sound effects of Injustice: Gods Among Us (highball-db#934). The cutscenes jitter at 30 fps, and on a Wine 11 engine (D3DMetal from GPTK 4.0b3 per the Metal HUD) they also show a green line across the screen and wrong colors. The game doesn't take Steam Input, and its buttons can be remapped in its Options. Not verified by the maintainer.",
+  "notes": "Reported playable on an M1 with D3DMetal over 11 minutes, smooth at about 45 fps in fights. The cutscenes jitter at 30 fps on the default Wine 10 engine, and on a Wine 11 engine their colors are wrong too. The Metal HUD in the reporter's screenshots counts only two draws a frame in a cutscene on Wine 10 and nine on Wine 11, so they are most likely videos rather than scenes drawn in real time (inferred, not checked).",
+  "knownIssues": [
+    {
+      "symptom": "Cutscenes jitter at 30 fps while the fights run smoothly (M1, D3DMetal, Wine 10 r29)",
+      "cause": "not diagnosed",
+      "fix": "none known. They play through with the jitter, or can be skipped"
+    },
+    {
+      "symptom": "On a Wine 11 engine the cutscenes show a green line across the screen and wrong colors, grey with green and magenta patches (M1, D3DMetal from GPTK 4.0b3)",
+      "cause": "not diagnosed",
+      "fix": "stay on the default Wine 10 engine, where the colors are right"
+    },
+    {
+      "symptom": "The game doesn't take Steam Input",
+      "cause": "not diagnosed",
+      "fix": "remap the buttons in the game's Options, as the reporter did"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

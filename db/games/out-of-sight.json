@@ -1,0 +1,20 @@
+{
+  "id": "out-of-sight",
+  "title": "Out of Sight",
+  "steam_appid": 2526310,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#962, 2026-11-03), Apple M1, macOS 27.2, Highball 0.10.25, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 4 of 5 after about 10 minutes: the Epic copy. At the language selection screen the keyboard and an XInput pad do nothing for the first 5 to 10 seconds, then respond. The Metal HUD in the screenshots shows 18 fps on that screen and 29 fps in play at 1920x1080. Not verified by the maintainer.",
+  "notes": "The Gang Studio's game from 2025. Reported playable on an M1 with D3DMetal over about 10 minutes, the Epic copy, at about 29 fps in play at 1920x1080 per the Metal HUD in the reporter's screenshot. Input takes 5 to 10 seconds to respond at the first screen.",
+  "knownIssues": [
+    {
+      "symptom": "At the language selection screen the keyboard and an XInput pad do nothing for the first 5 to 10 seconds (M1, D3DMetal, Wine 10 r29)",
+      "cause": "not diagnosed",
+      "fix": "wait 5 to 10 seconds, then it responds"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

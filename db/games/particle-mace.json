@@ -1,0 +1,14 @@
+{
+  "id": "particle-mace",
+  "title": "PARTICLE MACE",
+  "steam_appid": 295690,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by mozartpmb (highball-db#972, 2026-11-04), Apple M3 Max, macOS 26.6.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 5 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M3 Max with DXMT over 5 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
