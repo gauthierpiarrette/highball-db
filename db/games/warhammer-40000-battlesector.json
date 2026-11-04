@@ -1,0 +1,14 @@
+{
+  "id": "warhammer-40000-battlesector",
+  "title": "Warhammer 40,000: Battlesector",
+  "steam_appid": 1295500,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Zims (highball-db#954, 2026-11-03), Apple M2 Pro, macOS 27.0.1, Highball 0.10.23, engine x64-crossover26.3-r28, D3DMetal, rated 5 of 5 after 65 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M2 Pro with D3DMetal over 65 minutes, on the Wine 11 engine (r28).",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

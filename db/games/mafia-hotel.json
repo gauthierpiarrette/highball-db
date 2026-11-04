@@ -1,0 +1,24 @@
+{
+  "id": "mafia-hotel",
+  "title": "Mafia Hotel",
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#960, 2026-11-03), Apple M1, macOS 27.2 (entered as 272), Highball 0.10.25, engine entered as x86-sikagurir-10.0_6-r29 (most likely x64-sikarugir10.0_6-r29), D3DMetal, rated 4 of 5: the Epic copy, menus only. At the game's low settings with a 60 fps cap the menus ran at 20 to 25 fps, and getting past Epic's check of the game to the title screen took a long time. Not played in a match, which needs a room of players. Not verified by the maintainer.",
+  "notes": "Reached the menus in one report on an M1 with D3DMetal, the Epic copy, at 20 to 25 fps on low settings. It's a multiplayer game and wasn't played in a match.",
+  "knownIssues": [
+    {
+      "symptom": "The menus run at 20 to 25 fps at the game's low settings (M1, D3DMetal, Wine 10 r29)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    },
+    {
+      "symptom": "A long wait while Epic checks the game before the title screen",
+      "cause": "not diagnosed",
+      "fix": "wait it out"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

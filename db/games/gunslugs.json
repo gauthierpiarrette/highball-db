@@ -5,13 +5,13 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#856, 2026-11-01), Apple M1, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 2 of 5: it reaches the title screen and closes as soon as A is pressed to play, and its log ends with 'Failed loading libusb-1.0.dll: Module not found', the GOG copy. Not verified by the maintainer.",
-  "notes": "Doesn't play in one report on an M1 with D3DMetal. It reaches the title screen and closes as soon as a game is started.",
+  "provenance": "Reported by udance4ever (highball-db#856, 2026-11-01), Apple M1, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 2 of 5: it reaches the title screen and closes as soon as A is pressed to play, and its log ends with 'Failed loading libusb-1.0.dll: Module not found', the GOG copy. Not verified by the maintainer. udance4ever again in a comment on highball-db#856 (2026-11-03): with no gamepad connected the game gets in game.",
+  "notes": "Plays in one report on an M1 with D3DMetal with the controller unplugged. With a DualSense connected it reaches the title screen and closes as soon as a game is started.",
   "knownIssues": [
     {
-      "symptom": "Closes as soon as A is pressed at the title screen to play (M1, D3DMetal, Wine 10 r28)",
-      "cause": "not diagnosed. The log ends with 'Failed loading libusb-1.0.dll: Module not found' right after the game loads a native library of its own from its temp folder",
-      "fix": "none known"
+      "symptom": "With a controller connected, closes as soon as A is pressed at the title screen to play (M1, DualSense, D3DMetal, Wine 10 r28)",
+      "cause": "not diagnosed further. The log shows the game's SDL code finding the DualSense, then the game loading a native library of its own from its temp folder, which fails with 'Failed loading libusb-1.0.dll: Module not found', and the game exits. libusb-1.0.dll isn't part of Wine or the environment",
+      "fix": "start with the controller unplugged and play with the keyboard, which gets in game (highball-db#856)"
     }
   ],
   "launchArgs": null,

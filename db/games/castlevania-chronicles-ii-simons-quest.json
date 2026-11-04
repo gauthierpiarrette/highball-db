@@ -4,13 +4,13 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#926, 2026-11-02), Apple M1, macOS 27.2, Highball 0.10.24, engine x64-crossover26.3-r28, DXVK by the report (the environment's mode is D3DMetal), rated 2 of 5 after 1 minutes: a free 32-bit fan game from archive.org, stutters on DXVK and on Wine's own Direct3D, with sound problems. Not verified by the maintainer.",
-  "notes": "Stutters in one report on an M1, on the Wine 11 engine. It's a 32-bit game.",
+  "provenance": "Reported by udance4ever (highball-db#926, 2026-11-02), Apple M1, macOS 27.2, Highball 0.10.24, engine x64-crossover26.3-r28, DXVK by the report (the environment's mode is D3DMetal), rated 2 of 5 after 1 minutes: a free 32-bit fan game from archive.org, stutters on DXVK and on Wine's own Direct3D, with sound problems. Not verified by the maintainer. udance4ever again in a comment on highball-db#926 (2026-11-03): on DXVK the picture now runs at 60 fps without stutter. The sound crackles and the game slows when sound effects pile up, to 57 fps on a single whip and down to 30 fps when whipping repeatedly. Engine r28's 32-bit Wine DLLs, dsound and xaudio2_7 among them, were built with x87 maths (counted with objdump on 2026-11-03), which Rosetta runs slowly, a likely cause not checked with this game.",
+  "notes": "Plays at 60 fps on DXVK in one report on an M1, on the Wine 11 engine (r28), but the sound crackles and the game slows down when many sound effects play at once. It's a 32-bit game.",
   "knownIssues": [
     {
-      "symptom": "Stuttering video and sound (32-bit, M1, Wine 11 r28)",
-      "cause": "not diagnosed",
-      "fix": "none known"
+      "symptom": "The sound crackles and the game slows down when sound effects pile up, from 60 to about 30 fps when whipping repeatedly (32-bit, M1, DXVK, Wine 11 r28)",
+      "cause": "likely Wine's own 32-bit sound code. On Wine 11 engines r27 to r29 the 32-bit DLLs, dsound and xaudio2_7 among them, were built with x87 maths, which Rosetta runs slowly (inferred, not checked with this game)",
+      "fix": "untested. The default Wine 10 engine's 32-bit DLLs use SSE maths, and the Wine 11 engines after r29 are built that way too"
     }
   ],
   "launchArgs": null,

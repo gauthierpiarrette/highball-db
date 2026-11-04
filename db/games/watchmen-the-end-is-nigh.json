@@ -5,13 +5,13 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#941, 2026-11-03), Apple M1, macOS 27.2, Highball 0.10.24, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 1 of 5 after 4 minutes: DirectX installs, then MultiLauncher.exe says the .NET Framework must be enabled in Windows Features, with the dotnet48 recipe installed. Not verified by the maintainer.",
+  "provenance": "Reported by udance4ever (highball-db#941, 2026-11-03), Apple M1, macOS 27.2, Highball 0.10.24, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 1 of 5 after 4 minutes: DirectX installs, then MultiLauncher.exe says the .NET Framework must be enabled in Windows Features, with the dotnet48 recipe installed. Not verified by the maintainer. udance4ever offered on highball-db#941 (2026-11-03) to install .NET 3.5 with winetricks' dotnet35 verb; not tried yet.",
   "notes": "Doesn't start in one report on an M1. Its MultiLauncher.exe asks for the .NET Framework to be enabled, though .NET 4.8 is installed in the environment. It's a 32-bit game.",
   "knownIssues": [
     {
       "symptom": "MultiLauncher.exe says the .NET Framework must be enabled from Windows Features, with .NET 4.8 installed",
       "cause": "not diagnosed. PCGamingWiki says the game needs .NET Framework 3.5, which .NET 4.8 doesn't provide, so the launcher most likely wants 3.5 (inferred, not checked here)",
-      "fix": "none known"
+      "fix": "none in Highball yet. Winetricks has a dotnet35 verb, untested with this game. The CLI's 'highball tricks' runs winetricks verbs but doesn't give winetricks the app's cabextract, which dotnet35 needs, so it most likely stops there"
     }
   ],
   "launchArgs": null,

@@ -1,0 +1,14 @@
+{
+  "id": "assassins-creed-syndicate",
+  "title": "Assassin's Creed Syndicate",
+  "steam_appid": 368500,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by exonerate-dot (highball-db#959, 2026-11-03), Apple M4, macOS 26.6.2, Highball 0.10.23, engine x64-crossover26.3-r27, DXMT, rated 5 of 5 after 7 minutes: with AVX advertised, a 60 fps cap and esync in the environment, on the Steam build the reporter linked (steamdb patch notes 21071986). Not verified by the maintainer.",
+  "notes": "Reported perfect on an M4 with DXMT over 7 minutes, on the Wine 11 engine (r27) with AVX advertised and a 60 fps cap. Whether AVX is needed is not known.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

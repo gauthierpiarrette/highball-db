@@ -10,7 +10,7 @@
   "knownIssues": [
     {
       "symptom": "Never opens a window, WGL fails to create an OpenGL context (GLFW_VERSION_UNAVAILABLE)",
-      "cause": "not diagnosed. Wine on macOS offers OpenGL up to 4.1 core, so a request for a newer or a compatibility context fails",
+      "cause": "not diagnosed. Wine's Mac driver gives OpenGL 2.1, or 3.2 to 4.1 core, and refuses a 3.0 or 3.1 context, a compatibility one at 3.2 or above, and anything above 4.1, so the game most likely asks for one of those. Which version it asks for isn't known yet; a run with WINEDEBUG=fixme-all,warn+wgl would name it",
       "fix": "none known"
     }
   ],

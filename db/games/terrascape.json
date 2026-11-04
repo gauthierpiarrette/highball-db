@@ -1,0 +1,13 @@
+{
+  "id": "terrascape",
+  "title": "Terrascape",
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#963, 2026-11-03), Apple M1, macOS 27.2, Highball 0.10.25, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 5 of 5 after 5 minutes: the Epic copy. The first start took 55 seconds and the second 35, with the game on an external NVMe drive. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M1 with D3DMetal over 5 minutes, the Epic copy. Starting takes 35 to 55 seconds.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

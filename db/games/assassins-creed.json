@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#901, 2026-11-02), Apple M1, macOS 27.2, Highball 0.10.24, engine x64-crossover26.3-r28, D3DMetal, rated 2 of 5 after 5 minutes: the title screen runs at 7 fps and the game crashes on the way in. The logo ran in slow motion on the Wine 10 engine r29 and normally on the Wine 11 engine. Not verified by the maintainer.",
+  "provenance": "Reported by udance4ever (highball-db#901, 2026-11-02), Apple M1, macOS 27.2, Highball 0.10.24, engine x64-crossover26.3-r28, D3DMetal, rated 2 of 5 after 5 minutes: the title screen runs at 7 fps and the game crashes on the way in. The logo ran in slow motion on the Wine 10 engine r29 and normally on the Wine 11 engine. Not verified by the maintainer. udance4ever again on highball-db#901 (2026-11-03): with ROSETTA_X87_PATH set for athei's x87sidecar the title screen stutter didn't change, but that run's log has no sidecar attach line, so the sidecar most likely wasn't active.",
   "notes": "Not playable yet in one report on an M1, with D3DMetal on the Wine 11 engine.",
   "knownIssues": [
     {

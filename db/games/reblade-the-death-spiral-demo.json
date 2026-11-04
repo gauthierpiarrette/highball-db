@@ -5,13 +5,13 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#938, 2026-11-03), Apple M1, macOS 27.2, Highball 0.10.24, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 4 of 5: a 15 to 20 minute session. Resolution changes misbehaved until the game's settings were reset to their defaults, then about 17 fps on low settings. Not verified by the maintainer.",
+  "provenance": "Reported by udance4ever (highball-db#938, 2026-11-03), Apple M1, macOS 27.2, Highball 0.10.24, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 4 of 5: a 15 to 20 minute session. Resolution changes misbehaved until the game's settings were reset to their defaults, then about 17 fps on low settings. Not verified by the maintainer. udance4ever again in a comment on highball-db#938 (2026-11-03): it is most stable on the default graphics settings with the Low preset on an M1. Changing anything else can bring back the resolution problems, and getting out of them can take several restarts of the game.",
   "notes": "Reported playable on an M1 with D3DMetal, at about 17 fps on low settings, once the game's settings are back at their defaults.",
   "knownIssues": [
     {
       "symptom": "Resolution changes in the game misbehave (a click made the picture four times bigger, 1920x1080 came out squished, and once 800x600 was the largest size offered)",
       "cause": "not diagnosed",
-      "fix": "reset the game's settings to their defaults, which cleared it for the reporter"
+      "fix": "keep the game's default settings, with the Low preset on an M1. Resetting the settings to their defaults cleared it for the reporter, though it can take several restarts"
     }
   ],
   "launchArgs": null,

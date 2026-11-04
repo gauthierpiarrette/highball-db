@@ -5,13 +5,13 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#858, 2026-11-01), Apple M1, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT by the report (the environment's mode is D3DMetal), rated 2 of 5 after 1 minutes: after Play and then Intro the screen goes black, the GOG copy. Not verified by the maintainer.",
-  "notes": "Doesn't play in one report on an M1 with DXMT. After Play and then Intro the screen goes black. It's a 32-bit game.",
+  "provenance": "Reported by udance4ever (highball-db#858, 2026-11-01), Apple M1, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT by the report (the environment's mode is D3DMetal), rated 2 of 5 after 1 minutes: after Play and then Intro the screen goes black, the GOG copy. Not verified by the maintainer. udance4ever again in a comment on highball-db#858 (2026-11-03): on WineD3D the screen stays black for about 45 seconds and then the game starts, so it isn't the graphics mode. The reporter plays it on Vita3K meanwhile.",
+  "notes": "Gets in game in one report on an M1 after about 45 seconds of black screen following Play and then Intro, on DXMT and WineD3D alike. It's a 32-bit game.",
   "knownIssues": [
     {
-      "symptom": "Black screen after Play and then Intro (M1, DXMT, Wine 10 r28)",
+      "symptom": "About 45 seconds of black screen after Play and then Intro, then the game starts (M1, DXMT and WineD3D, Wine 10 r28)",
       "cause": "not diagnosed",
-      "fix": "none known"
+      "fix": "wait about 45 seconds"
     }
   ],
   "launchArgs": null,
