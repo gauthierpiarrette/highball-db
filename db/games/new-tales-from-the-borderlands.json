@@ -5,13 +5,13 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#961, 2026-11-03), Apple M1, macOS 27.2, Highball 0.10.25, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 2 of 5 after 3 minutes: the Epic copy. The title screen draws at about 30 fps on medium settings, but in game only the subtitles show over a black screen, at 60 fps. The logos at start stay black for about 35 seconds too, with their sound playing. The log has GStreamer's 'gst_video_info_from_caps: assertion gst_caps_is_fixed (caps) failed' three times. Not verified by the maintainer.",
+  "provenance": "Reported by udance4ever (highball-db#961, 2026-11-03), Apple M1, macOS 27.2, Highball 0.10.25, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 2 of 5 after 3 minutes: the Epic copy. The title screen draws at about 30 fps on medium settings, but in game only the subtitles show over a black screen, at 60 fps. The logos at start stay black for about 35 seconds too, with their sound playing. The log has GStreamer's 'gst_video_info_from_caps: assertion gst_caps_is_fixed (caps) failed' three times. Not verified by the maintainer. udance4ever again in a comment on highball-db#961 (2026-11-04): the game itself, not only its cutscenes, stays black with sound and subtitles.",
   "notes": "Not playable in one report on an M1 with D3DMetal, the Epic copy. The title screen draws, but the logos and the scene after starting a game stay black with only subtitles and sound, which points at videos Wine's media stack doesn't decode (inferred from the log, not checked here). An Unreal Engine game on Direct3D 11.",
   "knownIssues": [
     {
-      "symptom": "In game only the subtitles show over a black screen, and the logos at start are black too while their sound plays (M1, D3DMetal, Wine 10 r29)",
+      "symptom": "Black screen with only sound and subtitles, in the game itself as well as the logos and cutscenes (M1, D3DMetal, Wine 10 r29)",
       "cause": "most likely videos that don't decode. GStreamer's 'gst_caps_is_fixed' assertion is in the log three times, the same assertion Bloody Spell's videos hit (inferred, not checked with this game)",
-      "fix": "none known"
+      "fix": "none known. Untested: on a Wine 11 engine DXMT can show a game's Media Foundation videos (engine r11 and later), so the game in DXMT mode in a Wine 11 environment is worth a try"
     }
   ],
   "launchArgs": null,

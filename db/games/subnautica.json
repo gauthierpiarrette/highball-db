@@ -4,7 +4,14 @@
   "steam_appid": 264710,
   "status": "community",
   "renderer": "dxmt",
-  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball Hitesh-gaur (highball-db#909, 2026-11-02), Apple M4, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 88 minutes.",
-  "notes": "native mac build exists — prefer it",
-  "lastVerified": null
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball Hitesh-gaur (highball-db#909, 2026-11-02), Apple M4, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 88 minutes. AliSakanak (highball-db#987, 2026-11-04), Apple M4 Pro, macOS 26.6.2, Highball 0.10.23, engine not stated, DXMT, rated 5 of 5: about 50 fps on high settings at 2560x1600, with Retina pixels at 100% since the resolution didn't change properly otherwise. With a controller, after the Steam overlay is brought up and closed, the game keeps switching to mouse input. The reporter found it ran better than the native Mac build, which held the GPU back until a setting was changed with the game paused.",
+  "notes": "Subnautica has a native Mac version on Steam. The Windows build is reported perfect through Highball with DXMT on an M4 over 88 minutes, and on an M4 Pro at about 50 fps on high settings at 2560x1600 with Retina pixels at 100%, where that player found the Windows build ran better than the Mac one (highball-db#987).",
+  "lastVerified": null,
+  "knownIssues": [
+    {
+      "symptom": "With a controller, after bringing up the Steam overlay and going back, the game keeps switching to mouse input (M4 Pro, DXMT)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ]
 }

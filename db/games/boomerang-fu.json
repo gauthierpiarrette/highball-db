@@ -1,0 +1,14 @@
+{
+  "id": "boomerang-fu",
+  "title": "Boomerang Fu",
+  "steam_appid": 965680,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by mozartpmb (highball-db#980, 2026-11-04), Apple M3 Max, macOS 26.6.2, Highball 0.10.23, engine x64-crossover26.3-r29, D3DMetal, rated 5 of 5 after 3 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M3 Max with D3DMetal over 3 minutes, on the Wine 11 engine (r29).",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

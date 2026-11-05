@@ -1,0 +1,14 @@
+{
+  "id": "tekken-8",
+  "title": "TEKKEN 8",
+  "steam_appid": 1778820,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by mozartpmb (highball-db#979, 2026-11-04), Apple M3 Max, macOS 26.6.2, Highball 0.10.23, engine x64-crossover26.3-r29, D3DMetal, rated 5 of 5 after 5 minutes: played against bots. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M3 Max with D3DMetal over 5 minutes against bots, on the Wine 11 engine (r29). Online play wasn't reported.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

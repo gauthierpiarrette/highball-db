@@ -5,11 +5,11 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#940, 2026-11-03), Apple M1, macOS 27.2, Highball 0.10.24, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 1 of 5 after 2 minutes: Highball shows it running but no game window appears after several minutes, with DXMT too. Not verified by the maintainer. udance4ever again in a comment on highball-db#940 (2026-11-03): Steam shows the demo running while no window appears. The launch log has nothing from the game itself.",
+  "provenance": "Reported by udance4ever (highball-db#940, 2026-11-03), Apple M1, macOS 27.2, Highball 0.10.24, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 1 of 5 after 2 minutes: Highball shows it running but no game window appears after several minutes, with DXMT too. Not verified by the maintainer. udance4ever again in a comment on highball-db#940 (2026-11-03): Steam shows the demo running while no window appears. The launch log has nothing from the game itself. udance4ever again in a comment on highball-db#940 (2026-11-04): on Wine 10 the window never appeared and Steam kept the demo as running. In a Wine 11 environment Steam showed a black window, as with the SlashZero demo (highball-db#939).",
   "notes": "Doesn't start in one report on an M1. Highball shows it running, but no game window appears, with D3DMetal or DXMT.",
   "knownIssues": [
     {
-      "symptom": "No game window appears while Highball shows the game running (M1, D3DMetal and DXMT, Wine 10 r29)",
+      "symptom": "No game window appears while Highball and Steam show the game running (M1, D3DMetal and DXMT, Wine 10 r29). On a Wine 11 engine with D3DMetal, Steam shows a black window instead",
       "cause": "not diagnosed",
       "fix": "none known"
     }

@@ -5,16 +5,17 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#862, 2026-11-01), Apple M1, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 2 of 5 after 1 minutes: the opening logo plays at 120 fps and then slows to a crawl, the same with every graphics mode and all four of its launch options, the GOG copy. Not verified by the maintainer. udance4ever again in a comment on highball-db#862 (2026-11-03), in a Wine 11 environment on engine x64-crossover26.3-r28: on DXVK the logo still slows down. On D3DMetal and DXMT it slows down too and the window doesn't come up at the right size, and on WineD3D the game hangs, where on the Wine 10 engine it ran. The run was meant to try athei's x87sidecar, but the log has no sidecar attach line, so the sidecar wasn't active.",
+  "provenance": "Reported by udance4ever (highball-db#862, 2026-11-01), Apple M1, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 2 of 5 after 1 minutes: the opening logo plays at 120 fps and then slows to a crawl, the same with every graphics mode and all four of its launch options, the GOG copy. Not verified by the maintainer. udance4ever again in a comment on highball-db#862 (2026-11-03), in a Wine 11 environment on engine x64-crossover26.3-r28: on DXVK the logo still slows down. On D3DMetal and DXMT it slows down too and the window doesn't come up at the right size, and on WineD3D the game hangs, where on the Wine 10 engine it ran. The run was meant to try athei's x87sidecar, but the log has no sidecar attach line, so the sidecar wasn't active. udance4ever again on highball-db#862 (2026-11-04) tried FunkyFr3sh's cnc-ddraw with ddraw=n,b, without saying yet whether the logo still slows down. Those runs' logs show Wine's fixme lines, so the environment's WINEDEBUG reached Wine and replaced Highball's default, but no DLL load lines, which fits the quoted value \" loaddll” seen in the same environment the next day (highball-db#993): Wine reads it as a channel name that doesn't exist. Highball 0.10.25 removes a ROSETTA_X87_PATH set by hand and sets it only itself, when the environment has HB_X87SIDECAR=1 and its engine ships the sidecar (the Wine 11 engines r30 and r31, Highball 0.10.26), so a hand-set path never reaches Wine there. That, not the variable's spelling, is why the sidecar never attached in the 2026-11-03 run.",
   "notes": "Doesn't play in one report on an M1. The opening logo starts at 120 fps and then slows to a crawl, with every graphics mode on the Wine 10 engine and on the Wine 11 engine (r28), where WineD3D hangs too. It's a 32-bit game.",
   "knownIssues": [
     {
       "symptom": "Slows to a crawl a moment into the opening logo, with every graphics mode (M1, Wine 10 r28 and Wine 11 r28)",
       "cause": "not diagnosed",
-      "fix": "none known"
+      "fix": "none known. Untested ideas: the Wine 11 engines r30 and r31 (Highball 0.10.26) build Wine's 32-bit DLLs with SSE2 and can run athei's x87sidecar with HB_X87SIDECAR=1 in the environment's variables, and cnc-ddraw replaces the game's DirectDraw"
     }
   ],
   "launchArgs": null,
   "lastVerified": null,
-  "verified": null
+  "verified": null,
+  "arch": "x86"
 }

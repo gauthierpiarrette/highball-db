@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#867, 2026-11-01), Apple M1, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT by the report (the environment's mode is D3DMetal), rated 1 of 5 after 1 minutes: Conquests crashes as soon as it starts, a page fault reading address 0xb9c in civ3conquests.exe in the attached backtrace, the GOG copy. Not verified by the maintainer. udance4ever again in a comment on highball-db#867 (2026-11-03): Civ3Launcher.exe offered no choice and went straight to Conquests.",
-  "notes": "Doesn't start in one report on an M1. Civ3Launcher.exe starts Conquests, which crashes at once. It's a 32-bit game.",
+  "provenance": "Reported by udance4ever (highball-db#867, 2026-11-01), Apple M1, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT by the report (the environment's mode is D3DMetal), rated 1 of 5 after 1 minutes: Conquests crashes as soon as it starts, a page fault reading address 0xb9c in civ3conquests.exe in the attached backtrace, the GOG copy. Not verified by the maintainer. udance4ever again in a comment on highball-db#867 (2026-11-03): Civ3Launcher.exe offered no choice and went straight to Conquests. udance4ever again in a comment on highball-db#867 (2026-11-04): the GOG copy has no separate Civilization III or Play the World exe, only Civ3Conquests.exe and the editors, and starting Civ3Conquests.exe directly crashes the same way.",
+  "notes": "Doesn't start in one report on an M1. Conquests is the only game exe in the GOG Complete copy, and it crashes at once, from the launcher or started directly. It's a 32-bit game.",
   "knownIssues": [
     {
       "symptom": "Conquests crashes as soon as it starts, a page fault reading address 0xb9c at civ3conquests+0x1cdbe6 (M1, Wine 10 r28)",
@@ -16,5 +16,6 @@
   ],
   "launchArgs": null,
   "lastVerified": null,
-  "verified": null
+  "verified": null,
+  "arch": "x86"
 }

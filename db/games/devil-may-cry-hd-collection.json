@@ -1,0 +1,20 @@
+{
+  "id": "devil-may-cry-hd-collection",
+  "title": "Devil May Cry HD Collection",
+  "steam_appid": 631510,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by MiggyCodingg (highball-db#990, 2026-11-05), Apple A18 Pro, macOS 26.7.1, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 1 minute: Devil May Cry 3 from the collection, played perfectly on DXMT. Not verified by the maintainer. MiggyCodingg (highball-db#991, 2026-11-05), Apple A18 Pro, macOS 26.7.1, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 1 minute: Devil May Cry 3 again. It started normally, videos and cutscenes played and the game ran smoothly, but the Bluetooth controller wasn't recognized by the game.",
+  "notes": "Devil May Cry 3 from the collection is reported on a MacBook with an A18 Pro with DXMT on the default engine (r28), in two short sessions of about a minute. It starts and plays smoothly, videos and cutscenes included, but a Bluetooth controller isn't recognized in game.",
+  "knownIssues": [
+    {
+      "symptom": "A Bluetooth controller isn't recognized in game (A18 Pro, DXMT, Wine 10 r28)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

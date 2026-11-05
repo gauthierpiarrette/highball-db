@@ -5,9 +5,25 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by hamza-sahin (highball-db#84, 2026-09-16), Apple M2 Pro, macOS 26.6.2, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, rated 5 of 5 after 271 minutes. Graphics mode not stated. Not verified by the maintainer.",
-  "notes": "This game has a native macOS version on Steam, so the Mac Steam app runs it directly without Highball. The Windows build was reported perfect through Highball over a four and a half hour session on an M2 Pro, mode not stated. No measurement here yet.",
-  "knownIssues": [],
+  "provenance": "Reported by hamza-sahin (highball-db#84, 2026-09-16), Apple M2 Pro, macOS 26.6.2, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, rated 5 of 5 after 271 minutes. Graphics mode not stated. Not verified by the maintainer. RIMACODING (highball-db#988, 2026-11-04), Apple M5, macOS 26.7.1, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXVK by the report (the environment's mode is DXMT), rated 3 of 5 after 75 minutes: Slay the Spire 2 version 107, a Godot 4 game, at a steady frame time once three fixes were in place, all the reporter's own. Godot's default Direct3D 12 renderer showed a green screen with sound on D3DMetal, which the reporter puts down to IDXGIFactory2::CreateSwapChainForComposition, so an override.cfg in the game's folder sets rendering_device/driver=\"vulkan\" to use Vulkan through MoltenVK. Multiplayer proxy DLLs needed winmm=n,b. Online lobbies needed the Windows Steam client running in the environment, with sync off.",
+  "notes": "This game has a native macOS version on Steam, so the Mac Steam app runs it directly without Highball. The Windows build was reported perfect through Highball over a four and a half hour session on an M2 Pro, mode not stated. A player on an M5 with version 107 needed three fixes of their own, listed below (highball-db#988). No measurement here yet.",
+  "knownIssues": [
+    {
+      "symptom": "A green screen with sound at start on D3DMetal (Godot's Direct3D 12 renderer)",
+      "cause": "by the reporter, Godot's Direct3D 12 renderer calls IDXGIFactory2::CreateSwapChainForComposition, which D3DMetal doesn't support",
+      "fix": "put an override.cfg in the game's folder that sets rendering_device/driver=\"vulkan\", so the game uses Vulkan through MoltenVK (highball-db#988)"
+    },
+    {
+      "symptom": "Multiplayer doesn't work",
+      "cause": "by the reporter, the multiplayer proxy DLL in the game's folder is a winmm.dll, and Wine uses its own winmm unless told otherwise",
+      "fix": "add winmm=n,b in the environment's DLL overrides (highball-db#988)"
+    },
+    {
+      "symptom": "Online lobbies don't work when the game isn't started through the Windows Steam client",
+      "cause": "the game's Steamworks can't reach the Mac's Steam app, only a Windows Steam client running in the same environment",
+      "fix": "start it with Play in Highball, which goes through the Windows Steam client in the environment. The reporter also turned sync off (highball-db#988)"
+    }
+  ],
   "launchArgs": null,
   "lastVerified": null
 }

@@ -1,0 +1,25 @@
+{
+  "id": "rollercoaster-tycoon-3-complete-edition",
+  "title": "RollerCoaster Tycoon 3: Complete Edition",
+  "steam_appid": 1368820,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#993, 2026-11-05), Apple M1, macOS 27.2, Highball 0.10.25, engine x64-crossover26.3-r28, D3DMetal, rated 3 of 5 after 9 minutes: the Epic copy. The sound runs slow, the animated rollercoaster isn't drawn, the game lags, and loading takes a minute or two. The same with WineD3D. On the Wine 10 engine it slows to a crawl before the legal screen. The environment had ROSETTA_X87_PATH set, which Highball 0.10.25 drops. Not verified by the maintainer.",
+  "notes": "Playable with trouble in one report on an M1, the Epic copy, on the Wine 11 engine (r28) with D3DMetal: slow sound, lag, and the animated rollercoaster isn't drawn. On the Wine 10 engine it slows to a crawl before the legal screen. The Steam release also has a native Mac version.",
+  "knownIssues": [
+    {
+      "symptom": "The sound runs slow, the game lags and the animated rollercoaster isn't drawn (M1, Wine 11 r28, D3DMetal and WineD3D)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    },
+    {
+      "symptom": "Slows to a crawl before the legal screen on the Wine 10 engine (M1)",
+      "cause": "not diagnosed",
+      "fix": "the Wine 11 engine gets past it"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

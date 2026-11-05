@@ -5,13 +5,13 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by gerhardsmith84-bit (highball-db#922, 2026-11-02), Apple M4, macOS 27.2, Highball 0.10.23, engine x64-crossover26.3-r29, DXMT, rated 1 of 5: the game never opens a window, its log reports GLFW_VERSION_UNAVAILABLE and WGL failing to create an OpenGL context, on Wine 10 r28 and Wine 11 r29 alike. Not verified by the maintainer.",
-  "notes": "Does not start in one report on an M4. The game is built on libGDX with LWJGL3 and fails to get an OpenGL context.",
+  "provenance": "Reported by gerhardsmith84-bit (highball-db#922, 2026-11-02), Apple M4, macOS 27.2, Highball 0.10.23, engine x64-crossover26.3-r29, DXMT, rated 1 of 5: the game never opens a window, its log reports GLFW_VERSION_UNAVAILABLE and WGL failing to create an OpenGL context, on Wine 10 r28 and Wine 11 r29 alike. Not verified by the maintainer. gerhardsmith84-bit again on highball-db#922 (2026-11-04) with WINEDEBUG=fixme-all,warn+wgl, Wine 11 r29, DXMT: Wine's Mac driver refuses 'Profile version 4.4' and 'Profile version 4.3' contexts, and the thread that asked for 4.3 stops with exception c0000409 right after, twice. That log's session was started as app 3916150, The Last Caretaker Demo, and holds the Ocean World attempts too.",
+  "notes": "Does not start on a Mac. The game is built on libGDX with LWJGL3 and asks for an OpenGL 4.3 context, above the 4.1 that macOS offers.",
   "knownIssues": [
     {
       "symptom": "Never opens a window, WGL fails to create an OpenGL context (GLFW_VERSION_UNAVAILABLE)",
-      "cause": "not diagnosed. Wine's Mac driver gives OpenGL 2.1, or 3.2 to 4.1 core, and refuses a 3.0 or 3.1 context, a compatibility one at 3.2 or above, and anything above 4.1, so the game most likely asks for one of those. Which version it asks for isn't known yet; a run with WINEDEBUG=fixme-all,warn+wgl would name it",
-      "fix": "none known"
+      "cause": "the game asks for an OpenGL 4.3 core context (and a 4.4 one before it), and macOS's OpenGL stops at 4.1, so Wine's Mac driver refuses them (WINEDEBUG=warn+wgl, highball-db#922)",
+      "fix": "none on a Mac for now. No engine or graphics mode changes it"
     }
   ],
   "launchArgs": null,

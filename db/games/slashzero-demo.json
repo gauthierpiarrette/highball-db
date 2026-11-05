@@ -5,13 +5,18 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#939, 2026-11-03), Apple M1, macOS 27.2, Highball 0.10.24, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 1 of 5 after 1 minutes: the logo shows, then the game's own crash window ('The UE-Zero Game has crashed', Fatal error!) before the title screen. Not verified by the maintainer. udance4ever again in a comment on highball-db#939 (2026-11-03) with the game's own log: about a minute after start it stops on 'Unhandled Exception: 0xc06d007f', raised from kernelbase, the code for a delay-loaded function that wasn't found.",
+  "provenance": "Reported by udance4ever (highball-db#939, 2026-11-03), Apple M1, macOS 27.2, Highball 0.10.24, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 1 of 5 after 1 minutes: the logo shows, then the game's own crash window ('The UE-Zero Game has crashed', Fatal error!) before the title screen. Not verified by the maintainer. udance4ever again in a comment on highball-db#939 (2026-11-03) with the game's own log: about a minute after start it stops on 'Unhandled Exception: 0xc06d007f', raised from kernelbase, the code for a delay-loaded function that wasn't found. udance4ever again in a comment on highball-db#939 (2026-11-04), in a Wine 11 environment on engine x64-crossover26.3-r28 with D3DMetal: no crash, but Steam shows a black window with white boxes, which the reporter takes for a licence agreement, and Highball keeps waiting for the game. Steam's helpers crash in that log ('-[NSViewBackingLayer setDisplaySyncEnabled:]: unrecognized selector'), Steam's window not drawing under D3DMetal.",
   "notes": "Doesn't start in one report on an M1 with D3DMetal. An Unreal Engine game on DirectX 12, it shows its logo and then a Fatal error crash window.",
   "knownIssues": [
     {
       "symptom": "Unreal Engine 'Fatal error!' crash window right after the logo (M1, D3DMetal, Wine 10 r29)",
       "cause": "not diagnosed. The game's log ends with 'Unhandled Exception: 0xc06d007f', which is the code a program raises when a function it loads late from a DLL isn't there, so the game most likely asks one of Wine's DLLs for a function Wine doesn't have. Which one isn't known yet",
       "fix": "none known"
+    },
+    {
+      "symptom": "On a Wine 11 engine with D3DMetal, Steam shows a black window with white boxes at the first launch and the game never starts (M1, Wine 11 r28)",
+      "cause": "most likely the licence agreement Steam shows before a game's first launch, in a window Steam can't draw while the environment is on D3DMetal (as with Phantom Blade Zero, highball#570)",
+      "fix": "untested with this game. Quit Steam from the strip at the bottom of Highball, press Open Steam (Steam then opens in a mode that draws), press Play on the demo in Steam and accept the agreement, quit Steam from the strip again, then press Play in Highball"
     }
   ],
   "launchArgs": null,

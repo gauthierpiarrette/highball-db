@@ -5,16 +5,27 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#964, 2026-11-03), Apple M1, macOS 27.2, Highball 0.10.25, engine x64-sikarugir10.0_6-r29, WineD3D by the report (the environment's mode is D3DMetal), rated 2 of 5 after 1 minute: on D3DMetal and DXMT the picture is zoomed in from the start. On WineD3D the opening screens fit (the screenshot shows them at about 800x600 in the top left corner of the screen), but once the title menu is clicked the picture zooms in about four times, the menu no longer fits on the screen and the game can't be played. Emulate display mode changes didn't help. Not verified by the maintainer.",
-  "notes": "Doesn't get in game in one report on an M1. Clicking the title menu zooms the picture in so the menu no longer fits on the screen, and on D3DMetal and DXMT it is zoomed from the start. It's a 32-bit game from 2005.",
+  "provenance": "Reported by udance4ever (highball-db#964, 2026-11-03), Apple M1, macOS 27.2, Highball 0.10.25, engine x64-sikarugir10.0_6-r29, WineD3D by the report (the environment's mode is D3DMetal), rated 2 of 5 after 1 minute: on D3DMetal and DXMT the picture is zoomed in from the start. On WineD3D the opening screens fit (the screenshot shows them at about 800x600 in the top left corner of the screen), but once the title menu is clicked the picture zooms in about four times, the menu no longer fits on the screen and the game can't be played. Emulate display mode changes didn't help. Not verified by the maintainer. udance4ever again in a comment on highball-db#964 (2026-11-05): after reinstalling the game the zoom didn't come back and the game got in game on WineD3D. Clicking the small window took it full screen. It stays at 800x600: picking 1600x1200 in the game doesn't stick, and the log has Wine refusing the game's display mode changes six times (NtUserChangeDisplaySettings returned -2, DISP_CHANGE_BADMODE). No controller worked, XInput or DirectInput, with or without Steam Input. The game was on an external drive.",
+  "notes": "Playable in one report on an M1 with WineD3D at 800x600, after a reinstall. A higher resolution chosen in the game doesn't stick, and no controller is read. It's a 32-bit game from 2005.",
   "knownIssues": [
     {
       "symptom": "Clicking the title menu zooms the picture in about four times, so the menu no longer fits on the screen and the game can't be played. On D3DMetal and DXMT it is zoomed from the start, on WineD3D only after the click (M1, Wine 10 r29)",
       "cause": "not diagnosed. It looks like the display mode switch on click that Alice: Madness Returns has (highball-db#429), but Emulate display mode changes, which fixed that one, didn't help here",
-      "fix": "none known"
+      "fix": "none known. It didn't come back after the reporter reinstalled the game (highball-db#964, 2026-11-05)"
+    },
+    {
+      "symptom": "Stays at 800x600, a higher resolution chosen in the game doesn't stick (M1, WineD3D, Wine 10 r29)",
+      "cause": "Wine refuses the display mode the game asks for (DISP_CHANGE_BADMODE in the log), most likely because the Mac's display doesn't offer it. 1600x1200, the one tried, is taller than the reporter's 1920x1080 screen",
+      "fix": "untested. Pick a resolution the Mac's display has"
+    },
+    {
+      "symptom": "No controller is read, XInput or DirectInput, with or without Steam Input",
+      "cause": "not diagnosed",
+      "fix": "mouse and keyboard"
     }
   ],
   "launchArgs": null,
   "lastVerified": null,
-  "verified": null
+  "verified": null,
+  "arch": "x86"
 }
