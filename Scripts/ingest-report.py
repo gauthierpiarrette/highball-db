@@ -27,7 +27,7 @@ Inventing the distinction would only make the bot sound more certain than it is.
 import glob, json, os, re, sys
 
 REPORTS, GAMES = "db/reports", "db/games"
-RENDERERS = {"d3dmetal", "dxmt", "dxvk", "wined3d"}
+RENDERERS = {"d3dmetal", "dxmt", "dxvk", "vkd3d", "wined3d"}
 # "no response" is what the issue form writes under a field left empty ("_No response_",
 # underscores stripped by clean()); it was stored as the answer in 24 reports until 2026-10-17.
 NON_ANSWERS = {"not reported", "not given", "unknown", "unspecified", "n/a", "na",
