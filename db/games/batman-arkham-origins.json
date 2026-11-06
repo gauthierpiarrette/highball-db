@@ -5,13 +5,13 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by Bipolaire (highball-db#957, 2026-11-03), Apple M4 Pro, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r26, DXMT, rated 5 of 5 after 22 minutes. Not verified by the maintainer. udance4ever (highball-db#978, 2026-11-04), Apple M1, macOS 27.2, Highball 0.10.25, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 1 of 5 after 2 minutes: freezes at the legal screen at start. The log shows the 32-bit game drawing through DXMT, and the environment wasn't restarted before the launch because another program was still running, so it ran with sync off. The game was on an external drive.",
-  "notes": "Reported perfect on an M4 Pro with DXMT over 22 minutes on the default engine (r26). On an M1 with engine r29 it froze at the legal screen at start (highball-db#978). It's a 32-bit game.",
+  "provenance": "Reported by Bipolaire (highball-db#957, 2026-11-03), Apple M4 Pro, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r26, DXMT, rated 5 of 5 after 22 minutes. Not verified by the maintainer. udance4ever (highball-db#978, 2026-11-04), Apple M1, macOS 27.2, Highball 0.10.25, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 1 of 5 after 2 minutes: freezes at the legal screen at start. The log shows the 32-bit game drawing through DXMT, and the environment wasn't restarted before the launch because another program was still running, so it ran with sync off. The game was on an external drive. udance4ever again in a comment on highball-db#978 (2026-11-06): on Wine 10 r29 with DXMT, after a restart of the environment, it stuttered for 5 minutes through the copyright screen, the WB logo and a snowstorm and never reached the title screen. On the Wine 11 engine r30 with DXMT and athei's x87sidecar on (it attached to the game in the log), the slowdown was gone: the game's benchmark gave 53 fps minimum and 102 fps average on a base M1. A DualSense works through Steam Input. Which of r30's SSE2 32-bit DLLs and the sidecar did it isn't known.",
+  "notes": "Reported perfect on an M4 Pro with DXMT over 22 minutes on the default engine (r26). On an M1 it plays on the Wine 11 engine r30 with DXMT, 102 fps average in the game's benchmark with athei's x87sidecar on (HB_X87SIDECAR=1), where engine r29 stuttered through its first screens and never reached the title screen (highball-db#978). A DualSense works through Steam Input. It's a 32-bit game.",
   "knownIssues": [
     {
-      "symptom": "Freezes at the legal screen at start (M1, Wine 10 r29, the game drawing through DXMT)",
+      "symptom": "Stutters through the legal screen and the logos and never reaches the title screen (M1, Wine 10 r29, DXMT)",
       "cause": "not diagnosed",
-      "fix": "none known"
+      "fix": "the Wine 11 engine r30 with DXMT plays it at 102 fps average in its benchmark on a base M1, with HB_X87SIDECAR=1 in the environment's variables (highball-db#978, 2026-11-06, credit udance4ever)"
     }
   ],
   "launchArgs": null,

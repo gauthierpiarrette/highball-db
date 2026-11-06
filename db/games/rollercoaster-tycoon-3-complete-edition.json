@@ -5,11 +5,16 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#993, 2026-11-05), Apple M1, macOS 27.2, Highball 0.10.25, engine x64-crossover26.3-r28, D3DMetal, rated 3 of 5 after 9 minutes: the Epic copy. The sound runs slow, the animated rollercoaster isn't drawn, the game lags, and loading takes a minute or two. The same with WineD3D. On the Wine 10 engine it slows to a crawl before the legal screen. The environment had ROSETTA_X87_PATH set, which Highball 0.10.25 drops. Not verified by the maintainer.",
-  "notes": "Playable with trouble in one report on an M1, the Epic copy, on the Wine 11 engine (r28) with D3DMetal: slow sound, lag, and the animated rollercoaster isn't drawn. On the Wine 10 engine it slows to a crawl before the legal screen. The Steam release also has a native Mac version.",
+  "provenance": "Reported by udance4ever (highball-db#993, 2026-11-05), Apple M1, macOS 27.2, Highball 0.10.25, engine x64-crossover26.3-r28, D3DMetal, rated 3 of 5 after 9 minutes: the Epic copy. The sound runs slow, the animated rollercoaster isn't drawn, the game lags, and loading takes a minute or two. The same with WineD3D. On the Wine 10 engine it slows to a crawl before the legal screen. The environment had ROSETTA_X87_PATH set, which Highball 0.10.25 drops. Not verified by the maintainer. udance4ever again in a comment on highball-db#993 (2026-11-06), on a Wine 11 engine with athei's x87sidecar on (HB_X87SIDECAR=1, which only r30 and r31 carry): the sound is right and the game is snappy. A placed coaster is still drawn as grey mush.",
+  "notes": "Playable in one report on an M1, the Epic copy, on the Wine 11 engine with athei's x87sidecar on (HB_X87SIDECAR=1 on r30 or r31): sound and speed are fine, but a placed rollercoaster is drawn as grey mush. Without the sidecar the sound runs slow and the game lags. On the Wine 10 engine it slows to a crawl before the legal screen. The Steam release also has a native Mac version.",
   "knownIssues": [
     {
-      "symptom": "The sound runs slow, the game lags and the animated rollercoaster isn't drawn (M1, Wine 11 r28, D3DMetal and WineD3D)",
+      "symptom": "The sound runs slow and the game lags (M1, Wine 11 r28, D3DMetal and WineD3D)",
+      "cause": "most likely x87 maths, which Rosetta runs slowly",
+      "fix": "the Wine 11 engine r30 or r31 with HB_X87SIDECAR=1 in the environment's variables (highball-db#993, 2026-11-06, credit udance4ever)"
+    },
+    {
+      "symptom": "A placed rollercoaster is drawn as grey mush (M1, Wine 11, D3DMetal and WineD3D)",
       "cause": "not diagnosed",
       "fix": "none known"
     },

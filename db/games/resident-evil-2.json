@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": "d3dmetal",
   "anticheat": null,
-  "provenance": "Reported by Techdude01 (highball-db#806, 2026-10-29), Apple M3 Pro, macOS 27.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r29, the game on D3DMetal in an environment set to DXMT, recipes steam and vcrun2022, rated 4 of 5 after 4 minutes: 60 fps, with lights flickering in the police station. Not verified by the maintainer.",
-  "notes": "The 2019 remake. Plays at 60 fps on an M3 Pro with D3DMetal. Some lights flicker in the police station.",
+  "provenance": "Reported by Techdude01 (highball-db#806, 2026-10-29), Apple M3 Pro, macOS 27.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r29, the game on D3DMetal in an environment set to DXMT, recipes steam and vcrun2022, rated 4 of 5 after 4 minutes: 60 fps, with lights flickering in the police station. Not verified by the maintainer. Amine930 (highball-db#1028, 2026-11-06), Apple M5, macOS 27.0.1, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 5 of 5 after 15 minutes: named re2 in the report, the 2019 remake's exe name. The copy isn't stated.",
+  "notes": "The 2019 remake. Plays at 60 fps on an M3 Pro with D3DMetal. Some lights flicker in the police station. Also reported perfect on an M5 with D3DMetal over 15 minutes on the default engine (r28) (highball-db#1028).",
   "knownIssues": [
     {
       "symptom": "Some lights flicker in the police station (D3DMetal, M3 Pro)",

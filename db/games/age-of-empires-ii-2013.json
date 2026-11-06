@@ -5,8 +5,8 @@
   "status": "community",
   "arch": "x86",
   "anticheat": null,
-  "provenance": "Measured here 2026-10-06, Apple M3 Pro, macOS 26.7.1, engine x64-sikarugir10.0_6-r22, bottle renderer DXMT (Direct3D 9 through DXVK). The main menu was created with SKIPINTRO. A match was not played. rmarquez-t (highball-db#924, 2026-11-02), Apple M4 Pro, macOS 27.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 50 minutes.",
-  "notes": "Steam starts Launcher.exe. The launcher forwards its own command line to AoK HD.exe. After OK on Validating Subscriptions, the game opens resources/_common/movies/aoeiihd_x2.wmv and the process ends at the log line \"Opening video...\". With SKIPINTRO the same log says \"Skipping due to commandline\" and the main menu is created. Highball passes SKIPINTRO on Play. A match was not played, and Wine's own Direct3D was not tried.",
+  "provenance": "Measured here 2026-10-06, Apple M3 Pro, macOS 26.7.1, engine x64-sikarugir10.0_6-r22, bottle renderer DXMT (Direct3D 9 through DXVK). The main menu was created with SKIPINTRO. A match was not played. rmarquez-t (highball-db#924, 2026-11-02), Apple M4 Pro, macOS 27.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 50 minutes. rmarquez-t (highball-db#1004, 2026-11-05), Apple M4 Pro, macOS 27.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 38 minutes: nothing stated about what wasn't perfect.",
+  "notes": "Steam starts Launcher.exe. The launcher forwards its own command line to AoK HD.exe. After OK on Validating Subscriptions, the game opens resources/_common/movies/aoeiihd_x2.wmv and the process ends at the log line \"Opening video...\". With SKIPINTRO the same log says \"Skipping due to commandline\" and the main menu is created. Highball passes SKIPINTRO on Play. A match was not played, and Wine's own Direct3D was not tried. A report on an M4 Pro rates it playable over 38 minutes with DXMT on the default engine (r28), without saying what wasn't perfect (highball-db#1004).",
   "knownIssues": [
     {
       "symptom": "After OK on Validating Subscriptions, the game closes.",

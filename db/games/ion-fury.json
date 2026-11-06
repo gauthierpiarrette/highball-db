@@ -1,0 +1,20 @@
+{
+  "id": "ion-fury",
+  "title": "Ion Fury",
+  "steam_appid": 562860,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Swiss-Mac-User (highball-db#1001, 2026-11-05), Apple M5 Pro, macOS 27.2, Highball 0.10.25, engine x64-crossover26.3-r29, DXVK, rated 5 of 5 after 3 minutes: at 3200x1800 fullscreen. Not verified by the maintainer. Swiss-Mac-User (highball-db#1003, 2026-11-05), Apple M5 Pro, macOS 27.2, Highball 0.10.25, engine x64-crossover26.3-r29, D3DMetal by the report (the environment's mode is DXVK), rated 5 of 5 after 38 minutes: at 3200x1800 fullscreen with OpenGL. Rare mouse turns feel laggy or jumpy, and so does the way the world redraws.",
+  "notes": "Reported perfect on an M5 Pro on the Wine 11 engine (r29) at 3200x1800 fullscreen, in sessions of 3 and 38 minutes. The game was set to draw with OpenGL, which doesn't go through the environment's graphics mode. Mouse turns now and then feel laggy or jumpy.",
+  "knownIssues": [
+    {
+      "symptom": "Mouse turns now and then feel laggy or jumpy, and the way the world redraws can look off (M5 Pro, Wine 11 r29)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

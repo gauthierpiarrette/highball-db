@@ -1,0 +1,30 @@
+{
+  "id": "ferocious",
+  "title": "FEROCIOUS",
+  "steam_appid": 1645630,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Swiss-Mac-User (highball-db#1007, 2026-11-05), Apple M5 Pro, macOS 27.2, Highball 0.10.25, engine x64-crossover26.3-r29, DXVK, rated 4 of 5 after 21 minutes: the menu and shader loading take about a minute, a resolution problem at first went away after leaving the game and coming back, some visual glitches such as artifacts in water reflections, and slowdowns when new shaders or animations load. Overall very satisfying performance. Not verified by the maintainer.",
+  "notes": "Playable on an M5 Pro with DXVK on the Wine 11 engine (r29) over 21 minutes, with very satisfying performance by the reporter's account. The menu and shader loading take about a minute, and it slows down when new shaders or animations load.",
+  "knownIssues": [
+    {
+      "symptom": "The menu and shader loading take about a minute, and the game slows down when new shaders or animations load (M5 Pro, DXVK, Wine 11 r29)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    },
+    {
+      "symptom": "Some visual glitches, such as artifacts in water reflections (M5 Pro, DXVK)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    },
+    {
+      "symptom": "The resolution was wrong at the first start",
+      "cause": "not diagnosed",
+      "fix": "leaving the game and starting it again fixed it for the reporter"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

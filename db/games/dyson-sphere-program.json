@@ -1,0 +1,20 @@
+{
+  "id": "dyson-sphere-program",
+  "title": "Dyson Sphere Program",
+  "steam_appid": 1366540,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by gdncomm-audi-asmarandana (highball-db#1017, 2026-11-06), Apple M3, macOS 26.6.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 66 minutes: leaving the game to the desktop sometimes hangs on a black screen, though the save is kept. Not tried with a large factory yet. Not verified by the maintainer.",
+  "notes": "Playable on an M3 with DXMT on the default engine (r28) over 66 minutes, not yet with a large factory. Leaving the game to the desktop sometimes hangs on a black screen, with the save kept.",
+  "knownIssues": [
+    {
+      "symptom": "Leaving the game to the desktop sometimes hangs on a black screen (M3, DXMT, Wine 10 r28)",
+      "cause": "not diagnosed",
+      "fix": "none known. The save is kept"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

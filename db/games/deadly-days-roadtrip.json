@@ -1,0 +1,14 @@
+{
+  "id": "deadly-days-roadtrip",
+  "title": "Deadly Days: Roadtrip",
+  "steam_appid": 3026450,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Dilla2k24 (highball-db#1014, 2026-11-06), Apple M3, macOS 27.0, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 40 minutes: over several sessions on an M3 MacBook Air. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M3 MacBook Air with DXMT on the default engine (r28), over several sessions.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
