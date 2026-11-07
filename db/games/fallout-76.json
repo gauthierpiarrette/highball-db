@@ -1,0 +1,26 @@
+{
+  "id": "fallout-76",
+  "title": "Fallout 76",
+  "steam_appid": 1151340,
+  "status": "community",
+  "renderer": null,
+  "anticheat": {
+    "names": [
+      "Unknown (Custom)"
+    ],
+    "macVerdict": "warning",
+    "note": "listed with a custom anti-cheat. The reporter played online without trouble"
+  },
+  "provenance": "Reported by Ascension1634 (highball-db#1033, 2026-11-06), Apple M5 Pro, macOS 27.0.1, Highball 0.10.26, engine x64-crossover26.3-r31, DXMT, rated 4 of 5 after 10 minutes: about 15 minutes in game, with frame drops now and then when loading in, barely noticed. Not verified by the maintainer.",
+  "notes": "Playable on an M5 Pro with DXMT on the Wine 11 engine r31, about 15 minutes in game, with frame drops now and then when loading in. An online game.",
+  "knownIssues": [
+    {
+      "symptom": "Frame drops now and then when loading in (M5 Pro, DXMT, Wine 11 r31)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

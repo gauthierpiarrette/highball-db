@@ -1,0 +1,14 @@
+{
+  "id": "slap-em-up",
+  "title": "Slap 'em UP!",
+  "steam_appid": 3703520,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by ST4RCHASER (highball-db#1045, 2026-11-07), Apple M4 Max, macOS 26.1, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 120 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M4 Max with DXMT on the default engine (r28) over two hours.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

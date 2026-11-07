@@ -11,7 +11,7 @@
     {
       "symptom": "The game stops before opening a window in every graphics mode, its own DLLs not found",
       "cause": "the DLLs sit in Fahrenheit.exe.local, Windows' DLL redirection folder, which Wine's loader does not search (also missing upstream, checked 2026-10-26)",
-      "fix": "by hand, link each DLL from Fahrenheit.exe.local next to Fahrenheit.exe (for x in Fahrenheit.exe.local/*.dll; do ln -s \"$x\" .; done in the game folder). Support for the folder in Highball's engines is planned"
+      "fix": "the Wine 11 engines r30 and r31 (Highball 0.10.26) look in a program's .local folder, not yet tried with this game. On other engines link each DLL from Fahrenheit.exe.local next to Fahrenheit.exe by hand (for x in Fahrenheit.exe.local/*.dll; do ln -s \"$x\" .; done in the game folder)"
     },
     {
       "symptom": "The first menu click switches the game to 1024x768 and then it fails with 'A DirectX 9.0c or higher compliant video card is needed' or 'D3D ERROR! Fail to create texture surface' (an M1, DXVK's Direct3D 9, highball-db#700)",

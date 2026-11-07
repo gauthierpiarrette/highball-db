@@ -11,7 +11,7 @@
     {
       "symptom": "Maps run at about 4 fps while menus run at 100 fps or more",
       "cause": "the game's x87 floating-point code runs slowly under Rosetta (winedbg samples in highball-db#352)",
-      "fix": "none in Highball yet. A player measured 45 fps with the x87 sidecar on the Wine 11 engine in DXVK mode. On the Wine 11 engines DXMT mode hands Direct3D 9 to Wine's own implementation, which wasn't measured, so DXVK is the mode to reproduce it in. Whether Highball ships the sidecar is still open (highball#165)"
+      "fix": "Highball 0.10.26's Wine 11 engines r30 and r31 carry athei's x87 sidecar. Put the environment on one of them, add HB_X87SIDECAR=1 to its variables and use DXVK, the mode of the player's 45 fps. That measurement was made with sidecar v1.8.0 set up by hand on r19, not yet with the copy the engines ship. On the Wine 11 engines DXMT mode hands Direct3D 9 to Wine's own implementation, which wasn't measured"
     }
   ],
   "launchArgs": null,

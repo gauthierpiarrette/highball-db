@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#993, 2026-11-05), Apple M1, macOS 27.2, Highball 0.10.25, engine x64-crossover26.3-r28, D3DMetal, rated 3 of 5 after 9 minutes: the Epic copy. The sound runs slow, the animated rollercoaster isn't drawn, the game lags, and loading takes a minute or two. The same with WineD3D. On the Wine 10 engine it slows to a crawl before the legal screen. The environment had ROSETTA_X87_PATH set, which Highball 0.10.25 drops. Not verified by the maintainer. udance4ever again in a comment on highball-db#993 (2026-11-06), on a Wine 11 engine with athei's x87sidecar on (HB_X87SIDECAR=1, which only r30 and r31 carry): the sound is right and the game is snappy. A placed coaster is still drawn as grey mush.",
+  "provenance": "Reported by udance4ever (highball-db#993, 2026-11-05), Apple M1, macOS 27.2, Highball 0.10.25, engine x64-crossover26.3-r28, D3DMetal, rated 3 of 5 after 9 minutes: the Epic copy. The sound runs slow, the animated rollercoaster isn't drawn, the game lags, and loading takes a minute or two. The same with WineD3D. On the Wine 10 engine it slows to a crawl before the legal screen. The environment had ROSETTA_X87_PATH set, which Highball 0.10.25 drops. Not verified by the maintainer. udance4ever again in a comment on highball-db#993 (2026-11-06), on a Wine 11 engine with athei's x87sidecar on (HB_X87SIDECAR=1, which only r30 and r31 carry): the sound is right and the game is snappy. A placed coaster is still drawn as grey mush. udance4ever again in a comment on highball-db#993 (2026-11-06T20:53Z), a log of a run with the grey coaster: the Wine 11 engine r30, D3DMetal mode, the sidecar attached, and nothing in it about drawing.",
   "notes": "Playable in one report on an M1, the Epic copy, on the Wine 11 engine with athei's x87sidecar on (HB_X87SIDECAR=1 on r30 or r31): sound and speed are fine, but a placed rollercoaster is drawn as grey mush. Without the sidecar the sound runs slow and the game lags. On the Wine 10 engine it slows to a crawl before the legal screen. The Steam release also has a native Mac version.",
   "knownIssues": [
     {
@@ -15,8 +15,8 @@
     },
     {
       "symptom": "A placed rollercoaster is drawn as grey mush (M1, Wine 11, D3DMetal and WineD3D)",
-      "cause": "not diagnosed",
-      "fix": "none known"
+      "cause": "not diagnosed. The game draws with Direct3D 9, which goes through Wine's WineD3D in D3DMetal and WineD3D mode alike, so it looked the same in both (inferred, highball-db#993)",
+      "fix": "none known. Untested: DXVK mode, which takes Direct3D 9 through DXVK instead"
     },
     {
       "symptom": "Slows to a crawl before the legal screen on the Wine 10 engine (M1)",

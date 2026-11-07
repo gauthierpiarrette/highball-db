@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by Dex69-shadow (highball#321, 2026-10-11), Apple M5, macOS 26.6.2, Highball 0.10.10, DXVK for the game and the environment. The report does not say which edition. Not verified by the maintainer. Definitive Edition (387290) reported by masonray1 (highball-db#812, 2026-10-30) through Proton-ish on Mac Steam with Highball's engine x64-crossover26.3-r27, DXMT, sync off, AVX advertised, Apple M4, macOS 26.5, rated 4 of 5: the audio plays twice, about a second apart. Not verified by the maintainer.",
-  "notes": "Micro freezes made it unplayable on DXVK with async compilation off, where each new shader compiles while playing. DXMT, Highball's default mode, or DXVK with async shader compilation on in the environment's settings, are the things to try. Not confirmed by the reporter. The Definitive Edition was reported playable on DXMT on an M4 through Proton-ish, apart from doubled audio.",
+  "provenance": "Reported by Dex69-shadow (highball#321, 2026-10-11), Apple M5, macOS 26.6.2, Highball 0.10.10, DXVK for the game and the environment. The report does not say which edition. Not verified by the maintainer. Definitive Edition (387290) reported by masonray1 (highball-db#812, 2026-10-30) through Proton-ish on Mac Steam with Highball's engine x64-crossover26.3-r27, DXMT, sync off, AVX advertised, Apple M4, macOS 26.5, rated 4 of 5: the audio plays twice, about a second apart. Not verified by the maintainer. DonatusBarlas (highball-db#1032, 2026-11-06), Apple M4, macOS 27.2, the Wine 11 engine x64-crossover26.3-r31, every graphics mode, rated 2 of 5: the Definitive Edition, with a save at 12%. WineD3D plays in slow motion and stutters a lot. DXMT and D3DMetal run, but with heavy sound crackling and stutter, the frame counter at 120 with very uneven frame pacing. DXVK stays on the loading screen.",
+  "notes": "Micro freezes made it unplayable on DXVK with async compilation off, where each new shader compiles while playing. DXMT, Highball's default mode, or DXVK with async shader compilation on in the environment's settings, are the things to try. Not confirmed by the reporter. The Definitive Edition was reported playable on DXMT on an M4 through Proton-ish, apart from doubled audio. On an M4 with the Wine 11 engine r31 the Definitive Edition isn't playable in any mode: heavy sound crackling and stutter on DXMT and D3DMetal, slow motion on WineD3D, and DXVK stays on the loading screen (highball-db#1032). It's a 32-bit Unity 5 game (PCGamingWiki).",
   "knownIssues": [
     {
       "symptom": "Micro freezes (reported on an M5, macOS 26.6.2, DXVK)",
@@ -17,8 +17,24 @@
       "symptom": "Audio plays twice, about a second apart (Definitive Edition through Proton-ish, Wine 11 r27, DXMT)",
       "cause": "not diagnosed, not seen in Highball itself yet",
       "fix": "none yet"
+    },
+    {
+      "symptom": "Heavy sound crackling and stutter, the frame counter at 120 with very uneven frame pacing (Definitive Edition, M4, Wine 11 r31, DXMT and D3DMetal)",
+      "cause": "not diagnosed",
+      "fix": "none known. Untested: HB_X87SIDECAR=1 in the environment's variables (r31 carries athei's x87 sidecar, for 32-bit games), and a frame cap of 60 in the environment's settings"
+    },
+    {
+      "symptom": "Stays on the loading screen (Definitive Edition, M4, Wine 11 r31, DXVK)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    },
+    {
+      "symptom": "Plays in slow motion and stutters (Definitive Edition, M4, Wine 11 r31, WineD3D)",
+      "cause": "not diagnosed",
+      "fix": "none known"
     }
   ],
   "launchArgs": null,
-  "lastVerified": null
+  "lastVerified": null,
+  "arch": "x86"
 }

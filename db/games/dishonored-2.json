@@ -4,7 +4,7 @@
   "steam_appid": 403640,
   "status": "community",
   "renderer": "dxmt",
-  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
-  "notes": "works",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball. DonatusBarlas (highball-db#1036, 2026-11-07), Apple M4, macOS 27.2, Highball 0.10.26, engine x64-crossover26.3-r31, DXMT, rated 5 of 5 after 137 minutes: the copy isn't stated. A smooth 60 fps with minor stutters, which the reporter puts down to the game itself.",
+  "notes": "Listed as working by community consensus, and reported perfect on an M4 with DXMT on the Wine 11 engine r31 over 137 minutes, a smooth 60 fps with minor stutters (highball-db#1036). Not measured here.",
   "lastVerified": null
 }

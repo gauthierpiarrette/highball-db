@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by Swiss-Mac-User (highball#381, highball#382, highball-db#547, 2026-10-18), Apple M5 Pro, macOS 27.2, Highball 0.10.19, engine x64-sikarugir10.0_6-r28: works on DXMT (one crash when a Steam achievement triggered, not repeatable, and Steam's overlay FPS counter drawn as a black square), rated 4 of 5 on D3DMetal (resolution capped at 1440 pixels, low graphics forced), and DXVK crashes when a save loads (a pipeline with a geometry shader fails to compile in MoltenVK). Not verified by the maintainer.",
-  "notes": "Works on DXMT, the default mode, with full graphics. D3DMetal caps the resolution and forces low settings, and DXVK crashes when loading a game, so keep DXMT.",
+  "provenance": "Reported by Swiss-Mac-User (highball#381, highball#382, highball-db#547, 2026-10-18), Apple M5 Pro, macOS 27.2, Highball 0.10.19, engine x64-sikarugir10.0_6-r28: works on DXMT (one crash when a Steam achievement triggered, not repeatable, and Steam's overlay FPS counter drawn as a black square), rated 4 of 5 on D3DMetal (resolution capped at 1440 pixels, low graphics forced), and DXVK crashes when a save loads (a pipeline with a geometry shader fails to compile in MoltenVK). Not verified by the maintainer. Swiss-Mac-User again on highball#659 (2026-11-06), Apple M5 Pro, macOS 27.2, Highball 0.10.26, the Wine 11 engine x64-crossover26.3-r29, graphics mode not stated: runs like a charm at 3200x1800 fullscreen, a solid 60 fps and more, with occasional lags while shaders load. An earlier failure to start (CreateProcess() returned 2 for MoonMystery-Win64-Shipping.exe) was a half-empty game folder after the Steam library moved to another drive, which Steam's Verify integrity of game files fixed.",
+  "notes": "Works on DXMT, the default mode, with full graphics. D3DMetal caps the resolution and forces low settings, and DXVK crashes when loading a game. On an M5 Pro with the Wine 11 engine r29 it runs at 60 fps and more at 3200x1800 fullscreen, with occasional lags while shaders load (highball#659).",
   "knownIssues": [
     {
       "symptom": "Crash when loading a game on DXVK",
@@ -22,6 +22,11 @@
       "symptom": "Steam overlay's FPS counter shows a black square",
       "cause": "not diagnosed",
       "fix": "none known"
+    },
+    {
+      "symptom": "Doesn't start, \"CreateProcess() returned 2\" for MoonMystery-Win64-Shipping.exe (after moving the Steam library to another drive)",
+      "cause": "the game's folder was left without most of its files",
+      "fix": "in Steam open the game's Properties, Installed Files, Verify integrity of game files (highball#659, credit Swiss-Mac-User)"
     }
   ],
   "launchArgs": null,
