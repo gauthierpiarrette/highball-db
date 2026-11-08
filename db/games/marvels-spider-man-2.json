@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by mohsin17-sys (highball-db#878, 2026-11-01), Apple M4 Pro, macOS 27.2, Highball 0.10.24, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 4 of 5 after 125 minutes: with AVX advertised, D3DM_MTL4=1, D3DM_SUPPORT_DXR=1 and a frame cap of 120. Not verified by the maintainer.",
+  "provenance": "Reported by mohsin17-sys (highball-db#878, 2026-11-01), Apple M4 Pro, macOS 27.2, Highball 0.10.24, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 4 of 5 after 125 minutes: with AVX advertised, D3DM_MTL4=1, D3DM_SUPPORT_DXR=1 and a frame cap of 120. Not verified by the maintainer. callnegi09 (highball-db#1074, 2026-11-08, the same report also posted as highball-db#1073): rated 5 of 5, chip given as M5 and macOS as latest, with no engine, graphics mode or session stated.",
   "notes": "Reported playable on an M4 Pro with D3DMetal over two hours, with AVX advertised, D3DM_MTL4=1 and D3DM_SUPPORT_DXR=1 set by the player.",
   "knownIssues": [],
   "launchArgs": null,

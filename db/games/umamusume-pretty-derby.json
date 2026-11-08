@@ -4,7 +4,7 @@
   "steam_appid": 3224770,
   "status": "reported-upstream",
   "renderer": "dxmt",
-  "provenance": "DXMT changelog v0.73 (github.com/3Shain/dxmt/releases)",
+  "provenance": "DXMT changelog v0.73 (github.com/3Shain/dxmt/releases). jalbarrang (highball-db#1072, 2026-11-08), Apple M4 Max, macOS 27.0.1, Highball 0.10.24, engine x64-crossover26.3-r11, DXMT, rated 4 of 5 after 8 minutes: browsing Veterans and doing transfer requests. Mouse wheel scrolling goes much too far, which makes scrolling lists awkward, and the picture looked a bit pixelated.",
   "notes": "login background video fixed. The dead left click reported on an M5 (highball#144) came after opening the terms links, a switch to the browser and back, and is the focus fault fixed in engine r15 (highball#182). Measured here 2026-09-19 on an M1 Pro, macOS 27.0, engine r5, Highball 0.9.32: the title screen and the in-game menu react to a left click on DXMT and on DXVK alike (tap to start proceeds to the data download), so the dead left click reported on an M5 is not a macOS 27 or a graphics-mode matter on this hardware. Measured on an M4 with macOS 27.0 on 2026-09-30, DXMT: after a Dock restore, Cmd+Tab or a click on another app the game took no input on engine r13 and takes it on r15. Checked here on 2026-10-05 on an M4 with engine r21, DXMT: the title screen (v1.35.2) comes up at 110 s; not played past it.",
   "lastVerified": "2026-09-30",
   "anticheat": {
@@ -19,6 +19,11 @@
       "symptom": "The game stops taking left clicks after switching to another app and back, for example after opening the terms links in the browser (reported on an M5, macOS 27.0, DXMT), while clicks keep working in the Steam window",
       "cause": "Wine 10's Mac driver sent the game a made-up click in its title bar whenever macOS gave it focus back, and Unity ignores the focus gain that follows such a click, so it keeps drawing but drops every click and key (Wine bug 48121, highball#182). Measured on an M4 with macOS 27.0: after a Dock restore, Cmd+Tab and a click on another app the game took no input on engine r13 and takes it on r15",
       "fix": "Fixed in engine r15, which environments on the default engine pick up by themselves once Steam is closed. On an older engine, restart the game."
+    },
+    {
+      "symptom": "Mouse wheel scrolling goes much too far, which makes long lists awkward (M4 Max, Wine 11 r11, DXMT)",
+      "cause": "not diagnosed",
+      "fix": "none known"
     }
   ],
   "verified": {

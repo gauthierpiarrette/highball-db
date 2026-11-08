@@ -1,0 +1,14 @@
+{
+  "id": "playrooms",
+  "title": "Playrooms",
+  "steam_appid": 5037510,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by henrymenden0-maker (highball-db#1053, 2026-11-07), Apple M2 Pro, macOS 27.0.1, Highball 0.10.22, engine x64-crossover26.3-r27, DXMT, rated 5 of 5 after 145 minutes: the form's game field says Steam, with Retina pixels at 100% and a 120 fps cap. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M2 Pro with DXMT on the Wine 11 engine r27 over 145 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by teamusec-krause (highball-db#602, 2026-10-21), Apple M5 Max, macOS 27.0.1, Highball 0.10.22, engine x64-crossover26.3-r27, DXMT environment, msync, rated 5 of 5 after 4 minutes. Not verified by the maintainer.",
-  "notes": "Reported perfect on the Wine 11 engine (x64-crossover26.3-r27) with DXMT on an M5 Max, after a short session of four minutes. No frame rate or city size was given and nothing was measured here.",
+  "provenance": "Reported by teamusec-krause (highball-db#602, 2026-10-21), Apple M5 Max, macOS 27.0.1, Highball 0.10.22, engine x64-crossover26.3-r27, DXMT environment, msync, rated 5 of 5 after 4 minutes. Not verified by the maintainer. Entropy-Xu (highball-db#1050, 2026-11-07), Apple M5 Max, macOS 27.2, Highball 0.10.23, engine x64-crossover26.3-r28, D3DMetal by the report (the environment's mode is DXMT), rated 4 of 5 after 19 minutes: with D3DM_MTL4=1 and AVX advertised, nothing stated about what wasn't perfect.",
+  "notes": "Reported perfect on the Wine 11 engine (x64-crossover26.3-r27) with DXMT on an M5 Max, after a short session of four minutes. No frame rate or city size was given and nothing was measured here. A second short report, on an M5 Max with the Wine 11 engine r28 (the D3DMetal 4 line) and D3DMetal by the report, rates it playable with minor issues, none named (highball-db#1050).",
   "knownIssues": [],
   "launchArgs": null,
   "lastVerified": null

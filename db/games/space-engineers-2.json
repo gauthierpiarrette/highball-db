@@ -1,0 +1,20 @@
+{
+  "id": "space-engineers-2",
+  "title": "Space Engineers 2",
+  "steam_appid": 1133870,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by kevindernomade (highball-db#1061, 2026-11-07), Apple M3 Max, macOS 26.7.1, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 1 of 5: App Version 4.0.0.3165, the environment settings left empty. It exits at start with \"No supported GPU found\". The game's render log (%APPDATA%\\SpaceEngineers2\\Temp\\Logs\\*_Render12.log) shows feature level, RAM and ray tracing passing and only IsDoublePrecisionFloatShaderOps = False failing, with the device named AMD Compatibility Mode. Not verified by the maintainer.",
+  "notes": "Doesn't start in one report on an M3 Max with D3DMetal: the game's GPU check rejects the adapter because it reports no double-precision shader operations, which Apple GPUs don't have. The game is Direct3D 12 only, so DXMT and DXVK are no way around it. Keen lists Intel Arc A-series failing the same check on Windows, by the report. GeForce NOW streams the Steam version.",
+  "knownIssues": [
+    {
+      "symptom": "Exits at start with \"No supported GPU found\" (M3 Max, D3DMetal, Wine 10 r28)",
+      "cause": "the game's GPU check needs double-precision (FP64) shader operations, which D3DMetal reports as missing and Apple GPUs don't have (the game's render log, highball-db#1061). Whether the game would run if told yes isn't known",
+      "fix": "none known. GeForce NOW streams the Steam version"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

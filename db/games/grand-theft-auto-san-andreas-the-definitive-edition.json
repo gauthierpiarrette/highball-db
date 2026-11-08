@@ -1,0 +1,14 @@
+{
+  "id": "grand-theft-auto-san-andreas-the-definitive-edition",
+  "title": "Grand Theft Auto: San Andreas – The Definitive Edition",
+  "steam_appid": 1547000,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by BeeeeeMo (highball-db#1055, 2026-11-07), Apple M6, macOS 27.2, Highball 0.10.26, engine x64-crossover26.3-r31, DXMT, rated 5 of 5 after 4 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on an Apple M6 with DXMT on the Wine 11 engine r31 in a 4 minute session. The 2004 original has its own page (grand-theft-auto-san-andreas).",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

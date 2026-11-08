@@ -1,0 +1,13 @@
+{
+  "id": "frickbears3",
+  "title": "Five Nights at Frickbear's 3",
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by bailey78harris-netizen (highball-db#1062, 2026-11-07), Apple A18 Pro, macOS 26.6.2, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 30 minutes. Not verified by the maintainer.",
+  "notes": "A Five Nights at Freddy's fan game from Game Jolt (gamejolt.com/games/frickbears3), not on Steam. Reported perfect on an Apple A18 Pro (MacBook Neo) with DXMT on the default engine (r28) over 30 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

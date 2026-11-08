@@ -1,0 +1,20 @@
+{
+  "id": "wavetale",
+  "title": "Wavetale",
+  "steam_appid": 1823930,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by theeirdna-commits (highball-db#1051, 2026-11-07), Apple M1, macOS 15.7.7, Highball 0.10.26, engine x64-crossover26.3-r31, DXMT by the report (the environment's mode is WineD3D), rated 4 of 5 after 4 minutes: frame drops here and there, 25 to 30 fps, Metal HUD on and a 60 fps cap. Not verified by the maintainer.",
+  "notes": "Playable on an M1 on the Wine 11 engine r31, at 25 to 30 fps with frame drops here and there, in a 4 minute session.",
+  "knownIssues": [
+    {
+      "symptom": "Frame drops, 25 to 30 fps (M1, Wine 11 r31)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

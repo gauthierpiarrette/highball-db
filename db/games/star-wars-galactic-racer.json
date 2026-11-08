@@ -1,0 +1,25 @@
+{
+  "id": "star-wars-galactic-racer",
+  "title": "STAR WARS: Galactic Racer",
+  "steam_appid": 4078430,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by DanielAdomian (highball-db#1058, 2026-11-07), Apple , macOS , engine , , rated  of 5. Not verified by the maintainer.",
+  "notes": "Doesn't start yet in one report on an M1 Mac mini: the game ends itself right after starting, before it opens a window, on the Wine 10 and Wine 11 engines. The Steam release carries Denuvo Anti-Tamper (store page).",
+  "knownIssues": [
+    {
+      "symptom": "Exits right after starting, before any window (M1, Wine 10 engines and Wine 11 r28 and r30)",
+      "cause": "not diagnosed. The game's main thread raises exception c0000409, the code a Windows program uses to stop itself at once, right after a run of system information queries Wine doesn't answer (NtQuerySystemInformation stub lines) and before any graphics device exists, so the graphics mode isn't involved (the reporter's +loaddll trace, highball-db#1058)",
+      "fix": "none known"
+    },
+    {
+      "symptom": "Epic Online Services fails to install on the Wine 10 engines (SetNamedSecurityInfo error 120, MSI error 1603)",
+      "cause": "error 120 means the call isn't implemented, a Windows security call Wine 10 lacks for what the installer asks (the reporter's reading)",
+      "fix": "the Wine 11 engines install it"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

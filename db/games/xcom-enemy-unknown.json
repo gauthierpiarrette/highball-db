@@ -1,0 +1,25 @@
+{
+  "id": "xcom-enemy-unknown",
+  "title": "XCOM: Enemy Unknown",
+  "steam_appid": 200510,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by imdinu (highball-db#1069, 2026-11-08), Apple M4 Max, macOS 27.0.1, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXVK by the report (the environment's mode is DXMT), rated 4 of 5 after 108 minutes: PhysX in the environment. At 3440x1440 some menus break and clicks land off target, unevenly, on buttons and on the map's grid. At 2560x1440 most of that is gone. The game's config files in Documents\\My Games\\XCOM - Enemy Unknown got corrupted, which the reporter puts down to iCloud syncing the Mac's Documents folder. Not verified by the maintainer.",
+  "notes": "Playable on an M4 Max over 108 minutes once set up: a 16:9 resolution such as 2560x1440 rather than ultrawide, and Keep game files inside this environment (the environment's Compatibility settings) so the game's config doesn't live in the Mac's Documents folder.",
+  "knownIssues": [
+    {
+      "symptom": "At 3440x1440 ultrawide some menus are cut off and clicks land off target, unevenly, in menus and on the map's grid (M4 Max, Wine 10 r28)",
+      "cause": "not diagnosed",
+      "fix": "use 2560x1440, which fixes most of it (highball-db#1069, credit imdinu)"
+    },
+    {
+      "symptom": "The game's config files in Documents\\My Games\\XCOM - Enemy Unknown\\XComGame\\Config got corrupted",
+      "cause": "not diagnosed. The reporter suspects iCloud syncing the Mac's Documents folder, where the environment kept them",
+      "fix": "delete that Config folder and turn on Keep game files inside this environment in the environment's Compatibility settings (highball-db#1069, credit imdinu)"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

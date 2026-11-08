@@ -5,13 +5,13 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by w8079 (highball-db#352, 2026-10-06), Apple M4, macOS 27.0.1, the Steam release v1.0.3.1, rated 2 of 5: menus over 100 fps, maps about 4.4 fps on engines x64-sikarugir10.0_6-r19 and r21 in DXMT mode, about 45 fps on the Wine 11 engine r19 in DXVK mode with the third-party x87 sidecar v1.8.0 attached (hook confirmed in the log). Not verified by the maintainer.",
-  "notes": "Menus are fast, maps crawl. The player's samples put the busy thread in the game's x87 floating-point code, which Rosetta translates slowly.",
+  "provenance": "Reported by w8079 (highball-db#352, 2026-10-06), Apple M4, macOS 27.0.1, the Steam release v1.0.3.1, rated 2 of 5: menus over 100 fps, maps about 4.4 fps on engines x64-sikarugir10.0_6-r19 and r21 in DXMT mode, about 45 fps on the Wine 11 engine r19 in DXVK mode with the third-party x87 sidecar v1.8.0 attached (hook confirmed in the log). Not verified by the maintainer. w8079 again on highball-db#352 (2026-11-07), Highball 0.10.26, macOS 27.0.1, M4, the Steam release in the same environment, moved to the Wine 11 engine x64-crossover26.3-r30 with HB_X87SIDECAR=1 and the game's mode set to DXVK, the sidecar the engine ships attached (its path in the log): 77.54 fps at the village entrance, the same spot that measured 45.25 fps with sidecar v1.8.0 on r19, and 58.00 fps in the village square with many NPCs, Metal HUD with frame generation and the frame cap off.",
+  "notes": "Menus are fast, maps crawled at about 4 fps on the default engine. The player's samples put the busy thread in the game's x87 floating-point code, which Rosetta translates slowly. On the Wine 11 engine r30 with the x87 sidecar the engine ships (HB_X87SIDECAR=1) and DXVK mode, maps run at 58 to 78 fps on an M4 (highball-db#352). The variable covers every program in the environment, Play doesn't set it per game yet.",
   "knownIssues": [
     {
       "symptom": "Maps run at about 4 fps while menus run at 100 fps or more",
       "cause": "the game's x87 floating-point code runs slowly under Rosetta (winedbg samples in highball-db#352)",
-      "fix": "Highball 0.10.26's Wine 11 engines r30 and r31 carry athei's x87 sidecar. Put the environment on one of them, add HB_X87SIDECAR=1 to its variables and use DXVK, the mode of the player's 45 fps. That measurement was made with sidecar v1.8.0 set up by hand on r19, not yet with the copy the engines ship. On the Wine 11 engines DXMT mode hands Direct3D 9 to Wine's own implementation, which wasn't measured"
+      "fix": "put the environment on the Wine 11 engine r30 or r31 (Highball 0.10.26), add HB_X87SIDECAR=1 to its variables and set the game's mode to DXVK. Measured by the reporter on r30 with the engine's own sidecar: 77.54 fps at the village entrance, 58 fps in the busy village square (highball-db#352, 2026-11-07, credit w8079). On the Wine 11 engines DXMT mode hands Direct3D 9 to Wine's own implementation, which wasn't measured"
     }
   ],
   "launchArgs": null,

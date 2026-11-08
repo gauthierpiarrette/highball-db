@@ -5,13 +5,13 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#700, 2026-10-26), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, in a Steam library on an external drive (its own, not the Mac Steam's): does not launch in DXMT, DXVK or D3DMetal. The DXMT and DXVK logs show Fahrenheit.exe failing to load its own DLLs (Qt5, SDL2, libgcc_s_dw2-1, libstdc++-6), which were not beside it. The reporter then found them in a Fahrenheit.exe.local folder next to the exe, Windows' DLL redirection, which Wine's loader does not look in; with the DLLs linked next to the exe the game reached gameplay, needing Emulate display mode changes to keep its resolution and a DirectX 9 warning dismissed. Not verified by the maintainer. Later the same day the reporter played it through the tutorial with a working setup: In a Window in the pre-launch settings, the keyboard to get through login and enable the gamepad in Options, Controls, and Steam Input on for a DualSense.",
-  "notes": "Playable with workarounds for the one report so far (M1, default engine, DXVK's Direct3D 9). Link the DLLs from Fahrenheit.exe.local next to Fahrenheit.exe first (Wine's loader does not search that folder). Then choose In a Window in the pre-launch settings: fullscreen breaks on the first menu click. The window opens small, click its title bar so it has focus, use the keyboard to create a login and to enable the gamepad in Options, Controls, then play with a gamepad. The mouse cannot be used, its cursor stays at the screen's edge. A DualSense needs Steam Input on, or the right stick does nothing. Steam's Mac version is 32-bit and no longer runs on macOS, so Highball installs the Windows one. Nothing was measured here.",
+  "provenance": "Reported by udance4ever (highball-db#700, 2026-10-26), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, in a Steam library on an external drive (its own, not the Mac Steam's): does not launch in DXMT, DXVK or D3DMetal. The DXMT and DXVK logs show Fahrenheit.exe failing to load its own DLLs (Qt5, SDL2, libgcc_s_dw2-1, libstdc++-6), which were not beside it. The reporter then found them in a Fahrenheit.exe.local folder next to the exe, Windows' DLL redirection, which Wine's loader does not look in; with the DLLs linked next to the exe the game reached gameplay, needing Emulate display mode changes to keep its resolution and a DirectX 9 warning dismissed. Not verified by the maintainer. Later the same day the reporter played it through the tutorial with a working setup: In a Window in the pre-launch settings, the keyboard to get through login and enable the gamepad in Options, Controls, and Steam Input on for a DualSense. udance4ever again on highball-db#700 (2026-11-07), the Wine 11 engine r30: with the linked DLLs removed the game starts, so r30 reads the Fahrenheit.exe.local folder. In a Window in the pre-launch settings is still needed. On the splash screen only click the window's title bar and press Enter, a click in the picture zooms it in. From the profile screen on the mouse works, it no longer sticks to the screen's edge. The picture is slightly cropped on the right, which didn't get in the way in the tutorial. A DualSense works with Steam Input on.",
+  "notes": "Playable with workarounds for the one report so far (M1). On the Wine 11 engine r30 or r31 it starts as it is, since those engines read the Fahrenheit.exe.local folder. On other engines link the DLLs from Fahrenheit.exe.local next to Fahrenheit.exe first (Wine's loader there does not search that folder). Choose In a Window in the pre-launch settings: fullscreen breaks on the first menu click. On the splash screen click the window's title bar and press Enter rather than clicking the picture, which zooms it in. On r30 the mouse works from the profile screen on; on the default engine it stays stuck at the screen's edge, so play there with the keyboard and a gamepad (enable it in Options, Controls). A DualSense needs Steam Input on, or the right stick does nothing. Steam's Mac version is 32-bit and no longer runs on macOS, so Highball installs the Windows one. Nothing was measured here.",
   "knownIssues": [
     {
       "symptom": "The game stops before opening a window in every graphics mode, its own DLLs not found",
       "cause": "the DLLs sit in Fahrenheit.exe.local, Windows' DLL redirection folder, which Wine's loader does not search (also missing upstream, checked 2026-10-26)",
-      "fix": "the Wine 11 engines r30 and r31 (Highball 0.10.26) look in a program's .local folder, not yet tried with this game. On other engines link each DLL from Fahrenheit.exe.local next to Fahrenheit.exe by hand (for x in Fahrenheit.exe.local/*.dll; do ln -s \"$x\" .; done in the game folder)"
+      "fix": "the Wine 11 engines r30 and r31 (Highball 0.10.26) look in a program's .local folder, confirmed with this game on r30 (highball-db#700, 2026-11-07, credit udance4ever). On other engines link each DLL from Fahrenheit.exe.local next to Fahrenheit.exe by hand (for x in Fahrenheit.exe.local/*.dll; do ln -s \"$x\" .; done in the game folder)"
     },
     {
       "symptom": "The first menu click switches the game to 1024x768 and then it fails with 'A DirectX 9.0c or higher compliant video card is needed' or 'D3D ERROR! Fail to create texture surface' (an M1, DXVK's Direct3D 9, highball-db#700)",
@@ -24,14 +24,24 @@
       "fix": "dismiss it, the game goes on"
     },
     {
-      "symptom": "In a window the mouse cursor sticks to the screen's edge and the mouse cannot be used",
+      "symptom": "In a window the mouse cursor sticks to the screen's edge and the mouse cannot be used (the default Wine 10 engine)",
       "cause": "not diagnosed",
-      "fix": "play with the keyboard and a gamepad: enable the gamepad in Options, Controls with the arrow keys"
+      "fix": "on the Wine 11 engine r30 the mouse works from the profile screen on (highball-db#700, 2026-11-07). On the default engine play with the keyboard and a gamepad: enable the gamepad in Options, Controls with the arrow keys"
     },
     {
       "symptom": "A DualSense's right stick does nothing",
       "cause": "the game reads the pad through XInput",
       "fix": "turn Steam Input on for the game. The XInputPlus route on PCGamingWiki did not help the reporter"
+    },
+    {
+      "symptom": "In a window, a click in the picture on the splash screen zooms it in (M1, Wine 11 r30)",
+      "cause": "not diagnosed",
+      "fix": "click only the window's title bar, then press Enter to go on (highball-db#700, credit udance4ever)"
+    },
+    {
+      "symptom": "The picture is slightly cropped on the right (M1, Wine 11 r30, in a window)",
+      "cause": "not diagnosed",
+      "fix": "none known, it didn't get in the way in the tutorial"
     }
   ],
   "launchArgs": null,

@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by ByteOwn3r (highball-db#832, 2026-10-30), Apple M5, macOS 27.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 3 of 5 after 3 minutes: some fps drops. Not verified by the maintainer. h1m5 (highball-db#1018, 2026-11-06), Apple M3 Max, macOS 26.7.1, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 24 minutes: the copy isn't stated. Occasional frame drops when turning the camera, otherwise it plays well.",
+  "provenance": "Reported by ByteOwn3r (highball-db#832, 2026-10-30), Apple M5, macOS 27.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 3 of 5 after 3 minutes: some fps drops. Not verified by the maintainer. h1m5 (highball-db#1018, 2026-11-06), Apple M3 Max, macOS 26.7.1, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 24 minutes: the copy isn't stated. Occasional frame drops when turning the camera, otherwise it plays well. ShounakDighe (highball-db#1066, 2026-11-07), Apple M1, macOS 15.5, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 6 minutes: nothing stated about what wasn't perfect.",
   "notes": "Starts on DXMT on an M5, with some frame drops in a 3-minute session, and plays well on an M3 Max with DXMT over 24 minutes, with occasional frame drops when turning the camera. Not measured here.",
   "knownIssues": [
     {
