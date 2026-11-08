@@ -1,0 +1,39 @@
+{
+  "id": "detroit-become-human",
+  "kind": "game",
+  "title": "Detroit: Become Human",
+  "requires": [
+    "steam"
+  ],
+  "engine": "x64-crossover26.3-r31",
+  "renderer": null,
+  "steps": [
+    {
+      "type": "environment",
+      "name": "HB_MVK_LENIENT_INTERFACES",
+      "value": "1"
+    },
+    {
+      "type": "environment",
+      "name": "MVK_CONFIG_SHADER_COMPRESSION_ALGORITHM",
+      "value": "1"
+    },
+    {
+      "type": "environment",
+      "name": "MVK_CONFIG_SHOULD_MAXIMIZE_CONCURRENT_COMPILATION",
+      "value": "1"
+    },
+    {
+      "type": "note",
+      "text": "Asks for the Wine 11 engine r31 or newer, whose MoltenVK carries the changes this game needs. The game draws with Vulkan through MoltenVK, so the graphics mode does not matter. HB_MVK_LENIENT_INTERFACES turns on two MoltenVK workarounds made for Detroit (vertex input and render targets, ported from DiAvisoo's MoltenVK changes), the second variable compresses the shader source MoltenVK keeps in memory (LZFSE) and the third compiles shaders on every core. The launcher still warns that the graphics card is not supported, press OK. Confirmed by udance4ever on a base M1 with 16 GB (highball#125, 2026-11-07). The shader step took about two minutes and the game played at about 20 fps with little stutter. Without the compression variable the shader step took about 22 minutes and the game stuttered badly."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "A blur over parts of the picture every so often",
+      "cause": "the game's own post processing under MoltenVK, a community patch to the game's exe removes it",
+      "fix": "none in Highball, which does not change game files"
+    }
+  ],
+  "lastVerified": null
+}

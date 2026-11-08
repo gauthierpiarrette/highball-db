@@ -6,18 +6,23 @@
   "renderer": null,
   "nativeVulkan": true,
   "anticheat": null,
-  "provenance": "Reported by daniel-kub (highball#125, 2026-09-16), Apple M2 8 GB, macOS 27.0, Highball 0.9.19: on the default engine the game warned about the GPU and crashed; on the Wine 11 engine x64-crossover26.3-r10 its launcher compiled shaders slowly and stopped at 98 percent. The maintainer tried the free demo (Steam 1224230) on 2026-09-26.",
-  "notes": "The game draws with Vulkan directly, through MoltenVK, so the graphics mode does not apply. Its launcher first shows a 'graphics card not officially supported' warning, press OK. On an M1 Pro 16 GB with engine x64-crossover26.3-r10 (2026-09-26, demo) the launcher then showed a spinner for twenty minutes at full CPU on one core and never reached the shader compile or the game, so the reporter's 98 percent stop could not be reproduced here either way. The 8 GB stall is most likely memory, the compile loads every shader at once, but that is not measured.",
+  "provenance": "Reported by daniel-kub (highball#125, 2026-09-16), Apple M2 8 GB, macOS 27.0, Highball 0.9.19: on the default engine the game warned about the GPU and crashed; on the Wine 11 engine x64-crossover26.3-r10 its launcher compiled shaders slowly and stopped at 98 percent. The maintainer tried the free demo (Steam 1224230) on 2026-09-26. On 2026-11-07 udance4ever (highball#125) played it on a base M1 with 16 GB on the Wine 11 engine r30 or r31 from Highball 0.10.26, whose MoltenVK carries fixes ported from DiAvisoo's changes (found working in Highball by udance4ever and jason312928).",
+  "notes": "The game draws with Vulkan directly, through MoltenVK, so the graphics mode does not apply. It plays on the Wine 11 engine r30 or r31 with three variables, which the recipe sets (HB_MVK_LENIENT_INTERFACES=1, MVK_CONFIG_SHADER_COMPRESSION_ALGORITHM=1, MVK_CONFIG_SHOULD_MAXIMIZE_CONCURRENT_COMPILATION=1). On a base M1 with 16 GB the launcher's shader step took about two minutes and the game ran at about 20 fps with little stutter (udance4ever, 2026-11-07). Its launcher first shows a 'graphics card not officially supported' warning, press OK. Older engines stopped at 98 percent in the shader step or showed only a spinner.",
   "knownIssues": [
     {
-      "symptom": "Launcher's shader compile stops at 98 percent on an 8 GB M2 with engine r10 (highball#125).",
-      "cause": "not measured; the compile loads every shader at once and 8 GB shared with the GPU is likely the limit.",
-      "fix": "none confirmed."
+      "symptom": "Launcher's shader compile stops at 98 percent, or shows only a spinner (engine r10, highball#125).",
+      "cause": "MoltenVK lacked workarounds the game needs. Which of the ported changes cures the stop is not isolated.",
+      "fix": "Wine 11 engine r30 or r31 with HB_MVK_LENIENT_INTERFACES=1, which the recipe sets."
     },
     {
-      "symptom": "Launcher shows only a spinner and never starts the compile (M1 Pro 16 GB, engine r10, demo, 2026-09-26).",
-      "cause": "not found. The launcher process sits at full CPU on one core, no error in Wine's log.",
-      "fix": "none. Not looked at further yet."
+      "symptom": "Shader step takes about 22 minutes and the game stutters badly (base M1 16 GB, r30 or r31).",
+      "cause": "not isolated. The variable compresses the shader source MoltenVK keeps in memory, and the difference was measured by the reporter.",
+      "fix": "MVK_CONFIG_SHADER_COMPRESSION_ALGORITHM=1, which the recipe sets."
+    },
+    {
+      "symptom": "A blur over parts of the picture every so often.",
+      "cause": "the game's post processing under MoltenVK, a community patch to the exe removes it.",
+      "fix": "none in Highball, which does not change game files."
     }
   ],
   "launchArgs": null,
