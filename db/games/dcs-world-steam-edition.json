@@ -1,0 +1,20 @@
+{
+  "id": "dcs-world-steam-edition",
+  "title": "DCS World Steam Edition",
+  "steam_appid": 223750,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Alexpolyech (highball#673, 2026-11-07), Apple M5, macOS 27.2, Highball 0.10.26, engine x64-sikarugir10.0_6-r28. Not verified by the maintainer.",
+  "notes": "Crashed at start on an M5 with the default engine (r28). Wine's crash report shows a read of address 4 inside Wine's C runtime (ucrtbase), after the game had loaded its terrain, world and renderer modules and Apple's D3DMetal. The game's own log had only two proxy warnings. Nothing more is known yet, the reporter removed the game.",
+  "knownIssues": [
+    {
+      "symptom": "Crash at start, Wine's debugger opens with an unhandled page fault reading address 4 (M5, engine r28, highball#673).",
+      "cause": "not found. The fault is inside Wine's ucrtbase, most likely a null pointer the game passes to the C runtime.",
+      "fix": "none known."
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
