@@ -1,10 +1,10 @@
 {
   "id": "civilization-vi",
-  "title": "Civilization VI",
+  "title": "Sid Meier's Civilization VI",
   "steam_appid": 289070,
   "status": "community",
   "renderer": "dxmt",
-  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball JoFreHe (highball-db#702, 2026-10-26), Apple M3 Max, macOS 26.6.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT environment, msync, rated 5 of 5 after 185 minutes. Also confirmed by udance4ever (highball-db#702, 2026-10-30) on an Apple M1, macOS 27.0.1, same engine r28, 50 to 60 fps. kevsmisy (highball-db#1052, 2026-11-07), Apple M5, macOS 27.0.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, D3DMetal by the report (the environment's mode is DXVK), rated 5 of 5 after 87 minutes: no frame drops at all, a mouse recommended.",
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball JoFreHe (highball-db#702, 2026-10-26), Apple M3 Max, macOS 26.6.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT environment, msync, rated 5 of 5 after 185 minutes. Also confirmed by udance4ever (highball-db#702, 2026-10-30) on an Apple M1, macOS 27.0.1, same engine r28, 50 to 60 fps. kevsmisy (highball-db#1052, 2026-11-07), Apple M5, macOS 27.0.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, D3DMetal by the report (the environment's mode is DXVK), rated 5 of 5 after 87 minutes: no frame drops at all, a mouse recommended. udance4ever on highball-db#702 (2026-11-08): the Epic copy's tile in Highball's library shows no Community label. Highball finds the page of a copy from a store the page doesn't name by its title, and this page was titled Civilization VI while Epic names the game Sid Meier's Civilization VI (the tile in the screenshot), so the page now has the full title.",
   "notes": "A native Mac build exists, prefer it. The Windows version is reported perfect on the default engine r28 on an M3 Max, an M1 at 50 to 60 fps, and an M5 over 87 minutes with no frame drops, where the reporter recommends a mouse (highball-db#1052).",
   "lastVerified": null
 }

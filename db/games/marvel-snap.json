@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by drawlast (highball-db#1029, 2026-11-06), Apple M2 Max, macOS 15.7.3, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 28 minutes. Not verified by the maintainer.",
+  "provenance": "Reported by drawlast (highball-db#1029, 2026-11-06), Apple M2 Max, macOS 15.7.3, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 28 minutes. Not verified by the maintainer. drawlast (highball-db#1092, 2026-11-08), Apple M2 Max, macOS 15.7.3, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 55 minutes. drawlast (highball-db#1095, 2026-11-09), Apple M2 Max, macOS 15.7.3, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 112 minutes: a second session by the same player.",
   "notes": "Reported perfect on an M2 Max with DXMT on the default engine (r28) over 28 minutes, on macOS 15.",
   "knownIssues": [],
   "launchArgs": null,

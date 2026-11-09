@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by artem6542 (highball-db#542, 2026-10-18), Apple M1, macOS 26.6.2, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, sync none, rated 5 of 5 after 6 minutes. Not verified by the maintainer. Ender2323232323232323 (highball#410, 2026-10-20), Apple M5, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28: crashes on DXMT and on DXVK, runs on D3DMetal, vanilla multiplayer works and over 500 mods and maps loaded.",
+  "provenance": "Reported by artem6542 (highball-db#542, 2026-10-18), Apple M1, macOS 26.6.2, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, sync none, rated 5 of 5 after 6 minutes. Not verified by the maintainer. Ender2323232323232323 (highball#410, 2026-10-20), Apple M5, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28: crashes on DXMT and on DXVK, runs on D3DMetal, vanilla multiplayer works and over 500 mods and maps loaded. matt-mcglynn (highball-db#1091, 2026-11-08), Apple M5, macOS 27.0.1, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, D3DMetal by the report (the environment's mode is DXMT), rated 5 of 5 after 97 minutes.",
   "notes": "Reported perfect on DXMT on the default engine on an M1, a short session.",
   "knownIssues": [
     {

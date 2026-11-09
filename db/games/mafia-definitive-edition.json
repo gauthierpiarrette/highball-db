@@ -1,0 +1,20 @@
+{
+  "id": "mafia-definitive-edition",
+  "title": "Mafia: Definitive Edition",
+  "steam_appid": 1030840,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#1094, 2026-11-09), Apple M1, macOS 27.2, Highball 0.10.26, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 4 of 5 after 31 minutes: about 20 fps at Low settings, still quite playable, the first chapter finished. The game takes no controller input with Steam Input on, even from an XInput pad, and has no built-in DualSense support. Not verified by the maintainer.",
+  "notes": "Playable on a base M1 with D3DMetal on the default engine (r29) at about 20 fps at Low settings, through the first chapter. Turn Steam Input off for the game for a controller to work.",
+  "knownIssues": [
+    {
+      "symptom": "No controller input with Steam Input on, even from an XInput (Xbox) pad, and no built-in DualSense support (M1, Wine 10 r29)",
+      "cause": "not diagnosed",
+      "fix": "turn Steam Input off for the game, then an XInput controller works (highball-db#1094, credit udance4ever)"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

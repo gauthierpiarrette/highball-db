@@ -1,0 +1,14 @@
+{
+  "id": "the-king-of-fighters-97-global-match",
+  "title": "THE KING OF FIGHTERS '97 GLOBAL MATCH",
+  "steam_appid": 702120,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by cfly (highball-db#1083, 2026-11-08), Apple M4, macOS 27.2, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXVK, rated 5 of 5 after 120 minutes: the report gives no Steam id, the copy isn't stated. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M4 with DXVK on the default engine (r28) over two hours.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

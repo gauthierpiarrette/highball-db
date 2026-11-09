@@ -5,9 +5,15 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#369, 2026-10-07), Apple M1, macOS 27.0.1, Highball 0.10.12, engine x64-sikarugir10.0_6-r22, D3DMetal, the Epic Games Store copy (his first Epic install through Highball), rated 5 of 5 after 3 minutes. Not verified by the maintainer.",
-  "notes": "Reported perfect on D3DMetal in a short session with the Epic copy, in an environment set to D3DMetal. The page does not pick a mode for it: one 3-minute report is not enough to move Automatic environments off their own mode (which would also ask for Apple's licence). No measurement here yet.",
-  "knownIssues": [],
+  "provenance": "Reported by udance4ever (highball-db#369, 2026-10-07), Apple M1, macOS 27.0.1, Highball 0.10.12, engine x64-sikarugir10.0_6-r22, D3DMetal, the Epic Games Store copy (his first Epic install through Highball), rated 5 of 5 after 3 minutes. Not verified by the maintainer. udance4ever again on highball-db#369 (2026-11-02), Highball 0.10.24, the Games environment on the default engine r28: stutter, mostly in the sound, in D3DMetal, DXMT and DXVK mode alike, and on r22 an echoey sound full of static. Hue.exe is a 32-bit program (the logs start it in wow64 mode) and D3DMetal only serves 64-bit ones, so in D3DMetal mode Highball hands the game to DXMT, which is why the Metal HUD showed DXMT D3D11. udance4ever again on highball-db#369 (2026-11-09): on a Wine 11 engine (revision not stated) with DXMT it plays at 120 fps on a base M1 (Metal HUD screenshot, 119.67 fps at 1920x1080). Some stutter at first came while Steam downloaded a game in the background and went away once that finished. No built-in DualSense support, XInput only.",
+  "notes": "Plays at 120 fps on a base M1 on a Wine 11 engine with DXMT, the Epic copy (highball-db#369). On the default Wine 10 engine the sound stuttered in every mode. It's a 32-bit game, so an environment in D3DMetal mode draws it through DXMT anyway. No built-in DualSense support, an XInput controller works.",
+  "knownIssues": [
+    {
+      "symptom": "The sound stutters, with some video stutter, in every graphics mode (M1, the default Wine 10 engine r22 to r29)",
+      "cause": "not diagnosed. Other 32-bit games had slow or broken sound on Wine 10 that the Wine 11 engines r30 and r31 fixed, which may be the same thing here (a guess)",
+      "fix": "a Wine 11 engine with DXMT plays it at 120 fps on an M1 (highball-db#369, 2026-11-09, credit udance4ever)"
+    }
+  ],
   "launchArgs": null,
   "lastVerified": null
 }

@@ -1,0 +1,14 @@
+{
+  "id": "syberia-remastered",
+  "title": "Syberia - Remastered",
+  "steam_appid": 3660220,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Amine930 (highball-db#1086, 2026-11-08), Apple M5, macOS 27.0.1, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 4 of 5 after 1656 minutes: the program is named SyberiaHD in the report, the remaster's internal name in its GOG builds (gogdb.org), so this page is an assumption. The environment has no Steam, so likely the GOG copy. Nothing stated about what wasn't perfect. Not verified by the maintainer.",
+  "notes": "Playable on an M5 with D3DMetal on the default engine (r28), with over 27 hours in Highball, in the one report so far. Which copy and which issues isn't stated.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

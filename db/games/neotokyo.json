@@ -1,0 +1,20 @@
+{
+  "id": "neotokyo",
+  "title": "NEOTOKYO°",
+  "steam_appid": 244630,
+  "status": "community",
+  "renderer": null,
+  "anticheat": {
+    "names": [
+      "VAC"
+    ],
+    "macVerdict": "warning",
+    "note": "anti-cheat present; Linux/Proton support does not extend to macOS — userspace path works for some titles"
+  },
+  "provenance": "Reported by AhuraVII (highball-db#1104, 2026-11-09), Apple M2 Pro, macOS 27.2, Highball 0.10.26, engine x64-crossover26.3-r31, DXMT, rated 4 of 5 after 3 minutes: with HB_X87SIDECAR=1 and the Half-Life 2 recipe. The reporter says it absolutely needs the x87 sidecar, as a Source engine game heavy on x87 maths. Performance is not spectacular but playable, some maps at 30 fps or less, and the game is janky on a Windows PC too. Not verified by the maintainer.",
+  "notes": "A free Source engine mod on Steam. Playable on an M2 Pro on the Wine 11 engine r31 with athei's x87 sidecar switched on (HB_X87SIDECAR=1 in the environment's variables, r30 and r31 carry it), which the reporter says it needs. Some maps run at 30 fps or less.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -1,0 +1,14 @@
+{
+  "id": "evans-remains-demo",
+  "title": "Evan's Remains Demo",
+  "steam_appid": 1114470,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#1096, 2026-11-09), Apple M1, macOS 27.2, Highball 0.10.26, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 5 of 5 after 28 minutes: the whole demo in 28 minutes at 60 fps. Not verified by the maintainer.",
+  "notes": "Reported perfect on a base M1 with D3DMetal on the default engine (r29), the whole demo at 60 fps. The free demo of Evan's Remains (Steam app 1110050).",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

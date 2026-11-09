@@ -1,0 +1,14 @@
+{
+  "id": "disney-speedstorm",
+  "title": "Disney Speedstorm",
+  "steam_appid": 1537830,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by aarav-saini (highball-db#1108, 2026-11-09), Apple M1, macOS 27.0, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, D3DMetal by the report (the environment's mode is DXMT), rated 5 of 5 after 129 minutes: barely any frame drops. Not verified by the maintainer.",
+  "notes": "A free-to-play online racing game. Reported perfect on an M1 on the default engine (r28) over 129 minutes, with barely any frame drops.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by ilan-addsearch (highball-db#436, 2026-10-10), Apple M5 Pro, macOS 27.0, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, mode not stated, rated 5 of 5 after 37 minutes. Not verified by the maintainer.",
+  "provenance": "Reported by ilan-addsearch (highball-db#436, 2026-10-10), Apple M5 Pro, macOS 27.0, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, mode not stated, rated 5 of 5 after 37 minutes. Not verified by the maintainer. FenixSSA (highball-db#1082, 2026-11-08), Apple M5 Pro, macOS 26.6.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 41 minutes: with sync off.",
   "notes": "Reported perfect over a 37-minute session on an M5 Pro. No measurement here yet.",
   "knownIssues": [],
   "launchArgs": null,

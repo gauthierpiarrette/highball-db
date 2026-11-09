@@ -1,0 +1,13 @@
+{
+  "id": "fifa-19",
+  "title": "FIFA 19",
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by seakhong137 (highball-db#1110, 2026-11-09), Apple M1, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXVK, rated 3 of 5 after 9 minutes: nothing stated about the workaround. Not verified by the maintainer.",
+  "notes": "EA's FIFA 19, not on Steam (Steam's store search finds no FIFA 19). Rated playable with workarounds on an M1 with DXVK on the default engine (r28) in a nine minute session, with no workaround named.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

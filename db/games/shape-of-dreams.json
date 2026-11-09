@@ -1,0 +1,14 @@
+{
+  "id": "shape-of-dreams",
+  "title": "Shape of Dreams",
+  "steam_appid": 2444750,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by willthehuman (highball-db#1093, 2026-11-09), Apple M1 Pro, macOS 26.6.2, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 5 of 5 after 33 minutes: the game set to D3DMetal and started with -force-d3d12. Over two hours across several sessions without any issues. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M1 Pro over more than two hours with D3DMetal on the default engine (r28), the game started with -force-d3d12 so it uses Direct3D 12.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

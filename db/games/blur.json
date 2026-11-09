@@ -1,0 +1,13 @@
+{
+  "id": "blur",
+  "title": "Blur",
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by skinnymcbones (highball-db#1119, 2026-11-09), Apple M1, macOS 27.3, Highball 0.10.26, engine x64-crossover26.3-r31, WineD3D by the report (the environment's mode is DXVK), rated 5 of 5 after 1 minute: the program is named Blur in the report, taken to be Bizarre Creations' 2010 racing game. Not verified by the maintainer.",
+  "notes": "Bizarre Creations' 2010 racing game, assumed from the program's name, Blur. Not on Steam (no match in Steam's store search). Reported perfect on an M1 on the Wine 11 engine r31 in a one minute session, so it covers the start only.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
