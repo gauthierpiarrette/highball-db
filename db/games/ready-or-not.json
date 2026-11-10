@@ -1,0 +1,25 @@
+{
+  "id": "ready-or-not",
+  "title": "Ready or Not",
+  "steam_appid": 1144200,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by leo9798 (highball-db#1144, 2026-11-10), Apple M4, macOS 26.7.2, Highball 0.10.26, engine x64-crossover26.3-r31, D3DMetal by the report (the environment's mode is DXVK), rated 4 of 5 after 8 minutes: with xinput1_4 set to native then builtin. The mouse cursor showed over the game, and the first launch sat on a black screen for a long time before the game came up. Not verified by the maintainer.",
+  "notes": "Playable on a base M4 on the Wine 11 engine r31, the environment in DXVK mode with D3DMetal by the report, in an eight minute session. The mouse cursor shows over the game, and the first launch takes a long time on a black screen.",
+  "knownIssues": [
+    {
+      "symptom": "The Mac's mouse cursor shows over the game (M4, Wine 11 r31)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    },
+    {
+      "symptom": "The first launch sits on a black screen for a long time (M4, Wine 11 r31)",
+      "cause": "not diagnosed",
+      "fix": "wait, the game comes up"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

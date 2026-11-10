@@ -11,7 +11,7 @@
     "macVerdict": "warning",
     "note": "anti-cheat present; it runs on Linux through Proton, which does not settle macOS"
   },
-  "provenance": "Reported by kushagrmishra (highball-db#615, 2026-10-21), Apple M4 Pro, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal environment, msync, rated 4 of 5 after 7 minutes. Not verified by the maintainer.",
+  "provenance": "Reported by kushagrmishra (highball-db#615, 2026-10-21), Apple M4 Pro, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal environment, msync, rated 4 of 5 after 7 minutes. Not verified by the maintainer. kushagrmishra again on highball-db#1132 (2026-11-10), a short written report: frame drops and high power use, then that the game isn't working. The Highball version, engine, mode and what happens now aren't stated yet.",
   "notes": "Reported playable on the default engine with D3DMetal over 7 minutes, smooth by the reporter's account, with frame drops they tie to framing and the connection. The game asks about the graphics driver at launch and runs after it, and it drains the battery fast, so the reporter suggests playing plugged in. The anti-cheat map lists NetEase Game Security for it. Nothing was measured here.",
   "knownIssues": [
     {

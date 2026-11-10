@@ -1,0 +1,14 @@
+{
+  "id": "thief",
+  "title": "THIEF: Definitive Edition",
+  "steam_appid": 239160,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#1127, 2026-11-10), Apple M1, macOS 27.2, Highball 0.10.26, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 5 of 5 after 15 minutes: the GOG copy, which downloaded and used the reporter's cloud save. 45 to 60 fps, with the drops perhaps from shader compiling. The Metal HUD screenshot shows D3D11 through Game Porting Toolkit 4.0b2 at 60 fps and 1920x1080. No built-in DualSense support, XInput only. Not verified by the maintainer.",
+  "notes": "The 2014 Thief, sold on GOG as THIEF: Definitive Edition and on Steam as Thief (239160), whose Steam release also has a Mac version by Feral. Reported perfect on a base M1 with D3DMetal on the default engine (r29), the GOG copy, at 45 to 60 fps. An XInput controller works, a DualSense isn't supported by the game itself.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -1,0 +1,36 @@
+{
+  "id": "ghost-of-tsushima-directors-cut",
+  "title": "Ghost of Tsushima DIRECTOR'S CUT",
+  "steam_appid": 2215430,
+  "status": "community",
+  "renderer": null,
+  "anticheat": {
+    "names": [
+      "PlayStation Overlay"
+    ],
+    "macVerdict": "warning",
+    "note": "anti-cheat present; Linux/Proton support does not extend to macOS — userspace path works for some titles"
+  },
+  "provenance": "Reported by Clemens00505 (highball-db#1141, 2026-11-10), Apple M5 Pro, macOS 27.2.1, Highball 0.10.26, engine x64-crossover26.3-r30, D3DMetal by the report (the environment's mode is DXMT), rated 4 of 5 after 21 minutes: in the open world at a steady 60 fps (capped) at 1728x1117 with FSR 3.1.4 and the High preset. AVX must be advertised or the game refuses to start with an F16C CPU error. A harmless No installed graphics card detected box shows at launch, OK goes on. With Upscale Method set to DLSS (MetalFX) it stutters and then freezes, and the log repeats kIOGPUCommandBufferCallbackErrorTimeout right after MetalFX starts, then Ignored (for causing prior/excessive GPU errors). FSR 3.1.4 gives no GPU errors. The game has only Direct3D 12, which DXMT doesn't serve, so Highball hands it to D3DMetal. Not verified by the maintainer.",
+  "notes": "Plays on an M5 Pro on the Wine 11 engine r30 with D3DMetal at a steady 60 fps (capped) with FSR 3.1.4 and the High preset (highball-db#1141). Turn on Advertise AVX, or the game refuses to start with an F16C CPU error. Use FSR, not DLSS: with DLSS (MetalFX) the GPU times out and the game freezes. Single player only so far, the Legends online mode is untested.",
+  "knownIssues": [
+    {
+      "symptom": "Refuses to start with an F16C CPU error (M5 Pro, Wine 11 r30)",
+      "cause": "not measured here. Rosetta shows AVX and the newer CPU features to games only when asked, and asking fixed it",
+      "fix": "turn on Advertise AVX to games in the environment's settings (highball-db#1141, credit Clemens00505)"
+    },
+    {
+      "symptom": "Stutters, then freezes in game with Upscale Method set to DLSS (MetalFX) (M5 Pro, Wine 11 r30, D3DMetal)",
+      "cause": "the log shows GPU timeout errors right after MetalFX starts, then the GPU ignoring the game's work. Not measured here",
+      "fix": "use FSR 3.1.4 instead, which gives no GPU errors (highball-db#1141)"
+    },
+    {
+      "symptom": "A No installed graphics card detected box at launch (M5 Pro, Wine 11 r30)",
+      "cause": "not diagnosed",
+      "fix": "click OK, the game runs fine after it"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

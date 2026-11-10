@@ -1,0 +1,14 @@
+{
+  "id": "asteroids-recharged",
+  "title": "Asteroids: Recharged",
+  "steam_appid": 1700890,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by buzz-ard294 (highball-db#1142, 2026-11-10), Apple M4, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 5 of 5 after 2 minutes: the report gives no Steam id. Not verified by the maintainer.",
+  "notes": "Reported perfect on a base M4 with D3DMetal on the default engine (r28) in a two minute session, so it covers the start only.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -1,0 +1,14 @@
+{
+  "id": "yakuza-kiwami",
+  "title": "Yakuza Kiwami",
+  "steam_appid": 3717330,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by MelloMin (highball-db#1134, 2026-11-10), Apple M4 Pro, macOS 26.5.1, Highball 0.10.26, engine x64-crossover26.3-r10, D3DMetal by the report (the environment's mode is DXVK), rated 5 of 5 after 235 minutes: the program is named yakuzakiwami_r in the report, and Steam's current Yakuza Kiwami (3717330) installs to a folder named Yakuza Kiwami R, so this page is that release, not the 2019 one Steam now calls Yakuza Kiwami (Legacy) (834530). Not verified by the maintainer.",
+  "notes": "The current Steam release of Yakuza Kiwami. Reported perfect on an M4 Pro over almost four hours on an early Wine 11 engine (r10), in an environment in DXVK mode, with D3DMetal by the report.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

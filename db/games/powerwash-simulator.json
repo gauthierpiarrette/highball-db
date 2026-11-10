@@ -5,13 +5,13 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by mpandrade (highball-db#441, 2026-10-11), Apple M5 Pro, macOS 27.0.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, DXMT, rated 4 of 5 after 2 minutes. Not verified by the maintainer.",
-  "notes": "Reported to run on DXMT, the default mode, on an M5 Pro, but with no sound at all. The session was two minutes.",
+  "provenance": "Reported by mpandrade (highball-db#441, 2026-10-11), Apple M5 Pro, macOS 27.0.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, DXMT, rated 4 of 5 after 2 minutes. Not verified by the maintainer. theacodes (highball-db#1128, 2026-11-10), Apple M4 Pro, macOS 27.0.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 1 minute: starts fine and goes into the main game with no settings changed, and the sound works for this player, unlike in the earlier report.",
+  "notes": "Reported to run on DXMT, the default mode. On an M5 Pro with engine r21 there was no sound at all (highball-db#441), while on an M4 Pro with engine r28 the sound worked (highball-db#1128). Both sessions were short, one and two minutes.",
   "knownIssues": [
     {
       "symptom": "No sound at all (reported on an M5 Pro, macOS 27.0.1)",
       "cause": "not investigated.",
-      "fix": "none known yet."
+      "fix": "none known yet. The sound works for a player on an M4 Pro with engine r28 and DXMT (highball-db#1128), so it isn't every Mac"
     }
   ],
   "launchArgs": null,

@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by 1920668427 (highball-db#520, 2026-10-17), Apple M4, macOS 26.7.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, D3DMetal environment, recipes steam, fakejapanese, controller-sdl, corefonts and vcrun2022, rated 5 of 5 after 13 minutes. Not verified by the maintainer. TheDunedinChad (highball-db#921, 2026-11-02), Apple M4, macOS 26.5.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, rated 5 of 5 after 10 minutes.",
-  "notes": "Reported perfect on D3DMetal on the default engine on an M4. DXMT, the default mode, is untested, so the page does not pick a mode. No frame rate given.",
+  "provenance": "Reported by 1920668427 (highball-db#520, 2026-10-17), Apple M4, macOS 26.7.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, D3DMetal environment, recipes steam, fakejapanese, controller-sdl, corefonts and vcrun2022, rated 5 of 5 after 13 minutes. Not verified by the maintainer. TheDunedinChad (highball-db#921, 2026-11-02), Apple M4, macOS 26.5.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, rated 5 of 5 after 10 minutes. viperwraith47 (highball-db#1129, 2026-11-10), Apple A18 Pro, macOS 27.3, Highball 0.10.26, engine x64-crossover26.3-r30, D3DMetal, rated 5 of 5 after 28 minutes: the program is named Astro in the report, the name of this game's exe, Astro.exe, with AVX advertised, Retina pixels at 100% and Windows 11 as the Windows version.",
+  "notes": "Reported perfect on D3DMetal on the default engine on an M4. DXMT, the default mode, is untested, so the page does not pick a mode. No frame rate given. Also perfect on an A18 Pro (MacBook Neo) on the Wine 11 engine r30 with D3DMetal over 28 minutes (highball-db#1129).",
   "knownIssues": [],
   "launchArgs": null,
   "lastVerified": null
