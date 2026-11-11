@@ -1,0 +1,30 @@
+{
+  "id": "star-wars-zero-company",
+  "title": "STAR WARS Zero Company",
+  "steam_appid": 2075800,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by RelaxedBlastoise (highball-db#1148, 2026-11-11), Apple M3 Pro, macOS 27.0.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 4 of 5 after 87 minutes: on high settings at a lower resolution, in a window, with the vcrun2022 recipe. Frame drops at times after switching away from the game and back. In a few sessions the Escape key stopped working, while Escape with Shift held still worked. Earning an achievement moves the focus to Steam, which the reporter thinks may come from playing in a window. Not verified by the maintainer.",
+  "notes": "Playable on an M3 Pro with D3DMetal on the Wine 10 engine r29 over 87 minutes, on high settings at a lower resolution, in a window. If Escape stops working, press it with Shift held.",
+  "knownIssues": [
+    {
+      "symptom": "Frame drops after switching away from the game and back, not every time (M3 Pro, Wine 10 r29, D3DMetal)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    },
+    {
+      "symptom": "The Escape key stops working in some sessions (M3 Pro, Wine 10 r29, D3DMetal)",
+      "cause": "not diagnosed",
+      "fix": "press Escape with Shift held, which still works (highball-db#1148, credit RelaxedBlastoise)"
+    },
+    {
+      "symptom": "Earning an achievement moves the focus to Steam (M3 Pro, Wine 10 r29, in a window)",
+      "cause": "not diagnosed. The reporter played in a window and thinks that may be why",
+      "fix": "click back into the game"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

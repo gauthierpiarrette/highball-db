@@ -1,0 +1,14 @@
+{
+  "id": "homgard",
+  "title": "Homgard",
+  "steam_appid": 4287570,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by phantomwhale (highball-db#1147, 2026-11-11), Apple M3 Pro, macOS 26.7.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 61 minutes. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M3 Pro with DXMT on the default engine (r28) over 61 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

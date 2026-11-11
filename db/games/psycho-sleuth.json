@@ -1,0 +1,25 @@
+{
+  "id": "psycho-sleuth",
+  "title": "Psycho-Sleuth",
+  "steam_appid": 3432860,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by taconotsandwich (highball-db#1152, 2026-11-11), Apple M4 (MacBook Air), macOS 27.2.1, rated 2 of 5: a dialogue can stay stuck for good and the battle screen is drawn distorted, while input and the interface work. The reporter says the game can still be finished by restarting at a stuck dialogue and ignoring the battle screen, as it isn't a gameplay focused game. The engine, renderer and Highball version aren't stated. Not verified by the maintainer.",
+  "notes": "Launches but isn't playable for one player on an M4 MacBook Air: a dialogue can stay stuck for good and the battle screen is drawn distorted. The engine and renderer aren't known yet, so it isn't clear which setup this applies to.",
+  "knownIssues": [
+    {
+      "symptom": "A dialogue can stay stuck for good (M4 MacBook Air, engine and renderer not stated)",
+      "cause": "not diagnosed",
+      "fix": "restart the game, by the reporter (highball-db#1152)"
+    },
+    {
+      "symptom": "The battle screen is drawn distorted (M4 MacBook Air, engine and renderer not stated)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
