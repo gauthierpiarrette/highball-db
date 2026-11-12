@@ -5,16 +5,16 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by taconotsandwich (highball-db#1152, 2026-11-11), Apple M4 (MacBook Air), macOS 27.2.1, rated 2 of 5: a dialogue can stay stuck for good and the battle screen is drawn distorted, while input and the interface work. The reporter says the game can still be finished by restarting at a stuck dialogue and ignoring the battle screen, as it isn't a gameplay focused game. The engine, renderer and Highball version aren't stated. Not verified by the maintainer.",
-  "notes": "Launches but isn't playable for one player on an M4 MacBook Air: a dialogue can stay stuck for good and the battle screen is drawn distorted. The engine and renderer aren't known yet, so it isn't clear which setup this applies to.",
+  "provenance": "Reported by taconotsandwich (highball-db#1152, 2026-11-11), Apple M4 (MacBook Air), macOS 27.2.1, rated 2 of 5: a dialogue can stay stuck for good and the battle screen is drawn distorted, while input and the interface work. The reporter says the game can still be finished by restarting at a stuck dialogue and ignoring the battle screen, as it isn't a gameplay focused game. The engine, renderer and Highball version aren't stated. Not verified by the maintainer. taconotsandwich again on highball-db#1152 (2026-11-12): Highball 0.10.26, and every setup tried gives the same result. The battle screen is distorted rather than black and looks to the reporter like a visual effect. The reporter thinks the game itself is at fault and has no log, the game is deleted.",
+  "notes": "Launches but isn't playable for one player on an M4 MacBook Air with Highball 0.10.26: a dialogue can stay stuck for good and the battle screen's effects are drawn distorted, the same in every setup the player tried. The player thinks the game itself is at fault, which isn't checked here. A new game, so an update may change this.",
   "knownIssues": [
     {
-      "symptom": "A dialogue can stay stuck for good (M4 MacBook Air, engine and renderer not stated)",
+      "symptom": "A dialogue can stay stuck for good (M4 MacBook Air, Highball 0.10.26, every setup tried)",
       "cause": "not diagnosed",
       "fix": "restart the game, by the reporter (highball-db#1152)"
     },
     {
-      "symptom": "The battle screen is drawn distorted (M4 MacBook Air, engine and renderer not stated)",
+      "symptom": "The battle screen's effects are drawn distorted, not black (M4 MacBook Air, Highball 0.10.26, every setup tried)",
       "cause": "not diagnosed",
       "fix": "none known"
     }

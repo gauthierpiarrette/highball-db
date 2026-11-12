@@ -1,0 +1,14 @@
+{
+  "id": "ghostwire-tokyo",
+  "title": "Ghostwire: Tokyo",
+  "steam_appid": 1475810,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by genodf (highball-db#1161, 2026-11-11), Apple M5 Pro, macOS 27.2.1, Highball 0.10.27, engine x64-crossover26.3-r30, D3DMetal, rated 5 of 5 after 13 minutes: the report gives no Steam id, so the copy isn't stated. The environment has sync off and also carries other games' recipes. Not verified by the maintainer.",
+  "notes": "Taken to be the Steam release (1475810). Reported perfect on an M5 Pro with D3DMetal on the Wine 11 engine r30 in a 13 minute session, so it covers the start only.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

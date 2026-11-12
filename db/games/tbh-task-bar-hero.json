@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by bettercalldoel (highball-db#641, 2026-10-23), Apple M2, macOS 26.5.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, msync, rated 5 of 5 after 140 minutes. Not verified by the maintainer.",
-  "notes": "Reported perfect on the default engine with DXMT on an M2, over a 140-minute session. Nothing was measured here.",
+  "provenance": "Reported by bettercalldoel (highball-db#641, 2026-10-23), Apple M2, macOS 26.5.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, msync, rated 5 of 5 after 140 minutes. Not verified by the maintainer. therealmutlusen (highball-db#1157, 2026-11-11), Apple M6, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 7 minutes.",
+  "notes": "Reported perfect on the default engine with DXMT on an M2, over a 140-minute session. Nothing was measured here. Also reported perfect on an Apple M6 over 7 minutes (highball-db#1157).",
   "knownIssues": [],
   "launchArgs": null,
   "lastVerified": null

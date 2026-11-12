@@ -4,8 +4,8 @@
   "status": "community",
   "renderer": "d3dmetal",
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#776, 2026-10-29), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 4 of 5 after 7 minutes: about 10 fps on an M1 but playable, the Epic copy. Not verified by the maintainer.",
-  "notes": "Reported playable on an M1 with D3DMetal at about 10 fps (Epic). The game picks High by default. On an M1 the Notebook preset, three steps down, holds about 30 fps (udance4ever, 2026-10-29).",
+  "provenance": "Reported by udance4ever (highball-db#776, 2026-10-29), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 4 of 5 after 7 minutes: about 10 fps on an M1 but playable, the Epic copy. Not verified by the maintainer. udance4ever on highball-db#776 (2026-11-12): in Highball 0.10.27 the Epic copy's tile carries the Apple logo, so the Epic purchase includes a Mac version. The reporter hasn't tried it yet.",
+  "notes": "Reported playable on an M1 with D3DMetal at about 10 fps (Epic). The game picks High by default. On an M1 the Notebook preset, three steps down, holds about 30 fps (udance4ever, 2026-10-29). The Epic purchase includes a Mac version, which Highball can install since 0.10.27 (highball-db#776).",
   "knownIssues": [
     {
       "symptom": "About 10 fps on an M1 at the default High preset",
