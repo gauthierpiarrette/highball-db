@@ -1,0 +1,14 @@
+{
+  "id": "crime-simulator",
+  "title": "Crime Simulator",
+  "steam_appid": 2737070,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by therealmutlusen (highball-db#1175, 2026-11-12), Apple M6, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 2 minutes: in an environment set up for Counter-Strike 2, whose dxvk.conf section is for csgo.exe only. Smooth at medium settings, and at Ultra the game showed a warning but still ran without stutter. Not verified by the maintainer.",
+  "notes": "Reported perfect on an Apple M6 with DXMT on the default engine (r28) in a 2 minute session. Smooth at medium settings, and at Ultra the game showed a warning but still ran without stutter.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -1,0 +1,20 @@
+{
+  "id": "civilization-iv",
+  "title": "Sid Meier's Civilization IV",
+  "steam_appid": 3900,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by DerReparator (highball-db#1168, 2026-11-12), Apple M2 Pro, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r29, D3DMetal by the report (the environment's mode is WineD3D), rated 4 of 5 after 8 minutes: choppy for about 30 seconds after it starts. The player says the session count is wrong: starting the tutorial restarts the game, and the tutorial was played through in over an hour, with anti aliasing set to 4x. Not verified by the maintainer.",
+  "notes": "Reported playable on an M2 Pro on the Wine 10 engine r29, choppy for about 30 seconds after it starts, then the tutorial played through. Starting the tutorial restarts the game, and Highball's session count stopped at 8 minutes while the player played over an hour.",
+  "knownIssues": [
+    {
+      "symptom": "Choppy for about 30 seconds after the game starts (M2 Pro, Wine 10 r29)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

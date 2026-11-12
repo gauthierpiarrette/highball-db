@@ -1,0 +1,20 @@
+{
+  "id": "star-wars-jedi-survivor",
+  "title": "STAR WARS Jedi: Survivor",
+  "steam_appid": 1774580,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by darkarena1 (highball-db#1176, 2026-11-12), Apple M1 Max, macOS 27.0.1, Highball 0.10.26, engine x64-crossover26.3-r30, DXVK by the report (the environment's mode is DXMT), rated 4 of 5 after 1 minute: about an hour and a half by the player, which the session count missed. Controls were great, and some videos stutter now and then. Not verified by the maintainer. darkarena1 (highball-db#1179, 2026-11-12), Apple M1 Max, macOS 27.0.1, Highball 0.10.26, engine x64-crossover26.3-r30, D3DMetal by the report (the environment's mode is DXMT), rated 4 of 5 after 17 minutes: the same player again, nothing named.",
+  "notes": "Reported playable twice by one player on an M1 Max with the Wine 11 engine r30. With the game set to DXVK, about an hour and a half of play by the player's count, controls were great and some videos stutter now and then. With the game set to D3DMetal, 17 minutes, nothing named. Steam's store page says the Steam copy needs the EA app.",
+  "knownIssues": [
+    {
+      "symptom": "Some of the game's videos stutter now and then (M1 Max, Wine 11 r30)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -1,0 +1,14 @@
+{
+  "id": "mahjong-soul",
+  "title": "Mahjong Soul",
+  "steam_appid": 2739990,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by LishOwO (highball-db#1170, 2026-11-12), Apple M5, macOS 26.6.2, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 17 minutes: three ranked matches in gold rooms, about two hours by the player, which the session count missed, no lag. Not verified by the maintainer.",
+  "notes": "Reported perfect on a base M5 with DXMT on the default engine (r28), macOS 26.6.2: three ranked matches, about two hours by the player, with no lag. Highball's session count stopped at 17 minutes. Steam's store page says it needs a Yostar account, which can be linked to Steam.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
