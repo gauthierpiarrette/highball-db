@@ -1,0 +1,39 @@
+{
+  "id": "detroit-become-human-demo",
+  "kind": "game",
+  "title": "Detroit: Become Human Demo",
+  "requires": [
+    "steam"
+  ],
+  "engine": "x64-crossover26.3-r31",
+  "renderer": null,
+  "steps": [
+    {
+      "type": "environment",
+      "name": "HB_MVK_LENIENT_INTERFACES",
+      "value": "1"
+    },
+    {
+      "type": "environment",
+      "name": "MVK_CONFIG_SHADER_COMPRESSION_ALGORITHM",
+      "value": "1"
+    },
+    {
+      "type": "environment",
+      "name": "MVK_CONFIG_SHOULD_MAXIMIZE_CONCURRENT_COMPILATION",
+      "value": "1"
+    },
+    {
+      "type": "note",
+      "text": "The full game's settings, for its free demo. Asks for the Wine 11 engine r31 or newer, whose MoltenVK carries the changes this game needs. The game draws with Vulkan through MoltenVK, so the graphics mode does not matter. HB_MVK_LENIENT_INTERFACES turns on two MoltenVK workarounds made for Detroit, the second variable compresses the shader source MoltenVK keeps in memory and the third compiles shaders on every core. The launcher still warns that the graphics card is not supported, press OK. The demo played with these three variables on r31 for ajukraine (M3 Max, highball-db#1211)."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "A blur over parts of the picture every so often",
+      "cause": "the game's own post processing under MoltenVK, a community patch to the game's exe removes it",
+      "fix": "none in Highball, which does not change game files"
+    }
+  ],
+  "lastVerified": null
+}
