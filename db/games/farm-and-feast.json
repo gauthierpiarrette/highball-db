@@ -1,0 +1,18 @@
+{
+  "id": "farm-and-feast",
+  "title": "Farm & Feast",
+  "steam_appid": 4521650,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by chickjiew (highball-db#1215, 2026-11-14), Apple M4, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 13 minutes: with a 60 fps cap. Not verified by the maintainer.",
+  "notes": "Reported perfect on a base M4 with DXMT on the default engine (r28) and a 60 fps cap over 13 minutes. Steam lists a Mac version as well.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null,
+  "nativeMac": {
+    "available": true,
+    "where": "Steam"
+  }
+}

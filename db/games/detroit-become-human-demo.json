@@ -1,0 +1,20 @@
+{
+  "id": "detroit-become-human-demo",
+  "title": "Detroit: Become Human Demo",
+  "steam_appid": 1224230,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by ajukraine (highball-db#1211, 2026-11-14), Apple M3 Max, macOS 27.0.1, Highball 0.10.26, engine x64-crossover26.3-r31, DXMT by the report, a mode the game doesn't use since it draws with Vulkan through MoltenVK, rated 4 of 5 after 18 minutes: with the three MoltenVK variables of the full game's recipe in the environment (HB_MVK_LENIENT_INTERFACES=1, MVK_CONFIG_SHADER_COMPRESSION_ALGORITHM=1, MVK_CONFIG_SHOULD_MAXIMIZE_CONCURRENT_COMPILATION=1). In the player's words the frame rate dropped after 30 minutes with DEPTH_OF_FIELD at 1. Not verified by the maintainer.",
+  "notes": "The free demo of Detroit: Become Human (1222140), which has its own page. Like the full game it draws with Vulkan through MoltenVK, so the graphics mode doesn't apply. Reported playable on an M3 Max on the Wine 11 engine r31 over 18 minutes, with the three MoltenVK variables of the full game's recipe in the environment. That recipe is the full game's, so Play doesn't apply it to the demo. The player saw the frame rate drop after 30 minutes with DEPTH_OF_FIELD at 1.",
+  "knownIssues": [
+    {
+      "symptom": "The frame rate drops after 30 minutes with DEPTH_OF_FIELD at 1, in the player's words (M3 Max, Wine 11 r31, highball-db#1211)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -4,8 +4,8 @@
   "steam_appid": 349040,
   "status": "verified-local",
   "renderer": "d3dmetal",
-  "provenance": "verified locally on Apple Silicon (M1 Pro), engine x64-sikarugir10.0_6-r2, macOS 26.6.2, Highball 0.9.3",
-  "notes": "Plays on D3DMetal. Tested 2026-09-10 on an M1 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r2: a fight renders and plays correctly at 1920x1080 on D3DMetal, which is what this row now tells Highball to pick. The other two modes do not work for this game and the difference is stark: on DXMT 0.80 the movie, title and menus are fine but in a fight the frame flashes black most of the time with brief moments of the correct image, at a steady 30 fps and 13 ms of GPU; on DXVK 1.10.4 the 2D HUD draws and the 3D world never appears, with a clean log. D3DMetal is Apple's Game Porting Toolkit and is gated on Apple's licence, which Highball asks you to accept the first time a game needs it. Before the first start Steam shows a Bandai Namco licence agreement inside its own window that has to be accepted once. The game is built for a pad and shows pad glyphs: on a keyboard the default mapping is A = L, B = ;, X = K, Y = O, Start = Enter, movement on WASD, so the Press A title screen and the first-run save dialog both want L. Change it in Options > Controls or in config.ini next to the exe. 30 fps is the game's own cap in menus and cinematics.",
+  "provenance": "verified locally on Apple Silicon (M1 Pro), engine x64-sikarugir10.0_6-r2, macOS 26.6.2, Highball 0.9.3. Bee777 (highball-db#1216, 2026-11-14), Apple M1 Pro, macOS 26.6.2, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, D3DMetal by the report (the environment's mode is DXMT), rated 4 of 5 after 1 minute: at 192 dpi, after the player switched away from the game and back, the picture showed only on the left part of the screen, cut off on the right.",
+  "notes": "Plays on D3DMetal. Tested 2026-09-10 on an M1 Pro, macOS 26.6.2, engine x64-sikarugir10.0_6-r2: a fight renders and plays correctly at 1920x1080 on D3DMetal, which is what this row now tells Highball to pick. The other two modes do not work for this game and the difference is stark: on DXMT 0.80 the movie, title and menus are fine but in a fight the frame flashes black most of the time with brief moments of the correct image, at a steady 30 fps and 13 ms of GPU; on DXVK 1.10.4 the 2D HUD draws and the 3D world never appears, with a clean log. D3DMetal is Apple's Game Porting Toolkit and is gated on Apple's licence, which Highball asks you to accept the first time a game needs it. Before the first start Steam shows a Bandai Namco licence agreement inside its own window that has to be accepted once. The game is built for a pad and shows pad glyphs: on a keyboard the default mapping is A = L, B = ;, X = K, Y = O, Start = Enter, movement on WASD, so the Press A title screen and the first-run save dialog both want L. Change it in Options > Controls or in config.ini next to the exe. 30 fps is the game's own cap in menus and cinematics. A player on an M1 Pro rated it playable with minor issues in a 1 minute session on the default engine (r28) at 192 dpi: after switching away from the game and back, the picture showed only on the left part of the screen, cut off on the right (highball-db#1216).",
   "lastVerified": "2026-09-10",
   "rendererResults": {
     "d3dmetal": {
@@ -32,6 +32,11 @@
       "symptom": "On DXMT a fight is black most of the time with brief flashes of the picture; on DXVK the characters and stage never draw.",
       "cause": "unknown. The game runs at a steady frame rate and the HUD is fine on both, so it is the 3D scene's presentation that those two modes get wrong.",
       "fix": "use D3DMetal, which this row selects for you."
+    },
+    {
+      "symptom": "After switching away from the game and back, the picture shows only on the left part of the screen, cut off on the right (M1 Pro, Wine 10 r28, 192 dpi, highball-db#1216)",
+      "cause": "not diagnosed",
+      "fix": "none known"
     }
   ]
 }

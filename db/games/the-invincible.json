@@ -1,0 +1,14 @@
+{
+  "id": "the-invincible",
+  "title": "The Invincible",
+  "steam_appid": 731040,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by jacobkaufman (highball-db#1212, 2026-11-14), Apple M4 Max, macOS 27.0.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 5 of 5 after 290 minutes. Not verified by the maintainer.",
+  "notes": "Starward Industries' 2023 adventure game. Reported perfect on an M4 Max with D3DMetal on the default engine (r28) over 290 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
