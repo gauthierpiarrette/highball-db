@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by bettercalldoel (highball-db#641, 2026-10-23), Apple M2, macOS 26.5.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, msync, rated 5 of 5 after 140 minutes. Not verified by the maintainer. therealmutlusen (highball-db#1157, 2026-11-11), Apple M6, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 7 minutes.",
-  "notes": "Reported perfect on the default engine with DXMT on an M2, over a 140-minute session. Nothing was measured here. Also reported perfect on an Apple M6 over 7 minutes (highball-db#1157).",
+  "provenance": "Reported by bettercalldoel (highball-db#641, 2026-10-23), Apple M2, macOS 26.5.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, msync, rated 5 of 5 after 140 minutes. Not verified by the maintainer. therealmutlusen (highball-db#1157, 2026-11-11), Apple M6, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 7 minutes. therealmutlusen (highball-db#1205, 2026-11-14), Apple M6, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 1 minute: the same player as highball-db#1157, minor issues not described, in an environment set up for Counter-Strike 2, whose dxvk.conf section is for csgo.exe only.",
+  "notes": "Reported perfect on the default engine with DXMT on an M2, over a 140-minute session. Nothing was measured here. Also reported perfect on an Apple M6 over 7 minutes (highball-db#1157). The same player rated it 4 of 5 in a later 1 minute session without saying what wasn't perfect (highball-db#1205).",
   "knownIssues": [],
   "launchArgs": null,
   "lastVerified": null

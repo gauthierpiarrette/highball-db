@@ -1,0 +1,20 @@
+{
+  "id": "the-forest",
+  "title": "The Forest",
+  "steam_appid": 242760,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by xxxtan1 (highball-db#1204, 2026-11-14), Apple M4, macOS 26.6.2, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 18 minutes: named TheForest in the report, the copy isn't stated. Moving the mouse quickly drops the frame rate. Not verified by the maintainer.",
+  "notes": "Reported perfect on a base M4 with DXMT on the default engine (r28) over 18 minutes, though moving the mouse quickly drops the frame rate. Taken to be the Steam release (242760).",
+  "knownIssues": [
+    {
+      "symptom": "Moving the mouse quickly drops the frame rate (M4, Wine 10 r28, highball-db#1204)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -1,0 +1,24 @@
+{
+  "id": "brotato",
+  "title": "Brotato",
+  "steam_appid": 1942280,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Fryvanlee (highball-db#1195, 2026-11-13), Apple M4, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 71 minutes: gameplay perfect. In the player's words, changing display needs a restart of Highball, and automatic resizing is a bit buggy. Not verified by the maintainer.",
+  "notes": "Reported perfect on a base M4 with DXMT on the default engine (r28) over 71 minutes. The player says changing the display needs Highball restarted and the automatic resizing is a bit buggy. Steam lists a Mac version as well.",
+  "knownIssues": [
+    {
+      "symptom": "Changing the display needs Highball restarted, and automatic resizing is a bit buggy, in the player's words (M4, Wine 10 r28, highball-db#1195)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null,
+  "nativeMac": {
+    "available": true,
+    "where": "Steam"
+  }
+}

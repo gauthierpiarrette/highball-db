@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#869, 2026-11-01), Apple M1, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, WineD3D by the report (the environment's mode is D3DMetal), rated 2 of 5 after 1 minutes: 'Error initializing video mode 640x480' until the High Resolution Patch is enabled in HiRes Config, then the same slow motion as Fallout (highball-db#862), the GOG copy. Not verified by the maintainer.",
-  "notes": "Doesn't play in one report on an M1. Without the High Resolution Patch it stops with 'Error initializing video mode 640x480'. With the patch enabled in HiRes Config it starts, then runs in slow motion like Fallout. It's a 32-bit game.",
+  "provenance": "Reported by udance4ever (highball-db#869, 2026-11-01), Apple M1, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, WineD3D by the report (the environment's mode is D3DMetal), rated 2 of 5 after 1 minutes: 'Error initializing video mode 640x480' until the High Resolution Patch is enabled in HiRes Config, then the same slow motion as Fallout (highball-db#862), the GOG copy. Not verified by the maintainer. udance4ever (highball-db#869, 2026-11-14): Fallout 2 Community Edition (github.com/alexbatalov/fallout2-ce) works on macOS, outside Highball.",
+  "notes": "Doesn't play in one report on an M1. Without the High Resolution Patch it stops with 'Error initializing video mode 640x480'. With the patch enabled in HiRes Config it starts, then runs in slow motion like Fallout. It's a 32-bit game. Outside Highball, the reporter says Fallout 2 Community Edition (github.com/alexbatalov/fallout2-ce), an open source rebuild of the game's engine that runs natively and uses the game's own data files, works on macOS (highball-db#869).",
   "knownIssues": [
     {
       "symptom": "'Error initializing video mode 640x480' at start",

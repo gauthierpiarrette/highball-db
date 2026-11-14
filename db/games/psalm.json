@@ -1,0 +1,13 @@
+{
+  "id": "psalm",
+  "title": "Psalm",
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by xxxtan1 (highball-db#1206, 2026-11-14), Apple M4, macOS 26.6.2, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 3 minutes: visuals and audio perfect. The report gives no store, and which game this is isn't known. Not verified by the maintainer.",
+  "notes": "Reported perfect, visuals and audio included, on a base M4 with DXMT on the default engine (r28) in a 3 minute session. Which game this is isn't known yet: Steam has Psalm 2 and Psalm 5:9-13 but no plain Psalm.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

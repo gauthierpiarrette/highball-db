@@ -1,0 +1,20 @@
+{
+  "id": "outdrive",
+  "title": "OutDrive",
+  "steam_appid": 441870,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Swiss-Mac-User (highball-db#1181, 2026-11-12), Apple M5 Pro, macOS 27.3, Highball 0.10.27, engine x64-crossover26.3-r30, DXMT by the report (the environment's mode is DXVK), rated 5 of 5 after 18 minutes: a steady high frame rate. On DXVK the game played fine until about minute 8, when the boss helicopter appeared without its model, only its shots visible, and then the world turned black with only the overlay left, so the player could no longer see or steer. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M5 Pro with the game set to DXMT on the Wine 11 engine r30, a steady high frame rate over 18 minutes. On DXVK it played until about minute 8, when the boss helicopter appeared without its model and then the world turned black, so the player says DXMT is a must.",
+  "knownIssues": [
+    {
+      "symptom": "On DXVK the boss helicopter appears without its model at about minute 8, only its shots visible, then the world turns black with only the overlay left (M5 Pro, Wine 11 r30, highball-db#1181)",
+      "cause": "not diagnosed",
+      "fix": "set the game to DXMT on its page, as the reporter did"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

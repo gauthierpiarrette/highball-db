@@ -1,0 +1,13 @@
+{
+  "id": "fnaf-online-multiplayer",
+  "title": "FNAF Online Multiplayer",
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Florexxxx (highball-db#1191, 2026-11-13), Apple M1, macOS 27.0, Highball 0.10.26, engine x64-crossover26.3-r29, DXMT, rated 5 of 5 after 9 minutes: taken to be BrianMPZ's fan game on itch.io by its name, the report gives no store. Not verified by the maintainer.",
+  "notes": "Taken to be BrianMPZ's free fan game on itch.io (brian-mpz.itch.io/fnaf-online), going by the name. Reported perfect on an M1 with DXMT on the Wine 11 engine r29 over 9 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

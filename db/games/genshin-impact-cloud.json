@@ -1,0 +1,13 @@
+{
+  "id": "genshin-impact-cloud",
+  "title": "Genshin Impact Cloud",
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Florexxxx (highball-db#1182, 2026-11-12), Apple M1, macOS 27.0, Highball 0.10.26, engine x64-crossover26.3-r29, DXVK, rated 5 of 5 after 1 minute: named genshin-impact-cloud-7-2-0-6336 in the report, which reads like the installer of HoYoverse's cloud client at version 7.2.0.6336, an assumption. Not verified by the maintainer.",
+  "notes": "HoYoverse's cloud client for Genshin Impact, which streams the game from HoYoverse's servers. Reported perfect on an M1 with DXVK on the Wine 11 engine r29 in a 1 minute session, so it covers the start only.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

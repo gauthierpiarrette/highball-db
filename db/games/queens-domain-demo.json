@@ -1,0 +1,14 @@
+{
+  "id": "queens-domain-demo",
+  "title": "Queen's Domain Demo",
+  "steam_appid": 4081520,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by tjubault (highball-db#1185, 2026-11-13), Apple M5 Pro, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 18 minutes. Not verified by the maintainer.",
+  "notes": "The demo of Queen's Domain (1799840), which has its own page. Reported perfect on an M5 Pro with DXMT on the default engine (r28) over 18 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

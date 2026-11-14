@@ -10,8 +10,8 @@
     "where": "Mac App Store only",
     "note": "Playdead sells a native Mac build on the Mac App Store (macOS 10.12 or later), a separate purchase, so a Steam copy will not launch it."
   },
-  "provenance": "Reported by Nuke-em (highball-db#300, 2026-10-04), Apple M2, macOS 27.2 as entered, Highball 0.10.3, engine x64-sikarugir10.0_6-r19, DXMT as the environment's mode, recipe steam, rated 5 of 5 after 9 minutes. Not verified by the maintainer.",
-  "notes": "Playdead's 2016 game, Unity with Direct3D 11. Reported perfect after 9 minutes on DXMT on the default engine r19 on an M2. Steam's build is Windows only, and Playdead sells a native Mac build on the Mac App Store as a separate purchase. No frame rate was given and nothing was measured here.",
+  "provenance": "Reported by Nuke-em (highball-db#300, 2026-10-04), Apple M2, macOS 27.2 as entered, Highball 0.10.3, engine x64-sikarugir10.0_6-r19, DXMT as the environment's mode, recipe steam, rated 5 of 5 after 9 minutes. Not verified by the maintainer. theeirdna-commits (highball-db#1186, 2026-11-13), Apple M1, macOS 15.7.7, Highball 0.10.26, engine x64-crossover26.3-r31, DXMT, rated 5 of 5 after 144 minutes: with a 60 fps cap. theeirdna-commits (highball-db#1190, 2026-11-13), Apple M1, macOS 15.7.7, Highball 0.10.26, engine x64-crossover26.3-r31, DXMT, rated 5 of 5 after 80 minutes: the same player again, with a 60 fps cap.",
+  "notes": "Playdead's 2016 game, Unity with Direct3D 11. Reported perfect after 9 minutes on DXMT on the default engine r19 on an M2. Steam's build is Windows only, and Playdead sells a native Mac build on the Mac App Store as a separate purchase. No frame rate was given and nothing was measured here. Also reported perfect twice on an M1 with macOS 15.7.7 and the Wine 11 engine r31 on DXMT, over 144 and 80 minutes with a 60 fps cap (highball-db#1186, highball-db#1190).",
   "knownIssues": [],
   "launchArgs": null,
   "lastVerified": null

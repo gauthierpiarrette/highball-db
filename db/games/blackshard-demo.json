@@ -1,0 +1,14 @@
+{
+  "id": "blackshard-demo",
+  "title": "BLACKSHARD Demo",
+  "steam_appid": 3462270,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by sfdnb9wts4-png (highball-db#1188, 2026-11-13), Apple M5, macOS 27.2, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 5 of 5 after 8 minutes: AVX advertised, a 60 fps cap. Not verified by the maintainer.",
+  "notes": "The demo of BLACKSHARD (3223390). Reported perfect on a base M5 with D3DMetal on the default engine (r28), AVX advertised and a 60 fps cap, over 8 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
