@@ -5,13 +5,13 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by barredespace (highball-db#1189, 2026-11-13), Apple M6, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 26 minutes: the player couldn't get the game onto their external display. Not verified by the maintainer.",
-  "notes": "Croteam's 2014 puzzle game. Reported playable on an Apple M6 with DXMT on the default engine (r28) over 26 minutes, except that the player couldn't get it onto their external display. Steam lists a Mac version as well.",
+  "provenance": "Reported by barredespace (highball-db#1189, 2026-11-13), Apple M6, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 26 minutes: in fullscreen it wouldn't show on their external display, in a window it did. Not verified by the maintainer.",
+  "notes": "Croteam's 2014 puzzle game. Reported playable on an Apple M6 with DXMT on the default engine (r28) over 26 minutes. In fullscreen it stayed off the player's external display, while in a window it showed there. Steam lists a Mac version as well.",
   "knownIssues": [
     {
-      "symptom": "The game wouldn't show on an external display (Apple M6, Wine 10 r28, highball-db#1189)",
-      "cause": "not diagnosed",
-      "fix": "none known"
+      "symptom": "In fullscreen the game doesn't show on an external display, in a window it does (Apple M6, Wine 10 r28, highball-db#1189)",
+      "cause": "a fullscreen game opens on the Mac's main display. Not measured with this game, the same thing happened to Elden Ring (highball#667)",
+      "fix": "make the external display the main display in System Settings, Displays, then start the game, which fixed it for Elden Ring (highball#667). Or play windowed or borderless with the Display setting on the game's page set to that display"
     }
   ],
   "launchArgs": null,
