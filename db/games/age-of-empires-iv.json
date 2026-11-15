@@ -1,0 +1,11 @@
+{
+  "id": "age-of-empires-iv",
+  "title": "Age of Empires IV",
+  "steam_appid": 1466860,
+  "arch": "x64",
+  "status": "community",
+  "renderer": "d3dmetal",
+  "provenance": "Local launch check by himbeles on 2026-11-15. Steam build 26559323 reached the main menu on an Apple M2 Max with macOS 27.2.1, Highball 0.10.26, engine x64-crossover26.3-aoe4-r1 and D3DMetal.",
+  "notes": "An opt-in recipe offers the AoE IV engine on Highball builds that include it. Apply the fix on the game's page, then launch with Play in Highball. If the game shows a graphics driver warning at startup, click OK to continue.",
+  "recipe": "recipes/games/age-of-empires-iv.json"
+}

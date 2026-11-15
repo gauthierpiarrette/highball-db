@@ -1,0 +1,15 @@
+{
+  "id": "age-of-empires-iv",
+  "title": "Age of Empires IV engine",
+  "kind": "game",
+  "optIn": true,
+  "requires": ["steam"],
+  "engine": "x64-crossover26.3-aoe4-r1",
+  "renderer": "d3dmetal",
+  "steps": [
+    {
+      "type": "note",
+      "text": "Launch the game with Play in Highball. If a graphics driver warning appears on startup, click OK to continue."
+    }
+  ]
+}
