@@ -1,0 +1,31 @@
+{
+  "id": "kunitsu-gami-path-of-the-goddess-demo",
+  "title": "Kunitsu-Gami: Path of the Goddess Demo",
+  "steam_appid": 2842890,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#69, 2026-09-16), Apple M1, macOS 26.7, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, D3DMetal, with DXMT and DXVK tried too, rated 1 of 5 at first: in every mode the game stops with its unsupported graphics card error, naming AtomicInt64OnDescriptorHeapResourceSupported (screenshot). udance4ever again (highball-db#69, 2026-09-18): the same with D3DMetal 3 on macOS 27. udance4ever again (highball-db#69, 2026-11-15), Apple M1, macOS 27.2, the Wine 11 engine x64-crossover26.3-r32 (D3DMetal 4.0 beta 3 by the Metal HUD), D3DMetal, with HB_TSSHIM_ATOMIC64=1 and HB_X87SIDECAR=1 in the environment's variables (log): the demo gets past the check, compiles its shaders and reaches gameplay, where the scene draws as black silhouettes over a flat pale grey ground and sky, at about 30 fps at 1920x1080 (screenshot). The report now rates it 2 of 5. A DualSense wasn't recognised with Steam Input on or off, where the same controller worked in the Onimusha: Way of the Sword demo, and an XInput controller worked. Not verified by the maintainer.",
+  "notes": "Capcom's RE Engine, DirectX 12. On an M1 it stops at start with an unsupported graphics card error, because D3DMetal answers no to the game's check for 64-bit atomics on descriptor heap resources (D3D12 OPTIONS11), the same check as the Onimusha: Way of the Sword demo and PRAGMATA Sketchbook. On an M4 D3DMetal 3 already answers yes (measured here 2026-10-14 with a probe). On Highball's Wine 11 engines (r25 or later) the variable HB_TSSHIM_ATOMIC64=1 makes Highball's DirectX 12 layer answer yes, and with it a player reached gameplay on an M1, but the scene draws wrongly, black silhouettes over a flat pale ground (highball-db#69, r32 with D3DMetal 4.0 beta 3). Whether that comes from D3DMetal 4's beta, from the game now using a feature D3DMetal says the M1 doesn't have, or from something else isn't known. D3DMetal 3 (Wine 11 r33) hasn't been tried with it. No recipe sets the variable for this demo, so a player adds it to the environment's variables by hand, where it reaches every game in that environment.",
+  "knownIssues": [
+    {
+      "symptom": "Unsupported graphics card error at start, naming AtomicInt64OnDescriptorHeapResourceSupported, then the game quits (M1, the same in D3DMetal, DXMT and DXVK mode)",
+      "cause": "D3DMetal reports AtomicInt64OnDescriptorHeapResourceSupported as false on M1 chips, and RE Engine requires it",
+      "fix": "the player's way past it: a Wine 11 engine (r25 or later) with HB_TSSHIM_ATOMIC64=1 in the environment's variables, which has Highball's layer in front of D3DMetal answer yes (highball-db#69). The game then draws wrongly, see below. No recipe sets it for this demo"
+    },
+    {
+      "symptom": "In gameplay the scene draws as black silhouettes over a flat pale grey ground and sky (M1, Wine 11 r32 with D3DMetal 4.0 beta 3, HB_TSSHIM_ATOMIC64=1)",
+      "cause": "not diagnosed",
+      "fix": "none known. D3DMetal 3 (Wine 11 r33) not tried"
+    },
+    {
+      "symptom": "A DualSense isn't recognised in the game, with Steam Input on or off (M1)",
+      "cause": "not diagnosed. The same controller worked in the Onimusha: Way of the Sword demo, also RE Engine",
+      "fix": "an XInput controller worked (highball-db#69)"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null,
+  "arch": "x64"
+}

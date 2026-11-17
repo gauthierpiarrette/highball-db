@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#869, 2026-11-01), Apple M1, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, WineD3D by the report (the environment's mode is D3DMetal), rated 2 of 5 after 1 minutes: 'Error initializing video mode 640x480' until the High Resolution Patch is enabled in HiRes Config, then the same slow motion as Fallout (highball-db#862), the GOG copy. Not verified by the maintainer. udance4ever (highball-db#869, 2026-11-14): Fallout 2 Community Edition (github.com/alexbatalov/fallout2-ce) works on macOS, outside Highball.",
-  "notes": "Doesn't play in one report on an M1. Without the High Resolution Patch it stops with 'Error initializing video mode 640x480'. With the patch enabled in HiRes Config it starts, then runs in slow motion like Fallout. It's a 32-bit game. Outside Highball, the reporter says Fallout 2 Community Edition (github.com/alexbatalov/fallout2-ce), an open source rebuild of the game's engine that runs natively and uses the game's own data files, works on macOS (highball-db#869).",
+  "provenance": "Reported by udance4ever (highball-db#869, 2026-11-01), Apple M1, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, WineD3D by the report (the environment's mode is D3DMetal), rated 2 of 5 after 1 minutes: 'Error initializing video mode 640x480' until the High Resolution Patch is enabled in HiRes Config, then the same slow motion as Fallout (highball-db#862), the GOG copy. Not verified by the maintainer. udance4ever (highball-db#869, 2026-11-14): Fallout 2 Community Edition (github.com/alexbatalov/fallout2-ce) works on macOS, outside Highball. udance4ever again on highball-db#869 (2026-11-14), the Wine 11 engine r30, WineD3D mode: with fallout2.exe patched by emrikol's fix, found through CrossOver's community (gist.github.com/emrikol/313701a61d0e692798fe938cf6ac24b0, made for the US 1.02 fallout2.exe, sha256 048684f802b05859...), which replaces the game's self-modifying movie decoder, and the High Resolution Patch enabled for the 640x480 error, the game plays from Highball without the slow motion, and the report now rates it 3 of 5.",
+  "notes": "Plays with two workarounds in one report on an M1, the GOG copy. Without the High Resolution Patch it stops with 'Error initializing video mode 640x480'. With the patch enabled in HiRes Config it starts, then runs in slow motion like Fallout. The cause, by emrikol's write-up for Fallout 2 (gist.github.com/emrikol/313701a61d0e692798fe938cf6ac24b0), is the Interplay movie decoder, which rewrites its own x86 code for almost every 8x8 block of a frame. Under Rosetta each rewrite throws the translated code away, so frames take hundreds of milliseconds and the streamed sound repeats. emrikol's patch to fallout2.exe replaces that decoder with one that doesn't rewrite itself, and with it the game plays from Highball on the Wine 11 engine r30 in WineD3D mode (highball-db#869). That is a change to the game's own program that the player made. Highball never changes game files, and the patch hasn't been reviewed by Highball. It's a 32-bit game. Outside Highball, the reporter says Fallout 2 Community Edition (github.com/alexbatalov/fallout2-ce), an open source rebuild of the game's engine that runs natively and uses the game's own data files, works on macOS (highball-db#869).",
   "knownIssues": [
     {
       "symptom": "'Error initializing video mode 640x480' at start",
@@ -15,8 +15,8 @@
     },
     {
       "symptom": "Runs in slow motion once started, as Fallout does (M1, Wine 10 r28)",
-      "cause": "not diagnosed",
-      "fix": "none known"
+      "cause": "the game's Interplay movie decoder rewrites its own code for almost every 8x8 block, and under Rosetta each rewrite throws the translated code away (emrikol's write-up, gist.github.com/emrikol/313701a61d0e692798fe938cf6ac24b0)",
+      "fix": "the player applied emrikol's patch to fallout2.exe (made for the US 1.02 exe), which replaces the decoder, and the game played on Wine 11 r30 in WineD3D mode (highball-db#869). It changes the game's own program, which Highball never does, and it hasn't been reviewed by Highball. Fallout 2 Community Edition is the other way, outside Highball"
     }
   ],
   "launchArgs": null,

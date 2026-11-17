@@ -5,13 +5,13 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#775, 2026-10-29), the Epic copy, Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 1 of 5: Netmarble's launcher setup fails. Not verified by the maintainer.",
-  "notes": "The Epic install is a 0.16 MB starter that downloads Netmarble's own launcher (Netmarble Launcher_EPIC 1.8.0) and runs its setup. That setup stops with 'cannot be closed, please close it manually', most likely seeing the starter itself as the running launcher, and Cancel ends the install. Whether the game behind the launcher runs is unknown.",
+  "provenance": "Reported by udance4ever (highball-db#775, 2026-10-29), the Epic copy, Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 1 of 5: Netmarble's launcher setup fails. Not verified by the maintainer. udance4ever again on highball-db#775 (2026-11-16), after trying it on Windows: Netmarble only accepts an install made inside the Epic Games Launcher, which installs the 1 MB Netmarble launcher, which installs the 1 GB game (a Netmarble account is needed), which installs a 50 GB patch, and the game won't start unless it can talk to the Epic Games Launcher. In CrossOver with the Epic Games Launcher the Netmarble setup fails the same way as in Highball, and with files copied over from a Windows install Epic refused to start the game. On a Windows PC the 50 GB patch stalled at 97 percent and froze the machine.",
+  "notes": "The Epic install is a 0.16 MB starter that downloads Netmarble's own launcher (Netmarble Launcher_EPIC 1.8.0) and runs its setup. That setup stops with 'cannot be closed, please close it manually', most likely seeing the starter itself as the running launcher, and Cancel ends the install. Whether the game behind the launcher runs is unknown. The game also needs the Epic Games Launcher itself beside it. Highball installs Epic games through Legendary instead, since Epic's launcher can't install games under Wine, and in CrossOver with Epic's launcher the same setup fails, so it's out of reach for now (highball-db#775).",
   "knownIssues": [
     {
       "symptom": "Netmarble's launcher setup says the launcher cannot be closed, and Cancel ends with 'An unknown error has occurred (execute)'",
       "cause": "assumed: the setup sees the Epic starter as the running launcher. Not measured",
-      "fix": "none known"
+      "fix": "none known. The game also needs the Epic Games Launcher itself, which Highball doesn't use, and the same setup failed in CrossOver with Epic's launcher (highball-db#775)"
     }
   ],
   "launchArgs": null,

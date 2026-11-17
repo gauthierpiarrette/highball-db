@@ -5,9 +5,20 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by Denis-Rubtsov (highball-db#514, 2026-10-16), Apple M1, macOS 26.6.2, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, recipe steam, rated 5 of 5 after 31 minutes. Not verified by the maintainer.",
-  "notes": "Reported perfect on DXMT on the default engine on an M1.",
-  "knownIssues": [],
+  "provenance": "Reported by Denis-Rubtsov (highball-db#514, 2026-10-16), Apple M1, macOS 26.6.2, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, recipe steam, rated 5 of 5 after 31 minutes. Not verified by the maintainer. udance4ever (highball-db#514, 2026-11-15), Apple M1, the Wine 10 engine r29, the environment in D3DMetal mode, the first match over 17 minutes: close to a steady 60 fps at 1920x1080 with the game's automatic settings. The brightness screen asks for the slider to go down until the logo disappears, but the logo stayed visible even at 0 percent on a Dell S2722QC, and 0 was far too dark in game, so the player went back to 40 percent. After the automatic settings picked Fullscreen the game stayed in a window until Windowed and Fullscreen were toggled a few times. Not verified by the maintainer.",
+  "notes": "Reported perfect on DXMT on the default engine on an M1. A second report, on a base M1 with the Wine 10 engine r29 in D3DMetal mode, played a match at close to 60 fps at 1080p, with two small issues (see the known issues, highball-db#514).",
+  "knownIssues": [
+    {
+      "symptom": "On the brightness screen the logo stays visible even with the slider at 0 percent (M1, a Dell S2722QC display)",
+      "cause": "not diagnosed",
+      "fix": "set it by eye. At 0 percent the game was far too dark, and the player settled on 40 percent (highball-db#514)"
+    },
+    {
+      "symptom": "With Fullscreen picked by the automatic settings, the game stays in a window (M1)",
+      "cause": "not diagnosed",
+      "fix": "toggle Windowed and Fullscreen in the game's settings a few times, as the player did (highball-db#514). Restarting the game may also do it, not tried"
+    }
+  ],
   "launchArgs": null,
   "lastVerified": null
 }

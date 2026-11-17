@@ -2,22 +2,22 @@
   "id": "back-4-blood",
   "title": "Back 4 Blood",
   "steam_appid": 924970,
-  "status": "blocked-anticheat",
+  "status": "community",
   "renderer": null,
   "anticheat": {
     "names": [
       "Easy Anti-Cheat"
     ],
-    "macVerdict": "blocked",
-    "note": "The launch stops at 'Failed to load the anti-cheat module' (highball-db#973). On Windows Easy Anti-Cheat loads a kernel driver, which Wine can't run, and the runtime it ships for Proton on Linux has no macOS build."
+    "macVerdict": "warning",
+    "note": "Online play needs Easy Anti-Cheat, which can't load under Wine on a Mac ('Failed to load the anti-cheat module', highball-db#973). With the Mac's network off before launch the game skips it and the single player campaign plays, a player's finding that CrossOver's community page shares (highball-db#973)."
   },
-  "provenance": "Reported by udance4ever (highball-db#973, 2026-11-04), Apple M1, macOS 27.2, Highball 0.10.25, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 1 of 5 after 1 minute: the game stops at Easy Anti-Cheat's Launch Error screen, 'Failed to load the anti-cheat module'. Not verified by the maintainer.",
-  "notes": "Doesn't start. The game needs Easy Anti-Cheat, which can't load under Wine on a Mac, so the launch stops at 'Failed to load the anti-cheat module' and no engine or graphics mode changes that.",
+  "provenance": "Reported by udance4ever (highball-db#973, 2026-11-04), Apple M1, macOS 27.2, Highball 0.10.25, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 1 of 5 after 1 minute: the game stops at Easy Anti-Cheat's Launch Error screen, 'Failed to load the anti-cheat module'. Not verified by the maintainer. udance4ever again on highball-db#973 (2026-11-16), Apple M1: with the Mac's network off before launching, following a hint on CrossOver's community page (codeweavers.com/compatibility/crossover/back-4-blood), the game gets past Easy Anti-Cheat to its menu and the single player campaign plays. It defaults to the Ultra preset, and Low gives about 40 fps on the base M1.",
+  "notes": "Single player only, offline. Online play needs Easy Anti-Cheat, which can't load under Wine on a Mac, so with the network on the launch stops at 'Failed to load the anti-cheat module'. A player turned the Mac's network off before launching, and the game then skipped the anti-cheat and the single player campaign played, at about 40 fps on Low on a base M1 (highball-db#973). Online play stays out of reach.",
   "knownIssues": [
     {
       "symptom": "'Launch Error, Failed to load the anti-cheat module' at start, and the game never opens (M1, D3DMetal, Wine 10 r29)",
       "cause": "Easy Anti-Cheat can't load under Wine on macOS",
-      "fix": "none from Highball's side"
+      "fix": "turn the Mac's network off before launching, and the single player campaign plays (the player's finding, highball-db#973). Online play has no fix from Highball's side"
     }
   ],
   "launchArgs": null,
