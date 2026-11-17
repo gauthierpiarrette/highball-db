@@ -5,10 +5,17 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by arulagarwal (highball-db#1196, 2026-11-13), Apple M4 Pro, macOS 26.6.2, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 11 minutes. Not verified by the maintainer.",
-  "notes": "Reported perfect on an M4 Pro with DXMT on the default engine (r28) over 11 minutes. Age of Mythology: Retold has its own page.",
-  "knownIssues": [],
+  "provenance": "Reported by arulagarwal (highball-db#1196, 2026-11-13), Apple M4 Pro, macOS 26.6.2, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 11 minutes. Not verified by the maintainer. arulagarwal (highball-db#1282, 2026-11-16), Apple M4 Pro, macOS 26.6.2, Highball 0.10.26, engine x64-crossover26.3-r31, DXMT, rated 3 of 5: the same player as highball-db#1196, with WINE_LARGE_ADDRESS_AWARE=1 in the environment, a 20 minute random map with no out of memory errors and a normal shutdown. Without it every session crashed to the desktop within about 4 to 6 minutes of a random map, after hundreds of 'out of memory for allocation' errors in the log: on this engine with D3DMetal and DXMT, and on the default engine r28 with DXMT. AoMX.exe is 32-bit and not marked large address aware (PE characteristics 0x102), so it gets 2 GB of address space. In the player's tests r28 doesn't read the variable, and setting the flag in AoMX.exe itself fixed the memory but made Steam fail the file's signature check and refuse to start the game. WineD3D on r28 hit a vkCreateGraphicsPipelines assert after about 30 seconds.",
+  "notes": "A 32-bit game, and AoMX.exe isn't marked large address aware, so it has 2 GB of address space. Longer matches run out of it: the game crashes to the desktop after about 4 to 6 minutes of a random map, on the default engine r28 and on the Wine 11 engine r31, with DXMT or D3DMetal (highball-db#1282). The reporter's fix is the Wine 11 engine r31 with WINE_LARGE_ADDRESS_AWARE=1 in the environment's variables, which played a 20 minute random map with no errors. The first report rated it perfect after 11 minutes on an M4 Pro with DXMT on the default engine, too short to hit the crash (highball-db#1196). Age of Mythology: Retold has its own page.",
+  "knownIssues": [
+    {
+      "symptom": "Crashes to the desktop after about 4 to 6 minutes of a random map, after hundreds of 'out of memory for allocation' errors in the log (M4 Pro, Wine 10 r28 and Wine 11 r31, DXMT and D3DMetal, highball-db#1282)",
+      "cause": "AoMX.exe is 32-bit and not marked large address aware (PE characteristics 0x102), so it gets 2 GB of address space, found by the reporter",
+      "fix": "use the Wine 11 engine r31 and add WINE_LARGE_ADDRESS_AWARE=1 to the environment's variables, which played 20 minutes with no errors for the reporter. The reporter found that the default engine r28 doesn't read it. Don't set the flag in AoMX.exe itself: Steam then fails the file's signature check and won't start the game"
+    }
+  ],
   "launchArgs": null,
   "lastVerified": null,
-  "verified": null
+  "verified": null,
+  "arch": "x86"
 }

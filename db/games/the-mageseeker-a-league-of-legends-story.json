@@ -1,0 +1,14 @@
+{
+  "id": "the-mageseeker-a-league-of-legends-story",
+  "title": "The Mageseeker: A League of Legends Story",
+  "steam_appid": 1457080,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by MEMOPIKER (highball-db#1291, 2026-11-17), Apple M5, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 2 minutes: the report gives no Steam id, taken to be the Steam release (1457080). Not verified by the maintainer.",
+  "notes": "Reported perfect on an M5 with DXMT on the default engine (r28) in a 2 minute session, so it covers the start only.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

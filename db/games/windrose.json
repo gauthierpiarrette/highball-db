@@ -1,0 +1,14 @@
+{
+  "id": "windrose",
+  "title": "Windrose",
+  "steam_appid": 3041230,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by safeenkurd (highball-db#1266, 2026-11-16), Apple M4 Pro, macOS 27.0, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, D3DMetal as the program's own mode (the environment's is DXMT), rated 5 of 5 after 199 minutes: the report gives no Steam id, taken to be the Steam release (3041230). It ran as a program with its own settings: the arguments -windowed -ForceRes -ResX=1280 -ResY=720 -dpcvars=r.WarnOfBadDrivers=0,r.AllowHDR=0,r.HDR.EnableHDROutput=0,r.Nanite.ProjectEnabled=0 -ExecCmds=r.WarnOfBadDrivers 0 -slnoreflex -slnodlssg -slnodeepdvc, and the variables DXVK_HDR=0, SDL_JOYSTICK_HIDAPI=1, SDL_JOYSTICK_HIDAPI_PS4=1 and WINEDLLOVERRIDES=nvapi64,nvngx=n,b;winemenubuilder.exe=d;xinput1_3,xinput1_4,xinput9_1_0=b, with the controller-sdl, dotnet48, xact and vcrun2022 recipes in the environment. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M4 Pro over 199 minutes on the default engine (r28), with D3DMetal as the program's own mode and its own arguments: a 1280x720 window, HDR, Nanite and the bad driver warning off, and NVIDIA Reflex, DLSS frame generation and DeepDVC off. The full list is in the provenance. Whether the game needs them wasn't tested. Taken to be the Steam release (3041230).",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

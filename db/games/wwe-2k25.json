@@ -1,0 +1,20 @@
+{
+  "id": "wwe-2k25",
+  "title": "WWE 2K25",
+  "steam_appid": 2878960,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by SagarParmar90 (highball-db#1280, 2026-11-16), Apple M1 Pro, macOS 27.2, Highball 0.10.26, engine x64-crossover26.3-r30, D3DMetal by the report (the environment's mode is DXMT), rated 3 of 5 after 17 minutes: named WWE2K25_x64 in the report, the game's program name, with no Steam id, taken to be the Steam release (2878960). AVX advertised, Windows 11, the physx and xact recipes. Pink dots on screen, and the workarounds aren't described. Not verified by the maintainer.",
+  "notes": "Reported playable with workarounds on an M1 Pro over 17 minutes on the Wine 11 engine r30, D3DMetal by the report in an environment in DXMT mode, with AVX advertised. The player saw pink dots and didn't say what the workarounds were.",
+  "knownIssues": [
+    {
+      "symptom": "Pink dots on screen (M1 Pro, D3DMetal by the report, Wine 11 r30, highball-db#1280)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

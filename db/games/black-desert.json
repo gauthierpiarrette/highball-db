@@ -1,0 +1,41 @@
+{
+  "id": "black-desert",
+  "title": "Black Desert",
+  "steam_appid": 582660,
+  "status": "community",
+  "renderer": null,
+  "anticheat": {
+    "names": [
+      "XIGNCODE3"
+    ],
+    "macVerdict": "warning",
+    "note": "anti-cheat present. It didn't stop the game in the one report so far, the player logged in and played online on the default engine (highball-db#1271)"
+  },
+  "provenance": "Reported by mattedefra (highball-db#1271, 2026-11-16), Apple M6, macOS 27.0, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT as the game's own mode in the working setup the report describes (the form's renderer field says DXVK, from the 1 minute session it was sent after, and the environment's mode is DXMT), rated 5 of 5 after 1 minute: named Black Desert Online in the report. About 230 fps in a grind zone at 2560x1440 on a 180 Hz external display, uncapped, with the game in Full Screen Window, read from the Metal HUD over roughly 20 minutes uncapped and shorter runs in each display mode. The anti-cheat didn't block it, the player logged in and played online. The game's launcher, BlackDesertPatcher32.pae, opened as a blank grey window on DXMT until launcherGpu and launcherOffScreen were set to 0 in Documents/Black Desert/GameOptionLauncher.txt. A 120 fps cap held 90 fps on DXMT on the 180 Hz display, and a cap change didn't reach the game while Steam kept running in the environment. DXVK played too, in the high 90s fps against about 230 and with about 4.7 GB of GPU memory in use against 1.2 GB, and in Full Screen Window it rebuilt its swap chain about 80 times a second, growing its log by about 10 MB a session. Not verified by the maintainer.",
+  "notes": "Reported perfect on an Apple M6 with DXMT as the game's own mode on the default engine (r28): about 230 fps in a grind zone at 2560x1440 uncapped, with the game in Full Screen Window, read from the Metal HUD. The player logged in and played online. On DXMT the game's launcher opens as a blank grey window until two lines in Documents/Black Desert/GameOptionLauncher.txt are set to 0, see the known issues. DXVK plays too but much slower. On DXMT leave the frame rate uncapped, a 120 cap held only 90 on a 180 Hz display.",
+  "knownIssues": [
+    {
+      "symptom": "The game's launcher (BlackDesertPatcher32.pae) opens as a blank grey window on DXMT (Apple M6, Wine 10 r28, highball-db#1271)",
+      "cause": "the launcher is Chromium based and draws through another process's window, which DXMT refuses here: its log says 'cross-process swapchain not supported yet'",
+      "fix": "with the launcher closed, set launcherGpu = 0 and launcherOffScreen = 0 in Documents/Black Desert/GameOptionLauncher.txt. The launcher then draws on DXMT and DXVK and keeps the values (highball-db#1271). DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1 wasn't tested"
+    },
+    {
+      "symptom": "With a 120 fps cap on DXMT the game holds 90 fps on a 180 Hz display (Apple M6, Wine 10 r28, highball-db#1271)",
+      "cause": "not confirmed. The reporter's guess is that DXMT's limiter only holds rates that divide the refresh rate. DXVK holds 120 with the same cap",
+      "fix": "leave the frame rate uncapped, which gave about 230 fps"
+    },
+    {
+      "symptom": "A change to the frame rate cap doesn't reach the game while Steam is still running in the environment (Apple M6, highball-db#1271)",
+      "cause": "the running Steam starts the game, which inherits Steam's environment from before the change",
+      "fix": "quit Steam in the environment, then press Play"
+    },
+    {
+      "symptom": "On DXVK the game is much slower (high 90s fps against about 230 on DXMT), and in Full Screen Window it rebuilds its swap chain about 80 times a second, growing blackdesert64_d3d11.log by about 10 MB a session (Apple M6, Wine 10 r28, highball-db#1271)",
+      "cause": "not diagnosed",
+      "fix": "use DXMT. On DXVK the game's Game Window mode stops the rebuilds"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

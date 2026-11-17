@@ -1,0 +1,31 @@
+{
+  "id": "suicide-squad-kill-the-justice-league",
+  "title": "Suicide Squad: Kill the Justice League",
+  "steam_appid": 315210,
+  "status": "community",
+  "renderer": null,
+  "anticheat": {
+    "names": [
+      "Easy Anti-Cheat"
+    ],
+    "macVerdict": "warning",
+    "note": "anti-cheat present; it runs on Linux through Proton, which does not settle macOS"
+  },
+  "provenance": "Reported by udance4ever (highball-db#1286, 2026-11-17), Apple M1, macOS 27.2.1, Highball 0.10.28, engine x64-crossover26.3-r32, D3DMetal, rated 2 of 5 after 4 minutes: launches, not playable. On D3DMetal the game finishes optimizing its shaders, which stutters a lot on a base M1, shows a warning screen and hangs there, still stuck after 109 minutes in the background. DXMT crashes, and DXVK runs in slow motion with soft background audio on the way to the shader compilation. The player thinks the EULA had to be accepted on DXMT before switching to D3DMetal. With HB_MVK_LENIENT_INTERFACES=1, HB_TSSHIM_ATOMIC64=1, HB_X87SIDECAR=1 and two MoltenVK variables set, the Onimusha Way of the Sword demo's recipe in the environment, AVX advertised, DLSS through MetalFX on and the Metal HUD on. Not verified by the maintainer.",
+  "notes": "Doesn't reach the title menu in the one report so far: on a base M1 with D3DMetal on the Wine 11 engine r32 it finishes optimizing its shaders, shows a warning screen and hangs there (highball-db#1286). DXMT crashed and DXVK ran in slow motion on the same Mac. The anti-cheat map lists Easy Anti-Cheat for it.",
+  "knownIssues": [
+    {
+      "symptom": "Hangs on a warning screen after optimizing its shaders and never reaches the title menu (M1, D3DMetal, Wine 11 r32, highball-db#1286)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    },
+    {
+      "symptom": "DXMT crashes, and DXVK runs in slow motion on the way to the shader compilation (M1, highball-db#1286)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

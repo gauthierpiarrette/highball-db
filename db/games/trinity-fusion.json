@@ -1,0 +1,30 @@
+{
+  "id": "trinity-fusion",
+  "title": "Trinity Fusion",
+  "steam_appid": 1911360,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#1288, 2026-11-17), Apple M1, macOS 27.2.1, Highball 0.10.28, engine x64-crossover26.3-r32, DXMT by the report (the environment's mode is D3DMetal), rated 4 of 5 after 2 minutes: the game seems to hang on the way into the game, then gets there after a wait. Tried in every mode: on Wine 10 D3DMetal crashed while Unity initialized (a Unity dialog), DXMT hung and DXVK got in game with missing assets. On the Wine 11 engine r32 D3DMetal hung (maybe it needed longer), DXMT seemed to hang and then got in game with the assets intact, and DXVK got in game with missing assets. Not verified by the maintainer.",
+  "notes": "Reported playable on a base M1 with DXMT on the Wine 11 engine r32 in a 2 minute session: it seems to hang on the way into the game, then gets there with everything drawn. DXVK gets in with missing assets on Wine 10 and Wine 11, and D3DMetal crashed on Wine 10 and hung on Wine 11.",
+  "knownIssues": [
+    {
+      "symptom": "Seems to hang on the way into the game, then gets there after a wait (M1, DXMT, Wine 11 r32, highball-db#1288)",
+      "cause": "not diagnosed",
+      "fix": "wait"
+    },
+    {
+      "symptom": "Missing assets on DXVK (M1, Wine 10 and Wine 11 r32, highball-db#1288)",
+      "cause": "not diagnosed",
+      "fix": "use DXMT on the Wine 11 engine"
+    },
+    {
+      "symptom": "On D3DMetal it crashed while Unity initialized on Wine 10, and hung on the Wine 11 engine r32 (M1, highball-db#1288)",
+      "cause": "not diagnosed",
+      "fix": "use DXMT on the Wine 11 engine"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -5,13 +5,13 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by dennisstewart (highball#317, 2026-10-11), Apple M2, macOS 26.7.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, the Windows version through Steam, tried on DXMT, DXVK, Wine's own Direct3D and D3DMetal. Not verified by the maintainer.",
-  "notes": "Plays, but the frame rate falls steeply once the shooting starts and particles fly, in every graphics mode the reporter tried, with menus at 60 fps and occasional hitches when scrolling the map. Playable since the game is turn based. The Mac version on Steam is 32-bit and does not run on current macOS, so the Windows version is the one to use.",
+  "provenance": "Reported by dennisstewart (highball#317, 2026-10-11), Apple M2, macOS 26.7.1, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, the Windows version through Steam, tried on DXMT, DXVK, Wine's own Direct3D and D3DMetal. Not verified by the maintainer. barredespace (highball-db#1261, 2026-11-15), Apple M6, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXVK by the report (the environment's mode is D3DMetal), rated 4 of 5 after 105 minutes: turning off Background animations in the menu and in game helps a lot, no problem after that.",
+  "notes": "Plays, but the frame rate falls steeply once the shooting starts and particles fly, in every graphics mode the reporter tried, with menus at 60 fps and occasional hitches when scrolling the map. Playable since the game is turn based. The Mac version on Steam is 32-bit and does not run on current macOS, so the Windows version is the one to use. A player on an Apple M6 rated it playable over 105 minutes, with no problem once Background animations were off in the menu and in game (highball-db#1261).",
   "knownIssues": [
     {
       "symptom": "The frame rate falls steeply when the action starts, in every graphics mode (reported on an M2)",
       "cause": "not investigated, the same in every mode, so probably not graphics",
-      "fix": "none known yet."
+      "fix": "turn off Background animations in the menu and in game, which helped a lot for a player on an Apple M6 (highball-db#1261)."
     }
   ],
   "launchArgs": null,

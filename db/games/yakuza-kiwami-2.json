@@ -1,0 +1,14 @@
+{
+  "id": "yakuza-kiwami-2",
+  "title": "Yakuza Kiwami 2",
+  "steam_appid": 3717340,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by MelloMin (highball-db#1274, 2026-11-16), Apple M4 Pro, macOS 26.5.1, Highball 0.10.26, engine x64-crossover26.3-r10, D3DMetal by the report (the environment's mode is DXVK), rated 5 of 5 after 8 minutes: AVX advertised, Windows 11, the physx recipe. The program is named yakuzakiwami2_r in the report, and the same player's Yakuza Kiwami report named yakuzakiwami_r, the current Steam release, so this page is taken to be the current Yakuza Kiwami 2 (3717340), not the 2019 one Steam now calls Yakuza Kiwami 2 (Legacy) (927380). Not verified by the maintainer.",
+  "notes": "The current Steam release of Yakuza Kiwami 2, from December 2025. Reported perfect on an M4 Pro over 8 minutes on an early Wine 11 engine (r10), in an environment in DXVK mode, with D3DMetal by the report.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

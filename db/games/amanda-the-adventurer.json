@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by kinging742 (highball-db#593, 2026-10-20), Apple M4, macOS 27.2, Highball 0.10.21, engine x64-sikarugir10.0_6-r28, DXMT environment, AVX advertised, rated 5 of 5 after 11 minutes. Not verified by the maintainer.",
-  "notes": "Reported perfect with the default engine, 11 minutes.",
+  "provenance": "Reported by kinging742 (highball-db#593, 2026-10-20), Apple M4, macOS 27.2, Highball 0.10.21, engine x64-sikarugir10.0_6-r28, DXMT environment, AVX advertised, rated 5 of 5 after 11 minutes. Not verified by the maintainer. elliottcochrane87-lab (highball-db#1270, 2026-11-16), Apple M1, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 5 of 5 after 6 minutes: no issues on an 8 GB Mac.",
+  "notes": "Reported perfect with the default engine, 11 minutes. Also rated perfect on an 8 GB M1 with D3DMetal in a 6 minute session (highball-db#1270).",
   "knownIssues": [],
   "launchArgs": null,
   "lastVerified": null
