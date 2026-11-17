@@ -1,15 +1,21 @@
 {
   "id": "age-of-empires-iv",
-  "title": "Age of Empires IV engine",
+  "title": "Age of Empires IV on Wine 11",
   "kind": "game",
   "optIn": true,
-  "requires": ["steam"],
-  "engine": "x64-crossover26.3-aoe4-r2",
+  "requires": [
+    "steam"
+  ],
   "renderer": "d3dmetal",
   "steps": [
     {
+      "type": "environment",
+      "name": "HB_AOE4",
+      "value": "1"
+    },
+    {
       "type": "note",
-      "text": "Launch the game with Play in Highball. If a graphics driver warning appears on startup, click OK to continue."
+      "text": "This fix requires Apple Silicon and macOS 26 or later. Launch the game with Play in Highball. If a graphics driver warning appears, click OK to continue."
     }
   ]
 }

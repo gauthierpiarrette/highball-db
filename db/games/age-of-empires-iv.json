@@ -6,7 +6,7 @@
   "status": "verified-local",
   "renderer": "d3dmetal",
   "lastVerified": "2026-11-17",
-  "provenance": "himbeles confirmed gameplay on the released r1 engine on 2026-11-15. Late Siege gameplay was tested with a local build of the r2 Wine changes on 2026-11-17 with Steam build 26559323, Highball 0.10.26 and D3DMetal on an Apple M2 Max with macOS 27.2.1.",
-  "notes": "An opt-in recipe offers the AoE IV engine on Highball builds that include it. Apply the fix on the game's page, then launch with Play in Highball. If the game shows a graphics driver warning at startup, click OK to continue.",
+  "provenance": "Gameplay was verified on the AoE IV prototypes. The latest test used Steam build 26559323, Highball 0.10.26 and D3DMetal on an Apple M2 Max with macOS 27.2.1 (2026-11-17).",
+  "notes": "An opt-in recipe enables the AoE IV fix on supported Wine 11 builds with Rosetta on macOS 26 or later. Apply the fix on the game's page, then launch with Play in Highball. If a graphics driver warning appears, click OK to continue.",
   "recipe": "recipes/games/age-of-empires-iv.json"
 }
