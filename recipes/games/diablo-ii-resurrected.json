@@ -1,0 +1,43 @@
+{
+  "id": "diablo-ii-resurrected",
+  "kind": "game",
+  "title": "Diablo II: Resurrected",
+  "requires": [
+    "steam"
+  ],
+  "engine": "x64-crossover26.3-r35",
+  "renderer": "d3dmetal",
+  "steps": [
+    {
+      "type": "renderer",
+      "renderer": "d3dmetal"
+    },
+    {
+      "type": "environment",
+      "name": "HB_FIBER_MIRROR",
+      "value": "0"
+    },
+    {
+      "type": "environment",
+      "name": "CX_APPLEGPTK_LIBD3DSHARED_PATH",
+      "value": "${frameworks}/renderer/d3dmetal/external/libd3dshared.dylib"
+    },
+    {
+      "type": "environment",
+      "name": "ROSETTA_ADVERTISE_AVX",
+      "value": "1"
+    },
+    {
+      "type": "note",
+      "text": "Asks for the Wine 11 engine r35 or newer. Direct3D 12, so D3DMetal. HB_FIBER_MIRROR=0 stops Wine copying the game's fiber into the slot where macOS keeps the thread's priority class. D3DMetal calls macOS code from the game's own threads, and with the copy on the game exited a few seconds after start, before any window. CX_APPLEGPTK_LIBD3DSHARED_PATH has Wine load D3DMetal's libd3dshared.dylib from the engine, without which the game ran with no window. AVX is advertised as in the player's runs, not shown to be needed. Confirmed by AlexPako on an M5 Pro, macOS 27.2.1 (highball#371): 35 minutes with sync off and again with MSync, switching away and back worked."
+    }
+  ],
+  "knownIssues": [
+    {
+      "symptom": "The cursor keeps switching between the game's cursor and the Mac pointer",
+      "cause": "seen with the Metal performance HUD on",
+      "fix": "turn the Metal performance HUD off in the environment's graphics settings"
+    }
+  ],
+  "lastVerified": null
+}
