@@ -15,7 +15,7 @@
     },
     {
       "type": "note",
-      "text": "Requires an AoE IV-capable Wine 11 engine with its AoE IV helper, Apple Silicon and macOS 26 or later. Launch with Play in Highball. If a graphics driver warning appears, click OK to continue."
+      "text": "Requires an AoE IV-capable Wine 11 engine with its shared x87sidecar, Apple Silicon and macOS 26 or later. Launch with Play in Highball. If a graphics driver warning appears, click OK to continue."
     }
   ]
 }
