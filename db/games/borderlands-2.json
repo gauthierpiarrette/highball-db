@@ -1,0 +1,21 @@
+{
+  "id": "borderlands-2",
+  "title": "Borderlands 2",
+  "steam_appid": 49520,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Noodle9987 (highball-db#1243, 2026-11-15), Apple A18 Pro, macOS 27.2, Highball 0.10.26, engine x64-crossover26.3-r27, DXMT, rated 4 of 5 after 20 minutes: on a MacBook Neo, frame drops at the highest resolution, in an environment set up for Counter-Strike 2, whose dxvk.conf section is for csgo.exe only, with ddraw=n,b. Not verified by the maintainer.",
+  "notes": "Gearbox's 2012 shooter, a 32-bit Direct3D 9 game. Reported playable on a MacBook Neo (Apple A18 Pro) with DXMT on the Wine 11 engine r27 over 20 minutes, with frame drops at the highest resolution. On that engine DXMT mode leaves Direct3D 9 to Wine's own. Steam lists a Mac version as well, an older port not checked here.",
+  "knownIssues": [
+    {
+      "symptom": "Frame drops at the highest resolution (MacBook Neo, Wine 11 r27, DXMT, highball-db#1243)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null,
+  "arch": "x86"
+}

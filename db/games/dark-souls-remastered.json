@@ -5,9 +5,15 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by phmuni (highball-db#118, 2026-09-18): rated 5, perfect, on DXMT, Apple M5, macOS 27.0, engine x64-sikarugir10.0_6-r3, Highball 0.9.23, ten minutes played through Highball. Not run here. avazadygezalov (highball-db#715, 2026-10-26): rated 5 of 5 after 53 minutes on DXMT, Apple M3, macOS 27.0.1, engine x64-sikarugir10.0_6-r28, Highball 0.10.22, controller-sdl tweak. ulayera (highball-db#827, 2026-10-30), Apple M1 Max, macOS 27.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 14 minutes.",
-  "notes": "Works offline in the one report, perfect on DXMT after a short session; sustained frame rate and longer play are not recorded yet. Like other FromSoftware titles it has a server-side anti-cheat with a softban risk if played online through Wine, so keep it offline. Steam AppID 570940.",
-  "knownIssues": [],
+  "provenance": "Reported by phmuni (highball-db#118, 2026-09-18): rated 5, perfect, on DXMT, Apple M5, macOS 27.0, engine x64-sikarugir10.0_6-r3, Highball 0.9.23, ten minutes played through Highball. Not run here. avazadygezalov (highball-db#715, 2026-10-26): rated 5 of 5 after 53 minutes on DXMT, Apple M3, macOS 27.0.1, engine x64-sikarugir10.0_6-r28, Highball 0.10.22, controller-sdl tweak. ulayera (highball-db#827, 2026-10-30), Apple M1 Max, macOS 27.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 14 minutes. kh-pavlo (highball-db#1219, 2026-11-14), Apple M5, macOS 27.0.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXVK by the report (the environment's mode is DXMT), rated 4 of 5 after 41 minutes: the sky flickered in Blighttown, otherwise playable at least up to Ornstein and Smough.",
+  "notes": "Works offline in the one report, perfect on DXMT after a short session; sustained frame rate and longer play are not recorded yet. Like other FromSoftware titles it has a server-side anti-cheat with a softban risk if played online through Wine, so keep it offline. Steam AppID 570940. A player on a base M5 rated it playable over 41 minutes on the default engine (r28), DXVK by the report: the sky flickered in Blighttown, and it played fine at least up to Ornstein and Smough (highball-db#1219).",
+  "knownIssues": [
+    {
+      "symptom": "The sky flickers in Blighttown (M5, Wine 10 r28, DXVK by the report, highball-db#1219)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
   "launchArgs": null,
   "lastVerified": null,
   "verified": null

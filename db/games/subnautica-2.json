@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by rjguest (highball-db#995, 2026-11-05), Apple M5, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r14, D3DMetal by the report (the environment's mode is DXMT), rated 4 of 5 after 2 minutes: some keybinds don't work correctly. The environment had version=n,b and winmm=n,b in its DLL overrides and the controller-sdl tweak. Not verified by the maintainer.",
-  "notes": "Playable in a 2 minute report on an M5 on the default engine's r14, with some keybinds not working correctly. In Early Access.",
+  "provenance": "Reported by rjguest (highball-db#995, 2026-11-05), Apple M5, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r14, D3DMetal by the report (the environment's mode is DXMT), rated 4 of 5 after 2 minutes: some keybinds don't work correctly. The environment had version=n,b and winmm=n,b in its DLL overrides and the controller-sdl tweak. Not verified by the maintainer. pavliqqqqqq (highball-db#1251, 2026-11-15), Apple M2, macOS 27.3, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, D3DMetal by the report (the environment's mode is DXMT), rated 3 of 5 after 7 minutes: on a 16 GB MacBook Air, the frame rate being what wasn't perfect, workarounds not described.",
+  "notes": "Playable in a 2 minute report on an M5 on the default engine's r14, with some keybinds not working correctly. In Early Access. Rated playable with workarounds not described on a 16 GB M2 MacBook Air over 7 minutes on the default engine (r28), D3DMetal by the report, the frame rate being what held it back (highball-db#1251).",
   "knownIssues": [
     {
       "symptom": "Some keybinds don't work correctly (M5, Wine 10 r14)",

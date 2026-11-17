@@ -1,7 +1,7 @@
 {
   "id": "ni-no-kuni-wrath-of-the-white-witch",
   "title": "Ni no Kuni: Wrath of the White Witch",
-  "steam_appid": 589360,
+  "steam_appid": 798460,
   "status": "reported-upstream",
   "renderer": "dxmt",
   "provenance": "DXMT changelog v0.80 (github.com/3Shain/dxmt/releases)",

@@ -1,0 +1,20 @@
+{
+  "id": "portal-first-slice",
+  "title": "Portal: First Slice",
+  "steam_appid": 410,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by udance4ever (highball-db#1253, 2026-11-15), Apple M1, macOS 27.2.1, Highball 0.10.28, engine x64-sikarugir10.0_6-r31, D3DMetal, rated 4 of 5 after 6 minutes: AVX advertised, DXVK async on, an occasional small stutter the player thinks may be shaders compiling. The demo isn't in their Steam license list, installing it adds Portal to the Steam library, and Highball lists both. After uninstalling it Steam drops Portal while Highball still lists the demo (highball#432). Not verified by the maintainer.",
+  "notes": "The free demo of Portal (400), which has its own page. The Portal recipe is for the full game only. Reported playable on a base M1 on the Wine 10 engine r31 in D3DMetal mode over 6 minutes, with an occasional small stutter. A Direct3D 9 game, which on the Wine 10 engine gets DXVK's Direct3D 9 in D3DMetal mode too.",
+  "knownIssues": [
+    {
+      "symptom": "An occasional small stutter, which the player thinks may be shaders compiling (M1, Wine 10 r31, highball-db#1253)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

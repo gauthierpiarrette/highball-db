@@ -1,0 +1,14 @@
+{
+  "id": "theme-hospital",
+  "title": "Theme Hospital",
+  "steam_appid": 2229820,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by chickjiew (highball-db#1246, 2026-11-15), Apple M4, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 1 minute: a 60 fps cap. The report gives no Steam id, taken to be the Steam release (2229820). Not verified by the maintainer.",
+  "notes": "Bullfrog's 1997 hospital game, on Steam since November 2026. Reported perfect on a base M4 with DXMT on the default engine (r28) and a 60 fps cap in a 1 minute session, so it covers the start only. Taken to be the Steam release.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

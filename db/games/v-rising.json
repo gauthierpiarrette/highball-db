@@ -1,0 +1,14 @@
+{
+  "id": "v-rising",
+  "title": "V Rising",
+  "steam_appid": 1604030,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by LuLuSaBee (highball-db#1247, 2026-11-15), Apple M2 Max, macOS 27.2, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 147 minutes. Not verified by the maintainer.",
+  "notes": "Stunlock Studios' vampire survival game. Reported perfect on an M2 Max with DXMT on the default engine (r28) over 147 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

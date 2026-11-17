@@ -1,0 +1,18 @@
+{
+  "id": "haiku-the-robot",
+  "title": "Haiku, the Robot",
+  "steam_appid": 1231880,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by JJ-Borbhunter (highball-db#1228, 2026-11-15), Apple M1, macOS 15.7.3, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 41 minutes: a boss fought and most of the starting area explored, no issues. Not verified by the maintainer.",
+  "notes": "Reported perfect on a base M1 with macOS 15.7.3 and DXMT on the default engine (r28) over 41 minutes, a boss fought and most of the starting area explored. Steam lists a Mac version as well.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null,
+  "nativeMac": {
+    "available": true,
+    "where": "Steam"
+  }
+}

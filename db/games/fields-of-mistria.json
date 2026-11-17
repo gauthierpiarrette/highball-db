@@ -1,0 +1,14 @@
+{
+  "id": "fields-of-mistria",
+  "title": "Fields of Mistria",
+  "steam_appid": 2142790,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by mocodebochan (highball-db#1238, 2026-11-15), Apple M2, macOS 15.7.7, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 1 minute: synchronization off and DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1, in an environment that also carries the Battle.net recipe. Not verified by the maintainer.",
+  "notes": "NPC Studio's farming life game. Reported perfect on a base M2 with macOS 15.7.7 and DXMT on the default engine (r28) in a 1 minute session, so it covers the start only.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

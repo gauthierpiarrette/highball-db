@@ -1,0 +1,14 @@
+{
+  "id": "metal-gear-solid-master-collection-version",
+  "title": "METAL GEAR SOLID - Master Collection Version",
+  "steam_appid": 2131630,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by IovWLordWarth (highball-db#1222, 2026-11-15), Apple M4, macOS 26.5.2, Highball 0.10.26, engine x64-crossover26.3-r31, DXVK, rated 4 of 5 after 3 minutes: minor issues not described. Not verified by the maintainer.",
+  "notes": "Konami's 2023 release of the first Metal Gear Solid, part of the Master Collection Vol. 1. Reported playable with minor issues not described on a base M4 with DXVK on the Wine 11 engine r31 in a 3 minute session.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

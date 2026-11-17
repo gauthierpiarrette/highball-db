@@ -1,0 +1,14 @@
+{
+  "id": "atelier-sophie-2-the-alchemist-of-the-mysterious-dream",
+  "title": "Atelier Sophie 2: The Alchemist of the Mysterious Dream",
+  "steam_appid": 1621310,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by zxlee00 (highball-db#1242, 2026-11-15), Apple M2 Pro, macOS 27.0, Highball 0.10.26, engine x64-crossover26.3-r30, DXMT, rated 5 of 5 after 52 minutes: d3d11=n,b in the DLL overrides, the Metal HUD on, recipes fakejapanese and controller-sdl. Not verified by the maintainer.",
+  "notes": "Reported perfect on an M2 Pro with DXMT on the Wine 11 engine r30 over 52 minutes, with d3d11=n,b in the DLL overrides and the fakejapanese and controller-sdl recipes in the environment.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
