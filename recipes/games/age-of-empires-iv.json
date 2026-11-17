@@ -4,7 +4,7 @@
   "kind": "game",
   "optIn": true,
   "requires": ["steam"],
-  "engine": "x64-crossover26.3-aoe4-r1",
+  "engine": "x64-crossover26.3-aoe4-r2",
   "renderer": "d3dmetal",
   "steps": [
     {
