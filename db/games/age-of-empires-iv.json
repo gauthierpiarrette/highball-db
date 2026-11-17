@@ -6,7 +6,7 @@
   "status": "verified-local",
   "renderer": "d3dmetal",
   "lastVerified": "2026-11-17",
-  "provenance": "The r3 release was checked with Steam build 26559323, D3DMetal and MSync on an Apple M2 Max with macOS 27.2.1 (2026-11-17). Installation, Windows boot and Late Siege gameplay were verified locally; smaller stutters remain.",
-  "notes": "The opt-in recipe selects the published AoE IV r3 engine with Rosetta on macOS 26 or later. Apply the fix on the game’s page, then launch with Play in Highball. If a graphics driver warning appears, click OK to continue.",
+  "provenance": "Gameplay was verified locally with the standalone patched engine, Steam build 26559323, D3DMetal and MSync on an Apple M2 Max with macOS 27.2.1 (2026-11-17), including Late Siege. Smaller stutters remain. The upstream Wine patch and separate helper are being validated through highball-engine PR #49; that integration is not yet gameplay-verified.",
+  "notes": "The opt-in recipe enables the AoE IV decoder/cache and selects D3DMetal. Requires an AoE IV-capable Wine 11 engine with the separate x87sidecar-aoe4 component, Rosetta and macOS 26 or later. Highball supplies the helper path when launching. The upstream engine manifest pin is pending the engine/helper release.",
   "recipe": "recipes/games/age-of-empires-iv.json"
 }
