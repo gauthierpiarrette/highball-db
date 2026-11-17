@@ -6,7 +6,7 @@
   "status": "verified-local",
   "renderer": "d3dmetal",
   "lastVerified": "2026-11-17",
-  "provenance": "Gameplay was verified on the AoE IV prototypes. The r3 release was checked with Steam build 26559323, D3DMetal and MSync on an Apple M2 Max with macOS 27.2.1 (2026-11-17). Matched Late Siege profiling reduced P99 frame intervals from 75–83 ms to 42 ms; some stutters remain.",
+  "provenance": "The r3 release was checked with Steam build 26559323, D3DMetal and MSync on an Apple M2 Max with macOS 27.2.1 (2026-11-17). Installation, Windows boot and Late Siege gameplay were verified locally; smaller stutters remain.",
   "notes": "The opt-in recipe selects the published AoE IV r3 engine with Rosetta on macOS 26 or later. Apply the fix on the game’s page, then launch with Play in Highball. If a graphics driver warning appears, click OK to continue.",
   "recipe": "recipes/games/age-of-empires-iv.json"
 }
