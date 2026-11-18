@@ -1,0 +1,26 @@
+{
+  "id": "throne-and-liberty",
+  "title": "THRONE AND LIBERTY",
+  "steam_appid": 2429640,
+  "status": "community",
+  "renderer": null,
+  "anticheat": {
+    "names": [
+      "NCGuard"
+    ],
+    "macVerdict": "warning",
+    "note": "NCGuard, NCSOFT's anti-cheat, starts before the game. In the one report the game ended with code 0xE0000015 right after NCGuard initialized (highball#746). Whether NCGuard is what refuses Wine isn't measured."
+  },
+  "provenance": "Reported by AmarokSpiritch (highball#746, 2026-11-18), Apple M4, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, Steam copy: the game doesn't launch. NCGuard's own log shows it installing and initializing for TL.exe, then the game exiting with 0xE0000015 seconds later. Not verified by the maintainer.",
+  "notes": "NCSOFT's MMO, with NCGuard anti-cheat. Doesn't launch in the one report so far, on the default engine with DXMT: NCGuard starts, then the game exits with code 0xE0000015 before any window (highball#746). Other engines and graphics modes haven't been reported.",
+  "knownIssues": [
+    {
+      "symptom": "The game exits with 0xE0000015 right after NCGuard initializes, before any window (M4, Wine 10 r28, DXMT, highball#746)",
+      "cause": "not diagnosed. NCGuard, the game's anti-cheat, is the last thing its log shows",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
