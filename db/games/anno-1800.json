@@ -1,0 +1,14 @@
+{
+  "id": "anno-1800",
+  "title": "Anno 1800",
+  "steam_appid": 916440,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by islandmode (highball-db#1299, 2026-11-18), Apple M6, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 13 minutes: at 1512x982, the game naming the graphics adapter Apple M6. In the player's words the session was too short to judge stability. Not verified by the maintainer. felixneilbonite (highball-db#1308, 2026-11-18), Apple M5, macOS 27.2, Highball 0.10.27, engine x64-crossover26.3-r30, WineD3D by the report (the environment's mode is D3DMetal), rated 4 of 5 after 1 minute: Windows 11, AVX advertised, minor issues not described.",
+  "notes": "Ubisoft Mainz's 2019 city builder. Steam's page asks for a Ubisoft account. Reported perfect on an Apple M6 with DXMT on the default engine r28 over 13 minutes at 1512x982, too short to judge stability by the player's account. Rated playable with minor issues not described on an M5 over 1 minute on the Wine 11 engine r30, WineD3D by the report in an environment in D3DMetal mode (highball-db#1308).",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

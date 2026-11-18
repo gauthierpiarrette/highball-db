@@ -1,0 +1,14 @@
+{
+  "id": "metro-2033",
+  "title": "Metro 2033",
+  "steam_appid": 43110,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Alexpolyech (highball-db#1302, 2026-11-18), Apple M5, macOS 27.2, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, WineD3D, rated 5 of 5 after 7 minutes: the GOG copy. GOG sells the original Metro 2033 and Metro 2033 Redux apart, and the report names the original. In an environment that also carries the Counter-Strike 2 and Cyberpunk 2077 recipes. Not verified by the maintainer.",
+  "notes": "The original 2010 Metro 2033. Reported perfect on an M5 with Wine's own Direct3D (WineD3D) on the default engine r28 over 7 minutes, the GOG copy. Metro 2033 Redux is a separate game.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

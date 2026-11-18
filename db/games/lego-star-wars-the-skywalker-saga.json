@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": "dxvk",
   "anticheat": null,
-  "provenance": "Reported by yanisgflann (highball-db#89, 2026-09-16), Apple M2, macOS 27, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, DXVK, rated 4 of 5 (playable, minor issues) after 58 minutes. Not verified by the maintainer.",
-  "notes": "Reported playable on DXVK over a one-hour session on an M2, with minor issues the reporter did not describe. No measurement here yet.",
+  "provenance": "Reported by yanisgflann (highball-db#89, 2026-09-16), Apple M2, macOS 27, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, DXVK, rated 4 of 5 (playable, minor issues) after 58 minutes. Not verified by the maintainer. MeiisamMahmoodii (highball-db#1292, 2026-11-17), Apple M5, macOS 27.2, Highball 0.10.26, engine x64-crossover26.3-r31, DXMT by the report (the environment's mode is D3DMetal), rated 5 of 5 after 33 minutes: the report gives no Steam id, taken to be the Steam release (920210). Windows 11, a 240 dpi scale, AVX advertised, the Metal HUD on.",
+  "notes": "Reported playable on DXVK over a one-hour session on an M2, with minor issues the reporter did not describe. No measurement here yet. Rated perfect on an M5 over 33 minutes on the Wine 11 engine r31, DXMT by the report in an environment in D3DMetal mode (highball-db#1292).",
   "knownIssues": [],
   "launchArgs": null,
   "lastVerified": null

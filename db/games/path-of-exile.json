@@ -1,0 +1,18 @@
+{
+  "id": "path-of-exile",
+  "title": "Path of Exile",
+  "steam_appid": 238960,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by boppel4mac-ops (highball-db#1306, 2026-11-18), Apple M4 Pro, macOS 27.3, not through the Highball app but through Proton-ish 1.0.62 (HighballKit 0.10.26) from the macOS Steam client, the Wine 11 engine x64-crossover26.3-r29, D3DMetal, msync, AVX advertised, rated 5 of 5 after several hours of acts and maps in the 3.30 Covens league: a stable 60 fps at 4K on an external monitor with a lowered in-game render resolution and Retina mode on, no crashes or glitches, and the Awakened PoE Trade overlay working alongside. Not verified by the maintainer.",
+  "notes": "Grinding Gear Games' free to play action RPG, the first game. Path of Exile 2 has its own page. Reported perfect on an M4 Pro with D3DMetal on the Wine 11 engine r29 over several hours, a stable 60 fps at 4K with a lowered render resolution, played through Proton-ish rather than the Highball app. Steam lists a Mac version as well.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null,
+  "nativeMac": {
+    "available": true,
+    "where": "Steam"
+  }
+}
