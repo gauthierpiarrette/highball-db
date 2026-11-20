@@ -1,0 +1,14 @@
+{
+  "id": "fifa-22",
+  "title": "FIFA 22",
+  "steam_appid": 1506830,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by babaiyu (highball-db#1317, 2026-11-19), Apple M4, macOS 27.2.1, Highball 0.10.26, engine x64-crossover26.3-r30, D3DMetal, rated 5 of 5 after 100 minutes: on a Mac mini, with esync, AVX advertised, a 120 fps cap and the xact, physx, concrt140-native, corefonts, fakejapanese and controller-sdl recipes. In the player's words EA's servers for FIFA 22 are shut down, so the game seems to play without a sign in through the EA app, the online modes are gone and local games play. Not verified by the maintainer. mehmetsedatovur (highball-db#1323, 2026-11-19), Apple M1 Pro, macOS 27.0.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r19, D3DMetal by the report (the environment's mode is DXMT), rated 5 of 5 after 9 minutes: named FIFA22, with the Steam id 150683 in the report, one digit short of FIFA 22's 1506830. On r19, an older revision of the Wine 10 engine, with graphics DLL overrides and variables the player set by hand (WINEDLLOVERRIDES with d3d11, d3d12 and dxgi builtin and nvapi64, nvngx and gameoverlayrenderer64 off, D3DM_VENDOR_ID=0x106b, D3DM_DEVICE_DESCRIPTION, DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1, WINE_AGP_SIZE=16384).",
+  "notes": "EA's 2021 football game. Reported perfect on an M4 Mac mini with D3DMetal on the Wine 11 engine r30 over 100 minutes. The player says EA has shut the game's servers down, so the online modes are gone and local games play, seemingly without a sign in through the EA app. Also rated perfect on an M1 Pro over 9 minutes on the Wine 10 engine r19, D3DMetal by the report in an environment in DXMT mode, with graphics overrides the player set by hand (highball-db#1323).",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

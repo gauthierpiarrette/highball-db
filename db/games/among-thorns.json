@@ -1,0 +1,19 @@
+{
+  "id": "among-thorns",
+  "title": "Among Thorns",
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by violet-black (highball-db#1322, 2026-11-19), Apple M5 Max, macOS 26.6.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 1 minute: taken to be Matt Frith's free point and click on itch.io by its name, the report gives no store. In the player's words everything works on the game's dx9 setting with the x4 upscale. For sound glitches the player suggests the software sound device in the game's config, or a 44 kHz sample rate in the Mac's Audio MIDI Setup. Not verified by the maintainer.",
+  "notes": "Taken to be Matt Frith's free 2016 point and click on itch.io (mattfrith.itch.io/among-thorns), going by the name. Reported perfect on an M5 Max in an environment in DXMT mode on the default engine r28, a 1 minute session on the game's dx9 setting with the x4 upscale. If the sound glitches, the player suggests setting the sound device to software in the game's config, or the sample rate to 44 kHz in the Mac's Audio MIDI Setup.",
+  "knownIssues": [
+    {
+      "symptom": "Sound glitches can happen, going by the player's advice (M5 Max, Wine 10 r28, highball-db#1322)",
+      "cause": "not diagnosed",
+      "fix": "set the sound device to software in the game's config, or set the sample rate to 44 kHz in the Mac's Audio MIDI Setup, as the reporter suggests"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

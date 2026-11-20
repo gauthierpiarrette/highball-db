@@ -1,0 +1,14 @@
+{
+  "id": "ragbrawl",
+  "title": "RagBrawl",
+  "steam_appid": 2300280,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by adisng (highball-db#1331, 2026-11-19), Apple M1, macOS 27.2.1, Highball 0.10.28, engine x64-sikarugir10.0_6-r31, DXMT, rated 3 of 5 after 4 minutes: Windows 11 and DXVK async shader compilation on, nothing stated about the workaround. Not verified by the maintainer. adisng (highball-db#1333, 2026-11-19), Apple M1, macOS 27.2.1, Highball 0.10.28, engine x64-sikarugir10.0_6-r31, DXMT, rated 3 of 5 after 14 minutes: the same player and settings half an hour later, again with no workaround named.",
+  "notes": "P7idgeon Party's free to play party game. Rated playable with workarounds on a base M1 with DXMT on the Wine 10 engine r31 over 4 minutes, with no workaround named. The same player rated it the same way again over 14 minutes (highball-db#1333).",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -5,18 +5,18 @@
   "status": "community",
   "renderer": "d3dmetal",
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#67, 2026-09-16), Apple M1, macOS 26.7, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, D3DMetal, rated 5 of 5 after 1 minute plus about 40 minutes earlier in Whisky. Not verified by the maintainer. heathium (highball-db#1303, 2026-11-18), Apple M1 Pro, macOS 26.5.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 4 of 5 after 88 minutes: a Nintendo Pro controller couldn't connect, and characters' dialogue in cutscenes sounded muffled, with the controller-sdl recipe and AVX advertised.",
-  "notes": "Reported perfect on D3DMetal after a session of 1 minute plus about 40 minutes earlier in Whisky. The reporter imported a save from a Whisky bottle and got straight back in-game. No measurement here yet. An M1 Pro rated it playable over 88 minutes on D3DMetal on the default engine r28, with muffled dialogue in cutscenes and a Nintendo Pro controller that couldn't connect (highball-db#1303).",
+  "provenance": "Reported by udance4ever (highball-db#67, 2026-09-16), Apple M1, macOS 26.7, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, D3DMetal, rated 5 of 5 after 1 minute plus about 40 minutes earlier in Whisky. Not verified by the maintainer. heathium (highball-db#1303, 2026-11-18), Apple M1 Pro, macOS 26.5.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 4 of 5 after 88 minutes: a Nintendo Pro controller couldn't connect, and characters' dialogue in cutscenes sounded muffled, with the controller-sdl recipe and AVX advertised. heathium again (highball-db#1303, 2026-11-19): the Pro controller connected after switching to the Wine 11 engine, and the muffled dialogue went away with the sound set to stereo in the game's menu.",
+  "notes": "Reported perfect on D3DMetal after a session of 1 minute plus about 40 minutes earlier in Whisky. The reporter imported a save from a Whisky bottle and got straight back in-game. No measurement here yet. An M1 Pro rated it playable over 88 minutes on D3DMetal on the default engine r28, with muffled dialogue in cutscenes and a Nintendo Pro controller that couldn't connect. The player then fixed both, the dialogue by setting the sound to stereo in the game's menu and the controller by switching to the Wine 11 engine (highball-db#1303).",
   "knownIssues": [
     {
       "symptom": "Characters' dialogue in cutscenes sounds muffled (M1 Pro, D3DMetal, Wine 10 r28, highball-db#1303)",
       "cause": "not diagnosed",
-      "fix": "none known"
+      "fix": "set the sound to stereo in the game's menu, which fixed it for the reporter (highball-db#1303, 2026-11-19)"
     },
     {
       "symptom": "A Nintendo Pro controller couldn't connect, with the controller-sdl recipe (M1 Pro, Wine 10 r28, highball-db#1303)",
       "cause": "not diagnosed",
-      "fix": "none known"
+      "fix": "the Wine 11 engine, where it connected for the reporter (highball-db#1303, 2026-11-19)"
     }
   ],
   "launchArgs": null,

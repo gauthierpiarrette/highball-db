@@ -1,0 +1,14 @@
+{
+  "id": "kena-bridge-of-spirits",
+  "title": "Kena: Bridge of Spirits",
+  "steam_appid": 1954200,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by timjkArt (highball-db#1321, 2026-11-19), Apple M5 Pro, macOS 27.2.1, Highball 0.10.26, engine x64-crossover26.3-r31, D3DMetal, rated 5 of 5 after 87 minutes: the report gives no Steam id and the environment has no Steam recipe, so the copy isn't stated. The page carries the Steam release's id. Sync off, Retina pixels at 100% and DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1, in an environment that also carries the death-stranding, controller-sdl and rockstar recipes. Not verified by the maintainer.",
+  "notes": "Ember Lab's action adventure. Reported perfect on an M5 Pro with D3DMetal on the Wine 11 engine r31 over 87 minutes. The copy's store isn't stated.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

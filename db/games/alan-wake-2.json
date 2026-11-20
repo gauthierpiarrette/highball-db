@@ -1,0 +1,19 @@
+{
+  "id": "alan-wake-2",
+  "title": "Alan Wake 2",
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by jpolicastro (highball-db#1314, 2026-11-19), Apple M5, macOS 27.2.1, Highball 0.10.26, engine x64-crossover26.3-r31, D3DMetal, rated 5 of 5 after 70 minutes: the report gives no store. The game is sold on PC through the Epic Games Store only, so it's taken to be the Epic copy. AVX advertised and a 120 fps cap. In the player's words the game won't launch unless AVX is advertised, and a little over an hour of play had no issues. Not verified by the maintainer.",
+  "notes": "Remedy's 2023 game, published by Epic and sold on PC through the Epic Games Store only, so the page has no Steam id. Reported perfect on an M5 with D3DMetal on the Wine 11 engine r31 over 70 minutes. The player says the game won't launch unless AVX is advertised, the Advertise AVX to games setting in the environment.",
+  "knownIssues": [
+    {
+      "symptom": "Doesn't launch unless AVX is advertised, in the player's words (M5, Wine 11 r31, D3DMetal, highball-db#1314)",
+      "cause": "not checked here",
+      "fix": "turn on Advertise AVX to games (Rosetta) in the environment's settings, as the reporter did"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
