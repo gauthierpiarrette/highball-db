@@ -72,10 +72,12 @@ def clean(v):
     return re.sub(r":$", "", v).strip()
 
 
-def find_label(body, names):
+def find_label(body, names, prose=False):
     """First value for any of `names`, across the three shapes reporters actually use:
     a pipe-table row, a bullet or plain 'Label: value' line, and a '### Label' heading
-    followed by its first non-empty line."""
+    followed by its first non-empty line. With `prose`, a heading's value is everything up to
+    the next heading, joined into one line: the form's Notes is free text, and a long first
+    line read as no notes, so the session line stood in for what the player wrote (#1322)."""
     want = {norm(n) for n in names}
     lines = body.splitlines()
     for i, line in enumerate(lines):
@@ -91,6 +93,14 @@ def find_label(body, names):
         # treating it as one swallows a whole markdown line as the value.
         m = re.match(r"^#{3,6}\s+(.+?)\s*$", line)
         if m and norm(clean(m.group(1))) in want:
+            if prose:
+                text = []
+                for nxt in lines[i + 1:]:
+                    if re.match(r"^#{1,6}\s", nxt):
+                        break
+                    if nxt.strip():
+                        text.append(nxt.strip())
+                return clean(" ".join(text)) if text else None
             for nxt in lines[i + 1:]:
                 if not nxt.strip():
                     continue
@@ -252,7 +262,7 @@ def extract(body):
     if rec["engine"] is None:
         asks.append("engine: no labelled Engine id")
 
-    n = find_label(b, ["Notes", "Test notes"])
+    n = find_label(b, ["Notes", "Test notes"], prose=True)
     rec["notes"] = n if answered(n) else None
     # The form's Session line (added 2026-10-17): Highball's "Played for N min" moved out of Notes so a
     # reporter can type into Notes freely (highball#347). An empty Notes keeps the session line as notes.
@@ -262,7 +272,7 @@ def extract(body):
         rec["notes"] = rec["session"]
     # The form's "What was not perfect?" line (added 2026-09-21 after a day of rating-4 reports
     # with nothing to act on). Kept apart from notes so a known-issue line can be lifted from it.
-    w = find_label(b, ["What was not perfect?", "What was not perfect"])
+    w = find_label(b, ["What was not perfect?", "What was not perfect"], prose=True)
     rec["issues"] = w if answered(w) else None
     return rec, asks
 

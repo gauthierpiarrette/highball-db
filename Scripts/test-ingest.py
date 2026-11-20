@@ -165,7 +165,9 @@ for name, session, notes, want in [
         ("own notes win over the session", "Played for 26 min through Highball.", "Fans spin up in towns.",
          ("Fans spin up in towns.", "Played for 26 min through Highball.")),
         ("older form, notes only", "_No response_", "Played for 5 min through Highball.",
-         ("Played for 5 min through Highball.", None))]:
+         ("Played for 5 min through Highball.", None)),
+        ("long notes are kept, not swapped for the session", "Played for 40 min through Highball.",
+         "It ran well through the whole first chapter with the controller, only the menus were a bit slow to answer at first, and the sound was fine on AirPods.\n\nSecond line.", ("It ran well through the whole first chapter with the controller, only the menus were a bit slow to answer at first, and the sound was fine on AirPods. Second line.", "Played for 40 min through Highball."))]:
     box = sandbox()
     run(box, FORM.format(session=session, notes=notes), 953, "Cyberpunk 2077")
     rec = json.loads(open(os.path.join(box, "db", "reports", "cyberpunk-2077.jsonl")).read().strip())
