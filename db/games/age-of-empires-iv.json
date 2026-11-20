@@ -1,0 +1,12 @@
+{
+  "id": "age-of-empires-iv",
+  "title": "Age of Empires IV",
+  "steam_appid": 1466860,
+  "arch": "x64",
+  "status": "verified-local",
+  "renderer": "d3dmetal",
+  "lastVerified": "2026-11-17",
+  "provenance": "Verified locally on an Apple M2 Max with D3DMetal and MSync on 2026-11-17. Highball Play launched Steam build 26559323 using Wine from engine PR #49 (ba28330) and the shared x87sidecar based on v1.9.1. Late Siege loaded and 42 selected units followed a move order. Smaller stutters have been observed.",
+  "notes": "The opt-in recipe selects D3DMetal and sets HB_AOE4=1. Requires an AoE IV-capable Wine 11 engine with the patched x87sidecar installed, Rosetta and macOS 26 or later. Wine locates the shared helper in its engine. The upstream engine manifest pin is pending.",
+  "recipe": "recipes/games/age-of-empires-iv.json"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "age-of-empires-iv",
+  "title": "Age of Empires IV",
+  "kind": "game",
+  "optIn": true,
+  "requires": [
+    "steam"
+  ],
+  "renderer": "d3dmetal",
+  "steps": [
+    {
+      "type": "environment",
+      "name": "HB_AOE4",
+      "value": "1"
+    },
+    {
+      "type": "note",
+      "text": "Requires an AoE IV-capable Wine 11 engine with its shared x87sidecar, Apple Silicon and macOS 26 or later. Launch with Play in Highball. If a graphics driver warning appears, click OK to continue."
+    }
+  ]
+}
