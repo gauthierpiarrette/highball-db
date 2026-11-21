@@ -68,7 +68,7 @@
     "result": "Steam copy (2483190), builds 25104224 and 25588841, on a Mac mini M4 with 32 GB. Intro video, title, Xbox sign-in by device code, shader step, cinematics, character select, free roam in Tokyo and three races played, one of them start to finish. Metal HUD at 1920x1080 in Tokyo: 28 fps at the High preset the game picks, 33 with FSR Balanced, 38 at Medium + FSR Balanced, 44 at Low, 50 at Very Low. In a race at Medium + FSR Balanced 39 to 48 fps. Sound and keyboard work, saves sync. Not tested: online play, a controller, any other Mac."
   },
   "previewRoute": {
-    "engine": "arm64-kk-wine11.18-r3",
+    "engine": "arm64-kk-wine11.18-r5",
     "renderer": "vkd3d",
     "minMemoryGB": 32,
     "note": "On a base M4 it holds an even 30 frames a second at 1080p, without the hitch every second that the game's copy protection causes under Rosetta. The Rosetta engine reaches up to 50 with that hitch, so it is a choice between steady and fast. The first start takes about 10 minutes, most of it the game's Optimizing for your PC screen, and Steam and Xbox ask you to sign in once in the new environment.",
