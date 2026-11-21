@@ -1,0 +1,14 @@
+{
+  "id": "family-time",
+  "title": "Family Time",
+  "steam_appid": 5072600,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by mohammadsoroudi849-eng (highball-db#1364, 2026-11-21), Apple M1, macOS 27.3, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 2 minutes: named FamilyTime in the report, taken to be sgthale's Family Time, whose episodes are out on itch.io while its Steam release is planned for early 2027. No store given and no recipes in the environment. Not verified by the maintainer.",
+  "notes": "sgthale's Unity sim about raising a family of wolf children. Its episodes are out on itch.io (sgthale.itch.io/family-time) and the Steam release is planned for early 2027, so the report is taken to be an itch.io build. Reported perfect on a base M1 with DXMT on the default engine r28, a 2 minute session.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

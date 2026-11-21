@@ -5,9 +5,30 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by mozartpmb (highball-db#979, 2026-11-04), Apple M3 Max, macOS 26.6.2, Highball 0.10.23, engine x64-crossover26.3-r29, D3DMetal, rated 5 of 5 after 5 minutes: played against bots. Not verified by the maintainer.",
-  "notes": "Reported perfect on an M3 Max with D3DMetal over 5 minutes against bots, on the Wine 11 engine (r29). Online play wasn't reported.",
-  "knownIssues": [],
+  "provenance": "Reported by mozartpmb (highball-db#979, 2026-11-04), Apple M3 Max, macOS 26.6.2, Highball 0.10.23, engine x64-crossover26.3-r29, D3DMetal, rated 5 of 5 after 5 minutes: played against bots. Not verified by the maintainer. Aleandro06des (highball-db#1345, 2026-11-20), Apple M5 (10-core GPU), 16 GB, macOS 26.5, Highball 0.10.28, engine x64-crossover26.3-r33, D3DMetal, rated 3 of 5: several sessions on 2026-11-20, the longest about 36 minutes, with the Steam id given and the steam and vcrun2022 recipes. Offline modes, matches against the CPU among them, play fine. Online ranked and quick match searched about 10 minutes with every filter at its widest and never found an opponent, with no error. The player checked that the Mac's firewall was off and no VPN ran, the Windows region was Italy, and while searching the game had a connection to Steam only, none to Bandai Namco's servers. On DXMT the game stops with 'DirectX 12 is not supported on your system', and D3DMetal fixed that. On the default Wine 10 engine r28 with D3DMetal the game crashed after about 5 minutes (EXCEPTION_ACCESS_VIOLATION reading 0x2107 in Polaris-Win64-Shipping), and since the crash came before GameUserSettings.ini was written, the graphics settings reset at every start. On the Wine 11 engine r33 it didn't crash and the settings were saved. A dialog at start says the AMD graphics driver has known issues in D3D12, and pressing No carries on. On a 16 GB base M5 the High preset stuttered heavily, while Medium with shadows and effects on Low at 75% resolution plays well.",
+  "notes": "Reported perfect on an M3 Max with D3DMetal over 5 minutes against bots, on the Wine 11 engine (r29). Online play wasn't covered there. A player on a 16 GB base M5 played the offline modes over several sessions with D3DMetal on the Wine 11 engine r33, on Medium with shadows and effects on Low at 75% resolution, but online matchmaking never found an opponent (highball-db#1345). The game needs Direct3D 12, so DXMT can't run it and D3DMetal does. On the default Wine 10 engine r28 it crashed after about 5 minutes for that player, and on the Wine 11 engine it didn't.",
+  "knownIssues": [
+    {
+      "symptom": "Online ranked and quick match searches never find an opponent, with no error, while offline modes play (16 GB base M5, Wine 11 r33, D3DMetal, highball-db#1345)",
+      "cause": "not diagnosed. While searching, the player saw the game connected to Steam only and to none of Bandai Namco's servers, with the Mac's firewall off and no VPN",
+      "fix": "none known"
+    },
+    {
+      "symptom": "On DXMT the game stops with 'DirectX 12 is not supported on your system' (highball-db#1345)",
+      "cause": "the game needs Direct3D 12, which DXMT doesn't provide",
+      "fix": "set Mode for this game to D3DMetal on the game's page, as the reporter did"
+    },
+    {
+      "symptom": "On the default Wine 10 engine r28 with D3DMetal the game crashes after about 5 minutes (EXCEPTION_ACCESS_VIOLATION reading 0x2107 in Polaris-Win64-Shipping), and the graphics settings reset at every start (16 GB base M5, highball-db#1345)",
+      "cause": "not diagnosed. The settings reset because the crash comes before the game writes GameUserSettings.ini, per the player",
+      "fix": "the Wine 11 engine, r33 for the reporter, where it didn't crash and the settings were saved. Pick it under Advanced, Engine in the game's environment"
+    },
+    {
+      "symptom": "A dialog at start says the AMD graphics driver has known issues in D3D12 (highball-db#1345)",
+      "cause": "the environment reports an AMD graphics card, which the game warns about",
+      "fix": "press No and the game carries on normally, per the player"
+    }
+  ],
   "launchArgs": null,
   "lastVerified": null,
   "verified": null

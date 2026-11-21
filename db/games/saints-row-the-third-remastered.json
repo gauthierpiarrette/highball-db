@@ -1,0 +1,25 @@
+{
+  "id": "saints-row-the-third-remastered",
+  "title": "Saints Row: The Third Remastered",
+  "steam_appid": 978300,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by GloriousUpset14 (highball-db#1352, 2026-11-20), Apple M4 Pro, macOS 27.0.1, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXVK by the report (the environment's mode is DXMT), rated 4 of 5: with the Steam id given and the vcrun2022 recipe, several hours into a play through by the player's account (Highball's session line says 8758 minutes). Some stutter in outdoor areas, seemingly at specific spots, minimal and easy to ignore. Quit to Desktop freezes or crashes the game instead of quitting. Not verified by the maintainer.",
+  "notes": "Volition and Sperasoft's remaster of the 2011 game. Reported playable on an M4 Pro several hours into a play through, on the default engine r28 with DXVK by the report in an environment in DXMT mode. Some stutter outdoors at specific spots, and Quit to Desktop freezes or crashes the game.",
+  "knownIssues": [
+    {
+      "symptom": "Quit to Desktop freezes or crashes the game instead of quitting (M4 Pro, Wine 10 r28, highball-db#1352)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    },
+    {
+      "symptom": "Some stutter in outdoor areas, seemingly at specific spots (M4 Pro, Wine 10 r28, highball-db#1352)",
+      "cause": "not diagnosed",
+      "fix": "none needed in the player's words, it is minimal and easy to ignore"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -1,0 +1,26 @@
+{
+  "id": "dragon-ball-xenoverse-2",
+  "title": "DRAGON BALL XENOVERSE 2",
+  "steam_appid": 454650,
+  "status": "community",
+  "renderer": null,
+  "anticheat": {
+    "names": [
+      "Easy Anti-Cheat"
+    ],
+    "macVerdict": "warning",
+    "note": "anti-cheat present; Linux/Proton support does not extend to macOS — userspace path works for some titles"
+  },
+  "provenance": "Reported by MadHerbs-Create (highball-db#1358, 2026-11-20), Apple M5, macOS 26.4, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 317 minutes: named DBXV2 in the report, the game's program name, with no Steam id. The page carries the Steam release's id, and the environment has the steam and vcrun2022 recipes. Controls or sound can stop working after switching windows or when headphones are unplugged or changed. Not verified by the maintainer.",
+  "notes": "Bandai Namco's 2016 fighting game. Reported playable on an M5 with DXMT on the default engine r28 over 317 minutes. Controls or sound can stop working after switching away from the game's window or when headphones are unplugged or changed (highball-db#1358).",
+  "knownIssues": [
+    {
+      "symptom": "Controls or sound stop working after switching away from the game's window, or when headphones are unplugged or changed (M5, Wine 10 r28, highball-db#1358)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

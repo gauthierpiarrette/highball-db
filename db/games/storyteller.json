@@ -1,0 +1,14 @@
+{
+  "id": "storyteller",
+  "title": "Storyteller",
+  "steam_appid": 1624540,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by nickv2002 (highball-db#1360, 2026-11-21), Apple M4 Pro, macOS 15.8.3, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 12 minutes: with the Steam id given and the steam recipe. In the player's words there is a Mac version, but it isn't the new Special Edition. Not verified by the maintainer.",
+  "notes": "Daniel Benmergui's 2023 puzzle game about building stories. Steam also has a Mac version, which the player says isn't the new Special Edition. The Windows version was reported perfect on an M4 Pro with macOS 15.8.3 and DXMT on the default engine r28 over 12 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

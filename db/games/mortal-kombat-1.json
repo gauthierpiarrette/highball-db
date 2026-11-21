@@ -1,0 +1,14 @@
+{
+  "id": "mortal-kombat-1",
+  "title": "Mortal Kombat 1",
+  "steam_appid": 1971870,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by MEMOPIKER (highball-db#1347, 2026-11-20), Apple M5, macOS 27.2.1, Highball 0.10.26, engine x64-crossover26.3-r30, D3DMetal, rated 5 of 5 after 305 minutes: the report gives no Steam id and the environment has no Steam recipe, so the copy isn't stated. The page carries the Steam release's id. With the controller-sdl recipe. Not verified by the maintainer.",
+  "notes": "NetherRealm's 2023 fighting game. Reported perfect on an M5 with D3DMetal on the Wine 11 engine r30 over 305 minutes. The copy's store isn't stated.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

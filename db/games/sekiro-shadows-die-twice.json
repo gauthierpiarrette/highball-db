@@ -4,10 +4,16 @@
   "steam_appid": 814380,
   "status": "reported-upstream",
   "renderer": "dxmt",
-  "provenance": "Named as working in the DXMT changelog (github.com/3Shain/dxmt/releases), and since reported by a player: MTNK03 (highball-db#182, 2026-09-22), Apple M2 Pro with 16 GB, macOS 26.6.2, engine x64-sikarugir10.0_6-r5, DXMT, rated 5 of 5. Not run here. DonatusBarlas (highball-db#986, 2026-11-04), Apple M4, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 11 minutes: 60 fps, played through the monkey boss fight. imdinu (highball-db#992, 2026-11-05), Apple M4 Max, macOS 27.0.1, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 9 minutes.",
-  "notes": "Widely reported working through DXMT. One player report on an M2 Pro with 16 GB on the r5 engine rates it perfect. No session length or frame rate was given, and nothing has been measured here. Two more players rate it perfect with DXMT on the default engine (r28), an M4 at 60 fps over 11 minutes and an M4 Max over 9 minutes.",
+  "provenance": "Named as working in the DXMT changelog (github.com/3Shain/dxmt/releases), and since reported by a player: MTNK03 (highball-db#182, 2026-09-22), Apple M2 Pro with 16 GB, macOS 26.6.2, engine x64-sikarugir10.0_6-r5, DXMT, rated 5 of 5. Not run here. DonatusBarlas (highball-db#986, 2026-11-04), Apple M4, macOS 27.2, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 11 minutes: 60 fps, played through the monkey boss fight. imdinu (highball-db#992, 2026-11-05), Apple M4 Max, macOS 27.0.1, Highball 0.10.23, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 9 minutes. Rasesh2005 (highball-db#1366, 2026-11-21), Apple M3 Pro, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 19 minutes: with the steam and controller-sdl recipes, started from the game's exe rather than through Steam, in the player's words. In a comment the same day: with a controller the game's A and B are swapped, and X and Y too, so when the game says press A it takes B.",
+  "notes": "Widely reported working through DXMT. One player report on an M2 Pro with 16 GB on the r5 engine rates it perfect. No session length or frame rate was given, and nothing has been measured here. Two more players rate it perfect with DXMT on the default engine (r28), an M4 at 60 fps over 11 minutes and an M4 Max over 9 minutes. An M3 Pro rated it playable over 19 minutes with DXMT on the default engine r28, started from its exe rather than Steam, with the controller's A and B, and X and Y, swapped from what the game shows (highball-db#1366).",
   "lastVerified": null,
   "anticheat": null,
-  "knownIssues": [],
+  "knownIssues": [
+    {
+      "symptom": "With a controller, A and B are swapped from what the game shows, and X and Y too: the game asks for A and B works (M3 Pro, controller-sdl recipe, started from the exe, highball-db#1366)",
+      "cause": "not diagnosed. The controller model isn't stated",
+      "fix": "none known"
+    }
+  ],
   "launchArgs": null
 }

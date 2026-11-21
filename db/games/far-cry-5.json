@@ -1,0 +1,20 @@
+{
+  "id": "far-cry-5",
+  "title": "Far Cry 5",
+  "steam_appid": 552520,
+  "status": "community",
+  "renderer": null,
+  "anticheat": {
+    "names": [
+      "Easy Anti-Cheat"
+    ],
+    "macVerdict": "warning",
+    "note": "anti-cheat present; Linux/Proton support does not extend to macOS — userspace path works for some titles"
+  },
+  "provenance": "Reported by ShreyasJadly (highball-db#1361, 2026-11-21), Apple M1 Pro, macOS 27.2.1, Highball 0.10.26, engine x64-crossover26.3-r30, DXMT, rated 5 of 5 after 2 minutes: with the Steam id given, AVX advertised, the Metal HUD on and the steam and vcrun2022 recipes. Not verified by the maintainer.",
+  "notes": "Ubisoft's 2018 open world shooter. Reported perfect on an M1 Pro with DXMT on the Wine 11 engine r30, a 2 minute session.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
