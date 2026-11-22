@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by valdroff (highball-db#365, 2026-10-06), Apple M3, macOS 27.0.1, Highball 0.10.12, the Steam release: it did not start ('Error - unable to set video mode') on engine x64-sikarugir10.0_6-r22 in Wine's own Direct3D mode, Windows 7, AVX advertised. Confirmed working on 2026-10-08 with Emulate display mode changes on for the game and the environment in D3DMetal mode. Not verified by the maintainer. tatoedesign-art (highball-db#698, 2026-10-26): rated 5 of 5, the report gives no chip, macOS, engine or graphics mode. arno608rw (highball-db#729, 2026-10-27), Apple M5, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, recipes dotnet48, vcrun2022 and xact, rated 1 of 5: the CnCNet 5 Yuri's Revenge installer (CnCNet5_YR_Installer) did not launch.",
-  "notes": "The game asks Windows for a display mode the Mac doesn't offer, Wine refuses, and the game stops with 'Error - unable to set video mode'. The reporter got it running with Emulate display mode changes on for the game (Wine pretends the mode changed and scales the picture) and the D3DMetal graphics mode, whose 32-bit DirectDraw is cnc-ddraw. Which of the two did it was not separated, so the page sets no mode. No measurement here yet.",
+  "provenance": "Reported by valdroff (highball-db#365, 2026-10-06), Apple M3, macOS 27.0.1, Highball 0.10.12, the Steam release: it did not start ('Error - unable to set video mode') on engine x64-sikarugir10.0_6-r22 in Wine's own Direct3D mode, Windows 7, AVX advertised. Confirmed working on 2026-10-08 with Emulate display mode changes on for the game and the environment in D3DMetal mode. Not verified by the maintainer. tatoedesign-art (highball-db#698, 2026-10-26): rated 5 of 5, the report gives no chip, macOS, engine or graphics mode. arno608rw (highball-db#729, 2026-10-27), Apple M5, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXMT, recipes dotnet48, vcrun2022 and xact, rated 1 of 5: the CnCNet 5 Yuri's Revenge installer (CnCNet5_YR_Installer) did not launch. jajcayn (highball-db#1373, 2026-11-21), Apple M4 Pro, macOS 26.7.3, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, D3DMetal by the report (the environment's mode is DXVK), rated 4 of 5 after 7 minutes: with the Steam id given and the steam and vcrun2022 recipes. The menus showed in the upper left corner with the rest of the screen black, while the game itself played fine.",
+  "notes": "The game asks Windows for a display mode the Mac doesn't offer, Wine refuses, and the game stops with 'Error - unable to set video mode'. The reporter got it running with Emulate display mode changes on for the game (Wine pretends the mode changed and scales the picture) and the D3DMetal graphics mode, whose 32-bit DirectDraw is cnc-ddraw. Which of the two did it was not separated, so the page sets no mode. No measurement here yet. An M4 Pro rated it playable over 7 minutes on the default engine r28, D3DMetal by the report in an environment in DXVK mode, with the menus in the upper left corner and the rest of the screen black while the game itself played fine (highball-db#1373). That report says nothing about Emulate display mode changes.",
   "knownIssues": [
     {
       "symptom": "'Error - unable to set video mode' and the game doesn't start",
@@ -17,6 +17,11 @@
       "symptom": "The CnCNet 5 Yuri's Revenge installer does not launch (M5, default engine r28, with .NET 4.8 installed)",
       "cause": "not diagnosed",
       "fix": "none known yet"
+    },
+    {
+      "symptom": "The menus show in the upper left corner with the rest of the screen black, while the game itself fills the screen and plays fine (M4 Pro, Wine 10 r28, D3DMetal, highball-db#1373)",
+      "cause": "not diagnosed. The game draws its menus at 800x600, so at a higher game resolution they may sit in a corner on Windows too, not checked",
+      "fix": "none known"
     }
   ],
   "launchArgs": null,

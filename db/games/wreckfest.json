@@ -1,0 +1,14 @@
+{
+  "id": "wreckfest",
+  "title": "Wreckfest",
+  "steam_appid": 228380,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by nderambure (highball-db#1380, 2026-11-22), Apple M1, macOS 15.8.3, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 13 minutes: with the Steam id given and the steam recipe. Not verified by the maintainer.",
+  "notes": "Bugbear's 2018 demolition derby racer. Reported perfect on a base M1 with macOS 15.8.3 and DXMT on the default engine r28 over 13 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

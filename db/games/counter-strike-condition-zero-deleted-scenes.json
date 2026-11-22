@@ -1,0 +1,20 @@
+{
+  "id": "counter-strike-condition-zero-deleted-scenes",
+  "title": "Counter-Strike: Condition Zero Deleted Scenes",
+  "steam_appid": 100,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by hamuzhan (highball-db#1379, 2026-11-22), Apple M1 Max, macOS 27.3, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 1 minute: with the Steam id given and the steam recipe. Frame drops on explosions. Not verified by the maintainer.",
+  "notes": "Valve's single player campaign that comes with Counter-Strike: Condition Zero on Steam. A GoldSrc game like Condition Zero, which draws with OpenGL, so the graphics mode most likely doesn't apply to it. Reported playable on an M1 Max on the default engine r28 in a 1 minute session, with frame drops on explosions.",
+  "knownIssues": [
+    {
+      "symptom": "Frame drops on explosions (M1 Max, Wine 10 r28, highball-db#1379)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

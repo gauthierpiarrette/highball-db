@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": "d3dmetal",
   "anticheat": null,
-  "provenance": "Reported by moris49 (highball-db#262, 2026-09-29), Apple M2 Pro, macOS 27.2, Highball 0.10.0, engine x64-sikarugir10.0_6-r13, D3DMetal, recipes steam and vcrun2022, rated 4 of 5 after 3 minutes. Not verified by the maintainer.",
-  "notes": "Reported playable on D3DMetal on an M2 Pro with engine r13, with some frame drops and heavy CPU use by the reporter's account, after a 3 minute session. Nothing was measured here.",
+  "provenance": "Reported by moris49 (highball-db#262, 2026-09-29), Apple M2 Pro, macOS 27.2, Highball 0.10.0, engine x64-sikarugir10.0_6-r13, D3DMetal, recipes steam and vcrun2022, rated 4 of 5 after 3 minutes. Not verified by the maintainer. eastfloodcanal-dev (highball-db#1375, 2026-11-21), Apple M4, macOS 26.6.2, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, D3DMetal by the report (the environment's mode is DXMT), rated 4 of 5 after 200 minutes: with the Steam id given and the steam and vcrun2022 recipes. Minor issues not described. The report's screenshot shows a climb at sunset drawn as expected.",
+  "notes": "Reported playable on D3DMetal on an M2 Pro with engine r13, with some frame drops and heavy CPU use by the reporter's account, after a 3 minute session. Nothing was measured here. A base M4 rated it playable over 200 minutes on the default engine r28, D3DMetal by the report in an environment in DXMT mode, with minor issues not described (highball-db#1375).",
   "knownIssues": [],
   "launchArgs": null,
   "lastVerified": null
