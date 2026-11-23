@@ -5,9 +5,15 @@
   "status": "community",
   "renderer": "dxvk",
   "anticheat": null,
-  "provenance": "Reported by rwell86 (highball-db#100, 2026-09-17), Apple M4, macOS 27.0 as entered, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, DXVK, rated 4 of 5 (playable, minor issues) after 65 minutes. Not verified by the maintainer.",
-  "notes": "Reported playable with minor issues on DXVK after a session of 65 minutes; the report does not say which issues. No measurement here yet.",
-  "knownIssues": [],
+  "provenance": "Reported by rwell86 (highball-db#100, 2026-09-17), Apple M4, macOS 27.0 as entered, Highball 0.9.19, engine x64-sikarugir10.0_6-r3, DXVK, rated 4 of 5 (playable, minor issues) after 65 minutes. Not verified by the maintainer. SimplyDavid800 (highball#463, 2026-10-23), Apple M1, macOS 26.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXVK: the Free Sample (Steam app 3205720) crashed on going in to play after its menus worked. Not verified by the maintainer.",
+  "notes": "Reported playable with minor issues on DXVK after a session of 65 minutes; the report does not say which issues. No measurement here yet. The Free Sample crashed on going in to play for one player on an M1 with DXVK (highball#463).",
+  "knownIssues": [
+    {
+      "symptom": "The Free Sample (Steam app 3205720) crashes as you go in to play, after its menus work (M1, macOS 26.2, DXVK, engine r28, highball#463)",
+      "cause": "not diagnosed. The launch log ends before the crash and the game's Player.log was not sent",
+      "fix": "none confirmed. Untested: DXMT under Game settings, Mode for this game"
+    }
+  ],
   "launchArgs": null,
   "lastVerified": null
 }

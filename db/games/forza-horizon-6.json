@@ -69,6 +69,16 @@
       "symptom": "On the native arm64 route, speech and commentary don't play and the car's sound is missing head on, heard only when viewing from the sides (M3 Pro, engine arm64-kk-wine11.18-r4, highball-db#1318)",
       "cause": "the game's 7.1.4 bed lost every channel but front left and right on the native engines before r5, as on the D3DMetal route before r24",
       "fix": "the native engine r5 plays the full mix (confirmed on an M1 Ultra, highball#672), and Play offers the move to it once. By hand, pick arm64-kk-wine11.18-r5 on the environment's Full page, Advanced, Engine"
+    },
+    {
+      "symptom": "On the native arm64 route, painted building walls turn black and glossy up close while they look right from a distance (an M5 in highball#636, an M2 Max)",
+      "cause": "Metal on macOS 27 reads the smaller mip levels of a sparse block compressed texture whose base level is one block wide as zero or as another level's data. The wall shader takes its brightness from such a texture. Found by ineshd (highball-engine#35)",
+      "fix": "none shipped yet. ineshd's KosmicKrisp patch 0008 (highball-engine#35) gives such textures ordinary storage and fixed the walls on an M5 and an M2 Max (highball#636). It goes into a later arm64 engine"
+    },
+    {
+      "symptom": "The navigation route doesn't show (M3 Max, native arm64 engine r1 to r3, highball#645)",
+      "cause": "not diagnosed",
+      "fix": "none known yet"
     }
   ]
 }
