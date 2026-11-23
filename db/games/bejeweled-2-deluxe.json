@@ -1,0 +1,34 @@
+{
+  "id": "bejeweled-2-deluxe",
+  "title": "Bejeweled 2 Deluxe",
+  "steam_appid": 3300,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by jaykup2 (highball-db#1396, 2026-11-22), Apple A18 Pro, macOS 27.2.1, Highball 0.10.26, engine x64-crossover26.3-r31, DXMT, rated 3 of 5 after 8 minutes: with the Steam id given and the steam and vcrun2022 recipes, a full game until no moves were left. On the Wine 10 engine the windowed mode showed a black screen and in fullscreen the name prompt took no typing, and the Wine 11 engine fixed both. Play is a bit laggy, most of all in the 3D transitions between levels, and turning off hardware acceleration and high resolution helped a little. Turning high resolution back on for a larger window crashed to a black screen, and so did going back to windowed mode after fullscreen, each needing a force quit. Fullscreen runs a little better. The game takes about a minute to open. Not verified by the maintainer.",
+  "notes": "PopCap's match three game. Steam also sells a Mac version. The Windows version was reported playable with workarounds on an A18 Pro over 8 minutes with DXMT on the Wine 11 engine r31, which fixed a black windowed mode and a name prompt that took no typing on the Wine 10 engine.",
+  "knownIssues": [
+    {
+      "symptom": "On the Wine 10 engine the windowed mode shows a black screen, and in fullscreen the name prompt takes no typing (A18 Pro, highball-db#1396)",
+      "cause": "not diagnosed",
+      "fix": "the Wine 11 engine, r31 for the reporter, fixed both. Pick it under Advanced, Engine in the environment's settings"
+    },
+    {
+      "symptom": "Turning high resolution back on, or going back to windowed mode after fullscreen, ends in a black screen that needs a force quit (A18 Pro, Wine 11 r31, highball-db#1396)",
+      "cause": "not diagnosed",
+      "fix": "none known. Stay in the display mode the game started in"
+    },
+    {
+      "symptom": "A bit laggy, most of all in the 3D transitions between levels, and about a minute to open (A18 Pro, Wine 11 r31, highball-db#1396)",
+      "cause": "not diagnosed",
+      "fix": "turning off hardware acceleration and high resolution in the game helped a little, and fullscreen runs a little better, by the reporter"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null,
+  "nativeMac": {
+    "available": true,
+    "where": "Steam"
+  }
+}

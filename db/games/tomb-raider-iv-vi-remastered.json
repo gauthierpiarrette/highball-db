@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by marc-garcia (highball#136, 2026-09-17), Apple M1 Pro, macOS 27, Highball 0.9.19, engine x64-sikarugir10.0_6-r3: crashes at launch on every mode until CX_FWD_COMPAT_GL_CTX=1 is set, then runs correctly. psg2002 (highball-db#502, 2026-10-15), Apple M4 Mac mini, macOS 27.0.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, recipe controller-sdl, rated 5 of 5 after 54 minutes, with a wired Xbox Series controller. Not verified by the maintainer.",
+  "provenance": "Reported by marc-garcia (highball#136, 2026-09-17), Apple M1 Pro, macOS 27, Highball 0.9.19, engine x64-sikarugir10.0_6-r3: crashes at launch on every mode until CX_FWD_COMPAT_GL_CTX=1 is set, then runs correctly. psg2002 (highball-db#502, 2026-10-15), Apple M4 Mac mini, macOS 27.0.1, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, recipe controller-sdl, rated 5 of 5 after 54 minutes, with a wired Xbox Series controller. Not verified by the maintainer. velhobit (highball-db#1392, 2026-11-22), Apple M3 Pro, macOS 27.2.1, Highball 0.10.26, engine x64-crossover26.3-r31, D3DMetal, rated 5 of 5 after 76 minutes: with the game's recipe and the steam, vcrun2022 and controller-sdl recipes. At 120 fps for a long time with a controller, vibration working, and Cmd+Tab to a second display to watch a film while playing works. To play on the keyboard the player turns off macOS's Mission Control keyboard shortcuts, or plays with the controller. jaykup2 (highball-db#1403, 2026-11-22), Apple A18 Pro, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXVK, rated 4 of 5 after 10 minutes: with the game's recipe, the Angel of Darkness part, which runs on a different engine than IV and V, through part of the first level with the modern graphics. Short pauses as things load, such as Lara's next voice line, and a hatching pattern on Lara's shadow (screenshot in the report).",
   "notes": "An OpenGL game, so the graphics mode does not matter. It crashed at launch because it asks for an OpenGL 3.2 core context without the forward-compatible bit macOS requires; the recipe sets the CrossOver switch that adds it, confirmed by the reporter. For a sharp picture set the environment's display scaling to 200 percent, Wine's Retina mode, or the game renders upscaled from 1512x982. Highball 0.9.24 sets the switch for every launch. No measurement here yet. A wired Xbox Series controller works (highball-db#502).",
   "knownIssues": [
     {
@@ -17,6 +17,16 @@
       "symptom": "Pixelated picture, the game renders at 1512x982 and is upscaled (reported on an M1 Pro)",
       "cause": "Wine's Mac driver renders at the logical resolution unless RetinaMode is on",
       "fix": "set the environment's display scaling to 200 percent (Wine's Retina mode), reported by the same person"
+    },
+    {
+      "symptom": "On the keyboard, macOS's Mission Control keyboard shortcuts get in the way (M3 Pro, highball-db#1392)",
+      "cause": "not stated by the reporter. The classic controls use Ctrl with the arrow keys, which macOS uses to switch Spaces by default, a guess not checked",
+      "fix": "turn off the Mission Control shortcuts in System Settings, Keyboard, Keyboard Shortcuts, or play with a controller, as the reporter does"
+    },
+    {
+      "symptom": "In The Angel of Darkness, short pauses as things load, such as Lara's next voice line, and a hatching pattern on Lara's shadow (A18 Pro, DXVK, Wine 10 r28, highball-db#1403)",
+      "cause": "not diagnosed",
+      "fix": "none known"
     }
   ],
   "launchArgs": null,

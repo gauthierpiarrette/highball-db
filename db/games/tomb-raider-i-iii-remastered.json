@@ -1,0 +1,20 @@
+{
+  "id": "tomb-raider-i-iii-remastered",
+  "title": "Tomb Raider I-III Remastered Starring Lara Croft",
+  "steam_appid": 2478970,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by jaykup2 (highball-db#1394, 2026-11-22), Apple A18 Pro, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 20 minutes: with the Steam id given and the steam recipe, through the first level of Tomb Raider II in fullscreen with the modern graphics. Not a steady 60 fps, which the player thinks may be the MacBook Neo's limit, the classic graphics run a bit smoother, and Steam's FPS counter showed only a black box. Not verified by the maintainer.",
+  "notes": "Aspyr and Crystal Dynamics' 2024 remaster of the first three Tomb Raider games. Tomb Raider IV-VI Remastered has its own page. Reported playable on an A18 Pro (MacBook Neo) with DXMT on the default engine r28 over 20 minutes, below a steady 60 fps with the modern graphics.",
+  "knownIssues": [
+    {
+      "symptom": "Steam's FPS counter shows only a black box (A18 Pro, DXMT, Wine 10 r28, highball-db#1394)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

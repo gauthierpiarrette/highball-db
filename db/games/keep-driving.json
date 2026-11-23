@@ -1,0 +1,14 @@
+{
+  "id": "keep-driving",
+  "title": "Keep Driving",
+  "steam_appid": 2756920,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by paix64 (highball-db#1410, 2026-11-23), Apple M5, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 12 minutes: with the Steam id given and the steam recipe. Not verified by the maintainer.",
+  "notes": "YCJY Games' 2025 road trip game. Reported perfect on a base M5 with DXMT on the default engine r28 over 12 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

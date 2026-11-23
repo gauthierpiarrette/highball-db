@@ -1,0 +1,25 @@
+{
+  "id": "road-rash-30th-anniversary-edition",
+  "title": "Road Rash: 30th Anniversary Edition",
+  "steam_appid": 2448570,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by pankaj-ug (highball-db#1391, 2026-11-22), Apple M5, macOS 27.0.1, Highball 0.10.28, engine x64-crossover26.3-r30, DXMT, rated 4 of 5 after 5 minutes: with the steam recipe and no Steam id. The page carries the Steam release's id. Menu options take a while to load, and quitting the game is a problem, not described further. Not verified by the maintainer.",
+  "notes": "EA's digital release of Road Rash for its 30th anniversary, out on Steam in November 2026. Reported playable on a base M5 with DXMT on the Wine 11 engine r30 in a 5 minute session, with slow menus and trouble quitting.",
+  "knownIssues": [
+    {
+      "symptom": "Menu options take a while to load (M5, DXMT, Wine 11 r30, highball-db#1391)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    },
+    {
+      "symptom": "Quitting the game is a problem, not described further (M5, DXMT, Wine 11 r30, highball-db#1391)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

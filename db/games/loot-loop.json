@@ -1,0 +1,20 @@
+{
+  "id": "loot-loop",
+  "title": "Loot Loop",
+  "steam_appid": 3972320,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by ch4vi (highball-db#1387, 2026-11-22), Apple M1 Pro, macOS 26.6.2, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 83 minutes: with the Steam id given and the steam and vcrun2022 recipes. The first start after installing stopped with a Microsoft C++ runtime error although the runtime was installed, and starting it again without changing anything worked, with no other issues. Not verified by the maintainer.",
+  "notes": "BitBrew's game, released on Steam in April 2026. Reported playable on an M1 Pro with DXMT on the default engine r28 over 83 minutes, after a second start, since the first one stopped with a C++ runtime error.",
+  "knownIssues": [
+    {
+      "symptom": "The first start after installing stops with a Microsoft C++ runtime error (M1 Pro, Wine 10 r28, highball-db#1387)",
+      "cause": "not diagnosed. The vcrun2022 recipe was installed",
+      "fix": "start the game again, which worked for the reporter without changing anything"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

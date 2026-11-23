@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by Dionysos211 (highball-db#566, 2026-10-19), Apple M5 Pro, macOS 27.0.1, Highball 0.10.21, engine x64-crossover26.3-r27, DXMT, msync, Windows 10, AVX advertised, DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1 and WINE_NO_DELAYED_FORK=1 in the environment's variables, through the EA app, rated 5 of 5. Not verified by the maintainer.",
+  "provenance": "Reported by Dionysos211 (highball-db#566, 2026-10-19), Apple M5 Pro, macOS 27.0.1, Highball 0.10.21, engine x64-crossover26.3-r27, DXMT, msync, Windows 10, AVX advertised, DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1 and WINE_NO_DELAYED_FORK=1 in the environment's variables, through the EA app, rated 5 of 5. Not verified by the maintainer. darwinev0lved (highball-db#1407, 2026-11-23), Apple M5, macOS 27.0.1, Highball 0.10.26, engine x64-crossover26.3-r31, DXMT, rated 5 of 5 after 179 minutes: filed as the EA app, playing Star Wars: Galaxy of Heroes through it, with the ea-app recipe, sync off, and DXMT with DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1 set for the environment and for the program. Left running in the background for a few hours, the game was ready whenever the player came back to it.",
   "notes": "Reported perfect on DXMT with the Wine 11 engine, through the EA app. Started straight from Highball's library, the game runs, but Highball says it may have failed to start and offers another graphics mode.",
   "knownIssues": [
     {

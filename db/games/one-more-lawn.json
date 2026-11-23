@@ -1,0 +1,14 @@
+{
+  "id": "one-more-lawn",
+  "title": "One More Lawn",
+  "steam_appid": 5378110,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by debasser1911 (highball-db#1386, 2026-11-22), Apple M1, macOS 27.2.1, Highball 0.10.26, engine x64-crossover26.3-r31, DXMT, rated 5 of 5 after 9 minutes: with the Steam id given, the Metal HUD on and the steam and vcrun2022 recipes. Not verified by the maintainer.",
+  "notes": "Superdou's game, released on Steam in November 2026. Reported perfect on a base M1 with DXMT on the Wine 11 engine r31 over 9 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

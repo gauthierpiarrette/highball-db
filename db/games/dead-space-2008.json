@@ -1,0 +1,20 @@
+{
+  "id": "dead-space-2008",
+  "title": "Dead Space (2008)",
+  "steam_appid": 17470,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by paddy919 (highball-db#1398, 2026-11-22), Apple M4, macOS 27.2.1, not through the Highball app but through Proton-ish 1.0.66 (HighballKit 0.10.26) from the macOS Steam client, the Wine 11 engine x64-crossover26.3-r29, DXVK, sync off, AVX advertised, rated 4 of 5 after more than an hour: through the first two missions, with frame drops and many stutters when certain events trigger, such as enemies spawning or about to spawn, also when loading the same save again, so the player isn't sure it's shader compilation. Not verified by the maintainer.",
+  "notes": "EA Redwood Shores' 2008 original. The 2023 remake has its own page (Dead Space, 1693980). Reported playable on an M4 through Proton-ish with DXVK on the Wine 11 engine r29 over more than an hour, with stutters and frame drops when enemies spawn.",
+  "knownIssues": [
+    {
+      "symptom": "Frame drops and stutters when certain events trigger, such as enemies spawning, also when loading the same save again (M4, DXVK, Wine 11 r29 through Proton-ish, highball-db#1398)",
+      "cause": "not diagnosed. The player isn't sure it's shader compilation, since it comes back after reloading a save",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

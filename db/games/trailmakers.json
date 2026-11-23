@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by Random-Storm (highball-db#384, 2026-10-07), Apple A18 Pro, macOS 27.2, DXMT, rated 4 of 5. Engine and Highball version not given. Not verified by the maintainer.",
+  "provenance": "Reported by Random-Storm (highball-db#384, 2026-10-07), Apple A18 Pro, macOS 27.2, DXMT, rated 4 of 5. Engine and Highball version not given. Not verified by the maintainer. Laurenz962 (highball-db#1412, 2026-11-23), Apple M4, macOS 27.2.1, Highball 0.10.26, engine x64-crossover26.3-r30, D3DMetal, rated 5 of 5 after 46 minutes: with AVX advertised and the steam and vcrun2022 recipes.",
   "notes": "Reported playable on DXMT, the default mode, on an A18 Pro: about 50 to 60 fps on the Downtown Drive map at the lowest graphics setting, with a large drop at the next one up. No measurement here yet.",
   "knownIssues": [
     {

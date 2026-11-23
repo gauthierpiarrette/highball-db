@@ -5,13 +5,13 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by udance4ever (highball-db#767, 2026-10-29), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal with AVX advertised, rated 1 of 5: the origami loading screen shows for under five seconds and the game crashes, on both graphics modes tried. Not verified by the maintainer.",
-  "notes": "Crashes a few seconds into its first loading screen on an M1 (D3DMetal's DirectX 11 at 59.5 fps on that screen, then exit). Beyond: Two Souls, from the same studio's PC ports, runs on DXMT, which is the next mode to try.",
+  "provenance": "Reported by udance4ever (highball-db#767, 2026-10-29), Apple M1, macOS 27.0.1, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, D3DMetal with AVX advertised, rated 1 of 5: the origami loading screen shows for under five seconds and the game crashes, on both graphics modes tried. Not verified by the maintainer. udance4ever later the same day (highball-db#767, 2026-10-29): all three graphics modes crashed the same way, not two, and so did DXMT and DXVK on the Wine 11 engine x64-crossover26.3-r27. The log shows the game raising an exception Wine can't hand back to it, with a stack that doesn't look like a normal one, right after its DirectX 11 window is up.",
+  "notes": "Crashes a few seconds into its first loading screen on an M1 (D3DMetal's DirectX 11 at 59.5 fps on that screen, then exit). DXMT, DXVK and D3DMetal all crash the same way, on the default engine and on the Wine 11 engine r27 (highball-db#767).",
   "knownIssues": [
     {
       "symptom": "Crashes a few seconds into the first loading screen (origami in the corner)",
       "cause": "not diagnosed",
-      "fix": "none known. Untested: DXMT as the game's mode"
+      "fix": "none known. It happens in every graphics mode, on the default engine and on the Wine 11 engine r27"
     }
   ],
   "launchArgs": null,

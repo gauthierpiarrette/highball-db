@@ -1,0 +1,14 @@
+{
+  "id": "cosmoteer-starship-architect-and-commander",
+  "title": "Cosmoteer: Starship Architect & Commander",
+  "steam_appid": 799600,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by ilan-addsearch (highball-db#1390, 2026-11-22), Apple M5 Pro, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r29, DXMT, rated 5 of 5 after 119 minutes: with the Steam id given, AVX advertised and the steam and vcrun2022 recipes. Not verified by the maintainer.",
+  "notes": "Walternate Realities' starship building and combat game. Reported perfect on an M5 Pro with DXMT on the Wine 10 engine r29 over 119 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

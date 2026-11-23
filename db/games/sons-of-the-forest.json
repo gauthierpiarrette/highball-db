@@ -1,0 +1,20 @@
+{
+  "id": "sons-of-the-forest",
+  "title": "Sons Of The Forest",
+  "steam_appid": 1326470,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by mlohan8240 (highball-db#1405, 2026-11-23), Apple M2 Max, macOS 15.6.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 80 minutes: with the Steam id given and the steam and vcrun2022 recipes. A plugged in mouse isn't very responsive, while with the trackpad (mouse pad in the report) the game runs smoothly. Not verified by the maintainer.",
+  "notes": "Endnight Games' survival horror game, the sequel to The Forest. Reported playable on an M2 Max with macOS 15.6.1 and DXMT on the default engine r28 over 80 minutes, smooth with the trackpad, while a plugged in mouse isn't very responsive.",
+  "knownIssues": [
+    {
+      "symptom": "A plugged in mouse isn't very responsive, while the trackpad works smoothly (M2 Max, macOS 15.6.1, DXMT, Wine 10 r28, highball-db#1405)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by Schnakatuku (highball-db#826, 2026-10-30), Apple M4, macOS 27.0.1, Highball 0.10.22, engine x64-crossover26.3-r27 (Wine 11), DXMT, recipes steam and vcrun2022, rated 4 of 5 after 102 minutes on the game's latest beta branch. Not verified by the maintainer.",
+  "provenance": "Reported by Schnakatuku (highball-db#826, 2026-10-30), Apple M4, macOS 27.0.1, Highball 0.10.22, engine x64-crossover26.3-r27 (Wine 11), DXMT, recipes steam and vcrun2022, rated 4 of 5 after 102 minutes on the game's latest beta branch. Not verified by the maintainer. Steffen025 (highball-db#1402, 2026-11-22), Apple M2 Max, macOS 26.7.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 1768 minutes: with a 60 fps cap, a winhttp=n,b DLL override and the steam, dotnet48 and vcrun2022 recipes. Minor issues not described.",
   "notes": "Plays well for over an hour and a half on DXMT on an M4 with the Wine 11 engine, on the game's latest beta branch.",
   "knownIssues": [
     {

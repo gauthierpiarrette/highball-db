@@ -1,0 +1,18 @@
+{
+  "id": "metro-exodus",
+  "title": "Metro Exodus",
+  "steam_appid": 412020,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by 45280723 (highball-db#1413, 2026-11-23), Apple M5, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 77 minutes: no Steam id and no recipes in the environment, so the copy isn't stated. The page carries the Steam release's id. On a MacBook Air M5 with an 8 core GPU at about 1228x800 by the Metal HUD, with a white effect now and then that the player found hardly noticeable. Taken to be the standard edition, since DXMT has no Direct3D 12 and the Enhanced Edition needs ray tracing. Not verified by the maintainer.",
+  "notes": "4A Games' 2019 shooter. Steam also sells a Mac version. The Windows version was reported perfect on a MacBook Air M5 with an 8 core GPU and DXMT on the default engine r28 over 77 minutes, at about 1228x800.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null,
+  "nativeMac": {
+    "available": true,
+    "where": "Steam"
+  }
+}

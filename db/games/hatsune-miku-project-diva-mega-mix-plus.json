@@ -1,0 +1,25 @@
+{
+  "id": "hatsune-miku-project-diva-mega-mix-plus",
+  "title": "Hatsune Miku: Project DIVA Mega Mix+",
+  "steam_appid": 1761390,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by jaykup2 (highball-db#1401, 2026-11-22), Apple A18 Pro, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXVK, rated 4 of 5 after 27 minutes: with the Steam id given and the steam and vcrun2022 recipes, four songs played (LOL, Luka Luka Night Fever, Magnet and Solitude's End). Songs with more complex music videos swing between 30 and 60 fps, songs with simpler ones or a video file as the background hold 60, and with the game on an external drive some songs took up to 40 seconds to load. Not verified by the maintainer.",
+  "notes": "SEGA's rhythm game, its 2022 PC release. Reported playable on an A18 Pro with DXVK on the default engine r28 over 27 minutes: songs with more complex music videos swing between 30 and 60 fps, the simpler ones hold 60.",
+  "knownIssues": [
+    {
+      "symptom": "Songs with more complex music videos swing between 30 and 60 fps (A18 Pro, DXVK, Wine 10 r28, highball-db#1401)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    },
+    {
+      "symptom": "Some songs take up to 40 seconds to load with the game on an external drive (A18 Pro, highball-db#1401)",
+      "cause": "not diagnosed",
+      "fix": "none tested. An internal drive may load faster, a guess"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

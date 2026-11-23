@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by mohsin17-sys (highball-db#878, 2026-11-01), Apple M4 Pro, macOS 27.2, Highball 0.10.24, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 4 of 5 after 125 minutes: with AVX advertised, D3DM_MTL4=1, D3DM_SUPPORT_DXR=1 and a frame cap of 120. Not verified by the maintainer. callnegi09 (highball-db#1074, 2026-11-08, the same report also posted as highball-db#1073): rated 5 of 5, chip given as M5 and macOS as latest, with no engine, graphics mode or session stated. mohsin17-sys (highball-db#1116, 2026-11-09), Apple M4 Pro, macOS 27.2, Highball 0.10.25, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 5 of 5 after 52 minutes: with AVX advertised, D3DM_MTL4=1, D3DM_SUPPORT_DXR=1 and Retina pixels at 100%, in an environment with the EA app recipe and no Steam. namanag210-commits (highball-db#1133, 2026-11-10), Apple M4 Pro, macOS 27.2, Highball 0.10.25, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 4 of 5 after 55 minutes: with AVX advertised and Windows 11 as the Windows version. The sound glitches at times. The reporter says to use MacGameFix for the T-pose issue.",
+  "provenance": "Reported by mohsin17-sys (highball-db#878, 2026-11-01), Apple M4 Pro, macOS 27.2, Highball 0.10.24, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 4 of 5 after 125 minutes: with AVX advertised, D3DM_MTL4=1, D3DM_SUPPORT_DXR=1 and a frame cap of 120. Not verified by the maintainer. callnegi09 (highball-db#1074, 2026-11-08, the same report also posted as highball-db#1073): rated 5 of 5, chip given as M5 and macOS as latest, with no engine, graphics mode or session stated. mohsin17-sys (highball-db#1116, 2026-11-09), Apple M4 Pro, macOS 27.2, Highball 0.10.25, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 5 of 5 after 52 minutes: with AVX advertised, D3DM_MTL4=1, D3DM_SUPPORT_DXR=1 and Retina pixels at 100%, in an environment with the EA app recipe and no Steam. namanag210-commits (highball-db#1133, 2026-11-10), Apple M4 Pro, macOS 27.2, Highball 0.10.25, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 4 of 5 after 55 minutes: with AVX advertised and Windows 11 as the Windows version. The sound glitches at times. The reporter says to use MacGameFix for the T-pose issue. AsynchronousAI (highball-db#1399, 2026-11-22), Apple M5 Pro, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r29, D3DMetal, rated 4 of 5 after 58 minutes: named Spider-Man2 in the report, no Steam id, with AVX advertised (the player says it's needed), a 60 fps cap, D3DM_ENABLE_METALFX=1, D3DM_MTL4=1 and D3DM_SUPPORT_DXR=1. A couple of missions at a steady 60 fps, with a rare freeze where textures go all black while the sound plays on.",
   "notes": "Reported playable on an M4 Pro with D3DMetal over two hours, with AVX advertised, D3DM_MTL4=1 and D3DM_SUPPORT_DXR=1 set by the player. A player on an M4 Pro rates it playable with the sound glitching at times, and uses MacGameFix for characters stuck in a T-pose (highball-db#1133).",
   "knownIssues": [
     {
@@ -15,6 +15,11 @@
     },
     {
       "symptom": "The sound glitches at times (reported on an M4 Pro, D3DMetal, Wine 10 r29)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    },
+    {
+      "symptom": "Now and then the game freezes and textures go all black while the sound keeps playing (M5 Pro, D3DMetal, Wine 10 r29, highball-db#1399)",
       "cause": "not diagnosed",
       "fix": "none known"
     }
