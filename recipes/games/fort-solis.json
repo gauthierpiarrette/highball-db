@@ -1,0 +1,22 @@
+{
+  "id": "fort-solis",
+  "kind": "game",
+  "title": "Fort Solis",
+  "requires": [],
+  "renderer": "d3dmetal",
+  "steps": [
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\AppDefaults\\Sycamore-Win64-Shipping.exe\\DllOverrides",
+      "name": "mfplat",
+      "valueType": "REG_SZ",
+      "data": ""
+    },
+    {
+      "type": "note",
+      "text": "After the loading screen Fort Solis plays a video through Windows Media Foundation, and on the default engine its frames reach D3DMetal as a texture with no Metal format: Metal refuses it (invalid pixelFormat 0) and the game freezes about 30 seconds later behind a white rectangle, as The Last Caretaker's menu did. With Media Foundation's platform library disabled for the game's executable only, that video is skipped and the game plays. Confirmed by the reporter with the GOG copy on an M1 on the default engine r29, about 20 fps, 30 at Low (highball-db#868, 2026-11-06). The Steam copy most likely has the same executable name, which Unreal takes from the project, not checked. Nothing else in the environment changes."
+    }
+  ],
+  "knownIssues": [],
+  "lastVerified": null
+}
