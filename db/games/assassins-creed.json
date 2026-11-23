@@ -27,5 +27,6 @@
   "launchArgs": null,
   "lastVerified": null,
   "verified": null,
-  "arch": "x86"
+  "arch": "x86",
+  "recipe": "recipes/games/assassins-creed.json"
 }

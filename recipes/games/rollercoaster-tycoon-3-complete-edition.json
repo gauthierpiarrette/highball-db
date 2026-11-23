@@ -1,0 +1,20 @@
+{
+  "id": "rollercoaster-tycoon-3-complete-edition",
+  "kind": "game",
+  "title": "RollerCoaster Tycoon 3: Complete Edition",
+  "requires": [],
+  "engine": "x64-crossover26.3-r31",
+  "renderer": "dxvk",
+  "steps": [
+    {
+      "type": "environment",
+      "name": "HB_X87SIDECAR",
+      "value": "1"
+    },
+    {
+      "type": "note",
+      "text": "RollerCoaster Tycoon 3's sound ran slow and the game lagged under Rosetta, whose x87 maths is slow, and on the Wine 10 engine it slowed to a crawl before the legal screen. This asks for a Wine 11 engine, which ships athei's x87sidecar, turns the sidecar on for this game with HB_X87SIDECAR=1 and sets DXVK, since D3DMetal and WineD3D draw a placed coaster as grey mush. Measured by udance4ever with the Epic copy on Wine 11 r30 with DXVK on an M1: sound right, 60 fps by the Metal HUD (highball-db#993, 2026-11-08). The Steam release also has a native Mac version, which Play prefers."
+    }
+  ],
+  "lastVerified": null
+}

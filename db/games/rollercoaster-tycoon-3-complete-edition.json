@@ -26,5 +26,6 @@
   ],
   "launchArgs": null,
   "lastVerified": null,
-  "verified": null
+  "verified": null,
+  "recipe": "recipes/games/rollercoaster-tycoon-3-complete-edition.json"
 }

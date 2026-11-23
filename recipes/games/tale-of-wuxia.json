@@ -1,0 +1,22 @@
+{
+  "id": "tale-of-wuxia",
+  "kind": "game",
+  "title": "Tale of Wuxia",
+  "requires": [
+    "steam"
+  ],
+  "engine": "x64-crossover26.3-r31",
+  "renderer": "dxvk",
+  "steps": [
+    {
+      "type": "environment",
+      "name": "HB_X87SIDECAR",
+      "value": "1"
+    },
+    {
+      "type": "note",
+      "text": "Tale of Wuxia's maps crawled at about 4 fps under Rosetta, which translates the game's x87 maths slowly, while its menus ran fast (winedbg samples in highball-db#352). This asks for a Wine 11 engine, which ships athei's x87sidecar, turns the sidecar on for this game with HB_X87SIDECAR=1 and sets DXVK. Measured by the reporter on Wine 11 r30 with DXVK on an M4: 77.5 fps at the village entrance and 58 in the busy village square (highball-db#352, 2026-11-07)."
+    }
+  ],
+  "lastVerified": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": "assassins-creed",
+  "kind": "game",
+  "title": "Assassin's Creed",
+  "requires": [
+    "steam"
+  ],
+  "engine": "x64-crossover26.3-r31",
+  "renderer": "dxvk",
+  "steps": [
+    {
+      "type": "environment",
+      "name": "HB_X87SIDECAR",
+      "value": "1"
+    },
+    {
+      "type": "note",
+      "text": "Assassin's Creed is a 32-bit game whose x87 maths runs slowly under Rosetta: the title screen stuttered at about 7 fps. This asks for a Wine 11 engine, which ships athei's x87sidecar, turns the sidecar on for this game with HB_X87SIDECAR=1 and sets DXVK, since D3DMetal crashed on the way in. Measured by udance4ever on Wine 11 r30 with DXVK on an M1: snappy at about 40 fps (highball-db#901, 2026-11-06). Choose the controller in the game's settings at every start."
+    }
+  ],
+  "lastVerified": null
+}
