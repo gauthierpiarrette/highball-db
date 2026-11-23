@@ -95,6 +95,11 @@
       "symptom": "The Epic copy's first run needed the Rockstar Games Launcher started on its own first, to activate the Epic licence (M5, Wine 11 r29, DXMT). Until then the launcher can show Buy Now for GTA V although it is in the Epic library (M5, Wine 11 r31, highball-db#1265)",
       "cause": "not diagnosed",
       "fix": "connect Epic in Highball, install the Rockstar Games Launcher in the game's environment, start it by itself once, then Play (highball-db#1039, credit RicardoJardines, and highball-db#1265)"
+    },
+    {
+      "symptom": "Short freezes when new parts of the world stream in, on DXVK and on DXMT (M5 MacBook Air 24 GB, macOS 26.7.1, Wine 11 r27, highball#419)",
+      "cause": "not diagnosed. Most likely shaders compiled for Metal the first time an effect or area shows up. Whether it eases on a second pass through the same area was asked and not answered",
+      "fix": "none confirmed. On DXVK, turning on DXVK async shader compilation in the environment's Graphics settings trades the freeze for brief pop in (untested for this game)"
     }
   ],
   "launchArgs": [
