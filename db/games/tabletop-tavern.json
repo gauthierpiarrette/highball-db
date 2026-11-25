@@ -1,0 +1,14 @@
+{
+  "id": "tabletop-tavern",
+  "title": "Tabletop Tavern",
+  "steam_appid": 3337380,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by jim0123 (highball-db#1437, 2026-11-24), Apple M4, macOS 26.7.3, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, D3DMetal, rated 5 of 5 after 369 minutes: with the Steam id given and the steam recipe. Not verified by the maintainer.",
+  "notes": "TJ's roguelike strategy game, out on Steam in June 2026. Reported perfect on a base M4 with D3DMetal on the default engine r28 over 369 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

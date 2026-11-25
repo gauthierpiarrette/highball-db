@@ -1,0 +1,14 @@
+{
+  "id": "touhou-koumakyou-new-classic-the-embodiment-of-scarlet-devil",
+  "title": "Touhou Koumakyou: New Classic - the Embodiment of Scarlet Devil",
+  "steam_appid": 4659620,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by kytlogia (highball-db#1450, 2026-11-25), Apple M4 Pro, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 76 minutes: with the Steam id given and the steam and vcrun2022 recipes. Not verified by the maintainer.",
+  "notes": "A remake of Team Shanghai Alice's The Embodiment of Scarlet Devil with new music and graphics, published by Alliance Arts in September 2026. Reported perfect on an M4 Pro with DXMT on the default engine r28 over 76 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

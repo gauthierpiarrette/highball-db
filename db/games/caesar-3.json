@@ -1,0 +1,20 @@
+{
+  "id": "caesar-3",
+  "title": "Caesar 3",
+  "steam_appid": 517790,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by valdroff (highball-db#1438, 2026-11-24), an iMac from 2023 (Apple M3), macOS 27.2.1, Highball 0.10.29, engine x64-sikarugir10.0_6-r30 (Wine 10 Sikarugir r30 in the report), graphics mode not stated, rated 5 of 5: the GOG copy, named Gog in the report's game field. The page carries the Steam release's id. Played the first mission of the campaign. At start the menu isn't in the middle of the screen, and switching away with Alt+Tab and back, more than once, brings it there (screenshots in the report). Not verified by the maintainer.",
+  "notes": "Impressions Games' 1998 city builder. Reported perfect for the GOG copy on an iMac with an M3 on the default engine r30, through the first mission of the campaign, once Alt+Tab brought the off centre menu back to the middle.",
+  "knownIssues": [
+    {
+      "symptom": "At start the menu isn't in the middle of the screen (M3 iMac, Wine 10 r30, highball-db#1438)",
+      "cause": "not diagnosed",
+      "fix": "switch away with Alt+Tab and back, more than once if needed, by the reporter"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

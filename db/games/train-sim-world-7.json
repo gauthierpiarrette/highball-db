@@ -1,0 +1,20 @@
+{
+  "id": "train-sim-world-7",
+  "title": "Train Sim World 7",
+  "steam_appid": 4678800,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by juddjck-png (highball-db#1421, 2026-11-23), Apple M5, macOS 27.2.1, Highball 0.10.26, engine x64-crossover26.3-r30, D3DMetal by the report (the environment's mode is WineD3D), rated 5 of 5 after 19 minutes: with the Steam id given, Retina pixels at 100% and the steam and vcrun2022 recipes. It sometimes lags and pauses. Not verified by the maintainer.",
+  "notes": "Dovetail Games' 2026 train simulator. Reported perfect on a base M5 with D3DMetal on the Wine 11 engine r30 over 19 minutes, with lags and pauses now and then.",
+  "knownIssues": [
+    {
+      "symptom": "Lags and pauses now and then (M5, D3DMetal, Wine 11 r30, highball-db#1421)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

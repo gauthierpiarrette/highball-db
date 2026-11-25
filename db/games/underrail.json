@@ -1,0 +1,20 @@
+{
+  "id": "underrail",
+  "title": "UnderRail",
+  "steam_appid": 250520,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by mstrvictor (highball-db#1426, 2026-11-24), Apple M1 Pro, macOS 26.6.2, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 24 minutes: with the Steam id given and the steam recipe, a character created and the first station walked around. Stray white lines appeared on the ground, gone after switching the game's rendering mode to legacy in its settings. Not verified by the maintainer.",
+  "notes": "Stygian Software's 2015 turn based role playing game. Reported playable on an M1 Pro with DXMT on the default engine r28 over 24 minutes, once the game's rendering mode was set to legacy to stop white lines on the ground.",
+  "knownIssues": [
+    {
+      "symptom": "Stray white lines on the ground (M1 Pro, DXMT, Wine 10 r28, highball-db#1426)",
+      "cause": "not diagnosed",
+      "fix": "set the game's rendering mode to legacy in its settings, by the reporter"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -1,0 +1,20 @@
+{
+  "id": "casualties-unknown-demo",
+  "title": "Casualties: Unknown Demo",
+  "steam_appid": 4576510,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Smoltuna-py (highball-db#1453, 2026-11-25), Apple M2, macOS 26.6.2, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXVK by the report (the environment's mode is WineD3D), rated 4 of 5 after 1 minute: with the Steam id given, a winhttp=n,b DLL override and the steam and vcrun2022 recipes. Loading sometimes takes a long time. Not verified by the maintainer.",
+  "notes": "The demo of Orsoniks' Casualties: Unknown (4576490). Reported playable on a base M2 with DXVK by the report, in an environment set to WineD3D, on the default engine r28 in a one minute session, with loads that sometimes take a long time.",
+  "knownIssues": [
+    {
+      "symptom": "Loading sometimes takes a long time (M2, Wine 10 r28, highball-db#1453)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

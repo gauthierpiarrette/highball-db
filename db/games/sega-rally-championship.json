@@ -4,18 +4,18 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by jaykup2 (highball-db#1397, 2026-11-22), Apple A18 Pro, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r29, DXVK, rated 3 of 5 after 7 minutes: named RALLY in the report, the PC version, with both its software rendering version and the Direct3D patch tried, and the steam and vcrun2022 recipes in the environment. The copy's source isn't stated. Both versions draw the game in the bottom right corner of the screen. The Direct3D version runs extremely slowly, at times a frame at a time. The software version runs at full speed without the frame pacing trouble the game has on modern Windows, with a white flashing line above the picture that a 320x240 resolution removes, which leaves a very small picture. Sound effects play and the music doesn't, since the game plays it as CD audio, which the player suggests _inmm in the game's folder might fix. Played through the Desert course in Arcade Mode. Not verified by the maintainer.",
-  "notes": "Sega's rally game, its PC version, which isn't on Steam. Reported playable with workarounds on an A18 Pro in DXVK mode on the Wine 10 engine r29 over 7 minutes: the software rendering version runs at full speed in the bottom right corner of the screen, without music.",
+  "provenance": "Reported by jaykup2 (highball-db#1397, 2026-11-22), Apple A18 Pro, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r29, DXVK, rated 3 of 5 after 7 minutes: named RALLY in the report, the PC version, with both its software rendering version and the Direct3D patch tried, and the steam and vcrun2022 recipes in the environment. The copy's source isn't stated. Both versions draw the game in the bottom right corner of the screen. The Direct3D version runs extremely slowly, at times a frame at a time. The software version runs at full speed without the frame pacing trouble the game has on modern Windows, with a white flashing line above the picture that a 320x240 resolution removes, which leaves a very small picture. Sound effects play and the music doesn't, since the game plays it as CD audio, which the player suggests _inmm in the game's folder might fix. Played through the Desert course in Arcade Mode. Not verified by the maintainer. jaykup2 again (highball-db#1397, 2026-11-24): the Direct3D version later opened in full screen and ran smoothly at the game's 30 fps cap, with the settings shown in screenshots in the thread (not described here). Now and then the game runs much too fast for about a quarter of a second.",
+  "notes": "Sega's rally game, its PC version, which isn't on Steam. Reported playable with workarounds on an A18 Pro in DXVK mode on the Wine 10 engine r29 over 7 minutes: the software rendering version runs at full speed in the bottom right corner of the screen, without music. The Direct3D version later ran smoothly in full screen at the game's 30 fps cap, with the settings shown in the thread (highball-db#1397, 2026-11-24).",
   "knownIssues": [
     {
       "symptom": "The picture sits in the bottom right corner of the screen, with both the software rendering version and the Direct3D patch (A18 Pro, Wine 10 r29, highball-db#1397)",
       "cause": "not diagnosed",
-      "fix": "none known"
+      "fix": "none known for the software rendering version. The Direct3D version later opened in full screen with the settings in the reporter's screenshots (highball-db#1397, 2026-11-24)"
     },
     {
       "symptom": "The Direct3D patch's version runs extremely slowly, at times a frame at a time (A18 Pro, highball-db#1397)",
       "cause": "not diagnosed",
-      "fix": "the software rendering version runs at full speed"
+      "fix": "the software rendering version runs at full speed. The reporter later got the Direct3D version running smoothly in full screen at 30 fps, with the settings in their screenshots on highball-db#1397 (2026-11-24)"
     },
     {
       "symptom": "The software rendering version shows a white flashing line above the picture (A18 Pro, highball-db#1397)",
@@ -26,6 +26,11 @@
       "symptom": "No music, since the game plays it as CD audio (A18 Pro, highball-db#1397)",
       "cause": "not diagnosed",
       "fix": "none tested. The player suggests _inmm in the game's folder"
+    },
+    {
+      "symptom": "Now and then the game runs much too fast for about a quarter of a second (A18 Pro, Direct3D version, highball-db#1397, 2026-11-24)",
+      "cause": "not diagnosed",
+      "fix": "none known"
     }
   ],
   "launchArgs": null,

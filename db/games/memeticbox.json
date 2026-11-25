@@ -1,0 +1,20 @@
+{
+  "id": "memeticbox",
+  "title": "MemeticBox",
+  "steam_appid": 5352720,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by elliottcochrane87-lab (highball-db#1439, 2026-11-24), Apple M1, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXVK, rated 4 of 5 after 3 minutes: named MemeticBox with no Steam id, the page carries the one Steam game of that name. With the steam, vcrun2022, xact and battle-net recipes, sync off and DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1. On the highest graphics settings it can lag a little when shooting. Not verified by the maintainer.",
+  "notes": "Corvium Games' action simulation game, in Early Access on Steam since October 2026. Reported playable on a base M1 with DXVK on the default engine r28 over 3 minutes, lagging a little when shooting on the highest settings.",
+  "knownIssues": [
+    {
+      "symptom": "Lags a little when shooting on the highest graphics settings (M1, DXVK, Wine 10 r28, highball-db#1439)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

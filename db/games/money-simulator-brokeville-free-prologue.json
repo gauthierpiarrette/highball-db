@@ -1,0 +1,14 @@
+{
+  "id": "money-simulator-brokeville-free-prologue",
+  "title": "Money Simulator: Brokeville (Free Prologue)",
+  "steam_appid": 3555430,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by samayasser (highball-db#1433, 2026-11-24), Apple M4, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 89 minutes: with the Steam id given and the steam and vcrun2022 recipes. Minor issues not described. Not verified by the maintainer.",
+  "notes": "The free prologue of Organica's Money Simulator: Brokeville, published by PlayWay. Reported playable on a base M4 with DXMT on the default engine r28 over 89 minutes, minor issues not described.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

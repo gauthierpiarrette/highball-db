@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by VAGCoded (highball-db#525, 2026-10-17) for the Epic Games Store copy, Apple M5 Pro, macOS 27.0, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, rated 4 of 5 after 26 minutes with frame drops. Not verified by the maintainer.",
-  "notes": "Reported playable on DXMT on the default engine on an M5 Pro, with frame drops, how often or where was not said. The report is for the Epic copy, the Steam copy is the same game.",
+  "provenance": "Reported by VAGCoded (highball-db#525, 2026-10-17) for the Epic Games Store copy, Apple M5 Pro, macOS 27.0, Highball 0.10.15, engine x64-sikarugir10.0_6-r26, DXMT, rated 4 of 5 after 26 minutes with frame drops. Not verified by the maintainer. genodf (highball-db#1416, 2026-11-23), Apple M5 Pro, macOS 27.2.1, Highball 0.10.28, engine x64-crossover26.3-r32, D3DMetal, rated 5 of 5 after 9 minutes: no Steam id, with AVX advertised, DLSS (MetalFX) on and DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1, in an environment holding other games' recipes.",
+  "notes": "Reported playable on DXMT on the default engine on an M5 Pro, with frame drops, how often or where was not said. The report is for the Epic copy, the Steam copy is the same game. An M5 Pro rated it perfect over 9 minutes with D3DMetal on the Wine 11 engine r32 (highball-db#1416).",
   "knownIssues": [
     {
       "symptom": "Frame drops (M5 Pro, DXMT)",

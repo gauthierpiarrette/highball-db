@@ -1,0 +1,18 @@
+{
+  "id": "tharsis",
+  "title": "Tharsis",
+  "steam_appid": 323060,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by mstrvictor (highball-db#1424, 2026-11-24), Apple M1 Pro, macOS 26.6.2, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 13 minutes: with the Steam id given and the steam recipe, one campaign game with no issues. Not verified by the maintainer.",
+  "notes": "Choice Provisions' 2016 dice strategy game. Steam also sells a Mac version. The Windows version was reported perfect on an M1 Pro with DXMT on the default engine r28 over 13 minutes, one campaign game.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null,
+  "nativeMac": {
+    "available": true,
+    "where": "Steam"
+  }
+}

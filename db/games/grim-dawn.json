@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by drengy (highball-db#466, 2026-10-12), Apple M5 Ultra, macOS 27.2, Highball 0.10.14, engine x64-sikarugir10.0_6-r24, the environment on D3DMetal with Retina pixels at 100%, rated 4 of 5 after 117 minutes. Not verified by the maintainer.",
-  "notes": "Reported playable for about two hours on an M5 Ultra with the environment on D3DMetal. The game's resolution did not scale until Emulate display mode changes was turned on in the game's settings in Highball.",
+  "provenance": "Reported by drengy (highball-db#466, 2026-10-12), Apple M5 Ultra, macOS 27.2, Highball 0.10.14, engine x64-sikarugir10.0_6-r24, the environment on D3DMetal with Retina pixels at 100%, rated 4 of 5 after 117 minutes. Not verified by the maintainer. NorseGaud (highball-db#1423, 2026-11-24), Apple M5, macOS 27.2.1, Highball 0.10.26, engine x64-crossover26.3-r30, DXMT, rated 5 of 5 after 345 minutes: with the steam and vcrun2022 recipes.",
+  "notes": "Reported playable for about two hours on an M5 Ultra with the environment on D3DMetal. The game's resolution did not scale until Emulate display mode changes was turned on in the game's settings in Highball. An M5 rated it perfect over 345 minutes with DXMT on the Wine 11 engine r30 (highball-db#1423).",
   "knownIssues": [
     {
       "symptom": "The game's resolution does not scale to the screen",

@@ -1,0 +1,14 @@
+{
+  "id": "crash-bandicoot-4-its-about-time",
+  "title": "Crash Bandicoot 4: It's About Time",
+  "steam_appid": 1378990,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by kimsouza-dev (highball-db#1454, 2026-11-25), Apple M5, macOS 27.2.1, Highball 0.10.29, engine x64-sikarugir10.0_6-r30, DXMT, rated 5 of 5 after 8 minutes: named CrashBandicoot4 in the report, no Steam id, with the dotnet48 and vcrun2022 recipes and no store's recipe, so the copy isn't stated. The page carries the Steam release's id. Not verified by the maintainer.",
+  "notes": "Toys for Bob's platformer, on Steam since 2022. Reported perfect on a base M5 with DXMT on the default engine r30 over 8 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

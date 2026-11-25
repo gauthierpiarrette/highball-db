@@ -4,7 +4,14 @@
   "steam_appid": 377160,
   "status": "community",
   "renderer": "dxmt",
-  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball",
-  "notes": "works; script extender untested",
-  "lastVerified": null
+  "provenance": "community consensus (AppleGamingWiki / r-macgaming / MacPlay), unverified by Highball. Jeepers4015 (highball-db#1418, 2026-11-23), Apple M5, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXVK, rated 4 of 5 after 57 minutes: with the steam, vcrun2022 and controller-sdl recipes, on high settings on a 24 GB MacBook Pro. Stutters every now and then, and the game takes a while to load, otherwise fine. matheuscastrotoledo (highball-db#1425, 2026-11-24), Apple M5, macOS 27.2.1, Highball 0.10.29, engine x64-sikarugir10.0_6-r30, DXMT, rated 5 of 5 after 6 minutes: with the steam recipe and the Metal HUD on.",
+  "notes": "Works, script extender untested. Two reports on M5 Macs: perfect over 6 minutes with DXMT on the default engine r30, and playable with stutters now and then over 57 minutes with DXVK on r28 (highball-db#1418, #1425).",
+  "lastVerified": null,
+  "knownIssues": [
+    {
+      "symptom": "Stutters every now and then, and a slow load (M5, DXVK, Wine 10 r28, highball-db#1418)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ]
 }

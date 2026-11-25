@@ -5,18 +5,23 @@
   "status": "community",
   "renderer": "d3dmetal",
   "anticheat": null,
-  "provenance": "Outside reports, not verified by Highball: CodeWeavers' compatibility page rates it Runs Great on CrossOver 26.2 (codeweavers.com/compatibility/crossover/jurassic-world-evolution-2), a CrossOver 26 player on an M4 Pro reports about 50 fps on D3DMetal at high settings, and a CrossOver 25 player on an M4 got 'no suitable 3D graphics' at start. A Highball player could not get it to start on the default engine (highball-db#71, 2026-09-18).",
-  "notes": "Runs on Wine 11 with D3DMetal by outside reports, and fails to start on Wine 10, where CrossOver 25 shows 'no suitable 3D graphics'. Highball's Wine 11 engine is built from the CrossOver 26.3 tree, so that is the one to try, x64-crossover26.3-r19 or newer in an environment set to D3DMetal. Same engine family as Planet Coaster 2, which also needs Wine 11. Not run here.",
+  "provenance": "Outside reports, not verified by Highball: CodeWeavers' compatibility page rates it Runs Great on CrossOver 26.2 (codeweavers.com/compatibility/crossover/jurassic-world-evolution-2), a CrossOver 26 player on an M4 Pro reports about 50 fps on D3DMetal at high settings, and a CrossOver 25 player on an M4 got 'no suitable 3D graphics' at start. A Highball player could not get it to start on the default engine (highball-db#71, 2026-09-18). udance4ever (highball-db#71, 2026-11-25), the Epic copy with D3DMetal, the Mac not stated in the comment (their other reports are from a base M1): on the Wine 10 engine x64-sikarugir10.0_6-r31 the game handed over to its own crash reporter and exited with code 173 after 5 seconds. On the Wine 11 engine x64-crossover26.3-r33 a spinning beach ball came up, and the player thinks macOS then ended Highball. On r35, in an environment that also had MetalFX, the x87 sidecar and HB_TSSHIM_ATOMIC64 on, the whole Mac froze and needed a restart, and the log ends right after Wine started.",
+  "notes": "Runs on Wine 11 with D3DMetal by outside reports, and fails to start on Wine 10, where CrossOver 25 shows 'no suitable 3D graphics'. Highball's Wine 11 engine is built from the CrossOver 26.3 tree, so that is the one to try, x64-crossover26.3-r19 or newer in an environment set to D3DMetal. Same engine family as Planet Coaster 2, which also needs Wine 11. Not run here. In Highball the Wine 11 engine hasn't got it running yet. For one player r33 hung and r35 froze the whole Mac (highball-db#71, 2026-11-25).",
   "knownIssues": [
     {
-      "symptom": "Does not start on the default engine",
+      "symptom": "Does not start on the default engine. On the Wine 10 engine r31 the Epic copy opens its crash reporter and exits with code 173 after 5 seconds (highball-db#71, 2026-11-25)",
       "cause": "Wine 10 lacks what the game needs, the same split CrossOver players see between versions 25 and 26 (outside reports)",
-      "fix": "Use an environment on the Wine 11 engine, newest revision, D3DMetal mode (highball-db#71)"
+      "fix": "Use an environment on the Wine 11 engine, newest revision, D3DMetal mode (highball-db#71). Not confirmed in Highball yet, where r33 and r35 hung instead (highball-db#71, 2026-11-25)"
     },
     {
       "symptom": "Black areas at some camera angles",
       "cause": "Reported by a CrossOver 26 player on D3DMetal, not seen here",
       "fix": "None known"
+    },
+    {
+      "symptom": "On the Wine 11 engine r33 a spinning beach ball, and on r35 the whole Mac froze until a restart (Epic copy, D3DMetal, highball-db#71, 2026-11-25)",
+      "cause": "not diagnosed. The r35 log ends right after Wine starts, before anything from the game",
+      "fix": "none known"
     }
   ],
   "launchArgs": null,

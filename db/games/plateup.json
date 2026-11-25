@@ -1,0 +1,14 @@
+{
+  "id": "plateup",
+  "title": "PlateUp!",
+  "steam_appid": 1599600,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by jaylotw (highball-db#1435, 2026-11-24), Apple M4, macOS 27.2.1, Highball 0.10.29, engine x64-sikarugir10.0_6-r30, D3DMetal, rated 5 of 5 after 1 minute: no Steam id and no recipes in the environment, so the copy isn't stated. The page carries the Steam release's id. Retina pixels at 100%. A one minute session, so it covers the start only. Not verified by the maintainer.",
+  "notes": "It's happening's 2022 restaurant game, published by Yogscast Games. Reported perfect on a base M4 with D3DMetal on the default engine r30 in a one minute session.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

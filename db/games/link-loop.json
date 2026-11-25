@@ -1,0 +1,14 @@
+{
+  "id": "link-loop",
+  "title": "Link Loop",
+  "steam_appid": 5375410,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by konstantin-striukov (highball-db#1452, 2026-11-25), Apple M2 Max, macOS 27.2.1, Highball 0.10.29, engine x64-sikarugir10.0_6-r30, DXMT, rated 5 of 5 after 4 minutes: with the Steam id given and the steam recipe. Not verified by the maintainer.",
+  "notes": "Bocary Studios' 2D portal puzzle platformer, out on Steam in November 2026. Reported perfect on an M2 Max with DXMT on the default engine r30 over 4 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -6,7 +6,7 @@
   "renderer": null,
   "anticheat": null,
   "provenance": "Reported by livelong99 (highball-db#1378, 2026-11-21), Apple M4, macOS 27.0, Highball 0.10.26, engine x64-crossover26.3-r31, DXMT, rated 5 of 5 after 94 minutes: the Steam copy, played through the EA app on a 16 GB M4 MacBook Pro with the 10 core GPU, with the steam, ea-app and vcrun2022 recipes (sync none and DXMT_ALLOW_CROSS_PROCESS_SWAPCHAIN=1 come from the EA app's recipe). It installed, started and played without any tweaks at the default maximum resolution and 60 fps, in the player's words. Not verified by the maintainer.",
-  "notes": "Criterion's 2010 racer, remastered by Stellar Entertainment in 2020. The Steam copy starts through the EA app. Reported perfect on a 16 GB M4 MacBook Pro with DXMT on the Wine 11 engine r31 and the EA app's recipe over 94 minutes, at the default maximum resolution and 60 fps.",
+  "notes": "Criterion's 2010 racer, remastered by Stellar Entertainment in 2020. The Steam copy starts through the EA app. Reported perfect on a 16 GB M4 MacBook Pro with DXMT on the Wine 11 engine r31 and the EA app's recipe over 94 minutes, at the default maximum resolution and 60 fps. The 2010 original has its own page (Need for Speed: Hot Pursuit (2010), 47870).",
   "knownIssues": [],
   "launchArgs": null,
   "lastVerified": null,

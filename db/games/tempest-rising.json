@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": "dxmt",
   "anticheat": null,
-  "provenance": "Reported by jankolauterbach (highball-db#442, 2026-10-10), Apple M3, macOS 27.2 as entered, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, DXMT, rated 5 of 5 after 57 minutes. Not verified by the maintainer. being-a-geek (highball-db#1330, 2026-11-19), Apple M5 Pro, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT by the report (the environment's mode is WineD3D), rated 5 of 5 after 5 minutes.",
+  "provenance": "Reported by jankolauterbach (highball-db#442, 2026-10-10), Apple M3, macOS 27.2 as entered, Highball 0.10.10, engine x64-sikarugir10.0_6-r21, DXMT, rated 5 of 5 after 57 minutes. Not verified by the maintainer. being-a-geek (highball-db#1330, 2026-11-19), Apple M5 Pro, macOS 27.2.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT by the report (the environment's mode is WineD3D), rated 5 of 5 after 5 minutes. being-a-geek (highball-db#1446, 2026-11-25), Apple M5 Pro, macOS 27.2.1, Highball 0.10.29, engine x64-sikarugir10.0_6-r30, DXMT by the report (the environment's mode is WineD3D), rated 5 of 5 after 18 minutes: with the steam and vcrun2022 recipes.",
   "notes": "Reported perfect on DXMT, the default mode, over a 57-minute session on an M3. No measurement here yet. An M5 Pro rated it perfect over 5 minutes on the default engine r28, DXMT by the report in an environment in WineD3D mode (highball-db#1330).",
   "knownIssues": [],
   "launchArgs": null,
