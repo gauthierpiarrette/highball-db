@@ -5,7 +5,7 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by duartegabrantes (highball-db#1076, 2026-11-08), Apple M3 Max, macOS 27.2, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 3 minutes. Not verified by the maintainer.",
+  "provenance": "Reported by duartegabrantes (highball-db#1076, 2026-11-08), Apple M3 Max, macOS 27.2, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 3 minutes. Not verified by the maintainer. jounii (highball-db#1458, 2026-11-25), Apple M1 Pro, macOS 26.6.2, Highball 0.10.29, engine not stated, DXMT, rated 5 of 5, session length not stated: lowering the resolution slightly from the default made it smooth, in the player's words.",
   "notes": "Reported perfect on an M3 Max with DXMT on the default engine (r28) in a three minute session, so it covers the start only.",
   "knownIssues": [],
   "launchArgs": null,

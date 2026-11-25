@@ -9,7 +9,7 @@
   "notes": "Ghost Games' 2019 racer, a DirectX 11 game here. Reported playable but stuttering on an M1 Pro through DXVK and MoltenVK on the Wine 11 engine r31.",
   "knownIssues": [
     {
-      "symptom": "Lags and stutters even at very low settings (M1 Pro, Wine 11 r31, DXVK, highball#788)",
+      "symptom": "Lags and stutters even at very low settings (M1 Pro, Wine 11 r31, DXVK, highball#788). The player then tried every in-game setting and it still lags while driving (highball#788, 2026-11-25)",
       "cause": "not diagnosed. The environment ran DXVK, which goes through MoltenVK, rather than DXMT, Highball's default for DirectX 11",
       "fix": "untested: set the game's Graphics mode to DXMT on its page"
     }
