@@ -5,13 +5,18 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by DCD55 (highball-db#835, 2026-10-31), Apple M5, macOS 27.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXVK with async shaders on, esync, a 60 fps cap, rated 4 of 5 after 33 minutes: a saved game, the open world and a story level. Not verified by the maintainer.",
-  "notes": "Plays on DXVK on an M5. The reporter had slowdowns at first and it ran smooth after lowering some settings in the game. Not measured here.",
+  "provenance": "Reported by DCD55 (highball-db#835, 2026-10-31), Apple M5, macOS 27.2, Highball 0.10.22, engine x64-sikarugir10.0_6-r28, DXVK with async shaders on, esync, a 60 fps cap, rated 4 of 5 after 33 minutes: a saved game, the open world and a story level. Not verified by the maintainer. udance4ever (highball-db#835, 2026-11-27), a base M1, the engine not stated: with the graphics mode set to DXVK by hand and the settings above, about 17 to 27 fps at 720p, most likely under 20 on average by the player's guess, and the stutter went away once shaders were compiled. A DualSense didn't work through Steam Input, and the player used XInput instead.",
+  "notes": "Plays on DXVK on an M5. The reporter had slowdowns at first and it ran smooth after lowering some settings in the game. Not measured here. On a base M1 with DXVK and those settings it ran at about 17 to 27 fps at 720p, with the stutter gone once shaders were compiled (highball-db#835, 2026-11-27).",
   "knownIssues": [
     {
       "symptom": "Occasional slowdowns and stutters at first (M5, DXVK)",
       "cause": "not investigated",
       "fix": "in the game's settings turn off Depth of Field, Motion Blur and Bloom, and set textures and shadows to Low or Medium, which made it smooth for the reporter"
+    },
+    {
+      "symptom": "A DualSense doesn't work through Steam Input (base M1, highball-db#835, 2026-11-27)",
+      "cause": "not diagnosed",
+      "fix": "use the controller through XInput, by the reporter, how isn't described"
     }
   ],
   "launchArgs": null,

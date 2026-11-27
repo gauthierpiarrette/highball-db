@@ -1,0 +1,21 @@
+{
+  "id": "men-of-war",
+  "title": "Men of War",
+  "steam_appid": 7830,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by valdroff (highball-db#1480, 2026-11-26), an iMac from 2023 (Apple M3), macOS 27.2, the Highball version not stated, engine x64-crossover26.3-r35 by the launch log, WineD3D, rated 1 of 5: started from Steam in an environment named play, the game only brought up Wine's debugger. The log ends on an unhandled illegal instruction at 00F1E227, inside mow.exe, which runs as a 32-bit program, and the backtrace attached to the report has no stack for it. Not verified by the maintainer.",
+  "notes": "Best Way's 2009 World War II strategy game, on Steam from Fulqrum Publishing. Doesn't start in one report on an M3 iMac with the Wine 11 engine r35 and WineD3D: mow.exe stops on an illegal instruction in its own code and Wine's debugger opens. Other engines weren't tried.",
+  "knownIssues": [
+    {
+      "symptom": "The game doesn't start. mow.exe stops on an unhandled illegal instruction at 00F1E227 and Wine's debugger opens (M3 iMac, Wine 11 r35, WineD3D, highball-db#1480)",
+      "cause": "not diagnosed. The address is inside mow.exe's own code. Which instruction it is, and whether Rosetta lacks it, isn't known",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null,
+  "arch": "x86"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "dying-light-the-beast",
+  "title": "Dying Light: The Beast",
+  "steam_appid": 3008130,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by dxtrzlb (highball-db#1471, 2026-11-26), Apple M1 Pro, macOS 26.7.3, Highball 0.10.29, engine x64-sikarugir10.0_6-r30, D3DMetal by the report (the environment's mode is DXMT), rated 4 of 5 after 3 minutes: with the Steam id given and the steam and vcrun2022 recipes. Minor issues not described. Not verified by the maintainer.",
+  "notes": "Techland's standalone Dying Light game from 2025. Reported playable on an M1 Pro with D3DMetal by the report, in an environment set to DXMT, on the default engine r30 in a 3 minute session, minor issues not described.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

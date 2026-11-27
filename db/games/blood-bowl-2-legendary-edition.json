@@ -1,0 +1,18 @@
+{
+  "id": "blood-bowl-2-legendary-edition",
+  "title": "Blood Bowl 2: Legendary Edition",
+  "steam_appid": 236690,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by h6c287gskb-collab (highball-db#1467, 2026-11-25), Apple M1, macOS 26.7.3, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 65 minutes: no Steam id, with the steam and xact recipes, an xaudio2_7=b DLL override and a 60 fps cap. Some campaign matches played. The reporter closed the report. Not verified by the maintainer.",
+  "notes": "Cyanide Studios' turn based Warhammer football game, published on Steam by Slitherine, which lists it as Blood Bowl 2: Legendary Edition (Classic). Steam also sells a Mac version. The Windows version was reported perfect on a base M1 with DXMT on the default engine r28 over 65 minutes of campaign matches.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null,
+  "nativeMac": {
+    "available": true,
+    "where": "Steam"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "underkeep",
+  "title": "Underkeep",
+  "steam_appid": 2411200,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Draxredd (highball-db#1475, 2026-11-26), Apple M2, macOS 27.2.1, Highball 0.10.29, engine x64-crossover26.3-r34, D3DMetal, rated 5 of 5 after 15 minutes: with the Steam id given, AVX advertised, DLSS (MetalFX) on, DXVK async shader compilation on, sync off, a 60 fps cap and the steam, dotnet48 and vcrun2022 recipes. Not verified by the maintainer. Draxredd (highball-db#1477, 2026-11-26), Apple M2, macOS 27.2.1, Highball 0.10.29, engine x64-crossover26.3-r34, D3DMetal, rated 4 of 5 after 50 minutes: the same setup as highball-db#1475 from earlier that day. Plain fullscreen stretches the picture, borderless fullscreen is fine.",
+  "notes": "Rake in Grass' turn based dungeon crawler, out on Steam in November 2026. Reported perfect on a base M2 with D3DMetal on the Wine 11 engine r34 over 15 minutes, and playable by the same player over 50 minutes, where plain fullscreen stretched the picture and borderless fullscreen didn't (highball-db#1477).",
+  "knownIssues": [
+    {
+      "symptom": "Plain fullscreen stretches the picture (M2, D3DMetal, Wine 11 r34, highball-db#1477)",
+      "cause": "not diagnosed",
+      "fix": "use borderless fullscreen in the game's settings, by the reporter"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

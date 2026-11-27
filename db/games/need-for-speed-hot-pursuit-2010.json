@@ -5,16 +5,16 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by ray344633 (highball-db#1449, 2026-11-25), Apple M1, macOS 26.7.3, Highball 0.10.22, engine x64-sikarugir10.0_6-r28 (every engine available, by the report), DXMT (every graphics mode, by the report), rated 4 of 5 after 2 to 3 minutes: with the Steam id given. The report says every engine and graphics mode gave the same result, with the environment on DXMT and the default engine r28 when it was filed. In career mode the sound keeps repeating, a car's wheel sound starts, stops and starts again, the game freezes in the middle of a track, and the Mac runs very hot. Online play wasn't tried. Not verified by the maintainer.",
-  "notes": "Criterion's 2010 original. The 2020 remaster has its own page (Need for Speed: Hot Pursuit Remastered, 1328660). Reported playable with minor issues on a base M1 with DXMT on the default engine r28 in a 2 to 3 minute session on Highball 0.10.22, with sound that keeps repeating and a freeze in the middle of a track in career mode.",
+  "provenance": "Reported by ray344633 (highball-db#1449, 2026-11-25), Apple M1, macOS 26.7.3, Highball 0.10.22, engine x64-sikarugir10.0_6-r28 (every engine available, by the report), DXMT (DXMT, DXVK, D3DMetal and WineD3D, by the report), rated 4 of 5 after 5 minutes: with the Steam id given. The report says every engine and graphics mode gave the same result, with the environment on DXMT and the default engine r28 when it was filed. In career mode the sound keeps repeating, a car's wheel sound starts, stops and starts again, the game freezes in the middle of a race, and the Mac runs very hot. Online play wasn't tried. Not verified by the maintainer. ray344633 corrected the report on 2026-11-27 (highball-db#1449): a 5 minute session, every sound repeats, not only the wheels, the freeze comes in the middle of a race, and the modes tried were DXMT, DXVK, D3DMetal and WineD3D. A video of the sound is linked in the report (https://youtu.be/SCz_m5daXOE).",
+  "notes": "Criterion's 2010 original. The 2020 remaster has its own page (Need for Speed: Hot Pursuit Remastered, 1328660). Reported playable with minor issues on a base M1 with DXMT on the default engine r28 in a 5 minute session on Highball 0.10.22, with sound that keeps repeating and a freeze in the middle of a race in career mode.",
   "knownIssues": [
     {
-      "symptom": "In career mode the sound keeps repeating, a car's wheel sound starts, stops and starts again (M1, Wine 10 r28, every engine and graphics mode by the report, highball-db#1449)",
+      "symptom": "In career mode the sound keeps repeating, a car's wheel sound starts, stops and starts again (M1, Wine 10 r28, every engine and graphics mode by the report, highball-db#1449). Every sound does it, not only the wheels (highball-db#1449, corrected 2026-11-27)",
       "cause": "not diagnosed",
       "fix": "none known"
     },
     {
-      "symptom": "The game freezes in the middle of a track in career mode (M1, Wine 10 r28, highball-db#1449)",
+      "symptom": "The game freezes in the middle of a race in career mode (M1, Wine 10 r28, highball-db#1449)",
       "cause": "not diagnosed",
       "fix": "none known"
     }

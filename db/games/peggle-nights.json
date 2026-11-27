@@ -1,0 +1,18 @@
+{
+  "id": "peggle-nights",
+  "title": "Peggle Nights",
+  "steam_appid": 3540,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by oddish-debugger (highball-db#1473, 2026-11-26), Apple M5 Max, macOS 27.0.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXVK by the report (the environment's mode is DXMT), rated 5 of 5 after 20 minutes: with the Steam id given and the steam, dotnet48 and vcrun2022 recipes. Not verified by the maintainer.",
+  "notes": "PopCap's 2008 puzzle game. Steam also sells a Mac version. The Windows version was reported perfect on an M5 Max with DXVK by the report, in an environment set to DXMT, on the default engine r28 over 20 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null,
+  "nativeMac": {
+    "available": true,
+    "where": "Steam"
+  }
+}

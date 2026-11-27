@@ -1,0 +1,20 @@
+{
+  "id": "star-wars-jedi-fallen-order",
+  "title": "STAR WARS Jedi: Fallen Order",
+  "steam_appid": 1172380,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Dino-cmd-xd (highball-db#1482, 2026-11-26), Apple A18 Pro, macOS 27.2.1, Highball 0.10.29, engine x64-crossover26.3-r30, DXMT, rated 4 of 5 after 9 minutes: with the Steam id given, Windows 11 as the version and the steam and vcrun2022 recipes. A steady 60 fps needs mods, in the player's words, not named. Not verified by the maintainer.",
+  "notes": "Respawn's 2019 Star Wars action game, published by EA. Steam's store page says the Steam copy needs the EA app. Reported playable on an A18 Pro MacBook with DXMT on the Wine 11 engine r30 over 9 minutes. The player says 60 fps needs mods, not named.",
+  "knownIssues": [
+    {
+      "symptom": "60 fps needs mods, not named (A18 Pro, DXMT, Wine 11 r30, highball-db#1482)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

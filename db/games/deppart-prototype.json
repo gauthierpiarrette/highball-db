@@ -1,0 +1,19 @@
+{
+  "id": "deppart-prototype",
+  "title": "DEPPART prototype",
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by xxxtan1 (highball-db#1492, 2026-11-27), Apple M4, macOS 26.6.2, Highball 0.10.29, engine x64-sikarugir10.0_6-r30, DXVK, rated 4 of 5 after 3 minutes: no Steam id, taken to be N4bA's itch.io prototype from its name, with the steam and battle-net launcher recipes, the Metal HUD on and sync off. Textures aren't quite right, and the wall textures sometimes glitch while holding a gun. Not verified by the maintainer.",
+  "notes": "N4bA's free bodycam horror prototype on itch.io, built on Unreal Engine 5 by press reports (not checked here). Reported playable on a base M4 with DXVK on the default engine r30 in a 3 minute session, with wall textures that sometimes glitch while holding a gun.",
+  "knownIssues": [
+    {
+      "symptom": "Wall textures sometimes glitch while holding a gun (M4, DXVK, Wine 10 r30, highball-db#1492)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

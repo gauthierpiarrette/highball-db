@@ -1,0 +1,18 @@
+{
+  "id": "subnautica-below-zero",
+  "title": "Subnautica: Below Zero",
+  "steam_appid": 848450,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Hitesh-gaur (highball-db#1484, 2026-11-26), Apple M4, macOS 27.0.1, Highball 0.10.26, engine x64-crossover26.3-r30, DXMT, rated 5 of 5 after 71 minutes: named SubnauticaZero in the report, Below Zero's exe name, with no Steam id, the steam and vcrun2022 recipes and the portal-1 and portal-2 recipes from other games. Not verified by the maintainer.",
+  "notes": "Unknown Worlds' 2021 sequel to Subnautica. Steam also sells a Mac version. The Windows version was reported perfect on a base M4 with DXMT on the Wine 11 engine r30 over 71 minutes, by a player who also reported Subnautica (highball-db#1015).",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null,
+  "nativeMac": {
+    "available": true,
+    "where": "Steam"
+  }
+}

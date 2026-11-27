@@ -1,0 +1,14 @@
+{
+  "id": "the-artisan-of-glimmith-demo",
+  "title": "The Artisan of Glimmith Demo",
+  "steam_appid": 4160300,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by mianfuqu (highball-db#1500, 2026-11-27), Apple M4, macOS 27.2, Highball 0.10.29, engine x64-sikarugir10.0_6-r30, DXMT, rated 5 of 5 after 46 minutes: with the Steam id given and the steam recipe. Not verified by the maintainer.",
+  "notes": "The demo of Lunarch Studios' The Artisan of Glimmith, which has its own page (4160210). Reported perfect on a base M4 with DXMT on the default engine r30 over 46 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

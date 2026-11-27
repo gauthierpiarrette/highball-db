@@ -5,8 +5,8 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by valdroff (highball#275, 2026-10-06 to 2026-10-14), Apple M3, macOS 27.0.1, Highball 0.10.11, the default engine x64-sikarugir10.0_6-r22 and then the Wine 11 engine x64-crossover26.3-r4. Not verified by the maintainer.",
-  "notes": "Source engine, Direct3D 9. In the automatic mode and on DXVK the mission load stopped near 90 percent, sometimes after 'Graph out of date, rebuilding'. With +mat_hdr_level 0 in the game's Steam launch options the load finished (reported). On the default engine the equipment screen before a mission then stayed frozen with no button reacting, and the log showed Wine running out of realized font handles over a thousand times, a limit of the Wine 10 line (256) that the Wine 11 engines raise to 5000. On the Wine 11 engine's first revision, r4, with DXVK and sync off, the game ran very slowly and its menus only moved on Alt+Tab. Later Wine 11 revisions were not tried. Not playable in the reports so far.",
+  "provenance": "Reported by valdroff (highball#275, 2026-10-06 to 2026-10-14), Apple M3, macOS 27.0.1, Highball 0.10.11, the default engine x64-sikarugir10.0_6-r22 and then the Wine 11 engine x64-crossover26.3-r4. Not verified by the maintainer. valdroff (highball-db#1466, 2026-11-25), Apple M3, macOS 27.2.1, Highball 0.10.29, engine x64-crossover26.3-r35, WineD3D, rated 5 of 5 after 11 minutes: with the steam and vcrun2022 recipes and the environment's mode set to WineD3D, the same player as highball#275. Whether +mat_hdr_level 0 was still in the game's launch options isn't stated.",
+  "notes": "Source engine, Direct3D 9. In the automatic mode and on DXVK the mission load stopped near 90 percent, sometimes after 'Graph out of date, rebuilding'. With +mat_hdr_level 0 in the game's Steam launch options the load finished (reported). On the default engine the equipment screen before a mission then stayed frozen with no button reacting, and the log showed Wine running out of realized font handles over a thousand times, a limit of the Wine 10 line (256) that the Wine 11 engines raise to 5000. On the Wine 11 engine's first revision, r4, with DXVK and sync off, the game ran very slowly and its menus only moved on Alt+Tab. Not playable in those reports. Later the same player rated it perfect over 11 minutes on the Wine 11 engine r35 with WineD3D and msync (highball-db#1466).",
   "knownIssues": [
     {
       "symptom": "The mission load stops at about 90 percent, sometimes after 'Graph out of date, rebuilding' (automatic mode and DXVK, highball#275)",
@@ -16,12 +16,12 @@
     {
       "symptom": "The equipment screen before a mission is frozen and none of its buttons can be clicked (default engine r22, highball#275)",
       "cause": "the log shows Wine out of realized font handles over a thousand times, the Wine 10 line's cap of 256 (the Wine 11 engines allow 5000). That this freezes the screen is a reading, not measured",
-      "fix": "none confirmed. Untested: an environment on the newest Wine 11 engine with DXVK and msync, keeping +mat_hdr_level 0"
+      "fix": "none confirmed on the default engine. On the Wine 11 engine r35 with WineD3D and msync the same player rated the game perfect over 11 minutes (highball-db#1466)"
     },
     {
       "symptom": "On the Wine 11 engine r4 the game runs very slowly and its menus only move when switching apps with Alt+Tab (highball#275)",
       "cause": "r4 is the Wine 11 line's first revision, from early September, without the later fixes, one of them for games that only advance on focus changes. Sync was off in that run",
-      "fix": "untested: pick the newest Wine 11 revision in the environment's Advanced settings and set Synchronization to msync"
+      "fix": "pick the newest Wine 11 revision in the environment's Advanced settings. On r35 with WineD3D and msync the same player rated the game perfect over 11 minutes (highball-db#1466)"
     }
   ],
   "launchArgs": null,

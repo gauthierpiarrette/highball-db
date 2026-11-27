@@ -1,0 +1,14 @@
+{
+  "id": "once-upon-a-katamari",
+  "title": "Once Upon A KATAMARI",
+  "steam_appid": 1880620,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by oddish-debugger (highball-db#1472, 2026-11-26), Apple M5 Max, macOS 27.0.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 5 of 5 after 6 minutes: with the Steam id given and the steam, dotnet48 and vcrun2022 recipes. Not verified by the maintainer.",
+  "notes": "RENGAME's katamari game, published by Bandai Namco in October 2025. Reported perfect on an M5 Max with DXMT on the default engine r28 over 6 minutes.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

@@ -1,0 +1,14 @@
+{
+  "id": "traveloot",
+  "title": "Traveloot",
+  "steam_appid": 4349140,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by MagnusPladsen (highball-db#1493, 2026-11-27), Apple M3 Max, macOS 26.6.2, not through the Highball app but through Proton-ish 1.0.18 (HighballKit 0.10.22, highball-db 932b60d55a33) from the macOS Steam client, the Wine 11 engine x64-crossover26.3-r27, DXMT, msync off, Retina off, rated 5 of 5 after 60 minutes: no settings changed and no issues noticed. Not verified by the maintainer.",
+  "notes": "Fluffy Lotus' run based incremental game, made in Unity 6 and out on Steam in November 2026. Reported perfect on an M3 Max with DXMT on the Wine 11 engine r27 over an hour. The run went through Proton-ish from the macOS Steam client, not through Highball itself.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

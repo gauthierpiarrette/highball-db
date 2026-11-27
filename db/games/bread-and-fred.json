@@ -1,0 +1,24 @@
+{
+  "id": "bread-and-fred",
+  "title": "Bread & Fred",
+  "steam_appid": 1607680,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by G0kut0 (highball-db#1498, 2026-11-27), Apple M1, macOS 27.2.1, Highball 0.10.29, engine x64-sikarugir10.0_6-r30, DXMT, rated 4 of 5 after 5 minutes: named Bread and Fred with no Steam id, with the steam recipe. Taken to be the full game, whose Steam id the page carries. The sound glitched while rewards came in. Not verified by the maintainer.",
+  "notes": "SandCastles Studio's cooperative penguin climbing game, published by Atari in 2023. Steam also sells a Mac version. The Windows version was reported playable on a base M1 with DXMT on the default engine r30 in a 5 minute session, with a sound glitch while rewards came in.",
+  "knownIssues": [
+    {
+      "symptom": "The sound glitches while rewards come in (M1, DXMT, Wine 10 r30, highball-db#1498)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null,
+  "nativeMac": {
+    "available": true,
+    "where": "Steam"
+  }
+}

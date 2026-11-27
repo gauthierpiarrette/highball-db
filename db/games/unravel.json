@@ -1,0 +1,31 @@
+{
+  "id": "unravel",
+  "title": "Unravel",
+  "steam_appid": 1225560,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by Dreamescaper (highball-db#1481, 2026-11-26), Apple M5, macOS 27.2.1, Highball 0.10.29 with preview engines on, engine arm64-wine11.18-r6, DXVK, rated 3 of 5 after a few minutes of play: the Steam copy, started from Highball through Steam and the EA app, with the steam and vcrun2022 recipes and FEX_HOSTFEATURES=disableavx set in the environment's settings and in the prefix's HKCU\\Environment. The game's EA protection (OOA 4.10.0.680) runs a 32-bit Core\\ActivationUI.exe beside the 64-bit game. On the arm64 line FEX gives 32-bit programs a CPU without AVX, FMA, F16C, XSAVE, AVX2 or BMI1/2 and 64-bit ones a CPU with them (FEX-Emu/FEX#5993), which the reporter measured with small CPUID programs. The 32-bit ActivationUI then refused the license the 64-bit EA app had fetched, deleted the .dlf and showed a login dialog that can't reach EA. FEX_HOSTFEATURES=disableavx made both sides report the same CPU, and the game then played and exited normally. On the Wine 11 engine x64-crossover26.3-r31 under Rosetta the license was accepted, but Unravel.exe relaunched itself with /dbrv=1 to 5 about every 10 seconds and quit with 0xFFFFFFFA, each time right after Wine logged that setting debug registers isn't supported under Rosetta. On both engines, with the EA app installed by Steam's install script, its EA Desktop folder link was left as an empty 'EA Desktop?' stub, which the reporter replaced by hand with a symlink to the versioned folder, also moving IGO64 and IGO32 out of the way. First filed as 1 of 5, does not launch. Not verified by the maintainer.",
+  "notes": "Coldwood's 2016 puzzle platformer, on Steam from EA since 2020, which needs the EA app. Playable on the native arm64 engine (a preview, arm64-wine11.18-r6) on an M5 once FEX_HOSTFEATURES=disableavx is set for the whole environment, so the EA app and the game's 32-bit activation helper see the same CPU. Doesn't start on the Rosetta engines, where the game keeps relaunching itself, most likely over a debug register check, by the reporter's log. Other EA games with a 32-bit ActivationUI beside a 64-bit game may meet the same thing on the arm64 line, untested.",
+  "knownIssues": [
+    {
+      "symptom": "On the arm64 engine EA's activation deletes the license file and shows a login dialog that can't reach EA ('invalid email or password', 'computer is currently offline') (M5, arm64-wine11.18-r6, highball-db#1481)",
+      "cause": "measured by the reporter: FEX gives the 32-bit Core\\ActivationUI.exe a CPU without AVX and related features and the 64-bit EA app one with them (FEX-Emu/FEX#5993), so the license bound to the EA app's CPU is refused",
+      "fix": "set FEX_HOSTFEATURES=disableavx in the environment's settings, so it reaches Steam, the EA app and the game. The reporter also set it in the prefix's HKCU\\Environment, which FEX reads too"
+    },
+    {
+      "symptom": "On the Rosetta engines the game relaunches itself with /dbrv=1 to 5 about every 10 seconds and quits with 0xFFFFFFFA (M5, Wine 11 r31, highball-db#1481)",
+      "cause": "the log shows 'Setting debug registers is not supported under Rosetta, faking success' right before each relaunch, so most likely the protection's debug register check. Unchanged with the x87 sidecar unset or the EA overlay removed",
+      "fix": "none on the Rosetta engines. It runs on the arm64 engine"
+    },
+    {
+      "symptom": "With the EA app installed by Steam's install script, Program Files\\Electronic Arts\\EA Desktop\\EA Desktop is left as an empty 'EA Desktop?' stub (both engines, highball-db#1481)",
+      "cause": "not diagnosed",
+      "fix": "the reporter replaced the stub by hand with a symlink to the versioned folder (13.827.2.6342/EA Desktop) and moved IGO64 and IGO32 aside. Untested: install the EA app with the ea-app recipe instead"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null,
+  "arch": "mixed"
+}

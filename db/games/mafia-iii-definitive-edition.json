@@ -1,0 +1,29 @@
+{
+  "id": "mafia-iii-definitive-edition",
+  "title": "Mafia III: Definitive Edition",
+  "steam_appid": 360430,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by siddhant-dev (highball-db#1459, 2026-11-25), Apple M3 Pro, macOS 26.7.3, Highball 0.10.29, engine x64-crossover26.3-r31, D3DMetal, rated 4 of 5 after 154 minutes: no Steam id, with the steam and controller-sdl recipes and the grand-theft-auto-v recipe from another game. The game's launcher fails to start it the first time. The player started the game's own exe with Run a Windows program instead, then turned the launcher off in the game's settings. Frame drops in cutscenes. Not verified by the maintainer.",
+  "notes": "Hangar 13's 2016 open world crime game in its 2020 Definitive Edition, published by 2K. Steam also sells a Mac version, by Aspyr. The Windows version was reported playable on an M3 Pro with D3DMetal on the Wine 11 engine r31 over 154 minutes, once the game was started without its launcher, with frame drops in cutscenes.",
+  "knownIssues": [
+    {
+      "symptom": "The game's launcher fails to start the game the first time (M3 Pro, Wine 11 r31, highball-db#1459)",
+      "cause": "not diagnosed",
+      "fix": "start the game's own exe with Run a Windows program in the environment, then turn the launcher off in the game's settings, by the reporter"
+    },
+    {
+      "symptom": "Frame drops in cutscenes (M3 Pro, D3DMetal, Wine 11 r31, highball-db#1459)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null,
+  "nativeMac": {
+    "available": true,
+    "where": "Steam"
+  }
+}

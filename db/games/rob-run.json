@@ -1,0 +1,14 @@
+{
+  "id": "rob-run",
+  "title": "ROB RUN",
+  "steam_appid": 4262460,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by balkee100-cloud (highball-db#1469, 2026-11-25), Apple M4, macOS 27.2.1, Highball 0.10.29, engine x64-sikarugir10.0_6-r30, DXMT, rated 5 of 5 after 1 minute: with the Steam id given and the steam and vcrun2022 recipes. A one minute session, so it covers the start only. Not verified by the maintainer.",
+  "notes": "Kefir's free to play massively multiplayer crime sandbox, out on Steam in November 2026. Reported perfect on a base M4 with DXMT on the default engine r30 in a one minute session.",
+  "knownIssues": [],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

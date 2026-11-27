@@ -1,0 +1,20 @@
+{
+  "id": "find-the-needle-demo",
+  "title": "Find The Needle Demo",
+  "steam_appid": 5165210,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by derjoshu (highball-db#1496, 2026-11-27), Apple M2, macOS 27.0.1, Highball 0.10.26, engine x64-sikarugir10.0_6-r28, DXMT, rated 4 of 5 after 51 minutes: with the Steam id given and the steam and vcrun2022 recipes. Frame drops only when a building is selected for the first time. Not verified by the maintainer.",
+  "notes": "The demo of Needless Games' Find The Needle (5160800), a haystack digging game. Reported playable on a base M2 with DXMT on the default engine r28 over 51 minutes, with frame drops the first time a building is selected.",
+  "knownIssues": [
+    {
+      "symptom": "Frame drops the first time a building is selected (M2, DXMT, Wine 10 r28, highball-db#1496)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}

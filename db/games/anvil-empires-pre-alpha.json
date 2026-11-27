@@ -1,0 +1,20 @@
+{
+  "id": "anvil-empires-pre-alpha",
+  "title": "Anvil Empires Pre-Alpha",
+  "steam_appid": 2383950,
+  "status": "community",
+  "renderer": null,
+  "anticheat": null,
+  "provenance": "Reported by gcacoutinho (highball-db#1465, 2026-11-25), Apple M4 Pro, macOS 26.6.2, Highball 0.10.26, engine x64-crossover26.3-r31, D3DMetal, rated 4 of 5 after 42 minutes: with the Steam id given, which is Steam's Anvil Playtest app, the Metal HUD on, a 60 fps cap and the steam and vcrun2022 recipes. A low frame rate even at the lowest settings and a low resolution. The same player's 6 minute report from earlier that day, with sync off, rated it 5 of 5, and the player closed it in favour of this one (highball-db#1462). Not verified by the maintainer.",
+  "notes": "The pre-alpha playtest of Siege Camp's Anvil Empires (1373910 on Steam, not out yet), a massively multiplayer medieval war game. Reported playable on an M4 Pro with D3DMetal on the Wine 11 engine r31 over 42 minutes, with a low frame rate even at the lowest settings.",
+  "knownIssues": [
+    {
+      "symptom": "A low frame rate even at the lowest settings and a low resolution (M4 Pro, D3DMetal, Wine 11 r31, highball-db#1465)",
+      "cause": "not diagnosed",
+      "fix": "none known"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null
+}
