@@ -5,10 +5,11 @@
   "status": "community",
   "renderer": null,
   "anticheat": null,
-  "provenance": "Reported by himbeles (highball-db#1289, 2026-11-17), Apple M2 Max, macOS 27.2.1, Highball 0.10.26, engine x64-crossover26.3-aoe4-r1, D3DMetal, rated 5 of 5 after 13 minutes: an engine id Highball doesn't ship, not described in the report. AVX advertised, the Metal HUD on. Not verified by the maintainer.",
-  "notes": "Reported perfect on an M2 Max with D3DMetal over 13 minutes, on an engine Highball doesn't ship (x64-crossover26.3-aoe4-r1), with AVX advertised.",
+  "provenance": "Reported by himbeles (highball-db#1289, 2026-11-17), Apple M2 Max, macOS 27.2.1, Highball 0.10.26, engine x64-crossover26.3-aoe4-r1, D3DMetal, rated 5 of 5 after 13 minutes: an engine id Highball doesn't ship, not described in the report. AVX advertised, the Metal HUD on. Not verified by the maintainer. A separate local test on 2026-11-17 reached Late Siege and moved 42 units using engine PR #49 (ba28330), the patched shared x87sidecar, D3DMetal and MSync. DXMT was not tested in that run.",
+  "notes": "The opt-in recipe selects D3DMetal and sets HB_AOE4=1. Requires an AoE IV-capable Wine 11 engine with the patched x87sidecar installed, Rosetta and macOS 26 or later. The upstream engine manifest pin is pending. Small stutters have been observed in Late Siege.",
   "knownIssues": [],
   "launchArgs": null,
   "lastVerified": null,
-  "verified": null
+  "verified": null,
+  "arch": "x64"
 }
