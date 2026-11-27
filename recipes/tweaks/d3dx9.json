@@ -1,0 +1,28 @@
+{
+  "id": "d3dx9",
+  "kind": "tweak",
+  "title": "Microsoft D3DX9 (Direct3D 9 helper libraries)",
+  "requires": [],
+  "renderer": null,
+  "steps": [
+    {
+      "type": "winetricks",
+      "verbs": [
+        "d3dx9"
+      ],
+      "slow": "Downloads Microsoft's DirectX June 2010 redistributable (about 100 MB) and installs its d3dx9_24 to d3dx9_43 libraries into the environment, a few minutes."
+    },
+    {
+      "type": "note",
+      "text": "Microsoft's D3DX9 libraries are installed and preferred over Wine's own in this environment, 32-bit and 64-bit. Direct3D 9 games compile their shaders and load their textures through D3DX9, and where Wine's version falls short a part of the picture stays black whatever the graphics mode, since DXVK and Wine's own Direct3D both get the result from it. Every game in the environment that uses D3DX9 gets Microsoft's version, so install it only where a game needs it."
+    }
+  ],
+  "knownIssues": [],
+  "lastVerified": {
+    "date": "2026-11-27",
+    "engine": "x64-sikarugir10.0_6-r30",
+    "macos": "27.0",
+    "chip": "Apple M1 Pro",
+    "result": "winetricks d3dx9 completes (exit 0) on a fresh environment with the app's bundled cabextract. windows/syswow64 holds Microsoft's d3dx9_24 to d3dx9_43 (20 files, d3dx9_43.dll 1,998,168 bytes, dated 2010-05-26), system32 the 64-bit ones, and user.reg prefers each native. Whether it mends a given game is per game; not yet checked with a game."
+  }
+}
