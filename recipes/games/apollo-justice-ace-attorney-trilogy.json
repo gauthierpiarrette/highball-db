@@ -1,0 +1,24 @@
+{
+  "id": "apollo-justice-ace-attorney-trilogy",
+  "kind": "game",
+  "title": "Apollo Justice: Ace Attorney Trilogy",
+  "requires": [
+    "steam"
+  ],
+  "renderer": "d3dmetal",
+  "steps": [
+    {
+      "type": "registry",
+      "key": "HKCU\\Software\\Wine\\DllOverrides",
+      "name": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Apollo Justice Ace Attorney Trilogy\\12on7\\d3d12",
+      "valueType": "REG_SZ",
+      "data": ""
+    },
+    {
+      "type": "note",
+      "text": "The game ships Microsoft's Direct3D 12 runtime for Windows 7 in its 12on7 folder and loads it by full path. Wine hands it the builtin d3d12 under that name, D3DMetal's shim, and the game then calls exports only Microsoft's runtime has and crashes within 20 seconds, its crash reporter after it. The override above turns off that one copy by its full path, so the game falls back to the system d3d12, as it does with the folder renamed, without changing the game's files. Measured with a probe on Wine 10 r30 and Wine 11 r35: with the override the full-path load fails and d3d12.dll by name still loads the system one. The game with the folder renamed played 12 minutes on D3DMetal on an M5, macOS 27.2.1, default engine r30 (highball#800). Highball 0.10.30 or later names the folder in another Steam library too."
+    }
+  ],
+  "knownIssues": [],
+  "lastVerified": null
+}

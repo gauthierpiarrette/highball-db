@@ -1,0 +1,21 @@
+{
+  "id": "apollo-justice-ace-attorney-trilogy",
+  "title": "Apollo Justice: Ace Attorney Trilogy",
+  "steam_appid": 2187220,
+  "status": "community",
+  "renderer": "d3dmetal",
+  "anticheat": null,
+  "provenance": "Reported by Leo204-LKY (highball#800, 2026-11-27), Apple M5, macOS 27.2.1, Highball 0.10.29, engine x64-sikarugir10.0_6-r30: the Steam copy quits within 6 to 20 seconds on DXMT and on D3DMetal, AVX advertised or not. Their trace (+seh,+loaddll) shows GS456.exe loading the game's own 12on7\\d3d12.dll by full path, Wine serving its builtin d3d12 in its place, then a call through a null pointer. With the 12on7 folder renamed the game used the system d3d12 on D3DMetal and played over 12 minutes. The recipe's override turns off that copy instead. The override itself is measured with a probe here, not yet with the game. Not verified by the maintainer.",
+  "notes": "Capcom's 2024 collection of Apollo Justice, Dual Destinies and Spirit of Justice, a DirectX 12 game, so it needs D3DMetal. Its fix turns off the Windows 7 Direct3D 12 runtime the game carries in its 12on7 folder, which crashed it at launch.",
+  "knownIssues": [
+    {
+      "symptom": "Quits within 6 to 20 seconds of starting, then its crash reporter crashes too (M5, Wine 10 r30, DXMT and D3DMetal, highball#800)",
+      "cause": "the game loads its bundled 12on7\\d3d12.dll by full path, Wine serves its builtin d3d12 under that name, and the game calls exports only Microsoft's Windows 7 runtime has",
+      "fix": "the game's fix in Highball turns off that copy with a full-path DLL override (Play applies it). By hand, renaming the game's 12on7 folder does the same, until a Steam update or file check puts it back"
+    }
+  ],
+  "launchArgs": null,
+  "lastVerified": null,
+  "verified": null,
+  "recipe": "recipes/games/apollo-justice-ace-attorney-trilogy.json"
+}
